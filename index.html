@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>A_D</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <aside class="sidebar" aria-label="Study dashboard">
+        <div class="brand">
+          <p class="eyebrow">Council exam prep</p>
+          <h1>A_D</h1>
+          <p class="subtle">Textbook, NMCN, council, OSCE, and hospital-final CBT prep.</p>
+        </div>
+
+        <section class="metric-grid" aria-label="Progress summary">
+          <div>
+            <span id="bank-count">0</span>
+            <p>Questions</p>
+          </div>
+          <div>
+            <span id="mastery-score">0%</span>
+            <p>Mastery</p>
+          </div>
+        </section>
+
+        <nav class="nav" aria-label="Prep modes">
+          <button class="nav__item is-active" type="button" data-view="practice">Practice</button>
+          <button class="nav__item" type="button" data-view="cbt">CBT Exam</button>
+          <button class="nav__item" type="button" data-view="review">Review</button>
+          <button class="nav__item" type="button" data-view="guide">Study Guide</button>
+        </nav>
+      </aside>
+
+      <section class="workspace">
+        <header class="topbar">
+          <div>
+            <p id="view-kicker" class="eyebrow">Learning mode</p>
+            <h2 id="view-title">Practice with instant rationales</h2>
+          </div>
+          <div class="timer" aria-live="polite">
+            <span id="timer-label">Untimed</span>
+            <strong id="timer-value">00:00</strong>
+          </div>
+        </header>
+
+        <section id="practice-view" class="view is-visible">
+          <div class="toolbar" aria-label="Practice filters">
+            <label>
+              Category
+              <select id="category-filter"></select>
+            </label>
+            <label>
+              Chapter
+              <select id="chapter-filter"></select>
+            </label>
+            <button id="shuffle-button" class="icon-button" type="button" title="Shuffle question">↻</button>
+          </div>
+
+          <article class="question-panel" aria-live="polite">
+            <div class="question-meta">
+              <span id="practice-category"></span>
+              <span id="practice-progress"></span>
+            </div>
+            <h3 id="practice-question"></h3>
+            <div id="practice-options" class="options"></div>
+            <div class="panel-actions">
+              <button id="previous-question" type="button">Previous</button>
+              <button id="check-answer" class="primary" type="button">Check answer</button>
+              <button id="next-question" type="button">Next</button>
+            </div>
+            <div id="practice-rationale" class="rationale" hidden></div>
+          </article>
+        </section>
+
+        <section id="cbt-view" class="view">
+          <div id="exam-setup" class="exam-setup">
+            <div>
+              <p class="eyebrow">Simulation</p>
+              <h3>Computer-based test mode</h3>
+              <p class="subtle">Timed, no instant feedback, mixed categories, and a final review screen.</p>
+            </div>
+            <div class="setup-grid">
+              <label>
+                Number of questions
+                <input id="exam-size" type="number" min="10" max="48" value="25" />
+              </label>
+              <label>
+                Minutes
+                <input id="exam-minutes" type="number" min="5" max="180" value="35" />
+              </label>
+            </div>
+            <button id="start-exam" class="primary" type="button">Start CBT</button>
+          </div>
+
+          <article id="exam-panel" class="question-panel" hidden>
+            <div class="question-meta">
+              <span id="exam-category"></span>
+              <span id="exam-progress"></span>
+            </div>
+            <h3 id="exam-question"></h3>
+            <div id="exam-options" class="options"></div>
+            <div class="panel-actions">
+              <button id="exam-prev" type="button">Back</button>
+              <button id="exam-next" class="primary" type="button">Next</button>
+              <button id="submit-exam" type="button">Submit</button>
+            </div>
+            <div class="exam-review-block">
+              <div class="question-meta">
+                <span>Question navigator</span>
+                <span id="exam-answered-count">0 answered</span>
+              </div>
+              <div id="exam-jump-list" class="exam-jump-list"></div>
+            </div>
+          </article>
+
+          <section id="exam-results" class="results" hidden></section>
+        </section>
+
+        <section id="review-view" class="view">
+          <div class="review-head">
+            <div>
+              <p class="eyebrow">Weak areas</p>
+              <h3>Performance by client need</h3>
+            </div>
+            <button id="reset-progress" type="button">Reset progress</button>
+          </div>
+          <div id="category-bars" class="bars"></div>
+          <div id="missed-list" class="missed-list"></div>
+        </section>
+
+        <section id="guide-view" class="view">
+          <div class="guide-layout">
+            <article>
+              <p class="eyebrow">Guide</p>
+              <h3>Passing strategy and exam guides</h3>
+              <div id="study-guide" class="guide-list"></div>
+            </article>
+            <article class="blueprint">
+              <p class="eyebrow">2026 NCLEX-PN</p>
+              <h3>Blueprint weighting</h3>
+              <div id="blueprint-list"></div>
+              <p class="source-note">
+                Current exam blueprint checked against the official NCSBN 2026 NCLEX-PN Test Plan. A_D also includes
+                local council, NMCN, OSCE, and hospital-final materials that passed the clarity filter.
+              </p>
+            </article>
+          </div>
+        </section>
+
+      </section>
+    </main>
+
+    <script type="module" src="./src/app.js"></script>
+  </body>
+</html>
