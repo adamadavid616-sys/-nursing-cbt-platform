@@ -154,5 +154,201 @@
     </main>
 
     <script type="module" src="./src/app.js"></script>
+
+    <!-- A_D Tutor Chatbot -->
+    <style>
+      #tutor-btn {
+        position: fixed;
+        bottom: 24px;
+        right: 24px;
+        width: 56px;
+        height: 56px;
+        border-radius: 50%;
+        background: #00c9a7;
+        color: #000;
+        border: none;
+        font-size: 26px;
+        cursor: pointer;
+        box-shadow: 0 4px 16px rgba(0,201,167,0.4);
+        z-index: 9999;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: transform 0.2s;
+      }
+      #tutor-btn:hover { transform: scale(1.1); }
+
+      #tutor-panel {
+        position: fixed;
+        bottom: 90px;
+        right: 24px;
+        width: 340px;
+        height: 480px;
+        background: #1a1a2e;
+        border: 1px solid #00c9a7;
+        border-radius: 16px;
+        display: none;
+        flex-direction: column;
+        z-index: 9999;
+        box-shadow: 0 8px 32px rgba(0,0,0,0.5);
+        overflow: hidden;
+      }
+      #tutor-panel.open { display: flex; }
+
+      #tutor-header {
+        background: #00c9a7;
+        color: #000;
+        padding: 12px 16px;
+        font-weight: 700;
+        font-size: 14px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      #tutor-close {
+        background: none;
+        border: none;
+        font-size: 18px;
+        cursor: pointer;
+        color: #000;
+        font-weight: bold;
+      }
+
+      #tutor-messages {
+        flex: 1;
+        overflow-y: auto;
+        padding: 12px;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+      .tutor-msg {
+        padding: 8px 12px;
+        border-radius: 10px;
+        font-size: 13px;
+        line-height: 1.5;
+        max-width: 90%;
+      }
+      .tutor-msg.bot {
+        background: #0f3460;
+        color: #e0e0e0;
+        align-self: flex-start;
+      }
+      .tutor-msg.user {
+        background: #00c9a7;
+        color: #000;
+        align-self: flex-end;
+        font-weight: 600;
+      }
+      .tutor-msg.typing {
+        background: #0f3460;
+        color: #888;
+        align-self: flex-start;
+        font-style: italic;
+      }
+
+      #tutor-input-row {
+        display: flex;
+        border-top: 1px solid #333;
+        padding: 8px;
+        gap: 6px;
+      }
+      #tutor-input {
+        flex: 1;
+        background: #0f3460;
+        border: 1px solid #333;
+        border-radius: 8px;
+        color: #fff;
+        padding: 8px 10px;
+        font-size: 13px;
+        outline: none;
+      }
+      #tutor-input::placeholder { color: #666; }
+      #tutor-send {
+        background: #00c9a7;
+        border: none;
+        border-radius: 8px;
+        padding: 8px 12px;
+        color: #000;
+        font-weight: 700;
+        cursor: pointer;
+        font-size: 14px;
+      }
+      #tutor-send:disabled { opacity: 0.5; cursor: not-allowed; }
+    </style>
+
+    <button id="tutor-btn" title="Ask A_D Tutor">🎓</button>
+
+    <div id="tutor-panel">
+      <div id="tutor-header">
+        <span>🎓 A_D Nursing Tutor</span>
+        <button id="tutor-close">✕</button>
+      </div>
+      <div id="tutor-messages">
+        <div class="tutor-msg bot">Hi! I'm your A_D Nursing Tutor. Ask me about any question, concept, or topic — I'll explain it clearly! 💉</div>
+      </div>
+      <div id="tutor-input-row">
+        <input id="tutor-input" type="text" placeholder="Ask a nursing question..." />
+        <button id="tutor-send">➤</button>
+      </div>
+    </div>
+
+    <script>
+      const tutorBtn = document.getElementById('tutor-btn');
+      const tutorPanel = document.getElementById('tutor-panel');
+      const tutorClose = document.getElementById('tutor-close');
+      const tutorMessages = document.getElementById('tutor-messages');
+      const tutorInput = document.getElementById('tutor-input');
+      const tutorSend = document.getElementById('tutor-send');
+
+      let chatHistory = [];
+
+      tutorBtn.addEventListener('click', () => tutorPanel.classList.toggle('open'));
+      tutorClose.addEventListener('click', () => tutorPanel.classList.remove('open'));
+
+      function addMsg(text, type) {
+        const div = document.createElement('div');
+        div.className = `tutor-msg ${type}`;
+        div.textContent = text;
+        tutorMessages.appendChild(div);
+        tutorMessages.scrollTop = tutorMessages.scrollHeight;
+        return div;
+      }
+
+      async function sendMessage() {
+        const text = tutorInput.value.trim();
+        if (!text) return;
+
+        addMsg(text, 'user');
+        chatHistory.push({ role: 'user', content: text });
+        tutorInput.value = '';
+        tutorSend.disabled = true;
+
+        const typing = addMsg('Thinking...', 'typing');
+
+        try {
+          const res = await fetch('/api/chat', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ messages: chatHistory, context: { questionCount: 9572 } })
+          });
+          const data = await res.json();
+          typing.remove();
+
+          const reply = data.reply || data.error || 'Sorry, I could not get a response.';
+          addMsg(reply, 'bot');
+          chatHistory.push({ role: 'assistant', content: reply });
+        } catch (err) {
+          typing.remove();
+          addMsg('Connection error. Please try again.', 'bot');
+        }
+
+        tutorSend.disabled = false;
+        tutorInput.focus();
+      }
+
+      tutorSend.addEventListener('click', sendMessage);
+      tutorInput.addEventListener('keydown', (e) => { if (e.key === 'Enter') sendMessage(); });
+    </script>
   </body>
 </html>
