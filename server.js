@@ -5,7 +5,7 @@ const path = require("node:path");
 const root = __dirname;
 const port = Number(process.argv[2] || 8000);
 const groqApiKey = process.env.GROQ_API_KEY || "";
-const groqModel = process.env.GROQ_MODEL || "llama3-8b-8192";
+const groqModel = process.env.GROQ_MODEL || "llama-3.3-70b-versatile";
 
 const contentTypes = {
   ".html": "text/html; charset=utf-8",
