@@ -374,9 +374,32 @@
       }
       #tutor-send:disabled { opacity: 0.5; }
 
-      @media (max-width: 480px) {
-        #tutor-panel { right: 8px; width: calc(100vw - 16px); }
-        #tutor-btn { right: 12px; }
+      @media (max-width: 768px) {
+        /* Raise button above mobile browser nav bar */
+        #tutor-btn {
+          bottom: 72px !important;
+          right: 12px !important;
+          width: 48px !important;
+          height: 48px !important;
+          font-size: 22px !important;
+        }
+        /* Make panel full width and avoid browser chrome */
+        #tutor-panel {
+          right: 8px !important;
+          left: 8px !important;
+          width: auto !important;
+          bottom: 130px !important;
+          height: calc(100vh - 200px) !important;
+          max-height: 400px !important;
+        }
+        /* Make login bar text smaller on mobile */
+        #login-bar {
+          padding: 6px 10px !important;
+          font-size: 11px !important;
+        }
+        #login-bar-msg {
+          font-size: 10px !important;
+        }
       }
     </style>
 
