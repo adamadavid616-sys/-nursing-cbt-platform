@@ -7,6 +7,38 @@
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
+  <!-- Google Login Bar -->
+  <div id="login-bar" style="
+    display:none;
+    position:fixed;
+    top:0; left:0; right:0;
+    background:#00c9a7;
+    color:#000;
+    padding:10px 20px;
+    z-index:99999;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    font-family:sans-serif;
+    font-size:14px;
+    box-shadow:0 2px 8px rgba(0,0,0,0.2);
+  ">
+    <span id="login-bar-msg">🎓 Sign in to save your chat history across all devices</span>
+    <div style="display:flex;gap:10px;align-items:center;">
+      <span id="login-bar-user" style="font-weight:600;"></span>
+      <button id="login-bar-btn" style="
+        background:#000;
+        color:#00c9a7;
+        border:none;
+        border-radius:8px;
+        padding:6px 16px;
+        font-weight:700;
+        cursor:pointer;
+        font-size:13px;
+      ">Sign in with Google</button>
+    </div>
+  </div>
+
     <main class="app">
       <aside class="sidebar" aria-label="Study dashboard">
         <div class="brand">
@@ -324,12 +356,44 @@
 
       // ========== DOM REFS ==========
       const tutorBtn = document.getElementById('tutor-btn');
+      const loginBar = document.getElementById('login-bar');
+      const loginBarBtn = document.getElementById('login-bar-btn');
+      const loginBarMsg = document.getElementById('login-bar-msg');
+      const loginBarUser = document.getElementById('login-bar-user');
       const tutorPanel = document.getElementById('tutor-panel');
       const tutorClose = document.getElementById('tutor-close');
       const tutorMessages = document.getElementById('tutor-messages');
       const tutorInput = document.getElementById('tutor-input');
       const tutorSend = document.getElementById('tutor-send');
       const tutorHeader = document.getElementById('tutor-header');
+
+      // ========== LOGIN BAR ==========
+      function updateLoginBar(user) {
+        if (!loginBar) return;
+        loginBar.style.display = 'flex';
+        if (user) {
+          const name = user.user_metadata?.full_name?.split(' ')[0] || user.email?.split('@')[0] || 'You';
+          loginBarMsg.textContent = `Welcome back, ${name}! Your chat history is saved. 🎓`;
+          loginBarUser.textContent = '';
+          loginBarBtn.textContent = 'Sign out';
+          loginBarBtn.onclick = async () => {
+            await window._sb.auth.signOut();
+            currentUser = null;
+            chatHistory = [];
+            updateLoginBar(null);
+          };
+        } else {
+          loginBarMsg.textContent = '🎓 Sign in to save your chat history across all devices';
+          loginBarUser.textContent = '';
+          loginBarBtn.textContent = 'Sign in with Google';
+          loginBarBtn.onclick = () => {
+            window._sb.auth.signInWithOAuth({
+              provider: 'google',
+              options: { redirectTo: window.location.href }
+            });
+          };
+        }
+      }
 
       // ========== AUTH BUTTON ==========
       function renderAuthButton(user) {
@@ -465,6 +529,7 @@
 
             window._sb.auth.onAuthStateChange(async (_e, sess) => {
               currentUser = sess?.user || null;
+              updateLoginBar(currentUser);
               renderAuthButton(currentUser);
               if (currentUser) {
                 const cloud = await loadCloud();
@@ -472,6 +537,7 @@
               }
             });
 
+            updateLoginBar(currentUser);
             if (currentUser) {
               const cloud = await loadCloud();
               if (cloud && cloud.length > 0) { chatHistory = cloud; renderHistory(chatHistory); }
