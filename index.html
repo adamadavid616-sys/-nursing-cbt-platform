@@ -293,19 +293,169 @@
       </div>
     </div>
 
+    <!-- Supabase SDK -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
     <script>
+      // ========== CONFIGURATION ==========
+      // Replace these with your actual Supabase project values
+      const SUPABASE_URL = 'https://bhdyyuiuzepsixvfcirg.supabase.co';
+      const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJoZHl5dWl1emVwc2l4dmZjaXJnIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODEzOTY3MzAsImV4cCI6MjA5Njk3MjczMH0.jETQkiWg_R7hU7Z85B6fdt7BUhKPP5wRSc4ndh8C4rA';
+      const CHAT_STORAGE_KEY = 'ad-tutor-chat-history';
+      const MAX_STORED_MESSAGES = 100;
+
+      // ========== SUPABASE SETUP ==========
+      let supabase = null;
+      let currentUser = null;
+      let useCloud = false;
+
+      try {
+        if (SUPABASE_URL !== 'YOUR_SUPABASE_URL') {
+          supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+          useCloud = true;
+        }
+      } catch(e) { useCloud = false; }
+
+      // ========== DOM REFS ==========
       const tutorBtn = document.getElementById('tutor-btn');
       const tutorPanel = document.getElementById('tutor-panel');
       const tutorClose = document.getElementById('tutor-close');
       const tutorMessages = document.getElementById('tutor-messages');
       const tutorInput = document.getElementById('tutor-input');
       const tutorSend = document.getElementById('tutor-send');
+      const tutorHeader = document.getElementById('tutor-header');
 
       let chatHistory = [];
 
+      // ========== AUTH UI ==========
+      function renderAuthButton(user) {
+        const existing = document.getElementById('tutor-auth');
+        if (existing) existing.remove();
+
+        if (!useCloud) return;
+
+        const btn = document.createElement('button');
+        btn.id = 'tutor-auth';
+        btn.style.cssText = `
+          position:absolute; top:8px; right:40px;
+          background:transparent; border:1px solid rgba(0,0,0,0.3);
+          border-radius:6px; padding:2px 8px; font-size:11px;
+          cursor:pointer; color:#000; font-weight:600;
+        `;
+
+        if (user) {
+          const name = user.user_metadata?.full_name?.split(' ')[0] || user.email?.split('@')[0] || 'You';
+          btn.textContent = `👤 ${name} · Sign out`;
+          btn.onclick = async () => {
+            await supabase.auth.signOut();
+            currentUser = null;
+            chatHistory = [];
+            tutorMessages.innerHTML = '<div class="tutor-msg bot">Hi! I\'m your A_D Nursing Tutor. Ask me about any question, concept, or topic — I\'ll explain it clearly! 💉</div>';
+            renderAuthButton(null);
+          };
+        } else {
+          btn.textContent = '🔑 Sign in with Google';
+          btn.onclick = () => {
+            supabase.auth.signInWithOAuth({
+              provider: 'google',
+              options: { redirectTo: window.location.href }
+            });
+          };
+        }
+
+        tutorHeader.style.position = 'relative';
+        tutorHeader.appendChild(btn);
+      }
+
+      // ========== CHAT HISTORY: LOCAL STORAGE ==========
+      function saveLocal(history) {
+        try {
+          const trimmed = history.slice(-MAX_STORED_MESSAGES);
+          localStorage.setItem(CHAT_STORAGE_KEY, JSON.stringify(trimmed));
+        } catch(e) {}
+      }
+
+      function loadLocal() {
+        try {
+          return JSON.parse(localStorage.getItem(CHAT_STORAGE_KEY) || '[]');
+        } catch(e) { return []; }
+      }
+
+      // ========== CHAT HISTORY: SUPABASE (CLOUD) ==========
+      async function saveCloud(history) {
+        if (!supabase || !currentUser) return;
+        try {
+          const trimmed = history.slice(-MAX_STORED_MESSAGES);
+          await supabase.from('chat_history').upsert({
+            user_id: currentUser.id,
+            messages: trimmed,
+            updated_at: new Date().toISOString()
+          }, { onConflict: 'user_id' });
+        } catch(e) {}
+      }
+
+      async function loadCloud() {
+        if (!supabase || !currentUser) return null;
+        try {
+          const { data } = await supabase
+            .from('chat_history')
+            .select('messages')
+            .eq('user_id', currentUser.id)
+            .single();
+          return data?.messages || [];
+        } catch(e) { return null; }
+      }
+
+      // ========== RENDER HISTORY ==========
+      function renderHistory(history) {
+        tutorMessages.innerHTML = '<div class="tutor-msg bot">Hi! I\'m your A_D Nursing Tutor. Ask me about any question, concept, or topic — I\'ll explain it clearly! 💉</div>';
+        history.forEach(msg => {
+          addMsg(msg.content, msg.role === 'assistant' ? 'bot' : 'user');
+        });
+      }
+
+      // ========== INIT ==========
+      async function init() {
+        if (useCloud) {
+          const { data: { session } } = await supabase.auth.getSession();
+          currentUser = session?.user || null;
+          renderAuthButton(currentUser);
+
+          supabase.auth.onAuthStateChange(async (_event, session) => {
+            currentUser = session?.user || null;
+            renderAuthButton(currentUser);
+            if (currentUser) {
+              const cloud = await loadCloud();
+              if (cloud && cloud.length > 0) {
+                chatHistory = cloud;
+                renderHistory(chatHistory);
+              }
+            }
+          });
+
+          if (currentUser) {
+            const cloud = await loadCloud();
+            if (cloud && cloud.length > 0) {
+              chatHistory = cloud;
+              renderHistory(chatHistory);
+              return;
+            }
+          }
+        }
+
+        // Fall back to localStorage
+        const local = loadLocal();
+        if (local.length > 0) {
+          chatHistory = local;
+          renderHistory(chatHistory);
+        }
+      }
+
+      // ========== PANEL TOGGLE ==========
       tutorBtn.addEventListener('click', () => tutorPanel.classList.toggle('open'));
       tutorClose.addEventListener('click', () => tutorPanel.classList.remove('open'));
 
+      // ========== ADD MESSAGE ==========
       function addMsg(text, type) {
         const div = document.createElement('div');
         div.className = `tutor-msg ${type}`;
@@ -315,6 +465,7 @@
         return div;
       }
 
+      // ========== SEND MESSAGE ==========
       async function sendMessage() {
         const text = tutorInput.value.trim();
         if (!text) return;
@@ -338,6 +489,11 @@
           const reply = data.reply || data.error || 'Sorry, I could not get a response.';
           addMsg(reply, 'bot');
           chatHistory.push({ role: 'assistant', content: reply });
+
+          // Save to both local and cloud
+          saveLocal(chatHistory);
+          if (useCloud && currentUser) saveCloud(chatHistory);
+
         } catch (err) {
           typing.remove();
           addMsg('Connection error. Please try again.', 'bot');
@@ -349,6 +505,9 @@
 
       tutorSend.addEventListener('click', sendMessage);
       tutorInput.addEventListener('keydown', (e) => { if (e.key === 'Enter') sendMessage(); });
+
+      // Start
+      init();
     </script>
   </body>
 </html>
