@@ -6,6 +6,7 @@
     <title>A_D</title>
     <link rel="stylesheet" href="./styles.css" />
     <link rel="icon" type="image/x-icon" href="./favicon.ico" />
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.39.0/dist/umd/supabase.min.js"></script>
   </head>
   <body>
   <!-- Google Login Bar -->
@@ -332,17 +333,13 @@
 
       function loadSupabase(url, key) {
         return new Promise((resolve) => {
-          const script = document.createElement('script');
-          script.src = 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2';
-          script.onload = () => {
-            try {
+          try {
+            if (window.supabase) {
               window._sb = window.supabase.createClient(url, key);
               window._supabaseReady = true;
-            } catch(e) {}
-            resolve();
-          };
-          script.onerror = () => resolve(); // fail silently
-          document.head.appendChild(script);
+            }
+          } catch(e) {}
+          resolve();
         });
       }
 
