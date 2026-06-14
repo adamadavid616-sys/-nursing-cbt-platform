@@ -7,6 +7,20 @@
     <link rel="stylesheet" href="./styles.css" />
     <link rel="icon" type="image/x-icon" href="./favicon.ico" />
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.39.0/dist/umd/supabase.min.js"></script>
+    <script>
+      // Pre-initialize Supabase immediately after CDN loads
+      window._sbInit = function(url, key) {
+        try {
+          if (window.supabase && url && url !== 'https://bhdyyuiuzepsixvfcirg.supabase.co') {
+            window._sb = window.supabase.createClient(url, key);
+            window._supabaseReady = true;
+            console.log('Supabase initialized successfully');
+          }
+        } catch(e) {
+          console.error('Supabase init error:', e);
+        }
+      };
+    </script>
   </head>
   <body>
   <!-- Google Login Bar -->
@@ -333,12 +347,16 @@
 
       function loadSupabase(url, key) {
         return new Promise((resolve) => {
+          if (window._supabaseReady) { resolve(); return; }
           try {
             if (window.supabase) {
               window._sb = window.supabase.createClient(url, key);
               window._supabaseReady = true;
+              console.log('Supabase client created');
+            } else {
+              console.error('window.supabase not found');
             }
-          } catch(e) {}
+          } catch(e) { console.error('Supabase error:', e); }
           resolve();
         });
       }
@@ -348,6 +366,9 @@
       const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJoZHl5dWl1emVwc2l4dmZjaXJnIiwicm9sZSI6ImFub24iLCJpYXQiOj';
       const CHAT_STORAGE_KEY = 'ad-tutor-chat-history';
       const MAX_STORED_MESSAGES = 100;
+
+      // Initialize Supabase immediately
+      window._sbInit(SUPABASE_URL, SUPABASE_ANON_KEY);
 
       let currentUser = null;
       let chatHistory = [];
