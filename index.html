@@ -205,17 +205,49 @@
 
     <!-- A_D Tutor Chatbot -->
     <style>
+
+      /* ===== RESPONSIVE LOGIN BAR ===== */
+      #login-bar {
+        position: fixed;
+        top: 0; left: 0; right: 0;
+        background: #00c9a7;
+        color: #000;
+        padding: 8px 16px;
+        z-index: 99999;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-family: sans-serif;
+        font-size: 13px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+        flex-wrap: wrap;
+        gap: 6px;
+      }
+      #login-bar-msg { flex: 1; min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+      #login-bar-btn {
+        background: #000;
+        color: #00c9a7;
+        border: none;
+        border-radius: 8px;
+        padding: 5px 14px;
+        font-weight: 700;
+        cursor: pointer;
+        font-size: 12px;
+        white-space: nowrap;
+      }
+
+      /* ===== TUTOR BUTTON ===== */
       #tutor-btn {
         position: fixed;
-        bottom: 24px;
-        right: 24px;
-        width: 56px;
-        height: 56px;
+        bottom: 20px;
+        right: 16px;
+        width: 52px;
+        height: 52px;
         border-radius: 50%;
         background: #00c9a7;
         color: #000;
         border: none;
-        font-size: 26px;
+        font-size: 24px;
         cursor: pointer;
         box-shadow: 0 4px 16px rgba(0,201,167,0.4);
         z-index: 9999;
@@ -226,12 +258,13 @@
       }
       #tutor-btn:hover { transform: scale(1.1); }
 
+      /* ===== TUTOR PANEL — RESPONSIVE ===== */
       #tutor-panel {
         position: fixed;
-        bottom: 90px;
-        right: 24px;
-        width: 340px;
-        height: 480px;
+        bottom: 80px;
+        right: 16px;
+        width: min(340px, calc(100vw - 24px));
+        height: min(480px, calc(100vh - 120px));
         background: #1a1a2e;
         border: 1px solid #00c9a7;
         border-radius: 16px;
@@ -246,12 +279,13 @@
       #tutor-header {
         background: #00c9a7;
         color: #000;
-        padding: 12px 16px;
+        padding: 10px 14px;
         font-weight: 700;
-        font-size: 14px;
+        font-size: 13px;
         display: flex;
         justify-content: space-between;
         align-items: center;
+        flex-shrink: 0;
       }
       #tutor-close {
         background: none;
@@ -260,12 +294,12 @@
         cursor: pointer;
         color: #000;
         font-weight: bold;
+        padding: 0 4px;
       }
-
       #tutor-messages {
         flex: 1;
         overflow-y: auto;
-        padding: 12px;
+        padding: 10px;
         display: flex;
         flex-direction: column;
         gap: 8px;
@@ -276,30 +310,18 @@
         font-size: 13px;
         line-height: 1.5;
         max-width: 90%;
+        word-wrap: break-word;
       }
-      .tutor-msg.bot {
-        background: #0f3460;
-        color: #e0e0e0;
-        align-self: flex-start;
-      }
-      .tutor-msg.user {
-        background: #00c9a7;
-        color: #000;
-        align-self: flex-end;
-        font-weight: 600;
-      }
-      .tutor-msg.typing {
-        background: #0f3460;
-        color: #888;
-        align-self: flex-start;
-        font-style: italic;
-      }
+      .tutor-msg.bot { background: #0f3460; color: #e0e0e0; align-self: flex-start; }
+      .tutor-msg.user { background: #00c9a7; color: #000; align-self: flex-end; font-weight: 600; }
+      .tutor-msg.typing { background: #0f3460; color: #888; align-self: flex-start; font-style: italic; }
 
       #tutor-input-row {
         display: flex;
         border-top: 1px solid #333;
         padding: 8px;
         gap: 6px;
+        flex-shrink: 0;
       }
       #tutor-input {
         flex: 1;
@@ -310,6 +332,7 @@
         padding: 8px 10px;
         font-size: 13px;
         outline: none;
+        min-width: 0;
       }
       #tutor-input::placeholder { color: #666; }
       #tutor-send {
@@ -321,15 +344,26 @@
         font-weight: 700;
         cursor: pointer;
         font-size: 14px;
+        flex-shrink: 0;
       }
       #tutor-send:disabled { opacity: 0.5; cursor: not-allowed; }
+
+      @media (max-width: 480px) {
+        #tutor-panel {
+          right: 8px;
+          bottom: 76px;
+          width: calc(100vw - 16px);
+        }
+        #tutor-btn { right: 12px; bottom: 16px; }
+        #login-bar-msg { font-size: 11px; }
+      }
     </style>
 
     <button id="tutor-btn" title="Ask A_D Tutor">🎓</button>
 
     <div id="tutor-panel">
       <div id="tutor-header">
-        <span>A_D Nursing Tutor</span>
+        <span>🎓 A_D Nursing Tutor</span>
         <button id="tutor-close">✕</button>
       </div>
       <div id="tutor-messages">
@@ -341,151 +375,130 @@
       </div>
     </div>
 
-    <!-- Supabase loads async so chatbot always works even if it fails -->
     <script>
-      window._supabaseReady = false;
-
-      function loadSupabase(url, key) {
-        return new Promise((resolve) => {
-          if (window._supabaseReady) { resolve(); return; }
-          try {
-            if (window.supabase) {
-              window._sb = window.supabase.createClient(url, key);
-              window._supabaseReady = true;
-              console.log('Supabase client created');
-            } else {
-              console.error('window.supabase not found');
-            }
-          } catch(e) { console.error('Supabase error:', e); }
-          resolve();
-        });
-      }
-
-      // ========== CONFIGURATION — FILL IN YOUR VALUES ==========
+      // ===== CONFIG =====
       const SUPABASE_URL = 'https://bhdyyuiuzepsixvfcirg.supabase.co';
       const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJoZHl5dWl1emVwc2l4dmZjaXJnIiwicm9sZSI6ImFub24iLCJpYXQiOj';
-      const CHAT_STORAGE_KEY = 'ad-tutor-chat-history';
-      const MAX_STORED_MESSAGES = 100;
+      const CHAT_KEY = 'ad-tutor-chat-history';
+      const MAX_MSGS = 100;
 
-      // Initialize Supabase immediately
-      window._sbInit(SUPABASE_URL, SUPABASE_ANON_KEY);
-
+      // ===== SUPABASE INIT =====
+      let _sb = null;
+      let _sbReady = false;
       let currentUser = null;
       let chatHistory = [];
 
-      // ========== DOM REFS ==========
+      function initSupabase() {
+        try {
+          if (window.supabase && SUPABASE_URL && !SUPABASE_URL.includes('YOUR_')) {
+            _sb = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+            _sbReady = true;
+            console.log('✅ Supabase ready');
+          }
+        } catch(e) { console.error('Supabase init failed:', e); }
+      }
+
+      // Try immediately, then retry after DOM loads
+      initSupabase();
+      document.addEventListener('DOMContentLoaded', () => {
+        if (!_sbReady) initSupabase();
+      });
+
+      // ===== DOM =====
       const tutorBtn = document.getElementById('tutor-btn');
-      const loginBar = document.getElementById('login-bar');
-      const loginBarBtn = document.getElementById('login-bar-btn');
-      const loginBarMsg = document.getElementById('login-bar-msg');
-      const loginBarUser = document.getElementById('login-bar-user');
       const tutorPanel = document.getElementById('tutor-panel');
       const tutorClose = document.getElementById('tutor-close');
       const tutorMessages = document.getElementById('tutor-messages');
       const tutorInput = document.getElementById('tutor-input');
       const tutorSend = document.getElementById('tutor-send');
-      const tutorHeader = document.getElementById('tutor-header');
+      const loginBarBtn = document.getElementById('login-bar-btn');
+      const loginBarMsg = document.getElementById('login-bar-msg');
 
-      // ========== LOGIN BAR ==========
+      // ===== LOGIN BAR =====
       function updateLoginBar(user) {
-        if (!loginBar) return;
-        loginBar.style.display = 'flex';
+        if (!loginBarBtn || !_sbReady) return;
         if (user) {
           const name = user.user_metadata?.full_name?.split(' ')[0] || user.email?.split('@')[0] || 'You';
-          loginBarMsg.textContent = `Welcome back, ${name}! Your chat history is saved. 🎓`;
-          loginBarUser.textContent = '';
+          loginBarMsg.textContent = `Welcome, ${name}! Chat history is saved across devices 🎓`;
           loginBarBtn.textContent = 'Sign out';
           loginBarBtn.onclick = async () => {
-            await window._sb.auth.signOut();
+            await _sb.auth.signOut();
             currentUser = null;
             chatHistory = [];
+            renderHistory([]);
             updateLoginBar(null);
           };
         } else {
           loginBarMsg.textContent = '🎓 Sign in to save your chat history across all devices';
-          loginBarUser.textContent = '';
           loginBarBtn.textContent = 'Sign in with Google';
-          loginBarBtn.onclick = () => {
-            window._sb.auth.signInWithOAuth({
-              provider: 'google',
-              options: { redirectTo: window.location.href }
-            });
-          };
+          loginBarBtn.onclick = () => signInWithGoogle();
         }
       }
 
-      // ========== AUTH BUTTON ==========
-      function renderAuthButton(user) {
-        const existing = document.getElementById('tutor-auth');
-        if (existing) existing.remove();
-        if (!window._supabaseReady) return;
-
-        const btn = document.createElement('button');
-        btn.id = 'tutor-auth';
-        btn.style.cssText = 'position:absolute;top:8px;right:40px;background:transparent;border:1px solid rgba(0,0,0,0.3);border-radius:6px;padding:2px 8px;font-size:11px;cursor:pointer;color:#000;font-weight:600;';
-
-        if (user) {
-          const name = user.user_metadata?.full_name?.split(' ')[0] || user.email?.split('@')[0] || 'You';
-          btn.textContent = `👤 ${name} · Sign out`;
-          btn.onclick = async () => {
-            await window._sb.auth.signOut();
-            currentUser = null;
-            chatHistory = [];
-            tutorMessages.innerHTML = '<div class="tutor-msg bot">Hi! I\'m your A_D Nursing Tutor. Ask me about any question, concept, or topic — I\'ll explain it clearly! 💉</div>';
-            renderAuthButton(null);
-          };
-        } else {
-          btn.textContent = '🔑 Sign in with Google';
-          btn.onclick = () => {
-            window._sb.auth.signInWithOAuth({
-              provider: 'google',
-              options: { redirectTo: window.location.href }
-            });
-          };
+      // ===== GOOGLE SIGN IN =====
+      async function signInWithGoogle() {
+        if (!_sbReady) { initSupabase(); }
+        if (!_sbReady || !_sb) {
+          alert('Auth service unavailable. Please refresh the page and try again.');
+          return;
         }
-
-        tutorHeader.style.position = 'relative';
-        tutorHeader.appendChild(btn);
+        try {
+          const { error } = await _sb.auth.signInWithOAuth({
+            provider: 'google',
+            options: { redirectTo: window.location.origin }
+          });
+          if (error) alert('Sign in error: ' + error.message);
+        } catch(e) {
+          alert('Sign in failed: ' + e.message);
+        }
       }
 
-      // ========== LOCAL STORAGE ==========
+      // Set initial button handler
+      if (loginBarBtn) {
+        loginBarBtn.onclick = () => signInWithGoogle();
+      }
+
+      // ===== LOCAL STORAGE =====
       function saveLocal(h) {
-        try { localStorage.setItem(CHAT_STORAGE_KEY, JSON.stringify(h.slice(-MAX_STORED_MESSAGES))); } catch(e) {}
+        try { localStorage.setItem(CHAT_KEY, JSON.stringify(h.slice(-MAX_MSGS))); } catch(e) {}
       }
       function loadLocal() {
-        try { return JSON.parse(localStorage.getItem(CHAT_STORAGE_KEY) || '[]'); } catch(e) { return []; }
+        try { return JSON.parse(localStorage.getItem(CHAT_KEY) || '[]'); } catch(e) { return []; }
       }
 
-      // ========== CLOUD STORAGE ==========
+      // ===== CLOUD STORAGE =====
       async function saveCloud(h) {
-        if (!window._supabaseReady || !currentUser) return;
+        if (!_sbReady || !currentUser || !_sb) return;
         try {
-          await window._sb.from('chat_history').upsert({
+          await _sb.from('chat_history').upsert({
             user_id: currentUser.id,
-            messages: h.slice(-MAX_STORED_MESSAGES),
+            messages: h.slice(-MAX_MSGS),
             updated_at: new Date().toISOString()
           }, { onConflict: 'user_id' });
-        } catch(e) {}
+        } catch(e) { console.error('Save cloud error:', e); }
       }
+
       async function loadCloud() {
-        if (!window._supabaseReady || !currentUser) return null;
+        if (!_sbReady || !currentUser || !_sb) return null;
         try {
-          const { data } = await window._sb.from('chat_history').select('messages').eq('user_id', currentUser.id).single();
+          const { data, error } = await _sb.from('chat_history')
+            .select('messages').eq('user_id', currentUser.id).single();
+          if (error) return null;
           return data?.messages || [];
         } catch(e) { return null; }
       }
 
-      // ========== RENDER HISTORY ==========
+      // ===== RENDER HISTORY =====
       function renderHistory(history) {
-        tutorMessages.innerHTML = '<div class="tutor-msg bot">Hi! I\'m your A_D Nursing Tutor. Ask me about any question, concept, or topic — I\'ll explain it clearly! 💉</div>';
-        history.forEach(msg => addMsg(msg.content, msg.role === 'assistant' ? 'bot' : 'user'));
+        tutorMessages.innerHTML = '<div class="tutor-msg bot">Hi! I'm your A_D Nursing Tutor. Ask me about any question, concept, or topic — I'll explain it clearly! 💉</div>';
+        history.forEach(m => addMsg(m.content, m.role === 'assistant' ? 'bot' : 'user'));
       }
 
-      // ========== PANEL TOGGLE ==========
+      // ===== PANEL =====
       tutorBtn.addEventListener('click', () => tutorPanel.classList.toggle('open'));
       tutorClose.addEventListener('click', () => tutorPanel.classList.remove('open'));
 
-      // ========== ADD MESSAGE ==========
+      // ===== ADD MESSAGE =====
       function addMsg(text, type) {
         const div = document.createElement('div');
         div.className = `tutor-msg ${type}`;
@@ -495,18 +508,15 @@
         return div;
       }
 
-      // ========== SEND MESSAGE ==========
+      // ===== SEND MESSAGE =====
       async function sendMessage() {
         const text = tutorInput.value.trim();
         if (!text) return;
-
         addMsg(text, 'user');
         chatHistory.push({ role: 'user', content: text });
         tutorInput.value = '';
         tutorSend.disabled = true;
-
         const typing = addMsg('Thinking...', 'typing');
-
         try {
           const res = await fetch('/api/chat', {
             method: 'POST',
@@ -515,92 +525,60 @@
           });
           const data = await res.json();
           typing.remove();
-          const reply = data.reply || data.error || 'Sorry, I could not get a response.';
+          const reply = data.reply || data.error || 'Sorry, could not get a response.';
           addMsg(reply, 'bot');
           chatHistory.push({ role: 'assistant', content: reply });
           saveLocal(chatHistory);
-          if (window._supabaseReady && currentUser) saveCloud(chatHistory);
+          if (_sbReady && currentUser) saveCloud(chatHistory);
         } catch(err) {
           typing.remove();
           addMsg('Connection error. Please try again.', 'bot');
         }
-
         tutorSend.disabled = false;
         tutorInput.focus();
       }
 
       tutorSend.addEventListener('click', sendMessage);
-      tutorInput.addEventListener('keydown', (e) => { if (e.key === 'Enter') sendMessage(); });
+      tutorInput.addEventListener('keydown', e => { if (e.key === 'Enter') sendMessage(); });
 
-      // ========== GLOBAL LOGIN HANDLER ==========
-      window.handleLoginClick = async function() {
-        const btn = document.getElementById('login-bar-btn');
-        if (btn.textContent === 'Sign out') {
-          if (window._sb) {
-            await window._sb.auth.signOut();
-            currentUser = null;
-            chatHistory = [];
-            updateLoginBar(null);
-          }
-          return;
-        }
-
-        // Try to init Supabase if not ready
-        if (!window._supabaseReady && SUPABASE_URL !== 'https://bhdyyuiuzepsixvfcirg.supabase.co') {
-          btn.textContent = 'Connecting...';
-          await loadSupabase(SUPABASE_URL, SUPABASE_ANON_KEY);
-        }
-
-        if (window._supabaseReady && window._sb) {
-          try {
-            await window._sb.auth.signInWithOAuth({
-              provider: 'google',
-              options: { redirectTo: window.location.href }
-            });
-          } catch(e) {
-            btn.textContent = 'Sign in with Google';
-            alert('Sign in failed. Please try again.');
-          }
-        } else {
-          alert('Connection to auth service failed. Please refresh and try again.');
-          btn.textContent = 'Sign in with Google';
-        }
-      };
-
-      // ========== INIT ==========
+      // ===== INIT =====
       async function init() {
-        // Load local history first so chatbot works immediately
+        // Load local history first
         const local = loadLocal();
         if (local.length > 0) { chatHistory = local; renderHistory(chatHistory); }
 
-        // Then try Supabase in background
-        if (SUPABASE_URL && SUPABASE_URL !== 'https://bhdyyuiuzepsixvfcirg.supabase.co') {
-          await loadSupabase(SUPABASE_URL, SUPABASE_ANON_KEY);
-          if (window._supabaseReady) {
-            const { data: { session } } = await window._sb.auth.getSession();
+        // Setup Supabase auth
+        if (_sbReady && _sb) {
+          try {
+            const { data: { session } } = await _sb.auth.getSession();
             currentUser = session?.user || null;
-            renderAuthButton(currentUser);
+            updateLoginBar(currentUser);
 
-            window._sb.auth.onAuthStateChange(async (_e, sess) => {
+            _sb.auth.onAuthStateChange(async (_e, sess) => {
               currentUser = sess?.user || null;
               updateLoginBar(currentUser);
-              renderAuthButton(currentUser);
               if (currentUser) {
                 const cloud = await loadCloud();
-                if (cloud && cloud.length > 0) { chatHistory = cloud; renderHistory(chatHistory); }
+                if (cloud?.length > 0) { chatHistory = cloud; renderHistory(chatHistory); }
               }
             });
 
-            updateLoginBar(currentUser);
             if (currentUser) {
               const cloud = await loadCloud();
-              if (cloud && cloud.length > 0) { chatHistory = cloud; renderHistory(chatHistory); }
+              if (cloud?.length > 0) { chatHistory = cloud; renderHistory(chatHistory); }
             }
-          }
+          } catch(e) { console.error('Auth setup error:', e); }
+        } else {
+          console.warn('Supabase not ready at init - running without cloud auth');
         }
       }
 
-      init();
+      // Wait for page to fully load before init
+      if (document.readyState === 'complete') {
+        init();
+      } else {
+        window.addEventListener('load', init);
+      }
     </script>
   </body>
 </html>
