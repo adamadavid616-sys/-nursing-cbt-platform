@@ -27,7 +27,7 @@
     <span id="login-bar-msg">🎓 Sign in to save your chat history across all devices</span>
     <div style="display:flex;gap:10px;align-items:center;">
       <span id="login-bar-user" style="font-weight:600;"></span>
-      <button id="login-bar-btn" style="
+      <button id="login-bar-btn" onclick="handleLoginClick()" style="
         background:#000;
         color:#00c9a7;
         border:none;
@@ -513,6 +513,41 @@
 
       tutorSend.addEventListener('click', sendMessage);
       tutorInput.addEventListener('keydown', (e) => { if (e.key === 'Enter') sendMessage(); });
+
+      // ========== GLOBAL LOGIN HANDLER ==========
+      window.handleLoginClick = async function() {
+        const btn = document.getElementById('login-bar-btn');
+        if (btn.textContent === 'Sign out') {
+          if (window._sb) {
+            await window._sb.auth.signOut();
+            currentUser = null;
+            chatHistory = [];
+            updateLoginBar(null);
+          }
+          return;
+        }
+
+        // Try to init Supabase if not ready
+        if (!window._supabaseReady && SUPABASE_URL !== 'https://bhdyyuiuzepsixvfcirg.supabase.co') {
+          btn.textContent = 'Connecting...';
+          await loadSupabase(SUPABASE_URL, SUPABASE_ANON_KEY);
+        }
+
+        if (window._supabaseReady && window._sb) {
+          try {
+            await window._sb.auth.signInWithOAuth({
+              provider: 'google',
+              options: { redirectTo: window.location.href }
+            });
+          } catch(e) {
+            btn.textContent = 'Sign in with Google';
+            alert('Sign in failed. Please try again.');
+          }
+        } else {
+          alert('Connection to auth service failed. Please refresh and try again.');
+          btn.textContent = 'Sign in with Google';
+        }
+      };
 
       // ========== INIT ==========
       async function init() {
