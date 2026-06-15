@@ -510,34 +510,27 @@
       async function saveCloud(h) {
         if (!sbClient || !currentUser) return;
         try {
-          await fetch(SB_URL + '/rest/v1/chat_history', {
-            method: 'POST',
-            headers: {
-              'apikey': SB_KEY,
-              'Authorization': 'Bearer ' + currentUser.access_token,
-              'Content-Type': 'application/json',
-              'Prefer': 'resolution=merge-duplicates'
-            },
-            body: JSON.stringify({
-              user_id: currentUser.id,
-              messages: h.slice(-MAX_MSGS),
-              updated_at: new Date().toISOString()
-            })
-          });
-        } catch(e) {}
+          // Use Supabase client upsert for reliable sync
+          var { error } = await sbClient.from('chat_history').upsert({
+            user_id: currentUser.id,
+            messages: h.slice(-MAX_MSGS),
+            updated_at: new Date().toISOString()
+          }, { onConflict: 'user_id' });
+          if (error) console.error('Save cloud error:', error);
+          else console.log('Chat saved to cloud');
+        } catch(e) { console.error('saveCloud exception:', e); }
       }
 
       async function loadCloud(accessToken, userId) {
         try {
-          var res = await fetch(SB_URL + '/rest/v1/chat_history?user_id=eq.' + userId + '&select=messages', {
-            headers: {
-              'apikey': SB_KEY,
-              'Authorization': 'Bearer ' + accessToken
-            }
-          });
-          var data = await res.json();
-          return data && data[0] ? data[0].messages : [];
-        } catch(e) { return []; }
+          var { data, error } = await sbClient.from('chat_history')
+            .select('messages')
+            .eq('user_id', userId)
+            .single();
+          if (error) { console.error('loadCloud error:', error); return []; }
+          console.log('Cloud history loaded:', data?.messages?.length || 0, 'messages');
+          return data?.messages || [];
+        } catch(e) { console.error('loadCloud exception:', e); return []; }
       }
 
       // ===== LOGIN BAR =====
@@ -550,11 +543,23 @@
           loginBarMsg.textContent = 'Welcome, ' + name + '! Chat history saved across devices.';
           loginBarBtn.textContent = 'Sign out';
           loginBarBtn.onclick = async function() {
-            if (sbClient) await sbClient.auth.signOut();
+            try {
+              if (sbClient) {
+                await sbClient.auth.signOut({ scope: 'global' });
+              }
+            } catch(e) {}
+            // Clear ALL local storage session data
+            Object.keys(localStorage).forEach(function(key) {
+              if (key.startsWith('sb-') || key.includes('supabase') || key === 'ad-tutor-chat') {
+                localStorage.removeItem(key);
+              }
+            });
             currentUser = null;
             chatHistory = [];
             renderHistory([]);
             setLoginBar(null);
+            // Force page reload to ensure clean state
+            setTimeout(function() { window.location.reload(); }, 500);
           };
         } else {
           loginBarMsg.textContent = 'Sign in to save your chat history across all devices';
