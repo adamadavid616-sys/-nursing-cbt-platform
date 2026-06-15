@@ -576,7 +576,13 @@
         }
         sbClient.auth.signInWithOAuth({
           provider: 'google',
-          options: { redirectTo: APP_URL }
+          options: {
+            redirectTo: APP_URL,
+            queryParams: {
+              prompt: 'select_account',
+              access_type: 'offline'
+            }
+          }
         }).catch(function(e) {
           alert('Sign in error: ' + e.message);
         });
