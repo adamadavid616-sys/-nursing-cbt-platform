@@ -486,7 +486,7 @@
           var res = await fetch('/api/chat', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ messages: chatHistory, context: { questionCount: 9572 } })
+            body: JSON.stringify({ messages: chatHistory, context: { questionCount: 1488 } })
           });
           var data = await res.json();
           typing.remove();
