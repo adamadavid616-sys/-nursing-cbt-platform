@@ -1,13 +1,12 @@
 // A_D Nursing CBT Question Bank
-// Source: NCLEX-PN Textbook
-// Total: 1488 questions | 25 sections
+// Total: 1488 questions | 25 chapters
 
 export const QUESTION_BANK = [
   {
     id: 1,
     category: `Physiological Adaptation`,
     chapter: `Cardiovascular System`,
-    question: `The nurse counts an adult's apical heart beat at 110 beats per minute. The nurse describes this as:`,
+    prompt: `The nurse counts an adult's apical heart beat at 110 beats per minute. The nurse describes this as:`,
     options: [
       `asystole`,
       `bigeminy`,
@@ -21,7 +20,7 @@ export const QUESTION_BANK = [
     id: 2,
     category: `Physiological Adaptation`,
     chapter: `Cardiovascular System`,
-    question: `A client has an elevated AST 24 hours following chest pain and shortness of breath. This is suggestive of which of the following?`,
+    prompt: `A client has an elevated AST 24 hours following chest pain and shortness of breath. This is suggestive of which of the following?`,
     options: [
       `Gallbladder disease`,
       `Liver disease`,
@@ -35,7 +34,7 @@ export const QUESTION_BANK = [
     id: 3,
     category: `Physiological Adaptation`,
     chapter: `Cardiovascular System`,
-    question: `An adult has a coagulation time of 20 minutes. The nurse should observe the client for which of the following?`,
+    prompt: `An adult has a coagulation time of 20 minutes. The nurse should observe the client for which of the following?`,
     options: [
       `Blood clots`,
       `Ecchymotic areas`,
@@ -49,7 +48,7 @@ export const QUESTION_BANK = [
     id: 4,
     category: `Physiological Adaptation`,
     chapter: `Cardiovascular System`,
-    question: `A prothrombin time test should be performed regularly on persons who are taking which medication?`,
+    prompt: `A prothrombin time test should be performed regularly on persons who are taking which medication?`,
     options: [
       `Heparin`,
       `Warfarin`,
@@ -63,7 +62,7 @@ export const QUESTION_BANK = [
     id: 5,
     category: `Physiological Adaptation`,
     chapter: `Cardiovascular System`,
-    question: `Which prothrombin time value would be considered normal for a client who is receiving warfarin (Coumadin)?`,
+    prompt: `Which prothrombin time value would be considered normal for a client who is receiving warfarin (Coumadin)?`,
     options: [
       `12 seconds`,
       `20 seconds`,
@@ -77,7 +76,7 @@ export const QUESTION_BANK = [
     id: 6,
     category: `Physiological Adaptation`,
     chapter: `Cardiovascular System`,
-    question: `The nurse is caring for a client who is receiving heparin. What drug should be readily available?`,
+    prompt: `The nurse is caring for a client who is receiving heparin. What drug should be readily available?`,
     options: [
       `Vitamin K`,
       `Caffeine`,
@@ -91,7 +90,7 @@ export const QUESTION_BANK = [
     id: 7,
     category: `Physiological Adaptation`,
     chapter: `Cardiovascular System`,
-    question: `An adult who is receiving heparin asks the nurse why it cannot be given by mouth. The nurse responds that heparin is given parenterally because:`,
+    prompt: `An adult who is receiving heparin asks the nurse why it cannot be given by mouth. The nurse responds that heparin is given parenterally because:`,
     options: [
       `it is destroyed by gastric secretions.`,
       `it irritates the gastric mucosa.`,
@@ -105,7 +104,7 @@ export const QUESTION_BANK = [
     id: 8,
     category: `Physiological Adaptation`,
     chapter: `Cardiovascular System`,
-    question: `An adult who is admitted for a cardiac catheterization asks the nurse if she will be asleep during the cardiac catheterization. What is the best initial response for the nurse to make?`,
+    prompt: `An adult who is admitted for a cardiac catheterization asks the nurse if she will be asleep during the cardiac catheterization. What is the best initial response for the nurse to make?`,
     options: [
       `"You will be given a general anesthesia."`,
       `"You will be sedated but not asleep."`,
@@ -119,7 +118,7 @@ export const QUESTION_BANK = [
     id: 9,
     category: `Physiological Adaptation`,
     chapter: `Cardiovascular System`,
-    question: `During the admission interview, a client who is admitted for a cardiac catheterization says, "Every time I eat shrimp I get a rash." What action is essential for the nurse to take at this time?`,
+    prompt: `During the admission interview, a client who is admitted for a cardiac catheterization says, "Every time I eat shrimp I get a rash." What action is essential for the nurse to take at this time?`,
     options: [
       `Notify the physician`,
       `Ask the client if she gets a rash from any other foods.`,
@@ -133,7 +132,7 @@ export const QUESTION_BANK = [
     id: 10,
     category: `Physiological Adaptation`,
     chapter: `Cardiovascular System`,
-    question: `The nurse is preparing a client for a cardiac catheterization. Which action would the nurse expect to take?`,
+    prompt: `The nurse is preparing a client for a cardiac catheterization. Which action would the nurse expect to take?`,
     options: [
       `Administer a radioisotope as ordered.`,
       `Give the client a cleansing enema.`,
@@ -147,7 +146,7 @@ export const QUESTION_BANK = [
     id: 11,
     category: `Physiological Adaptation`,
     chapter: `Cardiovascular System`,
-    question: `A young adult with a history of rheumatic fever as a child is to have a cardiac catheterization. She asks the nurse why she must have a cardiac catheterization. The nurse's response is based on the understanding that cardiac catheterization can accomplish all of the following EXCEPT:`,
+    prompt: `A young adult with a history of rheumatic fever as a child is to have a cardiac catheterization. She asks the nurse why she must have a cardiac catheterization. The nurse's response is based on the understanding that cardiac catheterization can accomplish all of the following EXCEPT:`,
     options: [
       `assessing heart structures`,
       `determining oxygen levels in the heart chambers.`,
@@ -161,7 +160,7 @@ export const QUESTION_BANK = [
     id: 12,
     category: `Physiological Adaptation`,
     chapter: `Cardiovascular System`,
-    question: `When a client returns from undergoing a cardiac catheterization, it is most essential for the nurse to:`,
+    prompt: `When a client returns from undergoing a cardiac catheterization, it is most essential for the nurse to:`,
     options: [
       `check peripheral pulses`,
       `maintain NPO`,
@@ -175,7 +174,7 @@ export const QUESTION_BANK = [
     id: 13,
     category: `Physiological Adaptation`,
     chapter: `Cardiovascular System`,
-    question: `A male client with angina pectoris has been having an increased number of episodes of pain recently. He is admitted for observation. During the admission interview, he tells the nurse that he has been having chest pain during the last week. Which statement by the client would be of greatest concern to the nurse?`,
+    prompt: `A male client with angina pectoris has been having an increased number of episodes of pain recently. He is admitted for observation. During the admission interview, he tells the nurse that he has been having chest pain during the last week. Which statement by the client would be of greatest concern to the nurse?`,
     options: [
       `"I had chest pain while I was walking in the snow on Thursday."`,
       `"We went out for a big dinner to celebrate my wife's birthday, but I couldn't enjoy it because I got the pain before we got home from the restaurant."`,
@@ -189,7 +188,7 @@ export const QUESTION_BANK = [
     id: 14,
     category: `Physiological Adaptation`,
     chapter: `Cardiovascular System`,
-    question: `The nurse responds to the call light of a client who has a history of angina pectoris. He tells the nurse that he has just taken a nitroglycerin tablet sublingually for anginal pain. What action should the nurse take next?`,
+    prompt: `The nurse responds to the call light of a client who has a history of angina pectoris. He tells the nurse that he has just taken a nitroglycerin tablet sublingually for anginal pain. What action should the nurse take next?`,
     options: [
       `If the pain does not subside within five minutes, place a second tablet under his tongue`,
       `Position him with head lower than feet`,
@@ -203,7 +202,7 @@ export const QUESTION_BANK = [
     id: 15,
     category: `Physiological Adaptation`,
     chapter: `Cardiovascular System`,
-    question: `The nurse is teaching an adult who has angina about taking nitroglycerin. The nurse tells him he will know the nitroglycerin is effective when:`,
+    prompt: `The nurse is teaching an adult who has angina about taking nitroglycerin. The nurse tells him he will know the nitroglycerin is effective when:`,
     options: [
       `he experiences tingling under the tongue.`,
       `his pulse rate increases.`,
@@ -217,7 +216,7 @@ export const QUESTION_BANK = [
     id: 16,
     category: `Physiological Adaptation`,
     chapter: `Cardiovascular System`,
-    question: `A client with angina will have to make lifestyle modifications. Which of the following statements by the client would indicate that he understands the necessary modifications in lifestyle to prevent angina attacks?`,
+    prompt: `A client with angina will have to make lifestyle modifications. Which of the following statements by the client would indicate that he understands the necessary modifications in lifestyle to prevent angina attacks?`,
     options: [
       `"I know that I will need to eat less, so I will only eat one meal a day."`,
       `"I will need to stay in bed all the time so I won't have the pain."`,
@@ -231,7 +230,7 @@ export const QUESTION_BANK = [
     id: 17,
     category: `Physiological Adaptation`,
     chapter: `Cardiovascular System`,
-    question: `A client who has been treated for angina is discharged in stable condition. At a clinic visit, he tells the nurse he has anginal pain when he has sexual intercourse with his wife. What is the best response for the nurse to make?`,
+    prompt: `A client who has been treated for angina is discharged in stable condition. At a clinic visit, he tells the nurse he has anginal pain when he has sexual intercourse with his wife. What is the best response for the nurse to make?`,
     options: [
       `"Do you have ambivalent feelings toward your wife?"`,
       `"Many persons with angina have less pain when their partner assumes the top position."`,
@@ -245,7 +244,7 @@ export const QUESTION_BANK = [
     id: 18,
     category: `Physiological Adaptation`,
     chapter: `Cardiovascular System`,
-    question: `A low-sodium, low-cholesterol, weight-reducing diet is prescribed for an adult with heart disease. The nurse knows that he understands his diet when he chooses which of the following meals?`,
+    prompt: `A low-sodium, low-cholesterol, weight-reducing diet is prescribed for an adult with heart disease. The nurse knows that he understands his diet when he chooses which of the following meals?`,
     options: [
       `Baked skinless chicken and mashed potatoes`,
       `Stir-fried Chinese vegetables and rice`,
@@ -259,7 +258,7 @@ export const QUESTION_BANK = [
     id: 19,
     category: `Physiological Adaptation`,
     chapter: `Cardiovascular System`,
-    question: `An adult client is admitted with a diagnosis of left-sided congestive heart failure. Which assessment finding would most likely be present?`,
+    prompt: `An adult client is admitted with a diagnosis of left-sided congestive heart failure. Which assessment finding would most likely be present?`,
     options: [
       `Distended neck veins`,
       `Dyspnea`,
@@ -273,7 +272,7 @@ export const QUESTION_BANK = [
     id: 20,
     category: `Physiological Adaptation`,
     chapter: `Cardiovascular System`,
-    question: `Digoxin (Lanoxin) and furosemide (Lasix) are ordered for a client who has congestive heart failure. Which of the following would the nurse also expect to be ordered for this client?`,
+    prompt: `Digoxin (Lanoxin) and furosemide (Lasix) are ordered for a client who has congestive heart failure. Which of the following would the nurse also expect to be ordered for this client?`,
     options: [
       `Potassium`,
       `Calcium`,
@@ -287,7 +286,7 @@ export const QUESTION_BANK = [
     id: 21,
     category: `Physiological Adaptation`,
     chapter: `Cardiovascular System`,
-    question: `When the nurse is about to administer digoxin to a client, the client says, "I think I need to see the eye doctor. Things seem to look kind of green today." The nurse takes his vital signs, which are blood pressure = 150/94, pulse = 60 bpm, and respirations = 28. What is the most appropriate initial action for the nurse to take?`,
+    prompt: `When the nurse is about to administer digoxin to a client, the client says, "I think I need to see the eye doctor. Things seem to look kind of green today." The nurse takes his vital signs, which are blood pressure = 150/94, pulse = 60 bpm, and respirations = 28. What is the most appropriate initial action for the nurse to take?`,
     options: [
       `Administer the medication and record the findings on his chart`,
       `Withhold the digoxin and report to the charge nurse`,
@@ -301,7 +300,7 @@ export const QUESTION_BANK = [
     id: 22,
     category: `Physiological Adaptation`,
     chapter: `Cardiovascular System`,
-    question: `An adult client is admitted to the hospital with peripheral vascular disease of the lower extremities. He has several ischemic ulcers on each ankle and lower leg area. Other parts of his skin are shiny and taut with loss of hair. A primary nursing goal for this client should be to do which of the following?`,
+    prompt: `An adult client is admitted to the hospital with peripheral vascular disease of the lower extremities. He has several ischemic ulcers on each ankle and lower leg area. Other parts of his skin are shiny and taut with loss of hair. A primary nursing goal for this client should be to do which of the following?`,
     options: [
       `Increase activity tolerance`,
       `Relieve anxiety`,
@@ -315,7 +314,7 @@ export const QUESTION_BANK = [
     id: 23,
     category: `Physiological Adaptation`,
     chapter: `Cardiovascular System`,
-    question: `An adult client who has peripheral vascular disease of the lower extremities was observed smoking in the waiting area. What is the most appropriate response for the nurse to make regarding the client's smoking?`,
+    prompt: `An adult client who has peripheral vascular disease of the lower extremities was observed smoking in the waiting area. What is the most appropriate response for the nurse to make regarding the client's smoking?`,
     options: [
       `"Smoking is not allowed for patients with blood diseases."`,
       `"Smoking causes the blood vessels in your legs to constrict and reduces the blood supply."`,
@@ -329,7 +328,7 @@ export const QUESTION_BANK = [
     id: 24,
     category: `Physiological Adaptation`,
     chapter: `Cardiovascular System`,
-    question: `An adult client with peripheral vascular disease tells the nurse he is afraid his left leg is not improving and may need to be amputated. How should the nurse respond?`,
+    prompt: `An adult client with peripheral vascular disease tells the nurse he is afraid his left leg is not improving and may need to be amputated. How should the nurse respond?`,
     options: [
       `"You and your wife should discuss your feelings before surgery."`,
       `"You sound concerned about your leg and possible surgery."`,
@@ -343,7 +342,7 @@ export const QUESTION_BANK = [
     id: 25,
     category: `Physiological Adaptation`,
     chapter: `Cardiovascular System`,
-    question: `An adult is diagnosed with hypertension. He is prescribed chlorothiazide (Diuril) 500 mg PO. What nursing instruction is essential for him?`,
+    prompt: `An adult is diagnosed with hypertension. He is prescribed chlorothiazide (Diuril) 500 mg PO. What nursing instruction is essential for him?`,
     options: [
       `Drink at least two quarts of liquid daily.`,
       `Avoid hard cheeses`,
@@ -357,7 +356,7 @@ export const QUESTION_BANK = [
     id: 26,
     category: `Physiological Adaptation`,
     chapter: `Cardiovascular System`,
-    question: `A low-sodium diet has been ordered for an adult client. The nurse knows that the client understands his low-sodium diet when the client selects which menu?`,
+    prompt: `A low-sodium diet has been ordered for an adult client. The nurse knows that the client understands his low-sodium diet when the client selects which menu?`,
     options: [
       `Tossed salad, carrot sticks, and steak`,
       `Baked chicken, mashed potatoes, and green beans`,
@@ -371,7 +370,7 @@ export const QUESTION_BANK = [
     id: 27,
     category: `Physiological Adaptation`,
     chapter: `Cardiovascular System`,
-    question: `A female client is admitted to the hospital with obesity and deep vein thrombophlebitis (DVT) of the right leg. She weighs 275 pounds. Which of the following factors is least related to her diagnosis?`,
+    prompt: `A female client is admitted to the hospital with obesity and deep vein thrombophlebitis (DVT) of the right leg. She weighs 275 pounds. Which of the following factors is least related to her diagnosis?`,
     options: [
       `She has been taking oral estrogens for the last three years.`,
       `She smokes two packs of cigarettes daily.`,
@@ -385,7 +384,7 @@ export const QUESTION_BANK = [
     id: 28,
     category: `Physiological Adaptation`,
     chapter: `Cardiovascular System`,
-    question: `Which assessment finding would most likely indicate that a client has thrombophlebitis in the leg?`,
+    prompt: `Which assessment finding would most likely indicate that a client has thrombophlebitis in the leg?`,
     options: [
       `Diminished pedal pulses`,
       `Color changes in the extremities when elevated`,
@@ -399,7 +398,7 @@ export const QUESTION_BANK = [
     id: 29,
     category: `Physiological Adaptation`,
     chapter: `Cardiovascular System`,
-    question: `What should be included in the teaching plan for an adult who has hypertension?`,
+    prompt: `What should be included in the teaching plan for an adult who has hypertension?`,
     options: [
       `Reduce dietary calcium`,
       `Avoid aerobic exercise`,
@@ -413,7 +412,7 @@ export const QUESTION_BANK = [
     id: 30,
     category: `Physiological Adaptation`,
     chapter: `Cardiovascular System`,
-    question: `The nurse is caring for an elderly client who has congestive heart failure and is taking digoxin. The client should be monitored for which of the following signs of toxicity?`,
+    prompt: `The nurse is caring for an elderly client who has congestive heart failure and is taking digoxin. The client should be monitored for which of the following signs of toxicity?`,
     options: [
       `Disorientation`,
       `Weight gain`,
@@ -427,7 +426,7 @@ export const QUESTION_BANK = [
     id: 31,
     category: `Physiological Adaptation`,
     chapter: `Cardiovascular System`,
-    question: `The licensed practical nurse (LPN) is assisting the registered nurse (RN) in developing the nursing care plan for an older adult who has congestive heart failure. Which nursing diagnosis is most likely to be included?`,
+    prompt: `The licensed practical nurse (LPN) is assisting the registered nurse (RN) in developing the nursing care plan for an older adult who has congestive heart failure. Which nursing diagnosis is most likely to be included?`,
     options: [
       `Deficient fluid volume`,
       `Impaired verbal communication`,
@@ -441,7 +440,7 @@ export const QUESTION_BANK = [
     id: 32,
     category: `Physiological Adaptation`,
     chapter: `Cardiovascular System`,
-    question: `The nurse is caring for a client who is being evaluated for arteriosclerosis obliterans. Which complaint is the client most likely to have?`,
+    prompt: `The nurse is caring for a client who is being evaluated for arteriosclerosis obliterans. Which complaint is the client most likely to have?`,
     options: [
       `Burning pain in the legs that wakes him or her at night`,
       `Numbness of the feet and ankles with exercise`,
@@ -455,7 +454,7 @@ export const QUESTION_BANK = [
     id: 33,
     category: `Physiological Adaptation`,
     chapter: `Cardiovascular System`,
-    question: `An adult is admitted with venous thromboembolism. What treatment should the nurse expect during the acute stage?`,
+    prompt: `An adult is admitted with venous thromboembolism. What treatment should the nurse expect during the acute stage?`,
     options: [
       `Application of an elastic stocking`,
       `Ambulation three times a day`,
@@ -469,7 +468,7 @@ export const QUESTION_BANK = [
     id: 34,
     category: `Physiological Adaptation`,
     chapter: `Cardiovascular System`,
-    question: `The nurse is observing a client who is learning to perform Buerger-Allen exercises. The nurse knows that the client is performing these exercises correctly when the client is observed doing what?`,
+    prompt: `The nurse is observing a client who is learning to perform Buerger-Allen exercises. The nurse knows that the client is performing these exercises correctly when the client is observed doing what?`,
     options: [
       `Alternately dorsiflexing and plantar flexing the feet while the legs are elevated`,
       `Massaging the legs beginning at the feet and moving toward the heart`,
@@ -483,7 +482,7 @@ export const QUESTION_BANK = [
     id: 35,
     category: `Physiological Adaptation`,
     chapter: `Cardiovascular System`,
-    question: `What should be included in foot care for the client who has a peripheral vascular disorder?`,
+    prompt: `What should be included in foot care for the client who has a peripheral vascular disorder?`,
     options: [
       `Soaking the feet for 20 minutes before washing them`,
       `Walking barefoot only on carpeted floors`,
@@ -497,7 +496,7 @@ export const QUESTION_BANK = [
     id: 36,
     category: `Physiological Adaptation`,
     chapter: `Cardiovascular System`,
-    question: `An older adult is scheduled for coronary arteriography during a cardiac catheterization. Which nursing intervention will be essential as she recovers from the diagnostic procedure on the hospital unit?`,
+    prompt: `An older adult is scheduled for coronary arteriography during a cardiac catheterization. Which nursing intervention will be essential as she recovers from the diagnostic procedure on the hospital unit?`,
     options: [
       `Encouraging frequent ambulation to prevent deep vein thrombosis`,
       `Limiting fluid intake to prevent fluid overload`,
@@ -511,7 +510,7 @@ export const QUESTION_BANK = [
     id: 37,
     category: `Physiological Adaptation`,
     chapter: `Cardiovascular System`,
-    question: `An older adult is admitted to the hospital with symptoms of severe dyspnea, orthopnea, diaphoresis, bubbling respirations, and cyanosis. He states that he is afraid "something bad is about to happen." How should the nurse position this client?`,
+    prompt: `An older adult is admitted to the hospital with symptoms of severe dyspnea, orthopnea, diaphoresis, bubbling respirations, and cyanosis. He states that he is afraid "something bad is about to happen." How should the nurse position this client?`,
     options: [
       `Sitting upright`,
       `Head lower than feet`,
@@ -525,7 +524,7 @@ export const QUESTION_BANK = [
     id: 38,
     category: `Physiological Adaptation`,
     chapter: `Cardiovascular System`,
-    question: `An adult male has a high level of high-density lipoproteins (HDL) in proportion to low-density lipoproteins (LDL). How does this relate to his risk of developing coronary artery disease (CAD)?`,
+    prompt: `An adult male has a high level of high-density lipoproteins (HDL) in proportion to low-density lipoproteins (LDL). How does this relate to his risk of developing coronary artery disease (CAD)?`,
     options: [
       `His risk for CAD is low.`,
       `There is no direct correlation.`,
@@ -539,7 +538,7 @@ export const QUESTION_BANK = [
     id: 39,
     category: `Physiological Adaptation`,
     chapter: `Cardiovascular System`,
-    question: `A 72-year-old man had a total hip arthroplasty eight days ago. He suddenly develops tenderness in his left calf, a slight temperature elevation, and a positive Homan's sign. Which of the following will be included in the initial care of this man?`,
+    prompt: `A 72-year-old man had a total hip arthroplasty eight days ago. He suddenly develops tenderness in his left calf, a slight temperature elevation, and a positive Homan's sign. Which of the following will be included in the initial care of this man?`,
     options: [
       `Warm packs to the left leg`,
       `Vigorous massage of the left leg`,
@@ -555,7 +554,7 @@ export const QUESTION_BANK = [
     id: 40,
     category: `Physiological Adaptation`,
     chapter: `Hematologic System`,
-    question: `The nurse is discussing dietary sources of iron with a client who has iron deficiency anemia. Which menu, if selected by the client, indicates the best understanding of the diet?`,
+    prompt: `The nurse is discussing dietary sources of iron with a client who has iron deficiency anemia. Which menu, if selected by the client, indicates the best understanding of the diet?`,
     options: [
       `Milkshake, hot dog, and beets`,
       `Beef steak, spinach, and grape juice`,
@@ -569,7 +568,7 @@ export const QUESTION_BANK = [
     id: 41,
     category: `Physiological Adaptation`,
     chapter: `Hematologic System`,
-    question: `Ferrous sulfate is prescribed for a client. She returns to the clinic in two weeks. Which assessment by the nurse indicates that she has NOT been taking iron as ordered?`,
+    prompt: `Ferrous sulfate is prescribed for a client. She returns to the clinic in two weeks. Which assessment by the nurse indicates that she has NOT been taking iron as ordered?`,
     options: [
       `The client's cheeks are flushed.`,
       `The client reports having more energy.`,
@@ -583,7 +582,7 @@ export const QUESTION_BANK = [
     id: 42,
     category: `Physiological Adaptation`,
     chapter: `Hematologic System`,
-    question: `A Schilling test has been ordered for a client suspected of having pernicious anemia. What is the nurse's primary responsibility in relation to this test?`,
+    prompt: `A Schilling test has been ordered for a client suspected of having pernicious anemia. What is the nurse's primary responsibility in relation to this test?`,
     options: [
       `Collect the blood samples`,
       `Collect a 24-hour urine sample`,
@@ -597,7 +596,7 @@ export const QUESTION_BANK = [
     id: 43,
     category: `Physiological Adaptation`,
     chapter: `Hematologic System`,
-    question: `A client who receives a diagnosis of pernicious anemia asks why she must receive vitamin shots. What is the best answer for the nurse to give?`,
+    prompt: `A client who receives a diagnosis of pernicious anemia asks why she must receive vitamin shots. What is the best answer for the nurse to give?`,
     options: [
       `"Shots work faster than pills."`,
       `"Your body cannot absorb vitamin B12 from foods."`,
@@ -611,7 +610,7 @@ export const QUESTION_BANK = [
     id: 44,
     category: `Physiological Adaptation`,
     chapter: `Hematologic System`,
-    question: `A client who has been diagnosed as having pernicious anemia asks how long she will have to take shots. What is the best answer for the nurse to give?`,
+    prompt: `A client who has been diagnosed as having pernicious anemia asks how long she will have to take shots. What is the best answer for the nurse to give?`,
     options: [
       `"Until your blood count returns to normal."`,
       `"Until you are feeling better."`,
@@ -625,7 +624,7 @@ export const QUESTION_BANK = [
     id: 45,
     category: `Physiological Adaptation`,
     chapter: `Hematologic System`,
-    question: `A toddler has been treated for sickle cell crisis. The crisis subsides, and the child improves. Which statement is essential for the nurse to include in the discharge teaching?`,
+    prompt: `A toddler has been treated for sickle cell crisis. The crisis subsides, and the child improves. Which statement is essential for the nurse to include in the discharge teaching?`,
     options: [
       `Your child will bruise easily. Do not let your child bump into things.`,
       `Notify the physician immediately if your child develops a fever.`,
@@ -639,7 +638,7 @@ export const QUESTION_BANK = [
     id: 46,
     category: `Physiological Adaptation`,
     chapter: `Hematologic System`,
-    question: `Which statement made by the parent of a child newly diagnosed with sickle cell anemia indicates a need for more teaching?`,
+    prompt: `Which statement made by the parent of a child newly diagnosed with sickle cell anemia indicates a need for more teaching?`,
     options: [
       `"We are going to the mountains for our vacation this year."`,
       `"It's a good thing she likes to drink juices."`,
@@ -653,7 +652,7 @@ export const QUESTION_BANK = [
     id: 47,
     category: `Physiological Adaptation`,
     chapter: `Hematologic System`,
-    question: `A 5-year-old boy is admitted because he bled profusely when he lost his first baby tooth. After a workup, he is diagnosed as having classic hemophilia. His mother asks the nurse if his two younger sisters will also develop hemophilia. What is the best answer for the nurse to give?`,
+    prompt: `A 5-year-old boy is admitted because he bled profusely when he lost his first baby tooth. After a workup, he is diagnosed as having classic hemophilia. His mother asks the nurse if his two younger sisters will also develop hemophilia. What is the best answer for the nurse to give?`,
     options: [
       `"They will not develop the disease."`,
       `"Statistically, one of them is likely to develop the disease."`,
@@ -667,7 +666,7 @@ export const QUESTION_BANK = [
     id: 48,
     category: `Physiological Adaptation`,
     chapter: `Hematologic System`,
-    question: `The nurse has been teaching the parents of a child with hemophilia about the care he will need. Which statement by the parents indicates a need for more instruction?`,
+    prompt: `The nurse has been teaching the parents of a child with hemophilia about the care he will need. Which statement by the parents indicates a need for more instruction?`,
     options: [
       `"If my child needs something for pain or a fever, I will give him acetaminophen instead of aspirin."`,
       `"I will take my child to the dentist for regular checkups."`,
@@ -681,7 +680,7 @@ export const QUESTION_BANK = [
     id: 49,
     category: `Physiological Adaptation`,
     chapter: `Hematologic System`,
-    question: `A college student who is diagnosed as having infectious mononucleosis asks how the disease is spread. The nurse's response is based on the knowledge that the usual mode of transmission is through:`,
+    prompt: `A college student who is diagnosed as having infectious mononucleosis asks how the disease is spread. The nurse's response is based on the knowledge that the usual mode of transmission is through:`,
     options: [
       `skin`,
       `genital contact`,
@@ -695,7 +694,7 @@ export const QUESTION_BANK = [
     id: 50,
     category: `Physiological Adaptation`,
     chapter: `Hematologic System`,
-    question: `A young man who has infectious mononucleosis asks what the treatment is for his condition. What is the best response for the nurse to make?`,
+    prompt: `A young man who has infectious mononucleosis asks what the treatment is for his condition. What is the best response for the nurse to make?`,
     options: [
       `"You will receive large doses of antibiotics for the next 10 days."`,
       `"Rest and good nutrition are the best things you can do."`,
@@ -709,7 +708,7 @@ export const QUESTION_BANK = [
     id: 51,
     category: `Physiological Adaptation`,
     chapter: `Hematologic System`,
-    question: `An 8-year-old boy is admitted to the unit with a diagnosis of acute lymphocytic leukemia. During a routine physical exam, numerous ecchymotic areas were noted on his body. The parent reported that the child has been more tired than usual lately. The parent says that the child has had a cold for the last several weeks and asks if this is related to the leukemia. The nurse's response is based on the knowledge that:`,
+    prompt: `An 8-year-old boy is admitted to the unit with a diagnosis of acute lymphocytic leukemia. During a routine physical exam, numerous ecchymotic areas were noted on his body. The parent reported that the child has been more tired than usual lately. The parent says that the child has had a cold for the last several weeks and asks if this is related to the leukemia. The nurse's response is based on the knowledge that:`,
     options: [
       `leukemia causes a decrease in the number of normal white blood cells in the body.`,
       `a chronic infection such as the child has had makes a child more likely to develop leukemia.`,
@@ -723,7 +722,7 @@ export const QUESTION_BANK = [
     id: 52,
     category: `Physiological Adaptation`,
     chapter: `Hematologic System`,
-    question: `A child with leukemia bruises easily. This is most likely due to which of the following?`,
+    prompt: `A child with leukemia bruises easily. This is most likely due to which of the following?`,
     options: [
       `Decreased fibrinogen levels`,
       `Excessive clotting elsewhere in the body`,
@@ -737,7 +736,7 @@ export const QUESTION_BANK = [
     id: 53,
     category: `Physiological Adaptation`,
     chapter: `Hematologic System`,
-    question: `A child who is being treated for leukemia develops stomatitis. Which of the following nursing care measures is essential?`,
+    prompt: `A child who is being treated for leukemia develops stomatitis. Which of the following nursing care measures is essential?`,
     options: [
       `Using dental floss to clean the teeth`,
       `Frequent cleaning of the mouth with an astringent mouthwash`,
@@ -751,7 +750,7 @@ export const QUESTION_BANK = [
     id: 54,
     category: `Physiological Adaptation`,
     chapter: `Hematologic System`,
-    question: `When planning care for a client who is HIV positive, the nurse should do what?`,
+    prompt: `When planning care for a client who is HIV positive, the nurse should do what?`,
     options: [
       `Teach persons coming in contact with the client to wear a gown and mask at all times`,
       `Teach persons to wear gloves when handling any of the client's body fluids`,
@@ -765,7 +764,7 @@ export const QUESTION_BANK = [
     id: 55,
     category: `Physiological Adaptation`,
     chapter: `Hematologic System`,
-    question: `Which action should the nurse expect to perform after a client has a bone marrow biopsy taken from the iliac crest?`,
+    prompt: `Which action should the nurse expect to perform after a client has a bone marrow biopsy taken from the iliac crest?`,
     options: [
       `Apply pressure to the site for one minute`,
       `Administer a narcotic analgesic`,
@@ -779,7 +778,7 @@ export const QUESTION_BANK = [
     id: 56,
     category: `Physiological Adaptation`,
     chapter: `Hematologic System`,
-    question: `Which of the following would be the most appropriate snack for a client who has iron deficiency anemia?`,
+    prompt: `Which of the following would be the most appropriate snack for a client who has iron deficiency anemia?`,
     options: [
       `Half of a grapefruit`,
       `A carrot raisin salad`,
@@ -793,7 +792,7 @@ export const QUESTION_BANK = [
     id: 57,
     category: `Physiological Adaptation`,
     chapter: `Hematologic System`,
-    question: `Which of the following assessment findings should alert the nurse that the elderly client should be evaluated for pernicious anemia?`,
+    prompt: `Which of the following assessment findings should alert the nurse that the elderly client should be evaluated for pernicious anemia?`,
     options: [
       `Clubbing of the nails`,
       `Bloody stools`,
@@ -807,7 +806,7 @@ export const QUESTION_BANK = [
     id: 58,
     category: `Physiological Adaptation`,
     chapter: `Hematologic System`,
-    question: `An elderly client who is being treated for pernicious anemia needs to be monitored periodically for which of the following conditions?`,
+    prompt: `An elderly client who is being treated for pernicious anemia needs to be monitored periodically for which of the following conditions?`,
     options: [
       `Lactose intolerance`,
       `Stomach cancer`,
@@ -821,7 +820,7 @@ export const QUESTION_BANK = [
     id: 59,
     category: `Physiological Adaptation`,
     chapter: `Hematologic System`,
-    question: `Which of the following would be the best lunch for a client with folic acid deficiency anemia?`,
+    prompt: `Which of the following would be the best lunch for a client with folic acid deficiency anemia?`,
     options: [
       `Bologna sandwich and vegetable soup`,
       `Grilled cheese sandwich and tomato soup`,
@@ -835,7 +834,7 @@ export const QUESTION_BANK = [
     id: 60,
     category: `Physiological Adaptation`,
     chapter: `Hematologic System`,
-    question: `The nurse administers iron using the Z track technique. What is the primary reason for administering iron via Z track?`,
+    prompt: `The nurse administers iron using the Z track technique. What is the primary reason for administering iron via Z track?`,
     options: [
       `To prevent adverse reactions`,
       `To prevent staining of the skin`,
@@ -849,7 +848,7 @@ export const QUESTION_BANK = [
     id: 61,
     category: `Physiological Adaptation`,
     chapter: `Hematologic System`,
-    question: `The nurse is caring for a client who is thought to have pernicious anemia. What signs and symptoms would the nurse expect in this person?`,
+    prompt: `The nurse is caring for a client who is thought to have pernicious anemia. What signs and symptoms would the nurse expect in this person?`,
     options: [
       `Easy bruising`,
       `Beefy-red tongue`,
@@ -863,7 +862,7 @@ export const QUESTION_BANK = [
     id: 62,
     category: `Physiological Adaptation`,
     chapter: `Hematologic System`,
-    question: `A 1-year-old is admitted to the hospital with sickle cell anemia in crisis. Upon admission, which therapy will assume priority?`,
+    prompt: `A 1-year-old is admitted to the hospital with sickle cell anemia in crisis. Upon admission, which therapy will assume priority?`,
     options: [
       `Fluid administration`,
       `Exchange transfusion`,
@@ -877,7 +876,7 @@ export const QUESTION_BANK = [
     id: 63,
     category: `Physiological Adaptation`,
     chapter: `Hematologic System`,
-    question: `A toddler is diagnosed with sickle cell anemia. Her mother is four months pregnant with her second child. The mother asks if there is any chance the new baby will have sickle cell anemia. She says that neither she nor her husband has sickle cell anemia. What is the best response for the nurse to make?`,
+    prompt: `A toddler is diagnosed with sickle cell anemia. Her mother is four months pregnant with her second child. The mother asks if there is any chance the new baby will have sickle cell anemia. She says that neither she nor her husband has sickle cell anemia. What is the best response for the nurse to make?`,
     options: [
       `"No. Sickle cell anemia is not inherited."`,
       `"Yes. The new baby will also have sickle cell anemia."`,
@@ -891,7 +890,7 @@ export const QUESTION_BANK = [
     id: 64,
     category: `Physiological Adaptation`,
     chapter: `Hematologic System`,
-    question: `A child who has hemophilia is admitted to the hospital with a swollen knee joint. He is complaining of severe pain. What is the priority of nursing care for this child upon admission?`,
+    prompt: `A child who has hemophilia is admitted to the hospital with a swollen knee joint. He is complaining of severe pain. What is the priority of nursing care for this child upon admission?`,
     options: [
       `Maintain joint function`,
       `Use a bed cradle`,
@@ -905,7 +904,7 @@ export const QUESTION_BANK = [
     id: 65,
     category: `Physiological Adaptation`,
     chapter: `Hematologic System`,
-    question: `The nurse is caring for a child who has hemophilia. He is admitted with a bleeding episode. Which of the following should the nurse expect will be given to stop the bleeding?`,
+    prompt: `The nurse is caring for a child who has hemophilia. He is admitted with a bleeding episode. Which of the following should the nurse expect will be given to stop the bleeding?`,
     options: [
       `Heparin`,
       `Cryoprecipitate`,
@@ -919,7 +918,7 @@ export const QUESTION_BANK = [
     id: 66,
     category: `Physiological Adaptation`,
     chapter: `Hematologic System`,
-    question: `A 19-year-old college student reports to the health service with a sore throat, malaise, and fever of four days in duration. Examination shows cervical lymphadenopathy and splenomegaly. Temperature is 103°F. Blood is positive for heterophil antibody agglutination test. Which condition does the nurse expect this student to have?`,
+    prompt: `A 19-year-old college student reports to the health service with a sore throat, malaise, and fever of four days in duration. Examination shows cervical lymphadenopathy and splenomegaly. Temperature is 103°F. Blood is positive for heterophil antibody agglutination test. Which condition does the nurse expect this student to have?`,
     options: [
       `Streptococcal sore throat`,
       `Infectious mononucleosis`,
@@ -933,7 +932,7 @@ export const QUESTION_BANK = [
     id: 67,
     category: `Physiological Adaptation`,
     chapter: `Hematologic System`,
-    question: `The nurse knows that infectious mononucleosis is caused by which of the following?`,
+    prompt: `The nurse knows that infectious mononucleosis is caused by which of the following?`,
     options: [
       `Cytomegalovirus`,
       `Beta-hemolytic Streptococcus`,
@@ -947,7 +946,7 @@ export const QUESTION_BANK = [
     id: 68,
     category: `Physiological Adaptation`,
     chapter: `Hematologic System`,
-    question: `A child who has leukemia is to have a bone marrow biopsy performed. How will the child be positioned for this procedure?`,
+    prompt: `A child who has leukemia is to have a bone marrow biopsy performed. How will the child be positioned for this procedure?`,
     options: [
       `On his side with the top knee flexed`,
       `Prone`,
@@ -961,7 +960,7 @@ export const QUESTION_BANK = [
     id: 69,
     category: `Physiological Adaptation`,
     chapter: `Hematologic System`,
-    question: `A child is being evaluated for possible leukemia. Which assessment finding is most likely to be present?`,
+    prompt: `A child is being evaluated for possible leukemia. Which assessment finding is most likely to be present?`,
     options: [
       `Numerous bruises on the child's body`,
       `Ruddy complexion`,
@@ -977,7 +976,7 @@ export const QUESTION_BANK = [
     id: 70,
     category: `Physiological Adaptation`,
     chapter: `Respiratory System`,
-    question: `An adult client is to have a sputum for culture. When is the best time for the nurse to collect the specimen?`,
+    prompt: `An adult client is to have a sputum for culture. When is the best time for the nurse to collect the specimen?`,
     options: [
       `In the morning right after he awakens`,
       `Immediately after breakfast`,
@@ -991,7 +990,7 @@ export const QUESTION_BANK = [
     id: 71,
     category: `Physiological Adaptation`,
     chapter: `Respiratory System`,
-    question: `A thoracentesis was performed on an adult client. After the procedure, the client has hemoptysis and a pulse of 80, respirations of 28, and temperature of 99°F. Which of these is of greatest concern to the nurse?`,
+    prompt: `A thoracentesis was performed on an adult client. After the procedure, the client has hemoptysis and a pulse of 80, respirations of 28, and temperature of 99°F. Which of these is of greatest concern to the nurse?`,
     options: [
       `Hemoptysis`,
       `Respirations of 28`,
@@ -1005,7 +1004,7 @@ export const QUESTION_BANK = [
     id: 72,
     category: `Physiological Adaptation`,
     chapter: `Respiratory System`,
-    question: `An adult client is to have postural drainage four times a day. In developing the care plan, the nurse should schedule this for:`,
+    prompt: `An adult client is to have postural drainage four times a day. In developing the care plan, the nurse should schedule this for:`,
     options: [
       `7 A.M.; 11 A.M.; 4 P.M.; 10 P.M.`,
       `10 A.M.; 2 P.M.; 6 P.M.; 10 P.M.`,
@@ -1019,7 +1018,7 @@ export const QUESTION_BANK = [
     id: 73,
     category: `Physiological Adaptation`,
     chapter: `Respiratory System`,
-    question: `An adult man has a tracheostomy tube in place. Which of the following actions is most appropriate for the nurse to take when suctioning the tracheostomy?`,
+    prompt: `An adult man has a tracheostomy tube in place. Which of the following actions is most appropriate for the nurse to take when suctioning the tracheostomy?`,
     options: [
       `Use a sterile tube each time and suction for 30 seconds`,
       `Use sterile technique and turn the suction off as the catheter is introduced`,
@@ -1033,7 +1032,7 @@ export const QUESTION_BANK = [
     id: 74,
     category: `Physiological Adaptation`,
     chapter: `Respiratory System`,
-    question: `During suctioning of a tracheostomy tube, the catheter appears to attach to the tracheal wall and creates a pulling sensation. What is the best action for the nurse to take?`,
+    prompt: `During suctioning of a tracheostomy tube, the catheter appears to attach to the tracheal wall and creates a pulling sensation. What is the best action for the nurse to take?`,
     options: [
       `Release the suction by opening the vent`,
       `Continue suctioning to remove the obstruction`,
@@ -1047,7 +1046,7 @@ export const QUESTION_BANK = [
     id: 75,
     category: `Physiological Adaptation`,
     chapter: `Respiratory System`,
-    question: `A client comes to the clinic with a bloody nose. Which instruction is most appropriate?`,
+    prompt: `A client comes to the clinic with a bloody nose. Which instruction is most appropriate?`,
     options: [
       `"Sit up with your head tilted forward. Grasp the soft part of your nose firmly between your thumb and forefinger."`,
       `"Lay down and tilt your head backward. Grasp the end of your nose between your fingers."`,
@@ -1061,7 +1060,7 @@ export const QUESTION_BANK = [
     id: 76,
     category: `Physiological Adaptation`,
     chapter: `Respiratory System`,
-    question: `A client is admitted with a diagnosis of cancer of the larynx. Which statement made by the client is most likely related to the cause of his illness?`,
+    prompt: `A client is admitted with a diagnosis of cancer of the larynx. Which statement made by the client is most likely related to the cause of his illness?`,
     options: [
       `"I have always enjoyed hot Mexican-style food."`,
       `"I have smoked three packs of cigarettes a day for the last 40 years."`,
@@ -1075,7 +1074,7 @@ export const QUESTION_BANK = [
     id: 77,
     category: `Physiological Adaptation`,
     chapter: `Respiratory System`,
-    question: `During the preoperative period, which nursing action will be of greatest priority for a person who is to have a laryngectomy?`,
+    prompt: `During the preoperative period, which nursing action will be of greatest priority for a person who is to have a laryngectomy?`,
     options: [
       `Establish a means of communication.`,
       `Prepare the bowel by administering enemas until clear.`,
@@ -1089,7 +1088,7 @@ export const QUESTION_BANK = [
     id: 78,
     category: `Physiological Adaptation`,
     chapter: `Respiratory System`,
-    question: `A 62-year-old man is admitted with emphysema and acute upper respiratory infection. Oxygen is ordered at 2 L/min. The reason for low-flow oxygen is to:`,
+    prompt: `A 62-year-old man is admitted with emphysema and acute upper respiratory infection. Oxygen is ordered at 2 L/min. The reason for low-flow oxygen is to:`,
     options: [
       `prevent excessive drying of secretions.`,
       `facilitate oxygen diffusion of the blood.`,
@@ -1103,7 +1102,7 @@ export const QUESTION_BANK = [
     id: 79,
     category: `Physiological Adaptation`,
     chapter: `Respiratory System`,
-    question: `An adult is admitted with chronic obstructive pulmonary disease (COPD). The nurse notes that he has neck vein distention and slight peripheral edema. The practical nurse notifies the registered nurse and continues frequent assessments because the nurse knows that these signs signal the onset of which of the following?`,
+    prompt: `An adult is admitted with chronic obstructive pulmonary disease (COPD). The nurse notes that he has neck vein distention and slight peripheral edema. The practical nurse notifies the registered nurse and continues frequent assessments because the nurse knows that these signs signal the onset of which of the following?`,
     options: [
       `Pneumothorax`,
       `Cor pulmonale`,
@@ -1117,7 +1116,7 @@ export const QUESTION_BANK = [
     id: 80,
     category: `Physiological Adaptation`,
     chapter: `Respiratory System`,
-    question: `A 79-year-old client is admitted to the hospital with a diagnosis of pneumococcal pneumonia. The client has dyspnea. The client's temperature is 102°F, respirations are 36, and pulse is 92. Bed rest is ordered for this client primarily to:`,
+    prompt: `A 79-year-old client is admitted to the hospital with a diagnosis of pneumococcal pneumonia. The client has dyspnea. The client's temperature is 102°F, respirations are 36, and pulse is 92. Bed rest is ordered for this client primarily to:`,
     options: [
       `promote thoracic expansion`,
       `prevent the development of atelectasis.`,
@@ -1131,7 +1130,7 @@ export const QUESTION_BANK = [
     id: 81,
     category: `Physiological Adaptation`,
     chapter: `Respiratory System`,
-    question: `An adult is to have a tracheostomy performed. What is the nursing priority?`,
+    prompt: `An adult is to have a tracheostomy performed. What is the nursing priority?`,
     options: [
       `Shave the neck`,
       `Establish a means of communication`,
@@ -1145,7 +1144,7 @@ export const QUESTION_BANK = [
     id: 82,
     category: `Physiological Adaptation`,
     chapter: `Respiratory System`,
-    question: `Which nursing action is essential during tracheal suctioning?`,
+    prompt: `Which nursing action is essential during tracheal suctioning?`,
     options: [
       `Using a lubricant such as petroleum jelly`,
       `Administering 100% oxygen before and after suctioning`,
@@ -1159,7 +1158,7 @@ export const QUESTION_BANK = [
     id: 83,
     category: `Physiological Adaptation`,
     chapter: `Respiratory System`,
-    question: `An adult has a chest drainage system. Several hours after the chest tube was inserted, the nurse observes that there is no bubbling in the water seal chamber. What is the most likely reason for the absence of bubbling?`,
+    prompt: `An adult has a chest drainage system. Several hours after the chest tube was inserted, the nurse observes that there is no bubbling in the water seal chamber. What is the most likely reason for the absence of bubbling?`,
     options: [
       `The client's lungs have reexpanded.`,
       `There is an obstruction in the tubing coming from the client.`,
@@ -1173,7 +1172,7 @@ export const QUESTION_BANK = [
     id: 84,
     category: `Physiological Adaptation`,
     chapter: `Respiratory System`,
-    question: `An adult has a chest drainage system. The client's wife reports to the nurse that her husband is restless. The nurse enters the room just in time to see him pull out his chest tube. The most appropriate initial action for the nurse to take is to:`,
+    prompt: `An adult has a chest drainage system. The client's wife reports to the nurse that her husband is restless. The nurse enters the room just in time to see him pull out his chest tube. The most appropriate initial action for the nurse to take is to:`,
     options: [
       `go get petrolatum gauze and apply over the wound.`,
       `place her/his hand firmly over the wound.`,
@@ -1187,7 +1186,7 @@ export const QUESTION_BANK = [
     id: 85,
     category: `Physiological Adaptation`,
     chapter: `Respiratory System`,
-    question: `An adult had a negative purified protein derivative (PPD) test when he was first employed two years ago. A year later, the client had a positive PPD test and a negative chest x-ray. This indicated that at that time the client:`,
+    prompt: `An adult had a negative purified protein derivative (PPD) test when he was first employed two years ago. A year later, the client had a positive PPD test and a negative chest x-ray. This indicated that at that time the client:`,
     options: [
       `was less susceptible to a tuberculosis infection than the year before.`,
       `had acquired some degree of passive immunity to tuberculosis.`,
@@ -1201,7 +1200,7 @@ export const QUESTION_BANK = [
     id: 86,
     category: `Physiological Adaptation`,
     chapter: `Respiratory System`,
-    question: `An adult is being treated with isoniazid (INH) and streptomycin for active tuberculosis. Which of the following symptoms would suggest a toxic effect of INH?`,
+    prompt: `An adult is being treated with isoniazid (INH) and streptomycin for active tuberculosis. Which of the following symptoms would suggest a toxic effect of INH?`,
     options: [
       `Paroxysmal tachycardia`,
       `Erythema multiforme`,
@@ -1215,7 +1214,7 @@ export const QUESTION_BANK = [
     id: 87,
     category: `Physiological Adaptation`,
     chapter: `Respiratory System`,
-    question: `An adult is being treated with isoniazid (INH) and streptomycin for active tuberculosis. He is also receiving pyridoxine (vitamin B6). Why is this medication prescribed for him?`,
+    prompt: `An adult is being treated with isoniazid (INH) and streptomycin for active tuberculosis. He is also receiving pyridoxine (vitamin B6). Why is this medication prescribed for him?`,
     options: [
       `Pyridoxine is bacteriostatic against Mycobacterium tuberculosis.`,
       `To enhance his general nutritional status`,
@@ -1229,7 +1228,7 @@ export const QUESTION_BANK = [
     id: 88,
     category: `Physiological Adaptation`,
     chapter: `Respiratory System`,
-    question: `The wife of a client with active tuberculosis has a positive skin test for tuberculosis. She is to be started on prophylactic drug therapy. What drug is the drug of choice for prophylaxis of tuberculosis?`,
+    prompt: `The wife of a client with active tuberculosis has a positive skin test for tuberculosis. She is to be started on prophylactic drug therapy. What drug is the drug of choice for prophylaxis of tuberculosis?`,
     options: [
       `Streptomycin`,
       `Para-aminosalicylic (PAS) acid`,
@@ -1243,7 +1242,7 @@ export const QUESTION_BANK = [
     id: 89,
     category: `Physiological Adaptation`,
     chapter: `Respiratory System`,
-    question: `A farmer who has had a cough for several months has noticed a lack of energy lately. He is being tested for histoplasmosis. Which factor reported by the client would be most related to the diagnosis of histoplasmosis?`,
+    prompt: `A farmer who has had a cough for several months has noticed a lack of energy lately. He is being tested for histoplasmosis. Which factor reported by the client would be most related to the diagnosis of histoplasmosis?`,
     options: [
       `He drinks raw milk.`,
       `He cleans chicken houses.`,
@@ -1257,7 +1256,7 @@ export const QUESTION_BANK = [
     id: 90,
     category: `Physiological Adaptation`,
     chapter: `Respiratory System`,
-    question: `The nurse is caring for a client who is admitted with histoplasmosis. What drug is most likely to be prescribed for this client?`,
+    prompt: `The nurse is caring for a client who is admitted with histoplasmosis. What drug is most likely to be prescribed for this client?`,
     options: [
       `Penicillin`,
       `Chloromycetin`,
@@ -1271,7 +1270,7 @@ export const QUESTION_BANK = [
     id: 91,
     category: `Physiological Adaptation`,
     chapter: `Respiratory System`,
-    question: `An adult is to have a thoracentesis performed. What should the nurse do while preparing the client for this procedure?`,
+    prompt: `An adult is to have a thoracentesis performed. What should the nurse do while preparing the client for this procedure?`,
     options: [
       `Keep him NPO for eight hours`,
       `Prepare him to go to the operating room`,
@@ -1285,7 +1284,7 @@ export const QUESTION_BANK = [
     id: 92,
     category: `Physiological Adaptation`,
     chapter: `Respiratory System`,
-    question: `The nurse is planning care for a client who has COPD. Which statement is the client most likely to say about activity tolerance?`,
+    prompt: `The nurse is planning care for a client who has COPD. Which statement is the client most likely to say about activity tolerance?`,
     options: [
       `"The most difficult time of the day for me is the first hour after waking up in the morning."`,
       `"I feel best in the morning after a good night's sleep."`,
@@ -1299,7 +1298,7 @@ export const QUESTION_BANK = [
     id: 93,
     category: `Physiological Adaptation`,
     chapter: `Respiratory System`,
-    question: `The nurse is caring for a woman who is admitted with pneumonia. On admission, the client is anxious and short of breath but able to respond to questions. One hour later, the client becomes more dyspneic and less responsive, answering only yes and no questions. What is the best action for the nurse to take at this time?`,
+    prompt: `The nurse is caring for a woman who is admitted with pneumonia. On admission, the client is anxious and short of breath but able to respond to questions. One hour later, the client becomes more dyspneic and less responsive, answering only yes and no questions. What is the best action for the nurse to take at this time?`,
     options: [
       `Stimulate the client until the client responds.`,
       `Increase the oxygen from the ordered 6 L to 10 L.`,
@@ -1313,7 +1312,7 @@ export const QUESTION_BANK = [
     id: 94,
     category: `Physiological Adaptation`,
     chapter: `Respiratory System`,
-    question: `A client's PPD test is positive, and a chest x-ray is negative. What is the best interpretation of these data?`,
+    prompt: `A client's PPD test is positive, and a chest x-ray is negative. What is the best interpretation of these data?`,
     options: [
       `The client's resistance to tuberculosis is low.`,
       `The client has been exposed to the organism but has not developed the disease.`,
@@ -1327,7 +1326,7 @@ export const QUESTION_BANK = [
     id: 95,
     category: `Physiological Adaptation`,
     chapter: `Respiratory System`,
-    question: `An adult with tuberculosis has started taking rifampin (Rimactane). Which side effect is the client most likely to experience when taking this drug?`,
+    prompt: `An adult with tuberculosis has started taking rifampin (Rimactane). Which side effect is the client most likely to experience when taking this drug?`,
     options: [
       `Reddish-orange color of urine, sputum, and saliva`,
       `Erythema and urticaria`,
@@ -1341,7 +1340,7 @@ export const QUESTION_BANK = [
     id: 96,
     category: `Physiological Adaptation`,
     chapter: `Respiratory System`,
-    question: `Which laboratory tests should the client receive before prophylactic drug therapy for tuberculosis is started?`,
+    prompt: `Which laboratory tests should the client receive before prophylactic drug therapy for tuberculosis is started?`,
     options: [
       `Serum creatinine and blood urea nitrogen (BUN)`,
       `Aspartate aminotransferase (AST; SGOT) and alanine aminotransferase (ALT; SGPT)`,
@@ -1355,7 +1354,7 @@ export const QUESTION_BANK = [
     id: 97,
     category: `Physiological Adaptation`,
     chapter: `Respiratory System`,
-    question: `A client who had a laryngectomy is nearly ready for discharge. Which instruction is most appropriate for the nurse to give?`,
+    prompt: `A client who had a laryngectomy is nearly ready for discharge. Which instruction is most appropriate for the nurse to give?`,
     options: [
       `"Always be sure you have a buddy with you when you go swimming or boating."`,
       `"You may take a tub bath, but you should not take a shower."`,
@@ -1369,7 +1368,7 @@ export const QUESTION_BANK = [
     id: 98,
     category: `Physiological Adaptation`,
     chapter: `Respiratory System`,
-    question: `A client asks the nurse why inspiration through the nose is preferable to inspiring through the mouth. What is the best response?`,
+    prompt: `A client asks the nurse why inspiration through the nose is preferable to inspiring through the mouth. What is the best response?`,
     options: [
       `It produces greater blood oxygen levels.`,
       `It is easier to breathe through the nose.`,
@@ -1383,7 +1382,7 @@ export const QUESTION_BANK = [
     id: 99,
     category: `Physiological Adaptation`,
     chapter: `Respiratory System`,
-    question: `While the nurse is suctioning a tracheostomy tube, the client starts to cough. What is the best action for the nurse to take?`,
+    prompt: `While the nurse is suctioning a tracheostomy tube, the client starts to cough. What is the best action for the nurse to take?`,
     options: [
       `Suction deeper to pick up secretions`,
       `Gently withdraw suction tubing to allow suction or coughing out of mucus`,
@@ -1399,7 +1398,7 @@ export const QUESTION_BANK = [
     id: 100,
     category: `Physiological Adaptation`,
     chapter: `Neurosensory System`,
-    question: `An adult man fell off a ladder and hit his head and lost consciousness. After regaining consciousness several minutes later, he was drowsy and had trouble staying awake. He is admitted to the hospital for evaluation. The nursing care plan will most likely include which of the following?`,
+    prompt: `An adult man fell off a ladder and hit his head and lost consciousness. After regaining consciousness several minutes later, he was drowsy and had trouble staying awake. He is admitted to the hospital for evaluation. The nursing care plan will most likely include which of the following?`,
     options: [
       `Elevate head of bed 15 to 30 degrees`,
       `Encourage fluids to 1000 mL every eight hours`,
@@ -1413,7 +1412,7 @@ export const QUESTION_BANK = [
     id: 101,
     category: `Physiological Adaptation`,
     chapter: `Neurosensory System`,
-    question: `A teenager is admitted following a seizure. The next day, the nurse goes into his room and finds him lying on the floor starting to have a seizure. What action should the nurse take at this time?`,
+    prompt: `A teenager is admitted following a seizure. The next day, the nurse goes into his room and finds him lying on the floor starting to have a seizure. What action should the nurse take at this time?`,
     options: [
       `Carefully observe the seizure and gently restrain him`,
       `Attempt to put an airway in his mouth so he does not swallow his tongue, and observe the type and duration of the seizure`,
@@ -1427,7 +1426,7 @@ export const QUESTION_BANK = [
     id: 102,
     category: `Physiological Adaptation`,
     chapter: `Neurosensory System`,
-    question: `An adult is being treated with phenytoin (Dilantin) for a seizure disorder. Five days after starting the medication, he tells the nurse that his urine is reddish-brown in color. What action should the nurse take?`,
+    prompt: `An adult is being treated with phenytoin (Dilantin) for a seizure disorder. Five days after starting the medication, he tells the nurse that his urine is reddish-brown in color. What action should the nurse take?`,
     options: [
       `Inform him that this is a common side effect of phenytoin (Dilantin) therapy`,
       `Test the urine for occult blood`,
@@ -1441,7 +1440,7 @@ export const QUESTION_BANK = [
     id: 103,
     category: `Physiological Adaptation`,
     chapter: `Neurosensory System`,
-    question: `The nurse is caring for a client who has recently had a cerebrovascular accident (CVA). When positioning the client and supporting her extremities, the nurse must remember that when voluntary control of muscles is lost:`,
+    prompt: `The nurse is caring for a client who has recently had a cerebrovascular accident (CVA). When positioning the client and supporting her extremities, the nurse must remember that when voluntary control of muscles is lost:`,
     options: [
       `the feet will maintain a position of eversion.`,
       `the upper extremities will rotate externally.`,
@@ -1455,7 +1454,7 @@ export const QUESTION_BANK = [
     id: 104,
     category: `Physiological Adaptation`,
     chapter: `Neurosensory System`,
-    question: `A stroke victim regains consciousness three days after admission. She has right-sided hemiparesis and hemiplegia and also has expressive aphasia. She becomes upset when she is unable to say simple words. The best approach for the nurse is to do which of the following?`,
+    prompt: `A stroke victim regains consciousness three days after admission. She has right-sided hemiparesis and hemiplegia and also has expressive aphasia. She becomes upset when she is unable to say simple words. The best approach for the nurse is to do which of the following?`,
     options: [
       `Stay with her and give her time and encouragement in attempting to speak.`,
       `Say, "I'm sure you want a glass of water. I'll get it for you."`,
@@ -1469,7 +1468,7 @@ export const QUESTION_BANK = [
     id: 105,
     category: `Physiological Adaptation`,
     chapter: `Neurosensory System`,
-    question: `A young man was swimming at the beach when an exceptionally large wave caused him to be drawn under the water. His family members found him in the water and pulled him ashore. He states that he heard something snap in his neck. When a nurse arrives, he is conscious and lying on his back. He states that he has no pain. He is unable to move his legs. How should he be transported?`,
+    prompt: `A young man was swimming at the beach when an exceptionally large wave caused him to be drawn under the water. His family members found him in the water and pulled him ashore. He states that he heard something snap in his neck. When a nurse arrives, he is conscious and lying on his back. He states that he has no pain. He is unable to move his legs. How should he be transported?`,
     options: [
       `Position him in a prone position and place on a backboard.`,
       `Apply a neck collar and position supine on a backboard.`,
@@ -1483,7 +1482,7 @@ export const QUESTION_BANK = [
     id: 106,
     category: `Physiological Adaptation`,
     chapter: `Neurosensory System`,
-    question: `A client who is recovering from a spinal cord injury complains of blurred vision and a severe headache. His blood pressure is 210/140. The most appropriate initial action for the nurse to take is to:`,
+    prompt: `A client who is recovering from a spinal cord injury complains of blurred vision and a severe headache. His blood pressure is 210/140. The most appropriate initial action for the nurse to take is to:`,
     options: [
       `check for bladder distention.`,
       `place him in the Trendelenburg position.`,
@@ -1497,7 +1496,7 @@ export const QUESTION_BANK = [
     id: 107,
     category: `Physiological Adaptation`,
     chapter: `Neurosensory System`,
-    question: `A 27-year-old woman is admitted to the hospital complaining of numbness in both legs, difficulty walking, and double vision of one week in duration. Multiple sclerosis is suspected. Orders include bed rest with bathroom privileges, brain scan, EEG, lumbar puncture, adrenocorticotropic hormone (ACTH) 40 units intramuscularly (IM) bid x 3 days, then 30 units IM bid x 3 days, then 20 units IM bid x 3 days; and passive range of motion (ROM) progressing to active ROM as tolerated. In planning care for this client, which activity is most important to include?`,
+    prompt: `A 27-year-old woman is admitted to the hospital complaining of numbness in both legs, difficulty walking, and double vision of one week in duration. Multiple sclerosis is suspected. Orders include bed rest with bathroom privileges, brain scan, EEG, lumbar puncture, adrenocorticotropic hormone (ACTH) 40 units intramuscularly (IM) bid x 3 days, then 30 units IM bid x 3 days, then 20 units IM bid x 3 days; and passive range of motion (ROM) progressing to active ROM as tolerated. In planning care for this client, which activity is most important to include?`,
     options: [
       `Encouraging her to perform all care activities for herself`,
       `Frequent ambulation to retain joint mobility`,
@@ -1511,7 +1510,7 @@ export const QUESTION_BANK = [
     id: 108,
     category: `Physiological Adaptation`,
     chapter: `Neurosensory System`,
-    question: `The doctor orders a Tensilon test for a woman suspected of having myasthenia gravis. Which statement is true about this test?`,
+    prompt: `The doctor orders a Tensilon test for a woman suspected of having myasthenia gravis. Which statement is true about this test?`,
     options: [
       `A positive result will be evident within one minute of injection of Tensilon if she has myasthenia gravis.`,
       `This is of diagnostic value in only 25% of patients with myasthenia gravis.`,
@@ -1525,7 +1524,7 @@ export const QUESTION_BANK = [
     id: 109,
     category: `Physiological Adaptation`,
     chapter: `Neurosensory System`,
-    question: `When planning care for a woman with myasthenia gravis, the nurse asks her what time of day she feels strongest. The nurse would expect which of the following replies?`,
+    prompt: `When planning care for a woman with myasthenia gravis, the nurse asks her what time of day she feels strongest. The nurse would expect which of the following replies?`,
     options: [
       `"I can wash up and comb my hair before breakfast because I feel best in the morning."`,
       `"I only feel good for about an hour after I take my medication."`,
@@ -1539,7 +1538,7 @@ export const QUESTION_BANK = [
     id: 110,
     category: `Physiological Adaptation`,
     chapter: `Neurosensory System`,
-    question: `Which of the following would not be included in the nursing care plan for a client with Parkinson's disease?`,
+    prompt: `Which of the following would not be included in the nursing care plan for a client with Parkinson's disease?`,
     options: [
       `Restricting his intake of oral fluids`,
       `Range of motion exercises`,
@@ -1553,7 +1552,7 @@ export const QUESTION_BANK = [
     id: 111,
     category: `Physiological Adaptation`,
     chapter: `Neurosensory System`,
-    question: `The nurse is caring for a client admitted with Guillain-Barré syndrome. On day three of hospitalization, his muscle weakness worsens, and he is no longer able to stand with support. He is also having difficulty swallowing and talking. The priority in his nursing care plan should be to prevent which of the following?`,
+    prompt: `The nurse is caring for a client admitted with Guillain-Barré syndrome. On day three of hospitalization, his muscle weakness worsens, and he is no longer able to stand with support. He is also having difficulty swallowing and talking. The priority in his nursing care plan should be to prevent which of the following?`,
     options: [
       `Aspiration pneumonia`,
       `Decubitus ulcers`,
@@ -1567,7 +1566,7 @@ export const QUESTION_BANK = [
     id: 112,
     category: `Physiological Adaptation`,
     chapter: `Neurosensory System`,
-    question: `An adult client is admitted for removal of a cataract from her right eye. Which of the following would the client likely have experienced as a result of the cataracts?`,
+    prompt: `An adult client is admitted for removal of a cataract from her right eye. Which of the following would the client likely have experienced as a result of the cataracts?`,
     options: [
       `Acute eye pain`,
       `Redness and constant itching of the right eye`,
@@ -1581,7 +1580,7 @@ export const QUESTION_BANK = [
     id: 113,
     category: `Physiological Adaptation`,
     chapter: `Neurosensory System`,
-    question: `A client has had a cataract extraction performed. Which statement would indicate that the client needs more teaching?`,
+    prompt: `A client has had a cataract extraction performed. Which statement would indicate that the client needs more teaching?`,
     options: [
       `"I will take a stool softener daily."`,
       `"I'm going to start doing calisthenic exercises as soon as I get home."`,
@@ -1595,7 +1594,7 @@ export const QUESTION_BANK = [
     id: 114,
     category: `Physiological Adaptation`,
     chapter: `Neurosensory System`,
-    question: `A 50-year-old client is admitted with the diagnosis of open-angle glaucoma. Which of the following symptoms would the nurse expect the client to have?`,
+    prompt: `A 50-year-old client is admitted with the diagnosis of open-angle glaucoma. Which of the following symptoms would the nurse expect the client to have?`,
     options: [
       `Severe eye pain`,
       `Constant blurred vision`,
@@ -1609,7 +1608,7 @@ export const QUESTION_BANK = [
     id: 115,
     category: `Physiological Adaptation`,
     chapter: `Neurosensory System`,
-    question: `The nurse is administering eye drops to a client. Which action is correct?`,
+    prompt: `The nurse is administering eye drops to a client. Which action is correct?`,
     options: [
       `Ask the client to report any blurring of vision and difficulty focusing that occurs after the administration of eye drops.`,
       `Apply gentle pressure to the nasolacrimal canal for one to two minutes after instillation to prevent systemic absorption.`,
@@ -1623,7 +1622,7 @@ export const QUESTION_BANK = [
     id: 116,
     category: `Physiological Adaptation`,
     chapter: `Neurosensory System`,
-    question: `A 10-year-old boy comes to the school clinic holding his broken pair of glasses. He says that he got hit in the face playing ball and his eye hurts and feels like there's something in it. What should the nurse do before taking him to the emergency room?`,
+    prompt: `A 10-year-old boy comes to the school clinic holding his broken pair of glasses. He says that he got hit in the face playing ball and his eye hurts and feels like there's something in it. What should the nurse do before taking him to the emergency room?`,
     options: [
       `Thoroughly examine his eyes`,
       `Put a pressure dressing on his right eye.`,
@@ -1637,7 +1636,7 @@ export const QUESTION_BANK = [
     id: 117,
     category: `Physiological Adaptation`,
     chapter: `Neurosensory System`,
-    question: `How should a nurse walk a client who is blind?`,
+    prompt: `How should a nurse walk a client who is blind?`,
     options: [
       `Stand slightly behind the client and tell her when to turn`,
       `Stand slightly behind and to the side of the client and guide her by holding her hand`,
@@ -1651,7 +1650,7 @@ export const QUESTION_BANK = [
     id: 118,
     category: `Physiological Adaptation`,
     chapter: `Neurosensory System`,
-    question: `The client is a 60-year-old man who had a stapedectomy. He is to ambulate for the first time. Which nursing action should be taken?`,
+    prompt: `The client is a 60-year-old man who had a stapedectomy. He is to ambulate for the first time. Which nursing action should be taken?`,
     options: [
       `Encourage him to walk as far as he comfortably can`,
       `Suggest that he practice bending and stretching exercises`,
@@ -1665,7 +1664,7 @@ export const QUESTION_BANK = [
     id: 119,
     category: `Physiological Adaptation`,
     chapter: `Neurosensory System`,
-    question: `A client complains of tinnitus and dizziness and has a diagnosis of Meniere's disease. She asks the nurse, "What is the cause of Meniere's disease?" What is the nurse's best response?`,
+    prompt: `A client complains of tinnitus and dizziness and has a diagnosis of Meniere's disease. She asks the nurse, "What is the cause of Meniere's disease?" What is the nurse's best response?`,
     options: [
       `"Meniere's disease is caused by a virus."`,
       `"The cause of Meniere's disease is unknown."`,
@@ -1679,7 +1678,7 @@ export const QUESTION_BANK = [
     id: 120,
     category: `Physiological Adaptation`,
     chapter: `Neurosensory System`,
-    question: `An adult man fell off a ladder and hit his head. His wife rushed to help him and found him unconscious. After regaining consciousness several minutes later, he was drowsy and had trouble staying awake. He is admitted to the hospital for evaluation. When the nurse enters the room, he is sleeping. While caring for the client, the nurse finds that his systolic blood pressure has increased, his pulse has decreased, and his temperature is slightly elevated. What does this suggest?`,
+    prompt: `An adult man fell off a ladder and hit his head. His wife rushed to help him and found him unconscious. After regaining consciousness several minutes later, he was drowsy and had trouble staying awake. He is admitted to the hospital for evaluation. When the nurse enters the room, he is sleeping. While caring for the client, the nurse finds that his systolic blood pressure has increased, his pulse has decreased, and his temperature is slightly elevated. What does this suggest?`,
     options: [
       `Increased cerebral blood flow`,
       `Respiratory depression`,
@@ -1693,7 +1692,7 @@ export const QUESTION_BANK = [
     id: 121,
     category: `Physiological Adaptation`,
     chapter: `Neurosensory System`,
-    question: `The physician has ordered mannitol IV for a client with a head injury. What should the nurse closely monitor because the client is receiving mannitol?`,
+    prompt: `The physician has ordered mannitol IV for a client with a head injury. What should the nurse closely monitor because the client is receiving mannitol?`,
     options: [
       `Deep tendon reflexes`,
       `Urine output`,
@@ -1707,7 +1706,7 @@ export const QUESTION_BANK = [
     id: 122,
     category: `Physiological Adaptation`,
     chapter: `Neurosensory System`,
-    question: `A 17-year-old client had one generalized convulsion several hours prior to admission to the medical unit for a neurological workup. Physician's orders include Dilantin (phenytoin) 100 mg orally (PO) tid and phenobarbital 100 mg PO daily. He tells the nurse, "I can't believe I really had a seizure. My mom says she was in the room when it happened, but I don't even remember it." What is the best interpretation of his comments?`,
+    prompt: `A 17-year-old client had one generalized convulsion several hours prior to admission to the medical unit for a neurological workup. Physician's orders include Dilantin (phenytoin) 100 mg orally (PO) tid and phenobarbital 100 mg PO daily. He tells the nurse, "I can't believe I really had a seizure. My mom says she was in the room when it happened, but I don't even remember it." What is the best interpretation of his comments?`,
     options: [
       `They indicate an initial denial mechanism, but he will begin to remember the seizure later.`,
       `Anoxia suffered during the seizure has damaged part of his cerebral cortex.`,
@@ -1721,7 +1720,7 @@ export const QUESTION_BANK = [
     id: 123,
     category: `Physiological Adaptation`,
     chapter: `Neurosensory System`,
-    question: `What should the nurse include when teaching the client with Parkinson's disease?`,
+    prompt: `What should the nurse include when teaching the client with Parkinson's disease?`,
     options: [
       `He should try to continue working as long as he can remain sitting most of the day.`,
       `Drooling may be reduced somewhat if he remembers to swallow frequently.`,
@@ -1735,7 +1734,7 @@ export const QUESTION_BANK = [
     id: 124,
     category: `Physiological Adaptation`,
     chapter: `Neurosensory System`,
-    question: `A 68-year-old woman is brought to the emergency room by ambulance. She was found by her husband slumped in her chair and unresponsive. Tentative diagnosis is cerebrovascular accident (CVA). The physician orders a 15% solution of mannitol IV. The nurse knows that this drug is given for what purpose?`,
+    prompt: `A 68-year-old woman is brought to the emergency room by ambulance. She was found by her husband slumped in her chair and unresponsive. Tentative diagnosis is cerebrovascular accident (CVA). The physician orders a 15% solution of mannitol IV. The nurse knows that this drug is given for what purpose?`,
     options: [
       `To increase urine output`,
       `To dissolve clots`,
@@ -1749,7 +1748,7 @@ export const QUESTION_BANK = [
     id: 125,
     category: `Physiological Adaptation`,
     chapter: `Neurosensory System`,
-    question: `An older woman has had a CVA. The nurse notes that she seems to be unaware of objects on her right side (right homonymous hemianopia). Which nursing action is most important in planning to assist her to compensate for this loss?`,
+    prompt: `An older woman has had a CVA. The nurse notes that she seems to be unaware of objects on her right side (right homonymous hemianopia). Which nursing action is most important in planning to assist her to compensate for this loss?`,
     options: [
       `Place frequently used items on the affected side`,
       `Position her so that her affected side is toward the activity in the room`,
@@ -1763,7 +1762,7 @@ export const QUESTION_BANK = [
     id: 126,
     category: `Physiological Adaptation`,
     chapter: `Neurosensory System`,
-    question: `A client asks the nurse what causes Parkinson's disease. The nurse's correct reply would be that Parkinson's disease is thought to be due to:`,
+    prompt: `A client asks the nurse what causes Parkinson's disease. The nurse's correct reply would be that Parkinson's disease is thought to be due to:`,
     options: [
       `a deficiency of dopamine in the brain.`,
       `a demyelinating process affecting the central nervous system.`,
@@ -1777,7 +1776,7 @@ export const QUESTION_BANK = [
     id: 127,
     category: `Physiological Adaptation`,
     chapter: `Neurosensory System`,
-    question: `The nurse is caring for a client who is very hard of hearing. How should the nurse communicate with this person?`,
+    prompt: `The nurse is caring for a client who is very hard of hearing. How should the nurse communicate with this person?`,
     options: [
       `Speak loudly and talk in his better ear`,
       `Stand in front of him and speak clearly and distinctly`,
@@ -1791,7 +1790,7 @@ export const QUESTION_BANK = [
     id: 128,
     category: `Physiological Adaptation`,
     chapter: `Neurosensory System`,
-    question: `The day following a stapedectomy, the client tells the nurse that he cannot hear much in the operative ear and thinks the stapedectomy was a failure. What is the best response for the nurse to make?`,
+    prompt: `The day following a stapedectomy, the client tells the nurse that he cannot hear much in the operative ear and thinks the stapedectomy was a failure. What is the best response for the nurse to make?`,
     options: [
       `"There is packing in your ear. You will not hear well for a few days."`,
       `"The doctors have not yet turned on the stapes replacement."`,
@@ -1805,7 +1804,7 @@ export const QUESTION_BANK = [
     id: 129,
     category: `Physiological Adaptation`,
     chapter: `Neurosensory System`,
-    question: `A cataract extraction is performed on a client's right eye. What is the priority nursing care immediately postoperative?`,
+    prompt: `A cataract extraction is performed on a client's right eye. What is the priority nursing care immediately postoperative?`,
     options: [
       `Assist her to turn, cough, and deep breathe every two hours.`,
       `Keep her NPO for four hours.`,
@@ -1821,7 +1820,7 @@ export const QUESTION_BANK = [
     id: 130,
     category: `Physiological Adaptation`,
     chapter: `Gastrointestinal System`,
-    question: `A client is admitted to the hospital with a gnawing pain in the mid-epigastric area and black stools for the past week. A diagnosis of chronic duodenal ulcer is made. During the initial nursing assessment, the client makes all of the following statements. Which is most likely related to his admitting diagnosis?`,
+    prompt: `A client is admitted to the hospital with a gnawing pain in the mid-epigastric area and black stools for the past week. A diagnosis of chronic duodenal ulcer is made. During the initial nursing assessment, the client makes all of the following statements. Which is most likely related to his admitting diagnosis?`,
     options: [
       `"I am a vegetarian."`,
       `"My mother and grandmother have diabetes."`,
@@ -1835,7 +1834,7 @@ export const QUESTION_BANK = [
     id: 131,
     category: `Physiological Adaptation`,
     chapter: `Gastrointestinal System`,
-    question: `An upper GI series is ordered for a client. Which action is essential for the nurse before the test?`,
+    prompt: `An upper GI series is ordered for a client. Which action is essential for the nurse before the test?`,
     options: [
       `Check to see if the client has an allergy to shellfish.`,
       `Instruct the client to have nothing to eat after midnight the night before the test.`,
@@ -1849,7 +1848,7 @@ export const QUESTION_BANK = [
     id: 132,
     category: `Physiological Adaptation`,
     chapter: `Gastrointestinal System`,
-    question: `The client with a duodenal ulcer is ready for discharge. Which statement made by the client indicates a need for more teaching about his diet?`,
+    prompt: `The client with a duodenal ulcer is ready for discharge. Which statement made by the client indicates a need for more teaching about his diet?`,
     options: [
       `"It's a good thing I gave up drinking alcohol last year."`,
       `"I will have to drink lots of milk and cream every day."`,
@@ -1863,7 +1862,7 @@ export const QUESTION_BANK = [
     id: 133,
     category: `Physiological Adaptation`,
     chapter: `Gastrointestinal System`,
-    question: `The client, admitted with appendicitis, overhears the physician say that the pain has reached McBurney's point. She becomes very frightened and asks the nurse to explain what this means. Which is the best response?`,
+    prompt: `The client, admitted with appendicitis, overhears the physician say that the pain has reached McBurney's point. She becomes very frightened and asks the nurse to explain what this means. Which is the best response?`,
     options: [
       `"The next time the doctor comes in, we should ask him what he meant by that."`,
       `"I've felt that I don't understand the doctor at times either."`,
@@ -1877,7 +1876,7 @@ export const QUESTION_BANK = [
     id: 134,
     category: `Physiological Adaptation`,
     chapter: `Gastrointestinal System`,
-    question: `Which blood test results would confirm a diagnosis of appendicitis?`,
+    prompt: `Which blood test results would confirm a diagnosis of appendicitis?`,
     options: [
       `WBC of 13,000`,
       `RBC of 4.5 million`,
@@ -1891,7 +1890,7 @@ export const QUESTION_BANK = [
     id: 135,
     category: `Physiological Adaptation`,
     chapter: `Gastrointestinal System`,
-    question: `The nurse is admitting a client with the diagnosis of appendicitis to the surgical unit. Which question is it essential to ask?`,
+    prompt: `The nurse is admitting a client with the diagnosis of appendicitis to the surgical unit. Which question is it essential to ask?`,
     options: [
       `"When did you last eat?"`,
       `"Have you had surgery before?"`,
@@ -1905,7 +1904,7 @@ export const QUESTION_BANK = [
     id: 136,
     category: `Physiological Adaptation`,
     chapter: `Gastrointestinal System`,
-    question: `The client with appendicitis asks the nurse for a laxative to help relieve her constipation. The nurse explains to her that laxatives are not given to persons with possible appendicitis. What is the primary reason for this?`,
+    prompt: `The client with appendicitis asks the nurse for a laxative to help relieve her constipation. The nurse explains to her that laxatives are not given to persons with possible appendicitis. What is the primary reason for this?`,
     options: [
       `Laxatives will decrease the spread of infection.`,
       `Laxatives are not given prior to any type of surgery.`,
@@ -1919,7 +1918,7 @@ export const QUESTION_BANK = [
     id: 137,
     category: `Physiological Adaptation`,
     chapter: `Gastrointestinal System`,
-    question: `A child with appendicitis is scheduled for surgery this evening. The nurse enters the room and sees the child's mother starting to place hot, wet washcloths on her daughter's abdomen so that "she will feel better." The nurse explains that this action is contraindicated because heat:`,
+    prompt: `A child with appendicitis is scheduled for surgery this evening. The nurse enters the room and sees the child's mother starting to place hot, wet washcloths on her daughter's abdomen so that "she will feel better." The nurse explains that this action is contraindicated because heat:`,
     options: [
       `can cause the appendix to rupture and cause peritonitis.`,
       `can mask symptoms of acute appendicitis.`,
@@ -1933,7 +1932,7 @@ export const QUESTION_BANK = [
     id: 138,
     category: `Physiological Adaptation`,
     chapter: `Gastrointestinal System`,
-    question: `A client returns from having had abdominal surgery. Her vital signs are stable. She says she is thirsty. What should the nurse give her initially?`,
+    prompt: `A client returns from having had abdominal surgery. Her vital signs are stable. She says she is thirsty. What should the nurse give her initially?`,
     options: [
       `Orange juice`,
       `Milk`,
@@ -1947,7 +1946,7 @@ export const QUESTION_BANK = [
     id: 139,
     category: `Physiological Adaptation`,
     chapter: `Gastrointestinal System`,
-    question: `The client who has had an appendectomy and has a Penrose drain in place has recovered from anesthesia. The nurse places her in a semi-sitting position. What is the primary reason for selecting this position?`,
+    prompt: `The client who has had an appendectomy and has a Penrose drain in place has recovered from anesthesia. The nurse places her in a semi-sitting position. What is the primary reason for selecting this position?`,
     options: [
       `To promote optimal ventilation`,
       `To promote drainage from the abdominal cavity`,
@@ -1961,7 +1960,7 @@ export const QUESTION_BANK = [
     id: 140,
     category: `Physiological Adaptation`,
     chapter: `Gastrointestinal System`,
-    question: `The client is admitted to the hospital complaining of malaise, abdominal discomfort, and severe diarrhea. The diagnosis is possible Crohn's disease. The client says that he has lost 27 pounds in the last four months even though he has not been dieting. To plan nursing care, which assessment data are most essential for the nurse to obtain?`,
+    prompt: `The client is admitted to the hospital complaining of malaise, abdominal discomfort, and severe diarrhea. The diagnosis is possible Crohn's disease. The client says that he has lost 27 pounds in the last four months even though he has not been dieting. To plan nursing care, which assessment data are most essential for the nurse to obtain?`,
     options: [
       `Approximate number and characteristics of stools each day`,
       `Amount of liquid consumed daily`,
@@ -1975,7 +1974,7 @@ export const QUESTION_BANK = [
     id: 141,
     category: `Physiological Adaptation`,
     chapter: `Gastrointestinal System`,
-    question: `The nurse is preparing a client with Crohn's disease for discharge. Which of the following statements indicates that he needs further teaching?`,
+    prompt: `The nurse is preparing a client with Crohn's disease for discharge. Which of the following statements indicates that he needs further teaching?`,
     options: [
       `"Stress can make it worse."`,
       `"Since I have Crohn's disease, I don't have to worry about colon cancer."`,
@@ -1989,7 +1988,7 @@ export const QUESTION_BANK = [
     id: 142,
     category: `Physiological Adaptation`,
     chapter: `Gastrointestinal System`,
-    question: `A low-residue diet is ordered for a client. Which food would be contraindicated for this person?`,
+    prompt: `A low-residue diet is ordered for a client. Which food would be contraindicated for this person?`,
     options: [
       `Roast beef`,
       `Fresh peas`,
@@ -2003,7 +2002,7 @@ export const QUESTION_BANK = [
     id: 143,
     category: `Physiological Adaptation`,
     chapter: `Gastrointestinal System`,
-    question: `A client is to have a sigmoidoscopy in the morning. Which activity will be included in the care of this client?`,
+    prompt: `A client is to have a sigmoidoscopy in the morning. Which activity will be included in the care of this client?`,
     options: [
       `Give him an enema one hour before the examination.`,
       `Keep him NPO for eight hours before the examination.`,
@@ -2017,7 +2016,7 @@ export const QUESTION_BANK = [
     id: 144,
     category: `Physiological Adaptation`,
     chapter: `Gastrointestinal System`,
-    question: `A client had a barium enema. Following the barium enema, the nurse should anticipate an order for which of the following?`,
+    prompt: `A client had a barium enema. Following the barium enema, the nurse should anticipate an order for which of the following?`,
     options: [
       `An antacid`,
       `A laxative`,
@@ -2031,7 +2030,7 @@ export const QUESTION_BANK = [
     id: 145,
     category: `Physiological Adaptation`,
     chapter: `Gastrointestinal System`,
-    question: `A client is found to have colon cancer. An abdominoperineal resection and colostomy are scheduled. Neomycin is ordered. The nurse explains to the client that the primary purpose for administering this drug is to:`,
+    prompt: `A client is found to have colon cancer. An abdominoperineal resection and colostomy are scheduled. Neomycin is ordered. The nurse explains to the client that the primary purpose for administering this drug is to:`,
     options: [
       `decrease peristalsis in the intestines.`,
       `decrease the bacterial content in the colon.`,
@@ -2045,7 +2044,7 @@ export const QUESTION_BANK = [
     id: 146,
     category: `Physiological Adaptation`,
     chapter: `Gastrointestinal System`,
-    question: `The day after surgery in which a colostomy was performed, the client says, "I know the doctor did not really do a colostomy." The nurse understands that the client is in an early stage of adjustment to the diagnosis and surgery. What nursing action is indicated at this time?`,
+    prompt: `The day after surgery in which a colostomy was performed, the client says, "I know the doctor did not really do a colostomy." The nurse understands that the client is in an early stage of adjustment to the diagnosis and surgery. What nursing action is indicated at this time?`,
     options: [
       `Agree with the client until the client is ready to accept the colostomy`,
       `Say, "It must be difficult to have this kind of surgery."`,
@@ -2059,7 +2058,7 @@ export const QUESTION_BANK = [
     id: 147,
     category: `Physiological Adaptation`,
     chapter: `Gastrointestinal System`,
-    question: `The nurse is irrigating the client's colostomy when the client complains of cramping. What is the most appropriate initial action by the nurse?`,
+    prompt: `The nurse is irrigating the client's colostomy when the client complains of cramping. What is the most appropriate initial action by the nurse?`,
     options: [
       `Increase the flow of solution`,
       `Ask the client to turn to the other side`,
@@ -2073,7 +2072,7 @@ export const QUESTION_BANK = [
     id: 148,
     category: `Physiological Adaptation`,
     chapter: `Gastrointestinal System`,
-    question: `A 32-year-old female is admitted for a hemorrhoidectomy. During the nursing assessment, all of the following factors are elicited. Which one is most likely to have contributed to the development of hemorrhoids?`,
+    prompt: `A 32-year-old female is admitted for a hemorrhoidectomy. During the nursing assessment, all of the following factors are elicited. Which one is most likely to have contributed to the development of hemorrhoids?`,
     options: [
       `The client states that she usually cleans herself from back to front after a bowel movement.`,
       `The client says her mother and grandmother had hemorrhoids.`,
@@ -2087,7 +2086,7 @@ export const QUESTION_BANK = [
     id: 149,
     category: `Physiological Adaptation`,
     chapter: `Gastrointestinal System`,
-    question: `Following a hemorrhoidectomy, the nurse is instructing the client in self-care. Which statement is especially important to include in these instructions?`,
+    prompt: `Following a hemorrhoidectomy, the nurse is instructing the client in self-care. Which statement is especially important to include in these instructions?`,
     options: [
       `"Wash the anal area with water after defecation and pat it dry."`,
       `"Gently wipe the anal area after defecation from back to front."`,
@@ -2101,7 +2100,7 @@ export const QUESTION_BANK = [
     id: 150,
     category: `Physiological Adaptation`,
     chapter: `Gastrointestinal System`,
-    question: `The client who has had a hemorrhoidectomy wants to know why she cannot take a sitz bath immediately upon return from the operating room. The nurse's response is based on which of the following concepts?`,
+    prompt: `The client who has had a hemorrhoidectomy wants to know why she cannot take a sitz bath immediately upon return from the operating room. The nurse's response is based on which of the following concepts?`,
     options: [
       `Heat can stimulate bowel movement too quickly after surgery.`,
       `Clients are generally not awake enough for several hours to safely take sitz baths.`,
@@ -2115,7 +2114,7 @@ export const QUESTION_BANK = [
     id: 151,
     category: `Physiological Adaptation`,
     chapter: `Gastrointestinal System`,
-    question: `Following a hemorrhoidectomy, the nurse assesses the client's voiding. What is the reason for this concern?`,
+    prompt: `Following a hemorrhoidectomy, the nurse assesses the client's voiding. What is the reason for this concern?`,
     options: [
       `The client has been NPO before and during surgery.`,
       `Urinary retention is frequently seen after a hemorrhoidectomy.`,
@@ -2129,7 +2128,7 @@ export const QUESTION_BANK = [
     id: 152,
     category: `Physiological Adaptation`,
     chapter: `Gastrointestinal System`,
-    question: `A nasogastric tube is ordered for an alert adult client. In addition to the tube and basin, what is essential for the nurse to have at the bedside during the procedure?`,
+    prompt: `A nasogastric tube is ordered for an alert adult client. In addition to the tube and basin, what is essential for the nurse to have at the bedside during the procedure?`,
     options: [
       `A 5-cc syringe filled with water`,
       `A glass filled with water and a straw`,
@@ -2143,7 +2142,7 @@ export const QUESTION_BANK = [
     id: 153,
     category: `Physiological Adaptation`,
     chapter: `Gastrointestinal System`,
-    question: `A client with pancreatitis tells the nurse that he fears nighttime. Which of the following statements most likely relates to the client's concerns?`,
+    prompt: `A client with pancreatitis tells the nurse that he fears nighttime. Which of the following statements most likely relates to the client's concerns?`,
     options: [
       `The pain is aggravated in the recumbent position.`,
       `The client has fewer distractions at night.`,
@@ -2157,7 +2156,7 @@ export const QUESTION_BANK = [
     id: 154,
     category: `Physiological Adaptation`,
     chapter: `Gastrointestinal System`,
-    question: `Warm oatmeal (Aveeno) baths are ordered for a client with cancer of the pancreas. What is the chief purpose of this procedure for this client?`,
+    prompt: `Warm oatmeal (Aveeno) baths are ordered for a client with cancer of the pancreas. What is the chief purpose of this procedure for this client?`,
     options: [
       `Relief of paralytic ileus`,
       `Alleviation of pruritus associated with jaundice`,
@@ -2171,7 +2170,7 @@ export const QUESTION_BANK = [
     id: 155,
     category: `Physiological Adaptation`,
     chapter: `Gastrointestinal System`,
-    question: `A distal pancreatectomy and splenectomy is performed on a client with cancer of the pancreas. He is returned to his room postoperatively. The client is sleepy but can answer simple questions appropriately. His dressing is dry and intact. Vital signs are within normal limits. Which of the following nursing measures must be done before the nurse leaves the room?`,
+    prompt: `A distal pancreatectomy and splenectomy is performed on a client with cancer of the pancreas. He is returned to his room postoperatively. The client is sleepy but can answer simple questions appropriately. His dressing is dry and intact. Vital signs are within normal limits. Which of the following nursing measures must be done before the nurse leaves the room?`,
     options: [
       `Inform his wife that he has returned to his room.`,
       `Check to see if the indwelling urinary catheter bag is correctly attached to the bed frame.`,
@@ -2185,7 +2184,7 @@ export const QUESTION_BANK = [
     id: 156,
     category: `Physiological Adaptation`,
     chapter: `Gastrointestinal System`,
-    question: `The client's temperature rises to 38°C (100.4°F) on the first postoperative day following abdominal surgery. The nurse interprets this to be:`,
+    prompt: `The client's temperature rises to 38°C (100.4°F) on the first postoperative day following abdominal surgery. The nurse interprets this to be:`,
     options: [
       `indicative of a wound infection.`,
       `a normal physiological response to the trauma of surgery.`,
@@ -2199,7 +2198,7 @@ export const QUESTION_BANK = [
     id: 157,
     category: `Physiological Adaptation`,
     chapter: `Gastrointestinal System`,
-    question: `The client asks how he contracted hepatitis A. He reports all of the following. Which one is most likely related to hepatitis A?`,
+    prompt: `The client asks how he contracted hepatitis A. He reports all of the following. Which one is most likely related to hepatitis A?`,
     options: [
       `He ate home-canned corn.`,
       `He ate oysters his roommate brought home from a fishing trip.`,
@@ -2213,7 +2212,7 @@ export const QUESTION_BANK = [
     id: 158,
     category: `Physiological Adaptation`,
     chapter: `Gastrointestinal System`,
-    question: `A client has had a liver biopsy. After the procedure, the nurse should position him on his right side with a pillow under his rib cage. What is the primary reason for this position?`,
+    prompt: `A client has had a liver biopsy. After the procedure, the nurse should position him on his right side with a pillow under his rib cage. What is the primary reason for this position?`,
     options: [
       `To immobilize the diaphragm`,
       `To facilitate full chest expansion`,
@@ -2227,7 +2226,7 @@ export const QUESTION_BANK = [
     id: 159,
     category: `Physiological Adaptation`,
     chapter: `Gastrointestinal System`,
-    question: `A client with cirrhosis is about to have a paracentesis for relief of ascites. Which activity is essential prior to the procedure?`,
+    prompt: `A client with cirrhosis is about to have a paracentesis for relief of ascites. Which activity is essential prior to the procedure?`,
     options: [
       `Administer thorough mouth care.`,
       `Ask the client to empty his bladder.`,
@@ -2241,7 +2240,7 @@ export const QUESTION_BANK = [
     id: 160,
     category: `Physiological Adaptation`,
     chapter: `Gastrointestinal System`,
-    question: `The client has severe liver disease. Which of the following observations is most indicative of serious problems?`,
+    prompt: `The client has severe liver disease. Which of the following observations is most indicative of serious problems?`,
     options: [
       `The client has generalized urticaria.`,
       `The client is "confused" and can no longer write his name legibly.`,
@@ -2255,7 +2254,7 @@ export const QUESTION_BANK = [
     id: 161,
     category: `Physiological Adaptation`,
     chapter: `Gastrointestinal System`,
-    question: `An adult has a nasogastric tube in place. Which nursing action will relieve discomfort in the nostril with the NG tube?`,
+    prompt: `An adult has a nasogastric tube in place. Which nursing action will relieve discomfort in the nostril with the NG tube?`,
     options: [
       `Remove any tape and loosely pin the NG tube to his gown.`,
       `Lubricate the NG tube with viscous lidocaine.`,
@@ -2269,7 +2268,7 @@ export const QUESTION_BANK = [
     id: 162,
     category: `Physiological Adaptation`,
     chapter: `Gastrointestinal System`,
-    question: `An adult is being treated for a peptic ulcer. The physician has prescribed cimetidine (Tagamet) for which reason?`,
+    prompt: `An adult is being treated for a peptic ulcer. The physician has prescribed cimetidine (Tagamet) for which reason?`,
     options: [
       `It blocks the secretion of gastric hydrochloric acid.`,
       `It coats the gastric mucosa with a protective membrane.`,
@@ -2283,7 +2282,7 @@ export const QUESTION_BANK = [
     id: 163,
     category: `Physiological Adaptation`,
     chapter: `Gastrointestinal System`,
-    question: `The nurse is assessing a client who may have a hiatal hernia. What symptom is the client most likely to report?`,
+    prompt: `The nurse is assessing a client who may have a hiatal hernia. What symptom is the client most likely to report?`,
     options: [
       `Projectile vomiting`,
       `Crampy lower abdominal pain`,
@@ -2297,7 +2296,7 @@ export const QUESTION_BANK = [
     id: 164,
     category: `Physiological Adaptation`,
     chapter: `Gastrointestinal System`,
-    question: `When an elderly client is receiving cimetidine (Tagamet), it is important that the nurse monitor for which side effect?`,
+    prompt: `When an elderly client is receiving cimetidine (Tagamet), it is important that the nurse monitor for which side effect?`,
     options: [
       `Chest pain`,
       `Confusion`,
@@ -2313,7 +2312,7 @@ export const QUESTION_BANK = [
     id: 165,
     category: `Physiological Adaptation`,
     chapter: `Genitourinary System`,
-    question: `The nurse is performing a urethral catheterization on a female. After separating the labia, where would the nurse observe the urethral meatus?`,
+    prompt: `The nurse is performing a urethral catheterization on a female. After separating the labia, where would the nurse observe the urethral meatus?`,
     options: [
       `Between the vaginal orifice and the anus`,
       `Between the clitoris and the vaginal orifice`,
@@ -2327,7 +2326,7 @@ export const QUESTION_BANK = [
     id: 166,
     category: `Physiological Adaptation`,
     chapter: `Genitourinary System`,
-    question: `An adult had an indwelling catheter removed. After she voids for the first time, the nurse catheterizes her as ordered and obtains 200 mL of urine. What is the best interpretation of this finding? The client:`,
+    prompt: `An adult had an indwelling catheter removed. After she voids for the first time, the nurse catheterizes her as ordered and obtains 200 mL of urine. What is the best interpretation of this finding? The client:`,
     options: [
       `is voiding normally`,
       `has urinary retention`,
@@ -2341,7 +2340,7 @@ export const QUESTION_BANK = [
     id: 167,
     category: `Physiological Adaptation`,
     chapter: `Genitourinary System`,
-    question: `The nurse is preparing to insert an indwelling catheter. What type of technique should the nurse use to perform this procedure?`,
+    prompt: `The nurse is preparing to insert an indwelling catheter. What type of technique should the nurse use to perform this procedure?`,
     options: [
       `Clean technique`,
       `Medical asepsis`,
@@ -2355,7 +2354,7 @@ export const QUESTION_BANK = [
     id: 168,
     category: `Physiological Adaptation`,
     chapter: `Genitourinary System`,
-    question: `After inserting the indwelling catheter, how should the nurse position the drainage container?`,
+    prompt: `After inserting the indwelling catheter, how should the nurse position the drainage container?`,
     options: [
       `With the drainage tubing taut to maintain maximum suction on the urinary bladder`,
       `Lower than the bladder to maintain a constant downward flow of urine from the bladder`,
@@ -2369,7 +2368,7 @@ export const QUESTION_BANK = [
     id: 169,
     category: `Physiological Adaptation`,
     chapter: `Genitourinary System`,
-    question: `The nurse is attempting to pass an indwelling catheter in an adult male and is having difficulty. What is the most appropriate action for the nurse?`,
+    prompt: `The nurse is attempting to pass an indwelling catheter in an adult male and is having difficulty. What is the most appropriate action for the nurse?`,
     options: [
       `Remove the catheter and reinsert it with the client positioned differently`,
       `Try a straight catheter instead`,
@@ -2383,7 +2382,7 @@ export const QUESTION_BANK = [
     id: 170,
     category: `Physiological Adaptation`,
     chapter: `Genitourinary System`,
-    question: `A client has just had a needle biopsy of the kidney. What should the nurse do immediately following the procedure?`,
+    prompt: `A client has just had a needle biopsy of the kidney. What should the nurse do immediately following the procedure?`,
     options: [
       `Keep him NPO; take his blood pressure every 5 minutes for 1 hour and then every 15 minutes`,
       `Keep him flat for 24 hours; take his blood pressure every 5 minutes for 1 hour, then every 15 minutes`,
@@ -2397,7 +2396,7 @@ export const QUESTION_BANK = [
     id: 171,
     category: `Physiological Adaptation`,
     chapter: `Genitourinary System`,
-    question: `A 5-year-old has been wetting his bed since coming into the hospital. The best approach for the nurse to use to help him regain his voluntary bladder control is to do which of the following?`,
+    prompt: `A 5-year-old has been wetting his bed since coming into the hospital. The best approach for the nurse to use to help him regain his voluntary bladder control is to do which of the following?`,
     options: [
       `Put diapers on him until he promises to stay dry`,
       `Leave him in his bed so he will learn he should not wet his bed`,
@@ -2411,7 +2410,7 @@ export const QUESTION_BANK = [
     id: 172,
     category: `Physiological Adaptation`,
     chapter: `Genitourinary System`,
-    question: `An adult client has returned to his room following a cystoscopy. When he voids, his urine is pink-tinged. What is the most appropriate action for the nurse to take?`,
+    prompt: `An adult client has returned to his room following a cystoscopy. When he voids, his urine is pink-tinged. What is the most appropriate action for the nurse to take?`,
     options: [
       `Continue to observe him`,
       `Report it immediately to the physician`,
@@ -2425,7 +2424,7 @@ export const QUESTION_BANK = [
     id: 173,
     category: `Physiological Adaptation`,
     chapter: `Genitourinary System`,
-    question: `An 18-year-old female is seen in the clinic for a bladder infection. Which of the following signs and symptoms would the nurse expect her to manifest?`,
+    prompt: `An 18-year-old female is seen in the clinic for a bladder infection. Which of the following signs and symptoms would the nurse expect her to manifest?`,
     options: [
       `Burning upon urination`,
       `Flank pain`,
@@ -2439,7 +2438,7 @@ export const QUESTION_BANK = [
     id: 174,
     category: `Physiological Adaptation`,
     chapter: `Genitourinary System`,
-    question: `The nurse instructs a woman in the proper procedure for obtaining a clean-catch urine specimen. What should the nurse tell her to do?`,
+    prompt: `The nurse instructs a woman in the proper procedure for obtaining a clean-catch urine specimen. What should the nurse tell her to do?`,
     options: [
       `Clean the perineal area with soap and water and then void into the collection container.`,
       `Clean around the urethral opening using antibacterial cleaning pads, wiping from front to back. Urinate and let some of the urine go into the toilet; then collect urine in the sterile container.`,
@@ -2453,7 +2452,7 @@ export const QUESTION_BANK = [
     id: 175,
     category: `Physiological Adaptation`,
     chapter: `Genitourinary System`,
-    question: `A urinalysis reveals white cells and bacteria in the urine of a female client suspected of having a bladder infection. The client is instructed to take the prescribed anti-infective. What else should the nurse include when teaching the client?`,
+    prompt: `A urinalysis reveals white cells and bacteria in the urine of a female client suspected of having a bladder infection. The client is instructed to take the prescribed anti-infective. What else should the nurse include when teaching the client?`,
     options: [
       `Limit fluid intake until the pain subsides`,
       `Wipe from back to front after voiding`,
@@ -2467,7 +2466,7 @@ export const QUESTION_BANK = [
     id: 176,
     category: `Physiological Adaptation`,
     chapter: `Genitourinary System`,
-    question: `An adult male is admitted with severe right flank pain, nausea, and vomiting of four hours in duration. The admitting diagnosis is a kidney stone. Orders include to encourage fluids to 1000 cc per shift. What is the primary reason for encouraging fluids in this client?`,
+    prompt: `An adult male is admitted with severe right flank pain, nausea, and vomiting of four hours in duration. The admitting diagnosis is a kidney stone. Orders include to encourage fluids to 1000 cc per shift. What is the primary reason for encouraging fluids in this client?`,
     options: [
       `To prevent renal failure`,
       `To help the stone pass`,
@@ -2481,7 +2480,7 @@ export const QUESTION_BANK = [
     id: 177,
     category: `Physiological Adaptation`,
     chapter: `Genitourinary System`,
-    question: `The nurse is straining the urine of a client admitted with possible renal calculi. A small stone is discovered. What should the nurse do?`,
+    prompt: `The nurse is straining the urine of a client admitted with possible renal calculi. A small stone is discovered. What should the nurse do?`,
     options: [
       `Send the stone to the laboratory for analysis`,
       `Immediately test for guaiac`,
@@ -2495,7 +2494,7 @@ export const QUESTION_BANK = [
     id: 178,
     category: `Physiological Adaptation`,
     chapter: `Genitourinary System`,
-    question: `A client who has kidney stones complains of pain. The nurse finds him pacing the hall. What is the most appropriate action for the nurse to take?`,
+    prompt: `A client who has kidney stones complains of pain. The nurse finds him pacing the hall. What is the most appropriate action for the nurse to take?`,
     options: [
       `Tell him to get back in bed where he will be more comfortable`,
       `Encourage him to walk if it helps to relieve the pain`,
@@ -2509,7 +2508,7 @@ export const QUESTION_BANK = [
     id: 179,
     category: `Physiological Adaptation`,
     chapter: `Genitourinary System`,
-    question: `The nurse is caring for a client who has acute renal failure. His potassium rises to 7.3 mEq/L. A Kayexalate enema is ordered. What is the primary purpose of the Kayexalate enema?`,
+    prompt: `The nurse is caring for a client who has acute renal failure. His potassium rises to 7.3 mEq/L. A Kayexalate enema is ordered. What is the primary purpose of the Kayexalate enema?`,
     options: [
       `To remove fluid from the extracellular spaces`,
       `To exchange potassium ions for sodium ions`,
@@ -2523,7 +2522,7 @@ export const QUESTION_BANK = [
     id: 180,
     category: `Physiological Adaptation`,
     chapter: `Genitourinary System`,
-    question: `The nurse is caring for a client who is in acute renal failure. Which of the following selections would be best to give for a snack?`,
+    prompt: `The nurse is caring for a client who is in acute renal failure. Which of the following selections would be best to give for a snack?`,
     options: [
       `A slice of watermelon`,
       `Orange juice`,
@@ -2537,7 +2536,7 @@ export const QUESTION_BANK = [
     id: 181,
     category: `Physiological Adaptation`,
     chapter: `Genitourinary System`,
-    question: `A 67-year-old man is admitted with dysuria that has gotten worse over the past six months. Rectal examination revealed an enlarged prostate. Following urination, he was catheterized and found to have 250 cc of thick, foul-smelling, residual urine. He is admitted with a diagnosis of benign prostatic hypertrophy. Which symptom is least likely to be present in this client?`,
+    prompt: `A 67-year-old man is admitted with dysuria that has gotten worse over the past six months. Rectal examination revealed an enlarged prostate. Following urination, he was catheterized and found to have 250 cc of thick, foul-smelling, residual urine. He is admitted with a diagnosis of benign prostatic hypertrophy. Which symptom is least likely to be present in this client?`,
     options: [
       `Urinary frequency`,
       `Pus in the urine`,
@@ -2551,7 +2550,7 @@ export const QUESTION_BANK = [
     id: 182,
     category: `Physiological Adaptation`,
     chapter: `Genitourinary System`,
-    question: `The client who has urinary retention has had an indwelling catheter inserted. Which action is not appropriate for the nurse to take?`,
+    prompt: `The client who has urinary retention has had an indwelling catheter inserted. Which action is not appropriate for the nurse to take?`,
     options: [
       `Limit the client's fluid intake`,
       `Monitor blood pressure frequently`,
@@ -2565,7 +2564,7 @@ export const QUESTION_BANK = [
     id: 183,
     category: `Physiological Adaptation`,
     chapter: `Genitourinary System`,
-    question: `The nurse has inserted an indwelling catheter into an adult male. The nurse taps the urinary drainage tube laterally to the thigh for which of the following reasons?`,
+    prompt: `The nurse has inserted an indwelling catheter into an adult male. The nurse taps the urinary drainage tube laterally to the thigh for which of the following reasons?`,
     options: [
       `To ensure client comfort`,
       `To prevent reflux of urine`,
@@ -2579,7 +2578,7 @@ export const QUESTION_BANK = [
     id: 184,
     category: `Physiological Adaptation`,
     chapter: `Genitourinary System`,
-    question: `A client who had a transurethral prostatectomy is returned to the unit with continuous bladder irrigation. The nurse understands that the primary purpose of continuous bladder irrigation for this client is to:`,
+    prompt: `A client who had a transurethral prostatectomy is returned to the unit with continuous bladder irrigation. The nurse understands that the primary purpose of continuous bladder irrigation for this client is to:`,
     options: [
       `prevent a urinary tract infection.`,
       `maintain bladder tone`,
@@ -2593,7 +2592,7 @@ export const QUESTION_BANK = [
     id: 185,
     category: `Physiological Adaptation`,
     chapter: `Genitourinary System`,
-    question: `A 35-year-old man asks the nurse about a vasectomy. In discussing a vasectomy with this man, which information is most important to provide?`,
+    prompt: `A 35-year-old man asks the nurse about a vasectomy. In discussing a vasectomy with this man, which information is most important to provide?`,
     options: [
       `A vasectomy involves tubal ligation done by surgery.`,
       `This is a permanent method of contraception.`,
@@ -2607,7 +2606,7 @@ export const QUESTION_BANK = [
     id: 186,
     category: `Physiological Adaptation`,
     chapter: `Genitourinary System`,
-    question: `A client asks the nurse if he can get his wife pregnant after a vasectomy. What is the best response for the nurse to make?`,
+    prompt: `A client asks the nurse if he can get his wife pregnant after a vasectomy. What is the best response for the nurse to make?`,
     options: [
       `"No. The procedure works immediately and is permanent."`,
       `"The first few ejaculations after a vasectomy contain active sperm."`,
@@ -2621,7 +2620,7 @@ export const QUESTION_BANK = [
     id: 187,
     category: `Physiological Adaptation`,
     chapter: `Genitourinary System`,
-    question: `A client asks the nurse if he will be able to ejaculate after the vasectomy is done. What is the best response for the nurse to make?`,
+    prompt: `A client asks the nurse if he will be able to ejaculate after the vasectomy is done. What is the best response for the nurse to make?`,
     options: [
       `"Yes. This procedure does not affect the ejaculate."`,
       `"No. The purpose of a vasectomy is to prevent ejaculation."`,
@@ -2635,7 +2634,7 @@ export const QUESTION_BANK = [
     id: 188,
     category: `Physiological Adaptation`,
     chapter: `Genitourinary System`,
-    question: `An adult has been on bed rest for several weeks. A nursing care goal is to prevent the formation of renal calculi. Which of the following liquids is it especially important to include in the client's diet?`,
+    prompt: `An adult has been on bed rest for several weeks. A nursing care goal is to prevent the formation of renal calculi. Which of the following liquids is it especially important to include in the client's diet?`,
     options: [
       `Tomato juice`,
       `Coffee`,
@@ -2649,7 +2648,7 @@ export const QUESTION_BANK = [
     id: 189,
     category: `Physiological Adaptation`,
     chapter: `Genitourinary System`,
-    question: `The physician has prescribed a diuretic for an adult client. Which nursing intervention is most important in relation to diuretic therapy?`,
+    prompt: `The physician has prescribed a diuretic for an adult client. Which nursing intervention is most important in relation to diuretic therapy?`,
     options: [
       `Test the urine for sugar and acetone`,
       `Measure daily weights`,
@@ -2663,7 +2662,7 @@ export const QUESTION_BANK = [
     id: 190,
     category: `Physiological Adaptation`,
     chapter: `Genitourinary System`,
-    question: `The nurse is caring for an adult who has an indwelling urinary catheter with a continuous bladder irrigation infusing. How should the nurse calculate the urine output when the drainage bag is emptied?`,
+    prompt: `The nurse is caring for an adult who has an indwelling urinary catheter with a continuous bladder irrigation infusing. How should the nurse calculate the urine output when the drainage bag is emptied?`,
     options: [
       `Subtract the total drainage from the amount of irrigation solution used`,
       `Measure the amount of drainage and subtract the amount of solution infused`,
@@ -2677,7 +2676,7 @@ export const QUESTION_BANK = [
     id: 191,
     category: `Physiological Adaptation`,
     chapter: `Genitourinary System`,
-    question: `The nurse calculates intake and output for an adult client. His intake for the shift is 1000 mL. The total amount of drainage emptied from the drainage bag is 2550 mL. During the shift, 1825 mL of genitourinary irrigant has infused. What is the client's eight-hour urine output?`,
+    prompt: `The nurse calculates intake and output for an adult client. His intake for the shift is 1000 mL. The total amount of drainage emptied from the drainage bag is 2550 mL. During the shift, 1825 mL of genitourinary irrigant has infused. What is the client's eight-hour urine output?`,
     options: [
       `725 mL`,
       `650 mL`,
@@ -2691,7 +2690,7 @@ export const QUESTION_BANK = [
     id: 192,
     category: `Physiological Adaptation`,
     chapter: `Genitourinary System`,
-    question: `The nurse is caring for a client admitted for treatment of acute glomerulonephritis. Which question should the nurse ask when obtaining information about the present illness?`,
+    prompt: `The nurse is caring for a client admitted for treatment of acute glomerulonephritis. Which question should the nurse ask when obtaining information about the present illness?`,
     options: [
       `"Have you had a sore throat recently?"`,
       `"Has anyone in your family had chickenpox recently?"`,
@@ -2705,7 +2704,7 @@ export const QUESTION_BANK = [
     id: 193,
     category: `Physiological Adaptation`,
     chapter: `Genitourinary System`,
-    question: `A 78-year-old man is scheduled for a transurethral resection of the prostate (TURP) tomorrow morning for treatment of benign prostatic hypertrophy. What instruction should the nurse give him about the initial postoperative period?`,
+    prompt: `A 78-year-old man is scheduled for a transurethral resection of the prostate (TURP) tomorrow morning for treatment of benign prostatic hypertrophy. What instruction should the nurse give him about the initial postoperative period?`,
     options: [
       `"Void every two hours whether or not you feel the urge to do so."`,
       `"Get up and walk to decrease discomfort from bladder spasms."`,
@@ -2719,7 +2718,7 @@ export const QUESTION_BANK = [
     id: 194,
     category: `Physiological Adaptation`,
     chapter: `Genitourinary System`,
-    question: `A 35-year-old man is admitted with severe renal colic. The nurse should monitor this man for possible complications. Which of the following is a complication of renal colic?`,
+    prompt: `A 35-year-old man is admitted with severe renal colic. The nurse should monitor this man for possible complications. Which of the following is a complication of renal colic?`,
     options: [
       `Anemia`,
       `Polyuria`,
@@ -2733,7 +2732,7 @@ export const QUESTION_BANK = [
     id: 195,
     category: `Physiological Adaptation`,
     chapter: `Genitourinary System`,
-    question: `A woman is being seen in the walk-in clinic for recurrent cystitis. The nurse is teaching her about measures to prevent future episodes of cystitis. What should the nurse include in the teaching?`,
+    prompt: `A woman is being seen in the walk-in clinic for recurrent cystitis. The nurse is teaching her about measures to prevent future episodes of cystitis. What should the nurse include in the teaching?`,
     options: [
       `Drink 1000 mL of fluid each day, including a serving of cranberry juice at bedtime.`,
       `Take a daily bath, and avoid the use of bath oils and soaps.`,
@@ -2747,7 +2746,7 @@ export const QUESTION_BANK = [
     id: 196,
     category: `Physiological Adaptation`,
     chapter: `Genitourinary System`,
-    question: `A 64-year-old client with late-stage chronic renal failure is admitted. What should the nurse expect in the nursing care plan for this client?`,
+    prompt: `A 64-year-old client with late-stage chronic renal failure is admitted. What should the nurse expect in the nursing care plan for this client?`,
     options: [
       `Insert a urinary catheter to promote bladder drainage.`,
       `Elevate the client's feet when out of bed to promote venous return.`,
@@ -2761,7 +2760,7 @@ export const QUESTION_BANK = [
     id: 197,
     category: `Physiological Adaptation`,
     chapter: `Genitourinary System`,
-    question: `The nurse is teaching testicular self-examination to a group of young men on a college campus. Which information should be included in the discussion?`,
+    prompt: `The nurse is teaching testicular self-examination to a group of young men on a college campus. Which information should be included in the discussion?`,
     options: [
       `Perform the examination immediately following sexual intercourse.`,
       `See your physician for an examination yearly.`,
@@ -2775,7 +2774,7 @@ export const QUESTION_BANK = [
     id: 198,
     category: `Physiological Adaptation`,
     chapter: `Genitourinary System`,
-    question: `The nurse is caring for an adult who recently received a kidney transplant. Which statement, if made by the client, indicates a lack of understanding of his long-term management?`,
+    prompt: `The nurse is caring for an adult who recently received a kidney transplant. Which statement, if made by the client, indicates a lack of understanding of his long-term management?`,
     options: [
       `"I plan to go back to work as soon as I feel strong enough."`,
       `"We have started using gloves whenever we are scrubbing things."`,
@@ -2789,7 +2788,7 @@ export const QUESTION_BANK = [
     id: 199,
     category: `Physiological Adaptation`,
     chapter: `Genitourinary System`,
-    question: `An adult is scheduled for an intravenous pyelogram. Which comment by the client is of greatest concern to the nurse?`,
+    prompt: `An adult is scheduled for an intravenous pyelogram. Which comment by the client is of greatest concern to the nurse?`,
     options: [
       `"I am afraid of needles."`,
       `"I get short of breath when I eat crab meat."`,
@@ -2805,7 +2804,7 @@ export const QUESTION_BANK = [
     id: 200,
     category: `Physiological Adaptation`,
     chapter: `Musculoskeletal System`,
-    question: `A cast has just been applied to a client's left forearm, and he has 10 lbs of Russell's traction on his left leg. Which of the following nursing concerns takes priority in the care of this client?`,
+    prompt: `A cast has just been applied to a client's left forearm, and he has 10 lbs of Russell's traction on his left leg. Which of the following nursing concerns takes priority in the care of this client?`,
     options: [
       `The casted extremity may swell, and the cast will become a tourniquet.`,
       `Heat conduction from the wet cast can cause burning to the skin below.`,
@@ -2819,7 +2818,7 @@ export const QUESTION_BANK = [
     id: 201,
     category: `Physiological Adaptation`,
     chapter: `Musculoskeletal System`,
-    question: `The nurse is caring for a client with a newly applied plaster cast. How should the nurse touch and move the wet cast?`,
+    prompt: `The nurse is caring for a client with a newly applied plaster cast. How should the nurse touch and move the wet cast?`,
     options: [
       `Use the palms of the hands`,
       `Use the fingertips only`,
@@ -2833,7 +2832,7 @@ export const QUESTION_BANK = [
     id: 202,
     category: `Physiological Adaptation`,
     chapter: `Musculoskeletal System`,
-    question: `The nurse is caring for a client who has just had a cast applied. Which statement best describes the expected client outcome relative to the circulatory system for a client with a cast?`,
+    prompt: `The nurse is caring for a client who has just had a cast applied. Which statement best describes the expected client outcome relative to the circulatory system for a client with a cast?`,
     options: [
       `There will be no increase in pain in the extremity.`,
       `The client will have no circulatory impairment.`,
@@ -2847,7 +2846,7 @@ export const QUESTION_BANK = [
     id: 203,
     category: `Physiological Adaptation`,
     chapter: `Musculoskeletal System`,
-    question: `The nurse gently elevates the client's newly casted arm on a pillow and explains that this is necessary for the first 24 to 48 hours after casting. What is the chief purpose of this action?`,
+    prompt: `The nurse gently elevates the client's newly casted arm on a pillow and explains that this is necessary for the first 24 to 48 hours after casting. What is the chief purpose of this action?`,
     options: [
       `It helps a damp cast to dry more evenly.`,
       `It reduces the amount of pain medication needed.`,
@@ -2861,7 +2860,7 @@ export const QUESTION_BANK = [
     id: 204,
     category: `Physiological Adaptation`,
     chapter: `Musculoskeletal System`,
-    question: `An adolescent male was in an accident and is hospitalized with multiple fractures. The nurse enters the room and observes that he has his back to the door and is staring at the wall with a sad expression on his face. What is the best response for the nurse to make at this time?`,
+    prompt: `An adolescent male was in an accident and is hospitalized with multiple fractures. The nurse enters the room and observes that he has his back to the door and is staring at the wall with a sad expression on his face. What is the best response for the nurse to make at this time?`,
     options: [
       `"You seem sad."`,
       `"Don't be too down on yourself."`,
@@ -2875,7 +2874,7 @@ export const QUESTION_BANK = [
     id: 205,
     category: `Physiological Adaptation`,
     chapter: `Musculoskeletal System`,
-    question: `The client is in Russell's traction. Which statement best describes how Russell's traction works?`,
+    prompt: `The client is in Russell's traction. Which statement best describes how Russell's traction works?`,
     options: [
       `The legs are suspended vertically with the hip flexed at 90 degrees and knees extended.`,
       `A straight pull on the affected leg is assured.`,
@@ -2889,7 +2888,7 @@ export const QUESTION_BANK = [
     id: 206,
     category: `Physiological Adaptation`,
     chapter: `Musculoskeletal System`,
-    question: `The nurse is assessing the leg of a client in Russell's traction. Which area is it essential to assess?`,
+    prompt: `The nurse is assessing the leg of a client in Russell's traction. Which area is it essential to assess?`,
     options: [
       `Pedal area`,
       `Femoral area`,
@@ -2903,7 +2902,7 @@ export const QUESTION_BANK = [
     id: 207,
     category: `Physiological Adaptation`,
     chapter: `Musculoskeletal System`,
-    question: `It is necessary to pull the client, who is in Russell's traction, up in bed. Which action should the nurse take?`,
+    prompt: `It is necessary to pull the client, who is in Russell's traction, up in bed. Which action should the nurse take?`,
     options: [
       `Leave the weights in place.`,
       `Remove the weights completely.`,
@@ -2917,7 +2916,7 @@ export const QUESTION_BANK = [
     id: 208,
     category: `Physiological Adaptation`,
     chapter: `Musculoskeletal System`,
-    question: `The client has been flat in bed in traction for two weeks, and she is to be allowed out of bed for the first time today. What must the nurse be particularly alert for when getting the client out of bed?`,
+    prompt: `The client has been flat in bed in traction for two weeks, and she is to be allowed out of bed for the first time today. What must the nurse be particularly alert for when getting the client out of bed?`,
     options: [
       `Renal complications`,
       `Depression`,
@@ -2931,7 +2930,7 @@ export const QUESTION_BANK = [
     id: 209,
     category: `Physiological Adaptation`,
     chapter: `Musculoskeletal System`,
-    question: `The client is a 73-year-old woman who fell in her home and suffered a right hip fracture. She tells the nurse that she was walking across the kitchen and felt something "snap" in her hip and this made her fall. What type of fracture is the client most likely to have?`,
+    prompt: `The client is a 73-year-old woman who fell in her home and suffered a right hip fracture. She tells the nurse that she was walking across the kitchen and felt something "snap" in her hip and this made her fall. What type of fracture is the client most likely to have?`,
     options: [
       `Comminuted fracture`,
       `Greenstick fracture`,
@@ -2945,7 +2944,7 @@ export const QUESTION_BANK = [
     id: 210,
     category: `Physiological Adaptation`,
     chapter: `Musculoskeletal System`,
-    question: `The nurse knows that elderly women have a high incidence of hip fracture for which reason?`,
+    prompt: `The nurse knows that elderly women have a high incidence of hip fracture for which reason?`,
     options: [
       `Decreased progesterone secretion`,
       `Decreased mobility due to arthritic conditions`,
@@ -2959,7 +2958,7 @@ export const QUESTION_BANK = [
     id: 211,
     category: `Physiological Adaptation`,
     chapter: `Musculoskeletal System`,
-    question: `The nurse is caring for a client prior to surgery to repair a broken right hip. Which nursing care measure is essential?`,
+    prompt: `The nurse is caring for a client prior to surgery to repair a broken right hip. Which nursing care measure is essential?`,
     options: [
       `Get the client out of bed twice a day to maintain mobility`,
       `Use pillows to maintain the right hip in a state of abduction`,
@@ -2973,7 +2972,7 @@ export const QUESTION_BANK = [
     id: 212,
     category: `Physiological Adaptation`,
     chapter: `Musculoskeletal System`,
-    question: `A femoral head replacement was performed on an elderly client. Postoperatively, the nurse positions the client with an abductor pillow between the client's legs. What is the primary reason for this?`,
+    prompt: `A femoral head replacement was performed on an elderly client. Postoperatively, the nurse positions the client with an abductor pillow between the client's legs. What is the primary reason for this?`,
     options: [
       `This position will promote greater comfort.`,
       `Abduction promotes greater circulation to the hip joint.`,
@@ -2987,7 +2986,7 @@ export const QUESTION_BANK = [
     id: 213,
     category: `Physiological Adaptation`,
     chapter: `Musculoskeletal System`,
-    question: `The client with rheumatoid arthritis has been taking 15 to 20 extra-strength aspirin a day. Which additional statement that the client makes would be of greatest concern to the nurse?`,
+    prompt: `The client with rheumatoid arthritis has been taking 15 to 20 extra-strength aspirin a day. Which additional statement that the client makes would be of greatest concern to the nurse?`,
     options: [
       `"I sometimes have ringing in my ears."`,
       `"I have a rash under my arms."`,
@@ -3001,7 +3000,7 @@ export const QUESTION_BANK = [
     id: 214,
     category: `Physiological Adaptation`,
     chapter: `Musculoskeletal System`,
-    question: `The physician orders prednisone for a client with rheumatoid arthritis for painful wrists and joints. Which instruction is it essential for the nurse to give the client?`,
+    prompt: `The physician orders prednisone for a client with rheumatoid arthritis for painful wrists and joints. Which instruction is it essential for the nurse to give the client?`,
     options: [
       `"Take the pills with milk or food."`,
       `"Be sure to take the medication between meals."`,
@@ -3015,7 +3014,7 @@ export const QUESTION_BANK = [
     id: 215,
     category: `Physiological Adaptation`,
     chapter: `Musculoskeletal System`,
-    question: `The client is a 64-year-old male admitted to the hospital with severe pain in his right big toe, which is red and swollen. Which nursing care measure is most essential for the nurse to perform at this time?`,
+    prompt: `The client is a 64-year-old male admitted to the hospital with severe pain in his right big toe, which is red and swollen. Which nursing care measure is most essential for the nurse to perform at this time?`,
     options: [
       `Use a bed cradle on the bed`,
       `Put a bed board on the bed`,
@@ -3029,7 +3028,7 @@ export const QUESTION_BANK = [
     id: 216,
     category: `Physiological Adaptation`,
     chapter: `Musculoskeletal System`,
-    question: `The nurse is to give the client with gout one tablet of colchicine every hour until relief or toxicity occurs. Which of the following is an indication for stopping the colchicine?`,
+    prompt: `The nurse is to give the client with gout one tablet of colchicine every hour until relief or toxicity occurs. Which of the following is an indication for stopping the colchicine?`,
     options: [
       `Ringing in the ears`,
       `Nausea and vomiting`,
@@ -3043,7 +3042,7 @@ export const QUESTION_BANK = [
     id: 217,
     category: `Physiological Adaptation`,
     chapter: `Musculoskeletal System`,
-    question: `The nurse is teaching the client with gout about a diet low in purines. Which of the following is lowest in purine?`,
+    prompt: `The nurse is teaching the client with gout about a diet low in purines. Which of the following is lowest in purine?`,
     options: [
       `Roast chicken`,
       `Beef liver`,
@@ -3057,7 +3056,7 @@ export const QUESTION_BANK = [
     id: 218,
     category: `Physiological Adaptation`,
     chapter: `Musculoskeletal System`,
-    question: `The client is now over an acute episode of gout. He is to be discharged on allopurinol (Zyloprim). What instruction must the nurse give to this client?`,
+    prompt: `The client is now over an acute episode of gout. He is to be discharged on allopurinol (Zyloprim). What instruction must the nurse give to this client?`,
     options: [
       `"Take your medicine on an empty stomach."`,
       `"Report any nausea to your physician at once."`,
@@ -3071,7 +3070,7 @@ export const QUESTION_BANK = [
     id: 219,
     category: `Physiological Adaptation`,
     chapter: `Musculoskeletal System`,
-    question: `The client with arthritis is receiving sodium salicylate and asks the nurse what the drug will do for her. The nurse's reply should include information that the drug is given for which of the following effects?`,
+    prompt: `The client with arthritis is receiving sodium salicylate and asks the nurse what the drug will do for her. The nurse's reply should include information that the drug is given for which of the following effects?`,
     options: [
       `Antipyretic`,
       `Antibiotic`,
@@ -3085,7 +3084,7 @@ export const QUESTION_BANK = [
     id: 220,
     category: `Physiological Adaptation`,
     chapter: `Musculoskeletal System`,
-    question: `The client with newly diagnosed rheumatoid arthritis asks what can happen if no treatment is done. The nurse knows that if rheumatoid arthritis is left untreated, which of the following would be most apt to develop?`,
+    prompt: `The client with newly diagnosed rheumatoid arthritis asks what can happen if no treatment is done. The nurse knows that if rheumatoid arthritis is left untreated, which of the following would be most apt to develop?`,
     options: [
       `Bony ankylosis`,
       `Chronic osteomyelitis`,
@@ -3099,7 +3098,7 @@ export const QUESTION_BANK = [
     id: 221,
     category: `Physiological Adaptation`,
     chapter: `Musculoskeletal System`,
-    question: `The client with rheumatoid arthritis is to receive prednisone 2.5 mg p.o. before meals and at bedtime. What is the primary expected action of the drug?`,
+    prompt: `The client with rheumatoid arthritis is to receive prednisone 2.5 mg p.o. before meals and at bedtime. What is the primary expected action of the drug?`,
     options: [
       `Maintenance of sodium and potassium balance`,
       `Improvement of carbohydrate metabolism`,
@@ -3113,7 +3112,7 @@ export const QUESTION_BANK = [
     id: 222,
     category: `Physiological Adaptation`,
     chapter: `Musculoskeletal System`,
-    question: `The client is admitted to the hospital for a diagnostic workup. The client has vague symptoms of malaise, coughing, chest discomfort, low-grade fever, diffuse rashes, and musculoskeletal aches and pains. A diagnosis of probable lupus erythematosus has been made. The night nurse finds the client crying and saying, "I would rather die than suffer with this disease for the rest of my life." Which response by the nurse would be most therapeutic at this time?`,
+    prompt: `The client is admitted to the hospital for a diagnostic workup. The client has vague symptoms of malaise, coughing, chest discomfort, low-grade fever, diffuse rashes, and musculoskeletal aches and pains. A diagnosis of probable lupus erythematosus has been made. The night nurse finds the client crying and saying, "I would rather die than suffer with this disease for the rest of my life." Which response by the nurse would be most therapeutic at this time?`,
     options: [
       `Telling the client there are support groups to join after discharge`,
       `Offering to stay with the client to discuss concerns and questions`,
@@ -3127,7 +3126,7 @@ export const QUESTION_BANK = [
     id: 223,
     category: `Physiological Adaptation`,
     chapter: `Musculoskeletal System`,
-    question: `The client is an elderly man who has had diabetes and peripheral vascular disease for several years. He now has had a right below-the-knee amputation. Which preoperative nursing action will do the most to help the client adjust to having an amputation?`,
+    prompt: `The client is an elderly man who has had diabetes and peripheral vascular disease for several years. He now has had a right below-the-knee amputation. Which preoperative nursing action will do the most to help the client adjust to having an amputation?`,
     options: [
       `Encouraging deep breathing`,
       `Asking him if he understands the full effects of the planned surgery`,
@@ -3141,7 +3140,7 @@ export const QUESTION_BANK = [
     id: 224,
     category: `Physiological Adaptation`,
     chapter: `Musculoskeletal System`,
-    question: `The client has returned to the nursing unit following a right below-the-knee amputation. How should the nurse position the client?`,
+    prompt: `The client has returned to the nursing unit following a right below-the-knee amputation. How should the nurse position the client?`,
     options: [
       `Supine with head turned to the side`,
       `With shock blocks placed under the foot of the bed`,
@@ -3155,7 +3154,7 @@ export const QUESTION_BANK = [
     id: 225,
     category: `Physiological Adaptation`,
     chapter: `Musculoskeletal System`,
-    question: `The day after an amputation, the client begins to hemorrhage from his stump. What action should the nurse take first?`,
+    prompt: `The day after an amputation, the client begins to hemorrhage from his stump. What action should the nurse take first?`,
     options: [
       `Apply a pressure dressing to the stump`,
       `Place a tourniquet above the stump`,
@@ -3169,7 +3168,7 @@ export const QUESTION_BANK = [
     id: 226,
     category: `Physiological Adaptation`,
     chapter: `Musculoskeletal System`,
-    question: `The client continues to recover following a below-the-knee amputation. What nursing action should the nurse employ to help prevent the most common complication following leg amputation?`,
+    prompt: `The client continues to recover following a below-the-knee amputation. What nursing action should the nurse employ to help prevent the most common complication following leg amputation?`,
     options: [
       `Clean the wound with hydrogen peroxide three times a day`,
       `Have the client lie prone several times a day`,
@@ -3183,7 +3182,7 @@ export const QUESTION_BANK = [
     id: 227,
     category: `Physiological Adaptation`,
     chapter: `Musculoskeletal System`,
-    question: `A young adult is discharged to home with crutches. Which exercise should the nurse teach the client in order to strengthen the hand muscles for crutch walking?`,
+    prompt: `A young adult is discharged to home with crutches. Which exercise should the nurse teach the client in order to strengthen the hand muscles for crutch walking?`,
     options: [
       `Pushing the buttocks up off the mattress`,
       `Pulling the body up, using an overhead trapeze`,
@@ -3197,7 +3196,7 @@ export const QUESTION_BANK = [
     id: 228,
     category: `Physiological Adaptation`,
     chapter: `Musculoskeletal System`,
-    question: `The client is ordered to be in a semi-reclining position following a myelogram. The nurse understands that the primary reason for this is which of the following?`,
+    prompt: `The client is ordered to be in a semi-reclining position following a myelogram. The nurse understands that the primary reason for this is which of the following?`,
     options: [
       `To prevent infection`,
       `To prevent spinal headache`,
@@ -3211,7 +3210,7 @@ export const QUESTION_BANK = [
     id: 229,
     category: `Physiological Adaptation`,
     chapter: `Musculoskeletal System`,
-    question: `The client has a fractured right ankle that has just been casted. The nurse is instructing the client in crutch walking techniques. Which method is most appropriate?`,
+    prompt: `The client has a fractured right ankle that has just been casted. The nurse is instructing the client in crutch walking techniques. Which method is most appropriate?`,
     options: [
       `Move the right crutch, then the left foot, then the left crutch, and finally the right foot.`,
       `Balance weight on the left foot and move right foot and both crutches forward, then bear weight on both crutches and move the left foot forward.`,
@@ -3227,7 +3226,7 @@ export const QUESTION_BANK = [
     id: 230,
     category: `Physiological Adaptation`,
     chapter: `Endocrine System`,
-    question: `What should be included in the nursing care plan for a client with diabetes insipidus?`,
+    prompt: `What should be included in the nursing care plan for a client with diabetes insipidus?`,
     options: [
       `Blood pressure every hour`,
       `Strict intake and output`,
@@ -3241,7 +3240,7 @@ export const QUESTION_BANK = [
     id: 231,
     category: `Physiological Adaptation`,
     chapter: `Endocrine System`,
-    question: `What must the nurse do when preparing a client for a computed tomography (CT) scan?`,
+    prompt: `What must the nurse do when preparing a client for a computed tomography (CT) scan?`,
     options: [
       `Administer a laxative prep`,
       `Encourage fluids`,
@@ -3255,7 +3254,7 @@ export const QUESTION_BANK = [
     id: 232,
     category: `Physiological Adaptation`,
     chapter: `Endocrine System`,
-    question: `Antibiotics are ordered for a client who has had a transsphenoidal hypophysectomy. He asks why he is receiving an antibiotic when he does not have an infection. The primary reason for administering antibiotics to this client is based on which information?`,
+    prompt: `Antibiotics are ordered for a client who has had a transsphenoidal hypophysectomy. He asks why he is receiving an antibiotic when he does not have an infection. The primary reason for administering antibiotics to this client is based on which information?`,
     options: [
       `Antibiotics will help to prevent respiratory complications following surgery.`,
       `Meningitis is a complication following transsphenoidal hypophysectomy.`,
@@ -3269,7 +3268,7 @@ export const QUESTION_BANK = [
     id: 233,
     category: `Physiological Adaptation`,
     chapter: `Endocrine System`,
-    question: `Twelve hours after a transsphenoidal hypophysectomy, the client keeps clearing his throat and complains of a drip in his mouth. To accurately assess this, the nurse should test the fluid for:`,
+    prompt: `Twelve hours after a transsphenoidal hypophysectomy, the client keeps clearing his throat and complains of a drip in his mouth. To accurately assess this, the nurse should test the fluid for:`,
     options: [
       `sugar`,
       `protein`,
@@ -3283,7 +3282,7 @@ export const QUESTION_BANK = [
     id: 234,
     category: `Physiological Adaptation`,
     chapter: `Endocrine System`,
-    question: `The client is ready for discharge following an adrenalectomy. Which statement that the client makes indicates the best understanding of the client's condition?`,
+    prompt: `The client is ready for discharge following an adrenalectomy. Which statement that the client makes indicates the best understanding of the client's condition?`,
     options: [
       `"I will continue on a low-sodium, low-potassium diet."`,
       `"My husband has arranged for a marriage counselor because of our fights."`,
@@ -3297,7 +3296,7 @@ export const QUESTION_BANK = [
     id: 235,
     category: `Physiological Adaptation`,
     chapter: `Endocrine System`,
-    question: `What is the nursing priority when administering care to a client with severe hyperthyroidism?`,
+    prompt: `What is the nursing priority when administering care to a client with severe hyperthyroidism?`,
     options: [
       `Assess for recent emotional trauma.`,
       `Provide a calm, nonstimulating environment.`,
@@ -3311,7 +3310,7 @@ export const QUESTION_BANK = [
     id: 236,
     category: `Physiological Adaptation`,
     chapter: `Endocrine System`,
-    question: `Which problem is most likely to develop if hyperthyroidism remains untreated?`,
+    prompt: `Which problem is most likely to develop if hyperthyroidism remains untreated?`,
     options: [
       `Pulmonary embolism`,
       `Respiratory acidosis`,
@@ -3325,7 +3324,7 @@ export const QUESTION_BANK = [
     id: 237,
     category: `Physiological Adaptation`,
     chapter: `Endocrine System`,
-    question: `Which nursing care measure is essential because a client has exophthalmos?`,
+    prompt: `Which nursing care measure is essential because a client has exophthalmos?`,
     options: [
       `Administer artificial tears`,
       `Encourage the client to wear her glasses.`,
@@ -3339,7 +3338,7 @@ export const QUESTION_BANK = [
     id: 238,
     category: `Physiological Adaptation`,
     chapter: `Endocrine System`,
-    question: `A client who has just had a thyroidectomy returns to the unit in stable condition. What equipment is it essential for the nurse to have readily available?`,
+    prompt: `A client who has just had a thyroidectomy returns to the unit in stable condition. What equipment is it essential for the nurse to have readily available?`,
     options: [
       `Tracheostomy set`,
       `Thoracotomy tray`,
@@ -3353,7 +3352,7 @@ export const QUESTION_BANK = [
     id: 239,
     category: `Physiological Adaptation`,
     chapter: `Endocrine System`,
-    question: `What is the best way to assess for hemorrhage in a client who has had a thyroidectomy?`,
+    prompt: `What is the best way to assess for hemorrhage in a client who has had a thyroidectomy?`,
     options: [
       `Check the pulse and blood pressure hourly.`,
       `Roll the client to the side and check for evidence of bleeding.`,
@@ -3367,7 +3366,7 @@ export const QUESTION_BANK = [
     id: 240,
     category: `Physiological Adaptation`,
     chapter: `Endocrine System`,
-    question: `Which finding would be the greatest cause for concern to the nurse during the early postoperative period following a thyroidectomy?`,
+    prompt: `Which finding would be the greatest cause for concern to the nurse during the early postoperative period following a thyroidectomy?`,
     options: [
       `Temperature of 100°F`,
       `A sore throat`,
@@ -3381,7 +3380,7 @@ export const QUESTION_BANK = [
     id: 241,
     category: `Physiological Adaptation`,
     chapter: `Endocrine System`,
-    question: `An adult is admitted to the hospital with a diagnosis of hypothyroidism. Which findings would the nurse most likely elicit during the nursing assessment?`,
+    prompt: `An adult is admitted to the hospital with a diagnosis of hypothyroidism. Which findings would the nurse most likely elicit during the nursing assessment?`,
     options: [
       `Elevated blood pressure and temperature`,
       `Tachycardia and weight gain`,
@@ -3395,7 +3394,7 @@ export const QUESTION_BANK = [
     id: 242,
     category: `Physiological Adaptation`,
     chapter: `Endocrine System`,
-    question: `Which diet does the nurse expect will be ordered for the client with hypothyroidism?`,
+    prompt: `Which diet does the nurse expect will be ordered for the client with hypothyroidism?`,
     options: [
       `High protein, high calorie`,
       `Restricted fluids, low protein`,
@@ -3409,7 +3408,7 @@ export const QUESTION_BANK = [
     id: 243,
     category: `Physiological Adaptation`,
     chapter: `Endocrine System`,
-    question: `An adult with myxedema is started on thyroid replacement therapy and is discharged. The client returns to the doctor's office one week later. Which statement that the client makes is most indicative of an adverse reaction to the medication?`,
+    prompt: `An adult with myxedema is started on thyroid replacement therapy and is discharged. The client returns to the doctor's office one week later. Which statement that the client makes is most indicative of an adverse reaction to the medication?`,
     options: [
       `"My chest hurt when I was sweeping the floor this morning."`,
       `"I had severe cramps last night."`,
@@ -3423,7 +3422,7 @@ export const QUESTION_BANK = [
     id: 244,
     category: `Physiological Adaptation`,
     chapter: `Endocrine System`,
-    question: `The nurse's next door neighbor calls. He says he cannot awaken his 21-year-old wife. The nurse notes that the client is unconscious and is having deep respirations. Her breath has a fruity smell to it. The husband says that his wife has been eating and drinking a lot recently and that last night she vomited before lying down. What is the most appropriate action for the nurse to take?`,
+    prompt: `The nurse's next door neighbor calls. He says he cannot awaken his 21-year-old wife. The nurse notes that the client is unconscious and is having deep respirations. Her breath has a fruity smell to it. The husband says that his wife has been eating and drinking a lot recently and that last night she vomited before lying down. What is the most appropriate action for the nurse to take?`,
     options: [
       `Start cardiopulmonary resuscitation`,
       `Get her to a hospital immediately`,
@@ -3437,7 +3436,7 @@ export const QUESTION_BANK = [
     id: 245,
     category: `Physiological Adaptation`,
     chapter: `Endocrine System`,
-    question: `A client is diagnosed as having insulin-dependent diabetes mellitus (IDDM). She received regular insulin at 7:30 A.M. When is she most apt to develop a hypoglycemic reaction?`,
+    prompt: `A client is diagnosed as having insulin-dependent diabetes mellitus (IDDM). She received regular insulin at 7:30 A.M. When is she most apt to develop a hypoglycemic reaction?`,
     options: [
       `Mid-morning`,
       `Mid-afternoon`,
@@ -3451,7 +3450,7 @@ export const QUESTION_BANK = [
     id: 246,
     category: `Physiological Adaptation`,
     chapter: `Endocrine System`,
-    question: `The nurse is teaching a client to self-administer insulin. The instructions should include teaching the client to:`,
+    prompt: `The nurse is teaching a client to self-administer insulin. The instructions should include teaching the client to:`,
     options: [
       `inject the needle at a 90-degree angle into the muscle.`,
       `vigorously massage the area after injecting the insulin.`,
@@ -3465,7 +3464,7 @@ export const QUESTION_BANK = [
     id: 247,
     category: `Physiological Adaptation`,
     chapter: `Endocrine System`,
-    question: `An adolescent with IDDM is learning about a diabetic diet. He asks the nurse if he will ever be able to go out to eat with his friends again. What is the most appropriate answer for the nurse to give?`,
+    prompt: `An adolescent with IDDM is learning about a diabetic diet. He asks the nurse if he will ever be able to go out to eat with his friends again. What is the most appropriate answer for the nurse to give?`,
     options: [
       `"You can go out with them, but you should take your own snack with you."`,
       `"Yes. You will learn what foods are allowed so you can eat with your friends."`,
@@ -3479,7 +3478,7 @@ export const QUESTION_BANK = [
     id: 248,
     category: `Physiological Adaptation`,
     chapter: `Endocrine System`,
-    question: `At 10 A.M., a client with Type 1 diabetes becomes very irritable and starts to yell at the nurse. Which initial nursing assessment should take priority?`,
+    prompt: `At 10 A.M., a client with Type 1 diabetes becomes very irritable and starts to yell at the nurse. Which initial nursing assessment should take priority?`,
     options: [
       `Blood pressure and pulse`,
       `Color and temperature of skin`,
@@ -3493,7 +3492,7 @@ export const QUESTION_BANK = [
     id: 249,
     category: `Physiological Adaptation`,
     chapter: `Endocrine System`,
-    question: `An elderly woman has been recently diagnosed as having Type 2 diabetes. Which of the following complaints that she has is most likely to be related to the diagnosis of diabetes mellitus?`,
+    prompt: `An elderly woman has been recently diagnosed as having Type 2 diabetes. Which of the following complaints that she has is most likely to be related to the diagnosis of diabetes mellitus?`,
     options: [
       `Pruritus vulvae`,
       `Cough`,
@@ -3507,7 +3506,7 @@ export const QUESTION_BANK = [
     id: 250,
     category: `Physiological Adaptation`,
     chapter: `Endocrine System`,
-    question: `A client has a transsphenoidal hypophysectomy to remove a pituitary tumor. When the client returns to the nursing unit following surgery, the head of the bed is elevated 30 degrees. What is the primary purpose for placing the client in this position?`,
+    prompt: `A client has a transsphenoidal hypophysectomy to remove a pituitary tumor. When the client returns to the nursing unit following surgery, the head of the bed is elevated 30 degrees. What is the primary purpose for placing the client in this position?`,
     options: [
       `To promote respiratory effort`,
       `To reduce pressure on the sella turcica`,
@@ -3521,7 +3520,7 @@ export const QUESTION_BANK = [
     id: 251,
     category: `Physiological Adaptation`,
     chapter: `Endocrine System`,
-    question: `The nurse is discussing discharge plans with a client who had a transsphenoidal hypophysectomy. Which statement made by the client indicates a need for more teaching?`,
+    prompt: `The nurse is discussing discharge plans with a client who had a transsphenoidal hypophysectomy. Which statement made by the client indicates a need for more teaching?`,
     options: [
       `"I won't brush my teeth until the doctor removes the stitches."`,
       `"I will wear loafers instead of tie shoes."`,
@@ -3535,7 +3534,7 @@ export const QUESTION_BANK = [
     id: 252,
     category: `Physiological Adaptation`,
     chapter: `Endocrine System`,
-    question: `A woman with a tumor of the adrenal cortex says to the nurse, "Will I always look this ugly? I hate having a beard." What is the best response for the nurse to make?`,
+    prompt: `A woman with a tumor of the adrenal cortex says to the nurse, "Will I always look this ugly? I hate having a beard." What is the best response for the nurse to make?`,
     options: [
       `"After surgery, you will not develop any more symptoms, but the changes you have now will linger."`,
       `"That varies from person to person. You should ask your physician."`,
@@ -3549,7 +3548,7 @@ export const QUESTION_BANK = [
     id: 253,
     category: `Physiological Adaptation`,
     chapter: `Endocrine System`,
-    question: `A client develops hypoparathyroidism after a total thyroidectomy. What treatment should the nurse anticipate?`,
+    prompt: `A client develops hypoparathyroidism after a total thyroidectomy. What treatment should the nurse anticipate?`,
     options: [
       `Emergency tracheostomy`,
       `Administration of calcium`,
@@ -3563,7 +3562,7 @@ export const QUESTION_BANK = [
     id: 254,
     category: `Physiological Adaptation`,
     chapter: `Endocrine System`,
-    question: `A woman with newly diagnosed Type I diabetes mellitus says she wants to have children. She asks if she will be able to have children and if they will be normal. What is the best answer for the nurse to give?`,
+    prompt: `A woman with newly diagnosed Type I diabetes mellitus says she wants to have children. She asks if she will be able to have children and if they will be normal. What is the best answer for the nurse to give?`,
     options: [
       `"Women with diabetes should not get pregnant because it is very difficult to control diabetes during pregnancy."`,
       `"Babies born to diabetic mothers are very apt to have severe and noncorrectable birth defects."`,
@@ -3577,7 +3576,7 @@ export const QUESTION_BANK = [
     id: 255,
     category: `Physiological Adaptation`,
     chapter: `Endocrine System`,
-    question: `A client is admitted to the hospital with recently diagnosed Type I diabetes mellitus and is to have fasting blood work drawn this morning. At 7:00 A.M., the lab has not arrived to draw the blood. The client's dose of regular insulin is scheduled for 7:30 A.M. What is the best action for the nurse to take?`,
+    prompt: `A client is admitted to the hospital with recently diagnosed Type I diabetes mellitus and is to have fasting blood work drawn this morning. At 7:00 A.M., the lab has not arrived to draw the blood. The client's dose of regular insulin is scheduled for 7:30 A.M. What is the best action for the nurse to take?`,
     options: [
       `Give the insulin as ordered`,
       `Withhold the insulin until the lab comes and the client will be eating within 15 to 30 minutes`,
@@ -3591,7 +3590,7 @@ export const QUESTION_BANK = [
     id: 256,
     category: `Physiological Adaptation`,
     chapter: `Endocrine System`,
-    question: `An adolescent with newly diagnosed Type I diabetes mellitus asks the nurse if he can continue to play football. What is the best answer for the nurse to give?`,
+    prompt: `An adolescent with newly diagnosed Type I diabetes mellitus asks the nurse if he can continue to play football. What is the best answer for the nurse to give?`,
     options: [
       `"Now that you have diabetes, you should not play football because you may get a cut that will not heal."`,
       `"If you work with your physician to regulate the insulin dosage and your diet, you should be able to play football."`,
@@ -3605,7 +3604,7 @@ export const QUESTION_BANK = [
     id: 257,
     category: `Physiological Adaptation`,
     chapter: `Endocrine System`,
-    question: `The client is a 62-year-old woman who is 30 pounds overweight. She comes to the doctor's office complaining of headaches, frequent hunger, excessive thirst, and urination. The presenting complaints suggest that the nurse should assess for other signs of which condition?`,
+    prompt: `The client is a 62-year-old woman who is 30 pounds overweight. She comes to the doctor's office complaining of headaches, frequent hunger, excessive thirst, and urination. The presenting complaints suggest that the nurse should assess for other signs of which condition?`,
     options: [
       `Hypothyroidism`,
       `Acute pyelonephritis`,
@@ -3619,7 +3618,7 @@ export const QUESTION_BANK = [
     id: 258,
     category: `Physiological Adaptation`,
     chapter: `Endocrine System`,
-    question: `An elderly client with Type 2 diabetes mellitus develops an ingrown toenail. What is the best action for the nurse to take?`,
+    prompt: `An elderly client with Type 2 diabetes mellitus develops an ingrown toenail. What is the best action for the nurse to take?`,
     options: [
       `Put cotton under the nail and clip the nail straight across`,
       `Elevate the foot immediately`,
@@ -3633,7 +3632,7 @@ export const QUESTION_BANK = [
     id: 259,
     category: `Physiological Adaptation`,
     chapter: `Endocrine System`,
-    question: `A woman with hypothyroidism asks the nurse why the doctor told her she cannot have a sedative. The nurse's response is based on which of the following facts?`,
+    prompt: `A woman with hypothyroidism asks the nurse why the doctor told her she cannot have a sedative. The nurse's response is based on which of the following facts?`,
     options: [
       `Sedatives potentiate thyroid replacement medication.`,
       `Clients with hypothyroidism have increased susceptibility to all sedative drugs.`,
@@ -3649,7 +3648,7 @@ export const QUESTION_BANK = [
     id: 260,
     category: `Physiological Adaptation`,
     chapter: `Integumentary System`,
-    question: `The nurse is caring for several clients who have burns over different parts of the body. The client who has burns over which part of the body is most at risk of life-threatening complications?`,
+    prompt: `The nurse is caring for several clients who have burns over different parts of the body. The client who has burns over which part of the body is most at risk of life-threatening complications?`,
     options: [
       `Lower torso`,
       `Upper part of the body`,
@@ -3663,7 +3662,7 @@ export const QUESTION_BANK = [
     id: 261,
     category: `Physiological Adaptation`,
     chapter: `Integumentary System`,
-    question: `The nurse is caring for several clients who have burns. Which of the following persons with burns has the poorest prognosis?`,
+    prompt: `The nurse is caring for several clients who have burns. Which of the following persons with burns has the poorest prognosis?`,
     options: [
       `A 20-year-old with second- and third-degree burns over 60% of the body`,
       `An 80-year-old with second- and third-degree burns over 50% of the body`,
@@ -3677,7 +3676,7 @@ export const QUESTION_BANK = [
     id: 262,
     category: `Physiological Adaptation`,
     chapter: `Integumentary System`,
-    question: `Which of the following clients should have his clothing removed immediately?`,
+    prompt: `Which of the following clients should have his clothing removed immediately?`,
     options: [
       `A 32-year-old man who was burned while working on high-tension wires`,
       `A 14-year-old boy who suffered severe smoke inhalation during a fire at school`,
@@ -3691,7 +3690,7 @@ export const QUESTION_BANK = [
     id: 263,
     category: `Physiological Adaptation`,
     chapter: `Integumentary System`,
-    question: `A 28-year-old man received severe burns of the chest, abdomen, back, legs, and hands when the house caught fire. In the emergency room, a nasogastric tube was inserted, and the client was ordered NPO. What is the primary reason for the nurse to keep this client NPO?`,
+    prompt: `A 28-year-old man received severe burns of the chest, abdomen, back, legs, and hands when the house caught fire. In the emergency room, a nasogastric tube was inserted, and the client was ordered NPO. What is the primary reason for the nurse to keep this client NPO?`,
     options: [
       `To prevent the deadly complication of aspiration`,
       `To make the client more comfortable`,
@@ -3705,7 +3704,7 @@ export const QUESTION_BANK = [
     id: 264,
     category: `Physiological Adaptation`,
     chapter: `Integumentary System`,
-    question: `The nurse is ordered to insert an indwelling catheter in a severely burned client for which reason?`,
+    prompt: `The nurse is ordered to insert an indwelling catheter in a severely burned client for which reason?`,
     options: [
       `To prevent contamination of burned areas`,
       `To measure hourly urine output`,
@@ -3719,7 +3718,7 @@ export const QUESTION_BANK = [
     id: 265,
     category: `Physiological Adaptation`,
     chapter: `Integumentary System`,
-    question: `A severely burned man had his last tetanus shot when he started work at his job two years ago. What should the nurse expect to administer now?`,
+    prompt: `A severely burned man had his last tetanus shot when he started work at his job two years ago. What should the nurse expect to administer now?`,
     options: [
       `Tetanus toxoid booster`,
       `Tetanus antitoxin`,
@@ -3733,7 +3732,7 @@ export const QUESTION_BANK = [
     id: 266,
     category: `Physiological Adaptation`,
     chapter: `Integumentary System`,
-    question: `A severely burned client is to be admitted from the emergency department. What type of room should the nurse prepare for the client?`,
+    prompt: `A severely burned client is to be admitted from the emergency department. What type of room should the nurse prepare for the client?`,
     options: [
       `A semi-private room with a noninfectious client`,
       `A room with a postoperative client`,
@@ -3747,7 +3746,7 @@ export const QUESTION_BANK = [
     id: 267,
     category: `Physiological Adaptation`,
     chapter: `Integumentary System`,
-    question: `The nurse is planning care for a newly burned client. What is the priority nursing observation to be made during the first 48 hours after the burn?`,
+    prompt: `The nurse is planning care for a newly burned client. What is the priority nursing observation to be made during the first 48 hours after the burn?`,
     options: [
       `Hourly blood pressure`,
       `Assessment of skin color and capillary refill`,
@@ -3761,7 +3760,7 @@ export const QUESTION_BANK = [
     id: 268,
     category: `Physiological Adaptation`,
     chapter: `Integumentary System`,
-    question: `Cimetidine (Tagamet) is ordered IV every six hours for a person with severe burns. What is the primary reason for administering Tagamet to this client?`,
+    prompt: `Cimetidine (Tagamet) is ordered IV every six hours for a person with severe burns. What is the primary reason for administering Tagamet to this client?`,
     options: [
       `To prevent infection`,
       `To restore electrolyte balance`,
@@ -3775,7 +3774,7 @@ export const QUESTION_BANK = [
     id: 269,
     category: `Physiological Adaptation`,
     chapter: `Integumentary System`,
-    question: `A client who was severely burned goes to the Hubbard tank daily. Tanking sessions are limited to a half hour for which reason?`,
+    prompt: `A client who was severely burned goes to the Hubbard tank daily. Tanking sessions are limited to a half hour for which reason?`,
     options: [
       `A longer period of time is too tiring.`,
       `Eschar becomes difficult to remove with longer soaking.`,
@@ -3789,7 +3788,7 @@ export const QUESTION_BANK = [
     id: 270,
     category: `Physiological Adaptation`,
     chapter: `Integumentary System`,
-    question: `Silver nitrate dressings are applied to burns on an adult. What should be included in the nursing care plan?`,
+    prompt: `Silver nitrate dressings are applied to burns on an adult. What should be included in the nursing care plan?`,
     options: [
       `Change the dressings every two hours.`,
       `Keep the dressings wet.`,
@@ -3803,7 +3802,7 @@ export const QUESTION_BANK = [
     id: 271,
     category: `Physiological Adaptation`,
     chapter: `Integumentary System`,
-    question: `The nurse is caring for a client who is having silver nitrate dressings. Which lab values should the nurse monitor?`,
+    prompt: `The nurse is caring for a client who is having silver nitrate dressings. Which lab values should the nurse monitor?`,
     options: [
       `Blood urea nitrogen (BUN)`,
       `Blood gases`,
@@ -3817,7 +3816,7 @@ export const QUESTION_BANK = [
     id: 272,
     category: `Physiological Adaptation`,
     chapter: `Integumentary System`,
-    question: `A young man has extensive burns on the front and back of the chest. His treatment includes the use of Sulfamylon to the burned areas. How should the nurse apply this medication?`,
+    prompt: `A young man has extensive burns on the front and back of the chest. His treatment includes the use of Sulfamylon to the burned areas. How should the nurse apply this medication?`,
     options: [
       `With a sterile, gloved hand`,
       `With a sterile applicator`,
@@ -3831,7 +3830,7 @@ export const QUESTION_BANK = [
     id: 273,
     category: `Physiological Adaptation`,
     chapter: `Integumentary System`,
-    question: `An electrician was wearing a glove that had a hole in it when he grabbed a "hot" wire. His coworkers came to him immediately and called the rescue squad. When the industrial nurse reached him, the electric current had been shut off. What action should the nurse take initially?`,
+    prompt: `An electrician was wearing a glove that had a hole in it when he grabbed a "hot" wire. His coworkers came to him immediately and called the rescue squad. When the industrial nurse reached him, the electric current had been shut off. What action should the nurse take initially?`,
     options: [
       `Dress the entrance and exit wounds`,
       `Check respirations and pulse rate`,
@@ -3845,7 +3844,7 @@ export const QUESTION_BANK = [
     id: 274,
     category: `Physiological Adaptation`,
     chapter: `Integumentary System`,
-    question: `A client who has just been diagnosed with psoriasis asks the nurse what should be done to prevent family members from getting the condition. What should the nurse include when responding to this question?`,
+    prompt: `A client who has just been diagnosed with psoriasis asks the nurse what should be done to prevent family members from getting the condition. What should the nurse include when responding to this question?`,
     options: [
       `Showering daily with antiseptic soap should be sufficient.`,
       `Wearing clothing over the affected part and washing clothes separately from the rest of the family are all that is necessary.`,
@@ -3859,7 +3858,7 @@ export const QUESTION_BANK = [
     id: 275,
     category: `Physiological Adaptation`,
     chapter: `Integumentary System`,
-    question: `The nurse is teaching a class on the prevention of cancer. Which information should be included regarding how to reduce the risk of skin cancer?`,
+    prompt: `The nurse is teaching a class on the prevention of cancer. Which information should be included regarding how to reduce the risk of skin cancer?`,
     options: [
       `Avoid prolonged exposure to the sun.`,
       `Shower immediately after being outdoors.`,
@@ -3873,7 +3872,7 @@ export const QUESTION_BANK = [
     id: 276,
     category: `Physiological Adaptation`,
     chapter: `Integumentary System`,
-    question: `The client mentions all of the following to the nurse. Which of the following should the client be encouraged to report to the physician immediately?`,
+    prompt: `The client mentions all of the following to the nurse. Which of the following should the client be encouraged to report to the physician immediately?`,
     options: [
       `A small mole on the right thigh that has looked the same ever since the client can remember`,
       `A pigmented area that is pink-red in color and has been present since birth`,
@@ -3887,7 +3886,7 @@ export const QUESTION_BANK = [
     id: 277,
     category: `Physiological Adaptation`,
     chapter: `Integumentary System`,
-    question: `The nurse is caring for an adult who has herpes zoster. What medication is most likely to be administered to this client?`,
+    prompt: `The nurse is caring for an adult who has herpes zoster. What medication is most likely to be administered to this client?`,
     options: [
       `Penicillin`,
       `Acyclovir`,
@@ -3901,7 +3900,7 @@ export const QUESTION_BANK = [
     id: 278,
     category: `Physiological Adaptation`,
     chapter: `Integumentary System`,
-    question: `The nurse is caring for a person who has severe poison ivy. Soaks with Burrow's solution are ordered. What is the primary reason for using Burrow's solution soaks?`,
+    prompt: `The nurse is caring for a person who has severe poison ivy. Soaks with Burrow's solution are ordered. What is the primary reason for using Burrow's solution soaks?`,
     options: [
       `To disinfect the wound`,
       `To prevent pain from the lesions`,
@@ -3915,7 +3914,7 @@ export const QUESTION_BANK = [
     id: 279,
     category: `Physiological Adaptation`,
     chapter: `Integumentary System`,
-    question: `A woman who has herpes simplex 1 (HSV1) around the mouth and nose asks the nurse if she can give the sores to her husband. What should the nurse include when answering this client?`,
+    prompt: `A woman who has herpes simplex 1 (HSV1) around the mouth and nose asks the nurse if she can give the sores to her husband. What should the nurse include when answering this client?`,
     options: [
       `Herpes simplex 1 (HSV1) is a fever blister and is not contagious.`,
       `She should not kiss her husband or anyone else because it can be transmitted to susceptible persons.`,
@@ -3931,7 +3930,7 @@ export const QUESTION_BANK = [
     id: 280,
     category: `Health Promotion & Maintenance`,
     chapter: `Female Reproductive & Maternity`,
-    question: `A 45-year-old woman has been having menorrhagia and metrorrhagia for several months. She is also feeling very tired and run down. Which is the most likely explanation for her fatigue?`,
+    prompt: `A 45-year-old woman has been having menorrhagia and metrorrhagia for several months. She is also feeling very tired and run down. Which is the most likely explanation for her fatigue?`,
     options: [
       `Hormonal changes related to menopause`,
       `Psychological exhaustion produced by continuous worry about her illness`,
@@ -3945,7 +3944,7 @@ export const QUESTION_BANK = [
     id: 281,
     category: `Health Promotion & Maintenance`,
     chapter: `Female Reproductive & Maternity`,
-    question: `A 45-year-old woman was found to have several large fibroid tumors. She is to have an abdominal panhysterectomy. She asks what a panhysterectomy includes. The nurse tells the client that a panhysterectomy consists of the removal of which of the following?`,
+    prompt: `A 45-year-old woman was found to have several large fibroid tumors. She is to have an abdominal panhysterectomy. She asks what a panhysterectomy includes. The nurse tells the client that a panhysterectomy consists of the removal of which of the following?`,
     options: [
       `Uterine fundus and body`,
       `Uterine fundus and body and uterine cervix`,
@@ -3959,7 +3958,7 @@ export const QUESTION_BANK = [
     id: 282,
     category: `Health Promotion & Maintenance`,
     chapter: `Female Reproductive & Maternity`,
-    question: `The nurse is caring for a woman who had a hysterectomy. Which vascular complication should the nurse be especially alert for because of the location of the surgery?`,
+    prompt: `The nurse is caring for a woman who had a hysterectomy. Which vascular complication should the nurse be especially alert for because of the location of the surgery?`,
     options: [
       `Thrombophlebitis`,
       `Varicose veins`,
@@ -3973,7 +3972,7 @@ export const QUESTION_BANK = [
     id: 283,
     category: `Health Promotion & Maintenance`,
     chapter: `Female Reproductive & Maternity`,
-    question: `The nurse is caring for an adult woman who had a vaginal hysterectomy today. The client is now returned to the nursing care unit following an uneventful stay in the postanesthesia care unit. What is the priority nursing action for this client?`,
+    prompt: `The nurse is caring for an adult woman who had a vaginal hysterectomy today. The client is now returned to the nursing care unit following an uneventful stay in the postanesthesia care unit. What is the priority nursing action for this client?`,
     options: [
       `Offer her the bedpan.`,
       `Encourage coughing and deep breathing.`,
@@ -3987,7 +3986,7 @@ export const QUESTION_BANK = [
     id: 284,
     category: `Health Promotion & Maintenance`,
     chapter: `Female Reproductive & Maternity`,
-    question: `A young woman has been having lower abdominal pain and amenorrhea. She is diagnosed as having an ovarian cyst. She asks the nurse what the usual treatment is for an ovarian cyst. What is the best response for the nurse to make?`,
+    prompt: `A young woman has been having lower abdominal pain and amenorrhea. She is diagnosed as having an ovarian cyst. She asks the nurse what the usual treatment is for an ovarian cyst. What is the best response for the nurse to make?`,
     options: [
       `"Most women with your condition are placed on estrogen therapy for 6 to 12 months until the symptoms disappear."`,
       `"The most effective treatment for ovarian cysts is to shrink the cyst with radiation therapy."`,
@@ -4001,7 +4000,7 @@ export const QUESTION_BANK = [
     id: 285,
     category: `Health Promotion & Maintenance`,
     chapter: `Female Reproductive & Maternity`,
-    question: `A 39-year-old woman is seen in the gynecology clinic and asks the nurse about menopause. What is the best explanation for the nurse to give her?`,
+    prompt: `A 39-year-old woman is seen in the gynecology clinic and asks the nurse about menopause. What is the best explanation for the nurse to give her?`,
     options: [
       `"It usually occurs around the age of 40. You can expect severe hot flashes."`,
       `"It usually occurs after the age of 45 and frequently marks the end of a woman's sex life."`,
@@ -4015,7 +4014,7 @@ export const QUESTION_BANK = [
     id: 286,
     category: `Health Promotion & Maintenance`,
     chapter: `Female Reproductive & Maternity`,
-    question: `A 42-year-old woman sees her physician because of painless spotting between periods that is worse after intercourse. A Pap smear is done. The results come back as stage III. The client asks the nurse what a stage III Pap smear means. The nurse's response is based on the knowledge that a stage III Pap smear indicates that:`,
+    prompt: `A 42-year-old woman sees her physician because of painless spotting between periods that is worse after intercourse. A Pap smear is done. The results come back as stage III. The client asks the nurse what a stage III Pap smear means. The nurse's response is based on the knowledge that a stage III Pap smear indicates that:`,
     options: [
       `only normal cells are present.`,
       `atypical cells are present.`,
@@ -4029,7 +4028,7 @@ export const QUESTION_BANK = [
     id: 287,
     category: `Health Promotion & Maintenance`,
     chapter: `Female Reproductive & Maternity`,
-    question: `A woman is to have internal radiation as part of her treatment for cancer of the cervix. In teaching her about the preoperative preparation for this procedure, the nurse should include which information?`,
+    prompt: `A woman is to have internal radiation as part of her treatment for cancer of the cervix. In teaching her about the preoperative preparation for this procedure, the nurse should include which information?`,
     options: [
       `A high-residue diet will be ordered.`,
       `An indwelling catheter will be inserted.`,
@@ -4043,7 +4042,7 @@ export const QUESTION_BANK = [
     id: 288,
     category: `Health Promotion & Maintenance`,
     chapter: `Female Reproductive & Maternity`,
-    question: `The nurse is caring for a woman after insertion of radium rods for treatment of cancer of the cervix. The nurse positions her in a supine position with legs extended for which reason?`,
+    prompt: `The nurse is caring for a woman after insertion of radium rods for treatment of cancer of the cervix. The nurse positions her in a supine position with legs extended for which reason?`,
     options: [
       `To keep the rods in the correct position`,
       `To prevent the urinary bladder from becoming overdistended`,
@@ -4057,7 +4056,7 @@ export const QUESTION_BANK = [
     id: 289,
     category: `Health Promotion & Maintenance`,
     chapter: `Female Reproductive & Maternity`,
-    question: `The nurse is caring for a woman after the insertion of radium rods for treatment of cancer of the cervix. Which discomfort should the nurse anticipate that the client may have while the rods are in place?`,
+    prompt: `The nurse is caring for a woman after the insertion of radium rods for treatment of cancer of the cervix. Which discomfort should the nurse anticipate that the client may have while the rods are in place?`,
     options: [
       `Headache`,
       `Urinary retention`,
@@ -4071,7 +4070,7 @@ export const QUESTION_BANK = [
     id: 290,
     category: `Health Promotion & Maintenance`,
     chapter: `Female Reproductive & Maternity`,
-    question: `The nurse is caring for a woman the day after the insertion of radium rods for treatment of cancer of the cervix. The woman calls the nurse and says, "There is something between my legs. It fell out of me." What is the most appropriate initial action for the nurse to take?`,
+    prompt: `The nurse is caring for a woman the day after the insertion of radium rods for treatment of cancer of the cervix. The woman calls the nurse and says, "There is something between my legs. It fell out of me." What is the most appropriate initial action for the nurse to take?`,
     options: [
       `Call the radiation safety officer`,
       `Put on rubber gloves and put the radiation rod in the bathroom until help arrives`,
@@ -4085,7 +4084,7 @@ export const QUESTION_BANK = [
     id: 291,
     category: `Health Promotion & Maintenance`,
     chapter: `Female Reproductive & Maternity`,
-    question: `A young woman comes to the clinic for contraceptive advice. She says she wants to take the pill. Vital signs are within normal limits. She tells the nurse she has been having intercourse for the past year without protection. What question is it most important for the nurse to ask her?`,
+    prompt: `A young woman comes to the clinic for contraceptive advice. She says she wants to take the pill. Vital signs are within normal limits. She tells the nurse she has been having intercourse for the past year without protection. What question is it most important for the nurse to ask her?`,
     options: [
       `How much exercise do you get each day?`,
       `What do you usually eat each day?`,
@@ -4099,7 +4098,7 @@ export const QUESTION_BANK = [
     id: 292,
     category: `Health Promotion & Maintenance`,
     chapter: `Female Reproductive & Maternity`,
-    question: `A young woman asks the nurse if oral contraceptives have any side effects. What is the best response for the nurse to make?`,
+    prompt: `A young woman asks the nurse if oral contraceptives have any side effects. What is the best response for the nurse to make?`,
     options: [
       `"Nausea, fluid retention, and weight gain."`,
       `"Why do you ask? Look at the benefits."`,
@@ -4113,7 +4112,7 @@ export const QUESTION_BANK = [
     id: 293,
     category: `Health Promotion & Maintenance`,
     chapter: `Female Reproductive & Maternity`,
-    question: `A client asks the nurse the difference between an intrauterine device (IUD) and a diaphragm. The nurse's response should be based on which information?`,
+    prompt: `A client asks the nurse the difference between an intrauterine device (IUD) and a diaphragm. The nurse's response should be based on which information?`,
     options: [
       `The diaphragm is inserted into the uterine cavity, and the IUD covers the cervix.`,
       `The IUD is 97% effective, and the diaphragm is 50% effective.`,
@@ -4127,7 +4126,7 @@ export const QUESTION_BANK = [
     id: 294,
     category: `Health Promotion & Maintenance`,
     chapter: `Female Reproductive & Maternity`,
-    question: `A young woman tells the nurse that her boyfriend used a "rubber" once. What is the most important information about condoms for the nurse to provide the client?`,
+    prompt: `A young woman tells the nurse that her boyfriend used a "rubber" once. What is the most important information about condoms for the nurse to provide the client?`,
     options: [
       `Always use Vaseline as a lubricant.`,
       `Apply the condom to the penis right before ejaculation.`,
@@ -4141,7 +4140,7 @@ export const QUESTION_BANK = [
     id: 295,
     category: `Health Promotion & Maintenance`,
     chapter: `Female Reproductive & Maternity`,
-    question: `A woman is to have a routine gynecological examination tomorrow. What instructions should the nurse give this client?`,
+    prompt: `A woman is to have a routine gynecological examination tomorrow. What instructions should the nurse give this client?`,
     options: [
       `"Bring a urine sample with you."`,
       `"Be sure to drink plenty of fluids in the morning before you come so that your bladder will be full."`,
@@ -4155,7 +4154,7 @@ export const QUESTION_BANK = [
     id: 296,
     category: `Health Promotion & Maintenance`,
     chapter: `Female Reproductive & Maternity`,
-    question: `A 46-year-old woman visits her gynecologist because she has been spotting. She is to be evaluated for carcinoma of the cervix. If she has cancer of the cervix, she is most likely to report that vaginal spotting occurred at what time?`,
+    prompt: `A 46-year-old woman visits her gynecologist because she has been spotting. She is to be evaluated for carcinoma of the cervix. If she has cancer of the cervix, she is most likely to report that vaginal spotting occurred at what time?`,
     options: [
       `On arising`,
       `While sitting`,
@@ -4169,7 +4168,7 @@ export const QUESTION_BANK = [
     id: 297,
     category: `Health Promotion & Maintenance`,
     chapter: `Female Reproductive & Maternity`,
-    question: `The nurse is discussing breast self-examination with a group of women in a clinic. One woman asks, "When should I do this examination?" What is the best response for the nurse?`,
+    prompt: `The nurse is discussing breast self-examination with a group of women in a clinic. One woman asks, "When should I do this examination?" What is the best response for the nurse?`,
     options: [
       `"You should perform breast self-examination early in the morning for most accurate results."`,
       `"Breast self-examination should be done a few days after your period begins every month."`,
@@ -4183,7 +4182,7 @@ export const QUESTION_BANK = [
     id: 298,
     category: `Health Promotion & Maintenance`,
     chapter: `Female Reproductive & Maternity`,
-    question: `The physician prescribes clomiphene (Clomid) for a woman who has been having difficulty getting pregnant. When discussing this drug with the woman, the nurse should know that which of the following is known to be a side effect of clomiphene?`,
+    prompt: `The physician prescribes clomiphene (Clomid) for a woman who has been having difficulty getting pregnant. When discussing this drug with the woman, the nurse should know that which of the following is known to be a side effect of clomiphene?`,
     options: [
       `Infertility`,
       `Multiple births`,
@@ -4197,7 +4196,7 @@ export const QUESTION_BANK = [
     id: 299,
     category: `Health Promotion & Maintenance`,
     chapter: `Female Reproductive & Maternity`,
-    question: `A young couple asks the nurse which method of contraception is the best and the one that they should use. Which response is most helpful to the couple?`,
+    prompt: `A young couple asks the nurse which method of contraception is the best and the one that they should use. Which response is most helpful to the couple?`,
     options: [
       `"The pill is the best because it is 100% effective with few side effects."`,
       `"The best method is the one that you both agree upon and will use consistently."`,
@@ -4211,7 +4210,7 @@ export const QUESTION_BANK = [
     id: 300,
     category: `Health Promotion & Maintenance`,
     chapter: `Female Reproductive & Maternity`,
-    question: `A woman is being treated for Trichomonas vaginalis with metronidazole (Flagyl). Which statement the woman makes indicates a need for further teaching?`,
+    prompt: `A woman is being treated for Trichomonas vaginalis with metronidazole (Flagyl). Which statement the woman makes indicates a need for further teaching?`,
     options: [
       `"My husband is also taking the medication."`,
       `"I will take Flagyl with meals."`,
@@ -4225,7 +4224,7 @@ export const QUESTION_BANK = [
     id: 301,
     category: `Health Promotion & Maintenance`,
     chapter: `Female Reproductive & Maternity`,
-    question: `A client who is being treated for syphilis says to the nurse, "Why does the doctor want to know who I have had sex with?" What should the nurse include when responding to this question?`,
+    prompt: `A client who is being treated for syphilis says to the nurse, "Why does the doctor want to know who I have had sex with?" What should the nurse include when responding to this question?`,
     options: [
       `It really is not any of the physician's concern.`,
       `The physician wants to help you make better decisions about your lifestyle.`,
@@ -4239,7 +4238,7 @@ export const QUESTION_BANK = [
     id: 302,
     category: `Health Promotion & Maintenance`,
     chapter: `Female Reproductive & Maternity`,
-    question: `During the early period following a right modified radical mastectomy, which nursing action would be appropriate to include in the client's plan of care?`,
+    prompt: `During the early period following a right modified radical mastectomy, which nursing action would be appropriate to include in the client's plan of care?`,
     options: [
       `Position the client in the right lateral position`,
       `Encourage a high fluid intake`,
@@ -4253,7 +4252,7 @@ export const QUESTION_BANK = [
     id: 303,
     category: `Health Promotion & Maintenance`,
     chapter: `Female Reproductive & Maternity`,
-    question: `The nurse is caring for a client who has had a right modified radical mastectomy this morning. Which exercise should the nurse encourage the client to perform this evening?`,
+    prompt: `The nurse is caring for a client who has had a right modified radical mastectomy this morning. Which exercise should the nurse encourage the client to perform this evening?`,
     options: [
       `Hair combing exercises with the right arm`,
       `Wall climbing exercises with the right arm`,
@@ -4267,7 +4266,7 @@ export const QUESTION_BANK = [
     id: 304,
     category: `Health Promotion & Maintenance`,
     chapter: `Female Reproductive & Maternity`,
-    question: `The client is being discharged following a left simple mastectomy. Which statement the client makes indicates an understanding of discharge teaching?`,
+    prompt: `The client is being discharged following a left simple mastectomy. Which statement the client makes indicates an understanding of discharge teaching?`,
     options: [
       `"I won't let anyone take blood pressures on my left arm."`,
       `"I understand that I should not have sexual relations for at least three months."`,
@@ -4281,7 +4280,7 @@ export const QUESTION_BANK = [
     id: 305,
     category: `Health Promotion & Maintenance`,
     chapter: `Female Reproductive & Maternity`,
-    question: `A 21-year-old married woman thinks she may be pregnant. She goes to her physician and tells the nurse that the drugstore test was positive for pregnancy. She asks the nurse if the test is reliable. What is the best response for the nurse to make?`,
+    prompt: `A 21-year-old married woman thinks she may be pregnant. She goes to her physician and tells the nurse that the drugstore test was positive for pregnancy. She asks the nurse if the test is reliable. What is the best response for the nurse to make?`,
     options: [
       `"The tests are quite reliable. In order to be sure you are pregnant, I need to get some more information from you."`,
       `"The tests are less reliable than the one the doctor does. We will have to repeat it."`,
@@ -4295,7 +4294,7 @@ export const QUESTION_BANK = [
     id: 306,
     category: `Health Promotion & Maintenance`,
     chapter: `Female Reproductive & Maternity`,
-    question: `The nurse is assessing a woman who thinks she may be pregnant. Which information from the client is most significant in confirming the diagnosis of pregnancy?`,
+    prompt: `The nurse is assessing a woman who thinks she may be pregnant. Which information from the client is most significant in confirming the diagnosis of pregnancy?`,
     options: [
       `The client is experiencing nausea before bedtime and after meals.`,
       `The client says she has gained six pounds and her slacks are tight.`,
@@ -4309,7 +4308,7 @@ export const QUESTION_BANK = [
     id: 307,
     category: `Health Promotion & Maintenance`,
     chapter: `Female Reproductive & Maternity`,
-    question: `After her examination by the physician, the antepartum client tells the nurse that the doctor said she had positive Chadwick's and Goodell's signs. She asks the nurse what this means. What is the best response for the nurse to make?`,
+    prompt: `After her examination by the physician, the antepartum client tells the nurse that the doctor said she had positive Chadwick's and Goodell's signs. She asks the nurse what this means. What is the best response for the nurse to make?`,
     options: [
       `"Chadwick's sign is a dark blue coloring of the vagina and cervix. Goodell's sign is softening of the cervix of the uterus."`,
       `"These help to confirm pregnancy. They refer to color changes and changes in the uterus caused by increased hormones of pregnancy."`,
@@ -4323,7 +4322,7 @@ export const QUESTION_BANK = [
     id: 308,
     category: `Health Promotion & Maintenance`,
     chapter: `Female Reproductive & Maternity`,
-    question: `An antepartum client asks when her baby is due. Her last menstrual period was August 28. Using Naegele's rule, calculate the estimated date of delivery.`,
+    prompt: `An antepartum client asks when her baby is due. Her last menstrual period was August 28. Using Naegele's rule, calculate the estimated date of delivery.`,
     options: [
       `May 21`,
       `May 28`,
@@ -4337,7 +4336,7 @@ export const QUESTION_BANK = [
     id: 309,
     category: `Health Promotion & Maintenance`,
     chapter: `Female Reproductive & Maternity`,
-    question: `In establishing a teaching plan for a client who is in the first trimester of pregnancy, the nurse identifies a long list of topics to discuss. Which is most appropriate for the first visit?`,
+    prompt: `In establishing a teaching plan for a client who is in the first trimester of pregnancy, the nurse identifies a long list of topics to discuss. Which is most appropriate for the first visit?`,
     options: [
       `Preparation for labor and delivery`,
       `Asking the woman what questions and concerns she has about parenting`,
@@ -4351,7 +4350,7 @@ export const QUESTION_BANK = [
     id: 310,
     category: `Health Promotion & Maintenance`,
     chapter: `Female Reproductive & Maternity`,
-    question: `When a woman in early pregnancy is leaving the clinic, she blushes and asks the nurse if it is true that sex during pregnancy is bad for the baby. What is the best response for the nurse to make?`,
+    prompt: `When a woman in early pregnancy is leaving the clinic, she blushes and asks the nurse if it is true that sex during pregnancy is bad for the baby. What is the best response for the nurse to make?`,
     options: [
       `"The baby is protected by his sac. Sex is perfectly alright."`,
       `"It is unlikely to harm the baby. What you do with your personal life is your concern."`,
@@ -4365,7 +4364,7 @@ export const QUESTION_BANK = [
     id: 311,
     category: `Health Promotion & Maintenance`,
     chapter: `Female Reproductive & Maternity`,
-    question: `The doctor told a pregnant woman to eat a well-balanced diet and increase her iron intake. She says, "I hate liver. How can I increase my iron?" What is the best response for the nurse to make?`,
+    prompt: `The doctor told a pregnant woman to eat a well-balanced diet and increase her iron intake. She says, "I hate liver. How can I increase my iron?" What is the best response for the nurse to make?`,
     options: [
       `"Although liver is a good source of iron, beets, poultry, and milk are also good sources."`,
       `"Many people dislike liver. Red meats, dark green vegetables, and dried fruits are also good sources of iron."`,
@@ -4379,7 +4378,7 @@ export const QUESTION_BANK = [
     id: 312,
     category: `Health Promotion & Maintenance`,
     chapter: `Female Reproductive & Maternity`,
-    question: `The nurse is teaching a prenatal class. A woman in the class who is eight months pregnant asks why her feet swell. The nurse includes which of the following information in the answer?`,
+    prompt: `The nurse is teaching a prenatal class. A woman in the class who is eight months pregnant asks why her feet swell. The nurse includes which of the following information in the answer?`,
     options: [
       `Swollen feet during pregnancy can indicate a serious problem.`,
       `The enlarging baby reduces venous return, causing retention of fluid in the feet and ankles.`,
@@ -4393,7 +4392,7 @@ export const QUESTION_BANK = [
     id: 313,
     category: `Health Promotion & Maintenance`,
     chapter: `Female Reproductive & Maternity`,
-    question: `A woman who is at about six weeks gestation asks if she can listen to the baby's heartbeat today. What should be included in the nurse's reply?`,
+    prompt: `A woman who is at about six weeks gestation asks if she can listen to the baby's heartbeat today. What should be included in the nurse's reply?`,
     options: [
       `The heart is not beating at six weeks.`,
       `The heart is formed and beating but is too weak to be heard with a stethoscope.`,
@@ -4407,7 +4406,7 @@ export const QUESTION_BANK = [
     id: 314,
     category: `Health Promotion & Maintenance`,
     chapter: `Female Reproductive & Maternity`,
-    question: `A woman who is in early pregnancy asks the nurse what to do about her "morning sickness." What should the nurse include in the reply?`,
+    prompt: `A woman who is in early pregnancy asks the nurse what to do about her "morning sickness." What should the nurse include in the reply?`,
     options: [
       `Eating a heavy bedtime snack containing fat helps to keep nausea from developing in the morning.`,
       `Eating dry crackers before getting out of bed may help.`,
@@ -4421,7 +4420,7 @@ export const QUESTION_BANK = [
     id: 315,
     category: `Health Promotion & Maintenance`,
     chapter: `Female Reproductive & Maternity`,
-    question: `A woman who is 38 weeks gestation tells the nurse that she sometimes gets dizzy when she lies down. Which information is it important for the nurse to give the client?`,
+    prompt: `A woman who is 38 weeks gestation tells the nurse that she sometimes gets dizzy when she lies down. Which information is it important for the nurse to give the client?`,
     options: [
       `This is a sign of a serious complication and should be reported to the physician whenever it occurs.`,
       `Try to sleep in an upright position on your back to prevent the dizziness.`,
@@ -4435,7 +4434,7 @@ export const QUESTION_BANK = [
     id: 316,
     category: `Health Promotion & Maintenance`,
     chapter: `Female Reproductive & Maternity`,
-    question: `The nurse asks the newly pregnant woman if she has a cat for which of the following reasons?`,
+    prompt: `The nurse asks the newly pregnant woman if she has a cat for which of the following reasons?`,
     options: [
       `Cats may suffocate new babies and should not be in the home when a baby arrives.`,
       `Cat feces may cause toxoplasmosis, which can lead to blindness, brain defects, and stillbirth.`,
@@ -4449,7 +4448,7 @@ export const QUESTION_BANK = [
     id: 317,
     category: `Health Promotion & Maintenance`,
     chapter: `Female Reproductive & Maternity`,
-    question: `The nurse is caring for a woman who is 30 weeks gestation, has gained 17 pounds during the pregnancy, and has a blood pressure of 110/70. The woman states that she feels warmer than everyone around her. Which interpretation of these findings is most correct?`,
+    prompt: `The nurse is caring for a woman who is 30 weeks gestation, has gained 17 pounds during the pregnancy, and has a blood pressure of 110/70. The woman states that she feels warmer than everyone around her. Which interpretation of these findings is most correct?`,
     options: [
       `All of these findings are normal.`,
       `Her weight gain is excessive for this point in pregnancy.`,
@@ -4463,7 +4462,7 @@ export const QUESTION_BANK = [
     id: 318,
     category: `Health Promotion & Maintenance`,
     chapter: `Female Reproductive & Maternity`,
-    question: `What should the nurse do to assess for a positive sign of pregnancy?`,
+    prompt: `What should the nurse do to assess for a positive sign of pregnancy?`,
     options: [
       `Perform a pregnancy test on the woman's urine.`,
       `Auscultate for fetal heart sounds.`,
@@ -4477,7 +4476,7 @@ export const QUESTION_BANK = [
     id: 319,
     category: `Health Promotion & Maintenance`,
     chapter: `Female Reproductive & Maternity`,
-    question: `An oxytocin challenge test is ordered for a woman who is 42 weeks pregnant. What should the nurse plan for in the care of this client?`,
+    prompt: `An oxytocin challenge test is ordered for a woman who is 42 weeks pregnant. What should the nurse plan for in the care of this client?`,
     options: [
       `Place her in the supine position during the test.`,
       `Keep her NPO before the test.`,
@@ -4491,7 +4490,7 @@ export const QUESTION_BANK = [
     id: 320,
     category: `Health Promotion & Maintenance`,
     chapter: `Female Reproductive & Maternity`,
-    question: `A woman comes to the doctor's office for her routine checkup. She is 34 weeks gestation. The nurse notes all of the following. Which would be of greatest concern to the nurse?`,
+    prompt: `A woman comes to the doctor's office for her routine checkup. She is 34 weeks gestation. The nurse notes all of the following. Which would be of greatest concern to the nurse?`,
     options: [
       `Weight gain of 2 lb in two weeks`,
       `Small amount of dependent edema`,
@@ -4505,7 +4504,7 @@ export const QUESTION_BANK = [
     id: 321,
     category: `Health Promotion & Maintenance`,
     chapter: `Female Reproductive & Maternity`,
-    question: `A pregnant woman is admitted to the hospital. Her initial admitting vital signs are blood pressure 160/94; pulse 88; respirations 24; and temperature 98°F. She complains of epigastric pain and headache. What should the nurse do initially?`,
+    prompt: `A pregnant woman is admitted to the hospital. Her initial admitting vital signs are blood pressure 160/94; pulse 88; respirations 24; and temperature 98°F. She complains of epigastric pain and headache. What should the nurse do initially?`,
     options: [
       `Insert an indwelling catheter.`,
       `Give Maalox 30 cc now.`,
@@ -4519,7 +4518,7 @@ export const QUESTION_BANK = [
     id: 322,
     category: `Health Promotion & Maintenance`,
     chapter: `Female Reproductive & Maternity`,
-    question: `Magnesium sulfate is ordered for a client who is hospitalized for pregnancy-induced hypertension (PIH). What effects would the nurse expect to see as a result of this medication?`,
+    prompt: `Magnesium sulfate is ordered for a client who is hospitalized for pregnancy-induced hypertension (PIH). What effects would the nurse expect to see as a result of this medication?`,
     options: [
       `CNS depression`,
       `Decreased gastric acidity`,
@@ -4533,7 +4532,7 @@ export const QUESTION_BANK = [
     id: 323,
     category: `Health Promotion & Maintenance`,
     chapter: `Female Reproductive & Maternity`,
-    question: `A client with PIH asks the nurse, "When will I get over this?" What is the best response for the nurse to make?`,
+    prompt: `A client with PIH asks the nurse, "When will I get over this?" What is the best response for the nurse to make?`,
     options: [
       `"Your disease can be controlled with medication."`,
       `"After your baby is born."`,
@@ -4547,7 +4546,7 @@ export const QUESTION_BANK = [
     id: 324,
     category: `Health Promotion & Maintenance`,
     chapter: `Female Reproductive & Maternity`,
-    question: `A 40-year-old woman who is 28 weeks gestation comes to the emergency room with painless, bright red bleeding of 1.5 hours duration. What condition does the nurse suspect this client has?`,
+    prompt: `A 40-year-old woman who is 28 weeks gestation comes to the emergency room with painless, bright red bleeding of 1.5 hours duration. What condition does the nurse suspect this client has?`,
     options: [
       `Abruptio placenta`,
       `Placenta previa`,
@@ -4561,7 +4560,7 @@ export const QUESTION_BANK = [
     id: 325,
     category: `Health Promotion & Maintenance`,
     chapter: `Female Reproductive & Maternity`,
-    question: `A woman who is 28 weeks gestation comes to the emergency room with painless, bright red bleeding of 1.5 hours in duration. Which of the following would the nurse expect during assessment of this woman?`,
+    prompt: `A woman who is 28 weeks gestation comes to the emergency room with painless, bright red bleeding of 1.5 hours in duration. Which of the following would the nurse expect during assessment of this woman?`,
     options: [
       `Alterations in fetal heart rate`,
       `Board-like uterus`,
@@ -4575,7 +4574,7 @@ export const QUESTION_BANK = [
     id: 326,
     category: `Health Promotion & Maintenance`,
     chapter: `Female Reproductive & Maternity`,
-    question: `A woman is admitted with suspected placenta previa. What test does the nurse expect will be done to confirm the diagnosis?`,
+    prompt: `A woman is admitted with suspected placenta previa. What test does the nurse expect will be done to confirm the diagnosis?`,
     options: [
       `Internal exam`,
       `Nonstress test`,
@@ -4589,7 +4588,7 @@ export const QUESTION_BANK = [
     id: 327,
     category: `Health Promotion & Maintenance`,
     chapter: `Female Reproductive & Maternity`,
-    question: `A pregnant 16-year-old asks the nurse if she should have an abortion. How should the nurse respond initially?`,
+    prompt: `A pregnant 16-year-old asks the nurse if she should have an abortion. How should the nurse respond initially?`,
     options: [
       `"You should ask your parents for advice."`,
       `"Abortion is the deliberate killing of a human being."`,
@@ -4603,7 +4602,7 @@ export const QUESTION_BANK = [
     id: 328,
     category: `Health Promotion & Maintenance`,
     chapter: `Female Reproductive & Maternity`,
-    question: `A 25-year-old woman is four months pregnant. She had rheumatic fever at age 15 and developed a systolic murmur. She reports exertional dyspnea. What instruction should the nurse give her?`,
+    prompt: `A 25-year-old woman is four months pregnant. She had rheumatic fever at age 15 and developed a systolic murmur. She reports exertional dyspnea. What instruction should the nurse give her?`,
     options: [
       `"Try to keep as active as possible, but eliminate any activity that you find tiring."`,
       `"Carry on all your usual activities, but learn to work at a slower pace."`,
@@ -4617,7 +4616,7 @@ export const QUESTION_BANK = [
     id: 329,
     category: `Health Promotion & Maintenance`,
     chapter: `Female Reproductive & Maternity`,
-    question: `A pregnant woman comes for her sixth-month checkup and mentions to the nurse that she is gaining so much weight that even her shoes and rings are getting tight. What should the nurse plan to include in her care?`,
+    prompt: `A pregnant woman comes for her sixth-month checkup and mentions to the nurse that she is gaining so much weight that even her shoes and rings are getting tight. What should the nurse plan to include in her care?`,
     options: [
       `Teaching about the food pyramid and the importance of a well-balanced diet`,
       `Further assessment of her weight, blood pressure, and urine`,
@@ -4631,7 +4630,7 @@ export const QUESTION_BANK = [
     id: 330,
     category: `Health Promotion & Maintenance`,
     chapter: `Female Reproductive & Maternity`,
-    question: `A 23-year-old woman, pregnant for the first time, is 39 weeks gestation. She is admitted to the labor room with contractions every five minutes lasting 45 seconds. On vaginal exam, she is noted to be completely effaced and 5-cm dilated. Station is 0. She asks the nurse for pain medication. What is the best response for the nurse to make?`,
+    prompt: `A 23-year-old woman, pregnant for the first time, is 39 weeks gestation. She is admitted to the labor room with contractions every five minutes lasting 45 seconds. On vaginal exam, she is noted to be completely effaced and 5-cm dilated. Station is 0. She asks the nurse for pain medication. What is the best response for the nurse to make?`,
     options: [
       `"I'll ask your doctor for medication."`,
       `"Can you hold out for a few more minutes? It's too soon for you to have medication."`,
@@ -4645,7 +4644,7 @@ export const QUESTION_BANK = [
     id: 331,
     category: `Health Promotion & Maintenance`,
     chapter: `Female Reproductive & Maternity`,
-    question: `After several hours of active labor, a woman says to the nurse, "I have to push. I have to push." What is the best initial response for the nurse to make?`,
+    prompt: `After several hours of active labor, a woman says to the nurse, "I have to push. I have to push." What is the best initial response for the nurse to make?`,
     options: [
       `"Pull your knees up to your chest and hold on to them. Take a deep breath and push down as though you are having a bowel movement."`,
       `"Let me have the RN examine you before you start to push."`,
@@ -4659,7 +4658,7 @@ export const QUESTION_BANK = [
     id: 332,
     category: `Health Promotion & Maintenance`,
     chapter: `Female Reproductive & Maternity`,
-    question: `A laboring woman is to be transferred to the delivery room. The nurse is positioning her on the table when she has a very strong contraction and starts to bear down. What should the nurse tell her to do?`,
+    prompt: `A laboring woman is to be transferred to the delivery room. The nurse is positioning her on the table when she has a very strong contraction and starts to bear down. What should the nurse tell her to do?`,
     options: [
       `Pant`,
       `Bear down strongly`,
@@ -4673,7 +4672,7 @@ export const QUESTION_BANK = [
     id: 333,
     category: `Health Promotion & Maintenance`,
     chapter: `Female Reproductive & Maternity`,
-    question: `A 32-year-old, gravida 2, para 1, term 1, preterm 0, abortion 0, living 1, is admitted to the labor room. Her previous delivery was a normal, spontaneous vaginal delivery without complications. She has been having contractions for four hours at home. The registered nurse examines her and determines that she is 4-cm dilated and 70% effaced. The fetus is in the breech position. She calls for the nurse saying, "My water just broke!" What should the practical nurse do initially?`,
+    prompt: `A 32-year-old, gravida 2, para 1, term 1, preterm 0, abortion 0, living 1, is admitted to the labor room. Her previous delivery was a normal, spontaneous vaginal delivery without complications. She has been having contractions for four hours at home. The registered nurse examines her and determines that she is 4-cm dilated and 70% effaced. The fetus is in the breech position. She calls for the nurse saying, "My water just broke!" What should the practical nurse do initially?`,
     options: [
       `Notify the physician`,
       `Do a vaginal exam.`,
@@ -4687,7 +4686,7 @@ export const QUESTION_BANK = [
     id: 334,
     category: `Health Promotion & Maintenance`,
     chapter: `Female Reproductive & Maternity`,
-    question: `The fetus is in the breech position. Inspection of the amniotic fluid after the membranes rupture shows a greenish-black cast to the fluid. What is the best interpretation of this finding?`,
+    prompt: `The fetus is in the breech position. Inspection of the amniotic fluid after the membranes rupture shows a greenish-black cast to the fluid. What is the best interpretation of this finding?`,
     options: [
       `The baby is in acute distress.`,
       `The fluid is contaminated with feces from the mother.`,
@@ -4701,7 +4700,7 @@ export const QUESTION_BANK = [
     id: 335,
     category: `Health Promotion & Maintenance`,
     chapter: `Female Reproductive & Maternity`,
-    question: `A woman in labor does not continue to dilate. The physician decides to perform a cesarean section. A healthy 7-lb, 12-oz baby boy is delivered. What is the most essential nursing intervention in the immediate postpartum period?`,
+    prompt: `A woman in labor does not continue to dilate. The physician decides to perform a cesarean section. A healthy 7-lb, 12-oz baby boy is delivered. What is the most essential nursing intervention in the immediate postpartum period?`,
     options: [
       `Check the uterine fundus for firmness.`,
       `Assess the episiotomy for bleeding.`,
@@ -4715,7 +4714,7 @@ export const QUESTION_BANK = [
     id: 336,
     category: `Health Promotion & Maintenance`,
     chapter: `Female Reproductive & Maternity`,
-    question: `A woman, gravida 2, para 2, term 2, preterm 0, abortion 0, living 2, who has just had an unexpected cesarean delivery asks the nurse if having a cesarean means that she cannot have any more children. What is the best response for the nurse to give this mother?`,
+    prompt: `A woman, gravida 2, para 2, term 2, preterm 0, abortion 0, living 2, who has just had an unexpected cesarean delivery asks the nurse if having a cesarean means that she cannot have any more children. What is the best response for the nurse to give this mother?`,
     options: [
       `"Many women are able to have another child after having had a cesarean delivery."`,
       `"Since you have two healthy children, it would be better not to attempt another delivery."`,
@@ -4729,7 +4728,7 @@ export const QUESTION_BANK = [
     id: 337,
     category: `Health Promotion & Maintenance`,
     chapter: `Female Reproductive & Maternity`,
-    question: `A 26-year-old, gravida 3, para 0, term 0, preterm 0, abortion 2, living 0 in early labor is admitted to labor and delivery. She is not sure if her membranes have ruptured. She has had some leakage of fluid. How should the nurse begin the assessment?`,
+    prompt: `A 26-year-old, gravida 3, para 0, term 0, preterm 0, abortion 2, living 0 in early labor is admitted to labor and delivery. She is not sure if her membranes have ruptured. She has had some leakage of fluid. How should the nurse begin the assessment?`,
     options: [
       `"Tell me about your other labor experiences."`,
       `"How old are your other children?"`,
@@ -4743,7 +4742,7 @@ export const QUESTION_BANK = [
     id: 338,
     category: `Health Promotion & Maintenance`,
     chapter: `Female Reproductive & Maternity`,
-    question: `A woman, 38 weeks pregnant, arrives in the labor and delivery suite and tells the nurse that she thinks her membranes have ruptured. The nurse uses phenalphazine (Nitrazine) paper to test the leaking fluid. The nurse expects the Nitrazine paper to turn which color if amniotic fluid is present?`,
+    prompt: `A woman, 38 weeks pregnant, arrives in the labor and delivery suite and tells the nurse that she thinks her membranes have ruptured. The nurse uses phenalphazine (Nitrazine) paper to test the leaking fluid. The nurse expects the Nitrazine paper to turn which color if amniotic fluid is present?`,
     options: [
       `Red`,
       `Orange`,
@@ -4757,7 +4756,7 @@ export const QUESTION_BANK = [
     id: 339,
     category: `Health Promotion & Maintenance`,
     chapter: `Female Reproductive & Maternity`,
-    question: `A 29-year-old woman who is pregnant for the first time and is 40 weeks gestation is admitted to labor and delivery. She is 3-cm dilated, 80% effaced, and head at 0 station. She and her husband have been to prepared childbirth classes and are eager to give birth naturally. During her first contraction in the hospital, which lasts 30 seconds, the nurse observes the client using rapid pant-blow breathing. What is the most appropriate response for the nurse to make at this time?`,
+    prompt: `A 29-year-old woman who is pregnant for the first time and is 40 weeks gestation is admitted to labor and delivery. She is 3-cm dilated, 80% effaced, and head at 0 station. She and her husband have been to prepared childbirth classes and are eager to give birth naturally. During her first contraction in the hospital, which lasts 30 seconds, the nurse observes the client using rapid pant-blow breathing. What is the most appropriate response for the nurse to make at this time?`,
     options: [
       `"Don't pant. It's too early in labor for panting."`,
       `"Continue using pant-blow breathing until the RN checks to see if you are fully dilated."`,
@@ -4771,7 +4770,7 @@ export const QUESTION_BANK = [
     id: 340,
     category: `Health Promotion & Maintenance`,
     chapter: `Female Reproductive & Maternity`,
-    question: `The physician is performing an amniotomy on a woman in labor. What is the most important nursing action during this procedure?`,
+    prompt: `The physician is performing an amniotomy on a woman in labor. What is the most important nursing action during this procedure?`,
     options: [
       `Assist the physician`,
       `Keep the mother informed`,
@@ -4785,7 +4784,7 @@ export const QUESTION_BANK = [
     id: 341,
     category: `Health Promotion & Maintenance`,
     chapter: `Female Reproductive & Maternity`,
-    question: `The nurse is caring for a woman in labor who is having contractions every five to seven minutes that last 45 to 50 seconds. Her husband asks if this is transition because his wife is getting restless and irritable and feels pressure. What is the best response for the nurse to make?`,
+    prompt: `The nurse is caring for a woman in labor who is having contractions every five to seven minutes that last 45 to 50 seconds. Her husband asks if this is transition because his wife is getting restless and irritable and feels pressure. What is the best response for the nurse to make?`,
     options: [
       `"Transition is still a long way off. Don't you remember this from your classes?"`,
       `"Her contractions are not typical of transition, but I'll have the RN check her."`,
@@ -4799,7 +4798,7 @@ export const QUESTION_BANK = [
     id: 342,
     category: `Health Promotion & Maintenance`,
     chapter: `Female Reproductive & Maternity`,
-    question: `A woman is in labor with her first baby. She has prepared for a natural childbirth. As labor progresses, she becomes increasingly irritable with her husband, complaining of lower back pain and fatigue. What is the most appropriate response for the nurse to make?`,
+    prompt: `A woman is in labor with her first baby. She has prepared for a natural childbirth. As labor progresses, she becomes increasingly irritable with her husband, complaining of lower back pain and fatigue. What is the most appropriate response for the nurse to make?`,
     options: [
       `Have the client turn on her side and give her a back rub.`,
       `Ask the client if she would like the doctor to give her something for the discomfort.`,
@@ -4813,7 +4812,7 @@ export const QUESTION_BANK = [
     id: 343,
     category: `Health Promotion & Maintenance`,
     chapter: `Female Reproductive & Maternity`,
-    question: `An epidural block is ordered for a woman in labor. Which nursing action is essential because the client has epidural anesthesia?`,
+    prompt: `An epidural block is ordered for a woman in labor. Which nursing action is essential because the client has epidural anesthesia?`,
     options: [
       `Monitoring the uterus for uterine tetany`,
       `Giving oxytocin to counteract the effect of the epidural in slowing contractions`,
@@ -4827,7 +4826,7 @@ export const QUESTION_BANK = [
     id: 344,
     category: `Health Promotion & Maintenance`,
     chapter: `Female Reproductive & Maternity`,
-    question: `The nurse is positioning a laboring woman who has not reached the transition phase. The nurse should avoid placing her in the supine position because the supine position has which effect?`,
+    prompt: `The nurse is positioning a laboring woman who has not reached the transition phase. The nurse should avoid placing her in the supine position because the supine position has which effect?`,
     options: [
       `It increases gravitational forces and prolongs labor.`,
       `It causes decreased perfusion of the placenta.`,
@@ -4841,7 +4840,7 @@ export const QUESTION_BANK = [
     id: 345,
     category: `Health Promotion & Maintenance`,
     chapter: `Female Reproductive & Maternity`,
-    question: `A woman in labor is experiencing very strong contractions every two to three minutes, lasting 60 to 75 seconds. She complains of a severe backache and is irritable. The best interpretation of these data is that the woman is in which stage/phase of labor?`,
+    prompt: `A woman in labor is experiencing very strong contractions every two to three minutes, lasting 60 to 75 seconds. She complains of a severe backache and is irritable. The best interpretation of these data is that the woman is in which stage/phase of labor?`,
     options: [
       `Early first stage of labor`,
       `Transition phase of labor`,
@@ -4855,7 +4854,7 @@ export const QUESTION_BANK = [
     id: 346,
     category: `Health Promotion & Maintenance`,
     chapter: `Female Reproductive & Maternity`,
-    question: `A woman who is completely dilated is pushing with contractions. After 30 minutes of pushing, the baby is still at 0 station. What is the most appropriate nursing action at this time?`,
+    prompt: `A woman who is completely dilated is pushing with contractions. After 30 minutes of pushing, the baby is still at 0 station. What is the most appropriate nursing action at this time?`,
     options: [
       `Assess for a full bladder`,
       `Prepare for a cesarean delivery`,
@@ -4869,7 +4868,7 @@ export const QUESTION_BANK = [
     id: 347,
     category: `Health Promotion & Maintenance`,
     chapter: `Female Reproductive & Maternity`,
-    question: `Which nursing action has the highest priority for a client in the second stage of labor?`,
+    prompt: `Which nursing action has the highest priority for a client in the second stage of labor?`,
     options: [
       `Help the mother push effectively`,
       `Prepare the mother to breastfeed on the delivery table`,
@@ -4883,7 +4882,7 @@ export const QUESTION_BANK = [
     id: 348,
     category: `Health Promotion & Maintenance`,
     chapter: `Female Reproductive & Maternity`,
-    question: `A woman, gravida 5, para 4, is unable to get to the hospital because labor has progressed very rapidly. A nurse, who lives upstairs, comes down to assist her with the emergency home delivery. The nurse examines the woman and assesses that the perineum is bulging. What is the priority nursing measure at this time?`,
+    prompt: `A woman, gravida 5, para 4, is unable to get to the hospital because labor has progressed very rapidly. A nurse, who lives upstairs, comes down to assist her with the emergency home delivery. The nurse examines the woman and assesses that the perineum is bulging. What is the priority nursing measure at this time?`,
     options: [
       `Encourage the woman to push during the contraction`,
       `Place a clean sheet under the perineal area`,
@@ -4897,7 +4896,7 @@ export const QUESTION_BANK = [
     id: 349,
     category: `Health Promotion & Maintenance`,
     chapter: `Female Reproductive & Maternity`,
-    question: `During an emergency home delivery, the head is beginning to crown. What is the most appropriate action for the nurse to take at this time?`,
+    prompt: `During an emergency home delivery, the head is beginning to crown. What is the most appropriate action for the nurse to take at this time?`,
     options: [
       `Instruct the mother to push down vigorously.`,
       `Press down on the fundus to expel the baby.`,
@@ -4911,7 +4910,7 @@ export const QUESTION_BANK = [
     id: 350,
     category: `Health Promotion & Maintenance`,
     chapter: `Female Reproductive & Maternity`,
-    question: `What is the most common complication associated with too rapid delivery in precipitate labor?`,
+    prompt: `What is the most common complication associated with too rapid delivery in precipitate labor?`,
     options: [
       `Pitting edema of the baby's scalp`,
       `Dural or subdural tears in fetal brain tissue`,
@@ -4925,7 +4924,7 @@ export const QUESTION_BANK = [
     id: 351,
     category: `Health Promotion & Maintenance`,
     chapter: `Female Reproductive & Maternity`,
-    question: `The nurse has just completed emergency delivery of a term infant. What is the priority nursing concern at this time?`,
+    prompt: `The nurse has just completed emergency delivery of a term infant. What is the priority nursing concern at this time?`,
     options: [
       `Controlling hemorrhage in the mother`,
       `Removing the afterbirth`,
@@ -4939,7 +4938,7 @@ export const QUESTION_BANK = [
     id: 352,
     category: `Health Promotion & Maintenance`,
     chapter: `Female Reproductive & Maternity`,
-    question: `What should the nurse do to stimulate the separation of the placenta after home delivery of a baby?`,
+    prompt: `What should the nurse do to stimulate the separation of the placenta after home delivery of a baby?`,
     options: [
       `Ask the mother to push down vigorously`,
       `Push the fundus down vigorously`,
@@ -4953,7 +4952,7 @@ export const QUESTION_BANK = [
     id: 353,
     category: `Health Promotion & Maintenance`,
     chapter: `Female Reproductive & Maternity`,
-    question: `A woman delivered a baby in the car on the way to the hospital. In the emergency room, the physician examined the mother. What is the priority action for the nurse at this time?`,
+    prompt: `A woman delivered a baby in the car on the way to the hospital. In the emergency room, the physician examined the mother. What is the priority action for the nurse at this time?`,
     options: [
       `Gently tug on the cord and massage the uterus to see if the placenta is ready to be delivered`,
       `Clamp and cut the cord with sterile scissors`,
@@ -4967,7 +4966,7 @@ export const QUESTION_BANK = [
     id: 354,
     category: `Health Promotion & Maintenance`,
     chapter: `Female Reproductive & Maternity`,
-    question: `A woman who is giving birth at home wonders if her baby will need drops in the eyes because she knows that neither she nor her husband has gonorrhea. The best answer for the nurse to give should include which of the following?`,
+    prompt: `A woman who is giving birth at home wonders if her baby will need drops in the eyes because she knows that neither she nor her husband has gonorrhea. The best answer for the nurse to give should include which of the following?`,
     options: [
       `It is desirable for the baby to receive the eye drops, but it is not essential.`,
       `If you do not want your baby to have the eye drops, you must sign a waiver stating that you refuse them.`,
@@ -4981,7 +4980,7 @@ export const QUESTION_BANK = [
     id: 355,
     category: `Health Promotion & Maintenance`,
     chapter: `Female Reproductive & Maternity`,
-    question: `The nurse is caring for a laboring woman who has a history of rheumatic heart disease. How should the nurse position her during labor?`,
+    prompt: `The nurse is caring for a laboring woman who has a history of rheumatic heart disease. How should the nurse position her during labor?`,
     options: [
       `Supine`,
       `Semi-recommend`,
@@ -4995,7 +4994,7 @@ export const QUESTION_BANK = [
     id: 356,
     category: `Health Promotion & Maintenance`,
     chapter: `Female Reproductive & Maternity`,
-    question: `The nurse is caring for a laboring woman who has a history of rheumatic heart disease. Which instruction should the nurse give to her during the second stage of labor?`,
+    prompt: `The nurse is caring for a laboring woman who has a history of rheumatic heart disease. Which instruction should the nurse give to her during the second stage of labor?`,
     options: [
       `Avoid prolonged bearing down.`,
       `Breathe shallowly and rapidly.`,
@@ -5009,7 +5008,7 @@ export const QUESTION_BANK = [
     id: 357,
     category: `Health Promotion & Maintenance`,
     chapter: `Female Reproductive & Maternity`,
-    question: `A woman spontaneously delivers a baby girl who is immediately handed to the nurse. Which action is of highest priority for the nurse?`,
+    prompt: `A woman spontaneously delivers a baby girl who is immediately handed to the nurse. Which action is of highest priority for the nurse?`,
     options: [
       `Do an Apgar assessment.`,
       `Check neonatal heart rate.`,
@@ -5023,7 +5022,7 @@ export const QUESTION_BANK = [
     id: 358,
     category: `Health Promotion & Maintenance`,
     chapter: `Female Reproductive & Maternity`,
-    question: `At one minute after birth, an infant is crying, has a heart rate of 140, has acrocyanosis, resists the suction catheter, and keeps his arms extended and his legs flexed. What is the Apgar score?`,
+    prompt: `At one minute after birth, an infant is crying, has a heart rate of 140, has acrocyanosis, resists the suction catheter, and keeps his arms extended and his legs flexed. What is the Apgar score?`,
     options: [
       `4`,
       `6`,
@@ -5037,7 +5036,7 @@ export const QUESTION_BANK = [
     id: 359,
     category: `Health Promotion & Maintenance`,
     chapter: `Female Reproductive & Maternity`,
-    question: `The delivery room nurse is explaining Apgar scoring to new parents. Which information pertaining to the purpose of a five-minute Apgar score should be included in the explanation?`,
+    prompt: `The delivery room nurse is explaining Apgar scoring to new parents. Which information pertaining to the purpose of a five-minute Apgar score should be included in the explanation?`,
     options: [
       `It evaluates the effectiveness of the labor and delivery.`,
       `It measures the adequacy of transition to extrauterine life.`,
@@ -5051,7 +5050,7 @@ export const QUESTION_BANK = [
     id: 360,
     category: `Health Promotion & Maintenance`,
     chapter: `Female Reproductive & Maternity`,
-    question: `The nurse is caring for a woman who has had a spinal anesthetic. Which of the following would be most likely to occur after spinal anesthesia?`,
+    prompt: `The nurse is caring for a woman who has had a spinal anesthetic. Which of the following would be most likely to occur after spinal anesthesia?`,
     options: [
       `The client states that she is dizzy and lightheaded.`,
       `The temperature is 101°F.`,
@@ -5065,7 +5064,7 @@ export const QUESTION_BANK = [
     id: 361,
     category: `Health Promotion & Maintenance`,
     chapter: `Female Reproductive & Maternity`,
-    question: `What action is essential for the nurse during the fourth stage of labor?`,
+    prompt: `What action is essential for the nurse during the fourth stage of labor?`,
     options: [
       `Firmly massage the fundus every 15 minutes.`,
       `Take the vital signs every 1 hour.`,
@@ -5079,7 +5078,7 @@ export const QUESTION_BANK = [
     id: 362,
     category: `Health Promotion & Maintenance`,
     chapter: `Female Reproductive & Maternity`,
-    question: `Which of the following is the most important nursing assessment during the fourth stage of labor?`,
+    prompt: `Which of the following is the most important nursing assessment during the fourth stage of labor?`,
     options: [
       `Bonding behaviors`,
       `Distention of the bladder`,
@@ -5093,7 +5092,7 @@ export const QUESTION_BANK = [
     id: 363,
     category: `Health Promotion & Maintenance`,
     chapter: `Female Reproductive & Maternity`,
-    question: `A woman who is 32 weeks gestation is admitted with contractions every four minutes. Ritodrine is given for which of the following purposes?`,
+    prompt: `A woman who is 32 weeks gestation is admitted with contractions every four minutes. Ritodrine is given for which of the following purposes?`,
     options: [
       `To suppress uterine activity`,
       `To make her more comfortable`,
@@ -5107,7 +5106,7 @@ export const QUESTION_BANK = [
     id: 364,
     category: `Health Promotion & Maintenance`,
     chapter: `Female Reproductive & Maternity`,
-    question: `The nursing care plan for a woman who has placenta abruptio should include careful assessment for signs and symptoms of which of the following?`,
+    prompt: `The nursing care plan for a woman who has placenta abruptio should include careful assessment for signs and symptoms of which of the following?`,
     options: [
       `Jaundice`,
       `Hypovolemic shock`,
@@ -5121,7 +5120,7 @@ export const QUESTION_BANK = [
     id: 365,
     category: `Health Promotion & Maintenance`,
     chapter: `Female Reproductive & Maternity`,
-    question: `A woman who had a normal vaginal delivery two hours ago has just arrived on the postpartum floor. Vital signs are normal. When assessing her uterus, the nurse notes that it is boggy. What should be the nurse's initial intervention?`,
+    prompt: `A woman who had a normal vaginal delivery two hours ago has just arrived on the postpartum floor. Vital signs are normal. When assessing her uterus, the nurse notes that it is boggy. What should be the nurse's initial intervention?`,
     options: [
       `Massage the uterus`,
       `Report to the charge nurse`,
@@ -5135,7 +5134,7 @@ export const QUESTION_BANK = [
     id: 366,
     category: `Health Promotion & Maintenance`,
     chapter: `Female Reproductive & Maternity`,
-    question: `The nurse is caring for a woman who had a normal vaginal delivery two hours ago and has just arrived on the postpartum floor. Two hours later, her uterus is displaced to the right. What is the most likely explanation for this?`,
+    prompt: `The nurse is caring for a woman who had a normal vaginal delivery two hours ago and has just arrived on the postpartum floor. Two hours later, her uterus is displaced to the right. What is the most likely explanation for this?`,
     options: [
       `A fibroid tumor`,
       `A full bladder`,
@@ -5149,7 +5148,7 @@ export const QUESTION_BANK = [
     id: 367,
     category: `Health Promotion & Maintenance`,
     chapter: `Female Reproductive & Maternity`,
-    question: `The day after delivery, a new mother asks why her milk is so creamy and yellow. What is the best response for the nurse to make?`,
+    prompt: `The day after delivery, a new mother asks why her milk is so creamy and yellow. What is the best response for the nurse to make?`,
     options: [
       `"I wouldn't worry about it."`,
       `"This is normal. It will soon turn to real milk."`,
@@ -5163,7 +5162,7 @@ export const QUESTION_BANK = [
     id: 368,
     category: `Health Promotion & Maintenance`,
     chapter: `Female Reproductive & Maternity`,
-    question: `A new mother is in the first period of adjustment following birth called the taking-in phase. What type of maternal behavior would the nurse expect her to exhibit?`,
+    prompt: `A new mother is in the first period of adjustment following birth called the taking-in phase. What type of maternal behavior would the nurse expect her to exhibit?`,
     options: [
       `Passivity and dependence`,
       `Preoccupation with baby's needs`,
@@ -5177,7 +5176,7 @@ export const QUESTION_BANK = [
     id: 369,
     category: `Health Promotion & Maintenance`,
     chapter: `Female Reproductive & Maternity`,
-    question: `A new mother has decided not to breastfeed her baby. Which statement indicates the best understanding of the management of engorgement?`,
+    prompt: `A new mother has decided not to breastfeed her baby. Which statement indicates the best understanding of the management of engorgement?`,
     options: [
       `"I will stand with my back to the shower."`,
       `"I will take a sitz bath every day."`,
@@ -5191,7 +5190,7 @@ export const QUESTION_BANK = [
     id: 370,
     category: `Health Promotion & Maintenance`,
     chapter: `Female Reproductive & Maternity`,
-    question: `A new mother is about to be discharged from the hospital. Which statement made by a new mother indicates a need for more instruction?`,
+    prompt: `A new mother is about to be discharged from the hospital. Which statement made by a new mother indicates a need for more instruction?`,
     options: [
       `"I will use my old diaphragm for contraception."`,
       `"I have an appointment for my six-week checkup."`,
@@ -5205,7 +5204,7 @@ export const QUESTION_BANK = [
     id: 371,
     category: `Health Promotion & Maintenance`,
     chapter: `Female Reproductive & Maternity`,
-    question: `A woman who delivered today by cesarean delivery asks the nurse, "How come my baby has such a round head? My other baby's head was not so round, and she was more red." What is the best response for the nurse to make?`,
+    prompt: `A woman who delivered today by cesarean delivery asks the nurse, "How come my baby has such a round head? My other baby's head was not so round, and she was more red." What is the best response for the nurse to make?`,
     options: [
       `"Each baby is different. It is not a good idea to compare your children."`,
       `"Were forceps used when your older child was delivered?"`,
@@ -5219,7 +5218,7 @@ export const QUESTION_BANK = [
     id: 372,
     category: `Health Promotion & Maintenance`,
     chapter: `Female Reproductive & Maternity`,
-    question: `The nurse is caring for a woman who delivered a healthy infant via cesarean delivery 30 minutes ago. The mother says to the nurse, "Please don't touch my belly. I had an operation." What is the nurse's best response?`,
+    prompt: `The nurse is caring for a woman who delivered a healthy infant via cesarean delivery 30 minutes ago. The mother says to the nurse, "Please don't touch my belly. I had an operation." What is the nurse's best response?`,
     options: [
       `"Alright I won't. Be sure to let me know if you have any pain or bleeding."`,
       `"I do need to look at your abdomen to check your incision."`,
@@ -5233,7 +5232,7 @@ export const QUESTION_BANK = [
     id: 373,
     category: `Health Promotion & Maintenance`,
     chapter: `Female Reproductive & Maternity`,
-    question: `A woman is admitted to the postpartum unit two hours after delivery of a baby. What action is especially important because the membranes were ruptured for 28 hours before delivery?`,
+    prompt: `A woman is admitted to the postpartum unit two hours after delivery of a baby. What action is especially important because the membranes were ruptured for 28 hours before delivery?`,
     options: [
       `Monitor her temperature every two hours`,
       `Provide perineal care with Zephiran every four hours`,
@@ -5247,7 +5246,7 @@ export const QUESTION_BANK = [
     id: 374,
     category: `Health Promotion & Maintenance`,
     chapter: `Female Reproductive & Maternity`,
-    question: `The nurse is caring for a woman who delivered a baby three hours ago. The woman pulls the emergency call light and says she is bleeding all over the bed. The nurse enters the room and sees the blood-soaked bed. What is the best initial action for the nurse to take?`,
+    prompt: `The nurse is caring for a woman who delivered a baby three hours ago. The woman pulls the emergency call light and says she is bleeding all over the bed. The nurse enters the room and sees the blood-soaked bed. What is the best initial action for the nurse to take?`,
     options: [
       `Assess and massage the fundus if soft`,
       `Take vital signs`,
@@ -5261,7 +5260,7 @@ export const QUESTION_BANK = [
     id: 375,
     category: `Health Promotion & Maintenance`,
     chapter: `Female Reproductive & Maternity`,
-    question: `Methergine 5 mg qid is ordered for a postpartum client. An hour after taking the drug, the woman complains of uterine cramping. What is the best explanation for the nurse to give her?`,
+    prompt: `Methergine 5 mg qid is ordered for a postpartum client. An hour after taking the drug, the woman complains of uterine cramping. What is the best explanation for the nurse to give her?`,
     options: [
       `"This is an unfortunate side effect, but you need the medicine."`,
       `"The cramping is uncomfortable, but it is a sign that the drug is keeping your uterus contracted so you won't bleed too much."`,
@@ -5275,7 +5274,7 @@ export const QUESTION_BANK = [
     id: 376,
     category: `Health Promotion & Maintenance`,
     chapter: `Female Reproductive & Maternity`,
-    question: `The nurse is caring for a woman who had a postpartum hemorrhage. Which of the following facts about her delivery most likely contributed to her hemorrhage?`,
+    prompt: `The nurse is caring for a woman who had a postpartum hemorrhage. Which of the following facts about her delivery most likely contributed to her hemorrhage?`,
     options: [
       `The baby weighed 10 lb 6 oz.`,
       `She received Pitocin after delivery of the placenta.`,
@@ -5289,7 +5288,7 @@ export const QUESTION_BANK = [
     id: 377,
     category: `Health Promotion & Maintenance`,
     chapter: `Female Reproductive & Maternity`,
-    question: `The nurse is caring for several immediate postpartum women. Which client should the nurse attend to first?`,
+    prompt: `The nurse is caring for several immediate postpartum women. Which client should the nurse attend to first?`,
     options: [
       `A woman who had a cesarean delivery asks for a drink of water.`,
       `A woman who had a natural child birth says she needs to urinate.`,
@@ -5303,7 +5302,7 @@ export const QUESTION_BANK = [
     id: 378,
     category: `Health Promotion & Maintenance`,
     chapter: `Female Reproductive & Maternity`,
-    question: `The nurse is observing a new mother for good maternal-infant attachment. Which observation would be a sign of inappropriate attachment?`,
+    prompt: `The nurse is observing a new mother for good maternal-infant attachment. Which observation would be a sign of inappropriate attachment?`,
     options: [
       `Calling the baby "little bit."`,
       `Holding the baby in "en face" position.`,
@@ -5317,7 +5316,7 @@ export const QUESTION_BANK = [
     id: 379,
     category: `Health Promotion & Maintenance`,
     chapter: `Female Reproductive & Maternity`,
-    question: `A woman who had a cesarean section tells the nurse, "I guess I flunked natural childbirth because I had to have a cesarean." This statement is most indicative of which phase of postpartum adjustment?`,
+    prompt: `A woman who had a cesarean section tells the nurse, "I guess I flunked natural childbirth because I had to have a cesarean." This statement is most indicative of which phase of postpartum adjustment?`,
     options: [
       `Taking in`,
       `Working through`,
@@ -5331,7 +5330,7 @@ export const QUESTION_BANK = [
     id: 380,
     category: `Health Promotion & Maintenance`,
     chapter: `Female Reproductive & Maternity`,
-    question: `Six hours after delivery, the nurse notes that a woman's fundus is two finger breadths above the umbilicus and deviated to the right of the midline. What is the most likely cause of this finding?`,
+    prompt: `Six hours after delivery, the nurse notes that a woman's fundus is two finger breadths above the umbilicus and deviated to the right of the midline. What is the most likely cause of this finding?`,
     options: [
       `Retained placental fragments`,
       `Bladder distention`,
@@ -5345,7 +5344,7 @@ export const QUESTION_BANK = [
     id: 381,
     category: `Health Promotion & Maintenance`,
     chapter: `Female Reproductive & Maternity`,
-    question: `Which area of health teaching will a new mother be most responsive to during the taking in phase of the postpartum period?`,
+    prompt: `Which area of health teaching will a new mother be most responsive to during the taking in phase of the postpartum period?`,
     options: [
       `Family planning`,
       `Newborn care`,
@@ -5359,7 +5358,7 @@ export const QUESTION_BANK = [
     id: 382,
     category: `Health Promotion & Maintenance`,
     chapter: `Female Reproductive & Maternity`,
-    question: `On the first day after a cesarean section, the client is ambulating. She is uncomfortable and asks the nurse, "Why am I being made to walk so soon after surgery?" What is the nurse's best response?`,
+    prompt: `On the first day after a cesarean section, the client is ambulating. She is uncomfortable and asks the nurse, "Why am I being made to walk so soon after surgery?" What is the nurse's best response?`,
     options: [
       `"You can get to hold your baby more quickly if you walk around."`,
       `"Early walking keeps the blood from pooling in your legs and prevents blood clots."`,
@@ -5373,7 +5372,7 @@ export const QUESTION_BANK = [
     id: 383,
     category: `Health Promotion & Maintenance`,
     chapter: `Female Reproductive & Maternity`,
-    question: `A pregnant woman tells the nurse that she is planning to breastfeed because "You don't have to take contraceptives until you wean the baby." What is the best response for the nurse?`,
+    prompt: `A pregnant woman tells the nurse that she is planning to breastfeed because "You don't have to take contraceptives until you wean the baby." What is the best response for the nurse?`,
     options: [
       `"Lactation does suppress ovulation, so you are not likely to get pregnant."`,
       `"You will not get pregnant until you start to menstruate again."`,
@@ -5387,7 +5386,7 @@ export const QUESTION_BANK = [
     id: 384,
     category: `Health Promotion & Maintenance`,
     chapter: `Female Reproductive & Maternity`,
-    question: `A new mother who has been breastfeeding her infant for six weeks calls the nurse at the doctor's office and says her right nipple is cracked and sore; she has a temperature and feels as though she had the flu. How should the nurse respond to the woman?`,
+    prompt: `A new mother who has been breastfeeding her infant for six weeks calls the nurse at the doctor's office and says her right nipple is cracked and sore; she has a temperature and feels as though she had the flu. How should the nurse respond to the woman?`,
     options: [
       `"Try putting warm compresses over your right breast."`,
       `"Immediately stop nursing and apply cold compresses to your breasts."`,
@@ -5401,7 +5400,7 @@ export const QUESTION_BANK = [
     id: 385,
     category: `Health Promotion & Maintenance`,
     chapter: `Female Reproductive & Maternity`,
-    question: `At 3 hours of age, a term newborn seems jittery and has a weak and high-pitched cry and irregular respirations. The nurse suspects that the infant may have which of the following?`,
+    prompt: `At 3 hours of age, a term newborn seems jittery and has a weak and high-pitched cry and irregular respirations. The nurse suspects that the infant may have which of the following?`,
     options: [
       `Hypoglycemia`,
       `Hypercalcemia`,
@@ -5415,7 +5414,7 @@ export const QUESTION_BANK = [
     id: 386,
     category: `Health Promotion & Maintenance`,
     chapter: `Female Reproductive & Maternity`,
-    question: `The mother of a newborn is breastfeeding her infant on the delivery table. How can the nurse best assist her?`,
+    prompt: `The mother of a newborn is breastfeeding her infant on the delivery table. How can the nurse best assist her?`,
     options: [
       `Touch the infant's cheek adjacent to the nipple to elicit the rooting reflex`,
       `Leave the mother and baby alone and allow the infant to nurse as long as desired`,
@@ -5429,7 +5428,7 @@ export const QUESTION_BANK = [
     id: 387,
     category: `Health Promotion & Maintenance`,
     chapter: `Female Reproductive & Maternity`,
-    question: `Parents of a newborn note petechiae on the newborn's face and neck. The nurse should tell them that this is a result of which of the following?`,
+    prompt: `Parents of a newborn note petechiae on the newborn's face and neck. The nurse should tell them that this is a result of which of the following?`,
     options: [
       `Increased intravascular pressure during delivery`,
       `Decreased vitamin K level in the newborn infant`,
@@ -5443,7 +5442,7 @@ export const QUESTION_BANK = [
     id: 388,
     category: `Health Promotion & Maintenance`,
     chapter: `Female Reproductive & Maternity`,
-    question: `A newborn has a total body response to noise or movement that is distressing to her parents. What should the nurse tell the parents about this response?`,
+    prompt: `A newborn has a total body response to noise or movement that is distressing to her parents. What should the nurse tell the parents about this response?`,
     options: [
       `It is a reflexive response that indicates normal development.`,
       `It is a voluntary response that indicates insecurity in a new environment.`,
@@ -5457,7 +5456,7 @@ export const QUESTION_BANK = [
     id: 389,
     category: `Health Promotion & Maintenance`,
     chapter: `Female Reproductive & Maternity`,
-    question: `When changing her newborn infant, a mother notices a reddened area on the infant's buttocks. How should the nurse respond?`,
+    prompt: `When changing her newborn infant, a mother notices a reddened area on the infant's buttocks. How should the nurse respond?`,
     options: [
       `Have staff nurses instead of the mother change the infant`,
       `Use both lotion and powder to protect the area`,
@@ -5471,7 +5470,7 @@ export const QUESTION_BANK = [
     id: 390,
     category: `Health Promotion & Maintenance`,
     chapter: `Female Reproductive & Maternity`,
-    question: `A woman, at 32 weeks gestation, delivers a 3-lb, 8-oz baby boy two hours after arriving at the hospital. What is the baby at risk for because of his gestational age?`,
+    prompt: `A woman, at 32 weeks gestation, delivers a 3-lb, 8-oz baby boy two hours after arriving at the hospital. What is the baby at risk for because of his gestational age?`,
     options: [
       `Mental retardation and seizures`,
       `Hypothermia and respiratory distress`,
@@ -5485,7 +5484,7 @@ export const QUESTION_BANK = [
     id: 391,
     category: `Health Promotion & Maintenance`,
     chapter: `Female Reproductive & Maternity`,
-    question: `Orders for a premature infant are for nipple feedings or gavage. What assessment findings are necessary before nipple feedings are given?`,
+    prompt: `Orders for a premature infant are for nipple feedings or gavage. What assessment findings are necessary before nipple feedings are given?`,
     options: [
       `The baby must have a respiratory rate of 20 to 30 and heart rate of 110 to 130.`,
       `The baby must be alert and rooting.`,
@@ -5499,7 +5498,7 @@ export const QUESTION_BANK = [
     id: 392,
     category: `Health Promotion & Maintenance`,
     chapter: `Female Reproductive & Maternity`,
-    question: `The mother of a 3-lb preterm infant has expressed a desire to breastfeed her baby. Because of his prematurity, she expresses fear that she can't. What is the best response for the nurse to make?`,
+    prompt: `The mother of a 3-lb preterm infant has expressed a desire to breastfeed her baby. Because of his prematurity, she expresses fear that she can't. What is the best response for the nurse to make?`,
     options: [
       `"The baby won't be able to nurse for several weeks, but you can try at that time."`,
       `"Breast milk does not have enough calories for premature babies."`,
@@ -5513,7 +5512,7 @@ export const QUESTION_BANK = [
     id: 393,
     category: `Health Promotion & Maintenance`,
     chapter: `Female Reproductive & Maternity`,
-    question: `The mother of a term newborn born two hours ago asks the nurse why the baby's hands and feet are blue. What information should the nurse include when responding?`,
+    prompt: `The mother of a term newborn born two hours ago asks the nurse why the baby's hands and feet are blue. What information should the nurse include when responding?`,
     options: [
       `Blue hands and feet can indicate possible heart defects.`,
       `This is normal in newborns for the first 24 hours.`,
@@ -5527,7 +5526,7 @@ export const QUESTION_BANK = [
     id: 394,
     category: `Health Promotion & Maintenance`,
     chapter: `Female Reproductive & Maternity`,
-    question: `A newborn is thought to have toxoplasmosis. The nurse explains to the family that toxoplasmosis is most likely to have been transmitted to the infant in which manner?`,
+    prompt: `A newborn is thought to have toxoplasmosis. The nurse explains to the family that toxoplasmosis is most likely to have been transmitted to the infant in which manner?`,
     options: [
       `Through a blood transfusion given to the mother`,
       `Through breast milk during breastfeeding`,
@@ -5541,7 +5540,7 @@ export const QUESTION_BANK = [
     id: 395,
     category: `Health Promotion & Maintenance`,
     chapter: `Female Reproductive & Maternity`,
-    question: `A newborn infant is with his mother, who is a diabetic. He appeared pink and alert and his temperature was stable when he left the nursery 15 minutes ago. His mother calls the nurse and says, "Look at his legs." The nurse observes spontaneous jerky movements. What is the best INITIAL action for the nurse to take?`,
+    prompt: `A newborn infant is with his mother, who is a diabetic. He appeared pink and alert and his temperature was stable when he left the nursery 15 minutes ago. His mother calls the nurse and says, "Look at his legs." The nurse observes spontaneous jerky movements. What is the best INITIAL action for the nurse to take?`,
     options: [
       `Tell his mother that this is normal behavior for a newborn`,
       `Tell the mother to feed him his glucose water now`,
@@ -5555,7 +5554,7 @@ export const QUESTION_BANK = [
     id: 396,
     category: `Health Promotion & Maintenance`,
     chapter: `Female Reproductive & Maternity`,
-    question: `The nurse is caring for a premature infant. Immediately after arrival in the nursery, which nursing action is essential?`,
+    prompt: `The nurse is caring for a premature infant. Immediately after arrival in the nursery, which nursing action is essential?`,
     options: [
       `Take the rectal temperature`,
       `Examine for anomalies`,
@@ -5569,7 +5568,7 @@ export const QUESTION_BANK = [
     id: 397,
     category: `Health Promotion & Maintenance`,
     chapter: `Female Reproductive & Maternity`,
-    question: `A baby boy was born at 2:45 A.M. after a 35-week gestation. He weighed 1170 g. Upon admission to the premature nursery, he had slight respiratory distress, nasal flaring, grunting, intercostal retractions, and slight cyanosis. Apgar score at one minute was 4, and at five minutes, it was 6. Apical pulse is 164, respirations are 44, and axillary temperature is 96°F. What was the most likely cause of the baby's cyanosis?`,
+    prompt: `A baby boy was born at 2:45 A.M. after a 35-week gestation. He weighed 1170 g. Upon admission to the premature nursery, he had slight respiratory distress, nasal flaring, grunting, intercostal retractions, and slight cyanosis. Apgar score at one minute was 4, and at five minutes, it was 6. Apical pulse is 164, respirations are 44, and axillary temperature is 96°F. What was the most likely cause of the baby's cyanosis?`,
     options: [
       `Increased serum concentration of bilirubin`,
       `Inadequate oxygenation of arterial blood`,
@@ -5583,7 +5582,7 @@ export const QUESTION_BANK = [
     id: 398,
     category: `Health Promotion & Maintenance`,
     chapter: `Female Reproductive & Maternity`,
-    question: `When assessing a newborn's need for oxygen, which of the following should the nurse assess because it is the best indicator?`,
+    prompt: `When assessing a newborn's need for oxygen, which of the following should the nurse assess because it is the best indicator?`,
     options: [
       `Respiratory rate`,
       `Skin color`,
@@ -5597,7 +5596,7 @@ export const QUESTION_BANK = [
     id: 399,
     category: `Health Promotion & Maintenance`,
     chapter: `Female Reproductive & Maternity`,
-    question: `On the evening of the second day after birth, the nurse notes that an infant appears icteric. What is the most likely cause?`,
+    prompt: `On the evening of the second day after birth, the nurse notes that an infant appears icteric. What is the most likely cause?`,
     options: [
       `Rupture of a great number of fragile red cells in a short period of time`,
       `Inflammatory obstruction of hepatic bile ducts and resorption of pigments`,
@@ -5611,7 +5610,7 @@ export const QUESTION_BANK = [
     id: 400,
     category: `Health Promotion & Maintenance`,
     chapter: `Female Reproductive & Maternity`,
-    question: `On the evening of the second day after birth, an infant was observed to be icteric, so he was exposed to blue light. What is the purpose of the blue light?`,
+    prompt: `On the evening of the second day after birth, an infant was observed to be icteric, so he was exposed to blue light. What is the purpose of the blue light?`,
     options: [
       `To stimulate increased formation of vitamin K in the skin`,
       `To enhance pigment breakdown by increasing body temperature`,
@@ -5625,7 +5624,7 @@ export const QUESTION_BANK = [
     id: 401,
     category: `Health Promotion & Maintenance`,
     chapter: `Female Reproductive & Maternity`,
-    question: `A young woman delivered her first baby this morning. She asks the nurse why the top of the baby's head is so soft and does not seem to have any bone. What should the nurse include when responding to the mother?`,
+    prompt: `A young woman delivered her first baby this morning. She asks the nurse why the top of the baby's head is so soft and does not seem to have any bone. What should the nurse include when responding to the mother?`,
     options: [
       `This soft spot is called a fontanel and is normal; it makes delivery easier.`,
       `It is a condition that occurs in some babies and will disappear within a few days.`,
@@ -5639,7 +5638,7 @@ export const QUESTION_BANK = [
     id: 402,
     category: `Health Promotion & Maintenance`,
     chapter: `Female Reproductive & Maternity`,
-    question: `Which finding, if present, would suggest to the nurse that the infant was not at term when born?`,
+    prompt: `Which finding, if present, would suggest to the nurse that the infant was not at term when born?`,
     options: [
       `The scrotum has rugae.`,
       `Testicles are not descended.`,
@@ -5653,7 +5652,7 @@ export const QUESTION_BANK = [
     id: 403,
     category: `Health Promotion & Maintenance`,
     chapter: `Female Reproductive & Maternity`,
-    question: `The nurse is preparing a 3-day-old infant for discharge from the hospital. When checking the record for completeness, the nurse checks to see that the infant has had which of the following?`,
+    prompt: `The nurse is preparing a 3-day-old infant for discharge from the hospital. When checking the record for completeness, the nurse checks to see that the infant has had which of the following?`,
     options: [
       `DTP and polio immunizations`,
       `MMR immunization and tuberculin test`,
@@ -5667,7 +5666,7 @@ export const QUESTION_BANK = [
     id: 404,
     category: `Health Promotion & Maintenance`,
     chapter: `Female Reproductive & Maternity`,
-    question: `The physician has told the parents that their child probably has phenylketonuria. The parents ask the nurse what special needs the child will have. What should the nurse include in the response?`,
+    prompt: `The physician has told the parents that their child probably has phenylketonuria. The parents ask the nurse what special needs the child will have. What should the nurse include in the response?`,
     options: [
       `The baby will most likely not develop normally for longer than six months and will die in a few years.`,
       `The baby will have a special formula and cannot eat protein foods during childhood.`,
@@ -5683,7 +5682,7 @@ export const QUESTION_BANK = [
     id: 405,
     category: `Health Promotion & Maintenance`,
     chapter: `Pediatrics`,
-    question: `A 3-month-old infant is admitted. Upon admission, the nurse assesses her developmental status as appropriate for age. Which of the following is the child least likely to be able to do?`,
+    prompt: `A 3-month-old infant is admitted. Upon admission, the nurse assesses her developmental status as appropriate for age. Which of the following is the child least likely to be able to do?`,
     options: [
       `Smile in response to mother's face`,
       `Reach for shiny objects but miss them`,
@@ -5697,7 +5696,7 @@ export const QUESTION_BANK = [
     id: 406,
     category: `Health Promotion & Maintenance`,
     chapter: `Pediatrics`,
-    question: `A 3-month-old infant is doing well after the repair of a cleft lip. The nurse wants to provide the client with appropriate stimulation. What is the best toy for the nurse to provide?`,
+    prompt: `A 3-month-old infant is doing well after the repair of a cleft lip. The nurse wants to provide the client with appropriate stimulation. What is the best toy for the nurse to provide?`,
     options: [
       `Colorful rattle`,
       `String of large beads`,
@@ -5711,7 +5710,7 @@ export const QUESTION_BANK = [
     id: 407,
     category: `Health Promotion & Maintenance`,
     chapter: `Pediatrics`,
-    question: `Which toys would be best for a 5-month-old infant who has infantile eczema?`,
+    prompt: `Which toys would be best for a 5-month-old infant who has infantile eczema?`,
     options: [
       `Soft, washable toys`,
       `Stuffed toys`,
@@ -5725,7 +5724,7 @@ export const QUESTION_BANK = [
     id: 408,
     category: `Health Promotion & Maintenance`,
     chapter: `Pediatrics`,
-    question: `Which diversion would be appropriate for the nurse to plan to use with an 8-month-old infant?`,
+    prompt: `Which diversion would be appropriate for the nurse to plan to use with an 8-month-old infant?`,
     options: [
       `A colorful mobile`,
       `Large blocks to stack`,
@@ -5739,7 +5738,7 @@ export const QUESTION_BANK = [
     id: 409,
     category: `Health Promotion & Maintenance`,
     chapter: `Pediatrics`,
-    question: `Which activity would best occupy a 12-month-old child while the nurse is interviewing the parents?`,
+    prompt: `Which activity would best occupy a 12-month-old child while the nurse is interviewing the parents?`,
     options: [
       `String of large snap beads and a large plastic bowl`,
       `Riding toy`,
@@ -5753,7 +5752,7 @@ export const QUESTION_BANK = [
     id: 410,
     category: `Health Promotion & Maintenance`,
     chapter: `Pediatrics`,
-    question: `An 18-month-old child is admitted for a repeated cardiac catheterization. The parents are continuously present and do everything for the child—dress him, feed him, and even play for him. The nurse wants to prepare the child and the parents for the procedure. Which of the following should be included in the care plan?`,
+    prompt: `An 18-month-old child is admitted for a repeated cardiac catheterization. The parents are continuously present and do everything for the child—dress him, feed him, and even play for him. The nurse wants to prepare the child and the parents for the procedure. Which of the following should be included in the care plan?`,
     options: [
       `Give the child simple explanations.`,
       `Talk with the parents to assess their knowledge and how they can help with the child's care.`,
@@ -5767,7 +5766,7 @@ export const QUESTION_BANK = [
     id: 411,
     category: `Health Promotion & Maintenance`,
     chapter: `Pediatrics`,
-    question: `In planning care for an 18-month-old child, the nurse would expect him to be able to do which of the following?`,
+    prompt: `In planning care for an 18-month-old child, the nurse would expect him to be able to do which of the following?`,
     options: [
       `Button his shirt and tie his shoes`,
       `Feed himself and drink from a cup`,
@@ -5781,7 +5780,7 @@ export const QUESTION_BANK = [
     id: 412,
     category: `Health Promotion & Maintenance`,
     chapter: `Pediatrics`,
-    question: `The mother of a 2-year-old child asks the nurse how to cope with the child's frequent temper tantrums when he does not get what he wants immediately. What information should the nurse include when responding?`,
+    prompt: `The mother of a 2-year-old child asks the nurse how to cope with the child's frequent temper tantrums when he does not get what he wants immediately. What information should the nurse include when responding?`,
     options: [
       `As long as the child is safe, ignore him during the tantrum.`,
       `If the child's demands are reasonable, give him part of what he wants.`,
@@ -5795,7 +5794,7 @@ export const QUESTION_BANK = [
     id: 413,
     category: `Health Promotion & Maintenance`,
     chapter: `Pediatrics`,
-    question: `A 3-year-old child is admitted to the pediatric unit for diagnostic tests. His mother is discussing the child's hospitalization with the nurse. She is concerned about staying with this child and caring for her other two children at home. Which suggestion to the mother will most help the child adjust to being in the hospital?`,
+    prompt: `A 3-year-old child is admitted to the pediatric unit for diagnostic tests. His mother is discussing the child's hospitalization with the nurse. She is concerned about staying with this child and caring for her other two children at home. Which suggestion to the mother will most help the child adjust to being in the hospital?`,
     options: [
       `Do not visit the child until discharge so that your child won't cry when you leave.`,
       `Spend the night in the hospital with your child.`,
@@ -5809,7 +5808,7 @@ export const QUESTION_BANK = [
     id: 414,
     category: `Health Promotion & Maintenance`,
     chapter: `Pediatrics`,
-    question: `The parents of a 3-year-old child are leaving for the evening. Which behavior would the nurse expect the child to exhibit?`,
+    prompt: `The parents of a 3-year-old child are leaving for the evening. Which behavior would the nurse expect the child to exhibit?`,
     options: [
       `Wave goodbye to the parents`,
       `Cry when the parents leave`,
@@ -5823,7 +5822,7 @@ export const QUESTION_BANK = [
     id: 415,
     category: `Health Promotion & Maintenance`,
     chapter: `Pediatrics`,
-    question: `When planning outdoor play activities for a normal 4-year-old child, which activity is most appropriate?`,
+    prompt: `When planning outdoor play activities for a normal 4-year-old child, which activity is most appropriate?`,
     options: [
       `Two-wheeled bike`,
       `Sandbox`,
@@ -5837,7 +5836,7 @@ export const QUESTION_BANK = [
     id: 416,
     category: `Health Promotion & Maintenance`,
     chapter: `Pediatrics`,
-    question: `A 5-year-old child had major surgery several days ago and is allowed to be up. When planning diversional activity, which action by the nurse is most appropriate?`,
+    prompt: `A 5-year-old child had major surgery several days ago and is allowed to be up. When planning diversional activity, which action by the nurse is most appropriate?`,
     options: [
       `Give the child a book to read.`,
       `Play a board game with the child.`,
@@ -5851,7 +5850,7 @@ export const QUESTION_BANK = [
     id: 417,
     category: `Health Promotion & Maintenance`,
     chapter: `Pediatrics`,
-    question: `A 6-year-old child is admitted for a tonsillectomy. Considering the child's age, which of the following would be the most important to include in a preoperative physical assessment?`,
+    prompt: `A 6-year-old child is admitted for a tonsillectomy. Considering the child's age, which of the following would be the most important to include in a preoperative physical assessment?`,
     options: [
       `Characteristics of tongue, gum, or lip sores`,
       `Any sign of tonsillar inflammation`,
@@ -5865,7 +5864,7 @@ export const QUESTION_BANK = [
     id: 418,
     category: `Health Promotion & Maintenance`,
     chapter: `Pediatrics`,
-    question: `A 6-year-old child is in the terminal stage of leukemia. The child appears helpless and afraid. How can the nurse best help the child?`,
+    prompt: `A 6-year-old child is in the terminal stage of leukemia. The child appears helpless and afraid. How can the nurse best help the child?`,
     options: [
       `Allow the child to make the major decisions for her care`,
       `Make all decisions for the child`,
@@ -5879,7 +5878,7 @@ export const QUESTION_BANK = [
     id: 419,
     category: `Health Promotion & Maintenance`,
     chapter: `Pediatrics`,
-    question: `The nurse is preparing a 6-year-old child for cardiac surgery. Which preoperative teaching technique is most appropriate?`,
+    prompt: `The nurse is preparing a 6-year-old child for cardiac surgery. Which preoperative teaching technique is most appropriate?`,
     options: [
       `Have the child practice procedures that will be performed postoperatively, such as coughing and deep breathing.`,
       `Arrange for the child to tour the operating room and surgical intensive care unit.`,
@@ -5893,7 +5892,7 @@ export const QUESTION_BANK = [
     id: 420,
     category: `Health Promotion & Maintenance`,
     chapter: `Pediatrics`,
-    question: `A 10-year-old girl is being treated for rheumatic fever. Which would be an appropriate activity while she is on bed rest?`,
+    prompt: `A 10-year-old girl is being treated for rheumatic fever. Which would be an appropriate activity while she is on bed rest?`,
     options: [
       `Stringing large wooden beads`,
       `Engaging in a pillow fight`,
@@ -5907,7 +5906,7 @@ export const QUESTION_BANK = [
     id: 421,
     category: `Health Promotion & Maintenance`,
     chapter: `Pediatrics`,
-    question: `A 10-year-old boy who is immobilized in a cast following an accident has been squirting other children and the staff with a syringe filled with water. The nurse wants to provide other activities to help him express his aggression. Which activity would be most appropriate?`,
+    prompt: `A 10-year-old boy who is immobilized in a cast following an accident has been squirting other children and the staff with a syringe filled with water. The nurse wants to provide other activities to help him express his aggression. Which activity would be most appropriate?`,
     options: [
       `Cranking a wind-up toy`,
       `Pounding clay`,
@@ -5921,7 +5920,7 @@ export const QUESTION_BANK = [
     id: 422,
     category: `Health Promotion & Maintenance`,
     chapter: `Pediatrics`,
-    question: `An 11-year-old boy is admitted to the pediatric unit in traction with a fractured femur sustained in a motorcycle accident. His uncle, who was driving the cycle when the accident occurred, received only minor injuries. The child tells the nurse that his uncle was not to blame for the accident. He is "the best motorcycle rider in the world." The nurse interprets this to mean that the child is exhibiting which defense mechanism?`,
+    prompt: `An 11-year-old boy is admitted to the pediatric unit in traction with a fractured femur sustained in a motorcycle accident. His uncle, who was driving the cycle when the accident occurred, received only minor injuries. The child tells the nurse that his uncle was not to blame for the accident. He is "the best motorcycle rider in the world." The nurse interprets this to mean that the child is exhibiting which defense mechanism?`,
     options: [
       `Denial`,
       `Repression`,
@@ -5935,7 +5934,7 @@ export const QUESTION_BANK = [
     id: 423,
     category: `Health Promotion & Maintenance`,
     chapter: `Pediatrics`,
-    question: `The nurse is planning care for an 11-year-old child who has a fractured femur and is in traction. Which activity would be most appropriate?`,
+    prompt: `The nurse is planning care for an 11-year-old child who has a fractured femur and is in traction. Which activity would be most appropriate?`,
     options: [
       `Dramatizing with puppets`,
       `Building with popsicle sticks`,
@@ -5949,7 +5948,7 @@ export const QUESTION_BANK = [
     id: 424,
     category: `Health Promotion & Maintenance`,
     chapter: `Pediatrics`,
-    question: `A 2-year-old child is hospitalized for a fractured femur. During his first two days in the hospital, he lies quietly, sucks his thumb, and does not cry. Which is the best interpretation of his behavior?`,
+    prompt: `A 2-year-old child is hospitalized for a fractured femur. During his first two days in the hospital, he lies quietly, sucks his thumb, and does not cry. Which is the best interpretation of his behavior?`,
     options: [
       `He has made a good adjustment to being in the hospital.`,
       `He is comfortable with the nurses caring for him.`,
@@ -5963,7 +5962,7 @@ export const QUESTION_BANK = [
     id: 425,
     category: `Health Promotion & Maintenance`,
     chapter: `Pediatrics`,
-    question: `A hospitalized 2.5-year-old child has a temper tantrum while her mother is bathing her. Her mother asks the nurse how she should handle this behavior. Which information should be included in the nurse's reply?`,
+    prompt: `A hospitalized 2.5-year-old child has a temper tantrum while her mother is bathing her. Her mother asks the nurse how she should handle this behavior. Which information should be included in the nurse's reply?`,
     options: [
       `Temper tantrums in a hospitalized child indicate regression.`,
       `Tantrums suggest a poorly developed sense of trust.`,
@@ -5977,7 +5976,7 @@ export const QUESTION_BANK = [
     id: 426,
     category: `Health Promotion & Maintenance`,
     chapter: `Pediatrics`,
-    question: `A 3-year-old child resists going to bed at night. Her mother asks the nurse what she should say to her. Which response should the nurse suggest to the mother as most appropriate?`,
+    prompt: `A 3-year-old child resists going to bed at night. Her mother asks the nurse what she should say to her. Which response should the nurse suggest to the mother as most appropriate?`,
     options: [
       `"I don't love you anymore because you don't know how to listen."`,
       `"All good children go to bed on time."`,
@@ -5991,7 +5990,7 @@ export const QUESTION_BANK = [
     id: 427,
     category: `Health Promotion & Maintenance`,
     chapter: `Pediatrics`,
-    question: `An 8-year-old child is terminally ill. Considering the child's age, which statement would you most expect the child to make?`,
+    prompt: `An 8-year-old child is terminally ill. Considering the child's age, which statement would you most expect the child to make?`,
     options: [
       `"After I'm dead, will you come visit me?"`,
       `"Who will take care of me when I am dead?"`,
@@ -6005,7 +6004,7 @@ export const QUESTION_BANK = [
     id: 428,
     category: `Health Promotion & Maintenance`,
     chapter: `Pediatrics`,
-    question: `A father has brought his 4-month-old daughter to the well-baby clinic. Which statement that he makes is the greatest cause for concern to the nurse?`,
+    prompt: `A father has brought his 4-month-old daughter to the well-baby clinic. Which statement that he makes is the greatest cause for concern to the nurse?`,
     options: [
       `"She cannot sit up by herself."`,
       `"She does not hold the rattle as well as she did at first."`,
@@ -6019,7 +6018,7 @@ export const QUESTION_BANK = [
     id: 429,
     category: `Health Promotion & Maintenance`,
     chapter: `Pediatrics`,
-    question: `A 3-year-old child has all of the following abilities. Which did he acquire most recently?`,
+    prompt: `A 3-year-old child has all of the following abilities. Which did he acquire most recently?`,
     options: [
       `Walking`,
       `Throwing a large ball`,
@@ -6033,7 +6032,7 @@ export const QUESTION_BANK = [
     id: 430,
     category: `Health Promotion & Maintenance`,
     chapter: `Pediatrics`,
-    question: `The mother of a 2-year-old child calls the doctor's office because her child swallowed "the rest of the bottle of adult aspirin" about a half hour ago. The nurse determines that there were about 15 tablets left in the bottle. What initial assessment findings are consistent with aspirin ingestion?`,
+    prompt: `The mother of a 2-year-old child calls the doctor's office because her child swallowed "the rest of the bottle of adult aspirin" about a half hour ago. The nurse determines that there were about 15 tablets left in the bottle. What initial assessment findings are consistent with aspirin ingestion?`,
     options: [
       `Bradypnea and pallor`,
       `Hyperventilation and hyperpyrexia`,
@@ -6047,7 +6046,7 @@ export const QUESTION_BANK = [
     id: 431,
     category: `Health Promotion & Maintenance`,
     chapter: `Pediatrics`,
-    question: `A toddler who has swallowed several adult aspirin is admitted to the emergency room. When admitted, the child is breathing but is difficult to arouse. What is the immediate priority of care?`,
+    prompt: `A toddler who has swallowed several adult aspirin is admitted to the emergency room. When admitted, the child is breathing but is difficult to arouse. What is the immediate priority of care?`,
     options: [
       `Administration of syrup of ipecac`,
       `Cardiopulmonary resuscitation`,
@@ -6061,7 +6060,7 @@ export const QUESTION_BANK = [
     id: 432,
     category: `Health Promotion & Maintenance`,
     chapter: `Pediatrics`,
-    question: `A 6-month-old child is being seen for a well-baby visit. The child has received all immunizations as recommended so far. What immunizations does the nurse expect to give at this visit?`,
+    prompt: `A 6-month-old child is being seen for a well-baby visit. The child has received all immunizations as recommended so far. What immunizations does the nurse expect to give at this visit?`,
     options: [
       `DTP, MMR, IPV`,
       `DTP, hepatitis B, HIB`,
@@ -6075,7 +6074,7 @@ export const QUESTION_BANK = [
     id: 433,
     category: `Health Promotion & Maintenance`,
     chapter: `Pediatrics`,
-    question: `The mother of a 6-year-old child who has chickenpox asks the nurse when the child can go back to school. What information should be included in the nurse's response? The child is contagious:`,
+    prompt: `The mother of a 6-year-old child who has chickenpox asks the nurse when the child can go back to school. What information should be included in the nurse's response? The child is contagious:`,
     options: [
       `until all signs of the disease are gone.`,
       `as long as the child has scabs.`,
@@ -6089,7 +6088,7 @@ export const QUESTION_BANK = [
     id: 434,
     category: `Health Promotion & Maintenance`,
     chapter: `Pediatrics`,
-    question: `A 2-year-old child is in for an annual examination. Which comment by the mother alerts the nurse to a risk for lead poisoning?`,
+    prompt: `A 2-year-old child is in for an annual examination. Which comment by the mother alerts the nurse to a risk for lead poisoning?`,
     options: [
       `"Why does he eat paint off the window stills?"`,
       `"Will his temper tantrums ever stop?"`,
@@ -6103,7 +6102,7 @@ export const QUESTION_BANK = [
     id: 435,
     category: `Health Promotion & Maintenance`,
     chapter: `Pediatrics`,
-    question: `A 6-year-old boy has tetralogy of Fallot. He is being admitted for surgery. The nurse knows that which problem is not associated with tetralogy of Fallot?`,
+    prompt: `A 6-year-old boy has tetralogy of Fallot. He is being admitted for surgery. The nurse knows that which problem is not associated with tetralogy of Fallot?`,
     options: [
       `Severe atrial septal defect`,
       `Pulmonary stenosis`,
@@ -6117,7 +6116,7 @@ export const QUESTION_BANK = [
     id: 436,
     category: `Health Promotion & Maintenance`,
     chapter: `Pediatrics`,
-    question: `A 6-year-old child with tetralogy of Fallot is being admitted for surgery. While the nurse is orienting the child to the unit, the child suddenly squats with the arms thrown over the knees and knees drawn up to the chest. What is the best immediate nursing action?`,
+    prompt: `A 6-year-old child with tetralogy of Fallot is being admitted for surgery. While the nurse is orienting the child to the unit, the child suddenly squats with the arms thrown over the knees and knees drawn up to the chest. What is the best immediate nursing action?`,
     options: [
       `Observe and assist if needed`,
       `Place the child in a lying position`,
@@ -6131,7 +6130,7 @@ export const QUESTION_BANK = [
     id: 437,
     category: `Health Promotion & Maintenance`,
     chapter: `Pediatrics`,
-    question: `A 6-year-old child with tetralogy of Fallot is being admitted for surgery. What is most important to teach the child during the preoperative period?`,
+    prompt: `A 6-year-old child with tetralogy of Fallot is being admitted for surgery. What is most important to teach the child during the preoperative period?`,
     options: [
       `Strict hand washing technique`,
       `How to cough and deep breathe`,
@@ -6145,7 +6144,7 @@ export const QUESTION_BANK = [
     id: 438,
     category: `Health Promotion & Maintenance`,
     chapter: `Pediatrics`,
-    question: `A 6-year-old with tetralogy of Fallot has open heart surgery. The septal defect was closed, and the pulmonic valve was replaced. When the child returns to the unit, he has oxygen, IVs, and closed chest drainage. How should the nurse position the chest drainage system?`,
+    prompt: `A 6-year-old with tetralogy of Fallot has open heart surgery. The septal defect was closed, and the pulmonic valve was replaced. When the child returns to the unit, he has oxygen, IVs, and closed chest drainage. How should the nurse position the chest drainage system?`,
     options: [
       `Above the level of the bed`,
       `At the level of the heart`,
@@ -6159,7 +6158,7 @@ export const QUESTION_BANK = [
     id: 439,
     category: `Health Promotion & Maintenance`,
     chapter: `Pediatrics`,
-    question: `A parent brings a 3-week-old infant to the clinic. The parent states that the baby does not eat very well. She takes 45 cc of formula in 45 minutes and gets "tired and sweaty" when eating. The nurse observes the baby sleeping in the parent's arms. Her color is pink, and the child is breathing without difficulty. What is the best response for the nurse to make?`,
+    prompt: `A parent brings a 3-week-old infant to the clinic. The parent states that the baby does not eat very well. She takes 45 cc of formula in 45 minutes and gets "tired and sweaty" when eating. The nurse observes the baby sleeping in the parent's arms. Her color is pink, and the child is breathing without difficulty. What is the best response for the nurse to make?`,
     options: [
       `"It's normal for an infant to get tired while feeding. That will go away as the child gets older."`,
       `"It's normal for an infant to get tired while feeding. You could try feeding the baby smaller amounts of formula more frequently."`,
@@ -6173,7 +6172,7 @@ export const QUESTION_BANK = [
     id: 440,
     category: `Health Promotion & Maintenance`,
     chapter: `Pediatrics`,
-    question: `The nurse is explaining cardiac catheterization to the parents of a child. The nurse explains to the parents that information about which of the following can be obtained during cardiac catheterization?`,
+    prompt: `The nurse is explaining cardiac catheterization to the parents of a child. The nurse explains to the parents that information about which of the following can be obtained during cardiac catheterization?`,
     options: [
       `Oxygen levels in the chambers of the heart`,
       `Pulmonary vascularization`,
@@ -6187,7 +6186,7 @@ export const QUESTION_BANK = [
     id: 441,
     category: `Health Promotion & Maintenance`,
     chapter: `Pediatrics`,
-    question: `The nurse is caring for a toddler who is six hours post cardiac catheterization. The nurse is administering antibiotics. The child's mother asks why the child needs to have antibiotics. The nurse's response should indicate that antibiotics are given to the client to prevent which type of infection?`,
+    prompt: `The nurse is caring for a toddler who is six hours post cardiac catheterization. The nurse is administering antibiotics. The child's mother asks why the child needs to have antibiotics. The nurse's response should indicate that antibiotics are given to the client to prevent which type of infection?`,
     options: [
       `Urinary tract infection`,
       `Pneumonia`,
@@ -6201,7 +6200,7 @@ export const QUESTION_BANK = [
     id: 442,
     category: `Health Promotion & Maintenance`,
     chapter: `Pediatrics`,
-    question: `The nurse is caring for a toddler with a cardiac defect who has had several episodes of congestive heart failure in the past few months. Which data would be the most useful to the nurse in assessing the child's current congestive heart failure?`,
+    prompt: `The nurse is caring for a toddler with a cardiac defect who has had several episodes of congestive heart failure in the past few months. Which data would be the most useful to the nurse in assessing the child's current congestive heart failure?`,
     options: [
       `The degree of clubbing of the child's fingers and toes`,
       `Amount of fluid and food intake`,
@@ -6215,7 +6214,7 @@ export const QUESTION_BANK = [
     id: 443,
     category: `Health Promotion & Maintenance`,
     chapter: `Pediatrics`,
-    question: `A child with a cyanotic heart defect has an elevated hematocrit. What is the most likely cause of the elevated hematocrit?`,
+    prompt: `A child with a cyanotic heart defect has an elevated hematocrit. What is the most likely cause of the elevated hematocrit?`,
     options: [
       `Chronic infection`,
       `Recent dehydration`,
@@ -6229,7 +6228,7 @@ export const QUESTION_BANK = [
     id: 444,
     category: `Health Promotion & Maintenance`,
     chapter: `Pediatrics`,
-    question: `The nurse is administering the daily digoxin dose of 0.035 mg to a 10-month-old child. Before administering the dose, the nurse takes the child's apical pulse, and it is 85. Which of the following interpretations of these data is most accurate?`,
+    prompt: `The nurse is administering the daily digoxin dose of 0.035 mg to a 10-month-old child. Before administering the dose, the nurse takes the child's apical pulse, and it is 85. Which of the following interpretations of these data is most accurate?`,
     options: [
       `The child has just awakened, and the heart action is slowest in the morning.`,
       `This is a normal rate for a 10-month-old child.`,
@@ -6243,7 +6242,7 @@ export const QUESTION_BANK = [
     id: 445,
     category: `Health Promotion & Maintenance`,
     chapter: `Pediatrics`,
-    question: `The nurse is discussing dietary needs of a child with a serious heart defect. The child is being treated with digoxin and hydrochlorothiazide (Hydrodiuril). The nurse should stress the importance of giving the child which of the following foods?`,
+    prompt: `The nurse is discussing dietary needs of a child with a serious heart defect. The child is being treated with digoxin and hydrochlorothiazide (Hydrodiuril). The nurse should stress the importance of giving the child which of the following foods?`,
     options: [
       `Cheese and ice cream`,
       `Finger foods such as hot dogs`,
@@ -6257,7 +6256,7 @@ export const QUESTION_BANK = [
     id: 446,
     category: `Health Promotion & Maintenance`,
     chapter: `Pediatrics`,
-    question: `A child with a cyanotic heart defect has a hypoxic episode. What should the nurse do for the child at this time?`,
+    prompt: `A child with a cyanotic heart defect has a hypoxic episode. What should the nurse do for the child at this time?`,
     options: [
       `Administer PRN oxygen and position the child in the squat position`,
       `Position the child side-lying and give the ordered morphine`,
@@ -6271,7 +6270,7 @@ export const QUESTION_BANK = [
     id: 447,
     category: `Health Promotion & Maintenance`,
     chapter: `Pediatrics`,
-    question: `The nurse notes that a child who has had a serious heart condition since birth does not do the expected activities for that age. The child's mother says, "I worry constantly about my child. I don't let the older children or the neighborhood kids play with my child very much. I try to make things as easy for my child as I can." What is the best interpretation of these data?`,
+    prompt: `The nurse notes that a child who has had a serious heart condition since birth does not do the expected activities for that age. The child's mother says, "I worry constantly about my child. I don't let the older children or the neighborhood kids play with my child very much. I try to make things as easy for my child as I can." What is the best interpretation of these data?`,
     options: [
       `The child is physically incapable due to his cardiac defect.`,
       `The child's mother is overprotective and allows the child few challenges to develop skills.`,
@@ -6285,7 +6284,7 @@ export const QUESTION_BANK = [
     id: 448,
     category: `Health Promotion & Maintenance`,
     chapter: `Pediatrics`,
-    question: `Ten days after cardiac surgery, an 18-month-old child is recovering well. The child is alert and fairly active and is playing well with the parents. Discharge is planned soon. The nurse notes that the parents are still very reluctant to allow the child to do anything without help. What is the best initial action for the nurse to take?`,
+    prompt: `Ten days after cardiac surgery, an 18-month-old child is recovering well. The child is alert and fairly active and is playing well with the parents. Discharge is planned soon. The nurse notes that the parents are still very reluctant to allow the child to do anything without help. What is the best initial action for the nurse to take?`,
     options: [
       `Reemphasize the need for autonomy in toddlers`,
       `Provide opportunities for autonomy when the parents are not present`,
@@ -6299,7 +6298,7 @@ export const QUESTION_BANK = [
     id: 449,
     category: `Health Promotion & Maintenance`,
     chapter: `Pediatrics`,
-    question: `Sodium salicylate is prescribed for a child with rheumatic fever. What should the nurse assess the child for because the child is on this medication?`,
+    prompt: `Sodium salicylate is prescribed for a child with rheumatic fever. What should the nurse assess the child for because the child is on this medication?`,
     options: [
       `Tinnitus and nausea`,
       `Dermatitis and blurred vision`,
@@ -6313,7 +6312,7 @@ export const QUESTION_BANK = [
     id: 450,
     category: `Health Promotion & Maintenance`,
     chapter: `Pediatrics`,
-    question: `The nurse makes an initial assessment of a 4-year-old child admitted with possible epiglottitis. Which observation is most suggestive of epiglottitis?`,
+    prompt: `The nurse makes an initial assessment of a 4-year-old child admitted with possible epiglottitis. Which observation is most suggestive of epiglottitis?`,
     options: [
       `Low-grade fever`,
       `Retching`,
@@ -6327,7 +6326,7 @@ export const QUESTION_BANK = [
     id: 451,
     category: `Health Promotion & Maintenance`,
     chapter: `Pediatrics`,
-    question: `Which nursing action could be life-threatening for a child with epiglottitis?`,
+    prompt: `Which nursing action could be life-threatening for a child with epiglottitis?`,
     options: [
       `Examining the child's throat with a tongue blade`,
       `Placing the child in a semi-sitting position`,
@@ -6341,7 +6340,7 @@ export const QUESTION_BANK = [
     id: 452,
     category: `Health Promotion & Maintenance`,
     chapter: `Pediatrics`,
-    question: `Which factor would most likely be a cause of epiglottitis?`,
+    prompt: `Which factor would most likely be a cause of epiglottitis?`,
     options: [
       `Acquiring the child's first puppy the day before the onset of symptoms`,
       `Exposure to the parainfluenza virus`,
@@ -6355,7 +6354,7 @@ export const QUESTION_BANK = [
     id: 453,
     category: `Health Promotion & Maintenance`,
     chapter: `Pediatrics`,
-    question: `The nurse is caring for a child who has epiglottitis. What position would the child be most likely to assume?`,
+    prompt: `The nurse is caring for a child who has epiglottitis. What position would the child be most likely to assume?`,
     options: [
       `Squatting`,
       `Sitting upright and leaning forward, supporting self with hands`,
@@ -6369,7 +6368,7 @@ export const QUESTION_BANK = [
     id: 454,
     category: `Health Promotion & Maintenance`,
     chapter: `Pediatrics`,
-    question: `The nurse is assessing a child who has epiglottitis and is having respiratory difficulty. Which of the following is the nurse most likely to assess in the child?`,
+    prompt: `The nurse is assessing a child who has epiglottitis and is having respiratory difficulty. Which of the following is the nurse most likely to assess in the child?`,
     options: [
       `Flaring of the nares; cyanosis; lethargy`,
       `Diminished breath sounds bilaterally; easily agitated`,
@@ -6383,7 +6382,7 @@ export const QUESTION_BANK = [
     id: 455,
     category: `Health Promotion & Maintenance`,
     chapter: `Pediatrics`,
-    question: `Which of the following is the most important goal of nursing care in the management of a child with epiglottitis?`,
+    prompt: `Which of the following is the most important goal of nursing care in the management of a child with epiglottitis?`,
     options: [
       `Preventing the spread of infection from the epiglottis throughout the respiratory tract`,
       `Reduction of high fever and prevention of hyperthermia`,
@@ -6397,7 +6396,7 @@ export const QUESTION_BANK = [
     id: 456,
     category: `Health Promotion & Maintenance`,
     chapter: `Pediatrics`,
-    question: `Which of the following is the most important nursing action when caring for a child with epiglottitis?`,
+    prompt: `Which of the following is the most important nursing action when caring for a child with epiglottitis?`,
     options: [
       `Cardiac monitoring`,
       `Blood pressure monitoring`,
@@ -6411,7 +6410,7 @@ export const QUESTION_BANK = [
     id: 457,
     category: `Health Promotion & Maintenance`,
     chapter: `Pediatrics`,
-    question: `A 5-year-old child is admitted with his first asthma attack. Which of the following would have been least likely to have precipitated his asthma attack?`,
+    prompt: `A 5-year-old child is admitted with his first asthma attack. Which of the following would have been least likely to have precipitated his asthma attack?`,
     options: [
       `A new puppy in the house`,
       `A visit from his uncle who smokes cigars`,
@@ -6425,7 +6424,7 @@ export const QUESTION_BANK = [
     id: 458,
     category: `Health Promotion & Maintenance`,
     chapter: `Pediatrics`,
-    question: `During aminophylline infusion, a child becomes restless and nauseated, and his blood pressure drops. What is the appropriate nursing response to these findings?`,
+    prompt: `During aminophylline infusion, a child becomes restless and nauseated, and his blood pressure drops. What is the appropriate nursing response to these findings?`,
     options: [
       `Because these are common side effects of the drug, which will pass when the infusion is completed, simply chart the response.`,
       `Stop the infusion immediately and notify the physician or charge nurse because the symptoms are suggestive of an adverse response to aminophylline.`,
@@ -6439,7 +6438,7 @@ export const QUESTION_BANK = [
     id: 459,
     category: `Health Promotion & Maintenance`,
     chapter: `Pediatrics`,
-    question: `It is important to teach the parents of a child with asthma about the disease and its long-term management. Teaching the child a play technique such as blowing cotton balls or ping pong balls across a table is good for him. Which is the best explanation for this play technique?`,
+    prompt: `It is important to teach the parents of a child with asthma about the disease and its long-term management. Teaching the child a play technique such as blowing cotton balls or ping pong balls across a table is good for him. Which is the best explanation for this play technique?`,
     options: [
       `It decreases expiratory pressure.`,
       `It provides for an extended expiratory phase of respiration.`,
@@ -6453,7 +6452,7 @@ export const QUESTION_BANK = [
     id: 460,
     category: `Health Promotion & Maintenance`,
     chapter: `Pediatrics`,
-    question: `After having chronic sore throats and repeated absences from school over the past year, a 6-year-old has been admitted to the pediatric unit for a tonsillectomy. Which would be the most important information to obtain in a preoperative health history?`,
+    prompt: `After having chronic sore throats and repeated absences from school over the past year, a 6-year-old has been admitted to the pediatric unit for a tonsillectomy. Which would be the most important information to obtain in a preoperative health history?`,
     options: [
       `Evidence of bleeding tendencies`,
       `Parents' responses to anesthesia, especially adverse reactions`,
@@ -6467,7 +6466,7 @@ export const QUESTION_BANK = [
     id: 461,
     category: `Health Promotion & Maintenance`,
     chapter: `Pediatrics`,
-    question: `A 6-year-old has just returned from having a tonsillectomy. The child's condition is stable, but the child remains quite drowsy. How should the nurse position this child?`,
+    prompt: `A 6-year-old has just returned from having a tonsillectomy. The child's condition is stable, but the child remains quite drowsy. How should the nurse position this child?`,
     options: [
       `On her back with head elevated 30 degrees`,
       `Upright`,
@@ -6481,7 +6480,7 @@ export const QUESTION_BANK = [
     id: 462,
     category: `Health Promotion & Maintenance`,
     chapter: `Pediatrics`,
-    question: `The nurse is caring for a child who had a tonsillectomy this morning. The child is observed to be swallowing continuously. What is the most appropriate initial nursing action?`,
+    prompt: `The nurse is caring for a child who had a tonsillectomy this morning. The child is observed to be swallowing continuously. What is the most appropriate initial nursing action?`,
     options: [
       `Administer acetaminophen for pain`,
       `Place an ice collar around her throat`,
@@ -6495,7 +6494,7 @@ export const QUESTION_BANK = [
     id: 463,
     category: `Health Promotion & Maintenance`,
     chapter: `Pediatrics`,
-    question: `The nurse is caring for a 6-year-old child who had a tonsillectomy this morning. Once the child is fully awake and alert, which liquid is the best to offer her?`,
+    prompt: `The nurse is caring for a 6-year-old child who had a tonsillectomy this morning. Once the child is fully awake and alert, which liquid is the best to offer her?`,
     options: [
       `A cherry popsicle`,
       `Apple juice`,
@@ -6509,7 +6508,7 @@ export const QUESTION_BANK = [
     id: 464,
     category: `Health Promotion & Maintenance`,
     chapter: `Pediatrics`,
-    question: `A 10-year-old child has had diagnosed bronchial asthma for three years. The child has been admitted to the pediatric unit in acute respiratory distress. Which of the following would be most characteristic of the child's asthmatic attack upon admission?`,
+    prompt: `A 10-year-old child has had diagnosed bronchial asthma for three years. The child has been admitted to the pediatric unit in acute respiratory distress. Which of the following would be most characteristic of the child's asthmatic attack upon admission?`,
     options: [
       `Expiratory wheezing`,
       `Inspiratory stridor`,
@@ -6523,7 +6522,7 @@ export const QUESTION_BANK = [
     id: 465,
     category: `Health Promotion & Maintenance`,
     chapter: `Pediatrics`,
-    question: `A child is admitted with asthma. Which aspects of the health history would be most closely associated with asthma?`,
+    prompt: `A child is admitted with asthma. Which aspects of the health history would be most closely associated with asthma?`,
     options: [
       `The child's grandfather died of emphysema at age 76.`,
       `The child's grandmother died of lung cancer.`,
@@ -6537,7 +6536,7 @@ export const QUESTION_BANK = [
     id: 466,
     category: `Health Promotion & Maintenance`,
     chapter: `Pediatrics`,
-    question: `A stat dose of epinephrine is ordered for a child with asthma. How should the nurse administer the epinephrine?`,
+    prompt: `A stat dose of epinephrine is ordered for a child with asthma. How should the nurse administer the epinephrine?`,
     options: [
       `Intramuscular`,
       `Sublingual`,
@@ -6551,7 +6550,7 @@ export const QUESTION_BANK = [
     id: 467,
     category: `Health Promotion & Maintenance`,
     chapter: `Pediatrics`,
-    question: `A child with an asthma attack has received epinephrine. The child is also to receive isoproterenol (Isuprel) via intermittent positive pressure breathing. When should the isoproterenol be given in relation to the epinephrine?`,
+    prompt: `A child with an asthma attack has received epinephrine. The child is also to receive isoproterenol (Isuprel) via intermittent positive pressure breathing. When should the isoproterenol be given in relation to the epinephrine?`,
     options: [
       `Isoproterenol should be given 30 minutes prior to the administration of epinephrine.`,
       `Isoproterenol should never be given in conjunction with epinephrine. Check with the physician.`,
@@ -6565,7 +6564,7 @@ export const QUESTION_BANK = [
     id: 468,
     category: `Health Promotion & Maintenance`,
     chapter: `Pediatrics`,
-    question: `A child is having an asthma attack. The nurse places the child in an upright position for which of the following reasons?`,
+    prompt: `A child is having an asthma attack. The nurse places the child in an upright position for which of the following reasons?`,
     options: [
       `To prevent the aspiration of mucus`,
       `To visualize abnormal inspiratory excursion`,
@@ -6579,7 +6578,7 @@ export const QUESTION_BANK = [
     id: 469,
     category: `Health Promotion & Maintenance`,
     chapter: `Pediatrics`,
-    question: `A 13-month-old child is diagnosed with croup and placed in a croup tent. Which toy is most appropriate for the nurse to give the child?`,
+    prompt: `A 13-month-old child is diagnosed with croup and placed in a croup tent. Which toy is most appropriate for the nurse to give the child?`,
     options: [
       `A doll made of cotton`,
       `A music box`,
@@ -6593,7 +6592,7 @@ export const QUESTION_BANK = [
     id: 470,
     category: `Health Promotion & Maintenance`,
     chapter: `Pediatrics`,
-    question: `The nurse is caring for a 5-year-old child who has cystic fibrosis. What should the nurse do to help the child manage secretions and avoid respiratory distress?`,
+    prompt: `The nurse is caring for a 5-year-old child who has cystic fibrosis. What should the nurse do to help the child manage secretions and avoid respiratory distress?`,
     options: [
       `Administer continuous oxygen therapy`,
       `Perform chest physiotherapy every four hours`,
@@ -6607,7 +6606,7 @@ export const QUESTION_BANK = [
     id: 471,
     category: `Health Promotion & Maintenance`,
     chapter: `Pediatrics`,
-    question: `The nurse is to administer pancreatic enzymes to an 8-month-old child who has cystic fibrosis. When should this medication be administered?`,
+    prompt: `The nurse is to administer pancreatic enzymes to an 8-month-old child who has cystic fibrosis. When should this medication be administered?`,
     options: [
       `A half hour before meals`,
       `With meals`,
@@ -6621,7 +6620,7 @@ export const QUESTION_BANK = [
     id: 472,
     category: `Health Promotion & Maintenance`,
     chapter: `Pediatrics`,
-    question: `A 10-month-old child is being treated for otitis media. What is the most important nursing action to prevent recurrence of the infection?`,
+    prompt: `A 10-month-old child is being treated for otitis media. What is the most important nursing action to prevent recurrence of the infection?`,
     options: [
       `Administer acetaminophen as ordered`,
       `Encourage the parents to maintain a smoke-free home environment`,
@@ -6635,7 +6634,7 @@ export const QUESTION_BANK = [
     id: 473,
     category: `Health Promotion & Maintenance`,
     chapter: `Pediatrics`,
-    question: `The nurse is caring for a 6-month-old infant who is in a croup tent. The child's mother calls and tells the nurse that the child's clothes are all wet. What is the best action for the nurse to take?`,
+    prompt: `The nurse is caring for a 6-month-old infant who is in a croup tent. The child's mother calls and tells the nurse that the child's clothes are all wet. What is the best action for the nurse to take?`,
     options: [
       `Explain to the mother that this is normal because the croup tent has high humidity`,
       `Change the child's clothing`,
@@ -6649,7 +6648,7 @@ export const QUESTION_BANK = [
     id: 474,
     category: `Health Promotion & Maintenance`,
     chapter: `Pediatrics`,
-    question: `A 5-year-old child has cystic fibrosis. What is best to offer the child on a hot summer day?`,
+    prompt: `A 5-year-old child has cystic fibrosis. What is best to offer the child on a hot summer day?`,
     options: [
       `Kool-Aid`,
       `Ice cream`,
@@ -6663,7 +6662,7 @@ export const QUESTION_BANK = [
     id: 475,
     category: `Health Promotion & Maintenance`,
     chapter: `Pediatrics`,
-    question: `A 10-month-old child is seen in the well baby clinic. Which assessment finding by the nurse indicates a need for further neurological evaluation?`,
+    prompt: `A 10-month-old child is seen in the well baby clinic. Which assessment finding by the nurse indicates a need for further neurological evaluation?`,
     options: [
       `Inability to crawl`,
       `Speaking only two to four words`,
@@ -6677,7 +6676,7 @@ export const QUESTION_BANK = [
     id: 476,
     category: `Health Promotion & Maintenance`,
     chapter: `Pediatrics`,
-    question: `What should the nurse do to protect a child from injury during a seizure?`,
+    prompt: `What should the nurse do to protect a child from injury during a seizure?`,
     options: [
       `Restrain the child's arms and legs`,
       `Place a tongue blade in the child's mouth`,
@@ -6691,7 +6690,7 @@ export const QUESTION_BANK = [
     id: 477,
     category: `Health Promotion & Maintenance`,
     chapter: `Pediatrics`,
-    question: `The nurse is teaching the parents of a child who has cerebral palsy to feed the child. What position is best to recommend?`,
+    prompt: `The nurse is teaching the parents of a child who has cerebral palsy to feed the child. What position is best to recommend?`,
     options: [
       `A normal eating position and provide stabilization of the jaw`,
       `A semi-reclining position`,
@@ -6705,7 +6704,7 @@ export const QUESTION_BANK = [
     id: 478,
     category: `Health Promotion & Maintenance`,
     chapter: `Pediatrics`,
-    question: `A 1-year-old child is admitted to the pediatric unit with the diagnosis of bacterial meningitis. Which room should the nurse assign to this child?`,
+    prompt: `A 1-year-old child is admitted to the pediatric unit with the diagnosis of bacterial meningitis. Which room should the nurse assign to this child?`,
     options: [
       `A room with a 2-year-old who had surgery for a hernia repair`,
       `A room with a 1-year-old child who has pneumonia`,
@@ -6719,7 +6718,7 @@ export const QUESTION_BANK = [
     id: 479,
     category: `Health Promotion & Maintenance`,
     chapter: `Pediatrics`,
-    question: `The nurse is caring for an infant who is admitted with bacterial meningitis. What is the first priority when providing nursing care for this child?`,
+    prompt: `The nurse is caring for an infant who is admitted with bacterial meningitis. What is the first priority when providing nursing care for this child?`,
     options: [
       `Administer ordered antibiotics as soon as possible.`,
       `Keep the room quiet and dim.`,
@@ -6733,7 +6732,7 @@ export const QUESTION_BANK = [
     id: 480,
     category: `Health Promotion & Maintenance`,
     chapter: `Pediatrics`,
-    question: `A newborn has a myelomeningocele. What is the most important nursing action prior to surgery?`,
+    prompt: `A newborn has a myelomeningocele. What is the most important nursing action prior to surgery?`,
     options: [
       `Turn the infant every two hours`,
       `Encourage holding and cuddling by the parents`,
@@ -6747,7 +6746,7 @@ export const QUESTION_BANK = [
     id: 481,
     category: `Health Promotion & Maintenance`,
     chapter: `Pediatrics`,
-    question: `A 3-year-old child is being seen in the neurology clinic for a routine visit. The child had a repair of a myelomeningocele shortly after birth. The child's mother asks the nurse when she can accomplish bladder training. What is the best reply?`,
+    prompt: `A 3-year-old child is being seen in the neurology clinic for a routine visit. The child had a repair of a myelomeningocele shortly after birth. The child's mother asks the nurse when she can accomplish bladder training. What is the best reply?`,
     options: [
       `"You need to take your child to the bathroom every two hours."`,
       `"We will teach you how to do intermittent, clean catheterization."`,
@@ -6761,7 +6760,7 @@ export const QUESTION_BANK = [
     id: 482,
     category: `Health Promotion & Maintenance`,
     chapter: `Pediatrics`,
-    question: `Which assessment regularly performed on newborns and infants will do most to help with early identification of infants who might have hydrocephalus?`,
+    prompt: `Which assessment regularly performed on newborns and infants will do most to help with early identification of infants who might have hydrocephalus?`,
     options: [
       `Head circumference`,
       `Weight measurement`,
@@ -6775,7 +6774,7 @@ export const QUESTION_BANK = [
     id: 483,
     category: `Health Promotion & Maintenance`,
     chapter: `Pediatrics`,
-    question: `How should the nurse position a 4-month-old infant who has hydrocephalus?`,
+    prompt: `How should the nurse position a 4-month-old infant who has hydrocephalus?`,
     options: [
       `Side-lying`,
       `Sitting up in an infant seat`,
@@ -6789,7 +6788,7 @@ export const QUESTION_BANK = [
     id: 484,
     category: `Health Promotion & Maintenance`,
     chapter: `Pediatrics`,
-    question: `The parents of a child who has otitis media ask the nurse why the doctor told them to give the child acetaminophen instead of aspirin. What should the nurse include when answering?`,
+    prompt: `The parents of a child who has otitis media ask the nurse why the doctor told them to give the child acetaminophen instead of aspirin. What should the nurse include when answering?`,
     options: [
       `Acetaminophen is more effective against ear pain than aspirin.`,
       `Acetaminophen is better at reducing temperature than aspirin.`,
@@ -6803,7 +6802,7 @@ export const QUESTION_BANK = [
     id: 485,
     category: `Health Promotion & Maintenance`,
     chapter: `Pediatrics`,
-    question: `The parents of a child who is newly diagnosed with Tay-Sachs disease ask the nurse, "If we have more children, could they be affected?" Which information should be included when responding to the parents?`,
+    prompt: `The parents of a child who is newly diagnosed with Tay-Sachs disease ask the nurse, "If we have more children, could they be affected?" Which information should be included when responding to the parents?`,
     options: [
       `Boys are more likely to inherit the disease than girls.`,
       `Tay-Sachs is not inherited, so there is little chance other children will have it.`,
@@ -6817,7 +6816,7 @@ export const QUESTION_BANK = [
     id: 486,
     category: `Health Promotion & Maintenance`,
     chapter: `Pediatrics`,
-    question: `When planning care for an infant who has Tay-Sachs disease, the nurse knows that the care is aimed at which of the following?`,
+    prompt: `When planning care for an infant who has Tay-Sachs disease, the nurse knows that the care is aimed at which of the following?`,
     options: [
       `Providing supportive care until the child dies`,
       `Preventing spread of the disease to others`,
@@ -6831,7 +6830,7 @@ export const QUESTION_BANK = [
     id: 487,
     category: `Health Promotion & Maintenance`,
     chapter: `Pediatrics`,
-    question: `An infant is born with a meningomyelocele. How should the nurse position the infant before surgery?`,
+    prompt: `An infant is born with a meningomyelocele. How should the nurse position the infant before surgery?`,
     options: [
       `Prone with a pillow under the legs`,
       `Supine with head elevated`,
@@ -6845,7 +6844,7 @@ export const QUESTION_BANK = [
     id: 488,
     category: `Health Promotion & Maintenance`,
     chapter: `Pediatrics`,
-    question: `The parents of a 2-year-old child who has meningitis ask the nurse why the lights are dim in the child's room even in the daytime. What information should the nurse include in the answer?`,
+    prompt: `The parents of a 2-year-old child who has meningitis ask the nurse why the lights are dim in the child's room even in the daytime. What information should the nurse include in the answer?`,
     options: [
       `Rest is essential, and a dimly lit room promotes rest.`,
       `The child is sensitive to light and may develop seizures.`,
@@ -6859,7 +6858,7 @@ export const QUESTION_BANK = [
     id: 489,
     category: `Health Promotion & Maintenance`,
     chapter: `Pediatrics`,
-    question: `A 6-year-old child is brought to the doctor's office with crusts on the eyelid and a very red conjunctiva. The doctor prescribes antibiotic eye drops. The child's mother asks the nurse if the child can go back to school this afternoon. How should the nurse respond?`,
+    prompt: `A 6-year-old child is brought to the doctor's office with crusts on the eyelid and a very red conjunctiva. The doctor prescribes antibiotic eye drops. The child's mother asks the nurse if the child can go back to school this afternoon. How should the nurse respond?`,
     options: [
       `Teach the child not to touch his eyes, and take him back to school.`,
       `He should stay out of school today but can go back tomorrow.`,
@@ -6873,7 +6872,7 @@ export const QUESTION_BANK = [
     id: 490,
     category: `Health Promotion & Maintenance`,
     chapter: `Pediatrics`,
-    question: `The nurse is administering eye drops to a child who has conjunctivitis. Where should the eye drops be placed?`,
+    prompt: `The nurse is administering eye drops to a child who has conjunctivitis. Where should the eye drops be placed?`,
     options: [
       `On the pupil`,
       `In the conjunctival sac`,
@@ -6887,7 +6886,7 @@ export const QUESTION_BANK = [
     id: 491,
     category: `Health Promotion & Maintenance`,
     chapter: `Pediatrics`,
-    question: `The nurse is caring for a 5-month-old infant who had a craniotomy following a head injury. Which observation the LPN/LVN makes should be reported to the charge nurse?`,
+    prompt: `The nurse is caring for a 5-month-old infant who had a craniotomy following a head injury. Which observation the LPN/LVN makes should be reported to the charge nurse?`,
     options: [
       `Respirations of 38`,
       `Difficulty arousing the baby from a nap`,
@@ -6901,7 +6900,7 @@ export const QUESTION_BANK = [
     id: 492,
     category: `Health Promotion & Maintenance`,
     chapter: `Pediatrics`,
-    question: `The nurse is caring for a child who has cerebral palsy. The nurse notes that the child does not writhe when sleeping but is in constant motion when awake. How should the nurse interpret this observation?`,
+    prompt: `The nurse is caring for a child who has cerebral palsy. The nurse notes that the child does not writhe when sleeping but is in constant motion when awake. How should the nurse interpret this observation?`,
     options: [
       `The child should be encouraged to do something productive so she will not think about writhing.`,
       `This indicates that the child could control the movements if she wanted to. A behavior modification program may be effective.`,
@@ -6915,7 +6914,7 @@ export const QUESTION_BANK = [
     id: 493,
     category: `Health Promotion & Maintenance`,
     chapter: `Pediatrics`,
-    question: `A 10-year-old boy tells his neighbor, a nurse, that his eyes were "stuck together" this morning when he woke up. The nurse notes that his eyes are red, and the conjunctiva is inflamed. What should the nurse neighbor recommend to the boy's mother?`,
+    prompt: `A 10-year-old boy tells his neighbor, a nurse, that his eyes were "stuck together" this morning when he woke up. The nurse notes that his eyes are red, and the conjunctiva is inflamed. What should the nurse neighbor recommend to the boy's mother?`,
     options: [
       `Tell his mother that he may have a contagious disease and should be seen by his doctor today.`,
       `Encourage the mother to make an appointment to see the eye doctor.`,
@@ -6929,7 +6928,7 @@ export const QUESTION_BANK = [
     id: 494,
     category: `Health Promotion & Maintenance`,
     chapter: `Pediatrics`,
-    question: `The nurse is caring for an infant who has had surgery for a meningomyelocele. When thinking of long-term care needs, which understanding is most accurate?`,
+    prompt: `The nurse is caring for an infant who has had surgery for a meningomyelocele. When thinking of long-term care needs, which understanding is most accurate?`,
     options: [
       `The surgery corrects the defect, and the infant should develop normally.`,
       `The infant is likely to have lower body paralysis and bowel and bladder dysfunction.`,
@@ -6943,7 +6942,7 @@ export const QUESTION_BANK = [
     id: 495,
     category: `Health Promotion & Maintenance`,
     chapter: `Pediatrics`,
-    question: `The nurse is teaching the mother of a newborn who has a cleft lip and palate to feed the infant. Which would be least appropriate to include?`,
+    prompt: `The nurse is teaching the mother of a newborn who has a cleft lip and palate to feed the infant. Which would be least appropriate to include?`,
     options: [
       `Place the tip of the Asepto syringe at the front of the baby's mouth so that the baby can suck.`,
       `Rinse the mouth with saline after each feeding to minimize infections.`,
@@ -6957,7 +6956,7 @@ export const QUESTION_BANK = [
     id: 496,
     category: `Health Promotion & Maintenance`,
     chapter: `Pediatrics`,
-    question: `The mother of a 2-month-old infant with a cleft lip and palate calls the clinic. She tells the nurse that the baby has a temperature of 102°F, has been turning her head from side to side, and has been eating poorly. What should the nurse advise?`,
+    prompt: `The mother of a 2-month-old infant with a cleft lip and palate calls the clinic. She tells the nurse that the baby has a temperature of 102°F, has been turning her head from side to side, and has been eating poorly. What should the nurse advise?`,
     options: [
       `Clean the baby's ears with warm water.`,
       `Give the baby infant acetominophen 0.3 cc and call back in four hours after taking her temperature.`,
@@ -6971,7 +6970,7 @@ export const QUESTION_BANK = [
     id: 497,
     category: `Health Promotion & Maintenance`,
     chapter: `Pediatrics`,
-    question: `A 3-month-old infant is hospitalized for repair of a cleft lip. Following surgery, the baby returns to the unit with a Logan bow in place. The baby is awake and beginning to whimper. The baby's color is pink, and pulse is 120 with respirations of 38. An IV is ordered in the baby's right hand at 15 cc per hour. The fluid is not infusing well. Her right hand is edematous. The jacket restraint has loosened, and one arm has partially come out. What is the priority nursing action?`,
+    prompt: `A 3-month-old infant is hospitalized for repair of a cleft lip. Following surgery, the baby returns to the unit with a Logan bow in place. The baby is awake and beginning to whimper. The baby's color is pink, and pulse is 120 with respirations of 38. An IV is ordered in the baby's right hand at 15 cc per hour. The fluid is not infusing well. Her right hand is edematous. The jacket restraint has loosened, and one arm has partially come out. What is the priority nursing action?`,
     options: [
       `Recheck the baby's vital signs`,
       `Check the baby's IV site for infiltration`,
@@ -6985,7 +6984,7 @@ export const QUESTION_BANK = [
     id: 498,
     category: `Health Promotion & Maintenance`,
     chapter: `Pediatrics`,
-    question: `Following surgery for repair of a cleft lip, it is important to prevent excessive crying by the infant. What should the nurse do to accomplish this?`,
+    prompt: `Following surgery for repair of a cleft lip, it is important to prevent excessive crying by the infant. What should the nurse do to accomplish this?`,
     options: [
       `Give the baby a pacifier to meet his/her sucking needs.`,
       `Place the baby in the usual sleeping position, which is on the abdomen.`,
@@ -6999,7 +6998,7 @@ export const QUESTION_BANK = [
     id: 499,
     category: `Health Promotion & Maintenance`,
     chapter: `Pediatrics`,
-    question: `The nurse is doing discharge planning and establishing long-term goals for an infant who had a cleft lip repair. The baby also has a cleft palate. Which long-term goal is most appropriate and necessary for this child?`,
+    prompt: `The nurse is doing discharge planning and establishing long-term goals for an infant who had a cleft lip repair. The baby also has a cleft palate. Which long-term goal is most appropriate and necessary for this child?`,
     options: [
       `Prevent joint contractures`,
       `Promote adequate speech`,
@@ -7013,7 +7012,7 @@ export const QUESTION_BANK = [
     id: 500,
     category: `Health Promotion & Maintenance`,
     chapter: `Pediatrics`,
-    question: `The nurse is caring for an 8-month-old infant who has had diarrhea for two days. Which is the most useful in assessing the degree of dehydration?`,
+    prompt: `The nurse is caring for an 8-month-old infant who has had diarrhea for two days. Which is the most useful in assessing the degree of dehydration?`,
     options: [
       `Number of stools`,
       `Skin turgor`,
@@ -7027,7 +7026,7 @@ export const QUESTION_BANK = [
     id: 501,
     category: `Health Promotion & Maintenance`,
     chapter: `Pediatrics`,
-    question: `An infant who has severe diarrhea and dehydration is hospitalized and is NPO. Intravenous fluids are ordered. What is the immediate goal of care?`,
+    prompt: `An infant who has severe diarrhea and dehydration is hospitalized and is NPO. Intravenous fluids are ordered. What is the immediate goal of care?`,
     options: [
       `Restoration of intravascular volume`,
       `Prevention of further diarrhea`,
@@ -7041,7 +7040,7 @@ export const QUESTION_BANK = [
     id: 502,
     category: `Health Promotion & Maintenance`,
     chapter: `Pediatrics`,
-    question: `The nurse is caring for a 9-month-old infant who is allowed only clear fluids. What are the most appropriate liquids for the nurse to offer?`,
+    prompt: `The nurse is caring for a 9-month-old infant who is allowed only clear fluids. What are the most appropriate liquids for the nurse to offer?`,
     options: [
       `7-Up and ginger ale`,
       `Pedialyte and glucose water`,
@@ -7055,7 +7054,7 @@ export const QUESTION_BANK = [
     id: 503,
     category: `Health Promotion & Maintenance`,
     chapter: `Pediatrics`,
-    question: `The nurse is caring for an infant who is being treated for severe diarrhea. Twenty-four hours after admission, the diet is advanced from NPO to clear liquids. After clear liquids are started, the baby has four stools in two hours. What should the nurse do?`,
+    prompt: `The nurse is caring for an infant who is being treated for severe diarrhea. Twenty-four hours after admission, the diet is advanced from NPO to clear liquids. After clear liquids are started, the baby has four stools in two hours. What should the nurse do?`,
     options: [
       `Continue oral feedings`,
       `Take the pulse, temperature, and respirations`,
@@ -7069,7 +7068,7 @@ export const QUESTION_BANK = [
     id: 504,
     category: `Health Promotion & Maintenance`,
     chapter: `Pediatrics`,
-    question: `A 12-month-old child who was diagnosed at birth as having Hirschsprung's disease has been maintained at home under conservative treatment. The parents have brought the child to the clinic for a well-baby examination. After interviewing the child's parents, the nurse concludes that an appropriate treatment regimen is being followed. Which of the following would indicate this?`,
+    prompt: `A 12-month-old child who was diagnosed at birth as having Hirschsprung's disease has been maintained at home under conservative treatment. The parents have brought the child to the clinic for a well-baby examination. After interviewing the child's parents, the nurse concludes that an appropriate treatment regimen is being followed. Which of the following would indicate this?`,
     options: [
       `Use of tap water enemas and a low-residue diet`,
       `Use of soap suds enemas and a high-fiber diet`,
@@ -7083,7 +7082,7 @@ export const QUESTION_BANK = [
     id: 505,
     category: `Health Promotion & Maintenance`,
     chapter: `Pediatrics`,
-    question: `A 3-month-old infant is admitted to the pediatric unit with a diagnosis of Hirschsprung's disease. What is most important when monitoring the infant's status?`,
+    prompt: `A 3-month-old infant is admitted to the pediatric unit with a diagnosis of Hirschsprung's disease. What is most important when monitoring the infant's status?`,
     options: [
       `Weigh the infant every morning.`,
       `Maintain intake and output records.`,
@@ -7097,7 +7096,7 @@ export const QUESTION_BANK = [
     id: 506,
     category: `Health Promotion & Maintenance`,
     chapter: `Pediatrics`,
-    question: `An infant who has Hirschsprung's disease is scheduled for surgery. Which explanation should the nurse include when discussing the upcoming surgery with the parents?`,
+    prompt: `An infant who has Hirschsprung's disease is scheduled for surgery. Which explanation should the nurse include when discussing the upcoming surgery with the parents?`,
     options: [
       `They will need to learn colostomy care because the child will have a permanent colostomy.`,
       `The baby will have tap water enemas until clear before the surgery.`,
@@ -7111,7 +7110,7 @@ export const QUESTION_BANK = [
     id: 507,
     category: `Health Promotion & Maintenance`,
     chapter: `Pediatrics`,
-    question: `A 5-week-old infant is seen in the physician's office for gastroesophageal reflux. What should the nurse suggest to the parents regarding feeding practices?`,
+    prompt: `A 5-week-old infant is seen in the physician's office for gastroesophageal reflux. What should the nurse suggest to the parents regarding feeding practices?`,
     options: [
       `Dilute the formula to facilitate better absorption.`,
       `Position the child at a 30- to 45-degree angle after feedings.`,
@@ -7125,7 +7124,7 @@ export const QUESTION_BANK = [
     id: 508,
     category: `Health Promotion & Maintenance`,
     chapter: `Pediatrics`,
-    question: `Which assessment finding would the nurse expect in an infant diagnosed with pyloric stenosis?`,
+    prompt: `Which assessment finding would the nurse expect in an infant diagnosed with pyloric stenosis?`,
     options: [
       `Abdominal rigidity`,
       `Ribbon-like stools`,
@@ -7139,7 +7138,7 @@ export const QUESTION_BANK = [
     id: 509,
     category: `Health Promotion & Maintenance`,
     chapter: `Pediatrics`,
-    question: `An infant has had frequent episodes of green, mucus-containing stools. The nursing assessment reveals that the infant has dry mucus membranes, poor skin turgor, and an absence of tearing. Based on these data, what is the most appropriate nursing diagnosis?`,
+    prompt: `An infant has had frequent episodes of green, mucus-containing stools. The nursing assessment reveals that the infant has dry mucus membranes, poor skin turgor, and an absence of tearing. Based on these data, what is the most appropriate nursing diagnosis?`,
     options: [
       `Impaired skin integrity related to irritation caused by frequent, loose stools`,
       `Deficient fluid volume related to frequent, loose stools`,
@@ -7153,7 +7152,7 @@ export const QUESTION_BANK = [
     id: 510,
     category: `Health Promotion & Maintenance`,
     chapter: `Pediatrics`,
-    question: `The nurse is caring for an infant admitted with diarrhea, poor skin turgor, and dry mucous membranes. Which laboratory data would cause the nurse the most concern?`,
+    prompt: `The nurse is caring for an infant admitted with diarrhea, poor skin turgor, and dry mucous membranes. Which laboratory data would cause the nurse the most concern?`,
     options: [
       `Sodium 140 mmol/L`,
       `Urine specific gravity 1.035`,
@@ -7167,7 +7166,7 @@ export const QUESTION_BANK = [
     id: 511,
     category: `Health Promotion & Maintenance`,
     chapter: `Pediatrics`,
-    question: `Following surgery for pyloric stenosis, a 5-week-old infant is started on glucose water. When will infant formula be started?`,
+    prompt: `Following surgery for pyloric stenosis, a 5-week-old infant is started on glucose water. When will infant formula be started?`,
     options: [
       `Following the return of bowel sounds`,
       `After vital signs are stable`,
@@ -7181,7 +7180,7 @@ export const QUESTION_BANK = [
     id: 512,
     category: `Health Promotion & Maintenance`,
     chapter: `Pediatrics`,
-    question: `The nurse is feeding a newborn infant glucose water. Which finding would make the nurse suspect that the infant has esophageal atresia?`,
+    prompt: `The nurse is feeding a newborn infant glucose water. Which finding would make the nurse suspect that the infant has esophageal atresia?`,
     options: [
       `The infant has projectile vomiting.`,
       `The infant sucks very slowly.`,
@@ -7195,7 +7194,7 @@ export const QUESTION_BANK = [
     id: 513,
     category: `Health Promotion & Maintenance`,
     chapter: `Pediatrics`,
-    question: `The parents of an infant who has esophageal atresia ask the nurse how the baby will eat. Which response by the nurse is most accurate?`,
+    prompt: `The parents of an infant who has esophageal atresia ask the nurse how the baby will eat. Which response by the nurse is most accurate?`,
     options: [
       `"A tube will be passed from the nose to the stomach."`,
       `"The doctor will place a tube through the abdomen into the baby's stomach."`,
@@ -7209,7 +7208,7 @@ export const QUESTION_BANK = [
     id: 514,
     category: `Health Promotion & Maintenance`,
     chapter: `Pediatrics`,
-    question: `The nurse is teaching the parents of a child who has celiac disease about the dietary modifications that need to be made. Which foods, if selected by the parents, indicate an understanding of the child's dietary needs?`,
+    prompt: `The nurse is teaching the parents of a child who has celiac disease about the dietary modifications that need to be made. Which foods, if selected by the parents, indicate an understanding of the child's dietary needs?`,
     options: [
       `Toast, orange juice, and an egg`,
       `Rice cake, milk, and a banana`,
@@ -7223,7 +7222,7 @@ export const QUESTION_BANK = [
     id: 515,
     category: `Health Promotion & Maintenance`,
     chapter: `Pediatrics`,
-    question: `A 3-year-old child is admitted with a diagnosis of nephrotic syndrome. Which signs and symptoms would the nurse expect the parents to report when the child is admitted?`,
+    prompt: `A 3-year-old child is admitted with a diagnosis of nephrotic syndrome. Which signs and symptoms would the nurse expect the parents to report when the child is admitted?`,
     options: [
       `Jaundiced skin and pale stools`,
       `Blood in the urine and high fever`,
@@ -7237,7 +7236,7 @@ export const QUESTION_BANK = [
     id: 516,
     category: `Health Promotion & Maintenance`,
     chapter: `Pediatrics`,
-    question: `Which assessment by the nurse would best indicate that a child with nephrotic syndrome is responding appropriately to treatment?`,
+    prompt: `Which assessment by the nurse would best indicate that a child with nephrotic syndrome is responding appropriately to treatment?`,
     options: [
       `The child has more energy.`,
       `The child's pulse rate increases.`,
@@ -7251,7 +7250,7 @@ export const QUESTION_BANK = [
     id: 517,
     category: `Health Promotion & Maintenance`,
     chapter: `Pediatrics`,
-    question: `A 3-year-old child is admitted with a tentative diagnosis of Wilms' tumor. What nursing action is essential because of the diagnosis?`,
+    prompt: `A 3-year-old child is admitted with a tentative diagnosis of Wilms' tumor. What nursing action is essential because of the diagnosis?`,
     options: [
       `Avoid palpating the abdomen`,
       `Encourage the child to eat adequately`,
@@ -7265,7 +7264,7 @@ export const QUESTION_BANK = [
     id: 518,
     category: `Health Promotion & Maintenance`,
     chapter: `Pediatrics`,
-    question: `A 3-year-old child is brought to the physician's office by the parent. The parent states that the child was completely toilet trained but has been "having accidents" recently. The parent also tells the nurse that the child is voiding more often than usual and that the urine has a strong odor. What is the best response by the nurse?`,
+    prompt: `A 3-year-old child is brought to the physician's office by the parent. The parent states that the child was completely toilet trained but has been "having accidents" recently. The parent also tells the nurse that the child is voiding more often than usual and that the urine has a strong odor. What is the best response by the nurse?`,
     options: [
       `"These could be symptoms of a urinary tract infection. We should obtain a urine specimen for analysis."`,
       `"Many preschool children regress when something stressful happens. Has your child been under any stress lately?"`,
@@ -7279,7 +7278,7 @@ export const QUESTION_BANK = [
     id: 519,
     category: `Health Promotion & Maintenance`,
     chapter: `Pediatrics`,
-    question: `A 4-year-old child has been admitted to the nursing unit with a diagnosis of nephrotic syndrome. The symptoms include generalized edema with weight gain, hypoproteinemia, hyperlipidemia, hypotension, and decreased urine output. In developing a nursing care plan for this child, which nursing diagnosis would be highest priority?`,
+    prompt: `A 4-year-old child has been admitted to the nursing unit with a diagnosis of nephrotic syndrome. The symptoms include generalized edema with weight gain, hypoproteinemia, hyperlipidemia, hypotension, and decreased urine output. In developing a nursing care plan for this child, which nursing diagnosis would be highest priority?`,
     options: [
       `Risk for imbalanced nutrition: less than body requirements related to protein loss and poor appetite`,
       `Infection related to edema secondary to nephrotic syndrome`,
@@ -7293,7 +7292,7 @@ export const QUESTION_BANK = [
     id: 520,
     category: `Health Promotion & Maintenance`,
     chapter: `Pediatrics`,
-    question: `The nurse is caring for an infant born with exstrophy of the bladder. What will be included in the care of this infant?`,
+    prompt: `The nurse is caring for an infant born with exstrophy of the bladder. What will be included in the care of this infant?`,
     options: [
       `Give continuous saline irrigations of the exposed bladder`,
       `Cover the exposed bladder with plastic wrap`,
@@ -7307,7 +7306,7 @@ export const QUESTION_BANK = [
     id: 521,
     category: `Health Promotion & Maintenance`,
     chapter: `Pediatrics`,
-    question: `A 5-year-old child had an orchiopexy this morning. Which nursing action is essential?`,
+    prompt: `A 5-year-old child had an orchiopexy this morning. Which nursing action is essential?`,
     options: [
       `Tell the parents not to disturb the tension mechanism until the physician removes it in a week or 10 days`,
       `Explain to the parents that the child has a good chance of being sterile`,
@@ -7321,7 +7320,7 @@ export const QUESTION_BANK = [
     id: 522,
     category: `Health Promotion & Maintenance`,
     chapter: `Pediatrics`,
-    question: `The parents of a newborn with hypospadias ask the nurse why the doctor told them the baby could not be circumcised. What is the best response?`,
+    prompt: `The parents of a newborn with hypospadias ask the nurse why the doctor told them the baby could not be circumcised. What is the best response?`,
     options: [
       `The infant is not stable enough for the procedure.`,
       `The deformity makes circumcision impossible.`,
@@ -7335,7 +7334,7 @@ export const QUESTION_BANK = [
     id: 523,
     category: `Health Promotion & Maintenance`,
     chapter: `Pediatrics`,
-    question: `A 2-year-old child has just been diagnosed with a Wilms' tumor. Surgery is recommended. The parents tell the nurse that they feel they are being pushed into surgery and wonder if they should wait and get more opinions. What information is essential for the nurse to include when responding to the parents?`,
+    prompt: `A 2-year-old child has just been diagnosed with a Wilms' tumor. Surgery is recommended. The parents tell the nurse that they feel they are being pushed into surgery and wonder if they should wait and get more opinions. What information is essential for the nurse to include when responding to the parents?`,
     options: [
       `Surgery is one of several options for treating a Wilms' tumor.`,
       `Surgery is an essential part of the treatment for Wilms' tumor and must be done immediately.`,
@@ -7349,7 +7348,7 @@ export const QUESTION_BANK = [
     id: 524,
     category: `Health Promotion & Maintenance`,
     chapter: `Pediatrics`,
-    question: `The parents of a 5-year-old child ask the nurse in the doctor's office what they should do about their child who is still wetting the bed several nights a week. In addition to reporting this to the physician, what suggestion should be included in the nurse's discussion with the parents?`,
+    prompt: `The parents of a 5-year-old child ask the nurse in the doctor's office what they should do about their child who is still wetting the bed several nights a week. In addition to reporting this to the physician, what suggestion should be included in the nurse's discussion with the parents?`,
     options: [
       `Do not give the child anything to drink after the evening meal.`,
       `Have the child wear diapers to bed.`,
@@ -7363,7 +7362,7 @@ export const QUESTION_BANK = [
     id: 525,
     category: `Health Promotion & Maintenance`,
     chapter: `Pediatrics`,
-    question: `A 13-month-old child has just been placed in a plaster hip spica cast to correct a congenital anomaly. Which nursing actions should be included in the plan of care?`,
+    prompt: `A 13-month-old child has just been placed in a plaster hip spica cast to correct a congenital anomaly. Which nursing actions should be included in the plan of care?`,
     options: [
       `Turn the child no more than every four hours to minimize manipulation of the wet cast.`,
       `Use only fingertips when moving the child to prevent indentations in the cast.`,
@@ -7377,7 +7376,7 @@ export const QUESTION_BANK = [
     id: 526,
     category: `Health Promotion & Maintenance`,
     chapter: `Pediatrics`,
-    question: `A 13-year-old child has just arrived on the nursing care unit from the postanesthesia care unit (PACU). This morning, the child underwent a surgical spinal fusion procedure that included the placement of Harrington rods for the treatment of scoliosis. After receiving a report from the PACU nurse, which action should the nurse perform first?`,
+    prompt: `A 13-year-old child has just arrived on the nursing care unit from the postanesthesia care unit (PACU). This morning, the child underwent a surgical spinal fusion procedure that included the placement of Harrington rods for the treatment of scoliosis. After receiving a report from the PACU nurse, which action should the nurse perform first?`,
     options: [
       `Assess the pain level and administer analgesics as needed`,
       `Offer clear liquids to ensure adequate hydration`,
@@ -7391,7 +7390,7 @@ export const QUESTION_BANK = [
     id: 527,
     category: `Health Promotion & Maintenance`,
     chapter: `Pediatrics`,
-    question: `A newborn has been diagnosed as having mild hip dysplasia. The mother asks the nurse why the physician told her to "triple diaper" the baby. What should the nurse include when responding?`,
+    prompt: `A newborn has been diagnosed as having mild hip dysplasia. The mother asks the nurse why the physician told her to "triple diaper" the baby. What should the nurse include when responding?`,
     options: [
       `It is important that there be no contamination of the area.`,
       `Extra diapers will abduct the hips and help to put the hip in the socket correctly.`,
@@ -7405,7 +7404,7 @@ export const QUESTION_BANK = [
     id: 528,
     category: `Health Promotion & Maintenance`,
     chapter: `Pediatrics`,
-    question: `A 6-month-old baby is placed in bilateral leg casts because she has talipes equinovarus. The mother asks how to bathe the baby. What should the nurse tell the mother?`,
+    prompt: `A 6-month-old baby is placed in bilateral leg casts because she has talipes equinovarus. The mother asks how to bathe the baby. What should the nurse tell the mother?`,
     options: [
       `"Bathe the baby as you usually do."`,
       `"Put the baby's buttocks in the bath water, but try to keep the feet out of the water."`,
@@ -7419,7 +7418,7 @@ export const QUESTION_BANK = [
     id: 529,
     category: `Health Promotion & Maintenance`,
     chapter: `Pediatrics`,
-    question: `The nurse is providing home care for an 8-year-old boy who has Legg-Calve-Perthes disease. The boy asks the nurse to let him get out of bed to go to walk to the bathroom. What should the nurse do?`,
+    prompt: `The nurse is providing home care for an 8-year-old boy who has Legg-Calve-Perthes disease. The boy asks the nurse to let him get out of bed to go to walk to the bathroom. What should the nurse do?`,
     options: [
       `Allow the child to get up and walk to the bathroom.`,
       `Explain to him that he must stay in bed so that his hip can heal.`,
@@ -7433,7 +7432,7 @@ export const QUESTION_BANK = [
     id: 530,
     category: `Health Promotion & Maintenance`,
     chapter: `Pediatrics`,
-    question: `The nurse has been asked to set up a program to screen children for scoliosis. What age group should the nurse screen?`,
+    prompt: `The nurse has been asked to set up a program to screen children for scoliosis. What age group should the nurse screen?`,
     options: [
       `Preschools`,
       `6- to 8-year-olds`,
@@ -7447,7 +7446,7 @@ export const QUESTION_BANK = [
     id: 531,
     category: `Health Promotion & Maintenance`,
     chapter: `Pediatrics`,
-    question: `A 12-year-old girl has been diagnosed with scoliosis and is placed in a Milwaukee brace. What instruction should the nurse give about the brace?`,
+    prompt: `A 12-year-old girl has been diagnosed with scoliosis and is placed in a Milwaukee brace. What instruction should the nurse give about the brace?`,
     options: [
       `"Put the brace on underneath all of your clothes."`,
       `"Wear the brace only when you are exercising."`,
@@ -7461,7 +7460,7 @@ export const QUESTION_BANK = [
     id: 532,
     category: `Health Promotion & Maintenance`,
     chapter: `Pediatrics`,
-    question: `The nurse is caring for a child who has Duchenne's muscular dystrophy. What understanding is correct about the progress of the disease?`,
+    prompt: `The nurse is caring for a child who has Duchenne's muscular dystrophy. What understanding is correct about the progress of the disease?`,
     options: [
       `The disease is controllable with aggressive treatment.`,
       `Most children will die of something else before they die of muscular dystrophy.`,
@@ -7475,7 +7474,7 @@ export const QUESTION_BANK = [
     id: 533,
     category: `Health Promotion & Maintenance`,
     chapter: `Pediatrics`,
-    question: `The nurse is caring for a child who is diagnosed as having Lyme disease. The mother asks how the child got this disease. Which explanation about Lyme disease is correct?`,
+    prompt: `The nurse is caring for a child who is diagnosed as having Lyme disease. The mother asks how the child got this disease. Which explanation about Lyme disease is correct?`,
     options: [
       `It is transmitted by a mosquito.`,
       `It is inherited through a recessive gene.`,
@@ -7489,7 +7488,7 @@ export const QUESTION_BANK = [
     id: 534,
     category: `Health Promotion & Maintenance`,
     chapter: `Pediatrics`,
-    question: `The nurse is caring for a child who has Lyme disease and a child who has rheumatoid arthritis. What problem are they most likely to have in common?`,
+    prompt: `The nurse is caring for a child who has Lyme disease and a child who has rheumatoid arthritis. What problem are they most likely to have in common?`,
     options: [
       `Joint pain`,
       `High fever`,
@@ -7503,7 +7502,7 @@ export const QUESTION_BANK = [
     id: 535,
     category: `Health Promotion & Maintenance`,
     chapter: `Pediatrics`,
-    question: `Which of the following children would most likely be diagnosed with pituitary dwarfism?`,
+    prompt: `Which of the following children would most likely be diagnosed with pituitary dwarfism?`,
     options: [
       `A 13-month-old who weighs 21 pounds`,
       `A 4-year-old who is 41 inches tall`,
@@ -7517,7 +7516,7 @@ export const QUESTION_BANK = [
     id: 536,
     category: `Health Promotion & Maintenance`,
     chapter: `Pediatrics`,
-    question: `A 5-year-old child has been diagnosed with congenital hypopituitarism. Which of the following should the nurse include when teaching the parents about this child's condition?`,
+    prompt: `A 5-year-old child has been diagnosed with congenital hypopituitarism. Which of the following should the nurse include when teaching the parents about this child's condition?`,
     options: [
       `You will probably need to give him subcutaneous injections of human growth hormone three to seven times a week at bedtime.`,
       `Your child is unlikely to achieve normal intelligence and will probably need special schooling.`,
@@ -7531,7 +7530,7 @@ export const QUESTION_BANK = [
     id: 537,
     category: `Health Promotion & Maintenance`,
     chapter: `Pediatrics`,
-    question: `The nurse at a summer camp for diabetics is assisting a 15-year-old girl with adjusting her daily insulin dosage. Which factor will have the greatest impact on insulin needs?`,
+    prompt: `The nurse at a summer camp for diabetics is assisting a 15-year-old girl with adjusting her daily insulin dosage. Which factor will have the greatest impact on insulin needs?`,
     options: [
       `The weather forecast calls for high temperature and high humidity.`,
       `Activities scheduled for the day include a hike in the woods, swim time, and tennis.`,
@@ -7545,7 +7544,7 @@ export const QUESTION_BANK = [
     id: 538,
     category: `Health Promotion & Maintenance`,
     chapter: `Pediatrics`,
-    question: `The nurse is working at a summer camp for diabetic children. A 7-year-old child comes to the nurse complaining of dizziness and nausea. It is a warm day, and the child has just returned from horseback riding, followed by a walk back from the stables. The nurse notes that the child is sweaty. Which action should the nurse take first?`,
+    prompt: `The nurse is working at a summer camp for diabetic children. A 7-year-old child comes to the nurse complaining of dizziness and nausea. It is a warm day, and the child has just returned from horseback riding, followed by a walk back from the stables. The nurse notes that the child is sweaty. Which action should the nurse take first?`,
     options: [
       `Give the child a cool drink of water.`,
       `Give the child three units of regular insulin and observe for a response.`,
@@ -7559,7 +7558,7 @@ export const QUESTION_BANK = [
     id: 539,
     category: `Health Promotion & Maintenance`,
     chapter: `Pediatrics`,
-    question: `A 4-year-old child has recently been diagnosed with Type 1 diabetes. The parents tell the nurse that they do not understand much about diabetes. Which is the best way to explain Type 1 diabetes to them? Type 1 diabetes is:`,
+    prompt: `A 4-year-old child has recently been diagnosed with Type 1 diabetes. The parents tell the nurse that they do not understand much about diabetes. Which is the best way to explain Type 1 diabetes to them? Type 1 diabetes is:`,
     options: [
       `an inborn error of metabolism that makes the child unable to burn fatty acids without insulin requirements.`,
       `a genetic disorder that makes the child unable to metabolize protein without insulin supplements.`,
@@ -7573,7 +7572,7 @@ export const QUESTION_BANK = [
     id: 540,
     category: `Health Promotion & Maintenance`,
     chapter: `Pediatrics`,
-    question: `A 1-month-old infant is seen in the clinic and is diagnosed as having congenital hypothyroidism (cretinism). Her parents ask the nurse if their child will be normal. What is the best response for the nurse to give?`,
+    prompt: `A 1-month-old infant is seen in the clinic and is diagnosed as having congenital hypothyroidism (cretinism). Her parents ask the nurse if their child will be normal. What is the best response for the nurse to give?`,
     options: [
       `Your child will need to take medication for life but has a good chance of normal development because of the early detection.`,
       `Cretinism causes both physical delay and mental retardation in the vast majority of children with the condition.`,
@@ -7587,7 +7586,7 @@ export const QUESTION_BANK = [
     id: 541,
     category: `Health Promotion & Maintenance`,
     chapter: `Pediatrics`,
-    question: `A child is seen in the physician's office for a crusty lesion at the corners of his mouth. The lesion has a yellow crust. The arms and legs also have similar lesions. The physician diagnoses impetigo and prescribes an antibiotic. What teaching is appropriate for the nurse who is working with the child and parents?`,
+    prompt: `A child is seen in the physician's office for a crusty lesion at the corners of his mouth. The lesion has a yellow crust. The arms and legs also have similar lesions. The physician diagnoses impetigo and prescribes an antibiotic. What teaching is appropriate for the nurse who is working with the child and parents?`,
     options: [
       `Help the parents understand the need for an elimination diet.`,
       `Instruct the parents to put antibiotic ointment under the fingernails as well as on the lesions.`,
@@ -7601,7 +7600,7 @@ export const QUESTION_BANK = [
     id: 542,
     category: `Health Promotion & Maintenance`,
     chapter: `Pediatrics`,
-    question: `The mother of a child who has ringworm asks what kind of worm the child has. How should the nurse respond?`,
+    prompt: `The mother of a child who has ringworm asks what kind of worm the child has. How should the nurse respond?`,
     options: [
       `Ringworm is caused by a fungus, not a worm. The lesion often takes the form of a circle or ring.`,
       `The same worm that causes pinworms can cause ringworm. Good hand washing is essential to prevent spreading.`,
@@ -7615,7 +7614,7 @@ export const QUESTION_BANK = [
     id: 543,
     category: `Health Promotion & Maintenance`,
     chapter: `Pediatrics`,
-    question: `The mother of a child who has pediculosis says that she plans to use kerosene to wash the child's hair just like her grandmother did for her. What is the best response for the nurse to make?`,
+    prompt: `The mother of a child who has pediculosis says that she plans to use kerosene to wash the child's hair just like her grandmother did for her. What is the best response for the nurse to make?`,
     options: [
       `"Your grandmother was a wise woman. Kerosene is the major ingredient in the special shampoo we recommend."`,
       `"Kerosene will work, but the shampoo we recommend is less irritating."`,
@@ -7629,7 +7628,7 @@ export const QUESTION_BANK = [
     id: 544,
     category: `Health Promotion & Maintenance`,
     chapter: `Pediatrics`,
-    question: `A 5-year-old child keeps developing poison ivy. The child's mother insists that the child has not been near any poison ivy since the first outbreak several weeks ago. What question should the nurse ask the mother?`,
+    prompt: `A 5-year-old child keeps developing poison ivy. The child's mother insists that the child has not been near any poison ivy since the first outbreak several weeks ago. What question should the nurse ask the mother?`,
     options: [
       `"Has your child been eating any particular food that might be associated with outbreaks?"`,
       `"Does your child scratch the blisters and touch the liquid that comes out?"`,
@@ -7643,7 +7642,7 @@ export const QUESTION_BANK = [
     id: 545,
     category: `Health Promotion & Maintenance`,
     chapter: `Pediatrics`,
-    question: `A 10-month-old infant is hospitalized with severe eczema. The child has elbow restraints applied. When should the elbow restraints be removed?`,
+    prompt: `A 10-month-old infant is hospitalized with severe eczema. The child has elbow restraints applied. When should the elbow restraints be removed?`,
     options: [
       `They should not be removed until the lesions have healed.`,
       `When someone is holding the baby`,
@@ -7659,7 +7658,7 @@ export const QUESTION_BANK = [
     id: 546,
     category: `Health Promotion & Maintenance`,
     chapter: `Older Adult Client`,
-    question: `A 75-year-old man is brought to the auditory clinic by his son, who tells the nurse that his father is having trouble hearing and seems to be a little depressed. The man says, "There's no point in getting a hearing aid. I don't have much time left and didn't use the time I had very good anyway." The nurse recognizes that this behavior indicates that the client might be:`,
+    prompt: `A 75-year-old man is brought to the auditory clinic by his son, who tells the nurse that his father is having trouble hearing and seems to be a little depressed. The man says, "There's no point in getting a hearing aid. I don't have much time left and didn't use the time I had very good anyway." The nurse recognizes that this behavior indicates that the client might be:`,
     options: [
       `actively suicidal`,
       `suffering bipolar depression`,
@@ -7673,7 +7672,7 @@ export const QUESTION_BANK = [
     id: 547,
     category: `Health Promotion & Maintenance`,
     chapter: `Older Adult Client`,
-    question: `An 88-year-old woman in a long-term care facility is having difficulty remembering where her room is. Which of the following solutions would best help her?`,
+    prompt: `An 88-year-old woman in a long-term care facility is having difficulty remembering where her room is. Which of the following solutions would best help her?`,
     options: [
       `Put a light-blue painting on the door to her room.`,
       `Assign her a buddy who will help her when she gets lost.`,
@@ -7687,7 +7686,7 @@ export const QUESTION_BANK = [
     id: 548,
     category: `Health Promotion & Maintenance`,
     chapter: `Older Adult Client`,
-    question: `The family of an elderly client asks why their father puts so much salt on his food. The nurse should include which information in the response?`,
+    prompt: `The family of an elderly client asks why their father puts so much salt on his food. The nurse should include which information in the response?`,
     options: [
       `The taste buds become dulled as a person ages.`,
       `The body is attempting to compensate for lost fluids during the aging process.`,
@@ -7701,7 +7700,7 @@ export const QUESTION_BANK = [
     id: 549,
     category: `Health Promotion & Maintenance`,
     chapter: `Older Adult Client`,
-    question: `A 65-year-old client is seen in an urgent care center for a sprained ankle. The client also tells the nurse, "I don't know what the problem is. I'm tired all the time. I guess it's just a sign I'm getting old." What is the best response for the nurse to make?`,
+    prompt: `A 65-year-old client is seen in an urgent care center for a sprained ankle. The client also tells the nurse, "I don't know what the problem is. I'm tired all the time. I guess it's just a sign I'm getting old." What is the best response for the nurse to make?`,
     options: [
       `"Sixty-five isn't that old. Do you have enough activities to keep you from getting bored?"`,
       `"It's normal for someone your age to feel tired like that. Try taking a two-hour nap during the day."`,
@@ -7715,7 +7714,7 @@ export const QUESTION_BANK = [
     id: 550,
     category: `Health Promotion & Maintenance`,
     chapter: `Older Adult Client`,
-    question: `A 64-year-old woman tells the nurse she has vaginal itching and dryness and that she has pain "down there" at times. What should the nurse do?`,
+    prompt: `A 64-year-old woman tells the nurse she has vaginal itching and dryness and that she has pain "down there" at times. What should the nurse do?`,
     options: [
       `Reassure the client that these are normal changes that come with aging.`,
       `Explain to the client that this situation is of little importance because sexual activity is not likely at this age.`,
@@ -7729,7 +7728,7 @@ export const QUESTION_BANK = [
     id: 551,
     category: `Health Promotion & Maintenance`,
     chapter: `Older Adult Client`,
-    question: `An elderly woman is admitted to the hospital with a productive cough, progressive forgetfulness, an inability to concentrate, and disinterest in her personal hygiene. What should be of greatest priority as the nurse assesses this client?`,
+    prompt: `An elderly woman is admitted to the hospital with a productive cough, progressive forgetfulness, an inability to concentrate, and disinterest in her personal hygiene. What should be of greatest priority as the nurse assesses this client?`,
     options: [
       `Her progressive forgetfulness`,
       `Her inability to concentrate`,
@@ -7743,7 +7742,7 @@ export const QUESTION_BANK = [
     id: 552,
     category: `Health Promotion & Maintenance`,
     chapter: `Older Adult Client`,
-    question: `The nurse in a retirement home has noticed that Mr. A. and Ms. C. have been holding hands frequently. One day, the nurse enters Mr. A.'s room and finds Mr. A. and Ms. C. having sexual intercourse. Both residents are alert and oriented. What is the most appropriate action for the nurse to take?`,
+    prompt: `The nurse in a retirement home has noticed that Mr. A. and Ms. C. have been holding hands frequently. One day, the nurse enters Mr. A.'s room and finds Mr. A. and Ms. C. having sexual intercourse. Both residents are alert and oriented. What is the most appropriate action for the nurse to take?`,
     options: [
       `Interrupt the couple and send Ms. C. to her room.`,
       `Leave the room and close the door.`,
@@ -7757,7 +7756,7 @@ export const QUESTION_BANK = [
     id: 553,
     category: `Health Promotion & Maintenance`,
     chapter: `Older Adult Client`,
-    question: `A 45-year-old woman tells the nurse that she is having difficulty reading the newspaper. She states that she holds it away from her but still cannot see it. What is the best response for the nurse to make?`,
+    prompt: `A 45-year-old woman tells the nurse that she is having difficulty reading the newspaper. She states that she holds it away from her but still cannot see it. What is the best response for the nurse to make?`,
     options: [
       `Reassure her that this situation is normal and encourage her to use a magnifying glass.`,
       `Ask her if any of her relatives have had this problem.`,
@@ -7771,7 +7770,7 @@ export const QUESTION_BANK = [
     id: 554,
     category: `Health Promotion & Maintenance`,
     chapter: `Older Adult Client`,
-    question: `An elderly man tells the nurse that all his family members mumble when they talk. How should the nurse respond to this statement?`,
+    prompt: `An elderly man tells the nurse that all his family members mumble when they talk. How should the nurse respond to this statement?`,
     options: [
       `Refer the family members to speech therapy.`,
       `Suggest that the client have his hearing tested.`,
@@ -7785,7 +7784,7 @@ export const QUESTION_BANK = [
     id: 555,
     category: `Health Promotion & Maintenance`,
     chapter: `Older Adult Client`,
-    question: `The nurse is discussing the care of a client who has a hearing deficit. Which suggestion is most appropriate to make to those around him?`,
+    prompt: `The nurse is discussing the care of a client who has a hearing deficit. Which suggestion is most appropriate to make to those around him?`,
     options: [
       `Speak in a higher tone of voice.`,
       `Raise your voice when speaking.`,
@@ -7801,7 +7800,7 @@ export const QUESTION_BANK = [
     id: 556,
     category: `Psychosocial Integrity`,
     chapter: `Mental Health`,
-    question: `When the nurse detects that a client is using defense mechanisms, the nurse should make which of these interpretations of the client's behavior?`,
+    prompt: `When the nurse detects that a client is using defense mechanisms, the nurse should make which of these interpretations of the client's behavior?`,
     options: [
       `The client is attempting to reestablish emotional equilibrium.`,
       `The client is using self-defeating measures.`,
@@ -7815,7 +7814,7 @@ export const QUESTION_BANK = [
     id: 557,
     category: `Psychosocial Integrity`,
     chapter: `Mental Health`,
-    question: `The treatment goal for a client with severe anxiety will have been achieved when the client demonstrates which of these behaviors?`,
+    prompt: `The treatment goal for a client with severe anxiety will have been achieved when the client demonstrates which of these behaviors?`,
     options: [
       `The client recognizes the source of the anxiety.`,
       `The client is able to use the anxiety constructively.`,
@@ -7829,7 +7828,7 @@ export const QUESTION_BANK = [
     id: 558,
     category: `Psychosocial Integrity`,
     chapter: `Mental Health`,
-    question: `The nurse is assessing a 22-month-old child who is thought to be autistic. During an interview with the nurse, the child's mother makes all of the following statements about his behavior until he was 1 year old. Which statement most strongly suggests that the child may be autistic?`,
+    prompt: `The nurse is assessing a 22-month-old child who is thought to be autistic. During an interview with the nurse, the child's mother makes all of the following statements about his behavior until he was 1 year old. Which statement most strongly suggests that the child may be autistic?`,
     options: [
       `"He was a good baby and rarely cried when I left the room."`,
       `"He slept very well after each feeding."`,
@@ -7843,7 +7842,7 @@ export const QUESTION_BANK = [
     id: 559,
     category: `Psychosocial Integrity`,
     chapter: `Mental Health`,
-    question: `In attempting to establish a therapeutic relationship with a child who may be autistic, the nurse should expect to encounter which of these problems?`,
+    prompt: `In attempting to establish a therapeutic relationship with a child who may be autistic, the nurse should expect to encounter which of these problems?`,
     options: [
       `Hallucinations`,
       `Impaired hearing`,
@@ -7857,7 +7856,7 @@ export const QUESTION_BANK = [
     id: 560,
     category: `Psychosocial Integrity`,
     chapter: `Mental Health`,
-    question: `To initiate a relationship with a child who may be autistic, the nurse would probably be most effective by using which of these approaches?`,
+    prompt: `To initiate a relationship with a child who may be autistic, the nurse would probably be most effective by using which of these approaches?`,
     options: [
       `Playing peek-a-boo`,
       `Having him point to designated body parts`,
@@ -7871,7 +7870,7 @@ export const QUESTION_BANK = [
     id: 561,
     category: `Psychosocial Integrity`,
     chapter: `Mental Health`,
-    question: `The nurse is caring for a 75-year-old widow admitted to the psychiatric hospital by her daughter, who became concerned when her mother began to talk in a confused manner about her husband who has been dead for seven years. In the hospital, especially at night, the client wanders into the other clients' rooms looking for her husband. What is the most appropriate action for the nurse to take when this woman wanders into the rooms of the other clients?`,
+    prompt: `The nurse is caring for a 75-year-old widow admitted to the psychiatric hospital by her daughter, who became concerned when her mother began to talk in a confused manner about her husband who has been dead for seven years. In the hospital, especially at night, the client wanders into the other clients' rooms looking for her husband. What is the most appropriate action for the nurse to take when this woman wanders into the rooms of the other clients?`,
     options: [
       `Lock the door to her room`,
       `Tell her to stay in her room except for meals`,
@@ -7885,7 +7884,7 @@ export const QUESTION_BANK = [
     id: 562,
     category: `Psychosocial Integrity`,
     chapter: `Mental Health`,
-    question: `The nurse is caring for an elderly woman admitted with chronic organic brain disease. When her daughter visits, she asks, "Are you my maid?" How should the nurse describe the client's behavior?`,
+    prompt: `The nurse is caring for an elderly woman admitted with chronic organic brain disease. When her daughter visits, she asks, "Are you my maid?" How should the nurse describe the client's behavior?`,
     options: [
       `Impaired judgment`,
       `Disorientation`,
@@ -7899,7 +7898,7 @@ export const QUESTION_BANK = [
     id: 563,
     category: `Psychosocial Integrity`,
     chapter: `Mental Health`,
-    question: `An elderly woman is hospitalized with chronic organic brain syndrome. When her daughter visits, she does not recognize her. The daughter begins to cry and shares her concerns with the nurse. Which statement by the nurse would demonstrate an empathetic response?`,
+    prompt: `An elderly woman is hospitalized with chronic organic brain syndrome. When her daughter visits, she does not recognize her. The daughter begins to cry and shares her concerns with the nurse. Which statement by the nurse would demonstrate an empathetic response?`,
     options: [
       `"It must be difficult for you to visit your mother when she is confused about who you are."`,
       `"If you are going to cry when you come to visit, maybe you should not visit."`,
@@ -7913,7 +7912,7 @@ export const QUESTION_BANK = [
     id: 564,
     category: `Psychosocial Integrity`,
     chapter: `Mental Health`,
-    question: `An elderly woman with Alzheimer's disease refuses to eat and begins to lose weight. Which approach by the nurse will likely be most effective in getting the client to eat?`,
+    prompt: `An elderly woman with Alzheimer's disease refuses to eat and begins to lose weight. Which approach by the nurse will likely be most effective in getting the client to eat?`,
     options: [
       `Explaining to her the necessity of eating three meals daily`,
       `Asking the client what she thinks should be done about her lack of eating`,
@@ -7927,7 +7926,7 @@ export const QUESTION_BANK = [
     id: 565,
     category: `Psychosocial Integrity`,
     chapter: `Mental Health`,
-    question: `A 25-year-old woman has admitted herself to the psychiatric unit for treatment of Valium addiction. She is currently taking 150 mg PO of Valium per day, which she gets from various doctors or buys off the streets. The first night she is on the unit, she dresses in a short, see-through nightgown and approaches the male nurse. She states that she is "coming down" and just needs a little comforting and conversation. What is the best initial response by the nurse?`,
+    prompt: `A 25-year-old woman has admitted herself to the psychiatric unit for treatment of Valium addiction. She is currently taking 150 mg PO of Valium per day, which she gets from various doctors or buys off the streets. The first night she is on the unit, she dresses in a short, see-through nightgown and approaches the male nurse. She states that she is "coming down" and just needs a little comforting and conversation. What is the best initial response by the nurse?`,
     options: [
       `"Please put on your bathrobe and then we can talk."`,
       `"I'm very busy now. Maybe one of the other nurses can help you."`,
@@ -7941,7 +7940,7 @@ export const QUESTION_BANK = [
     id: 566,
     category: `Psychosocial Integrity`,
     chapter: `Mental Health`,
-    question: `A young woman has admitted herself to the psychiatric unit for treatment of Valium addiction. A schedule of drug withdrawal is ordered by the doctor. Which of the following may the nurse expect to see as the Valium dose is decreased?`,
+    prompt: `A young woman has admitted herself to the psychiatric unit for treatment of Valium addiction. A schedule of drug withdrawal is ordered by the doctor. Which of the following may the nurse expect to see as the Valium dose is decreased?`,
     options: [
       `Decreased blood pressure`,
       `Tremors and hyperactivity`,
@@ -7955,7 +7954,7 @@ export const QUESTION_BANK = [
     id: 567,
     category: `Psychosocial Integrity`,
     chapter: `Mental Health`,
-    question: `Three days after admission for treatment of Valium addiction, a young woman briefly left the hospital to talk to a visitor. Her psychiatrist has threatened to discharge her for noncompliance with the treatment program. The client seems very despondent, refusing to get out of bed. The evening nurse finds the client crying, "I've screwed everything up. It's hopeless. It's no use." In responding to the client, which of the following would be most appropriate?`,
+    prompt: `Three days after admission for treatment of Valium addiction, a young woman briefly left the hospital to talk to a visitor. Her psychiatrist has threatened to discharge her for noncompliance with the treatment program. The client seems very despondent, refusing to get out of bed. The evening nurse finds the client crying, "I've screwed everything up. It's hopeless. It's no use." In responding to the client, which of the following would be most appropriate?`,
     options: [
       `"You've screwed everything up?"`,
       `"Why do you feel it's no use?"`,
@@ -7969,7 +7968,7 @@ export const QUESTION_BANK = [
     id: 568,
     category: `Psychosocial Integrity`,
     chapter: `Mental Health`,
-    question: `A woman is admitted to the detoxification unit. She admits to drinking increasingly larger amounts of alcohol for the past five years. What question is most important for the nurse to ask initially?`,
+    prompt: `A woman is admitted to the detoxification unit. She admits to drinking increasingly larger amounts of alcohol for the past five years. What question is most important for the nurse to ask initially?`,
     options: [
       `"How much alcohol do you drink daily?"`,
       `"When was your last drink?"`,
@@ -7983,7 +7982,7 @@ export const QUESTION_BANK = [
     id: 569,
     category: `Psychosocial Integrity`,
     chapter: `Mental Health`,
-    question: `The morning after admission for withdrawal from alcohol, a client is restless, tremulous, and somewhat agitated. The nurse should take which of these actions at this time?`,
+    prompt: `The morning after admission for withdrawal from alcohol, a client is restless, tremulous, and somewhat agitated. The nurse should take which of these actions at this time?`,
     options: [
       `Offer her medicinal whiskey`,
       `Observe her behavior closely`,
@@ -7997,7 +7996,7 @@ export const QUESTION_BANK = [
     id: 570,
     category: `Psychosocial Integrity`,
     chapter: `Mental Health`,
-    question: `Two nights after admission for alcohol withdrawal, the client runs out of her room. She is confused and disoriented and says, "Let me out of here. Bugs are crawling all over that room." The nurse should take which of these actions?`,
+    prompt: `Two nights after admission for alcohol withdrawal, the client runs out of her room. She is confused and disoriented and says, "Let me out of here. Bugs are crawling all over that room." The nurse should take which of these actions?`,
     options: [
       `Escort her back to her room and show her that there is nothing to fear`,
       `Assist her back into bed and then search her room for alcohol`,
@@ -8011,7 +8010,7 @@ export const QUESTION_BANK = [
     id: 571,
     category: `Psychosocial Integrity`,
     chapter: `Mental Health`,
-    question: `An adult woman is admitted to the detoxification unit for alcohol withdrawal. Her husband tells the nurse that he is fed up. Either she gets treatment or he is leaving her. Two days later, the woman develops delirium tremens. At this time, which of these nursing diagnoses should be given priority in caring for this client?`,
+    prompt: `An adult woman is admitted to the detoxification unit for alcohol withdrawal. Her husband tells the nurse that he is fed up. Either she gets treatment or he is leaving her. Two days later, the woman develops delirium tremens. At this time, which of these nursing diagnoses should be given priority in caring for this client?`,
     options: [
       `Risk for injury related to impulsiveness`,
       `Noncompliance with medical regimen related to denial of illness`,
@@ -8025,7 +8024,7 @@ export const QUESTION_BANK = [
     id: 572,
     category: `Psychosocial Integrity`,
     chapter: `Mental Health`,
-    question: `Following withdrawal from alcohol, the client agrees to participate in group therapy sessions for a period before being discharged. Initially, group therapy may have which of these effects on the client?`,
+    prompt: `Following withdrawal from alcohol, the client agrees to participate in group therapy sessions for a period before being discharged. Initially, group therapy may have which of these effects on the client?`,
     options: [
       `She will develop insight into her reasons for needing alcohol.`,
       `She will experience periods of extreme anxiety.`,
@@ -8039,7 +8038,7 @@ export const QUESTION_BANK = [
     id: 573,
     category: `Psychosocial Integrity`,
     chapter: `Mental Health`,
-    question: `Following withdrawal from alcohol, a client is to receive disulfiram (Antabuse). The medication is prescribed for which of these purposes?`,
+    prompt: `Following withdrawal from alcohol, a client is to receive disulfiram (Antabuse). The medication is prescribed for which of these purposes?`,
     options: [
       `To improve detoxification by the liver`,
       `To increase her utilization of vitamins`,
@@ -8053,7 +8052,7 @@ export const QUESTION_BANK = [
     id: 574,
     category: `Psychosocial Integrity`,
     chapter: `Mental Health`,
-    question: `A client asks the nurse about participation in Alcoholics Anonymous. In addition to arranging for a visit by someone from Alcoholics Anonymous, the nurse should explain that the primary purpose of the organization is to:`,
+    prompt: `A client asks the nurse about participation in Alcoholics Anonymous. In addition to arranging for a visit by someone from Alcoholics Anonymous, the nurse should explain that the primary purpose of the organization is to:`,
     options: [
       `explore the individual member's need for dependence on alcohol.`,
       `help members abstain from alcohol.`,
@@ -8067,7 +8066,7 @@ export const QUESTION_BANK = [
     id: 575,
     category: `Psychosocial Integrity`,
     chapter: `Mental Health`,
-    question: `Chlorpromazine hydrochloride (Thorazine) is prescribed for a young adult with schizophrenia. For three days, the chlorpromazine (Thorazine) is to be administered intramuscularly. Before administering chlorpromazine (Thorazine) intramuscularly to the client, the nurse should make which of these assessments?`,
+    prompt: `Chlorpromazine hydrochloride (Thorazine) is prescribed for a young adult with schizophrenia. For three days, the chlorpromazine (Thorazine) is to be administered intramuscularly. Before administering chlorpromazine (Thorazine) intramuscularly to the client, the nurse should make which of these assessments?`,
     options: [
       `Checking his blood pressure`,
       `Testing his urine for glucose`,
@@ -8081,7 +8080,7 @@ export const QUESTION_BANK = [
     id: 576,
     category: `Psychosocial Integrity`,
     chapter: `Mental Health`,
-    question: `While a client is taking chlorpromazine (Thorazine), he should be observed for which of these symptoms?`,
+    prompt: `While a client is taking chlorpromazine (Thorazine), he should be observed for which of these symptoms?`,
     options: [
       `Pseudoparkinsonism`,
       `Dehydration`,
@@ -8095,7 +8094,7 @@ export const QUESTION_BANK = [
     id: 577,
     category: `Psychosocial Integrity`,
     chapter: `Mental Health`,
-    question: `A 23-year-old premedical student is admitted to a psychiatric hospital in a withdrawn, catatonic state. For two days prior to admission, she remained in one position without moving or speaking. On the unit, she continues to exhibit waxy flexibility as she sits all day. What is the first priority for the nurse during the initial phase of hospitalization?`,
+    prompt: `A 23-year-old premedical student is admitted to a psychiatric hospital in a withdrawn, catatonic state. For two days prior to admission, she remained in one position without moving or speaking. On the unit, she continues to exhibit waxy flexibility as she sits all day. What is the first priority for the nurse during the initial phase of hospitalization?`,
     options: [
       `Watch for edema and cyanosis of the extremities`,
       `Encourage the client to discuss her concerns, which may have led to the catatonic state`,
@@ -8109,7 +8108,7 @@ export const QUESTION_BANK = [
     id: 578,
     category: `Psychosocial Integrity`,
     chapter: `Mental Health`,
-    question: `A woman has been having auditory hallucinations. When the nurse approaches her, she whispers, "Did you hear that terrible man? He is scary!" Which would be the best response for the nurse to take initially?`,
+    prompt: `A woman has been having auditory hallucinations. When the nurse approaches her, she whispers, "Did you hear that terrible man? He is scary!" Which would be the best response for the nurse to take initially?`,
     options: [
       `"Tell me everything the man is saying."`,
       `"I don't hear anything. What scary things is he saying?"`,
@@ -8123,7 +8122,7 @@ export const QUESTION_BANK = [
     id: 579,
     category: `Psychosocial Integrity`,
     chapter: `Mental Health`,
-    question: `A man who is being treated for paranoia walks toward the nurse's desk and observes the nurse making a telephone call. A few minutes later, he accuses the nurse of having called the police. How should the nurse interpret his behavior?`,
+    prompt: `A man who is being treated for paranoia walks toward the nurse's desk and observes the nurse making a telephone call. A few minutes later, he accuses the nurse of having called the police. How should the nurse interpret his behavior?`,
     options: [
       `Projection`,
       `Reaction formation`,
@@ -8137,7 +8136,7 @@ export const QUESTION_BANK = [
     id: 580,
     category: `Psychosocial Integrity`,
     chapter: `Mental Health`,
-    question: `A woman is admitted to the hospital because of recent overactive behavior. She enters the dining room for lunch after everyone is seated and eating. She runs around telling everyone that she has just been invited to speak at an important political meeting. She then sits down and starts to eat. After taking a few bites, she gets up and walks quickly out of the dining room. What initial action should the nurse take to meet the client's nutritional needs?`,
+    prompt: `A woman is admitted to the hospital because of recent overactive behavior. She enters the dining room for lunch after everyone is seated and eating. She runs around telling everyone that she has just been invited to speak at an important political meeting. She then sits down and starts to eat. After taking a few bites, she gets up and walks quickly out of the dining room. What initial action should the nurse take to meet the client's nutritional needs?`,
     options: [
       `Serve her meals in her room`,
       `Give her finger foods to eat`,
@@ -8151,7 +8150,7 @@ export const QUESTION_BANK = [
     id: 581,
     category: `Psychosocial Integrity`,
     chapter: `Mental Health`,
-    question: `Lithium carbonate is ordered for a client with overactive behavior. The nurse should observe the client for which of these side effects?`,
+    prompt: `Lithium carbonate is ordered for a client with overactive behavior. The nurse should observe the client for which of these side effects?`,
     options: [
       `Diarrhea`,
       `Rhinitis`,
@@ -8165,7 +8164,7 @@ export const QUESTION_BANK = [
     id: 582,
     category: `Psychosocial Integrity`,
     chapter: `Mental Health`,
-    question: `A man who is severely depressed following the death of his wife sits in the dayroom for hours at a time, not speaking to anyone and showing no interest in unit activities. He does not answer when spoken to. Which action should the nurse take to help him at this time?`,
+    prompt: `A man who is severely depressed following the death of his wife sits in the dayroom for hours at a time, not speaking to anyone and showing no interest in unit activities. He does not answer when spoken to. Which action should the nurse take to help him at this time?`,
     options: [
       `Encourage him to talk about his children`,
       `Start playing a game in which he can participate`,
@@ -8179,7 +8178,7 @@ export const QUESTION_BANK = [
     id: 583,
     category: `Psychosocial Integrity`,
     chapter: `Mental Health`,
-    question: `A woman is being treated for severe depression. During the acute phase of her illness, which of these measures should have priority in her care?`,
+    prompt: `A woman is being treated for severe depression. During the acute phase of her illness, which of these measures should have priority in her care?`,
     options: [
       `Keeping her in seclusion`,
       `Repeating unit routines to her in detail`,
@@ -8193,7 +8192,7 @@ export const QUESTION_BANK = [
     id: 584,
     category: `Psychosocial Integrity`,
     chapter: `Mental Health`,
-    question: `A woman who is severely depressed begins to improve. Which of these behaviors may be indicative of an impending suicide attempt?`,
+    prompt: `A woman who is severely depressed begins to improve. Which of these behaviors may be indicative of an impending suicide attempt?`,
     options: [
       `Responding sarcastically when asked about her family`,
       `Avoiding conversation with some clients on the unit`,
@@ -8207,7 +8206,7 @@ export const QUESTION_BANK = [
     id: 585,
     category: `Psychosocial Integrity`,
     chapter: `Mental Health`,
-    question: `A young woman was referred to the psychiatrist by her family physician because she is fearful of getting into elevators. During the course of therapy, it was discovered that her initial fear was of men and that it had changed to elevators. Which of the following mechanisms is demonstrated by this change?`,
+    prompt: `A young woman was referred to the psychiatrist by her family physician because she is fearful of getting into elevators. During the course of therapy, it was discovered that her initial fear was of men and that it had changed to elevators. Which of the following mechanisms is demonstrated by this change?`,
     options: [
       `Repression`,
       `Identification`,
@@ -8221,7 +8220,7 @@ export const QUESTION_BANK = [
     id: 586,
     category: `Psychosocial Integrity`,
     chapter: `Mental Health`,
-    question: `A young woman who is fearful of getting into elevators is admitted. Two days after admission, she is scheduled for group therapy sessions that meet on the sixth floor. Her room is on the second floor. The other clients and the nurse go to the sixth floor on the elevator. The client starts trembling and refuses to get on the elevator. Which action is most therapeutic for the nurse to take?`,
+    prompt: `A young woman who is fearful of getting into elevators is admitted. Two days after admission, she is scheduled for group therapy sessions that meet on the sixth floor. Her room is on the second floor. The other clients and the nurse go to the sixth floor on the elevator. The client starts trembling and refuses to get on the elevator. Which action is most therapeutic for the nurse to take?`,
     options: [
       `Firmly insist that she get on the elevator with the other clients`,
       `Explain to her that the elevator is safe and take her on a separate elevator from the rest of the group`,
@@ -8235,7 +8234,7 @@ export const QUESTION_BANK = [
     id: 587,
     category: `Psychosocial Integrity`,
     chapter: `Mental Health`,
-    question: `A 40-year-old man is admitted to the psychiatric unit for treatment of anxiety neurosis. For several weeks, he has had increasingly frequent periods of palpitations, sweating, chest pain, and choking. His nursing diagnosis is "severe anxiety, stressor unidentified." Which of these measures is appropriate during the client's attacks?`,
+    prompt: `A 40-year-old man is admitted to the psychiatric unit for treatment of anxiety neurosis. For several weeks, he has had increasingly frequent periods of palpitations, sweating, chest pain, and choking. His nursing diagnosis is "severe anxiety, stressor unidentified." Which of these measures is appropriate during the client's attacks?`,
     options: [
       `Supporting and protecting him`,
       `Engaging him in socially productive behavior`,
@@ -8249,7 +8248,7 @@ export const QUESTION_BANK = [
     id: 588,
     category: `Psychosocial Integrity`,
     chapter: `Mental Health`,
-    question: `Which nursing action would help to reduce stress and to aid an obsessive-compulsive client in using a less maladaptive means of handling stress?`,
+    prompt: `Which nursing action would help to reduce stress and to aid an obsessive-compulsive client in using a less maladaptive means of handling stress?`,
     options: [
       `Provide varied activities on the unit, because a change in routine can break a ritualistic pattern`,
       `Give him unit assignments that do not require perfection`,
@@ -8263,7 +8262,7 @@ export const QUESTION_BANK = [
     id: 589,
     category: `Psychosocial Integrity`,
     chapter: `Mental Health`,
-    question: `After the nurse has had several brief conversations with a newly admitted client, the client suddenly says, "I'm afraid to ride in an elevator; I know it's silly, but I can't help it." Which of these responses by the nurse would be the best example of acknowledgment?`,
+    prompt: `After the nurse has had several brief conversations with a newly admitted client, the client suddenly says, "I'm afraid to ride in an elevator; I know it's silly, but I can't help it." Which of these responses by the nurse would be the best example of acknowledgment?`,
     options: [
       `"It's hard to manage without using elevators."`,
       `"Being afraid to ride in elevators seems unreasonable to you."`,
@@ -8277,7 +8276,7 @@ export const QUESTION_BANK = [
     id: 590,
     category: `Psychosocial Integrity`,
     chapter: `Mental Health`,
-    question: `A client with severe anxiety manifested by many somatic complaints starts psychotherapy. She becomes increasingly anxious, and her physical symptoms intensify. The nurse should make which of these interpretations of her observations?`,
+    prompt: `A client with severe anxiety manifested by many somatic complaints starts psychotherapy. She becomes increasingly anxious, and her physical symptoms intensify. The nurse should make which of these interpretations of her observations?`,
     options: [
       `The client needs to be involved in modifying the goals of therapy.`,
       `The client may be developing a physical illness unrelated to her emotional problems.`,
@@ -8291,7 +8290,7 @@ export const QUESTION_BANK = [
     id: 591,
     category: `Psychosocial Integrity`,
     chapter: `Mental Health`,
-    question: `A young man who is admitted with antisocial behavior seeks the attention of a young, attractive nurse, and he finds many excuses to involve the nurse in conversation. The nurse should have which of these understandings of this situation?`,
+    prompt: `A young man who is admitted with antisocial behavior seeks the attention of a young, attractive nurse, and he finds many excuses to involve the nurse in conversation. The nurse should have which of these understandings of this situation?`,
     options: [
       `The nurse should help him in any way possible.`,
       `The nurse is responsible for maintaining a therapeutic relationship with him.`,
@@ -8305,7 +8304,7 @@ export const QUESTION_BANK = [
     id: 592,
     category: `Psychosocial Integrity`,
     chapter: `Mental Health`,
-    question: `A client says to the nurse, "I have something to tell you because I know you can keep a secret." To respond to his statement, the nurse should make which of these remarks?`,
+    prompt: `A client says to the nurse, "I have something to tell you because I know you can keep a secret." To respond to his statement, the nurse should make which of these remarks?`,
     options: [
       `"It's nice that you trust me to keep a secret."`,
       `"I would like to hear your secret."`,
@@ -8319,7 +8318,7 @@ export const QUESTION_BANK = [
     id: 593,
     category: `Psychosocial Integrity`,
     chapter: `Mental Health`,
-    question: `A 75-year-old woman has been widowed for 12 years. She was forced to vacate her apartment several months ago when fire destroyed the building. She has been wandering about the city, begging for money to buy food, and sleeping on park benches or in secluded areas of large buildings. She carries her personal belongings in three bundles. One day she enters the bus terminal and becomes very noisy and quarrelsome. The police are called, and she is brought to a psychiatric unit. To plan care for this woman, which of these actions should be taken first?`,
+    prompt: `A 75-year-old woman has been widowed for 12 years. She was forced to vacate her apartment several months ago when fire destroyed the building. She has been wandering about the city, begging for money to buy food, and sleeping on park benches or in secluded areas of large buildings. She carries her personal belongings in three bundles. One day she enters the bus terminal and becomes very noisy and quarrelsome. The police are called, and she is brought to a psychiatric unit. To plan care for this woman, which of these actions should be taken first?`,
     options: [
       `Determine her interests`,
       `Obtain information about her family`,
@@ -8333,7 +8332,7 @@ export const QUESTION_BANK = [
     id: 594,
     category: `Psychosocial Integrity`,
     chapter: `Mental Health`,
-    question: `A homeless woman is admitted to the hospital. When she is admitted, she is asked to keep her possessions in a locker that is in her room. She insists on removing several articles to carry around with her. Following nursing interventions, she continues to carry most of her possessions around with her. The nurse should make which of these interpretations of this behavior?`,
+    prompt: `A homeless woman is admitted to the hospital. When she is admitted, she is asked to keep her possessions in a locker that is in her room. She insists on removing several articles to carry around with her. Following nursing interventions, she continues to carry most of her possessions around with her. The nurse should make which of these interpretations of this behavior?`,
     options: [
       `The client needs to keep busy.`,
       `The client needs to maintain her identity.`,
@@ -8347,7 +8346,7 @@ export const QUESTION_BANK = [
     id: 595,
     category: `Psychosocial Integrity`,
     chapter: `Mental Health`,
-    question: `A young woman who has a washing ritual has been late for breakfast each of the three days since admission. What is the most appropriate nursing intervention?`,
+    prompt: `A young woman who has a washing ritual has been late for breakfast each of the three days since admission. What is the most appropriate nursing intervention?`,
     options: [
       `Give her a choice of getting to breakfast on time or not eating breakfast`,
       `Restrict her privileges if she is late again`,
@@ -8361,7 +8360,7 @@ export const QUESTION_BANK = [
     id: 596,
     category: `Psychosocial Integrity`,
     chapter: `Mental Health`,
-    question: `A 15-year-old girl is brought to the hospital by her parents. She is 5 feet, 7 inches tall and weighs 80 pounds. Her parents report that she eats very little. This evening, she is very difficult to arouse and had to be carried into the emergency room. A diagnosis of anorexia nervosa is made. Which of the following is the nurse most likely to observe/measure when assessing this client?`,
+    prompt: `A 15-year-old girl is brought to the hospital by her parents. She is 5 feet, 7 inches tall and weighs 80 pounds. Her parents report that she eats very little. This evening, she is very difficult to arouse and had to be carried into the emergency room. A diagnosis of anorexia nervosa is made. Which of the following is the nurse most likely to observe/measure when assessing this client?`,
     options: [
       `Enlarged breasts`,
       `Scanty pubic hair`,
@@ -8375,7 +8374,7 @@ export const QUESTION_BANK = [
     id: 597,
     category: `Psychosocial Integrity`,
     chapter: `Mental Health`,
-    question: `An adolescent with a diagnosis of severe anorexia nervosa is now on the adolescent psychiatric unit after being in intensive care to achieve fluid and electrolyte balance. In developing the nursing care plan, which of the following will be of highest priority?`,
+    prompt: `An adolescent with a diagnosis of severe anorexia nervosa is now on the adolescent psychiatric unit after being in intensive care to achieve fluid and electrolyte balance. In developing the nursing care plan, which of the following will be of highest priority?`,
     options: [
       `Weighing her before and after each meal`,
       `Observing her for two hours after each meal`,
@@ -8389,7 +8388,7 @@ export const QUESTION_BANK = [
     id: 598,
     category: `Psychosocial Integrity`,
     chapter: `Mental Health`,
-    question: `A 52-year-old man is admitted to the psychiatric unit. He states that he does not sleep well, has not been eating, and has no energy. He tells the admitting nurse, "I don't think you can make me feel better. There's no use in talking to me. Leave me alone." What is the most appropriate interpretation of his behavior?`,
+    prompt: `A 52-year-old man is admitted to the psychiatric unit. He states that he does not sleep well, has not been eating, and has no energy. He tells the admitting nurse, "I don't think you can make me feel better. There's no use in talking to me. Leave me alone." What is the most appropriate interpretation of his behavior?`,
     options: [
       `The client needs solitude. The nurse should leave him alone.`,
       `The client is depressed. The nurse should stay with him.`,
@@ -8403,7 +8402,7 @@ export const QUESTION_BANK = [
     id: 599,
     category: `Psychosocial Integrity`,
     chapter: `Mental Health`,
-    question: `An adult man is being treated for depression and has been taking amitriptyline (Elavil) for three days. His wife says to the nurse, "I don't think the medicine is doing anything for him. He is still depressed." What is the best response for the nurse to make?`,
+    prompt: `An adult man is being treated for depression and has been taking amitriptyline (Elavil) for three days. His wife says to the nurse, "I don't think the medicine is doing anything for him. He is still depressed." What is the best response for the nurse to make?`,
     options: [
       `"I will observe him carefully and make a full report to the physician."`,
       `"Depression takes awhile to clear. We are seeing small behavior changes."`,
@@ -8417,7 +8416,7 @@ export const QUESTION_BANK = [
     id: 600,
     category: `Psychosocial Integrity`,
     chapter: `Mental Health`,
-    question: `An adult male is being treated for depression. He has been in the hospital for three weeks. Which observation by the nurse is indicative of improvement in his condition?`,
+    prompt: `An adult male is being treated for depression. He has been in the hospital for three weeks. Which observation by the nurse is indicative of improvement in his condition?`,
     options: [
       `He appears for breakfast unshaven.`,
       `He says, "I now have the answer to my problems."`,
@@ -8431,7 +8430,7 @@ export const QUESTION_BANK = [
     id: 601,
     category: `Psychosocial Integrity`,
     chapter: `Mental Health`,
-    question: `An adult is being treated for depression. One day he appears at the nursing station and gives one of the nurses his favorite book. He smiles happily and says, "I want you to have this." The nurse's response is based on which understanding?`,
+    prompt: `An adult is being treated for depression. One day he appears at the nursing station and gives one of the nurses his favorite book. He smiles happily and says, "I want you to have this." The nurse's response is based on which understanding?`,
     options: [
       `Nurses should not accept gifts from clients.`,
       `His actions indicate an improvement in communication skills.`,
@@ -8445,7 +8444,7 @@ export const QUESTION_BANK = [
     id: 602,
     category: `Psychosocial Integrity`,
     chapter: `Mental Health`,
-    question: `A client with cancer states that he has no reason to live anymore. What is the most therapeutic response for the nurse to give at this time?`,
+    prompt: `A client with cancer states that he has no reason to live anymore. What is the most therapeutic response for the nurse to give at this time?`,
     options: [
       `"You feel as though you have no reason to live?"`,
       `"Your wife needs you and wants you to live."`,
@@ -8459,7 +8458,7 @@ export const QUESTION_BANK = [
     id: 603,
     category: `Psychosocial Integrity`,
     chapter: `Mental Health`,
-    question: `A young woman is admitted for the first time with a diagnosis of catatonic schizophrenia and is receiving chlorpromazine (Thorazine) daily. She is to go home for a weekend pass. What is the most important instruction to give her relative to her medications?`,
+    prompt: `A young woman is admitted for the first time with a diagnosis of catatonic schizophrenia and is receiving chlorpromazine (Thorazine) daily. She is to go home for a weekend pass. What is the most important instruction to give her relative to her medications?`,
     options: [
       `"Use a sunscreen lotion, and do not drink alcoholic beverages."`,
       `"Do not drink wine or beer or eat hard cheeses."`,
@@ -8473,7 +8472,7 @@ export const QUESTION_BANK = [
     id: 604,
     category: `Psychosocial Integrity`,
     chapter: `Mental Health`,
-    question: `Mr. S. is a man who has not spoken for years. He is diagnosed as having paranoid schizophrenia. One day, when Ms. J., another client, was standing facing the elevator, the man approached her from behind and reached for her as if to strangle her. What is the most appropriate action for the nurse to take at this time?`,
+    prompt: `Mr. S. is a man who has not spoken for years. He is diagnosed as having paranoid schizophrenia. One day, when Ms. J., another client, was standing facing the elevator, the man approached her from behind and reached for her as if to strangle her. What is the most appropriate action for the nurse to take at this time?`,
     options: [
       `Grab Mr. S. by the arm to stop him.`,
       `Ask other clients to assist her.`,
@@ -8487,7 +8486,7 @@ export const QUESTION_BANK = [
     id: 605,
     category: `Psychosocial Integrity`,
     chapter: `Mental Health`,
-    question: `Chlorpromazine (Thorazine) is prescribed for a client. Which of the following, if observed in the client, would suggest chlorpromazine (Thorazine) toxicity?`,
+    prompt: `Chlorpromazine (Thorazine) is prescribed for a client. Which of the following, if observed in the client, would suggest chlorpromazine (Thorazine) toxicity?`,
     options: [
       `Tremors`,
       `Sore tongue`,
@@ -8503,7 +8502,7 @@ export const QUESTION_BANK = [
     id: 606,
     category: `Safe & Effective Care Environment`,
     chapter: `Perioperative Client`,
-    question: `When informed consent is obtained for surgery, who must explain the surgical procedure to the client?`,
+    prompt: `When informed consent is obtained for surgery, who must explain the surgical procedure to the client?`,
     options: [
       `Physician`,
       `Nurse on the surgical unit`,
@@ -8517,7 +8516,7 @@ export const QUESTION_BANK = [
     id: 607,
     category: `Safe & Effective Care Environment`,
     chapter: `Perioperative Client`,
-    question: `A 19-year-old unmarried college student is admitted unconscious following a car accident. He is hemorrhaging from severe internal injuries. Which statement is true concerning obtaining informed consent for treating him?`,
+    prompt: `A 19-year-old unmarried college student is admitted unconscious following a car accident. He is hemorrhaging from severe internal injuries. Which statement is true concerning obtaining informed consent for treating him?`,
     options: [
       `Emergency care can be given because his injuries are life threatening.`,
       `He can sign his own consent form because he is older than 18.`,
@@ -8531,7 +8530,7 @@ export const QUESTION_BANK = [
     id: 608,
     category: `Safe & Effective Care Environment`,
     chapter: `Perioperative Client`,
-    question: `An adult is to have abdominal surgery this morning. Immediately preoperatively, the nurse must ensure that he:`,
+    prompt: `An adult is to have abdominal surgery this morning. Immediately preoperatively, the nurse must ensure that he:`,
     options: [
       `is comfortable`,
       `has an empty bowel.`,
@@ -8545,7 +8544,7 @@ export const QUESTION_BANK = [
     id: 609,
     category: `Safe & Effective Care Environment`,
     chapter: `Perioperative Client`,
-    question: `A woman who is to have surgery tomorrow denies any fears or worries about the upcoming surgery. However, she talks incessantly about trivial matters and is constantly rearranging the items on her bedside stand. What is the most appropriate action for the nurse to take?`,
+    prompt: `A woman who is to have surgery tomorrow denies any fears or worries about the upcoming surgery. However, she talks incessantly about trivial matters and is constantly rearranging the items on her bedside stand. What is the most appropriate action for the nurse to take?`,
     options: [
       `Listen to her trivial talk.`,
       `During preoperative teaching, encourage her to ask questions and express concerns.`,
@@ -8559,7 +8558,7 @@ export const QUESTION_BANK = [
     id: 610,
     category: `Safe & Effective Care Environment`,
     chapter: `Perioperative Client`,
-    question: `A client who is about to have surgery asks the nurse why it is necessary to be shaved in that area. The best response for the nurse to provide is that hair is removed to:`,
+    prompt: `A client who is about to have surgery asks the nurse why it is necessary to be shaved in that area. The best response for the nurse to provide is that hair is removed to:`,
     options: [
       `enhance vision of the surgical field.`,
       `reduce the chance of infection as the skin is opened.`,
@@ -8573,7 +8572,7 @@ export const QUESTION_BANK = [
     id: 611,
     category: `Safe & Effective Care Environment`,
     chapter: `Perioperative Client`,
-    question: `Preoperative orders for an adult client include pentobarbital. The nurse knows that this drug is administered primarily to:`,
+    prompt: `Preoperative orders for an adult client include pentobarbital. The nurse knows that this drug is administered primarily to:`,
     options: [
       `control secretions`,
       `control pain`,
@@ -8587,7 +8586,7 @@ export const QUESTION_BANK = [
     id: 612,
     category: `Safe & Effective Care Environment`,
     chapter: `Perioperative Client`,
-    question: `An adult was given meperidine HCl (Demerol) 75 mg and atropine sulfate 0.4 mg as preoperative medications. On her arrival in the operating room, she says to the nurse, "My mouth is very dry." What is the best response for the nurse to make?`,
+    prompt: `An adult was given meperidine HCl (Demerol) 75 mg and atropine sulfate 0.4 mg as preoperative medications. On her arrival in the operating room, she says to the nurse, "My mouth is very dry." What is the best response for the nurse to make?`,
     options: [
       `"I will tell the doctor about that."`,
       `"That is a normal response to your medication."`,
@@ -8601,7 +8600,7 @@ export const QUESTION_BANK = [
     id: 613,
     category: `Safe & Effective Care Environment`,
     chapter: `Perioperative Client`,
-    question: `The nurse is caring for a client who has just been admitted to the postanesthesia care unit. The client vomits. The nurse knows that the primary problem that can occur as a result of vomiting in the immediate postoperative period is which of the following?`,
+    prompt: `The nurse is caring for a client who has just been admitted to the postanesthesia care unit. The client vomits. The nurse knows that the primary problem that can occur as a result of vomiting in the immediate postoperative period is which of the following?`,
     options: [
       `Electrolyte imbalance`,
       `Dehiscence`,
@@ -8615,7 +8614,7 @@ export const QUESTION_BANK = [
     id: 614,
     category: `Safe & Effective Care Environment`,
     chapter: `Perioperative Client`,
-    question: `An adult has returned to the surgical floor following an abdominal cholecystectomy and an uneventful stay in the postanesthesia room. Which nursing action should be the highest priority?`,
+    prompt: `An adult has returned to the surgical floor following an abdominal cholecystectomy and an uneventful stay in the postanesthesia room. Which nursing action should be the highest priority?`,
     options: [
       `Encourage the client to take deep breaths.`,
       `Ask the client to flex and extend her feet.`,
@@ -8629,7 +8628,7 @@ export const QUESTION_BANK = [
     id: 615,
     category: `Safe & Effective Care Environment`,
     chapter: `Perioperative Client`,
-    question: `A young man had an emergency appendectomy for a ruptured appendix. He is in the postanesthesia care unit. He has not yet awakened. An IV is running. A Penrose drain is in place. How should the nurse position this client?`,
+    prompt: `A young man had an emergency appendectomy for a ruptured appendix. He is in the postanesthesia care unit. He has not yet awakened. An IV is running. A Penrose drain is in place. How should the nurse position this client?`,
     options: [
       `Semi-sitting position`,
       `Supine with head turned to the side`,
@@ -8643,7 +8642,7 @@ export const QUESTION_BANK = [
     id: 616,
     category: `Safe & Effective Care Environment`,
     chapter: `Perioperative Client`,
-    question: `A young man had an emergency appendectomy for a ruptured appendix and is in the postanesthesia care unit. A Penrose drain is in place. After he recovers from anesthesia, how should he be positioned?`,
+    prompt: `A young man had an emergency appendectomy for a ruptured appendix and is in the postanesthesia care unit. A Penrose drain is in place. After he recovers from anesthesia, how should he be positioned?`,
     options: [
       `Right Sims' position`,
       `Dorsal`,
@@ -8657,7 +8656,7 @@ export const QUESTION_BANK = [
     id: 617,
     category: `Safe & Effective Care Environment`,
     chapter: `Perioperative Client`,
-    question: `The nurse is planning care for a woman who had an abdominal hysterectomy and bilateral salpingectomy and oophorectomy. The nurse knows that because of the location of her surgery, the client is at risk for the development of:`,
+    prompt: `The nurse is planning care for a woman who had an abdominal hysterectomy and bilateral salpingectomy and oophorectomy. The nurse knows that because of the location of her surgery, the client is at risk for the development of:`,
     options: [
       `thrombophlebitis`,
       `pneumonia`,
@@ -8671,7 +8670,7 @@ export const QUESTION_BANK = [
     id: 618,
     category: `Safe & Effective Care Environment`,
     chapter: `Perioperative Client`,
-    question: `An adult client is admitted to the postanesthesia care unit following an abdominoperineal resection. Which action should the nurse take initially?`,
+    prompt: `An adult client is admitted to the postanesthesia care unit following an abdominoperineal resection. Which action should the nurse take initially?`,
     options: [
       `Assess respiratory function`,
       `Monitor IV fluids`,
@@ -8685,7 +8684,7 @@ export const QUESTION_BANK = [
     id: 619,
     category: `Safe & Effective Care Environment`,
     chapter: `Perioperative Client`,
-    question: `The nurse is caring for a woman who just delivered a healthy baby. She received a saddle block anesthesia during delivery. She is admitted to the postpartum unit. Which nursing action is most appropriate?`,
+    prompt: `The nurse is caring for a woman who just delivered a healthy baby. She received a saddle block anesthesia during delivery. She is admitted to the postpartum unit. Which nursing action is most appropriate?`,
     options: [
       `Encourage her to ambulate as soon as sensation and motion have returned.`,
       `Keep her flat and quiet for eight hours.`,
@@ -8699,7 +8698,7 @@ export const QUESTION_BANK = [
     id: 620,
     category: `Safe & Effective Care Environment`,
     chapter: `Perioperative Client`,
-    question: `A man who is recovering from a prostatectomy complains of pain in his left calf. The nurse observes slight ankle swelling and elicits the Homan's sign. What is the best action for the nurse to take at this time?`,
+    prompt: `A man who is recovering from a prostatectomy complains of pain in his left calf. The nurse observes slight ankle swelling and elicits the Homan's sign. What is the best action for the nurse to take at this time?`,
     options: [
       `Tell him to stay in bed and notify the charge nurse`,
       `Massage his leg to relieve the pain`,
@@ -8715,7 +8714,7 @@ export const QUESTION_BANK = [
     id: 621,
     category: `Physiological Adaptation`,
     chapter: `Client with Cancer`,
-    question: `The nurse is caring for a client who is being treated for cancer. Which question by the client indicates that the client is not ready for teaching?`,
+    prompt: `The nurse is caring for a client who is being treated for cancer. Which question by the client indicates that the client is not ready for teaching?`,
     options: [
       `"Am I going to lose my hair?"`,
       `"Should I get a second opinion?"`,
@@ -8729,7 +8728,7 @@ export const QUESTION_BANK = [
     id: 622,
     category: `Physiological Adaptation`,
     chapter: `Client with Cancer`,
-    question: `The nurse caring for a client who is receiving chemotherapy is concerned about the client's nutritional status. What should the nurse encourage the client to do?`,
+    prompt: `The nurse caring for a client who is receiving chemotherapy is concerned about the client's nutritional status. What should the nurse encourage the client to do?`,
     options: [
       `Increase the amount of spices in the food`,
       `Avoid red meats`,
@@ -8743,7 +8742,7 @@ export const QUESTION_BANK = [
     id: 623,
     category: `Physiological Adaptation`,
     chapter: `Client with Cancer`,
-    question: `In planning care for a client with a platelet count of 8000 and a WBC of 8000, the nurse can expect to:`,
+    prompt: `In planning care for a client with a platelet count of 8000 and a WBC of 8000, the nurse can expect to:`,
     options: [
       `remove flowers from the room.`,
       `encourage fresh fruit and vegetables.`,
@@ -8757,7 +8756,7 @@ export const QUESTION_BANK = [
     id: 624,
     category: `Physiological Adaptation`,
     chapter: `Client with Cancer`,
-    question: `The nurse is teaching a client with a WBC of 1400. Which statement made by the client indicates an understanding of the teaching?`,
+    prompt: `The nurse is teaching a client with a WBC of 1400. Which statement made by the client indicates an understanding of the teaching?`,
     options: [
       `"I will eat fresh fruits and vegetables to avoid constipation."`,
       `"I will stay away from my cat."`,
@@ -8771,7 +8770,7 @@ export const QUESTION_BANK = [
     id: 625,
     category: `Physiological Adaptation`,
     chapter: `Client with Cancer`,
-    question: `In evaluating the client with cancer, what best indicates that the nutritional status is adequate?`,
+    prompt: `In evaluating the client with cancer, what best indicates that the nutritional status is adequate?`,
     options: [
       `Calorie intake`,
       `Stable weight`,
@@ -8785,7 +8784,7 @@ export const QUESTION_BANK = [
     id: 626,
     category: `Physiological Adaptation`,
     chapter: `Client with Cancer`,
-    question: `An adult client with newly diagnosed cancer says, "I'm really afraid of dying. Who's going to take care of my children?" What is the best initial response for the nurse to make?`,
+    prompt: `An adult client with newly diagnosed cancer says, "I'm really afraid of dying. Who's going to take care of my children?" What is the best initial response for the nurse to make?`,
     options: [
       `"What makes you think you are going to die?"`,
       `"How old are your children?"`,
@@ -8799,7 +8798,7 @@ export const QUESTION_BANK = [
     id: 627,
     category: `Physiological Adaptation`,
     chapter: `Client with Cancer`,
-    question: `A client with terminal cancer yells at the nurse and says, "I don't need your help, I can bathe myself." Which stage of grief is the client most likely experiencing?`,
+    prompt: `A client with terminal cancer yells at the nurse and says, "I don't need your help, I can bathe myself." Which stage of grief is the client most likely experiencing?`,
     options: [
       `Projection`,
       `Denial`,
@@ -8813,7 +8812,7 @@ export const QUESTION_BANK = [
     id: 628,
     category: `Physiological Adaptation`,
     chapter: `Client with Cancer`,
-    question: `The nurse can expect a client with a platelet count of 8000 and a WBC count of 8000 to be placed:`,
+    prompt: `The nurse can expect a client with a platelet count of 8000 and a WBC count of 8000 to be placed:`,
     options: [
       `in a private room.`,
       `on protective isolation`,
@@ -8827,7 +8826,7 @@ export const QUESTION_BANK = [
     id: 629,
     category: `Physiological Adaptation`,
     chapter: `Client with Cancer`,
-    question: `Which statement made by the client indicates understanding of the needs related to external radiation therapy?`,
+    prompt: `Which statement made by the client indicates understanding of the needs related to external radiation therapy?`,
     options: [
       `"I'll stay away from small children since I am radioactive."`,
       `"I won't wash these marks off until after my therapy."`,
@@ -8841,7 +8840,7 @@ export const QUESTION_BANK = [
     id: 630,
     category: `Physiological Adaptation`,
     chapter: `Client with Cancer`,
-    question: `When teaching and preparing a client for a bone marrow biopsy, the nurse should:`,
+    prompt: `When teaching and preparing a client for a bone marrow biopsy, the nurse should:`,
     options: [
       `check for an iodine allergy.`,
       `position the client in the fetal position with his or her back curved.`,
@@ -8855,7 +8854,7 @@ export const QUESTION_BANK = [
     id: 631,
     category: `Physiological Adaptation`,
     chapter: `Client with Cancer`,
-    question: `An adult says to the nurse, "The doctor said I have a carcinoma, and my friend has a sarcoma. What is the difference?" What should the nurse include in the response?`,
+    prompt: `An adult says to the nurse, "The doctor said I have a carcinoma, and my friend has a sarcoma. What is the difference?" What should the nurse include in the response?`,
     options: [
       `Carcinoma is usually more serious than a sarcoma.`,
       `Carcinoma indicates that the tissue involved is epithelial, such as the GI tract or breast; sarcoma indicates that the tissue involved is connective tissue, such as the bone.`,
@@ -8869,7 +8868,7 @@ export const QUESTION_BANK = [
     id: 632,
     category: `Physiological Adaptation`,
     chapter: `Client with Cancer`,
-    question: `The nurse is teaching a group of persons in the community about risk factors for cancer. Which of the following is not a risk factor and should not be included in the teaching?`,
+    prompt: `The nurse is teaching a group of persons in the community about risk factors for cancer. Which of the following is not a risk factor and should not be included in the teaching?`,
     options: [
       `A change in bowel habits`,
       `Difficulty in swallowing`,
@@ -8883,7 +8882,7 @@ export const QUESTION_BANK = [
     id: 633,
     category: `Physiological Adaptation`,
     chapter: `Client with Cancer`,
-    question: `A woman who has had surgery for colon cancer asks the nurse why the doctor has her come back for a blood test called CEA. What is the best response for the nurse to make?`,
+    prompt: `A woman who has had surgery for colon cancer asks the nurse why the doctor has her come back for a blood test called CEA. What is the best response for the nurse to make?`,
     options: [
       `"You should ask your physician about specific tests."`,
       `"High levels of CEA are found in cancers of the colon; continued low levels after surgery indicate that there is probably not a recurrence."`,
@@ -8897,7 +8896,7 @@ export const QUESTION_BANK = [
     id: 634,
     category: `Physiological Adaptation`,
     chapter: `Client with Cancer`,
-    question: `An adult is undergoing diagnostic tests for possible cancer. A liver scan is scheduled. The client asks whether she will need to stay away from people because she is radioactive following the test. What should be included in the nurse's response?`,
+    prompt: `An adult is undergoing diagnostic tests for possible cancer. A liver scan is scheduled. The client asks whether she will need to stay away from people because she is radioactive following the test. What should be included in the nurse's response?`,
     options: [
       `She will be radioactive after the scan and should avoid small children and pregnant women.`,
       `The radioisotope doses used in the scan are very small, and she will not be a hazard to others.`,
@@ -8911,7 +8910,7 @@ export const QUESTION_BANK = [
     id: 635,
     category: `Physiological Adaptation`,
     chapter: `Client with Cancer`,
-    question: `The client has been receiving chemotherapy for cancer and has stomatitis. What nursing care is indicated because the client has stomatitis?`,
+    prompt: `The client has been receiving chemotherapy for cancer and has stomatitis. What nursing care is indicated because the client has stomatitis?`,
     options: [
       `Have the client rinse his or her mouth well with Listerine or other mouthwash before and after eating.`,
       `Use meticulous care when cleaning the stoma and applying the drainage bag.`,
@@ -8925,7 +8924,7 @@ export const QUESTION_BANK = [
     id: 636,
     category: `Physiological Adaptation`,
     chapter: `Client with Cancer`,
-    question: `An adult woman is scheduled to start chemotherapy next week. In anticipation of alopecia, which recommendation is appropriate?`,
+    prompt: `An adult woman is scheduled to start chemotherapy next week. In anticipation of alopecia, which recommendation is appropriate?`,
     options: [
       `Encourage the client to cut her hair and buy a wig.`,
       `Recommend that the client wash her hair carefully to prevent hair loss.`,
@@ -8939,7 +8938,7 @@ export const QUESTION_BANK = [
     id: 637,
     category: `Physiological Adaptation`,
     chapter: `Client with Cancer`,
-    question: `A client is receiving cancer chemotherapy. Metoclopramide (Reglan) is also ordered. The client asks the nurse why she is receiving Reglan. What nursing response is most accurate?`,
+    prompt: `A client is receiving cancer chemotherapy. Metoclopramide (Reglan) is also ordered. The client asks the nurse why she is receiving Reglan. What nursing response is most accurate?`,
     options: [
       `Reglan is a stool softener and will help with the constipation that the chemotherapy might cause.`,
       `Reglan will help prevent alopecia.`,
@@ -8953,7 +8952,7 @@ export const QUESTION_BANK = [
     id: 638,
     category: `Physiological Adaptation`,
     chapter: `Client with Cancer`,
-    question: `Allopurinol (Zyloprim) is ordered for the client who is receiving cancer chemotherapy. What instruction should the nurse give the client because allopurinol is ordered?`,
+    prompt: `Allopurinol (Zyloprim) is ordered for the client who is receiving cancer chemotherapy. What instruction should the nurse give the client because allopurinol is ordered?`,
     options: [
       `Drink several additional glasses of water each day.`,
       `Avoid foods containing folic acid.`,
@@ -8967,7 +8966,7 @@ export const QUESTION_BANK = [
     id: 639,
     category: `Physiological Adaptation`,
     chapter: `Client with Cancer`,
-    question: `Which instruction is appropriate for the nurse to give the client who is undergoing external radiation therapy?`,
+    prompt: `Which instruction is appropriate for the nurse to give the client who is undergoing external radiation therapy?`,
     options: [
       `Avoid gas-forming foods such as beans and cabbage.`,
       `Be sure to get outdoors in the sun for a few minutes each day.`,
@@ -8981,7 +8980,7 @@ export const QUESTION_BANK = [
     id: 640,
     category: `Physiological Adaptation`,
     chapter: `Client with Cancer`,
-    question: `The nurse is caring for a person who has radiation pellets inserted in the mouth to treat oral cancer. One of the pellets falls out. What should the nurse do initially?`,
+    prompt: `The nurse is caring for a person who has radiation pellets inserted in the mouth to treat oral cancer. One of the pellets falls out. What should the nurse do initially?`,
     options: [
       `Put on rubber gloves and pick up the pellet and place it in the utility room.`,
       `Use long-handled forceps to pick up the pellet and place it in a lead-lined container.`,
@@ -8997,7 +8996,7 @@ export const QUESTION_BANK = [
     id: 641,
     category: `Health Promotion & Maintenance`,
     chapter: `Nutrition & Special Diets`,
-    question: `The nurse knows that the client understands a low-sodium diet when the client selects which of the following menus?`,
+    prompt: `The nurse knows that the client understands a low-sodium diet when the client selects which of the following menus?`,
     options: [
       `Lobster salad, corn bread, and milk`,
       `Hot roast beef sandwich, celery sticks, and coffee`,
@@ -9011,7 +9010,7 @@ export const QUESTION_BANK = [
     id: 642,
     category: `Health Promotion & Maintenance`,
     chapter: `Nutrition & Special Diets`,
-    question: `An adult has chronic renal failure and asks why sodium must be limited. What is the best answer for the nurse to make?`,
+    prompt: `An adult has chronic renal failure and asks why sodium must be limited. What is the best answer for the nurse to make?`,
     options: [
       `"Sodium causes high blood pressure, which is not good for your kidneys."`,
       `"Kidneys normally help the body eliminate sodium. Your kidneys are not doing that now."`,
@@ -9025,7 +9024,7 @@ export const QUESTION_BANK = [
     id: 643,
     category: `Health Promotion & Maintenance`,
     chapter: `Nutrition & Special Diets`,
-    question: `A low-sodium, low-fat diet has been prescribed for a client who recently had a myocardial infarction. Which of the following menu selections would be most appropriate for this client?`,
+    prompt: `A low-sodium, low-fat diet has been prescribed for a client who recently had a myocardial infarction. Which of the following menu selections would be most appropriate for this client?`,
     options: [
       `Hot dog and roll, tossed salad with blue cheese dressing, and chocolate chip cookies`,
       `Roast beef with gravy, baked potato, and sliced carrots`,
@@ -9039,7 +9038,7 @@ export const QUESTION_BANK = [
     id: 644,
     category: `Health Promotion & Maintenance`,
     chapter: `Nutrition & Special Diets`,
-    question: `Digoxin (Lanoxin) and furosemide (Lasix) have been prescribed for a client who has congestive heart failure. Which snack would be best for the client?`,
+    prompt: `Digoxin (Lanoxin) and furosemide (Lasix) have been prescribed for a client who has congestive heart failure. Which snack would be best for the client?`,
     options: [
       `Crackers`,
       `Honeydew melon`,
@@ -9053,7 +9052,7 @@ export const QUESTION_BANK = [
     id: 645,
     category: `Health Promotion & Maintenance`,
     chapter: `Nutrition & Special Diets`,
-    question: `Which foods should be omitted from the diet of a client who has gout?`,
+    prompt: `Which foods should be omitted from the diet of a client who has gout?`,
     options: [
       `Eggs and cheese`,
       `Lobster and liver`,
@@ -9067,7 +9066,7 @@ export const QUESTION_BANK = [
     id: 646,
     category: `Health Promotion & Maintenance`,
     chapter: `Nutrition & Special Diets`,
-    question: `A client who is on a special diet for the treatment of gout asks the nurse why a special diet is prescribed. What is the best answer for the nurse to give?`,
+    prompt: `A client who is on a special diet for the treatment of gout asks the nurse why a special diet is prescribed. What is the best answer for the nurse to give?`,
     options: [
       `"When purines are used by the body, they break down into uric acid that deposits in your joints and causes pain."`,
       `"Proteins make your lungs work harder and cause you pain."`,
@@ -9081,7 +9080,7 @@ export const QUESTION_BANK = [
     id: 647,
     category: `Health Promotion & Maintenance`,
     chapter: `Nutrition & Special Diets`,
-    question: `A 10-year-old child has a lactose intolerance. The child's mother asks the nurse for assistance in meeting calcium needs. What is the best nursing response?`,
+    prompt: `A 10-year-old child has a lactose intolerance. The child's mother asks the nurse for assistance in meeting calcium needs. What is the best nursing response?`,
     options: [
       `"Serve broccoli and other dark green vegetables frequently."`,
       `"Give her ice cream."`,
@@ -9095,7 +9094,7 @@ export const QUESTION_BANK = [
     id: 648,
     category: `Health Promotion & Maintenance`,
     chapter: `Nutrition & Special Diets`,
-    question: `The wife of a man who has coronary artery disease asks the nurse how she can prepare foods that will be good for her husband. What should the nurse include when talking with this woman?`,
+    prompt: `The wife of a man who has coronary artery disease asks the nurse how she can prepare foods that will be good for her husband. What should the nurse include when talking with this woman?`,
     options: [
       `Encourage her to use cream sauces to enhance the flavor of foods`,
       `Tell her to shop exclusively at health food stores`,
@@ -9109,7 +9108,7 @@ export const QUESTION_BANK = [
     id: 649,
     category: `Health Promotion & Maintenance`,
     chapter: `Nutrition & Special Diets`,
-    question: `A client who has hypertension makes all of the following statements. Which statement indicates a need for more teaching?`,
+    prompt: `A client who has hypertension makes all of the following statements. Which statement indicates a need for more teaching?`,
     options: [
       `"I eat fresh fruit every day."`,
       `"I just love dill pickles with my sandwich at lunch."`,
@@ -9123,7 +9122,7 @@ export const QUESTION_BANK = [
     id: 650,
     category: `Health Promotion & Maintenance`,
     chapter: `Nutrition & Special Diets`,
-    question: `An adult who has hypertension is taking furosemide (Lasix). The client has been placed on a low-sodium, high-potassium diet. What is the reason for the potassium alteration?`,
+    prompt: `An adult who has hypertension is taking furosemide (Lasix). The client has been placed on a low-sodium, high-potassium diet. What is the reason for the potassium alteration?`,
     options: [
       `To prevent sodium loss from the renal tubules`,
       `To replace potassium lost from the kidneys`,
@@ -9137,7 +9136,7 @@ export const QUESTION_BANK = [
     id: 651,
     category: `Health Promotion & Maintenance`,
     chapter: `Nutrition & Special Diets`,
-    question: `Ferrous sulfate has been prescribed for a woman who is pregnant. The nurse should advise her to take the medication at which time?`,
+    prompt: `Ferrous sulfate has been prescribed for a woman who is pregnant. The nurse should advise her to take the medication at which time?`,
     options: [
       `Upon arising`,
       `With meals`,
@@ -9151,7 +9150,7 @@ export const QUESTION_BANK = [
     id: 652,
     category: `Health Promotion & Maintenance`,
     chapter: `Nutrition & Special Diets`,
-    question: `A pregnant woman asks why iron has been prescribed for her. How should the nurse reply?`,
+    prompt: `A pregnant woman asks why iron has been prescribed for her. How should the nurse reply?`,
     options: [
       `"Iron helps to prevent sickle cell anemia in your baby."`,
       `"Iron will help your baby to develop more intelligence."`,
@@ -9165,7 +9164,7 @@ export const QUESTION_BANK = [
     id: 653,
     category: `Health Promotion & Maintenance`,
     chapter: `Nutrition & Special Diets`,
-    question: `A pregnant woman asks the nurse for help in planning her diet to include iron sources. Which suggestion would be best?`,
+    prompt: `A pregnant woman asks the nurse for help in planning her diet to include iron sources. Which suggestion would be best?`,
     options: [
       `Be sure to eat at least one egg white a day.`,
       `Drink orange juice with your morning egg.`,
@@ -9179,7 +9178,7 @@ export const QUESTION_BANK = [
     id: 654,
     category: `Health Promotion & Maintenance`,
     chapter: `Nutrition & Special Diets`,
-    question: `A young mother is concerned about providing an adequate diet for her children and asks the nurse how to be sure they get enough B vitamins. Which response is best?`,
+    prompt: `A young mother is concerned about providing an adequate diet for her children and asks the nurse how to be sure they get enough B vitamins. Which response is best?`,
     options: [
       `Provide a glass of milk with every meal.`,
       `Offer whole grains and cereals.`,
@@ -9193,7 +9192,7 @@ export const QUESTION_BANK = [
     id: 655,
     category: `Health Promotion & Maintenance`,
     chapter: `Nutrition & Special Diets`,
-    question: `An adult says to the nurse, "The doctor told me that I should have plenty of the healing vitamin to help my operation heal." What foods would best meet this prescription?`,
+    prompt: `An adult says to the nurse, "The doctor told me that I should have plenty of the healing vitamin to help my operation heal." What foods would best meet this prescription?`,
     options: [
       `Apple juice`,
       `Strawberries`,
@@ -9207,7 +9206,7 @@ export const QUESTION_BANK = [
     id: 656,
     category: `Health Promotion & Maintenance`,
     chapter: `Nutrition & Special Diets`,
-    question: `An adult is on a low-sodium, low-fat diet for hypertension. What question is most important for the nurse to ask when starting to teach the client?`,
+    prompt: `An adult is on a low-sodium, low-fat diet for hypertension. What question is most important for the nurse to ask when starting to teach the client?`,
     options: [
       `"How do you prepare your foods?"`,
       `"When do you eat your meals?"`,
@@ -9221,7 +9220,7 @@ export const QUESTION_BANK = [
     id: 657,
     category: `Health Promotion & Maintenance`,
     chapter: `Nutrition & Special Diets`,
-    question: `Which of these meals would the nurse recommend to provide the highest amount of protein and calories?`,
+    prompt: `Which of these meals would the nurse recommend to provide the highest amount of protein and calories?`,
     options: [
       `Vegetable soup, cottage cheese on crackers, applesauce, and a hot chocolate`,
       `Cheeseburger, French-fried potatoes, carrot sticks, cantaloupe balls, and milk`,
@@ -9235,7 +9234,7 @@ export const QUESTION_BANK = [
     id: 658,
     category: `Health Promotion & Maintenance`,
     chapter: `Nutrition & Special Diets`,
-    question: `Mothers should be instructed that diets for infants and toddlers who drink a lot of milk and few other foods will most likely result in the development of a deficiency in which of these nutrients?`,
+    prompt: `Mothers should be instructed that diets for infants and toddlers who drink a lot of milk and few other foods will most likely result in the development of a deficiency in which of these nutrients?`,
     options: [
       `Iron`,
       `Carbohydrate`,
@@ -9249,7 +9248,7 @@ export const QUESTION_BANK = [
     id: 659,
     category: `Health Promotion & Maintenance`,
     chapter: `Nutrition & Special Diets`,
-    question: `Following surgery, a clear liquid diet is ordered. Which of these foods would be contraindicated for this person?`,
+    prompt: `Following surgery, a clear liquid diet is ordered. Which of these foods would be contraindicated for this person?`,
     options: [
       `Tea with lemon`,
       `Ginger ale`,
@@ -9263,7 +9262,7 @@ export const QUESTION_BANK = [
     id: 660,
     category: `Health Promotion & Maintenance`,
     chapter: `Nutrition & Special Diets`,
-    question: `A 4-year-old child has phenylketonuria and must follow a special diet. Which food is allowed on this diet?`,
+    prompt: `A 4-year-old child has phenylketonuria and must follow a special diet. Which food is allowed on this diet?`,
     options: [
       `Bread and butter`,
       `Strawberries`,
@@ -9277,7 +9276,7 @@ export const QUESTION_BANK = [
     id: 661,
     category: `Health Promotion & Maintenance`,
     chapter: `Nutrition & Special Diets`,
-    question: `A low-residue diet is ordered for an adult. The nurse knows the client understands the diet when which foods are selected?`,
+    prompt: `A low-residue diet is ordered for an adult. The nurse knows the client understands the diet when which foods are selected?`,
     options: [
       `Spinach salad and roast beef`,
       `Mashed potatoes and chicken`,
@@ -9291,7 +9290,7 @@ export const QUESTION_BANK = [
     id: 662,
     category: `Health Promotion & Maintenance`,
     chapter: `Nutrition & Special Diets`,
-    question: `The nurse is to teach a client about a low-purine diet. What should the nurse do initially?`,
+    prompt: `The nurse is to teach a client about a low-purine diet. What should the nurse do initially?`,
     options: [
       `Provide a list of foods to be avoided`,
       `Ask the client what he has eaten for the last three days`,
@@ -9305,7 +9304,7 @@ export const QUESTION_BANK = [
     id: 663,
     category: `Health Promotion & Maintenance`,
     chapter: `Nutrition & Special Diets`,
-    question: `A woman who is in the seventh month of pregnancy has symptoms of preeclampsia. When discussing diet, the nurse instructs the client to eat a high-protein diet and to avoid foods that have a high sodium content. Which of these foods, if selected by the client, would be correct?`,
+    prompt: `A woman who is in the seventh month of pregnancy has symptoms of preeclampsia. When discussing diet, the nurse instructs the client to eat a high-protein diet and to avoid foods that have a high sodium content. Which of these foods, if selected by the client, would be correct?`,
     options: [
       `Creamed chipped beef on dry toast`,
       `Cheese sandwich on whole-wheat toast`,
@@ -9319,7 +9318,7 @@ export const QUESTION_BANK = [
     id: 664,
     category: `Health Promotion & Maintenance`,
     chapter: `Nutrition & Special Diets`,
-    question: `An adolescent has been recently diagnosed as having Type 1 insulin-dependent diabetes. She asks the nurse if she will ever be able to go out with her friends for pizza or ice cream. Which of these responses by the nurse would give accurate information?`,
+    prompt: `An adolescent has been recently diagnosed as having Type 1 insulin-dependent diabetes. She asks the nurse if she will ever be able to go out with her friends for pizza or ice cream. Which of these responses by the nurse would give accurate information?`,
     options: [
       `"You can go with the group, but you cannot eat pizza or ice cream."`,
       `"You can have pizza but not ice cream."`,
@@ -9333,7 +9332,7 @@ export const QUESTION_BANK = [
     id: 665,
     category: `Health Promotion & Maintenance`,
     chapter: `Nutrition & Special Diets`,
-    question: `A pregnant woman tells the nurse that she is constipated. What suggestion is best for the nurse to give the woman?`,
+    prompt: `A pregnant woman tells the nurse that she is constipated. What suggestion is best for the nurse to give the woman?`,
     options: [
       `Reduce your fluid intake.`,
       `Reduce your intake of fruits.`,
@@ -9349,7 +9348,7 @@ export const QUESTION_BANK = [
     id: 666,
     category: `Pharmacological Therapies`,
     chapter: `Pharmacology`,
-    question: `The nurse is administering an intramuscular (IM) injection to a client. When the nurse aspirates, there is a blood return. What is the most appropriate action for the nurse to take?`,
+    prompt: `The nurse is administering an intramuscular (IM) injection to a client. When the nurse aspirates, there is a blood return. What is the most appropriate action for the nurse to take?`,
     options: [
       `Continue to administer the medication`,
       `Withdraw the needle and administer in another site`,
@@ -9363,7 +9362,7 @@ export const QUESTION_BANK = [
     id: 667,
     category: `Pharmacological Therapies`,
     chapter: `Pharmacology`,
-    question: `The nurse is to administer a subcutaneous (SC) injection. Which technique is correct?`,
+    prompt: `The nurse is to administer a subcutaneous (SC) injection. Which technique is correct?`,
     options: [
       `Pull the skin taut. Insert a 21-gauge needle at a 90-degree angle.`,
       `Pinch the skin. Insert a 25-gauge needle at a 45-degree angle.`,
@@ -9377,7 +9376,7 @@ export const QUESTION_BANK = [
     id: 668,
     category: `Pharmacological Therapies`,
     chapter: `Pharmacology`,
-    question: `The nurse is to administer an IM injection to a 6-month-old child. What is the most appropriate site to use?`,
+    prompt: `The nurse is to administer an IM injection to a 6-month-old child. What is the most appropriate site to use?`,
     options: [
       `Vastus lateralis`,
       `Dorsal gluteal`,
@@ -9391,7 +9390,7 @@ export const QUESTION_BANK = [
     id: 669,
     category: `Pharmacological Therapies`,
     chapter: `Pharmacology`,
-    question: `Ringer's lactate is running at 125 mL/hr. The administration set has 15 drops/mL. What should the drip rate be?`,
+    prompt: `Ringer's lactate is running at 125 mL/hr. The administration set has 15 drops/mL. What should the drip rate be?`,
     options: [
       `8 drops/min`,
       `31 drops/min`,
@@ -9405,7 +9404,7 @@ export const QUESTION_BANK = [
     id: 670,
     category: `Pharmacological Therapies`,
     chapter: `Pharmacology`,
-    question: `A 2-year-old child who weighs 33 pounds is to receive a total daily dose of 25 mg/kg of a medication. It is to be administered in three evenly divided doses. The label reads 150 mg/mL. How many milliliters will be injected per dose?`,
+    prompt: `A 2-year-old child who weighs 33 pounds is to receive a total daily dose of 25 mg/kg of a medication. It is to be administered in three evenly divided doses. The label reads 150 mg/mL. How many milliliters will be injected per dose?`,
     options: [
       `0.5 mL`,
       `0.83 mL`,
@@ -9419,7 +9418,7 @@ export const QUESTION_BANK = [
     id: 671,
     category: `Pharmacological Therapies`,
     chapter: `Pharmacology`,
-    question: `An adult is receiving gentamicin IV q8h. Which laboratory tests does the nurse expect that the client will have done regularly?`,
+    prompt: `An adult is receiving gentamicin IV q8h. Which laboratory tests does the nurse expect that the client will have done regularly?`,
     options: [
       `CBC and hemoglobin`,
       `BUN and serum creatinine`,
@@ -9433,7 +9432,7 @@ export const QUESTION_BANK = [
     id: 672,
     category: `Pharmacological Therapies`,
     chapter: `Pharmacology`,
-    question: `Which observation, if reported by a client, is most suggestive of an adverse reaction to gentamicin?`,
+    prompt: `Which observation, if reported by a client, is most suggestive of an adverse reaction to gentamicin?`,
     options: [
       `A WBC of 8000`,
       `Ringing in the ears`,
@@ -9447,7 +9446,7 @@ export const QUESTION_BANK = [
     id: 673,
     category: `Pharmacological Therapies`,
     chapter: `Pharmacology`,
-    question: `Penicillin V potassium (Pen-Vee-K) 500 mg PO qid is ordered for an adult client. He reports that he took penicillin for the first time two months ago. What should the nurse do?`,
+    prompt: `Penicillin V potassium (Pen-Vee-K) 500 mg PO qid is ordered for an adult client. He reports that he took penicillin for the first time two months ago. What should the nurse do?`,
     options: [
       `Be sure that skin testing for a penicillin allergy has been done`,
       `Observe for signs of an allergic response`,
@@ -9461,7 +9460,7 @@ export const QUESTION_BANK = [
     id: 674,
     category: `Pharmacological Therapies`,
     chapter: `Pharmacology`,
-    question: `The nurse in the physician's office is instructing an adult about taking penicillin V potassium (Pen-Vee-K) qid. When should the nurse tell him to take the medicine?`,
+    prompt: `The nurse in the physician's office is instructing an adult about taking penicillin V potassium (Pen-Vee-K) qid. When should the nurse tell him to take the medicine?`,
     options: [
       `With meals and at bedtime`,
       `Once a day at 10:00 a.m.`,
@@ -9475,7 +9474,7 @@ export const QUESTION_BANK = [
     id: 675,
     category: `Pharmacological Therapies`,
     chapter: `Pharmacology`,
-    question: `A 10-month-old child has been diagnosed as having acute otitis media. The pediatrician prescribed amoxicillin suspension. What instructions should the nurse give the child's mother?`,
+    prompt: `A 10-month-old child has been diagnosed as having acute otitis media. The pediatrician prescribed amoxicillin suspension. What instructions should the nurse give the child's mother?`,
     options: [
       `When your child's temperature has been normal for two days, discontinue the medicine.`,
       `Discard any unused medication.`,
@@ -9489,7 +9488,7 @@ export const QUESTION_BANK = [
     id: 676,
     category: `Pharmacological Therapies`,
     chapter: `Pharmacology`,
-    question: `Keflex 250 mg PO q6h is ordered for an adult. The nurse notes that the client's history indicates that she has an allergy to penicillin. What is the most appropriate initial action for the nurse?`,
+    prompt: `Keflex 250 mg PO q6h is ordered for an adult. The nurse notes that the client's history indicates that she has an allergy to penicillin. What is the most appropriate initial action for the nurse?`,
     options: [
       `Notify the physician`,
       `Observe the client carefully after giving the medication`,
@@ -9503,7 +9502,7 @@ export const QUESTION_BANK = [
     id: 677,
     category: `Pharmacological Therapies`,
     chapter: `Pharmacology`,
-    question: `Which of the following persons would be least likely to receive tetracycline?`,
+    prompt: `Which of the following persons would be least likely to receive tetracycline?`,
     options: [
       `An adolescent with acne`,
       `A woman with chlamydia who is seven months pregnant`,
@@ -9517,7 +9516,7 @@ export const QUESTION_BANK = [
     id: 678,
     category: `Pharmacological Therapies`,
     chapter: `Pharmacology`,
-    question: `An adult is receiving Gantrisin 1 g PO qid for a urinary tract infection. Which statement she makes indicates a need for more teaching?`,
+    prompt: `An adult is receiving Gantrisin 1 g PO qid for a urinary tract infection. Which statement she makes indicates a need for more teaching?`,
     options: [
       `"If I get a rash, I will apply calamine lotion."`,
       `"I will take my pills with a full glass of water."`,
@@ -9531,7 +9530,7 @@ export const QUESTION_BANK = [
     id: 679,
     category: `Pharmacological Therapies`,
     chapter: `Pharmacology`,
-    question: `An adult client is seen in the clinic, and sulfisoxazole (Gantrisin) is prescribed. Which information is most appropriate for the nurse to include in the teaching?`,
+    prompt: `An adult client is seen in the clinic, and sulfisoxazole (Gantrisin) is prescribed. Which information is most appropriate for the nurse to include in the teaching?`,
     options: [
       `Limit your fluid intake to four glasses a day.`,
       `If it upsets your stomach, try taking it with an antacid.`,
@@ -9545,7 +9544,7 @@ export const QUESTION_BANK = [
     id: 680,
     category: `Pharmacological Therapies`,
     chapter: `Pharmacology`,
-    question: `An adult client has pulmonary tuberculosis. He is receiving isoniazid (INH) 300 mg PO, ethambutol 1 g PO daily, and streptomycin 1 g IM three times a week. When he comes in for a checkup, he tells the nurse that he hates getting shots and his ears ring most of the time. What is the best interpretation for the nurse to make regarding the client's complaints?`,
+    prompt: `An adult client has pulmonary tuberculosis. He is receiving isoniazid (INH) 300 mg PO, ethambutol 1 g PO daily, and streptomycin 1 g IM three times a week. When he comes in for a checkup, he tells the nurse that he hates getting shots and his ears ring most of the time. What is the best interpretation for the nurse to make regarding the client's complaints?`,
     options: [
       `He may be receiving too much ethambutol.`,
       `He should be evaluated for adverse reaction to streptomycin.`,
@@ -9559,7 +9558,7 @@ export const QUESTION_BANK = [
     id: 681,
     category: `Pharmacological Therapies`,
     chapter: `Pharmacology`,
-    question: `An adult client has pulmonary tuberculosis. He is receiving INH 300 mg PO, ethambutol 1 g PO daily, and streptomycin 1 g IM three times a week. When he comes in for a checkup, he tells the nurse that he hates getting shots and his ears ring most of the time. What advice does the nurse expect will be given to this client?`,
+    prompt: `An adult client has pulmonary tuberculosis. He is receiving INH 300 mg PO, ethambutol 1 g PO daily, and streptomycin 1 g IM three times a week. When he comes in for a checkup, he tells the nurse that he hates getting shots and his ears ring most of the time. What advice does the nurse expect will be given to this client?`,
     options: [
       `Take pyridoxine daily`,
       `Expect red-colored urine and feces.`,
@@ -9573,7 +9572,7 @@ export const QUESTION_BANK = [
     id: 682,
     category: `Pharmacological Therapies`,
     chapter: `Pharmacology`,
-    question: `An adult client is being treated for genital herpes with acyclovir (Zovirax) tablets. Which statement she makes indicates that she understands her therapy?`,
+    prompt: `An adult client is being treated for genital herpes with acyclovir (Zovirax) tablets. Which statement she makes indicates that she understands her therapy?`,
     options: [
       `"It is safe now to have sexual relations."`,
       `"I will stay home from work until the blisters are gone."`,
@@ -9587,7 +9586,7 @@ export const QUESTION_BANK = [
     id: 683,
     category: `Pharmacological Therapies`,
     chapter: `Pharmacology`,
-    question: `The clinic nurse is teaching an adult male who has AIDS. He is receiving zidovudine. Which statement he makes indicates that he understands the medication regimen?`,
+    prompt: `The clinic nurse is teaching an adult male who has AIDS. He is receiving zidovudine. Which statement he makes indicates that he understands the medication regimen?`,
     options: [
       `"If I get a sore throat and it is hard to swallow my capsules, I can empty the capsule into applesauce."`,
       `"I am hopeful that this drug will get rid of this awful disease."`,
@@ -9601,7 +9600,7 @@ export const QUESTION_BANK = [
     id: 684,
     category: `Pharmacological Therapies`,
     chapter: `Pharmacology`,
-    question: `An adult client has been diagnosed as having rheumatoid arthritis and is started on piroxicam (Feldene) 20 mg daily. Two days later, the client calls the nurse and says that her joints still hurt. What is the best response for the nurse to make?`,
+    prompt: `An adult client has been diagnosed as having rheumatoid arthritis and is started on piroxicam (Feldene) 20 mg daily. Two days later, the client calls the nurse and says that her joints still hurt. What is the best response for the nurse to make?`,
     options: [
       `"It may take up to two weeks before results are seen with Feldene."`,
       `"Take aspirin with the Feldene. It has an additive effect."`,
@@ -9615,7 +9614,7 @@ export const QUESTION_BANK = [
     id: 685,
     category: `Pharmacological Therapies`,
     chapter: `Pharmacology`,
-    question: `A 13-month-old child is admitted to the emergency room with salicylate poisoning. Her mother found her beside the empty bottle of adult aspirin. She says there were "about 10" aspirin left in the bottle. What manifestations would the nurse most expect to see in the child?`,
+    prompt: `A 13-month-old child is admitted to the emergency room with salicylate poisoning. Her mother found her beside the empty bottle of adult aspirin. She says there were "about 10" aspirin left in the bottle. What manifestations would the nurse most expect to see in the child?`,
     options: [
       `Bradycardia and pallor`,
       `Hyperventilation and hyperpyrexia`,
@@ -9629,7 +9628,7 @@ export const QUESTION_BANK = [
     id: 686,
     category: `Pharmacological Therapies`,
     chapter: `Pharmacology`,
-    question: `A toddler who has swallowed several adult aspirin is admitted to the emergency room. When admitted, the child is breathing but is difficult to arouse. What is the immediate priority of care?`,
+    prompt: `A toddler who has swallowed several adult aspirin is admitted to the emergency room. When admitted, the child is breathing but is difficult to arouse. What is the immediate priority of care?`,
     options: [
       `Administration of syrup of ipecac`,
       `Cardiopulmonary resuscitation`,
@@ -9643,7 +9642,7 @@ export const QUESTION_BANK = [
     id: 687,
     category: `Pharmacological Therapies`,
     chapter: `Pharmacology`,
-    question: `An adult client is on call for the operating room. The preoperative medication order is for meperidine HCl (Demerol) 100 mg IM and atropine 0.4 mg IM. The operating room calls at 11:00 A.M. and requests that the client be medicated. The nurse notes that the client last received meperidine for pain at 10:00 A.M. What is the most appropriate action for the nurse to take?`,
+    prompt: `An adult client is on call for the operating room. The preoperative medication order is for meperidine HCl (Demerol) 100 mg IM and atropine 0.4 mg IM. The operating room calls at 11:00 A.M. and requests that the client be medicated. The nurse notes that the client last received meperidine for pain at 10:00 A.M. What is the most appropriate action for the nurse to take?`,
     options: [
       `Give the preoperative medication as ordered`,
       `Give half the dose of meperidine and all of the atropine`,
@@ -9657,7 +9656,7 @@ export const QUESTION_BANK = [
     id: 688,
     category: `Pharmacological Therapies`,
     chapter: `Pharmacology`,
-    question: `An adult client had an abdominal hysterectomy this morning. Meperidine HCl (Demerol) 75 mg IM q3-4h PRN for pain is ordered. At 9:00 P.M., she complains of lower abdominal pain. She was last medicated at 5:45 P.M. What is the most appropriate initial action for the nurse to take?`,
+    prompt: `An adult client had an abdominal hysterectomy this morning. Meperidine HCl (Demerol) 75 mg IM q3-4h PRN for pain is ordered. At 9:00 P.M., she complains of lower abdominal pain. She was last medicated at 5:45 P.M. What is the most appropriate initial action for the nurse to take?`,
     options: [
       `Offer her a bed pan and a back rub`,
       `Reposition her`,
@@ -9671,7 +9670,7 @@ export const QUESTION_BANK = [
     id: 689,
     category: `Pharmacological Therapies`,
     chapter: `Pharmacology`,
-    question: `An adult client has rheumatoid arthritis. Aspirin 975 mg q4h PRN is ordered for pain. At 2:00 P.M., the client requests pain medication. Aspirin was last given at 9:30 A.M. What is the most appropriate initial action for the nurse to take?`,
+    prompt: `An adult client has rheumatoid arthritis. Aspirin 975 mg q4h PRN is ordered for pain. At 2:00 P.M., the client requests pain medication. Aspirin was last given at 9:30 A.M. What is the most appropriate initial action for the nurse to take?`,
     options: [
       `Give the aspirin as ordered`,
       `Question the order because it is a higher than normal dosage`,
@@ -9685,7 +9684,7 @@ export const QUESTION_BANK = [
     id: 690,
     category: `Pharmacological Therapies`,
     chapter: `Pharmacology`,
-    question: `A 68-year-old man has been diagnosed as having Parkinson's disease. He is started on Cogentin 0.5 mg PO daily. Which nursing action is most essential at this time?`,
+    prompt: `A 68-year-old man has been diagnosed as having Parkinson's disease. He is started on Cogentin 0.5 mg PO daily. Which nursing action is most essential at this time?`,
     options: [
       `Monitor his BP and pulse`,
       `Encourage cold beverages and hard candies`,
@@ -9699,7 +9698,7 @@ export const QUESTION_BANK = [
     id: 691,
     category: `Pharmacological Therapies`,
     chapter: `Pharmacology`,
-    question: `A young adult, 20 years old, who is hospitalized for the first time with schizophrenia, is receiving chlorpromazine (Thorazine) 75 mg PO tid. The client is to go home for a weekend pass. Which statement that the client makes indicates a need for nursing intervention?`,
+    prompt: `A young adult, 20 years old, who is hospitalized for the first time with schizophrenia, is receiving chlorpromazine (Thorazine) 75 mg PO tid. The client is to go home for a weekend pass. Which statement that the client makes indicates a need for nursing intervention?`,
     options: [
       `"I won't drink any alcohol this weekend."`,
       `"It will be good to taste home-cooked food again."`,
@@ -9713,7 +9712,7 @@ export const QUESTION_BANK = [
     id: 692,
     category: `Pharmacological Therapies`,
     chapter: `Pharmacology`,
-    question: `An adult client is receiving lithium 600 mg PO tid for the treatment of bipolar disorder. The client should be taught that it is important to have adequate amounts of which substance?`,
+    prompt: `An adult client is receiving lithium 600 mg PO tid for the treatment of bipolar disorder. The client should be taught that it is important to have adequate amounts of which substance?`,
     options: [
       `Potassium`,
       `Sodium`,
@@ -9727,7 +9726,7 @@ export const QUESTION_BANK = [
     id: 693,
     category: `Pharmacological Therapies`,
     chapter: `Pharmacology`,
-    question: `An elderly adult is scheduled for repair of a fractured femur this morning. The nurse goes in to administer the preoperative medication of Demerol 75 mg and atropine 0.4 mg IM. The client asks the nurse if he should take his eye drops before surgery. What is the best initial response for the nurse to make?`,
+    prompt: `An elderly adult is scheduled for repair of a fractured femur this morning. The nurse goes in to administer the preoperative medication of Demerol 75 mg and atropine 0.4 mg IM. The client asks the nurse if he should take his eye drops before surgery. What is the best initial response for the nurse to make?`,
     options: [
       `"You can take them when you get back from surgery."`,
       `"I'll give them to you now."`,
@@ -9741,7 +9740,7 @@ export const QUESTION_BANK = [
     id: 694,
     category: `Pharmacological Therapies`,
     chapter: `Pharmacology`,
-    question: `A 68-year-old client was admitted with congestive heart failure, has been digitalized, and is now taking a maintenance dose of digoxin 0.25 mg PO daily. The client is to be discharged soon. Which assessment is of most immediate concern to the nurse?`,
+    prompt: `A 68-year-old client was admitted with congestive heart failure, has been digitalized, and is now taking a maintenance dose of digoxin 0.25 mg PO daily. The client is to be discharged soon. Which assessment is of most immediate concern to the nurse?`,
     options: [
       `The client's apical pulse is 66.`,
       `The client says that he is nauseous and has no appetite.`,
@@ -9755,7 +9754,7 @@ export const QUESTION_BANK = [
     id: 695,
     category: `Pharmacological Therapies`,
     chapter: `Pharmacology`,
-    question: `An adult has angina and is to be discharged on transdermal nitroglycerin. Which statement by the client indicates that the client needs additional teaching?`,
+    prompt: `An adult has angina and is to be discharged on transdermal nitroglycerin. Which statement by the client indicates that the client needs additional teaching?`,
     options: [
       `"I am glad that I can continue walking."`,
       `"I will change the site each day."`,
@@ -9769,7 +9768,7 @@ export const QUESTION_BANK = [
     id: 696,
     category: `Pharmacological Therapies`,
     chapter: `Pharmacology`,
-    question: `A 48-year-old man is in the emergency room. He has crushing substernal pain and is diaphoretic, apprehensive, and ashen gray in color. The cardiac monitor shows runs of premature ventricular contractions. Which drug is most likely to be given to this client?`,
+    prompt: `A 48-year-old man is in the emergency room. He has crushing substernal pain and is diaphoretic, apprehensive, and ashen gray in color. The cardiac monitor shows runs of premature ventricular contractions. Which drug is most likely to be given to this client?`,
     options: [
       `Lidocaine`,
       `Verapamil`,
@@ -9783,7 +9782,7 @@ export const QUESTION_BANK = [
     id: 697,
     category: `Pharmacological Therapies`,
     chapter: `Pharmacology`,
-    question: `A 60-year-old client has been hospitalized for deep vein thrombosis. The client is to be discharged on warfarin (Coumadin) 5 mg PO daily. Which statement that the client makes indicates the best understanding of the medication routine?`,
+    prompt: `A 60-year-old client has been hospitalized for deep vein thrombosis. The client is to be discharged on warfarin (Coumadin) 5 mg PO daily. Which statement that the client makes indicates the best understanding of the medication routine?`,
     options: [
       `"I will take aspirin for my arthritis."`,
       `"I love to eat spinach salads."`,
@@ -9797,7 +9796,7 @@ export const QUESTION_BANK = [
     id: 698,
     category: `Pharmacological Therapies`,
     chapter: `Pharmacology`,
-    question: `A 67-year-old client is to be discharged from the hospital. The client is taking digoxin and furosemide daily. Which instruction is most essential for the nurse to give this client?`,
+    prompt: `A 67-year-old client is to be discharged from the hospital. The client is taking digoxin and furosemide daily. Which instruction is most essential for the nurse to give this client?`,
     options: [
       `Take your medicine early in the day.`,
       `Be sure to drink orange juice and eat bananas or melons every day.`,
@@ -9811,7 +9810,7 @@ export const QUESTION_BANK = [
     id: 699,
     category: `Pharmacological Therapies`,
     chapter: `Pharmacology`,
-    question: `An adult client who has been taking furosemide (Lasix) 40 mg PO every day for several weeks is complaining of muscle weakness and lethargy. Which test will be of greatest value in assessing the client's condition?`,
+    prompt: `An adult client who has been taking furosemide (Lasix) 40 mg PO every day for several weeks is complaining of muscle weakness and lethargy. Which test will be of greatest value in assessing the client's condition?`,
     options: [
       `Serum electrolytes`,
       `Urinalysis`,
@@ -9825,7 +9824,7 @@ export const QUESTION_BANK = [
     id: 700,
     category: `Pharmacological Therapies`,
     chapter: `Pharmacology`,
-    question: `An adult receives NPH insulin at 7:00 A.M. When is a hypoglycemic reaction most apt to develop?`,
+    prompt: `An adult receives NPH insulin at 7:00 A.M. When is a hypoglycemic reaction most apt to develop?`,
     options: [
       `Mid morning`,
       `Mid afternoon`,
@@ -9839,7 +9838,7 @@ export const QUESTION_BANK = [
     id: 701,
     category: `Pharmacological Therapies`,
     chapter: `Pharmacology`,
-    question: `A 17-year-old client has been recently diagnosed as having diabetes mellitus Type 1. Insulin is prescribed. The client asks why insulin can't be taken by mouth. What is the best answer for the nurse to give?`,
+    prompt: `A 17-year-old client has been recently diagnosed as having diabetes mellitus Type 1. Insulin is prescribed. The client asks why insulin can't be taken by mouth. What is the best answer for the nurse to give?`,
     options: [
       `"Insulin is irritating to the stomach."`,
       `"Oral insulin is too rapidly absorbed."`,
@@ -9853,7 +9852,7 @@ export const QUESTION_BANK = [
     id: 702,
     category: `Pharmacological Therapies`,
     chapter: `Pharmacology`,
-    question: `An adult received regular insulin at 7:00 A.M. At 10:00 A.M., she is irritable and sweaty, but her skin is cool. What is the most appropriate action for the nurse to take?`,
+    prompt: `An adult received regular insulin at 7:00 A.M. At 10:00 A.M., she is irritable and sweaty, but her skin is cool. What is the most appropriate action for the nurse to take?`,
     options: [
       `Have her lie down for a rest`,
       `Give her a cola drink`,
@@ -9867,7 +9866,7 @@ export const QUESTION_BANK = [
     id: 703,
     category: `Pharmacological Therapies`,
     chapter: `Pharmacology`,
-    question: `A woman who is taking cortisone for an acute exacerbation of rheumatoid arthritis is upset about the fat face she has developed. She says to the nurse, "I'm going to quit taking that cortisone." The nurse's response should be based on which understanding?`,
+    prompt: `A woman who is taking cortisone for an acute exacerbation of rheumatoid arthritis is upset about the fat face she has developed. She says to the nurse, "I'm going to quit taking that cortisone." The nurse's response should be based on which understanding?`,
     options: [
       `Cortisone does not cause a fat face.`,
       `The symptoms will lessen as her body adjusts to the medication.`,
@@ -9881,7 +9880,7 @@ export const QUESTION_BANK = [
     id: 704,
     category: `Pharmacological Therapies`,
     chapter: `Pharmacology`,
-    question: `An adult woman has been diagnosed as having hypothyroidism. She is taking Cytomel (liothyronine sodium) 50 mcg daily. Which of the following side effects should the nurse be especially alert for?`,
+    prompt: `An adult woman has been diagnosed as having hypothyroidism. She is taking Cytomel (liothyronine sodium) 50 mcg daily. Which of the following side effects should the nurse be especially alert for?`,
     options: [
       `Angina`,
       `Fatigue`,
@@ -9895,7 +9894,7 @@ export const QUESTION_BANK = [
     id: 705,
     category: `Pharmacological Therapies`,
     chapter: `Pharmacology`,
-    question: `A 19-year-old woman has just started taking birth control pills. She calls the clinic nurse to say that her breasts are tender and she is nauseous. The nurse's response is based on which understanding?`,
+    prompt: `A 19-year-old woman has just started taking birth control pills. She calls the clinic nurse to say that her breasts are tender and she is nauseous. The nurse's response is based on which understanding?`,
     options: [
       `These are serious side effects.`,
       `These effects usually decrease after three to six cycles.`,
@@ -9909,7 +9908,7 @@ export const QUESTION_BANK = [
     id: 706,
     category: `Pharmacological Therapies`,
     chapter: `Pharmacology`,
-    question: `A young woman delivered a 7-lb, 8-oz baby boy spontaneously. Ergotrate 0.4 mg q6h for five days is ordered. A half-hour after the nurse administers the first dose, she complains of abdominal cramping. The nurse's best response is based on which understanding?`,
+    prompt: `A young woman delivered a 7-lb, 8-oz baby boy spontaneously. Ergotrate 0.4 mg q6h for five days is ordered. A half-hour after the nurse administers the first dose, she complains of abdominal cramping. The nurse's best response is based on which understanding?`,
     options: [
       `Cramping indicates a serious adverse reaction.`,
       `Cramping can be reduced by abdominal breathing.`,
@@ -9923,7 +9922,7 @@ export const QUESTION_BANK = [
     id: 707,
     category: `Pharmacological Therapies`,
     chapter: `Pharmacology`,
-    question: `Aluminum hydroxide gel (Amphojel) is ordered for an adult who has acute renal failure. What is the primary reason for administering this drug to this client?`,
+    prompt: `Aluminum hydroxide gel (Amphojel) is ordered for an adult who has acute renal failure. What is the primary reason for administering this drug to this client?`,
     options: [
       `To prevent the development of Curling's ulcers`,
       `To bind phosphates`,
@@ -9937,7 +9936,7 @@ export const QUESTION_BANK = [
     id: 708,
     category: `Pharmacological Therapies`,
     chapter: `Pharmacology`,
-    question: `An adult is hospitalized for an acute attack of gout. Which medication should the nurse expect to administer?`,
+    prompt: `An adult is hospitalized for an acute attack of gout. Which medication should the nurse expect to administer?`,
     options: [
       `Morphine`,
       `Colchicine`,
@@ -9951,7 +9950,7 @@ export const QUESTION_BANK = [
     id: 709,
     category: `Pharmacological Therapies`,
     chapter: `Pharmacology`,
-    question: `An adult is scheduled for a left cataract extraction. Homatropine and Cyclogyl eye drops are ordered. What is the expected action of these drops?`,
+    prompt: `An adult is scheduled for a left cataract extraction. Homatropine and Cyclogyl eye drops are ordered. What is the expected action of these drops?`,
     options: [
       `Mydriasis`,
       `Miotic effects`,
@@ -9965,7 +9964,7 @@ export const QUESTION_BANK = [
     id: 710,
     category: `Pharmacological Therapies`,
     chapter: `Pharmacology`,
-    question: `When administering eye drops, the nurse should administer the drops into which location?`,
+    prompt: `When administering eye drops, the nurse should administer the drops into which location?`,
     options: [
       `The pupil`,
       `The conjunctival sac`,
@@ -9979,7 +9978,7 @@ export const QUESTION_BANK = [
     id: 711,
     category: `Pharmacological Therapies`,
     chapter: `Pharmacology`,
-    question: `Ear drops have been ordered for a 10-month-old child. How should the nurse teach the mother to pull the baby's ear to straighten the ear canal?`,
+    prompt: `Ear drops have been ordered for a 10-month-old child. How should the nurse teach the mother to pull the baby's ear to straighten the ear canal?`,
     options: [
       `Down and back`,
       `Down and forward`,
@@ -9993,7 +9992,7 @@ export const QUESTION_BANK = [
     id: 712,
     category: `Pharmacological Therapies`,
     chapter: `Pharmacology`,
-    question: `A client who has Hodgkin's disease receives a weekly IV dose of nitrogen mustard. Which nursing order is most appropriate for this client?`,
+    prompt: `A client who has Hodgkin's disease receives a weekly IV dose of nitrogen mustard. Which nursing order is most appropriate for this client?`,
     options: [
       `Encourage mouth care with an astringent mouthwash and dental floss after every meal`,
       `Encourage organ meats and dried beans and peas`,
@@ -10007,7 +10006,7 @@ export const QUESTION_BANK = [
     id: 713,
     category: `Pharmacological Therapies`,
     chapter: `Pharmacology`,
-    question: `A woman who is receiving cancer chemotherapy exhibits all of the following. Which is most indicative of bone marrow depression?`,
+    prompt: `A woman who is receiving cancer chemotherapy exhibits all of the following. Which is most indicative of bone marrow depression?`,
     options: [
       `Alopecia`,
       `Petechiae`,
@@ -10021,7 +10020,7 @@ export const QUESTION_BANK = [
     id: 714,
     category: `Pharmacological Therapies`,
     chapter: `Pharmacology`,
-    question: `A 6-year-old child is seen in the emergency room after stepping on a rusty nail. He has received no immunizations. What should the nurse expect to give him immediately to prevent a tetanus infection?`,
+    prompt: `A 6-year-old child is seen in the emergency room after stepping on a rusty nail. He has received no immunizations. What should the nurse expect to give him immediately to prevent a tetanus infection?`,
     options: [
       `Tetanus toxoid`,
       `DTaP`,
@@ -10035,7 +10034,7 @@ export const QUESTION_BANK = [
     id: 715,
     category: `Pharmacological Therapies`,
     chapter: `Pharmacology`,
-    question: `A woman is two months pregnant when her 5-year-old child develops rubella. What is most likely to be given to her?`,
+    prompt: `A woman is two months pregnant when her 5-year-old child develops rubella. What is most likely to be given to her?`,
     options: [
       `Immune serum globulin`,
       `MMR`,
@@ -10051,7 +10050,7 @@ export const QUESTION_BANK = [
     id: 716,
     category: `Comprehensive`,
     chapter: `Practice Test One`,
-    question: `The nurse is to change a dressing. Which is essential to do when opening the dressing set?`,
+    prompt: `The nurse is to change a dressing. Which is essential to do when opening the dressing set?`,
     options: [
       `Open the first flap away from the nurse.`,
       `Open the first flap toward the nurse.`,
@@ -10065,7 +10064,7 @@ export const QUESTION_BANK = [
     id: 717,
     category: `Comprehensive`,
     chapter: `Practice Test One`,
-    question: `The nurse is caring for a woman who is admitted for a hysterectomy. The woman does not speak English. No staff members speak the client's language. Which approach by the nurse would be most appropriate when communicating with the client about her care before and after the surgery?`,
+    prompt: `The nurse is caring for a woman who is admitted for a hysterectomy. The woman does not speak English. No staff members speak the client's language. Which approach by the nurse would be most appropriate when communicating with the client about her care before and after the surgery?`,
     options: [
       `Ask the woman's 8-year-old daughter who speaks English to interpret.`,
       `Draw pictures and gesture when speaking to the client.`,
@@ -10079,7 +10078,7 @@ export const QUESTION_BANK = [
     id: 718,
     category: `Comprehensive`,
     chapter: `Practice Test One`,
-    question: `The nurse is caring for a woman who is HIV positive. The woman starts her period. There is menstrual blood on the floor. What substance should the nurse use to clean up the floor?`,
+    prompt: `The nurse is caring for a woman who is HIV positive. The woman starts her period. There is menstrual blood on the floor. What substance should the nurse use to clean up the floor?`,
     options: [
       `Chlorine bleach`,
       `Hydrogen peroxide`,
@@ -10093,7 +10092,7 @@ export const QUESTION_BANK = [
     id: 719,
     category: `Comprehensive`,
     chapter: `Practice Test One`,
-    question: `There is a train wreck causing 46 casualties. The nurse is asking personnel on the floor to suggest clients who could be discharged to make room for casualties. Which client would be best for the LPN to suggest?`,
+    prompt: `There is a train wreck causing 46 casualties. The nurse is asking personnel on the floor to suggest clients who could be discharged to make room for casualties. Which client would be best for the LPN to suggest?`,
     options: [
       `A 77-year-old who had a fractured femur with hip replacement yesterday`,
       `A 58-year-old who had an open cholecystectomy two days ago`,
@@ -10107,7 +10106,7 @@ export const QUESTION_BANK = [
     id: 720,
     category: `Comprehensive`,
     chapter: `Practice Test One`,
-    question: `An alert adult is being admitted for elective surgery. Which comment made by the client indicates a need for more instruction regarding advance directives?`,
+    prompt: `An alert adult is being admitted for elective surgery. Which comment made by the client indicates a need for more instruction regarding advance directives?`,
     options: [
       `"I brought a copy of the completed form with me."`,
       `"I am glad I don't have to make decisions about my care anymore."`,
@@ -10121,7 +10120,7 @@ export const QUESTION_BANK = [
     id: 721,
     category: `Comprehensive`,
     chapter: `Practice Test One`,
-    question: `The nurse hears another staff member talking in a crowded elevator about a client on the unit. The client is identified by name and details of illness. What action should the practical nurse take at this time?`,
+    prompt: `The nurse hears another staff member talking in a crowded elevator about a client on the unit. The client is identified by name and details of illness. What action should the practical nurse take at this time?`,
     options: [
       `Report the behavior to the head nurse`,
       `Report the behavior if it happens again`,
@@ -10135,7 +10134,7 @@ export const QUESTION_BANK = [
     id: 722,
     category: `Comprehensive`,
     chapter: `Practice Test One`,
-    question: `The nurse approaches a 4-year-old boy to administer a medication. The child has no identification armband. Which action is most appropriate?`,
+    prompt: `The nurse approaches a 4-year-old boy to administer a medication. The child has no identification armband. Which action is most appropriate?`,
     options: [
       `Check the room and bed number the child is in with the room and bed number on the medication order and administer the medication if they agree`,
       `Ask the child what his name is before administering the medication`,
@@ -10149,7 +10148,7 @@ export const QUESTION_BANK = [
     id: 723,
     category: `Comprehensive`,
     chapter: `Practice Test One`,
-    question: `A woman who is at 39 weeks gestation enters the hospital in early labor. Several hours later, she says to the nurse, "What's happening? I suddenly feel as though I have to have a bowel movement." The woman starts bearing down as if to push out stool. What is the best initial action for the licensed practical nurse at this time?`,
+    prompt: `A woman who is at 39 weeks gestation enters the hospital in early labor. Several hours later, she says to the nurse, "What's happening? I suddenly feel as though I have to have a bowel movement." The woman starts bearing down as if to push out stool. What is the best initial action for the licensed practical nurse at this time?`,
     options: [
       `Encourage her to push`,
       `Ask her to pant`,
@@ -10163,7 +10162,7 @@ export const QUESTION_BANK = [
     id: 724,
     category: `Comprehensive`,
     chapter: `Practice Test One`,
-    question: `The LPN is caring for a woman who delivered a healthy 7-lb baby 24 hours ago. Baseline vital signs were blood pressure (BP) = 90/64, temperature (T) = 97.6°F, pulse (P) = 72, and respirations (R) = 14. Which finding is of greatest concern?`,
+    prompt: `The LPN is caring for a woman who delivered a healthy 7-lb baby 24 hours ago. Baseline vital signs were blood pressure (BP) = 90/64, temperature (T) = 97.6°F, pulse (P) = 72, and respirations (R) = 14. Which finding is of greatest concern?`,
     options: [
       `The woman has red vaginal drainage on her perineal pad.`,
       `The woman complains of uterine cramping.`,
@@ -10177,7 +10176,7 @@ export const QUESTION_BANK = [
     id: 725,
     category: `Comprehensive`,
     chapter: `Practice Test One`,
-    question: `The LPN is caring for all of the following women on the postpartum unit. Which situation requires further attention?`,
+    prompt: `The LPN is caring for all of the following women on the postpartum unit. Which situation requires further attention?`,
     options: [
       `A woman who gave birth four hours ago has red vaginal drainage on her perineal pad.`,
       `The nurse palpates the uterine fundus 3 cm above the umbilicus in a woman who gave birth 12 hours ago.`,
@@ -10191,7 +10190,7 @@ export const QUESTION_BANK = [
     id: 726,
     category: `Comprehensive`,
     chapter: `Practice Test One`,
-    question: `The nurse is giving home care to a 69-year-old client who has severe arthritis. Which comment made by the client would indicate to the nurse that the client is experiencing normal changes associated with the aging process?`,
+    prompt: `The nurse is giving home care to a 69-year-old client who has severe arthritis. Which comment made by the client would indicate to the nurse that the client is experiencing normal changes associated with the aging process?`,
     options: [
       `"I have such a hard time with the pain in my feet and knees."`,
       `"I have had loose stools for the last few months."`,
@@ -10205,7 +10204,7 @@ export const QUESTION_BANK = [
     id: 727,
     category: `Comprehensive`,
     chapter: `Practice Test One`,
-    question: `The nurse has received her assignment for the day and is to care for the following clients. Which client should the nurse go to first?`,
+    prompt: `The nurse has received her assignment for the day and is to care for the following clients. Which client should the nurse go to first?`,
     options: [
       `A 56-year-old who was admitted last evening vomiting blood; the night nurse says he has had no emesis for the last four hours`,
       `A 65-year-old who had hip replacement surgery two days ago`,
@@ -10219,7 +10218,7 @@ export const QUESTION_BANK = [
     id: 728,
     category: `Comprehensive`,
     chapter: `Practice Test One`,
-    question: `The nurse working in a surgeon's office receives all of the following messages from the answering service. Which client should be called back first?`,
+    prompt: `The nurse working in a surgeon's office receives all of the following messages from the answering service. Which client should be called back first?`,
     options: [
       `An adult who had an inguinal hernia repair yesterday states that he is having trouble urinating.`,
       `An adult who had an appendectomy yesterday says the pain medication makes her sleepy.`,
@@ -10233,7 +10232,7 @@ export const QUESTION_BANK = [
     id: 729,
     category: `Comprehensive`,
     chapter: `Practice Test One`,
-    question: `An alert adult who has terminal cancer says to the home care nurse, "When the time comes for me to go, I don't want to be in pain and I don't want you to try to resuscitate me. Please promise me you won't." How should the nurse respond?`,
+    prompt: `An alert adult who has terminal cancer says to the home care nurse, "When the time comes for me to go, I don't want to be in pain and I don't want you to try to resuscitate me. Please promise me you won't." How should the nurse respond?`,
     options: [
       `"Of course, I will do as you wish."`,
       `"I am obligated to try and preserve life."`,
@@ -10247,7 +10246,7 @@ export const QUESTION_BANK = [
     id: 730,
     category: `Comprehensive`,
     chapter: `Practice Test One`,
-    question: `The nurse is caring for an adult who is enrolled in a study involving an experimental drug. The client says to the nurse, "I don't think I can stand the vomiting anymore. I think it is due to the drug I am taking. If only I could get out of this study I signed up for. That was a really stupid thing I did when I signed up for the study." What information must the nurse include when responding to the client?`,
+    prompt: `The nurse is caring for an adult who is enrolled in a study involving an experimental drug. The client says to the nurse, "I don't think I can stand the vomiting anymore. I think it is due to the drug I am taking. If only I could get out of this study I signed up for. That was a really stupid thing I did when I signed up for the study." What information must the nurse include when responding to the client?`,
     options: [
       `If the client signed the proper forms, the client is committed to the study.`,
       `Persons who have signed up for a study may opt out of the study at any time.`,
@@ -10261,7 +10260,7 @@ export const QUESTION_BANK = [
     id: 731,
     category: `Comprehensive`,
     chapter: `Practice Test One`,
-    question: `A 16-year-old client is admitted for elective surgery. The LPN is asked to have the child's mother sign the operative permit. Which action by the nurse is most appropriate?`,
+    prompt: `A 16-year-old client is admitted for elective surgery. The LPN is asked to have the child's mother sign the operative permit. Which action by the nurse is most appropriate?`,
     options: [
       `Have the parent sign the permit form`,
       `Refuse to ask the parent to sign the permit form`,
@@ -10275,7 +10274,7 @@ export const QUESTION_BANK = [
     id: 732,
     category: `Comprehensive`,
     chapter: `Practice Test One`,
-    question: `A registered nurse (RN) asks the licensed practical nurse (LPN) to hang blood on a client. What is the best response by the LPN?`,
+    prompt: `A registered nurse (RN) asks the licensed practical nurse (LPN) to hang blood on a client. What is the best response by the LPN?`,
     options: [
       `Carefully check the order and the client identification and hang the unit if all is in order.`,
       `Ask the RN to verify the order and then administer as ordered.`,
@@ -10289,7 +10288,7 @@ export const QUESTION_BANK = [
     id: 733,
     category: `Comprehensive`,
     chapter: `Practice Test One`,
-    question: `The nurse is transporting a mother and her newborn upon discharge from the hospital. When the nurse is assisting the mother and newborn into the car, the nurse notes that the car is equipped with a front-facing car seat that is in the front seat of the car. Which action is most appropriate for the nurse?`,
+    prompt: `The nurse is transporting a mother and her newborn upon discharge from the hospital. When the nurse is assisting the mother and newborn into the car, the nurse notes that the car is equipped with a front-facing car seat that is in the front seat of the car. Which action is most appropriate for the nurse?`,
     options: [
       `Position the infant in the car seat as positioned.`,
       `Explain that a rear-facing car seat is necessary and offer to lend the family a car seat from the hospital for the trip home.`,
@@ -10303,7 +10302,7 @@ export const QUESTION_BANK = [
     id: 734,
     category: `Comprehensive`,
     chapter: `Practice Test One`,
-    question: `The home nurse who is caring for an older person who has chronic obstructive pulmonary disease (COPD) with continuous nasal oxygen is helping the family set up a humidifier in the room. The humidifier cord is not long enough to reach the outlet in the room and must be plugged into an extension cord. The extension cord is wrapped with black tape. When the nurse asks the family members about the tape, they reply that the cord is an old cord, and the electrical tape covers up the frayed part and makes it safe. They say a contractor friend told them how to make it safe. How should the nurse respond?`,
+    prompt: `The home nurse who is caring for an older person who has chronic obstructive pulmonary disease (COPD) with continuous nasal oxygen is helping the family set up a humidifier in the room. The humidifier cord is not long enough to reach the outlet in the room and must be plugged into an extension cord. The extension cord is wrapped with black tape. When the nurse asks the family members about the tape, they reply that the cord is an old cord, and the electrical tape covers up the frayed part and makes it safe. They say a contractor friend told them how to make it safe. How should the nurse respond?`,
     options: [
       `Refuse to set up the equipment until a new cord is available`,
       `Carefully inspect the taped area and set up equipment if it appears intact`,
@@ -10317,7 +10316,7 @@ export const QUESTION_BANK = [
     id: 735,
     category: `Comprehensive`,
     chapter: `Practice Test One`,
-    question: `An adult has completed an alcohol detoxification program and will be discharged later today. Which comment indicates the best understanding of the discharge care?`,
+    prompt: `An adult has completed an alcohol detoxification program and will be discharged later today. Which comment indicates the best understanding of the discharge care?`,
     options: [
       `"I will be so glad to get out of here so I can be with all my old friends again."`,
       `"I know I cannot drink as much as I used to."`,
@@ -10331,7 +10330,7 @@ export const QUESTION_BANK = [
     id: 736,
     category: `Comprehensive`,
     chapter: `Practice Test One`,
-    question: `The nurse on the psychiatric unit is caring for several clients. Which client needs the most immediate attention?`,
+    prompt: `The nurse on the psychiatric unit is caring for several clients. Which client needs the most immediate attention?`,
     options: [
       `A man is pacing the floor in circles.`,
       `A man is rocking back and forth and crying.`,
@@ -10345,7 +10344,7 @@ export const QUESTION_BANK = [
     id: 737,
     category: `Comprehensive`,
     chapter: `Practice Test One`,
-    question: `An adult who is disoriented, confused, and unable to answer simple questions coherently is admitted. Which action is of highest priority?`,
+    prompt: `An adult who is disoriented, confused, and unable to answer simple questions coherently is admitted. Which action is of highest priority?`,
     options: [
       `Obtain a psychiatric consult`,
       `Check the client's glucose level`,
@@ -10359,7 +10358,7 @@ export const QUESTION_BANK = [
     id: 738,
     category: `Comprehensive`,
     chapter: `Practice Test One`,
-    question: `An adult is admitted to the psychiatric unit with a severe phobia. She develops severe anxiety when she crosses any type of bridge. She can no longer go to work or go shopping at the mall. The day after admission, she develops a panic attack and refuses to go to occupational therapy because she has to cross a bridge-like structure to go from area of the hospital to another. How should the nurse respond to this situation?`,
+    prompt: `An adult is admitted to the psychiatric unit with a severe phobia. She develops severe anxiety when she crosses any type of bridge. She can no longer go to work or go shopping at the mall. The day after admission, she develops a panic attack and refuses to go to occupational therapy because she has to cross a bridge-like structure to go from area of the hospital to another. How should the nurse respond to this situation?`,
     options: [
       `Accompany the client as she goes to occupational therapy`,
       `Request that she be excused from occupational therapy until she is less anxious`,
@@ -10373,7 +10372,7 @@ export const QUESTION_BANK = [
     id: 739,
     category: `Comprehensive`,
     chapter: `Practice Test One`,
-    question: `The nurse is caring for an adult who is severely depressed. Which behavior by the client indicates improvement in his condition?`,
+    prompt: `The nurse is caring for an adult who is severely depressed. Which behavior by the client indicates improvement in his condition?`,
     options: [
       `The client stays by himself and does not bother the other clients.`,
       `The client states, "I know the answer to my problems now."`,
@@ -10387,7 +10386,7 @@ export const QUESTION_BANK = [
     id: 740,
     category: `Comprehensive`,
     chapter: `Practice Test One`,
-    question: `The nurse is caring for an adult who is being admitted to the unit for detoxification from alcohol. Which comment is the client most likely to make at this time?`,
+    prompt: `The nurse is caring for an adult who is being admitted to the unit for detoxification from alcohol. Which comment is the client most likely to make at this time?`,
     options: [
       `"I am so sorry for any trouble I've caused my family."`,
       `"I'm not really an alcoholic you know. I'm doing this to please my wife."`,
@@ -10401,7 +10400,7 @@ export const QUESTION_BANK = [
     id: 741,
     category: `Comprehensive`,
     chapter: `Practice Test One`,
-    question: `A young adult is admitted to the psychiatric unit because she has become very withdrawn and has stopped attending college classes. She sits for hours rocking back and forth and appears to be talking to someone at intervals. She does not eat or bathe or relate to others. How should the nurse approach this client upon admission?`,
+    prompt: `A young adult is admitted to the psychiatric unit because she has become very withdrawn and has stopped attending college classes. She sits for hours rocking back and forth and appears to be talking to someone at intervals. She does not eat or bathe or relate to others. How should the nurse approach this client upon admission?`,
     options: [
       `Explain the unit routines to her in detail`,
       `Ask her if she has any question about the unit or what she is supposed to do`,
@@ -10415,7 +10414,7 @@ export const QUESTION_BANK = [
     id: 742,
     category: `Comprehensive`,
     chapter: `Practice Test One`,
-    question: `The nurse is caring for a client who has been in alcohol detoxification for one week. The client has slurred speech and is bumping into doorframes and walking unsteadily. What is the most appropriate initial action by the nurse?`,
+    prompt: `The nurse is caring for a client who has been in alcohol detoxification for one week. The client has slurred speech and is bumping into doorframes and walking unsteadily. What is the most appropriate initial action by the nurse?`,
     options: [
       `Assess for Wernicke-Korsakoff syndrome`,
       `Ask for an order for blood alcohol level`,
@@ -10429,7 +10428,7 @@ export const QUESTION_BANK = [
     id: 743,
     category: `Comprehensive`,
     chapter: `Practice Test One`,
-    question: `A mother has brought her 9-month-old baby to the physician's office for a well baby visit. Based on knowledge of normal growth and development, the nurse would expect that the ability the child has acquired most recently is which of the following?`,
+    prompt: `A mother has brought her 9-month-old baby to the physician's office for a well baby visit. Based on knowledge of normal growth and development, the nurse would expect that the ability the child has acquired most recently is which of the following?`,
     options: [
       `Sitting up unsupported`,
       `Rolling over without help`,
@@ -10443,7 +10442,7 @@ export const QUESTION_BANK = [
     id: 744,
     category: `Comprehensive`,
     chapter: `Practice Test One`,
-    question: `A client is admitted with right lower quadrant pain, nausea, and a temperature of 100°F. What does the nurse expect will be done initially?`,
+    prompt: `A client is admitted with right lower quadrant pain, nausea, and a temperature of 100°F. What does the nurse expect will be done initially?`,
     options: [
       `X-ray of the abdomen`,
       `Deep palpation of the abdomen`,
@@ -10457,7 +10456,7 @@ export const QUESTION_BANK = [
     id: 745,
     category: `Comprehensive`,
     chapter: `Practice Test One`,
-    question: `The LPN on a medical unit observes a coworker taking diazepam ordered for a client. What should the nurse do initially?`,
+    prompt: `The LPN on a medical unit observes a coworker taking diazepam ordered for a client. What should the nurse do initially?`,
     options: [
       `Immediately call the supervisor`,
       `Confront the nurse`,
@@ -10471,7 +10470,7 @@ export const QUESTION_BANK = [
     id: 746,
     category: `Comprehensive`,
     chapter: `Practice Test One`,
-    question: `A mother calls the pediatrician's office stating that her 15-month-old son received an MMR vaccination yesterday. Today, the site of the injection is red, warm, and puffy. What is the best action for the nurse to take?`,
+    prompt: `A mother calls the pediatrician's office stating that her 15-month-old son received an MMR vaccination yesterday. Today, the site of the injection is red, warm, and puffy. What is the best action for the nurse to take?`,
     options: [
       `Report the symptoms to the physician as an adverse reaction`,
       `Suggest the mother apply a warm compress every two hours`,
@@ -10485,7 +10484,7 @@ export const QUESTION_BANK = [
     id: 747,
     category: `Comprehensive`,
     chapter: `Practice Test One`,
-    question: `The mother of a 4-month-old infant calls the physician's office reporting that her child has a temperature of 101°F and a rash that is red and raised. The child is irritable and has been eating poorly for two days. The nurse expects that the pediatrician will order which of the following?`,
+    prompt: `The mother of a 4-month-old infant calls the physician's office reporting that her child has a temperature of 101°F and a rash that is red and raised. The child is irritable and has been eating poorly for two days. The nurse expects that the pediatrician will order which of the following?`,
     options: [
       `Aspirin`,
       `Ibuprofen`,
@@ -10499,7 +10498,7 @@ export const QUESTION_BANK = [
     id: 748,
     category: `Comprehensive`,
     chapter: `Practice Test One`,
-    question: `The nurse is caring for an adult who has atrial fibrillation and osteoporosis. Atenolol is prescribed. The nurse should expect that this medication was prescribed to:`,
+    prompt: `The nurse is caring for an adult who has atrial fibrillation and osteoporosis. Atenolol is prescribed. The nurse should expect that this medication was prescribed to:`,
     options: [
       `decrease elevated blood pressure.`,
       `decrease inflammation`,
@@ -10513,7 +10512,7 @@ export const QUESTION_BANK = [
     id: 749,
     category: `Comprehensive`,
     chapter: `Practice Test One`,
-    question: `The nurse is caring for an adult male who is receiving haloperidol (Haldol). Which complaint by the client is of most concern to the nurse and should be immediately reported?`,
+    prompt: `The nurse is caring for an adult male who is receiving haloperidol (Haldol). Which complaint by the client is of most concern to the nurse and should be immediately reported?`,
     options: [
       `"I have gained so much weight in the last few months."`,
       `"I am having trouble getting an erection."`,
@@ -10527,7 +10526,7 @@ export const QUESTION_BANK = [
     id: 750,
     category: `Comprehensive`,
     chapter: `Practice Test One`,
-    question: `An adult is prescribed sulfisoxazole (Gantrisin) for a urinary tract infection. Which comment by the client indicates understanding of the treatment regimen?`,
+    prompt: `An adult is prescribed sulfisoxazole (Gantrisin) for a urinary tract infection. Which comment by the client indicates understanding of the treatment regimen?`,
     options: [
       `"When I feel better, I can stop taking the medicine."`,
       `"I will stay out of the sun when I am taking this drug."`,
@@ -10541,7 +10540,7 @@ export const QUESTION_BANK = [
     id: 751,
     category: `Comprehensive`,
     chapter: `Practice Test One`,
-    question: `An adult asks the nurse what could be causing him to have a black tongue and black stools. The following items are in the client's history. Which is most likely to be causing his symptoms?`,
+    prompt: `An adult asks the nurse what could be causing him to have a black tongue and black stools. The following items are in the client's history. Which is most likely to be causing his symptoms?`,
     options: [
       `He is taking bismuth subsalicylate (Pepto-Bismol) for loose stools.`,
       `He has been eating a lot of beets and broccoli recently.`,
@@ -10555,7 +10554,7 @@ export const QUESTION_BANK = [
     id: 752,
     category: `Comprehensive`,
     chapter: `Practice Test One`,
-    question: `Diphenoxylate hydrochloride with atropine sulfate (Lomotil) is prescribed for a client. The nurse knows that the drug is prescribed for which of these problems the client has?`,
+    prompt: `Diphenoxylate hydrochloride with atropine sulfate (Lomotil) is prescribed for a client. The nurse knows that the drug is prescribed for which of these problems the client has?`,
     options: [
       `Diarrhea`,
       `Hypertension`,
@@ -10569,7 +10568,7 @@ export const QUESTION_BANK = [
     id: 753,
     category: `Comprehensive`,
     chapter: `Practice Test One`,
-    question: `The nurse is caring for an adult who is receiving diphenoxylate hydrochloride with atropine sulfate (Lomotil) qid. What nursing assessment is essential while the client is receiving this medication?`,
+    prompt: `The nurse is caring for an adult who is receiving diphenoxylate hydrochloride with atropine sulfate (Lomotil) qid. What nursing assessment is essential while the client is receiving this medication?`,
     options: [
       `Monitor blood pressure hourly`,
       `Assess respirations before administering drug`,
@@ -10583,7 +10582,7 @@ export const QUESTION_BANK = [
     id: 754,
     category: `Comprehensive`,
     chapter: `Practice Test One`,
-    question: `The nurse is caring for an adult for whom phenytoin (Dilantin) has been prescribed. Which is of greatest concern to the nurse?`,
+    prompt: `The nurse is caring for an adult for whom phenytoin (Dilantin) has been prescribed. Which is of greatest concern to the nurse?`,
     options: [
       `The client's urine has a pinkish tinge to it.`,
       `The client has enlarged gums.`,
@@ -10597,7 +10596,7 @@ export const QUESTION_BANK = [
     id: 755,
     category: `Comprehensive`,
     chapter: `Practice Test One`,
-    question: `A client who has a panic disorder is receiving paroxetine HCl (Paxil). The client has been taking the drug for one week and is still having severe panic attacks. The client tells the nurse that she thinks the drug is not working. What is the best response for the nurse to make?`,
+    prompt: `A client who has a panic disorder is receiving paroxetine HCl (Paxil). The client has been taking the drug for one week and is still having severe panic attacks. The client tells the nurse that she thinks the drug is not working. What is the best response for the nurse to make?`,
     options: [
       `"You should ask your physician for a different drug."`,
       `"The physician will probably add another drug to your regimen."`,
@@ -10611,7 +10610,7 @@ export const QUESTION_BANK = [
     id: 756,
     category: `Comprehensive`,
     chapter: `Practice Test One`,
-    question: `An adult is receiving lithium carbonate 600 mg tid. Which of the following observations is of greatest concern to the nurse?`,
+    prompt: `An adult is receiving lithium carbonate 600 mg tid. Which of the following observations is of greatest concern to the nurse?`,
     options: [
       `The serum lithium level is 1.0 mEq/L.`,
       `The client states that she is going to go on a low-sodium diet.`,
@@ -10625,7 +10624,7 @@ export const QUESTION_BANK = [
     id: 757,
     category: `Comprehensive`,
     chapter: `Practice Test One`,
-    question: `Lithium carbonate is prescribed for an adult. The nurse knows the client is most likely to have which condition?`,
+    prompt: `Lithium carbonate is prescribed for an adult. The nurse knows the client is most likely to have which condition?`,
     options: [
       `Depression`,
       `Mania`,
@@ -10639,7 +10638,7 @@ export const QUESTION_BANK = [
     id: 758,
     category: `Comprehensive`,
     chapter: `Practice Test One`,
-    question: `A 3-year-old child who is up to date with all immunizations is seen at clinic. The child has a fever of 102°F and a pruritic rash with fluid-filled vesicles that began on the trunk. The physician says the child has varicella. The child's mother says to the nurse, "I thought my child couldn't get this because she had all her shots." What is the best response for the nurse to make?`,
+    prompt: `A 3-year-old child who is up to date with all immunizations is seen at clinic. The child has a fever of 102°F and a pruritic rash with fluid-filled vesicles that began on the trunk. The physician says the child has varicella. The child's mother says to the nurse, "I thought my child couldn't get this because she had all her shots." What is the best response for the nurse to make?`,
     options: [
       `"Your child probably did not respond to the vaccine as most children do."`,
       `"The nurse must not have administered it correctly."`,
@@ -10653,7 +10652,7 @@ export const QUESTION_BANK = [
     id: 759,
     category: `Comprehensive`,
     chapter: `Practice Test One`,
-    question: `Digoxin has been prescribed for a 70-year-old man who has atrial fibrillation. Which behavior indicates that the client understands the nurse's instructions about taking digoxin?`,
+    prompt: `Digoxin has been prescribed for a 70-year-old man who has atrial fibrillation. Which behavior indicates that the client understands the nurse's instructions about taking digoxin?`,
     options: [
       `The client states that he will not spend much time in the sun.`,
       `The client says to the nurse, "Is this the correct way to check my pulse? I want to do it right."`,
@@ -10667,7 +10666,7 @@ export const QUESTION_BANK = [
     id: 760,
     category: `Comprehensive`,
     chapter: `Practice Test One`,
-    question: `A client on a psychiatric unit is glaring across the room and pointing a finger at empty space and yelling. What is the nurse's best response to the client's behavior?`,
+    prompt: `A client on a psychiatric unit is glaring across the room and pointing a finger at empty space and yelling. What is the nurse's best response to the client's behavior?`,
     options: [
       `Say to him, "There is no one there. Keep your voice down."`,
       `Escort the client to his room`,
@@ -10681,7 +10680,7 @@ export const QUESTION_BANK = [
     id: 761,
     category: `Comprehensive`,
     chapter: `Practice Test One`,
-    question: `During a child's 18-month checkup, the mother remarks that her child is not doing any of the following. Which would cause most concern to the nurse?`,
+    prompt: `During a child's 18-month checkup, the mother remarks that her child is not doing any of the following. Which would cause most concern to the nurse?`,
     options: [
       `Speaking in full sentences`,
       `Making eye contact`,
@@ -10695,7 +10694,7 @@ export const QUESTION_BANK = [
     id: 762,
     category: `Comprehensive`,
     chapter: `Practice Test One`,
-    question: `An adult is hospitalized for heart failure. Hydrochlorothiazide and digoxin are prescribed. What laboratory test(s) should the nurse monitor because the client is taking these medications?`,
+    prompt: `An adult is hospitalized for heart failure. Hydrochlorothiazide and digoxin are prescribed. What laboratory test(s) should the nurse monitor because the client is taking these medications?`,
     options: [
       `CBC and differential`,
       `Serum creatinine and BUN`,
@@ -10709,7 +10708,7 @@ export const QUESTION_BANK = [
     id: 763,
     category: `Comprehensive`,
     chapter: `Practice Test One`,
-    question: `An adult who had a deep vein thrombosis is prescribed warfarin (Coumadin). Which factor in the client's history will be of most concern to the nurse?`,
+    prompt: `An adult who had a deep vein thrombosis is prescribed warfarin (Coumadin). Which factor in the client's history will be of most concern to the nurse?`,
     options: [
       `The client has osteoarthritis.`,
       `The client likes to take daily walks.`,
@@ -10723,7 +10722,7 @@ export const QUESTION_BANK = [
     id: 764,
     category: `Comprehensive`,
     chapter: `Practice Test One`,
-    question: `An adult has injured her ankle and asks her neighbor, a nurse, for assistance. The ankle appears swollen, and the client cannot move it without severe pain. Before arranging transport to the emergency room, which action by the nurse would be most appropriate?`,
+    prompt: `An adult has injured her ankle and asks her neighbor, a nurse, for assistance. The ankle appears swollen, and the client cannot move it without severe pain. Before arranging transport to the emergency room, which action by the nurse would be most appropriate?`,
     options: [
       `Applying a warm compress to the ankle`,
       `Keeping the ankle elevated`,
@@ -10737,7 +10736,7 @@ export const QUESTION_BANK = [
     id: 765,
     category: `Comprehensive`,
     chapter: `Practice Test One`,
-    question: `A mother has brought her 4-year-old child to the clinic for the fourth time in as many months for conjunctivitis. The mother says that she and her husband have had it as well. In addition to discussing care related to the prescribed eye drops, what else should the nurse discuss with the mother?`,
+    prompt: `A mother has brought her 4-year-old child to the clinic for the fourth time in as many months for conjunctivitis. The mother says that she and her husband have had it as well. In addition to discussing care related to the prescribed eye drops, what else should the nurse discuss with the mother?`,
     options: [
       `Encourage frequent hand washing for all members of the family`,
       `Encourage the mother to have the child wear an eye patch on the affected eye`,
@@ -10751,7 +10750,7 @@ export const QUESTION_BANK = [
     id: 766,
     category: `Comprehensive`,
     chapter: `Practice Test One`,
-    question: `The parent of a young adult recently diagnosed as being HIV positive calls the clinic in a panic saying, "My son just cut himself shaving, and there is blood all over the bathroom. What should I do?" How should the nurse respond?`,
+    prompt: `The parent of a young adult recently diagnosed as being HIV positive calls the clinic in a panic saying, "My son just cut himself shaving, and there is blood all over the bathroom. What should I do?" How should the nurse respond?`,
     options: [
       `Tell the parent to call 911 and ask for the Hazmat Team to come and assist.`,
       `Suggest that the parent clean the bathroom with hot soapy water while wearing gloves.`,
@@ -10765,7 +10764,7 @@ export const QUESTION_BANK = [
     id: 767,
     category: `Comprehensive`,
     chapter: `Practice Test One`,
-    question: `A cooling blanket has been ordered for an adult who has a head injury and is running high fevers. The client starts shivering. What action is most appropriate for the LPN?`,
+    prompt: `A cooling blanket has been ordered for an adult who has a head injury and is running high fevers. The client starts shivering. What action is most appropriate for the LPN?`,
     options: [
       `Add more blankets to warm up the client`,
       `Report immediately to the charge nurse`,
@@ -10779,7 +10778,7 @@ export const QUESTION_BANK = [
     id: 768,
     category: `Comprehensive`,
     chapter: `Practice Test One`,
-    question: `A 1-year-old boy is hospitalized for a fractured femur. There is a PRN order for pain medication. What is the best way to assess the child for pain?`,
+    prompt: `A 1-year-old boy is hospitalized for a fractured femur. There is a PRN order for pain medication. What is the best way to assess the child for pain?`,
     options: [
       `Ask the parent who is present if the child appears to be in pain.`,
       `Observe the child's behavior carefully.`,
@@ -10793,7 +10792,7 @@ export const QUESTION_BANK = [
     id: 769,
     category: `Comprehensive`,
     chapter: `Practice Test One`,
-    question: `An adult who is scheduled for surgery tomorrow asks the nurse to arrange for his Healing Touch practitioner to give him healing touch treatments after surgery. The client's daughter who hears the request asks the nurse to explain how Healing Touch can help her father. What information should the nurse include in the response?`,
+    prompt: `An adult who is scheduled for surgery tomorrow asks the nurse to arrange for his Healing Touch practitioner to give him healing touch treatments after surgery. The client's daughter who hears the request asks the nurse to explain how Healing Touch can help her father. What information should the nurse include in the response?`,
     options: [
       `Healing Touch makes use of the power of suggestion and can help the person feel more comfortable.`,
       `No one really knows how it works, but if a person really wants it, it certainly will not hurt.`,
@@ -10807,7 +10806,7 @@ export const QUESTION_BANK = [
     id: 770,
     category: `Comprehensive`,
     chapter: `Practice Test One`,
-    question: `An adult who has osteoarthritis tells the clinic nurse that her joints have been more painful lately and her head aches and her ears are "making funny buzzing sounds." What question should the nurse ask the client?`,
+    prompt: `An adult who has osteoarthritis tells the clinic nurse that her joints have been more painful lately and her head aches and her ears are "making funny buzzing sounds." What question should the nurse ask the client?`,
     options: [
       `"How long have you had arthritis?"`,
       `"Have you recently been exposed to loud noises?"`,
@@ -10821,7 +10820,7 @@ export const QUESTION_BANK = [
     id: 771,
     category: `Comprehensive`,
     chapter: `Practice Test One`,
-    question: `The nurse is caring for an adult who was admitted for observation following an automobile accident. The client has several lacerations that were sutured in the emergency room and a fractured leg that has been casted. The baseline vital signs are BP = 120/72, P = 76, and R = 16. One hour after arriving on the unit, the client's vital signs are BP = 108/68, P = 90, and R = 22. The nurse most correctly interprets these results to mean that the client may be developing which condition?`,
+    prompt: `The nurse is caring for an adult who was admitted for observation following an automobile accident. The client has several lacerations that were sutured in the emergency room and a fractured leg that has been casted. The baseline vital signs are BP = 120/72, P = 76, and R = 16. One hour after arriving on the unit, the client's vital signs are BP = 108/68, P = 90, and R = 22. The nurse most correctly interprets these results to mean that the client may be developing which condition?`,
     options: [
       `Shock`,
       `Increased intracranial pressure`,
@@ -10835,7 +10834,7 @@ export const QUESTION_BANK = [
     id: 772,
     category: `Comprehensive`,
     chapter: `Practice Test One`,
-    question: `The nurse is caring for an adult who is admitted with severe nausea, vomiting, and diarrhea. During the last eight hours, the client has had 1000 mL of IV fluids and 100 mL of fluid from ice chips. The client has vomited a total of 600 mL and had four large diarrheal stools. The urine output for the last eight hours is 350 mL. The best interpretation of these data is that the client:`,
+    prompt: `The nurse is caring for an adult who is admitted with severe nausea, vomiting, and diarrhea. During the last eight hours, the client has had 1000 mL of IV fluids and 100 mL of fluid from ice chips. The client has vomited a total of 600 mL and had four large diarrheal stools. The urine output for the last eight hours is 350 mL. The best interpretation of these data is that the client:`,
     options: [
       `is maintaining an appropriate fluid balance.`,
       `has a normal urine output.`,
@@ -10849,7 +10848,7 @@ export const QUESTION_BANK = [
     id: 773,
     category: `Comprehensive`,
     chapter: `Practice Test One`,
-    question: `A 56-year-old client who had a complete hysterectomy 8 months ago is admitted for opiate detoxification. The second day after admission, the client complains of abdominal cramping and sweating. What is the nurse's best response?`,
+    prompt: `A 56-year-old client who had a complete hysterectomy 8 months ago is admitted for opiate detoxification. The second day after admission, the client complains of abdominal cramping and sweating. What is the nurse's best response?`,
     options: [
       `Contact the gynecologist for details of the operation`,
       `Suspect drug seeking and suggest the client take a walk around the unit`,
@@ -10863,7 +10862,7 @@ export const QUESTION_BANK = [
     id: 774,
     category: `Comprehensive`,
     chapter: `Practice Test One`,
-    question: `A client who has Type 1 diabetes mellitus is admitted for alcohol detoxification. A moderate sliding scale for insulin is ordered. How often should the nurse expect to take glucose levels?`,
+    prompt: `A client who has Type 1 diabetes mellitus is admitted for alcohol detoxification. A moderate sliding scale for insulin is ordered. How often should the nurse expect to take glucose levels?`,
     options: [
       `Every time medication is administered`,
       `When the client is symptomatic`,
@@ -10877,7 +10876,7 @@ export const QUESTION_BANK = [
     id: 775,
     category: `Comprehensive`,
     chapter: `Practice Test One`,
-    question: `A father brings his 17-year-old son to a walk-in clinic. The client reports a sudden severe headache. He has a temperature of 104°F and a purple rash. What is the best action for the nurse at this time?`,
+    prompt: `A father brings his 17-year-old son to a walk-in clinic. The client reports a sudden severe headache. He has a temperature of 104°F and a purple rash. What is the best action for the nurse at this time?`,
     options: [
       `Prepare for a throat culture`,
       `Schedule him for an appointment later in the day`,
@@ -10891,7 +10890,7 @@ export const QUESTION_BANK = [
     id: 776,
     category: `Comprehensive`,
     chapter: `Practice Test One`,
-    question: `Divalproex sodium (Depakote) is prescribed for a 28-year-old female. Which lab test would the nurse expect prior to administration of the medication?`,
+    prompt: `Divalproex sodium (Depakote) is prescribed for a 28-year-old female. Which lab test would the nurse expect prior to administration of the medication?`,
     options: [
       `Urine drug screen`,
       `Pregnancy test`,
@@ -10905,7 +10904,7 @@ export const QUESTION_BANK = [
     id: 777,
     category: `Comprehensive`,
     chapter: `Practice Test One`,
-    question: `An adult comes to the physician's office with a history of headache yesterday and today and pain in the back. The nurse observes a horizontal band of pustular rash on the back extending from the spine to midline in the front. The client describes it as very painful. What would the nurse expect to be prescribed for this client?`,
+    prompt: `An adult comes to the physician's office with a history of headache yesterday and today and pain in the back. The nurse observes a horizontal band of pustular rash on the back extending from the spine to midline in the front. The client describes it as very painful. What would the nurse expect to be prescribed for this client?`,
     options: [
       `Antiviral`,
       `Antibiotics`,
@@ -10919,7 +10918,7 @@ export const QUESTION_BANK = [
     id: 778,
     category: `Comprehensive`,
     chapter: `Practice Test One`,
-    question: `The nurse is caring for a woman admitted with heart failure. The client has an IV running at 125 mL/hr. The client calls the nurse stating she is having difficulty breathing. The nurse observes that she is short of breath and in distress. What should the nurse do initially?`,
+    prompt: `The nurse is caring for a woman admitted with heart failure. The client has an IV running at 125 mL/hr. The client calls the nurse stating she is having difficulty breathing. The nurse observes that she is short of breath and in distress. What should the nurse do initially?`,
     options: [
       `Slow the IV and raise the head of the bed`,
       `Call the physician`,
@@ -10933,7 +10932,7 @@ export const QUESTION_BANK = [
     id: 779,
     category: `Comprehensive`,
     chapter: `Practice Test One`,
-    question: `An adult is admitted with nausea, vomiting, and diarrhea. The client is receiving an IV of dextrose 5% in water with 40 mEq of KCl. The nurse knows the potassium is added to do which of the following?`,
+    prompt: `An adult is admitted with nausea, vomiting, and diarrhea. The client is receiving an IV of dextrose 5% in water with 40 mEq of KCl. The nurse knows the potassium is added to do which of the following?`,
     options: [
       `Replace potassium lost because of vomiting and diarrhea`,
       `Replace potassium that the client is not getting from his diet`,
@@ -10947,7 +10946,7 @@ export const QUESTION_BANK = [
     id: 780,
     category: `Comprehensive`,
     chapter: `Practice Test One`,
-    question: `An adult male has an IV in the left arm. The client calls the nurse and says that his left arm hurts. The LPN checks the IV site and notes that it is cool and blanched and not running well. What should the LPN do at this time?`,
+    prompt: `An adult male has an IV in the left arm. The client calls the nurse and says that his left arm hurts. The LPN checks the IV site and notes that it is cool and blanched and not running well. What should the LPN do at this time?`,
     options: [
       `Flush the IV with normal saline`,
       `Remove the IV immediately and start a new line`,
@@ -10961,7 +10960,7 @@ export const QUESTION_BANK = [
     id: 781,
     category: `Comprehensive`,
     chapter: `Practice Test One`,
-    question: `An adult is admitted to the emergency room with a laceration on the forearm and BP = 140/74, P = 110, and R = 36. The client also complains of tingling around the mouth and in the fingers and toes. What should the nurse expect to do initially?`,
+    prompt: `An adult is admitted to the emergency room with a laceration on the forearm and BP = 140/74, P = 110, and R = 36. The client also complains of tingling around the mouth and in the fingers and toes. What should the nurse expect to do initially?`,
     options: [
       `Administer oxygen`,
       `Have the client breathe into a paper bag`,
@@ -10975,7 +10974,7 @@ export const QUESTION_BANK = [
     id: 782,
     category: `Comprehensive`,
     chapter: `Practice Test One`,
-    question: `A client's blood gases are as follows: pH = 7.32, pCO2 = 62, HCO3 = 30, and pO2 = 62. The best interpretation is that the client has which of the following?`,
+    prompt: `A client's blood gases are as follows: pH = 7.32, pCO2 = 62, HCO3 = 30, and pO2 = 62. The best interpretation is that the client has which of the following?`,
     options: [
       `Respiratory acidosis`,
       `Respiratory alkalosis`,
@@ -10989,7 +10988,7 @@ export const QUESTION_BANK = [
     id: 783,
     category: `Comprehensive`,
     chapter: `Practice Test One`,
-    question: `An adult has the following blood gases: pH = 7.52, pCO2 = 50, HCO3 = 35, and pO2 = 90. What is most likely to be in the client's history of presenting signs and symptoms?`,
+    prompt: `An adult has the following blood gases: pH = 7.52, pCO2 = 50, HCO3 = 35, and pO2 = 90. What is most likely to be in the client's history of presenting signs and symptoms?`,
     options: [
       `Persistent diarrhea`,
       `Frequent vomiting`,
@@ -11003,7 +11002,7 @@ export const QUESTION_BANK = [
     id: 784,
     category: `Comprehensive`,
     chapter: `Practice Test One`,
-    question: `An adult is admitted in diabetic ketoacidosis. What observation by the nurse is consistent with the diagnosis?`,
+    prompt: `An adult is admitted in diabetic ketoacidosis. What observation by the nurse is consistent with the diagnosis?`,
     options: [
       `Deep respirations`,
       `Foul breath`,
@@ -11017,7 +11016,7 @@ export const QUESTION_BANK = [
     id: 785,
     category: `Comprehensive`,
     chapter: `Practice Test One`,
-    question: `The nurse is caring for a client who is in ketoacidosis. Which blood gas values are most consistent with the diagnosis?`,
+    prompt: `The nurse is caring for a client who is in ketoacidosis. Which blood gas values are most consistent with the diagnosis?`,
     options: [
       `pH = 7.32, pCO2 = 60, HCO3 = 30, pO2 = 60`,
       `pH = 7.32, pCO2 = 32, HCO3 = 14, pO2 = 92`,
@@ -11031,7 +11030,7 @@ export const QUESTION_BANK = [
     id: 786,
     category: `Comprehensive`,
     chapter: `Practice Test One`,
-    question: `An 87-year-old woman is admitted to the acute care hospital for heart failure. The nurse asks about the client's signs and symptoms and obtains vital signs. Considering the client's age, what additional question is most important for the nurse to ask?`,
+    prompt: `An 87-year-old woman is admitted to the acute care hospital for heart failure. The nurse asks about the client's signs and symptoms and obtains vital signs. Considering the client's age, what additional question is most important for the nurse to ask?`,
     options: [
       `"How do you manage your bowels?"`,
       `"When was your last menstrual period?"`,
@@ -11045,7 +11044,7 @@ export const QUESTION_BANK = [
     id: 787,
     category: `Comprehensive`,
     chapter: `Practice Test One`,
-    question: `An adult is admitted through the outpatient department for elective surgery today. The client is coughing and sneezing and has a temperature of 100.6°F. What should the nurse do next?`,
+    prompt: `An adult is admitted through the outpatient department for elective surgery today. The client is coughing and sneezing and has a temperature of 100.6°F. What should the nurse do next?`,
     options: [
       `Prepare the client for surgery as scheduled`,
       `Explain to the client that a cold increases risks during surgery and ask if he/she is willing to assume those risks`,
@@ -11059,7 +11058,7 @@ export const QUESTION_BANK = [
     id: 788,
     category: `Comprehensive`,
     chapter: `Practice Test One`,
-    question: `The nurse is caring for an adult who had abdominal surgery yesterday. When the nurse encourages the client to take some deep breaths and cough, the client tells the nurse, "It hurts when I cough. I just can't do it." What is the nurse's best response?`,
+    prompt: `The nurse is caring for an adult who had abdominal surgery yesterday. When the nurse encourages the client to take some deep breaths and cough, the client tells the nurse, "It hurts when I cough. I just can't do it." What is the nurse's best response?`,
     options: [
       `"After you do the deep breathing and coughing, I will get you some pain medication."`,
       `"You must do this if you don't want to get pneumonia."`,
@@ -11073,7 +11072,7 @@ export const QUESTION_BANK = [
     id: 789,
     category: `Comprehensive`,
     chapter: `Practice Test One`,
-    question: `A woman had a hysterectomy this morning. She asks the nurse why she has to wear "these uncomfortable stockings on my legs." How should the nurse reply?`,
+    prompt: `A woman had a hysterectomy this morning. She asks the nurse why she has to wear "these uncomfortable stockings on my legs." How should the nurse reply?`,
     options: [
       `"They are to keep your legs warm after the surgery in the cool operating room."`,
       `"They help to prevent varicose veins, which are common after your type of surgery."`,
@@ -11087,7 +11086,7 @@ export const QUESTION_BANK = [
     id: 790,
     category: `Comprehensive`,
     chapter: `Practice Test One`,
-    question: `A woman has just started receiving external radiation therapy. When the nurse enters the client's room, she notes that the client is scrubbing the area vigorously with soap and water. When asked about her actions, the woman replies that she is trying to get rid of the ugly purple marks. What is the best action for the nurse at this time?`,
+    prompt: `A woman has just started receiving external radiation therapy. When the nurse enters the client's room, she notes that the client is scrubbing the area vigorously with soap and water. When asked about her actions, the woman replies that she is trying to get rid of the ugly purple marks. What is the best action for the nurse at this time?`,
     options: [
       `Explain that the purple marks must stay on her because they tell the doctors where to beam the radiation`,
       `Suggest that alcohol will make it easier to remove the marks`,
@@ -11101,7 +11100,7 @@ export const QUESTION_BANK = [
     id: 791,
     category: `Comprehensive`,
     chapter: `Practice Test One`,
-    question: `An adult who is receiving cancer chemotherapy asks the nurse if her fatigue has anything to do with the chemotherapy. What should the nurse include when responding to this client?`,
+    prompt: `An adult who is receiving cancer chemotherapy asks the nurse if her fatigue has anything to do with the chemotherapy. What should the nurse include when responding to this client?`,
     options: [
       `Chemotherapy lowers the number of white blood cells in the body causing fatigue.`,
       `The stress of undergoing chemotherapy is likely to cause fatigue.`,
@@ -11115,7 +11114,7 @@ export const QUESTION_BANK = [
     id: 792,
     category: `Comprehensive`,
     chapter: `Practice Test One`,
-    question: `An adult is taking warfarin daily. The client's international normalized ratio (INR) is 2.4. Which nursing action is most appropriate?`,
+    prompt: `An adult is taking warfarin daily. The client's international normalized ratio (INR) is 2.4. Which nursing action is most appropriate?`,
     options: [
       `Increase the dose of warfarin by 2 mg`,
       `Withhold the warfarin and notify the physician`,
@@ -11129,7 +11128,7 @@ export const QUESTION_BANK = [
     id: 793,
     category: `Comprehensive`,
     chapter: `Practice Test One`,
-    question: `A client is to be discharged on enoxaparin (Lovenox) for the next two days. Which comment by the client indicates a need for further instruction?`,
+    prompt: `A client is to be discharged on enoxaparin (Lovenox) for the next two days. Which comment by the client indicates a need for further instruction?`,
     options: [
       `"I will wash my hands before I prepare the injection."`,
       `"I will give the injection in my thigh."`,
@@ -11143,7 +11142,7 @@ export const QUESTION_BANK = [
     id: 794,
     category: `Comprehensive`,
     chapter: `Practice Test One`,
-    question: `An adult is hospitalized following a myocardial infarction. While the client is receiving heparin, the nurse should have which of the following medications available?`,
+    prompt: `An adult is hospitalized following a myocardial infarction. While the client is receiving heparin, the nurse should have which of the following medications available?`,
     options: [
       `Aspirin`,
       `Calcium gluconate`,
@@ -11157,7 +11156,7 @@ export const QUESTION_BANK = [
     id: 795,
     category: `Comprehensive`,
     chapter: `Practice Test One`,
-    question: `The nurse's neighbor has a total cholesterol of 450 mg/dL. The neighbor asks the nurse what this means. What should the nurse include when responding?`,
+    prompt: `The nurse's neighbor has a total cholesterol of 450 mg/dL. The neighbor asks the nurse what this means. What should the nurse include when responding?`,
     options: [
       `The cholesterol level is slightly high, but exercise and a low-fat diet should reduce it to normal.`,
       `The cholesterol level is below normal levels, but this is good.`,
@@ -11171,7 +11170,7 @@ export const QUESTION_BANK = [
     id: 796,
     category: `Comprehensive`,
     chapter: `Practice Test One`,
-    question: `The nurse is caring for a client who is scheduled for a cardiac stress test tomorrow. Prior to the stress test, the nurse should:`,
+    prompt: `The nurse is caring for a client who is scheduled for a cardiac stress test tomorrow. Prior to the stress test, the nurse should:`,
     options: [
       `encourage the client to eat a hearty meal just before the test.`,
       `not give the client caffeine to drink.`,
@@ -11185,7 +11184,7 @@ export const QUESTION_BANK = [
     id: 797,
     category: `Comprehensive`,
     chapter: `Practice Test One`,
-    question: `An adult is to have a cardiac catheterization performed tomorrow. When preparing the client for the cardiac catheterization, it is essential for the nurse to do which of the following?`,
+    prompt: `An adult is to have a cardiac catheterization performed tomorrow. When preparing the client for the cardiac catheterization, it is essential for the nurse to do which of the following?`,
     options: [
       `Administer an enema two hours before the procedure`,
       `Limit caffeine the day before the procedure`,
@@ -11199,7 +11198,7 @@ export const QUESTION_BANK = [
     id: 798,
     category: `Comprehensive`,
     chapter: `Practice Test One`,
-    question: `Immediately following a cardiac catheterization, the client asks to go to the toilet. What is the best response by the nurse?`,
+    prompt: `Immediately following a cardiac catheterization, the client asks to go to the toilet. What is the best response by the nurse?`,
     options: [
       `Assist the client to the toilet`,
       `Show the client where the toilet is and allow him/her to walk there if stable`,
@@ -11213,7 +11212,7 @@ export const QUESTION_BANK = [
     id: 799,
     category: `Comprehensive`,
     chapter: `Practice Test One`,
-    question: `The physician has recommended that an adult male be scheduled for a left heart catheterization. The client asks the nurse what a cardiac catheterization is for. What information should be included when responding to this client?`,
+    prompt: `The physician has recommended that an adult male be scheduled for a left heart catheterization. The client asks the nurse what a cardiac catheterization is for. What information should be included when responding to this client?`,
     options: [
       `During a left heart catheterization, the coronary arteries can be visualized.`,
       `During a left heart catheterization, holes in the heart walls can be detected.`,
@@ -11227,7 +11226,7 @@ export const QUESTION_BANK = [
     id: 800,
     category: `Comprehensive`,
     chapter: `Practice Test One`,
-    question: `Which nursing action is essential in the care of an adult following a left side cardiac catheterization?`,
+    prompt: `Which nursing action is essential in the care of an adult following a left side cardiac catheterization?`,
     options: [
       `Keep the client NPO for two hours.`,
       `Ask the client about a shellfish allergy.`,
@@ -11241,7 +11240,7 @@ export const QUESTION_BANK = [
     id: 801,
     category: `Comprehensive`,
     chapter: `Practice Test One`,
-    question: `The nurse is discussing hypertension with a group of people. Which person is at greatest risk for hypertension?`,
+    prompt: `The nurse is discussing hypertension with a group of people. Which person is at greatest risk for hypertension?`,
     options: [
       `A 63-year-old overweight Caucasian female office worker who smokes and whose parents both had high blood pressure.`,
       `A 52-year-old African-American female of normal weight whose parents have diabetes and who is an avid swimmer.`,
@@ -11255,7 +11254,7 @@ export const QUESTION_BANK = [
     id: 802,
     category: `Comprehensive`,
     chapter: `Practice Test One`,
-    question: `An adult has been taking captopril (Capoten) for hypertension. The client tells the nurse that he has a dry cough and sometimes gets dizzy when he stands up. What conclusions should the nurse make regarding this client?`,
+    prompt: `An adult has been taking captopril (Capoten) for hypertension. The client tells the nurse that he has a dry cough and sometimes gets dizzy when he stands up. What conclusions should the nurse make regarding this client?`,
     options: [
       `The client is having severe side effects and should discontinue the drug until after he sees his physician.`,
       `Dizziness is a common side effect of antihypertensives. The cough is probably unrelated to the medication.`,
@@ -11269,7 +11268,7 @@ export const QUESTION_BANK = [
     id: 803,
     category: `Comprehensive`,
     chapter: `Practice Test One`,
-    question: `An adult is being discharged on a low-sodium, low-fat diet. Which menu, if selected by the client, indicates an understanding of the diet?`,
+    prompt: `An adult is being discharged on a low-sodium, low-fat diet. Which menu, if selected by the client, indicates an understanding of the diet?`,
     options: [
       `Hamburger with fries, apple pie, milkshake`,
       `Tossed salad with vinaigrette dressing, baked skinless chicken, applesauce`,
@@ -11283,7 +11282,7 @@ export const QUESTION_BANK = [
     id: 804,
     category: `Comprehensive`,
     chapter: `Practice Test One`,
-    question: `Diltiazem (Cardizem) 90 mg qid is prescribed for an adult who has angina. Which statement by the client indicates a need for further instruction?`,
+    prompt: `Diltiazem (Cardizem) 90 mg qid is prescribed for an adult who has angina. Which statement by the client indicates a need for further instruction?`,
     options: [
       `"I will take the pills before meals and at bedtime."`,
       `"I will call my physician if the pain gets worse than it has been."`,
@@ -11297,7 +11296,7 @@ export const QUESTION_BANK = [
     id: 805,
     category: `Comprehensive`,
     chapter: `Practice Test One`,
-    question: `An adult male had a myocardial infarction six weeks ago. He asks the nurse if it is safe for him to have sex. What should the nurse include when replying?`,
+    prompt: `An adult male had a myocardial infarction six weeks ago. He asks the nurse if it is safe for him to have sex. What should the nurse include when replying?`,
     options: [
       `Taking nitroglycerin before sexual activity is often helpful.`,
       `Taking drugs for erectile dysfunction in addition to nitroglycerin is advised.`,
@@ -11311,7 +11310,7 @@ export const QUESTION_BANK = [
     id: 806,
     category: `Comprehensive`,
     chapter: `Practice Test One`,
-    question: `An adult male calls his nurse neighbor and says he is having severe chest pain and feels as though something terrible is happening to him. He rates his pain as 10 on the 10-point scale. In addition to calling 911, what should the nurse recommend the man do now?`,
+    prompt: `An adult male calls his nurse neighbor and says he is having severe chest pain and feels as though something terrible is happening to him. He rates his pain as 10 on the 10-point scale. In addition to calling 911, what should the nurse recommend the man do now?`,
     options: [
       `Take an aspirin`,
       `Lie flat`,
@@ -11325,7 +11324,7 @@ export const QUESTION_BANK = [
     id: 807,
     category: `Comprehensive`,
     chapter: `Practice Test One`,
-    question: `Docusate sodium (Colace) is ordered for an adult who had a myocardial infarction yesterday. The client asks the nurse why docusate sodium is prescribed. The nurse's response should include which information?`,
+    prompt: `Docusate sodium (Colace) is ordered for an adult who had a myocardial infarction yesterday. The client asks the nurse why docusate sodium is prescribed. The nurse's response should include which information?`,
     options: [
       `Colace is prescribed to make it take longer for blood to clot.`,
       `Colace makes it easier for the client to relax and reduce stress.`,
@@ -11341,7 +11340,7 @@ export const QUESTION_BANK = [
     id: 808,
     category: `Comprehensive`,
     chapter: `Practice Test Two`,
-    question: `The nurse is caring for a client who had a myocardial infarction yesterday and received alteplase (tPA). The client's spouse asks the nurse why that medication was given. What should the nurse include when replying?`,
+    prompt: `The nurse is caring for a client who had a myocardial infarction yesterday and received alteplase (tPA). The client's spouse asks the nurse why that medication was given. What should the nurse include when replying?`,
     options: [
       `Alteplase (tPA) is given to relieve the pain of a heart attack.`,
       `Alteplase (tPA) dissolves the clot that is blocking a coronary artery.`,
@@ -11355,7 +11354,7 @@ export const QUESTION_BANK = [
     id: 809,
     category: `Comprehensive`,
     chapter: `Practice Test Two`,
-    question: `The spouse of a client who had an angioplasty following a heart attack says to the nurse, "What is an angioplasty? It sounds like plastic surgery. My husband had a heart attack." What information should be included in the nurse's response?`,
+    prompt: `The spouse of a client who had an angioplasty following a heart attack says to the nurse, "What is an angioplasty? It sounds like plastic surgery. My husband had a heart attack." What information should be included in the nurse's response?`,
     options: [
       `An angioplasty repairs the heart damage caused by the heart attack.`,
       `During an angioplasty, the physician creates a bypass around blocked arteries, increasing the blood flow to the heart muscle.`,
@@ -11369,7 +11368,7 @@ export const QUESTION_BANK = [
     id: 810,
     category: `Comprehensive`,
     chapter: `Practice Test Two`,
-    question: `The nurse is caring for an adult who is admitted in right heart failure. Which observation is most consistent with this condition?`,
+    prompt: `The nurse is caring for an adult who is admitted in right heart failure. Which observation is most consistent with this condition?`,
     options: [
       `Distended neck veins`,
       `Facial edema`,
@@ -11383,7 +11382,7 @@ export const QUESTION_BANK = [
     id: 811,
     category: `Comprehensive`,
     chapter: `Practice Test Two`,
-    question: `The nurse is caring for an adult who is taking digoxin (Lanoxin) 0.25 mg daily. Which comment by the client is of greatest concern to the nurse because the client is taking digoxin?`,
+    prompt: `The nurse is caring for an adult who is taking digoxin (Lanoxin) 0.25 mg daily. Which comment by the client is of greatest concern to the nurse because the client is taking digoxin?`,
     options: [
       `"I don't seem to have much of an appetite lately."`,
       `"My energy level is not as high as it once was."`,
@@ -11397,7 +11396,7 @@ export const QUESTION_BANK = [
     id: 812,
     category: `Comprehensive`,
     chapter: `Practice Test Two`,
-    question: `An adult is taking digoxin and furosemide. Which laboratory value is of greatest concern to the nurse?`,
+    prompt: `An adult is taking digoxin and furosemide. Which laboratory value is of greatest concern to the nurse?`,
     options: [
       `Serum digoxin of 1.2 ng/mL`,
       `Serum K+ of 3.0 mEq/L`,
@@ -11411,7 +11410,7 @@ export const QUESTION_BANK = [
     id: 813,
     category: `Comprehensive`,
     chapter: `Practice Test Two`,
-    question: `The client is receiving furosemide daily. Which statement by the client indicates to the nurse that the client understands the dietary needs related to this medication?`,
+    prompt: `The client is receiving furosemide daily. Which statement by the client indicates to the nurse that the client understands the dietary needs related to this medication?`,
     options: [
       `"I always have eggs and apple juice for breakfast."`,
       `"My favorite snack is an apple."`,
@@ -11425,7 +11424,7 @@ export const QUESTION_BANK = [
     id: 814,
     category: `Comprehensive`,
     chapter: `Practice Test Two`,
-    question: `The nurse is talking with a client who has just had an ECG. The client says to the nurse, "The doctor said I had a sinus rhythm. What does that mean?" Which response to the client is best?`,
+    prompt: `The nurse is talking with a client who has just had an ECG. The client says to the nurse, "The doctor said I had a sinus rhythm. What does that mean?" Which response to the client is best?`,
     options: [
       `"I wouldn't worry about that. It's pretty normal."`,
       `"Sinus rhythm means that the heartbeat starts where it should. That is a place called the sinoatrial node. Sinus rhythm is good."`,
@@ -11439,7 +11438,7 @@ export const QUESTION_BANK = [
     id: 815,
     category: `Comprehensive`,
     chapter: `Practice Test Two`,
-    question: `The nurse is caring for an adult who has a ventricular pacemaker in place. Which finding is of greatest concern to the nurse?`,
+    prompt: `The nurse is caring for an adult who has a ventricular pacemaker in place. Which finding is of greatest concern to the nurse?`,
     options: [
       `The client's blood pressure is 138/86.`,
       `The client's pulse is 50.`,
@@ -11453,7 +11452,7 @@ export const QUESTION_BANK = [
     id: 816,
     category: `Comprehensive`,
     chapter: `Practice Test Two`,
-    question: `An adult is scheduled for a cardioversion next week. What should the nurse plan to include when teaching the client about the procedure?`,
+    prompt: `An adult is scheduled for a cardioversion next week. What should the nurse plan to include when teaching the client about the procedure?`,
     options: [
       `The client should be NPO for eight hours before the procedure.`,
       `The client will be awake during the procedure.`,
@@ -11467,7 +11466,7 @@ export const QUESTION_BANK = [
     id: 817,
     category: `Comprehensive`,
     chapter: `Practice Test Two`,
-    question: `An adult is admitted with arteriosclerosis obliterans. Which finding would the nurse most expect to see in this client?`,
+    prompt: `An adult is admitted with arteriosclerosis obliterans. Which finding would the nurse most expect to see in this client?`,
     options: [
       `Legs are swollen`,
       `Blood pressure is 110/72.`,
@@ -11481,7 +11480,7 @@ export const QUESTION_BANK = [
     id: 818,
     category: `Comprehensive`,
     chapter: `Practice Test Two`,
-    question: `The nurse is caring for a client who is prescribed cholestyramine (Questran). Which comment by the client is of most concern to the nurse?`,
+    prompt: `The nurse is caring for a client who is prescribed cholestyramine (Questran). Which comment by the client is of most concern to the nurse?`,
     options: [
       `"I have a grapefruit almost every day for breakfast."`,
       `"My muscles were very tired after exercising yesterday."`,
@@ -11495,7 +11494,7 @@ export const QUESTION_BANK = [
     id: 819,
     category: `Comprehensive`,
     chapter: `Practice Test Two`,
-    question: `An adult is prescribed lovastatin (Mevacor). The nurse should teach the client that while he is taking lovastatin (Mevacor), he must avoid:`,
+    prompt: `An adult is prescribed lovastatin (Mevacor). The nurse should teach the client that while he is taking lovastatin (Mevacor), he must avoid:`,
     options: [
       `eating apples`,
       `drinking grapefruit juice`,
@@ -11509,7 +11508,7 @@ export const QUESTION_BANK = [
     id: 820,
     category: `Comprehensive`,
     chapter: `Practice Test Two`,
-    question: `An adult woman has been diagnosed with varicose veins. Which aspect of her history is most likely related to her diagnosis?`,
+    prompt: `An adult woman has been diagnosed with varicose veins. Which aspect of her history is most likely related to her diagnosis?`,
     options: [
       `She has had five term pregnancies.`,
       `She runs several marathons a year.`,
@@ -11523,7 +11522,7 @@ export const QUESTION_BANK = [
     id: 821,
     category: `Comprehensive`,
     chapter: `Practice Test Two`,
-    question: `Prior to discharge from the postanesthesia care unit following a vein stripping of the left leg, the nurse should tell the client to:`,
+    prompt: `Prior to discharge from the postanesthesia care unit following a vein stripping of the left leg, the nurse should tell the client to:`,
     options: [
       `apply heat to the affected leg for 10 minutes out of every hour for the next 24 hours.`,
       `sit with the legs up or walk but avoid prolonged standing and sitting with the feet down.`,
@@ -11537,7 +11536,7 @@ export const QUESTION_BANK = [
     id: 822,
     category: `Comprehensive`,
     chapter: `Practice Test Two`,
-    question: `An adult is admitted to the hospital with several days of vomiting and diarrhea. Admitting data show RBC level of 4.2 million/mm3 and hematocrit of 54%. What is the best interpretation of these data?`,
+    prompt: `An adult is admitted to the hospital with several days of vomiting and diarrhea. Admitting data show RBC level of 4.2 million/mm3 and hematocrit of 54%. What is the best interpretation of these data?`,
     options: [
       `The client may have internal bleeding.`,
       `The client is probably dehydrated.`,
@@ -11551,7 +11550,7 @@ export const QUESTION_BANK = [
     id: 823,
     category: `Comprehensive`,
     chapter: `Practice Test Two`,
-    question: `An adult asks the nurse about blood types. Which information should the nurse plan to include when replying?`,
+    prompt: `An adult asks the nurse about blood types. Which information should the nurse plan to include when replying?`,
     options: [
       `Blood typing is not always accurate.`,
       `A person cannot receive a factor that he/she does not have.`,
@@ -11565,7 +11564,7 @@ export const QUESTION_BANK = [
     id: 824,
     category: `Comprehensive`,
     chapter: `Practice Test Two`,
-    question: `A woman is pregnant for the first time and is Rh negative. Her husband is Rh positive. She tells the nurse that he is very worried about her baby. Which information should the nurse plan to include when talking with this woman?`,
+    prompt: `A woman is pregnant for the first time and is Rh negative. Her husband is Rh positive. She tells the nurse that he is very worried about her baby. Which information should the nurse plan to include when talking with this woman?`,
     options: [
       `The first baby should not be affected.`,
       `She will need to get treatment after the second baby is born.`,
@@ -11579,7 +11578,7 @@ export const QUESTION_BANK = [
     id: 825,
     category: `Comprehensive`,
     chapter: `Practice Test Two`,
-    question: `The nurse is caring for a hospitalized adult who is receiving a blood transfusion. Twenty minutes after the start of the transfusion, the client complains of feeling cold and is shivering. What is the best first action for the LPN to take?`,
+    prompt: `The nurse is caring for a hospitalized adult who is receiving a blood transfusion. Twenty minutes after the start of the transfusion, the client complains of feeling cold and is shivering. What is the best first action for the LPN to take?`,
     options: [
       `Put a warm blanket on the client`,
       `Take the client's vital signs`,
@@ -11593,7 +11592,7 @@ export const QUESTION_BANK = [
     id: 826,
     category: `Comprehensive`,
     chapter: `Practice Test Two`,
-    question: `A transfusion is ordered for a hospitalized client. The charge nurse asks the LPN to start the transfusion. What should the LPN do?`,
+    prompt: `A transfusion is ordered for a hospitalized client. The charge nurse asks the LPN to start the transfusion. What should the LPN do?`,
     options: [
       `Start the transfusion as ordered`,
       `Be sure that dextrose is hanging and then hang the blood`,
@@ -11607,7 +11606,7 @@ export const QUESTION_BANK = [
     id: 827,
     category: `Comprehensive`,
     chapter: `Practice Test Two`,
-    question: `The mother is concerned that her 6-year-old child is eating dirt every day. The nurse is most concerned about which of the following?`,
+    prompt: `The mother is concerned that her 6-year-old child is eating dirt every day. The nurse is most concerned about which of the following?`,
     options: [
       `The child may not be getting enough to eat.`,
       `The child may have lead poisoning.`,
@@ -11621,7 +11620,7 @@ export const QUESTION_BANK = [
     id: 828,
     category: `Comprehensive`,
     chapter: `Practice Test Two`,
-    question: `The nurse knows that the mother understands the dietary instructions for her toddler who has iron deficiency anemia when the mother selects which foods?`,
+    prompt: `The nurse knows that the mother understands the dietary instructions for her toddler who has iron deficiency anemia when the mother selects which foods?`,
     options: [
       `Whole milk, carrots, and chicken pieces`,
       `Ground beef, broccoli, and orange juice`,
@@ -11635,7 +11634,7 @@ export const QUESTION_BANK = [
     id: 829,
     category: `Comprehensive`,
     chapter: `Practice Test Two`,
-    question: `Which finding by the nurse suggests that the mother is not giving the toddler iron supplements as ordered?`,
+    prompt: `Which finding by the nurse suggests that the mother is not giving the toddler iron supplements as ordered?`,
     options: [
       `The child has pale skin.`,
       `There is light brown stool in the diaper.`,
@@ -11649,7 +11648,7 @@ export const QUESTION_BANK = [
     id: 830,
     category: `Comprehensive`,
     chapter: `Practice Test Two`,
-    question: `The nurse is to administer an iron injection to an adult. How should this be administered?`,
+    prompt: `The nurse is to administer an iron injection to an adult. How should this be administered?`,
     options: [
       `Subcutaneous in the arm`,
       `Intradermal in the forearm`,
@@ -11663,7 +11662,7 @@ export const QUESTION_BANK = [
     id: 831,
     category: `Comprehensive`,
     chapter: `Practice Test Two`,
-    question: `A client with pernicious anemia is admitted. What would the nurse expect the admitting assessment to reveal?`,
+    prompt: `A client with pernicious anemia is admitted. What would the nurse expect the admitting assessment to reveal?`,
     options: [
       `Ecchymoses on the trunk`,
       `Bilateral neuropathy of the legs`,
@@ -11677,7 +11676,7 @@ export const QUESTION_BANK = [
     id: 832,
     category: `Comprehensive`,
     chapter: `Practice Test Two`,
-    question: `An adult is admitted with pernicious anemia. Which factor in the client's history is most likely related to the development of pernicious anemia?`,
+    prompt: `An adult is admitted with pernicious anemia. Which factor in the client's history is most likely related to the development of pernicious anemia?`,
     options: [
       `The client had an upper gastrointestinal (GI) bleed a year ago.`,
       `The client had chemotherapy three months ago.`,
@@ -11691,7 +11690,7 @@ export const QUESTION_BANK = [
     id: 833,
     category: `Comprehensive`,
     chapter: `Practice Test Two`,
-    question: `A 53-year-old who has pernicious anemia is being seen in the physician's office. Because the client has pernicious anemia, which comment is of greatest concern to the nurse?`,
+    prompt: `A 53-year-old who has pernicious anemia is being seen in the physician's office. Because the client has pernicious anemia, which comment is of greatest concern to the nurse?`,
     options: [
       `"I have been having trouble reading the newspaper."`,
       `"I have pain up and down my legs."`,
@@ -11705,7 +11704,7 @@ export const QUESTION_BANK = [
     id: 834,
     category: `Comprehensive`,
     chapter: `Practice Test Two`,
-    question: `A 15-month-old child has just been diagnosed with sickle cell anemia. The mother is pregnant and asks if the child she is carrying will also have sickle cell anemia. She says that neither she nor her husband has sickle cell anemia. The nurse's reply should be based on which understanding?`,
+    prompt: `A 15-month-old child has just been diagnosed with sickle cell anemia. The mother is pregnant and asks if the child she is carrying will also have sickle cell anemia. She says that neither she nor her husband has sickle cell anemia. The nurse's reply should be based on which understanding?`,
     options: [
       `There is a 50% chance that each child they have will have sickle cell anemia.`,
       `The chance of having another child with sickle cell anemia is 1 in 4.`,
@@ -11719,7 +11718,7 @@ export const QUESTION_BANK = [
     id: 835,
     category: `Comprehensive`,
     chapter: `Practice Test Two`,
-    question: `A child is admitted in sickle cell crisis. Which factor in the child's history is most likely related to the onset of the crisis?`,
+    prompt: `A child is admitted in sickle cell crisis. Which factor in the child's history is most likely related to the onset of the crisis?`,
     options: [
       `The child just completed final exams at school.`,
       `The child ran a marathon yesterday.`,
@@ -11733,7 +11732,7 @@ export const QUESTION_BANK = [
     id: 836,
     category: `Comprehensive`,
     chapter: `Practice Test Two`,
-    question: `A Schilling test is ordered for a female client who has pernicious anemia. It is to run from 8:00 A.M. to 8:00 A.M. the following day. How should the nurse plan care for this client?`,
+    prompt: `A Schilling test is ordered for a female client who has pernicious anemia. It is to run from 8:00 A.M. to 8:00 A.M. the following day. How should the nurse plan care for this client?`,
     options: [
       `Leave the urine container with the client at 8:00 A.M. Instruct her to collect all urine until 8:00 A.M. tomorrow. Pick up container at 8:00 A.M.`,
       `Have the client empty her bladder at 8:00 A.M., and send this specimen to the lab. Instruct the client to collect all urine until 8:00 A.M. tomorrow.`,
@@ -11747,7 +11746,7 @@ export const QUESTION_BANK = [
     id: 837,
     category: `Comprehensive`,
     chapter: `Practice Test Two`,
-    question: `The nurse is conducting a community group discussion on nutrition. One of the participants says to the nurse, "I am a vegan. I have been told I might get pernicious anemia. How can I prevent that?" What should the nurse include when answering the client?`,
+    prompt: `The nurse is conducting a community group discussion on nutrition. One of the participants says to the nurse, "I am a vegan. I have been told I might get pernicious anemia. How can I prevent that?" What should the nurse include when answering the client?`,
     options: [
       `She is not at risk for pernicious anemia because there are many nonmeat sources of vitamin B12.`,
       `She is at risk of developing pernicious anemia, but taking a vitamin supplement that contains vitamin B12 should prevent it.`,
@@ -11761,7 +11760,7 @@ export const QUESTION_BANK = [
     id: 838,
     category: `Comprehensive`,
     chapter: `Practice Test Two`,
-    question: `A 5-year-old child has been treated for sickle cell crisis. The parent asks the nurse if there is anything that can be done to prevent future crises. What should be included in the nurse's response?`,
+    prompt: `A 5-year-old child has been treated for sickle cell crisis. The parent asks the nurse if there is anything that can be done to prevent future crises. What should be included in the nurse's response?`,
     options: [
       `Sickle crisis is hard to predict and not usually preventable.`,
       `Keeping the child from getting chilled may prevent a crisis.`,
@@ -11775,7 +11774,7 @@ export const QUESTION_BANK = [
     id: 839,
     category: `Comprehensive`,
     chapter: `Practice Test Two`,
-    question: `A 15-month-old is admitted in sickle crisis. The parents ask why the child did not have any symptoms until now. What should be included in the nurse's response?`,
+    prompt: `A 15-month-old is admitted in sickle crisis. The parents ask why the child did not have any symptoms until now. What should be included in the nurse's response?`,
     options: [
       `The child was probably not exposed to it until recently.`,
       `Antibodies from the mother are present for the first year of life.`,
@@ -11789,7 +11788,7 @@ export const QUESTION_BANK = [
     id: 840,
     category: `Comprehensive`,
     chapter: `Practice Test Two`,
-    question: `The parents of a school-age child who has sickle cell anemia are discussing recreational activities for their child. Which comment indicates that the parents understand the child's needs?`,
+    prompt: `The parents of a school-age child who has sickle cell anemia are discussing recreational activities for their child. Which comment indicates that the parents understand the child's needs?`,
     options: [
       `"Soccer will increase our child's stamina and is good for him."`,
       `"We should encourage our child to engage in as many outdoor sports as he likes."`,
@@ -11803,7 +11802,7 @@ export const QUESTION_BANK = [
     id: 841,
     category: `Comprehensive`,
     chapter: `Practice Test Two`,
-    question: `The nurse is discussing hemophilia with a group of parents. Which child is most likely to have classic hemophilia?`,
+    prompt: `The nurse is discussing hemophilia with a group of parents. Which child is most likely to have classic hemophilia?`,
     options: [
       `A male whose mother is a carrier`,
       `A male whose father has the disease`,
@@ -11817,7 +11816,7 @@ export const QUESTION_BANK = [
     id: 842,
     category: `Comprehensive`,
     chapter: `Practice Test Two`,
-    question: `Which comment by the mother of a child who has classic hemophilia indicates a need for more nursing instruction?`,
+    prompt: `Which comment by the mother of a child who has classic hemophilia indicates a need for more nursing instruction?`,
     options: [
       `"It is so hard to tell my son he cannot play football."`,
       `"We encourage our son to do everything the other children do."`,
@@ -11831,7 +11830,7 @@ export const QUESTION_BANK = [
     id: 843,
     category: `Comprehensive`,
     chapter: `Practice Test Two`,
-    question: `The nurse is caring for a 10-year-old child who has classic hemophilia. He is admitted with a swollen right knee that is very painful. The nurse should plan to include which of the following as a priority in the care of this child upon admission?`,
+    prompt: `The nurse is caring for a 10-year-old child who has classic hemophilia. He is admitted with a swollen right knee that is very painful. The nurse should plan to include which of the following as a priority in the care of this child upon admission?`,
     options: [
       `Range-of-motion exercises to maintain joint mobility`,
       `Ambulation at least three times a day to prevent immobility complications`,
@@ -11845,7 +11844,7 @@ export const QUESTION_BANK = [
     id: 844,
     category: `Comprehensive`,
     chapter: `Practice Test Two`,
-    question: `A 15-year-old client presents at the clinic with fatigue, a severe sore throat, and swollen lymph nodes in the neck. A monospot test is positive. What instructions will be most appropriate for this client?`,
+    prompt: `A 15-year-old client presents at the clinic with fatigue, a severe sore throat, and swollen lymph nodes in the neck. A monospot test is positive. What instructions will be most appropriate for this client?`,
     options: [
       `"Take the prescribed antibiotic for the full 10 days even if you feel better."`,
       `"You will need plenty of rest and good nutrition for the next few weeks."`,
@@ -11859,7 +11858,7 @@ export const QUESTION_BANK = [
     id: 845,
     category: `Comprehensive`,
     chapter: `Practice Test Two`,
-    question: `A 15-year-old client has just been diagnosed as having infectious mononucleosis. He asks how he contracted the disease. Which action reported in his history is most likely related to developing infectious mononucleosis?`,
+    prompt: `A 15-year-old client has just been diagnosed as having infectious mononucleosis. He asks how he contracted the disease. Which action reported in his history is most likely related to developing infectious mononucleosis?`,
     options: [
       `The client says he frequently trades hats with his friends.`,
       `The client stepped on a nail last week.`,
@@ -11873,7 +11872,7 @@ export const QUESTION_BANK = [
     id: 846,
     category: `Comprehensive`,
     chapter: `Practice Test Two`,
-    question: `A 6-year-old child is receiving chemotherapy for leukemia. Which comment by the child indicates to the nurse that the child is adjusting well to the therapy?`,
+    prompt: `A 6-year-old child is receiving chemotherapy for leukemia. Which comment by the child indicates to the nurse that the child is adjusting well to the therapy?`,
     options: [
       `"I am so tired. I want Mommy to hold me."`,
       `"Look at my new hat. I wear it all the time. It's pretty."`,
@@ -11887,7 +11886,7 @@ export const QUESTION_BANK = [
     id: 847,
     category: `Comprehensive`,
     chapter: `Practice Test Two`,
-    question: `The nurse is caring for several clients. When thinking about long-term goals, the nurse knows that which of these clients has the best prognosis?`,
+    prompt: `The nurse is caring for several clients. When thinking about long-term goals, the nurse knows that which of these clients has the best prognosis?`,
     options: [
       `A young adult who has stage I Hodgkin's lymphoma`,
       `A young adult who has leukemia`,
@@ -11901,7 +11900,7 @@ export const QUESTION_BANK = [
     id: 848,
     category: `Comprehensive`,
     chapter: `Practice Test Two`,
-    question: `The nurse is interacting with a client who has just been told she is HIV positive. The client asks the nurse when she will die. What should the nurse plan to include when replying?`,
+    prompt: `The nurse is interacting with a client who has just been told she is HIV positive. The client asks the nurse when she will die. What should the nurse plan to include when replying?`,
     options: [
       `HIV positive means that the client has antibodies against the virus. It does not mean that the client has AIDS. Most people do not develop AIDS or die for many years.`,
       `Most persons who are HIV positive live 5 to 10 years with aggressive treatment.`,
@@ -11915,7 +11914,7 @@ export const QUESTION_BANK = [
     id: 849,
     category: `Comprehensive`,
     chapter: `Practice Test Two`,
-    question: `A sputum collection is ordered for an adult. How should the nurse plan to collect the specimen?`,
+    prompt: `A sputum collection is ordered for an adult. How should the nurse plan to collect the specimen?`,
     options: [
       `Have the client rinse her mouth with mouthwash before collecting the specimen`,
       `Collect the specimen in the morning`,
@@ -11929,7 +11928,7 @@ export const QUESTION_BANK = [
     id: 850,
     category: `Comprehensive`,
     chapter: `Practice Test Two`,
-    question: `Because a client is scheduled for a bronchoscopy tomorrow, the nurse should do which of the following?`,
+    prompt: `Because a client is scheduled for a bronchoscopy tomorrow, the nurse should do which of the following?`,
     options: [
       `Encourage fluids before the procedure`,
       `Keep the client NPO after midnight`,
@@ -11943,7 +11942,7 @@ export const QUESTION_BANK = [
     id: 851,
     category: `Comprehensive`,
     chapter: `Practice Test Two`,
-    question: `An adult is receiving nasal oxygen at 6 L/min. The client asks the nurse why the oxygen is humidified. What should the nurse include when responding to the client?`,
+    prompt: `An adult is receiving nasal oxygen at 6 L/min. The client asks the nurse why the oxygen is humidified. What should the nurse include when responding to the client?`,
     options: [
       `Humidifying oxygen helps to prevent fire.`,
       `Humidity increases the concentration of oxygen.`,
@@ -11957,7 +11956,7 @@ export const QUESTION_BANK = [
     id: 852,
     category: `Comprehensive`,
     chapter: `Practice Test Two`,
-    question: `The nurse is suctioning an adult's tracheostomy tube. What action is essential before starting to suction the client?`,
+    prompt: `The nurse is suctioning an adult's tracheostomy tube. What action is essential before starting to suction the client?`,
     options: [
       `Have the client drink a glass of water to liquefy secretions`,
       `Administer high levels of oxygen to the client`,
@@ -11971,7 +11970,7 @@ export const QUESTION_BANK = [
     id: 853,
     category: `Comprehensive`,
     chapter: `Practice Test Two`,
-    question: `An adult is admitted with a pneumothorax following an accident. Immediately after insertion of a chest tube, the client says to the nurse, "Why do I have a tube in my chest and that thing hanging on the side of the bed? I don't like it." What should the nurse include when replying to the client?`,
+    prompt: `An adult is admitted with a pneumothorax following an accident. Immediately after insertion of a chest tube, the client says to the nurse, "Why do I have a tube in my chest and that thing hanging on the side of the bed? I don't like it." What should the nurse include when replying to the client?`,
     options: [
       `Tell the client that the chest tube helps the client take bigger breaths`,
       `Focus on the client's feelings`,
@@ -11985,7 +11984,7 @@ export const QUESTION_BANK = [
     id: 854,
     category: `Comprehensive`,
     chapter: `Practice Test Two`,
-    question: `The nurse's neighbor calls the nurse and asks for assistance with her child who developed a nosebleed after being hit in the nose by a ball. What should the nurse recommend to the neighbor?`,
+    prompt: `The nurse's neighbor calls the nurse and asks for assistance with her child who developed a nosebleed after being hit in the nose by a ball. What should the nurse recommend to the neighbor?`,
     options: [
       `Pinch the child's nose and bend the head forward.`,
       `Pinch the child's nose and bend the head backward.`,
@@ -11999,7 +11998,7 @@ export const QUESTION_BANK = [
     id: 855,
     category: `Comprehensive`,
     chapter: `Practice Test Two`,
-    question: `A 3-year-old child had a seizure two days ago when the child's temperature was 105°F. The child has had no previous seizures. Today, the parent and the child are in the physician's office. What should the nurse include when teaching the parent?`,
+    prompt: `A 3-year-old child had a seizure two days ago when the child's temperature was 105°F. The child has had no previous seizures. Today, the parent and the child are in the physician's office. What should the nurse include when teaching the parent?`,
     options: [
       `The child now has epilepsy and will need long-term care for this condition.`,
       `If the child develops a fever over 101°F, administer ibuprofen.`,
@@ -12013,7 +12012,7 @@ export const QUESTION_BANK = [
     id: 856,
     category: `Comprehensive`,
     chapter: `Practice Test Two`,
-    question: `An adult is scheduled for a total laryngectomy. When preparing the client for surgery, it is essential for the nurse to take which of the following actions?`,
+    prompt: `An adult is scheduled for a total laryngectomy. When preparing the client for surgery, it is essential for the nurse to take which of the following actions?`,
     options: [
       `Teach the client esophageal speech`,
       `Teach the client how to lip read`,
@@ -12027,7 +12026,7 @@ export const QUESTION_BANK = [
     id: 857,
     category: `Comprehensive`,
     chapter: `Practice Test Two`,
-    question: `An adult who had a laryngectomy is ready for discharge. What question is it essential for the nurse to ask the client before discharge?`,
+    prompt: `An adult who had a laryngectomy is ready for discharge. What question is it essential for the nurse to ask the client before discharge?`,
     options: [
       `How many people live in your household?`,
       `Does your home have working smoke detectors?`,
@@ -12041,7 +12040,7 @@ export const QUESTION_BANK = [
     id: 858,
     category: `Comprehensive`,
     chapter: `Practice Test Two`,
-    question: `An adult has recently been diagnosed with chronic obstructive pulmonary disease (COPD). All of the following goals are in the teaching plan. Which will probably be most difficult for the client to achieve?`,
+    prompt: `An adult has recently been diagnosed with chronic obstructive pulmonary disease (COPD). All of the following goals are in the teaching plan. Which will probably be most difficult for the client to achieve?`,
     options: [
       `Stop smoking within three months`,
       `Demonstrate pursed lip breathing technique within one week`,
@@ -12055,7 +12054,7 @@ export const QUESTION_BANK = [
     id: 859,
     category: `Comprehensive`,
     chapter: `Practice Test Two`,
-    question: `An adult who has COPD is to start receiving oxygen at home. What teaching is essential for this client and his family?`,
+    prompt: `An adult who has COPD is to start receiving oxygen at home. What teaching is essential for this client and his family?`,
     options: [
       `The client should wear synthetic clothes as much as possible.`,
       `Oxygen flow should be 6 L/min.`,
@@ -12069,7 +12068,7 @@ export const QUESTION_BANK = [
     id: 860,
     category: `Comprehensive`,
     chapter: `Practice Test Two`,
-    question: `An adult is being worked up for possible pulmonary tuberculosis. The nurse knows that which test is most conclusive for the diagnosis of tuberculosis?`,
+    prompt: `An adult is being worked up for possible pulmonary tuberculosis. The nurse knows that which test is most conclusive for the diagnosis of tuberculosis?`,
     options: [
       `Intradermal skin test`,
       `Chest x-ray`,
@@ -12083,7 +12082,7 @@ export const QUESTION_BANK = [
     id: 861,
     category: `Comprehensive`,
     chapter: `Practice Test Two`,
-    question: `Because a client is taking rifampin (Rimactane), what must the nurse include when discussing medications with the client?`,
+    prompt: `Because a client is taking rifampin (Rimactane), what must the nurse include when discussing medications with the client?`,
     options: [
       `Report any changes in hearing immediately because this is a common side effect.`,
       `You should be taking vitamin B6 to prevent painful neuritis.`,
@@ -12097,7 +12096,7 @@ export const QUESTION_BANK = [
     id: 862,
     category: `Comprehensive`,
     chapter: `Practice Test Two`,
-    question: `An adult who has just been diagnosed with pulmonary tuberculosis asks the nurse how long he will have to be in isolation. What should be included in the nurse's reply?`,
+    prompt: `An adult who has just been diagnosed with pulmonary tuberculosis asks the nurse how long he will have to be in isolation. What should be included in the nurse's reply?`,
     options: [
       `Isolation is for the duration of the treatment, which is at least 26 weeks.`,
       `Isolation is necessary as long as the client has a cough.`,
@@ -12111,7 +12110,7 @@ export const QUESTION_BANK = [
     id: 863,
     category: `Comprehensive`,
     chapter: `Practice Test Two`,
-    question: `An adult is admitted with histoplasmosis. What is most likely to be in the client's history because he has histoplasmosis?`,
+    prompt: `An adult is admitted with histoplasmosis. What is most likely to be in the client's history because he has histoplasmosis?`,
     options: [
       `He is a chicken farmer.`,
       `He ate raw shellfish recently.`,
@@ -12125,7 +12124,7 @@ export const QUESTION_BANK = [
     id: 864,
     category: `Comprehensive`,
     chapter: `Practice Test Two`,
-    question: `The nurse is assessing cranial nerve XI. The nurse should:`,
+    prompt: `The nurse is assessing cranial nerve XI. The nurse should:`,
     options: [
       `open a vial of cloves and ask the client to identify the scent.`,
       `shine a flashlight in the client's eyes and observe the pupils.`,
@@ -12139,7 +12138,7 @@ export const QUESTION_BANK = [
     id: 865,
     category: `Comprehensive`,
     chapter: `Practice Test Two`,
-    question: `When the nurse asks a client to follow a moving finger, the nurse is assessing which cranial nerve?`,
+    prompt: `When the nurse asks a client to follow a moving finger, the nurse is assessing which cranial nerve?`,
     options: [
       `II`,
       `III`,
@@ -12153,7 +12152,7 @@ export const QUESTION_BANK = [
     id: 866,
     category: `Comprehensive`,
     chapter: `Practice Test Two`,
-    question: `An adult is admitted for a neurological workup and is scheduled for a spinal tap. When preparing the client for the procedure, the nurse should position the client in which position?`,
+    prompt: `An adult is admitted for a neurological workup and is scheduled for a spinal tap. When preparing the client for the procedure, the nurse should position the client in which position?`,
     options: [
       `Prone`,
       `On the side with knees drawn up to chest`,
@@ -12167,7 +12166,7 @@ export const QUESTION_BANK = [
     id: 867,
     category: `Comprehensive`,
     chapter: `Practice Test Two`,
-    question: `Prior to positioning the client for a spinal tap, the nurse should do which of the following?`,
+    prompt: `Prior to positioning the client for a spinal tap, the nurse should do which of the following?`,
     options: [
       `Keep the client NPO for 8 hours`,
       `Have the client empty his/her bladder`,
@@ -12181,7 +12180,7 @@ export const QUESTION_BANK = [
     id: 868,
     category: `Comprehensive`,
     chapter: `Practice Test Two`,
-    question: `An adult is scheduled for a magnetic resonance imaging (MRI) exam today. Which finding must be reported immediately?`,
+    prompt: `An adult is scheduled for a magnetic resonance imaging (MRI) exam today. Which finding must be reported immediately?`,
     options: [
       `The client has pins in her toes.`,
       `The client usually wears a necklace.`,
@@ -12195,7 +12194,7 @@ export const QUESTION_BANK = [
     id: 869,
     category: `Comprehensive`,
     chapter: `Practice Test Two`,
-    question: `The nurse is caring for several clients who will be undergoing diagnostic tests. Which client must the nurse ask about allergies to shellfish? An adult who is scheduled for:`,
+    prompt: `The nurse is caring for several clients who will be undergoing diagnostic tests. Which client must the nurse ask about allergies to shellfish? An adult who is scheduled for:`,
     options: [
       `an MRI exam`,
       `a CT scan`,
@@ -12209,7 +12208,7 @@ export const QUESTION_BANK = [
     id: 870,
     category: `Comprehensive`,
     chapter: `Practice Test Two`,
-    question: `The parents of an adolescent who is being treated for a serious head injury ask why their child is being kept unconscious. The parents say, "The doctor said he was going to give him medicine to keep him unconscious for a few days. Why? We want to talk to him. What is going on?" What should the nurse include when responding to the parents?`,
+    prompt: `The parents of an adolescent who is being treated for a serious head injury ask why their child is being kept unconscious. The parents say, "The doctor said he was going to give him medicine to keep him unconscious for a few days. Why? We want to talk to him. What is going on?" What should the nurse include when responding to the parents?`,
     options: [
       `The physician is probably trying to reassure the parents because the child is still unconscious.`,
       `Barbiturates are given to persons with head injuries to keep them unconscious to rest the brain and reduce blood flow to the brain.`,
@@ -12223,7 +12222,7 @@ export const QUESTION_BANK = [
     id: 871,
     category: `Comprehensive`,
     chapter: `Practice Test Two`,
-    question: `The nurse is caring for an adult being admitted with a head injury. The nurse plans to place the client in which position?`,
+    prompt: `The nurse is caring for an adult being admitted with a head injury. The nurse plans to place the client in which position?`,
     options: [
       `Prone`,
       `Supine`,
@@ -12237,7 +12236,7 @@ export const QUESTION_BANK = [
     id: 872,
     category: `Comprehensive`,
     chapter: `Practice Test Two`,
-    question: `The nurse enters the room of an adult who is having a grand mal seizure. Which initial action is appropriate?`,
+    prompt: `The nurse enters the room of an adult who is having a grand mal seizure. Which initial action is appropriate?`,
     options: [
       `Put a padded tongue blade in the client's mouth.`,
       `Restrain the client`,
@@ -12251,7 +12250,7 @@ export const QUESTION_BANK = [
     id: 873,
     category: `Comprehensive`,
     chapter: `Practice Test Two`,
-    question: `An adult who has been well controlled on phenytoin (Dilantin) reports having had several seizures recently. Which comment made by the client is probably related to seizure activities?`,
+    prompt: `An adult who has been well controlled on phenytoin (Dilantin) reports having had several seizures recently. Which comment made by the client is probably related to seizure activities?`,
     options: [
       `"I started exercising two weeks ago."`,
       `"Last week I changed jobs."`,
@@ -12265,7 +12264,7 @@ export const QUESTION_BANK = [
     id: 874,
     category: `Comprehensive`,
     chapter: `Practice Test Two`,
-    question: `A 78-year-old client is admitted following a cerebrovascular accident. He cannot move his left arm and leg. Which finding would indicate to the nurse that the client also has homonymous hemianopia?`,
+    prompt: `A 78-year-old client is admitted following a cerebrovascular accident. He cannot move his left arm and leg. Which finding would indicate to the nurse that the client also has homonymous hemianopia?`,
     options: [
       `The client has difficulty moving his right arm.`,
       `The client did not notice a nurse who was standing on his left side.`,
@@ -12279,7 +12278,7 @@ export const QUESTION_BANK = [
     id: 875,
     category: `Comprehensive`,
     chapter: `Practice Test Two`,
-    question: `The nurse is caring for an older client who had a cerebrovascular accident (CVA) several days ago. She is having trouble speaking. How should the nurse relate to this client?`,
+    prompt: `The nurse is caring for an older client who had a cerebrovascular accident (CVA) several days ago. She is having trouble speaking. How should the nurse relate to this client?`,
     options: [
       `Encourage the client to speak and wait patiently while she tries`,
       `Speak louder to the client`,
@@ -12293,7 +12292,7 @@ export const QUESTION_BANK = [
     id: 876,
     category: `Comprehensive`,
     chapter: `Practice Test Two`,
-    question: `An adult who had a cerebrovascular accident (CVA) with expressive aphasia has started saying some words. The client's family is quite upset because the words are mostly profanity. They tell the nurse that the client usually does not use profanity. How should the nurse respond to the family?`,
+    prompt: `An adult who had a cerebrovascular accident (CVA) with expressive aphasia has started saying some words. The client's family is quite upset because the words are mostly profanity. They tell the nurse that the client usually does not use profanity. How should the nurse respond to the family?`,
     options: [
       `"She must be in a lot of pain to use profanity. We will assess her for pain."`,
       `"Many people who have had aphasia following a stroke use profanity when speech first returns. Other words will soon follow."`,
@@ -12307,7 +12306,7 @@ export const QUESTION_BANK = [
     id: 877,
     category: `Comprehensive`,
     chapter: `Practice Test Two`,
-    question: `The nurse is caring for an adult who had a cerebrovascular accident. The nurse gives the client a washcloth and encourages the client to wash her face. The client looks at the washcloth as though she does not know what to do with it. The nurse knows that this indicates that the client has which of the following?`,
+    prompt: `The nurse is caring for an adult who had a cerebrovascular accident. The nurse gives the client a washcloth and encourages the client to wash her face. The client looks at the washcloth as though she does not know what to do with it. The nurse knows that this indicates that the client has which of the following?`,
     options: [
       `Apraxia`,
       `Aphasia`,
@@ -12321,7 +12320,7 @@ export const QUESTION_BANK = [
     id: 878,
     category: `Comprehensive`,
     chapter: `Practice Test Two`,
-    question: `An adult is admitted to the long-term care facility. She had a cerebrovascular accident and no longer needs acute care. The client has left side hemiplegia. Because of the type of deficit the client has, the nurse knows that this woman is at increased risk for which of the following?`,
+    prompt: `An adult is admitted to the long-term care facility. She had a cerebrovascular accident and no longer needs acute care. The client has left side hemiplegia. Because of the type of deficit the client has, the nurse knows that this woman is at increased risk for which of the following?`,
     options: [
       `Speech and language deficits`,
       `Slow and cautious behavior`,
@@ -12335,7 +12334,7 @@ export const QUESTION_BANK = [
     id: 879,
     category: `Comprehensive`,
     chapter: `Practice Test Two`,
-    question: `All of the following clients need attention. Which one should the nurse go to first?`,
+    prompt: `All of the following clients need attention. Which one should the nurse go to first?`,
     options: [
       `The nursing assistant reports that a client who had a T3 spinal cord transection several months ago has a severe headache and blurred vision.`,
       `The nursing assistant needs help turning a client who had a CVA.`,
@@ -12349,7 +12348,7 @@ export const QUESTION_BANK = [
     id: 880,
     category: `Comprehensive`,
     chapter: `Practice Test Two`,
-    question: `A woman has recently been diagnosed with multiple sclerosis. Which comment by the client indicates that she understands the nature of the disease process?`,
+    prompt: `A woman has recently been diagnosed with multiple sclerosis. Which comment by the client indicates that she understands the nature of the disease process?`,
     options: [
       `"I understand that recovery will be slow."`,
       `"I am faithfully taking the medicines so the symptoms should disappear soon."`,
@@ -12363,7 +12362,7 @@ export const QUESTION_BANK = [
     id: 881,
     category: `Comprehensive`,
     chapter: `Practice Test Two`,
-    question: `An adult woman who has multiple sclerosis (MS) asks the nurse why she developed multiple sclerosis. What information should the nurse include when responding?`,
+    prompt: `An adult woman who has multiple sclerosis (MS) asks the nurse why she developed multiple sclerosis. What information should the nurse include when responding?`,
     options: [
       `MS usually follows a streptococcal infection.`,
       `MS is an autoimmune condition.`,
@@ -12377,7 +12376,7 @@ export const QUESTION_BANK = [
     id: 882,
     category: `Comprehensive`,
     chapter: `Practice Test Two`,
-    question: `An adult who has multiple sclerosis is receiving cyclophosphamide (Cytoxan). The client asks the nurse why she is receiving the same drug her mother had when she had Hodgkin's disease. The nurse should include which information when responding?`,
+    prompt: `An adult who has multiple sclerosis is receiving cyclophosphamide (Cytoxan). The client asks the nurse why she is receiving the same drug her mother had when she had Hodgkin's disease. The nurse should include which information when responding?`,
     options: [
       `Multiple sclerosis is a type of cancer, so the same drugs are effective for both conditions.`,
       `A side effect of cyclophosphamide (Cytoxan), a cancer drug, is immunosuppression. In multiple sclerosis, the immune system is attacking the client's nerves.`,
@@ -12391,7 +12390,7 @@ export const QUESTION_BANK = [
     id: 883,
     category: `Comprehensive`,
     chapter: `Practice Test Two`,
-    question: `The nurse is planning care for an adult who has myasthenia gravis. What should be included in the care plan?`,
+    prompt: `The nurse is planning care for an adult who has myasthenia gravis. What should be included in the care plan?`,
     options: [
       `Plan to have the client bathe in the evening.`,
       `Check the client's gag and swallowing reflexes before the client eats.`,
@@ -12405,7 +12404,7 @@ export const QUESTION_BANK = [
     id: 884,
     category: `Comprehensive`,
     chapter: `Practice Test Two`,
-    question: `An adult is thought to have myasthenia gravis. The nurse knows that which test is most likely to be ordered for the client?`,
+    prompt: `An adult is thought to have myasthenia gravis. The nurse knows that which test is most likely to be ordered for the client?`,
     options: [
       `Lumbar puncture`,
       `CT scan`,
@@ -12419,7 +12418,7 @@ export const QUESTION_BANK = [
     id: 885,
     category: `Comprehensive`,
     chapter: `Practice Test Two`,
-    question: `The nurse is caring for an adult who has myasthenia gravis and is prescribed neostigmine. Which drug should the nurse plan to have readily available because the client is taking neostigmine?`,
+    prompt: `The nurse is caring for an adult who has myasthenia gravis and is prescribed neostigmine. Which drug should the nurse plan to have readily available because the client is taking neostigmine?`,
     options: [
       `Atropine`,
       `Vitamin K`,
@@ -12433,7 +12432,7 @@ export const QUESTION_BANK = [
     id: 886,
     category: `Comprehensive`,
     chapter: `Practice Test Two`,
-    question: `An adult who has myasthenia gravis is about to be discharged. Neostigmine is prescribed for her. What should the nurse include when teaching the client about this drug? Tell the client to take the drug:`,
+    prompt: `An adult who has myasthenia gravis is about to be discharged. Neostigmine is prescribed for her. What should the nurse include when teaching the client about this drug? Tell the client to take the drug:`,
     options: [
       `one-half hour before meals.`,
       `between meals`,
@@ -12447,7 +12446,7 @@ export const QUESTION_BANK = [
     id: 887,
     category: `Comprehensive`,
     chapter: `Practice Test Two`,
-    question: `An older adult is diagnosed with Parkinson's disease. The client asks the nurse what causes Parkinson's disease. In addition to telling the client that we are not really sure what causes it, the nurse should include which information?`,
+    prompt: `An older adult is diagnosed with Parkinson's disease. The client asks the nurse what causes Parkinson's disease. In addition to telling the client that we are not really sure what causes it, the nurse should include which information?`,
     options: [
       `There is not enough dopamine in the brain.`,
       `The myelin sheath is being destroyed.`,
@@ -12461,7 +12460,7 @@ export const QUESTION_BANK = [
     id: 888,
     category: `Comprehensive`,
     chapter: `Practice Test Two`,
-    question: `Which comment is the client who has Parkinson's disease most likely to make?`,
+    prompt: `Which comment is the client who has Parkinson's disease most likely to make?`,
     options: [
       `"My hands shake when I reach to pick up my coffee cup."`,
       `"I get very stiff when I sit for long periods of time."`,
@@ -12475,7 +12474,7 @@ export const QUESTION_BANK = [
     id: 889,
     category: `Comprehensive`,
     chapter: `Practice Test Two`,
-    question: `A young adult is admitted with a diagnosis of Guillain-Barré syndrome. Which nursing action will be of highest priority as the nurse plans care?`,
+    prompt: `A young adult is admitted with a diagnosis of Guillain-Barré syndrome. Which nursing action will be of highest priority as the nurse plans care?`,
     options: [
       `Range-of-motion exercises`,
       `Monitor respirations`,
@@ -12489,7 +12488,7 @@ export const QUESTION_BANK = [
     id: 890,
     category: `Comprehensive`,
     chapter: `Practice Test Two`,
-    question: `Because a client has Guillain-Barré syndrome, the nurse would expect which of the following in the client's history?`,
+    prompt: `Because a client has Guillain-Barré syndrome, the nurse would expect which of the following in the client's history?`,
     options: [
       `Recent upper respiratory infection`,
       `A tick bite a few days ago`,
@@ -12503,7 +12502,7 @@ export const QUESTION_BANK = [
     id: 891,
     category: `Comprehensive`,
     chapter: `Practice Test Two`,
-    question: `The client tells the nurse he has trigeminal neuralgia. What would the nurse expect in the client's history?`,
+    prompt: `The client tells the nurse he has trigeminal neuralgia. What would the nurse expect in the client's history?`,
     options: [
       `Recent exposure to lead`,
       `Facial pain when going out in the cold`,
@@ -12517,7 +12516,7 @@ export const QUESTION_BANK = [
     id: 892,
     category: `Comprehensive`,
     chapter: `Practice Test Two`,
-    question: `An adult who has Bell's palsy says to the nurse, "Will I always look this weird?" How should the nurse reply?`,
+    prompt: `An adult who has Bell's palsy says to the nurse, "Will I always look this weird?" How should the nurse reply?`,
     options: [
       `"You will probably always have a little droop, but it will not be as bad as it is now."`,
       `"Many people have a full recovery from Bell's palsy."`,
@@ -12531,7 +12530,7 @@ export const QUESTION_BANK = [
     id: 893,
     category: `Comprehensive`,
     chapter: `Practice Test Two`,
-    question: `A child is admitted with bacterial meningitis. What should be included in the care plan because he has opisthotonos posturing?`,
+    prompt: `A child is admitted with bacterial meningitis. What should be included in the care plan because he has opisthotonos posturing?`,
     options: [
       `Place in supine position.`,
       `Position the child on his side.`,
@@ -12545,7 +12544,7 @@ export const QUESTION_BANK = [
     id: 894,
     category: `Comprehensive`,
     chapter: `Practice Test Two`,
-    question: `The nurse is admitting a 3-year-old child who is thought to have meningococcal meningitis. What type of room assignment is most appropriate?`,
+    prompt: `The nurse is admitting a 3-year-old child who is thought to have meningococcal meningitis. What type of room assignment is most appropriate?`,
     options: [
       `Private room`,
       `Semi-private room with a child of the same age`,
@@ -12559,7 +12558,7 @@ export const QUESTION_BANK = [
     id: 895,
     category: `Comprehensive`,
     chapter: `Practice Test Two`,
-    question: `The nurse is giving home care to an older adult. The client says to the nurse, "I wonder if I have cataracts. My mother went blind from cataracts you know." Which additional comment the client makes would make the nurse suspect that he might have cataracts?`,
+    prompt: `The nurse is giving home care to an older adult. The client says to the nurse, "I wonder if I have cataracts. My mother went blind from cataracts you know." Which additional comment the client makes would make the nurse suspect that he might have cataracts?`,
     options: [
       `"I am not able to read the paper unless I hold it far away from me."`,
       `"I have a hard time driving at night."`,
@@ -12573,7 +12572,7 @@ export const QUESTION_BANK = [
     id: 896,
     category: `Comprehensive`,
     chapter: `Practice Test Two`,
-    question: `A woman is scheduled for cataract surgery and is to give herself eye drops at home before coming in for outpatient surgery. When teaching the client how to administer eye drops, the nurse should include which information?`,
+    prompt: `A woman is scheduled for cataract surgery and is to give herself eye drops at home before coming in for outpatient surgery. When teaching the client how to administer eye drops, the nurse should include which information?`,
     options: [
       `The drops should be placed in the pupil of the eye.`,
       `The drops should be placed on the iris of the eye.`,
@@ -12587,7 +12586,7 @@ export const QUESTION_BANK = [
     id: 897,
     category: `Comprehensive`,
     chapter: `Practice Test Two`,
-    question: `The nurse is making a home visit to an adult who had a cataract extraction yesterday. Which observation indicates that the client needs more instruction?`,
+    prompt: `The nurse is making a home visit to an adult who had a cataract extraction yesterday. Which observation indicates that the client needs more instruction?`,
     options: [
       `The client demonstrates putting eye drops in the conjunctival sac.`,
       `The client has a patch on the affected eye.`,
@@ -12601,7 +12600,7 @@ export const QUESTION_BANK = [
     id: 898,
     category: `Comprehensive`,
     chapter: `Practice Test Two`,
-    question: `An adult is admitted with a possible detached retina. Which findings would the nurse expect during the admission assessment?`,
+    prompt: `An adult is admitted with a possible detached retina. Which findings would the nurse expect during the admission assessment?`,
     options: [
       `The client says, "My eye is very painful."`,
       `The client complains of a blank area in the visual field.`,
@@ -12615,7 +12614,7 @@ export const QUESTION_BANK = [
     id: 899,
     category: `Comprehensive`,
     chapter: `Practice Test Two`,
-    question: `An older adult is diagnosed with open-angle glaucoma. Which comment by the client indicates understanding of the management of the condition?`,
+    prompt: `An older adult is diagnosed with open-angle glaucoma. Which comment by the client indicates understanding of the management of the condition?`,
     options: [
       `"I will take the eye drops every day."`,
       `"I hope the medicine works and I am cured soon."`,
@@ -12629,7 +12628,7 @@ export const QUESTION_BANK = [
     id: 900,
     category: `Comprehensive`,
     chapter: `Practice Test Two`,
-    question: `A neighbor calls the nurse and says that her son was playing ball and got hit in the face and his glasses are broken. His eye hurts and feels as though there is something in it. What should the nurse do initially?`,
+    prompt: `A neighbor calls the nurse and says that her son was playing ball and got hit in the face and his glasses are broken. His eye hurts and feels as though there is something in it. What should the nurse do initially?`,
     options: [
       `Ask the child to look up while the nurse examines the eye`,
       `Irrigate the eye with water`,
@@ -12645,7 +12644,7 @@ export const QUESTION_BANK = [
     id: 901,
     category: `Comprehensive`,
     chapter: `Practice Test Three`,
-    question: `Which comment by the client is most significant in light of the fact that he has Ménière's disease?`,
+    prompt: `Which comment by the client is most significant in light of the fact that he has Ménière's disease?`,
     options: [
       `"I take a walk every day."`,
       `"I listen to my iPod a lot."`,
@@ -12659,7 +12658,7 @@ export const QUESTION_BANK = [
     id: 902,
     category: `Comprehensive`,
     chapter: `Practice Test Three`,
-    question: `The nurse is teaching a mother how to administer eardrops to her children who are 1 and 6 years old. What should be included in the teaching?`,
+    prompt: `The nurse is teaching a mother how to administer eardrops to her children who are 1 and 6 years old. What should be included in the teaching?`,
     options: [
       `Before putting ear drops in your 1-year-old child's ear, pull the ear down and back. Pull the ear up and back before putting ear drops in your 6-year-old child's ear.`,
       `Before putting ear drops in your 1-year-old child's ear, pull the ear up and back. Pull the ear down and back before putting ear drops in your 6-year-old child's ear.`,
@@ -12673,7 +12672,7 @@ export const QUESTION_BANK = [
     id: 903,
     category: `Comprehensive`,
     chapter: `Practice Test Three`,
-    question: `The wife of a 65-year-old man says to the clinic nurse, "I think the doctor should check out my husband's hearing. Either he is totally ignoring me and everyone else or he has a hearing problem." How is the man likely to respond when the nurse asks him if he has difficulty hearing?`,
+    prompt: `The wife of a 65-year-old man says to the clinic nurse, "I think the doctor should check out my husband's hearing. Either he is totally ignoring me and everyone else or he has a hearing problem." How is the man likely to respond when the nurse asks him if he has difficulty hearing?`,
     options: [
       `"I can hear women better than men."`,
       `"There's nothing wrong with my hearing. People around me just mumble a lot."`,
@@ -12687,7 +12686,7 @@ export const QUESTION_BANK = [
     id: 904,
     category: `Comprehensive`,
     chapter: `Practice Test Three`,
-    question: `The nurse in a long-term care facility observes a nursing assistant caring for a resident who has a hearing aid and dentures. Which action by the nursing assistant should be corrected?`,
+    prompt: `The nurse in a long-term care facility observes a nursing assistant caring for a resident who has a hearing aid and dentures. Which action by the nursing assistant should be corrected?`,
     options: [
       `The nursing assistant places a washcloth in the sink before brushing the client's dentures.`,
       `The nursing assistant uses toothpaste to clean the dentures.`,
@@ -12701,7 +12700,7 @@ export const QUESTION_BANK = [
     id: 905,
     category: `Comprehensive`,
     chapter: `Practice Test Three`,
-    question: `The nurse is caring for several clients who are to have diagnostic tests. Which clients will receive similar instructions?`,
+    prompt: `The nurse is caring for several clients who are to have diagnostic tests. Which clients will receive similar instructions?`,
     options: [
       `The client who is having an upper GI series and the client who is having a lower GI series`,
       `The client who is having a gallbladder sonogram and the client who is having a gallbladder x-ray`,
@@ -12715,7 +12714,7 @@ export const QUESTION_BANK = [
     id: 906,
     category: `Comprehensive`,
     chapter: `Practice Test Three`,
-    question: `Because a client is scheduled for a liver biopsy, the nurse should check to be sure that which laboratory test results have been received?`,
+    prompt: `Because a client is scheduled for a liver biopsy, the nurse should check to be sure that which laboratory test results have been received?`,
     options: [
       `Serum electrolytes`,
       `Prothrombin time`,
@@ -12729,7 +12728,7 @@ export const QUESTION_BANK = [
     id: 907,
     category: `Comprehensive`,
     chapter: `Practice Test Three`,
-    question: `An adult is scheduled for a paracentesis. What should the nurse plan to do immediately before the procedure is started?`,
+    prompt: `An adult is scheduled for a paracentesis. What should the nurse plan to do immediately before the procedure is started?`,
     options: [
       `Give the client a full glass of water`,
       `Have the client empty his/her bladder`,
@@ -12743,7 +12742,7 @@ export const QUESTION_BANK = [
     id: 908,
     category: `Comprehensive`,
     chapter: `Practice Test Three`,
-    question: `An adult has both an oil retention enema and a cleansing enema ordered. The nurse knows that this client is most likely to have which condition/problem?`,
+    prompt: `An adult has both an oil retention enema and a cleansing enema ordered. The nurse knows that this client is most likely to have which condition/problem?`,
     options: [
       `Straining while defecating`,
       `Melena`,
@@ -12757,7 +12756,7 @@ export const QUESTION_BANK = [
     id: 909,
     category: `Comprehensive`,
     chapter: `Practice Test Three`,
-    question: `The nurse is passing a nasogastric tube into an adult. When passing the tube through the pharynx, the nurse has the client sip water through a straw. What is the purpose of this action?`,
+    prompt: `The nurse is passing a nasogastric tube into an adult. When passing the tube through the pharynx, the nurse has the client sip water through a straw. What is the purpose of this action?`,
     options: [
       `To prevent dehydration`,
       `To divert the client's attention`,
@@ -12771,7 +12770,7 @@ export const QUESTION_BANK = [
     id: 910,
     category: `Comprehensive`,
     chapter: `Practice Test Three`,
-    question: `After passing a nasogastric (NG) tube in an adult, the nurse checks for proper placement by doing which of the following?`,
+    prompt: `After passing a nasogastric (NG) tube in an adult, the nurse checks for proper placement by doing which of the following?`,
     options: [
       `Injecting air into the NG tube and listening with a stethoscope over the stomach for a "swoosh"`,
       `Putting the end of the NG tube in a glass of water and observing for bubbles`,
@@ -12785,7 +12784,7 @@ export const QUESTION_BANK = [
     id: 911,
     category: `Comprehensive`,
     chapter: `Practice Test Three`,
-    question: `The nurse is caring for an adult who has had nausea and vomiting for several days and is being admitted to the nursing care unit. The client can follow directions. IV fluids were started in the emergency department. Which action is the highest priority for the nurse at this time?`,
+    prompt: `The nurse is caring for an adult who has had nausea and vomiting for several days and is being admitted to the nursing care unit. The client can follow directions. IV fluids were started in the emergency department. Which action is the highest priority for the nurse at this time?`,
     options: [
       `Offer oral fluids every hour.`,
       `Turn every two hours.`,
@@ -12799,7 +12798,7 @@ export const QUESTION_BANK = [
     id: 912,
     category: `Comprehensive`,
     chapter: `Practice Test Three`,
-    question: `The nurse is talking with an adult who says she has chronic constipation. What suggestion would probably be most helpful to the client?`,
+    prompt: `The nurse is talking with an adult who says she has chronic constipation. What suggestion would probably be most helpful to the client?`,
     options: [
       `Eat large amounts of rice.`,
       `Increase the amount of fruits and vegetables in your diet.`,
@@ -12813,7 +12812,7 @@ export const QUESTION_BANK = [
     id: 913,
     category: `Comprehensive`,
     chapter: `Practice Test Three`,
-    question: `An adult is admitted to the nursing care unit. He begs the nurse to give him a laxative. Which data in the admission assessment contraindicates administration of a laxative?`,
+    prompt: `An adult is admitted to the nursing care unit. He begs the nurse to give him a laxative. Which data in the admission assessment contraindicates administration of a laxative?`,
     options: [
       `The client has not had a bowel movement for two days.`,
       `The client has a temperature of 100.8°F.`,
@@ -12827,7 +12826,7 @@ export const QUESTION_BANK = [
     id: 914,
     category: `Comprehensive`,
     chapter: `Practice Test Three`,
-    question: `An adult is admitted to the unit with a fractured femur and will be in Buck's extension traction for several days. The client tells the nurse that she has all of the following. Which is likely to cause the client the most problems at this time?`,
+    prompt: `An adult is admitted to the unit with a fractured femur and will be in Buck's extension traction for several days. The client tells the nurse that she has all of the following. Which is likely to cause the client the most problems at this time?`,
     options: [
       `High blood pressure`,
       `Hiatal hernia`,
@@ -12841,7 +12840,7 @@ export const QUESTION_BANK = [
     id: 915,
     category: `Comprehensive`,
     chapter: `Practice Test Three`,
-    question: `An adult who has a hiatal hernia is seen in clinic. The nurse is reviewing her care with her. Which comment by the client indicates a need for more teaching about managing her condition?`,
+    prompt: `An adult who has a hiatal hernia is seen in clinic. The nurse is reviewing her care with her. Which comment by the client indicates a need for more teaching about managing her condition?`,
     options: [
       `"I sit up for an hour after eating."`,
       `"I miss drinking soda, but I know it is not good for me."`,
@@ -12855,7 +12854,7 @@ export const QUESTION_BANK = [
     id: 916,
     category: `Comprehensive`,
     chapter: `Practice Test Three`,
-    question: `An adult is being worked up for a possible duodenal ulcer. The nurse knows that which data, if present, would be most consistent with a duodenal ulcer?`,
+    prompt: `An adult is being worked up for a possible duodenal ulcer. The nurse knows that which data, if present, would be most consistent with a duodenal ulcer?`,
     options: [
       `Two hours after his last meal, the client says, "I need to feed my ulcer."`,
       `The client complains of epigastric pain a half hour after eating.`,
@@ -12869,7 +12868,7 @@ export const QUESTION_BANK = [
     id: 917,
     category: `Comprehensive`,
     chapter: `Practice Test Three`,
-    question: `Antibiotics are ordered for an adult who has a peptic ulcer. The client asks why antibiotics are prescribed. What should the nurse include when responding?`,
+    prompt: `Antibiotics are ordered for an adult who has a peptic ulcer. The client asks why antibiotics are prescribed. What should the nurse include when responding?`,
     options: [
       `Antibiotics are given to prevent secondary infections.`,
       `Peptic ulcers are usually caused by bacteria.`,
@@ -12883,7 +12882,7 @@ export const QUESTION_BANK = [
     id: 918,
     category: `Comprehensive`,
     chapter: `Practice Test Three`,
-    question: `Omeprazole (Prilosec), cimetidine (Tagamet), and Maalox are ordered for an adult. When should the nurse plan to administer these drugs?`,
+    prompt: `Omeprazole (Prilosec), cimetidine (Tagamet), and Maalox are ordered for an adult. When should the nurse plan to administer these drugs?`,
     options: [
       `Give omeprazole (Prilosec) before meals, cimetidine (Tagamet) with meals, and Maalox after meals.`,
       `Give omeprazole (Prilosec) with meals, cimetidine (Tagamet) after meals, and Maalox before meals.`,
@@ -12897,7 +12896,7 @@ export const QUESTION_BANK = [
     id: 919,
     category: `Comprehensive`,
     chapter: `Practice Test Three`,
-    question: `All of the following adults are admitted to the surgical unit. Which client should the nurse prepare for immediate surgery?`,
+    prompt: `All of the following adults are admitted to the surgical unit. Which client should the nurse prepare for immediate surgery?`,
     options: [
       `A 56-year-old woman who is having right scapular pain after eating`,
       `A 48-year-old woman who has had moderate vaginal bleeding for two weeks`,
@@ -12911,7 +12910,7 @@ export const QUESTION_BANK = [
     id: 920,
     category: `Comprehensive`,
     chapter: `Practice Test Three`,
-    question: `An adult has had a gastrectomy. Because the client has had a gastrectomy, teaching should include which of the following?`,
+    prompt: `An adult has had a gastrectomy. Because the client has had a gastrectomy, teaching should include which of the following?`,
     options: [
       `Eat a diet low in protein and high in simple carbohydrates.`,
       `Limit sodium and simple carbohydrates in the diet.`,
@@ -12925,7 +12924,7 @@ export const QUESTION_BANK = [
     id: 921,
     category: `Comprehensive`,
     chapter: `Practice Test Three`,
-    question: `The nurse is caring for an adult who has ulcerative colitis. When planning care, the nurse knows that which nursing diagnosis is of highest priority?`,
+    prompt: `The nurse is caring for an adult who has ulcerative colitis. When planning care, the nurse knows that which nursing diagnosis is of highest priority?`,
     options: [
       `Deficient fluid volume`,
       `Disturbed body image`,
@@ -12939,7 +12938,7 @@ export const QUESTION_BANK = [
     id: 922,
     category: `Comprehensive`,
     chapter: `Practice Test Three`,
-    question: `A client who has ulcerative colitis is receiving prednisone. The nurse knows the primary reason the client is receiving prednisone is to:`,
+    prompt: `A client who has ulcerative colitis is receiving prednisone. The nurse knows the primary reason the client is receiving prednisone is to:`,
     options: [
       `suppress inflammation of the bowel.`,
       `reduce peristaltic activity`,
@@ -12953,7 +12952,7 @@ export const QUESTION_BANK = [
     id: 923,
     category: `Comprehensive`,
     chapter: `Practice Test Three`,
-    question: `An adult who has just been diagnosed with diverticulitis asks the nurse if she will need a special diet. The nurse knows that the client should follow which type of diet?`,
+    prompt: `An adult who has just been diagnosed with diverticulitis asks the nurse if she will need a special diet. The nurse knows that the client should follow which type of diet?`,
     options: [
       `High protein, high calorie`,
       `Low residue`,
@@ -12967,7 +12966,7 @@ export const QUESTION_BANK = [
     id: 924,
     category: `Comprehensive`,
     chapter: `Practice Test Three`,
-    question: `A low-residue diet is ordered for an adult. The nurse knows that the client understands the diet when which menu is selected?`,
+    prompt: `A low-residue diet is ordered for an adult. The nurse knows that the client understands the diet when which menu is selected?`,
     options: [
       `Lettuce and tomato salad, steak sandwich, orange slices`,
       `Gelatin salad, mashed potatoes, sliced chicken`,
@@ -12981,7 +12980,7 @@ export const QUESTION_BANK = [
     id: 925,
     category: `Comprehensive`,
     chapter: `Practice Test Three`,
-    question: `A client is on a low-residue diet. All of the following are on the client's tray. Which should be removed?`,
+    prompt: `A client is on a low-residue diet. All of the following are on the client's tray. Which should be removed?`,
     options: [
       `Roast beef`,
       `Mashed potato`,
@@ -12995,7 +12994,7 @@ export const QUESTION_BANK = [
     id: 926,
     category: `Comprehensive`,
     chapter: `Practice Test Three`,
-    question: `The home care nurse is observing the client's spouse performing a colostomy irrigation. Which action needs correction?`,
+    prompt: `The home care nurse is observing the client's spouse performing a colostomy irrigation. Which action needs correction?`,
     options: [
       `The spouse holds the irrigating solution about 18 inches above the stoma.`,
       `The client is sitting on the toilet seat for the irrigation.`,
@@ -13009,7 +13008,7 @@ export const QUESTION_BANK = [
     id: 927,
     category: `Comprehensive`,
     chapter: `Practice Test Three`,
-    question: `The nurse is caring for several clients who have ostomies. Which client will have the most well-formed drainage? The client whose colostomy is in the:`,
+    prompt: `The nurse is caring for several clients who have ostomies. Which client will have the most well-formed drainage? The client whose colostomy is in the:`,
     options: [
       `ileum`,
       `ascending colon`,
@@ -13023,7 +13022,7 @@ export const QUESTION_BANK = [
     id: 928,
     category: `Comprehensive`,
     chapter: `Practice Test Three`,
-    question: `The nurse is caring for a client who had a colostomy two days ago. Which comment the client makes indicates a readiness to learn about caring for the colostomy?`,
+    prompt: `The nurse is caring for a client who had a colostomy two days ago. Which comment the client makes indicates a readiness to learn about caring for the colostomy?`,
     options: [
       `"How long will I have to have this thing on my body?"`,
       `"What is that bag for?"`,
@@ -13037,7 +13036,7 @@ export const QUESTION_BANK = [
     id: 929,
     category: `Comprehensive`,
     chapter: `Practice Test Three`,
-    question: `The nurse is caring for a client suspected of having hepatitis A. Which item in the client's history is most likely related to the development of hepatitis A?`,
+    prompt: `The nurse is caring for a client suspected of having hepatitis A. Which item in the client's history is most likely related to the development of hepatitis A?`,
     options: [
       `The client donated blood three weeks ago.`,
       `The client just returned from a trip to India.`,
@@ -13051,7 +13050,7 @@ export const QUESTION_BANK = [
     id: 930,
     category: `Comprehensive`,
     chapter: `Practice Test Three`,
-    question: `An adult who has hepatitis A asks the nurse why her skin is yellow. The nurse should include which information when replying?`,
+    prompt: `An adult who has hepatitis A asks the nurse why her skin is yellow. The nurse should include which information when replying?`,
     options: [
       `The diseased liver is not able to convert bilirubin into bile, so bilirubin pigments stay in the bloodstream and cause the skin and sclera to turn yellow.`,
       `The virus that causes hepatitis A leaves a yellow pigment in the bloodstream.`,
@@ -13065,7 +13064,7 @@ export const QUESTION_BANK = [
     id: 931,
     category: `Comprehensive`,
     chapter: `Practice Test Three`,
-    question: `The nurse is assessing for jaundice in a client who has dark skin. What is the best way to do this?`,
+    prompt: `The nurse is assessing for jaundice in a client who has dark skin. What is the best way to do this?`,
     options: [
       `Ask the client if his/her stool has changed color`,
       `Look at the client's sclera`,
@@ -13079,7 +13078,7 @@ export const QUESTION_BANK = [
     id: 932,
     category: `Comprehensive`,
     chapter: `Practice Test Three`,
-    question: `An adult is admitted with bleeding esophageal varices, and a triple-lumen nasogastric tube is inserted and the balloons inflated. What should the nurse keep at the bedside because the client has this tube?`,
+    prompt: `An adult is admitted with bleeding esophageal varices, and a triple-lumen nasogastric tube is inserted and the balloons inflated. What should the nurse keep at the bedside because the client has this tube?`,
     options: [
       `Adhesive tape`,
       `A syringe with water`,
@@ -13093,7 +13092,7 @@ export const QUESTION_BANK = [
     id: 933,
     category: `Comprehensive`,
     chapter: `Practice Test Three`,
-    question: `Because an adult is scheduled for a cystoscopy, the nurse should plan to do which of the following immediately prior to the procedure?`,
+    prompt: `Because an adult is scheduled for a cystoscopy, the nurse should plan to do which of the following immediately prior to the procedure?`,
     options: [
       `Keep the client NPO for eight hours`,
       `Ask the client about claustrophobia`,
@@ -13107,7 +13106,7 @@ export const QUESTION_BANK = [
     id: 934,
     category: `Comprehensive`,
     chapter: `Practice Test Three`,
-    question: `After inserting an indwelling catheter into an adult male, the nurse secures the catheter by:`,
+    prompt: `After inserting an indwelling catheter into an adult male, the nurse secures the catheter by:`,
     options: [
       `taping it lateral to the client's thigh.`,
       `taping it upward to the client's abdomen.`,
@@ -13121,7 +13120,7 @@ export const QUESTION_BANK = [
     id: 935,
     category: `Comprehensive`,
     chapter: `Practice Test Three`,
-    question: `An adult comes to the clinic with complaints of frequency and burning on urination. The nurse expects that what test will be ordered for the client?`,
+    prompt: `An adult comes to the clinic with complaints of frequency and burning on urination. The nurse expects that what test will be ordered for the client?`,
     options: [
       `Clean catch urine for culture and sensitivity`,
       `CBC and electrolytes`,
@@ -13135,7 +13134,7 @@ export const QUESTION_BANK = [
     id: 936,
     category: `Comprehensive`,
     chapter: `Practice Test Three`,
-    question: `The nurse is inserting an indwelling urinary catheter in an adult woman. The nurse locates landmarks before inserting the catheter. The urethral opening is located:`,
+    prompt: `The nurse is inserting an indwelling urinary catheter in an adult woman. The nurse locates landmarks before inserting the catheter. The urethral opening is located:`,
     options: [
       `above the clitoris`,
       `behind the vagina`,
@@ -13149,7 +13148,7 @@ export const QUESTION_BANK = [
     id: 937,
     category: `Comprehensive`,
     chapter: `Practice Test Three`,
-    question: `The nurse is to remove an indwelling urinary catheter from an adult client. Which step should be done first?`,
+    prompt: `The nurse is to remove an indwelling urinary catheter from an adult client. Which step should be done first?`,
     options: [
       `Cut the catheter with scissors.`,
       `Withdraw the fluid from the balloon.`,
@@ -13163,7 +13162,7 @@ export const QUESTION_BANK = [
     id: 938,
     category: `Comprehensive`,
     chapter: `Practice Test Three`,
-    question: `A child is admitted with acute glomerulonephritis. Which finding in the client's history is most consistent with the diagnosis?`,
+    prompt: `A child is admitted with acute glomerulonephritis. Which finding in the client's history is most consistent with the diagnosis?`,
     options: [
       `A recent tick bite`,
       `Pharyngitis two weeks ago`,
@@ -13177,7 +13176,7 @@ export const QUESTION_BANK = [
     id: 939,
     category: `Comprehensive`,
     chapter: `Practice Test Three`,
-    question: `A woman is seen in clinic with complaints suggesting cholecystitis or cholelithiasis. What teaching should the nurse expect to reinforce?`,
+    prompt: `A woman is seen in clinic with complaints suggesting cholecystitis or cholelithiasis. What teaching should the nurse expect to reinforce?`,
     options: [
       `Sit up after you eat.`,
       `Avoid carbonated beverages`,
@@ -13191,7 +13190,7 @@ export const QUESTION_BANK = [
     id: 940,
     category: `Comprehensive`,
     chapter: `Practice Test Three`,
-    question: `The nurse is caring for an adult who had a nephrectomy this morning. Because of the location of the surgery, the nurse knows that the client is at increased risk for which of the following?`,
+    prompt: `The nurse is caring for an adult who had a nephrectomy this morning. Because of the location of the surgery, the nurse knows that the client is at increased risk for which of the following?`,
     options: [
       `Thrombophlebitis`,
       `Wound infection`,
@@ -13205,7 +13204,7 @@ export const QUESTION_BANK = [
     id: 941,
     category: `Comprehensive`,
     chapter: `Practice Test Three`,
-    question: `A client is seen in clinic and is diagnosed as having pyelonephritis. What is most likely to be in the nursing history?`,
+    prompt: `A client is seen in clinic and is diagnosed as having pyelonephritis. What is most likely to be in the nursing history?`,
     options: [
       `Pharyngitis two weeks ago`,
       `Cystitis two weeks ago`,
@@ -13219,7 +13218,7 @@ export const QUESTION_BANK = [
     id: 942,
     category: `Comprehensive`,
     chapter: `Practice Test Three`,
-    question: `The family of a young adult who has been declared brain dead following an auto accident is approached by the physician about organ donation. Later they ask the nurse, "If we donate the organs, can we still have a viewing and a regular funeral?" How should the nurse respond?`,
+    prompt: `The family of a young adult who has been declared brain dead following an auto accident is approached by the physician about organ donation. Later they ask the nurse, "If we donate the organs, can we still have a viewing and a regular funeral?" How should the nurse respond?`,
     options: [
       `"Yes. The surgery to donate the organs will not deface the body of your loved one."`,
       `"You can have a normal funeral, but you may want a closed casket because of the injuries from the accident."`,
@@ -13233,7 +13232,7 @@ export const QUESTION_BANK = [
     id: 943,
     category: `Comprehensive`,
     chapter: `Practice Test Three`,
-    question: `The nurse is caring for a client who recently had a kidney transplant. Which comments the client makes indicate understanding of the ongoing treatment?`,
+    prompt: `The nurse is caring for a client who recently had a kidney transplant. Which comments the client makes indicate understanding of the ongoing treatment?`,
     options: [
       `"We have put hand sanitizer all over the house."`,
       `"I will be glad when I no longer have to take all this antirejection medicine."`,
@@ -13247,7 +13246,7 @@ export const QUESTION_BANK = [
     id: 944,
     category: `Comprehensive`,
     chapter: `Practice Test Three`,
-    question: `Epoetin alfa (Epogen) is prescribed for a client who is on dialysis. When teaching the client about the drug, the nurse should plan to include which information about the drug?`,
+    prompt: `Epoetin alfa (Epogen) is prescribed for a client who is on dialysis. When teaching the client about the drug, the nurse should plan to include which information about the drug?`,
     options: [
       `The drug is given to help the kidneys produce urine.`,
       `The drug is given because the kidneys can no longer get rid of waste products.`,
@@ -13261,7 +13260,7 @@ export const QUESTION_BANK = [
     id: 945,
     category: `Comprehensive`,
     chapter: `Practice Test Three`,
-    question: `An adult who is on dialysis asks if he can take insulin before the dialysis treatment. Which of the following statements is true about insulin and dialysis and should be included in the nurse's reply?`,
+    prompt: `An adult who is on dialysis asks if he can take insulin before the dialysis treatment. Which of the following statements is true about insulin and dialysis and should be included in the nurse's reply?`,
     options: [
       `Insulin levels are not reduced by hemodialysis.`,
       `Insulin enhances the effects of dialysis.`,
@@ -13275,7 +13274,7 @@ export const QUESTION_BANK = [
     id: 946,
     category: `Comprehensive`,
     chapter: `Practice Test Three`,
-    question: `Which finding, if present, should the nurse interpret to mean that dialysis has achieved the desired results?`,
+    prompt: `Which finding, if present, should the nurse interpret to mean that dialysis has achieved the desired results?`,
     options: [
       `The client weighs 5 lb more following dialysis.`,
       `The client's blood pressure dropped during dialysis.`,
@@ -13289,7 +13288,7 @@ export const QUESTION_BANK = [
     id: 947,
     category: `Comprehensive`,
     chapter: `Practice Test Three`,
-    question: `An adult has started on continuous ambulatory peritoneal dialysis. Which nursing instruction is of highest priority?`,
+    prompt: `An adult has started on continuous ambulatory peritoneal dialysis. Which nursing instruction is of highest priority?`,
     options: [
       `Explain the principles of osmosis and diffusion and how dialysis works`,
       `Teach the client aseptic technique`,
@@ -13303,7 +13302,7 @@ export const QUESTION_BANK = [
     id: 948,
     category: `Comprehensive`,
     chapter: `Practice Test Three`,
-    question: `The nurse is discussing prostatectomies with a group of men. One man asks which kind of prostatectomy is done for someone who has benign prostatic hyperplasia (BPH). What answer should the nurse give?`,
+    prompt: `The nurse is discussing prostatectomies with a group of men. One man asks which kind of prostatectomy is done for someone who has benign prostatic hyperplasia (BPH). What answer should the nurse give?`,
     options: [
       `Transurethral resection prostatectomy`,
       `Suprapubic prostatectomy`,
@@ -13317,7 +13316,7 @@ export const QUESTION_BANK = [
     id: 949,
     category: `Comprehensive`,
     chapter: `Practice Test Three`,
-    question: `Continuous bladder irrigation is prescribed for an adult who had bladder surgery; 1000 mL of irrigating solution was instilled in the last eight hours. The amount of drainage in the urine drainage bag for the last eight hours is 1700 mL. How much is the client's urine output for the last eight hours?`,
+    prompt: `Continuous bladder irrigation is prescribed for an adult who had bladder surgery; 1000 mL of irrigating solution was instilled in the last eight hours. The amount of drainage in the urine drainage bag for the last eight hours is 1700 mL. How much is the client's urine output for the last eight hours?`,
     options: [
       `270 mL`,
       `700 mL`,
@@ -13331,7 +13330,7 @@ export const QUESTION_BANK = [
     id: 950,
     category: `Comprehensive`,
     chapter: `Practice Test Three`,
-    question: `A man is being discharged following a vasectomy. Which comment by the client indicates a need for more instruction?`,
+    prompt: `A man is being discharged following a vasectomy. Which comment by the client indicates a need for more instruction?`,
     options: [
       `"I will wear this scrotal support for the next few days."`,
       `"I will continue to use a condom for the next two weeks."`,
@@ -13345,7 +13344,7 @@ export const QUESTION_BANK = [
     id: 951,
     category: `Comprehensive`,
     chapter: `Practice Test Three`,
-    question: `The nurse is caring for clients who are having the following procedures. Which client should be asked about allergies to shellfish?`,
+    prompt: `The nurse is caring for clients who are having the following procedures. Which client should be asked about allergies to shellfish?`,
     options: [
       `The client who is having an arthroscopy`,
       `The client who is having an arthrocentesis`,
@@ -13359,7 +13358,7 @@ export const QUESTION_BANK = [
     id: 952,
     category: `Comprehensive`,
     chapter: `Practice Test Three`,
-    question: `The nurse observes a client who is walking with a cane. Which observation indicates that the client is walking appropriately?`,
+    prompt: `The nurse observes a client who is walking with a cane. Which observation indicates that the client is walking appropriately?`,
     options: [
       `The client holds the cane on the affected side and moves it forward with the affected leg.`,
       `The client holds the cane on the affected side and moves it forward with the unaffected leg.`,
@@ -13373,7 +13372,7 @@ export const QUESTION_BANK = [
     id: 953,
     category: `Comprehensive`,
     chapter: `Practice Test Three`,
-    question: `The nurse is teaching an adult who has a broken ankle that has been casted how to climb stairs. The nurse knows that the client understands how to climb up stairs when she does which of the following?`,
+    prompt: `The nurse is teaching an adult who has a broken ankle that has been casted how to climb stairs. The nurse knows that the client understands how to climb up stairs when she does which of the following?`,
     options: [
       `While bearing weight on the unaffected leg, the client moves the crutches up to the next step followed by the affected leg and then the unaffected leg.`,
       `While bearing weight on the unaffected leg, the client moves affected leg to the next step followed by the unaffected leg and the crutches.`,
@@ -13387,7 +13386,7 @@ export const QUESTION_BANK = [
     id: 954,
     category: `Comprehensive`,
     chapter: `Practice Test Three`,
-    question: `The nurse is assessing a client who had a left arm cast applied four hours ago. Which finding indicates that the client may have circulatory impairment?`,
+    prompt: `The nurse is assessing a client who had a left arm cast applied four hours ago. Which finding indicates that the client may have circulatory impairment?`,
     options: [
       `The client's nail beds blanch when the nurse applies pressure; color returns in two seconds.`,
       `The client's fingers on the left hand are cold to the touch.`,
@@ -13401,7 +13400,7 @@ export const QUESTION_BANK = [
     id: 955,
     category: `Comprehensive`,
     chapter: `Practice Test Three`,
-    question: `An 18-month-old child has been placed in Bryant's traction. The nurse knows that the traction is properly applied when:`,
+    prompt: `An 18-month-old child has been placed in Bryant's traction. The nurse knows that the traction is properly applied when:`,
     options: [
       `the affected leg is extended and attached to traction at the foot of the bed.`,
       `the legs are at right angles to the child's body and the buttocks are two inches off the bed.`,
@@ -13415,7 +13414,7 @@ export const QUESTION_BANK = [
     id: 956,
     category: `Comprehensive`,
     chapter: `Practice Test Three`,
-    question: `The nursing assistant is caring for an adult who has a fractured femur and is in Buck's extension traction awaiting surgery. The nurse is observing the nursing assistant administer morning care. Which action by the nursing assistant needs correction?`,
+    prompt: `The nursing assistant is caring for an adult who has a fractured femur and is in Buck's extension traction awaiting surgery. The nurse is observing the nursing assistant administer morning care. Which action by the nursing assistant needs correction?`,
     options: [
       `The nursing assistant leaves the weights in place while bathing the client.`,
       `The nursing assistant turns the client's head to the side while administering oral hygiene.`,
@@ -13429,7 +13428,7 @@ export const QUESTION_BANK = [
     id: 957,
     category: `Comprehensive`,
     chapter: `Practice Test Three`,
-    question: `The nurse is providing pin site care for an adult who is in skeletal traction. What should the nurse do when providing pin site care?`,
+    prompt: `The nurse is providing pin site care for an adult who is in skeletal traction. What should the nurse do when providing pin site care?`,
     options: [
       `Clean the pin site with alcohol`,
       `Clean the pin site with hydrogen peroxide`,
@@ -13443,7 +13442,7 @@ export const QUESTION_BANK = [
     id: 958,
     category: `Comprehensive`,
     chapter: `Practice Test Three`,
-    question: `An adult is admitted to the emergency department following a fall. A piece of bone is protruding through the skin of the left thigh. In addition to assessing vital signs, what information is most essential to obtain from the client at this time?`,
+    prompt: `An adult is admitted to the emergency department following a fall. A piece of bone is protruding through the skin of the left thigh. In addition to assessing vital signs, what information is most essential to obtain from the client at this time?`,
     options: [
       `History of previous falls and fractures`,
       `Date of last tetanus shot`,
@@ -13457,7 +13456,7 @@ export const QUESTION_BANK = [
     id: 959,
     category: `Comprehensive`,
     chapter: `Practice Test Three`,
-    question: `The nurse observes a nursing assistant caring for an 86-year-old woman who had an open reduction/internal fixation for a fractured femur two days ago. Which action by the nursing assistant needs correction by the nurse?`,
+    prompt: `The nurse observes a nursing assistant caring for an 86-year-old woman who had an open reduction/internal fixation for a fractured femur two days ago. Which action by the nursing assistant needs correction by the nurse?`,
     options: [
       `The nursing assistant places an abductor pillow between the client's legs while turning the client.`,
       `The nursing assistant asks the client to put full weight on both legs while using the walker.`,
@@ -13471,7 +13470,7 @@ export const QUESTION_BANK = [
     id: 960,
     category: `Comprehensive`,
     chapter: `Practice Test Three`,
-    question: `A client is admitted with rheumatoid arthritis. Which symptoms, if exhibited by the client, are most consistent with the admitting diagnosis?`,
+    prompt: `A client is admitted with rheumatoid arthritis. Which symptoms, if exhibited by the client, are most consistent with the admitting diagnosis?`,
     options: [
       `A 72-year-old with pain, redness, and swelling in the big toes`,
       `A 68-year-old with enlarged finger joints and pain in the knees`,
@@ -13485,7 +13484,7 @@ export const QUESTION_BANK = [
     id: 961,
     category: `Comprehensive`,
     chapter: `Practice Test Three`,
-    question: `An adult has been diagnosed with gout. Which comment by the client indicates to the nurse that the client understands management of the condition?`,
+    prompt: `An adult has been diagnosed with gout. Which comment by the client indicates to the nurse that the client understands management of the condition?`,
     options: [
       `"It has been hard to give up chicken and liver."`,
       `"I have shrimp two or three times a week."`,
@@ -13499,7 +13498,7 @@ export const QUESTION_BANK = [
     id: 962,
     category: `Comprehensive`,
     chapter: `Practice Test Three`,
-    question: `An adult who is receiving methotrexate for rheumatoid arthritis asks the nurse why she is receiving methotrexate. What should the nurse include when responding?`,
+    prompt: `An adult who is receiving methotrexate for rheumatoid arthritis asks the nurse why she is receiving methotrexate. What should the nurse include when responding?`,
     options: [
       `Methotrexate is given to help control the pain of rheumatoid arthritis.`,
       `The drug is antipyretic and helps control the fevers associated with rheumatoid arthritis.`,
@@ -13513,7 +13512,7 @@ export const QUESTION_BANK = [
     id: 963,
     category: `Comprehensive`,
     chapter: `Practice Test Three`,
-    question: `The nurse is caring for an adult who had a cervical laminectomy this morning. After an uneventful stay in the postanesthesia care unit, the client is returned to the nursing care unit. How should the client be positioned immediately upon return?`,
+    prompt: `The nurse is caring for an adult who had a cervical laminectomy this morning. After an uneventful stay in the postanesthesia care unit, the client is returned to the nursing care unit. How should the client be positioned immediately upon return?`,
     options: [
       `Supine`,
       `Prone`,
@@ -13527,7 +13526,7 @@ export const QUESTION_BANK = [
     id: 964,
     category: `Comprehensive`,
     chapter: `Practice Test Three`,
-    question: `The nurse is caring for an adult who had a cervical laminectomy this morning. In addition to routine vital signs, what should the nurse assess because of the location of the surgery?`,
+    prompt: `The nurse is caring for an adult who had a cervical laminectomy this morning. In addition to routine vital signs, what should the nurse assess because of the location of the surgery?`,
     options: [
       `Pedal pulses`,
       `Hand grasps`,
@@ -13541,7 +13540,7 @@ export const QUESTION_BANK = [
     id: 965,
     category: `Comprehensive`,
     chapter: `Practice Test Three`,
-    question: `A client who had a lumbar laminectomy has just returned to the nursing care unit following an uneventful stay in the postanesthesia care unit. How should the nurse position the client?`,
+    prompt: `A client who had a lumbar laminectomy has just returned to the nursing care unit following an uneventful stay in the postanesthesia care unit. How should the nurse position the client?`,
     options: [
       `Supine`,
       `Prone`,
@@ -13555,7 +13554,7 @@ export const QUESTION_BANK = [
     id: 966,
     category: `Comprehensive`,
     chapter: `Practice Test Three`,
-    question: `In addition to routine vital signs, what should the nurse assess because the client had a lumbar laminectomy?`,
+    prompt: `In addition to routine vital signs, what should the nurse assess because the client had a lumbar laminectomy?`,
     options: [
       `Hand grasps`,
       `Foot strength`,
@@ -13569,7 +13568,7 @@ export const QUESTION_BANK = [
     id: 967,
     category: `Comprehensive`,
     chapter: `Practice Test Three`,
-    question: `The nurse is administering alendronate (Fosamax) to an adult. Which instruction is necessary to give the client?`,
+    prompt: `The nurse is administering alendronate (Fosamax) to an adult. Which instruction is necessary to give the client?`,
     options: [
       `Take medication with milk and a snack.`,
       `Take medication after each meal.`,
@@ -13583,7 +13582,7 @@ export const QUESTION_BANK = [
     id: 968,
     category: `Comprehensive`,
     chapter: `Practice Test Three`,
-    question: `The nurse is caring for an adult who had a transsphenoidal hypophysectomy earlier today. The client is now on the surgical unit after an uneventful stay in the postanesthesia care unit. How should the nurse position the client?`,
+    prompt: `The nurse is caring for an adult who had a transsphenoidal hypophysectomy earlier today. The client is now on the surgical unit after an uneventful stay in the postanesthesia care unit. How should the nurse position the client?`,
     options: [
       `Supine`,
       `Side lying`,
@@ -13597,7 +13596,7 @@ export const QUESTION_BANK = [
     id: 969,
     category: `Comprehensive`,
     chapter: `Practice Test Three`,
-    question: `The client had a transsphenoidal hypophysectomy yesterday. Which statement that the client makes indicates a need for more teaching?`,
+    prompt: `The client had a transsphenoidal hypophysectomy yesterday. Which statement that the client makes indicates a need for more teaching?`,
     options: [
       `"It will be good not to have to take medications anymore."`,
       `"I will not bend over to tie my shoes for a few more days."`,
@@ -13611,7 +13610,7 @@ export const QUESTION_BANK = [
     id: 970,
     category: `Comprehensive`,
     chapter: `Practice Test Three`,
-    question: `An adult is admitted for surgery for a secreting adrenal tumor. In the immediate postoperative period, which nursing action will be highest priority?`,
+    prompt: `An adult is admitted for surgery for a secreting adrenal tumor. In the immediate postoperative period, which nursing action will be highest priority?`,
     options: [
       `Clear liquids as tolerated`,
       `Administration of adrenal hormones as ordered`,
@@ -13625,7 +13624,7 @@ export const QUESTION_BANK = [
     id: 971,
     category: `Comprehensive`,
     chapter: `Practice Test Three`,
-    question: `The nursing assistant reports that a client who is on a high-protein diet is eating only the fruits and vegetables on the meal tray. The nurse notes that the client is from the country of India. The nurse talks with the client. Which response by the nurse is likely to do most to help the client meet nutritional needs?`,
+    prompt: `The nursing assistant reports that a client who is on a high-protein diet is eating only the fruits and vegetables on the meal tray. The nurse notes that the client is from the country of India. The nurse talks with the client. Which response by the nurse is likely to do most to help the client meet nutritional needs?`,
     options: [
       `"Would you like a vegetarian diet?"`,
       `"Doesn't the food taste good?"`,
@@ -13639,7 +13638,7 @@ export const QUESTION_BANK = [
     id: 972,
     category: `Comprehensive`,
     chapter: `Practice Test Three`,
-    question: `A client is diagnosed as having secondary Cushing's syndrome. The nurse knows that the client has most likely been taking which medication?`,
+    prompt: `A client is diagnosed as having secondary Cushing's syndrome. The nurse knows that the client has most likely been taking which medication?`,
     options: [
       `Estrogen`,
       `Penicillin`,
@@ -13653,7 +13652,7 @@ export const QUESTION_BANK = [
     id: 973,
     category: `Comprehensive`,
     chapter: `Practice Test Three`,
-    question: `An adult is admitted with Addison's disease. What type of drug does the nurse expect will be ordered for this client?`,
+    prompt: `An adult is admitted with Addison's disease. What type of drug does the nurse expect will be ordered for this client?`,
     options: [
       `Fosinopril sodium (Monopril)`,
       `Fludrocortisone acetate (Florinef)`,
@@ -13667,7 +13666,7 @@ export const QUESTION_BANK = [
     id: 974,
     category: `Comprehensive`,
     chapter: `Practice Test Three`,
-    question: `Because a client has Addison's disease, the nurse would expect to see which of the following in the nursing assessment?`,
+    prompt: `Because a client has Addison's disease, the nurse would expect to see which of the following in the nursing assessment?`,
     options: [
       `A supraclavicular fat pad`,
       `A puffy face`,
@@ -13681,7 +13680,7 @@ export const QUESTION_BANK = [
     id: 975,
     category: `Comprehensive`,
     chapter: `Practice Test Three`,
-    question: `An adult is receiving daily doses of hydrocortisone. Which comment by the client indicates a need for further instruction?`,
+    prompt: `An adult is receiving daily doses of hydrocortisone. Which comment by the client indicates a need for further instruction?`,
     options: [
       `"I will take the medicine in the morning."`,
       `"I will not stop the drug unless the doctor tells me to."`,
@@ -13695,7 +13694,7 @@ export const QUESTION_BANK = [
     id: 976,
     category: `Comprehensive`,
     chapter: `Practice Test Three`,
-    question: `A thyroid scan, a cardiac catheterization, a gallbladder x-ray, and an intravenous pyelogram are ordered for a client. Which test should the nurse schedule to be done first?`,
+    prompt: `A thyroid scan, a cardiac catheterization, a gallbladder x-ray, and an intravenous pyelogram are ordered for a client. Which test should the nurse schedule to be done first?`,
     options: [
       `Thyroid scan`,
       `Cardiac catheterization`,
@@ -13709,7 +13708,7 @@ export const QUESTION_BANK = [
     id: 977,
     category: `Comprehensive`,
     chapter: `Practice Test Three`,
-    question: `Because the client has hypothyroidism, the nurse expects which of the following to be present in the client?`,
+    prompt: `Because the client has hypothyroidism, the nurse expects which of the following to be present in the client?`,
     options: [
       `Weight loss`,
       `Respiratory rate of 30/minute`,
@@ -13723,7 +13722,7 @@ export const QUESTION_BANK = [
     id: 978,
     category: `Comprehensive`,
     chapter: `Practice Test Three`,
-    question: `What should be included in the care plan of a client who has myxedema?`,
+    prompt: `What should be included in the care plan of a client who has myxedema?`,
     options: [
       `Encourage frequent rest periods`,
       `Have the client do deep breathing and coughing exercises frequently`,
@@ -13737,7 +13736,7 @@ export const QUESTION_BANK = [
     id: 979,
     category: `Comprehensive`,
     chapter: `Practice Test Three`,
-    question: `Propranolol is prescribed for an adult suspected to have Graves' disease. The nurse explains to the client that propranolol is prescribed for which purpose?`,
+    prompt: `Propranolol is prescribed for an adult suspected to have Graves' disease. The nurse explains to the client that propranolol is prescribed for which purpose?`,
     options: [
       `To decrease the activity of the thyroid gland`,
       `To provide the hormone the client is missing`,
@@ -13751,7 +13750,7 @@ export const QUESTION_BANK = [
     id: 980,
     category: `Comprehensive`,
     chapter: `Practice Test Three`,
-    question: `An adult had a thyroidectomy under local anesthesia and is now in the postanesthesia care unit. Which finding is of most concern to the nurse?`,
+    prompt: `An adult had a thyroidectomy under local anesthesia and is now in the postanesthesia care unit. Which finding is of most concern to the nurse?`,
     options: [
       `The client complains of a sore throat.`,
       `The client's hand involuntarily clenches when the nurse checks the blood pressure.`,
@@ -13765,7 +13764,7 @@ export const QUESTION_BANK = [
     id: 981,
     category: `Comprehensive`,
     chapter: `Practice Test Three`,
-    question: `During report, the nurse is given all of the following information. Which client should the nurse go to first?`,
+    prompt: `During report, the nurse is given all of the following information. Which client should the nurse go to first?`,
     options: [
       `A diabetic has a blood sugar of 200.`,
       `A client who had abdominal surgery earlier today is complaining of operative site pain.`,
@@ -13779,7 +13778,7 @@ export const QUESTION_BANK = [
     id: 982,
     category: `Comprehensive`,
     chapter: `Practice Test Three`,
-    question: `Which test for diabetes measures the long-term management of the disease?`,
+    prompt: `Which test for diabetes measures the long-term management of the disease?`,
     options: [
       `Fasting blood sugar`,
       `Glucose tolerance test`,
@@ -13793,7 +13792,7 @@ export const QUESTION_BANK = [
     id: 983,
     category: `Comprehensive`,
     chapter: `Practice Test Three`,
-    question: `A young adult has been diagnosed with Type 1 diabetes mellitus. The client asks how his condition differs from that of his grandmother who has Type 2 diabetes mellitus. What should the nurse include when replying?`,
+    prompt: `A young adult has been diagnosed with Type 1 diabetes mellitus. The client asks how his condition differs from that of his grandmother who has Type 2 diabetes mellitus. What should the nurse include when replying?`,
     options: [
       `In Type 1 diabetes, the pancreas does not secrete enough insulin; in Type 2 diabetes, the cells are not able to pick up insulin.`,
       `Type 1 diabetes is always treated with insulin; Type 2 diabetes is never treated with insulin.`,
@@ -13807,7 +13806,7 @@ export const QUESTION_BANK = [
     id: 984,
     category: `Comprehensive`,
     chapter: `Practice Test Three`,
-    question: `An adult is admitted with deep partial-thickness and full-thickness burns on both lower legs, the anterior chest, and the anterior and posterior aspects of the right arm. Using the Rule of Nines, calculate the percentage of body burned.`,
+    prompt: `An adult is admitted with deep partial-thickness and full-thickness burns on both lower legs, the anterior chest, and the anterior and posterior aspects of the right arm. Using the Rule of Nines, calculate the percentage of body burned.`,
     options: [
       `27%`,
       `36%`,
@@ -13821,7 +13820,7 @@ export const QUESTION_BANK = [
     id: 985,
     category: `Comprehensive`,
     chapter: `Practice Test Three`,
-    question: `An adult who is on an American Dietetic Association (ADA) diabetic diet tells the nurse that she will not eat the asparagus that is on her tray. What would be an appropriate substitute for the nurse to offer?`,
+    prompt: `An adult who is on an American Dietetic Association (ADA) diabetic diet tells the nurse that she will not eat the asparagus that is on her tray. What would be an appropriate substitute for the nurse to offer?`,
     options: [
       `Broccoli`,
       `Corn`,
@@ -13835,7 +13834,7 @@ export const QUESTION_BANK = [
     id: 986,
     category: `Comprehensive`,
     chapter: `Practice Test Three`,
-    question: `An adult who was struck by lightning is brought to the emergency department. Which action is of highest priority when the client is brought to the emergency room?`,
+    prompt: `An adult who was struck by lightning is brought to the emergency department. Which action is of highest priority when the client is brought to the emergency room?`,
     options: [
       `Obtain an ECG`,
       `Check blood gases`,
@@ -13849,7 +13848,7 @@ export const QUESTION_BANK = [
     id: 987,
     category: `Comprehensive`,
     chapter: `Practice Test Three`,
-    question: `A 6-year-old child is seen in the physician's office. His mother tells you that for the last few weeks, the child has been urinating frequently and drinking and eating a lot. The nurse determines that the urine specific gravity is 1.004. The child is afebrile. What tests does the nurse expect to be ordered for this client at this time?`,
+    prompt: `A 6-year-old child is seen in the physician's office. His mother tells you that for the last few weeks, the child has been urinating frequently and drinking and eating a lot. The nurse determines that the urine specific gravity is 1.004. The child is afebrile. What tests does the nurse expect to be ordered for this client at this time?`,
     options: [
       `CBC with differential`,
       `Urine and finger stick glucose tests`,
@@ -13863,7 +13862,7 @@ export const QUESTION_BANK = [
     id: 988,
     category: `Comprehensive`,
     chapter: `Practice Test Three`,
-    question: `The mother of a 3-month-old infant tells the nurse that her child has a bumpy rash over most of his body. What is likely to be initially ordered for this child?`,
+    prompt: `The mother of a 3-month-old infant tells the nurse that her child has a bumpy rash over most of his body. What is likely to be initially ordered for this child?`,
     options: [
       `Skin biopsy`,
       `Stool specimen`,
@@ -13879,7 +13878,7 @@ export const QUESTION_BANK = [
     id: 989,
     category: `Comprehensive`,
     chapter: `Practice Test Four`,
-    question: `The client is being admitted for surgery. During the admission assessment, the client states that she usually has 8 to 10 alcoholic drinks a day. How should the nurse reply?`,
+    prompt: `The client is being admitted for surgery. During the admission assessment, the client states that she usually has 8 to 10 alcoholic drinks a day. How should the nurse reply?`,
     options: [
       `"What type of alcohol do you drink?"`,
       `"How long have you been drinking alcohol?"`,
@@ -13893,7 +13892,7 @@ export const QUESTION_BANK = [
     id: 990,
     category: `Comprehensive`,
     chapter: `Practice Test Four`,
-    question: `The nurse is caring for a woman who had a mastectomy following a diagnosis of breast cancer. When the nurse enters the room, the curtains are drawn, and the client is lying with her body turned toward the wall away from the nurse. When the nurse approaches her, the client says, "Just leave me alone. I'm no use to anyone. I'm not even a real woman." How should the nurse respond?`,
+    prompt: `The nurse is caring for a woman who had a mastectomy following a diagnosis of breast cancer. When the nurse enters the room, the curtains are drawn, and the client is lying with her body turned toward the wall away from the nurse. When the nurse approaches her, the client says, "Just leave me alone. I'm no use to anyone. I'm not even a real woman." How should the nurse respond?`,
     options: [
       `Leave the room`,
       `Open the curtains`,
@@ -13907,7 +13906,7 @@ export const QUESTION_BANK = [
     id: 991,
     category: `Comprehensive`,
     chapter: `Practice Test Four`,
-    question: `The nurse is providing home care to a 78-year-old woman who has early dementia. The client tells the nurse, "My daughter is mean to me." What should the nurse do initially?`,
+    prompt: `The nurse is providing home care to a 78-year-old woman who has early dementia. The client tells the nurse, "My daughter is mean to me." What should the nurse do initially?`,
     options: [
       `Report suspected elder abuse to the supervisor`,
       `Report elder abuse to the authorities`,
@@ -13921,7 +13920,7 @@ export const QUESTION_BANK = [
     id: 992,
     category: `Comprehensive`,
     chapter: `Practice Test Four`,
-    question: `The nurse is inserting an indwelling catheter in a female. The nurse knows that the urethral meatus is located where?`,
+    prompt: `The nurse is inserting an indwelling catheter in a female. The nurse knows that the urethral meatus is located where?`,
     options: [
       `Between the clitoris and the vagina`,
       `Between the vagina and the rectum`,
@@ -13935,7 +13934,7 @@ export const QUESTION_BANK = [
     id: 993,
     category: `Comprehensive`,
     chapter: `Practice Test Four`,
-    question: `The nurse is caring for an adult male who is diagnosed with probable appendicitis. Which assessment finding is most consistent with the diagnosis?`,
+    prompt: `The nurse is caring for an adult male who is diagnosed with probable appendicitis. Which assessment finding is most consistent with the diagnosis?`,
     options: [
       `Pain in the right upper quadrant`,
       `Decreased white blood cell (WBC) count`,
@@ -13949,7 +13948,7 @@ export const QUESTION_BANK = [
     id: 994,
     category: `Comprehensive`,
     chapter: `Practice Test Four`,
-    question: `How should the nurse position the client who has just had a liver biopsy?`,
+    prompt: `How should the nurse position the client who has just had a liver biopsy?`,
     options: [
       `On the left side`,
       `On the right side`,
@@ -13963,7 +13962,7 @@ export const QUESTION_BANK = [
     id: 995,
     category: `Comprehensive`,
     chapter: `Practice Test Four`,
-    question: `An adult is to have a paracentesis performed today. What should the nurse do before the procedure?`,
+    prompt: `An adult is to have a paracentesis performed today. What should the nurse do before the procedure?`,
     options: [
       `Encourage the client to drink large amounts of fluids`,
       `Ask the client to empty her bladder just before the test`,
@@ -13977,7 +13976,7 @@ export const QUESTION_BANK = [
     id: 996,
     category: `Comprehensive`,
     chapter: `Practice Test Four`,
-    question: `The physician has ordered an oil retention enema and a cleansing enema for a client. How should the nurse plan to carry out these orders?`,
+    prompt: `The physician has ordered an oil retention enema and a cleansing enema for a client. How should the nurse plan to carry out these orders?`,
     options: [
       `Administer the cleansing enema first and an hour later give the oil retention enema`,
       `Administer the oil retention enema first and give the cleansing enema an hour later`,
@@ -13991,7 +13990,7 @@ export const QUESTION_BANK = [
     id: 997,
     category: `Comprehensive`,
     chapter: `Practice Test Four`,
-    question: `The nurse observes a certified nursing assistant (CNA) placing a hot water bottle directly on the skin of a 90-year-old client. What action should the nurse take initially?`,
+    prompt: `The nurse observes a certified nursing assistant (CNA) placing a hot water bottle directly on the skin of a 90-year-old client. What action should the nurse take initially?`,
     options: [
       `Report the act to the patient care supervisor`,
       `Interrupt the procedure`,
@@ -14005,7 +14004,7 @@ export const QUESTION_BANK = [
     id: 998,
     category: `Comprehensive`,
     chapter: `Practice Test Four`,
-    question: `The nurse is planning care for all of the following clients. Which client should be cared for first?`,
+    prompt: `The nurse is planning care for all of the following clients. Which client should be cared for first?`,
     options: [
       `A 60-year-old who is three days postop and needs a dressing change and ambulation`,
       `A 75-year-old who had a suprapubic prostatectomy yesterday and says, "Take that tube out of me, I have to pee."`,
@@ -14019,7 +14018,7 @@ export const QUESTION_BANK = [
     id: 999,
     category: `Comprehensive`,
     chapter: `Practice Test Four`,
-    question: `An adult is admitted with advanced cancer of the GI tract. What question must be included in the admission assessment?`,
+    prompt: `An adult is admitted with advanced cancer of the GI tract. What question must be included in the admission assessment?`,
     options: [
       `"What foods do you like best?"`,
       `"Do you have advance directives?"`,
@@ -14033,7 +14032,7 @@ export const QUESTION_BANK = [
     id: 1000,
     category: `Comprehensive`,
     chapter: `Practice Test Four`,
-    question: `The nurse is providing home care for an immobile client who has a stage IV decubitus ulcer that is not healing. Assuming that all of the following are available, which person would be most appropriate to consult regarding care of the wound?`,
+    prompt: `The nurse is providing home care for an immobile client who has a stage IV decubitus ulcer that is not healing. Assuming that all of the following are available, which person would be most appropriate to consult regarding care of the wound?`,
     options: [
       `Physician`,
       `Physical therapist`,
@@ -14047,7 +14046,7 @@ export const QUESTION_BANK = [
     id: 1001,
     category: `Comprehensive`,
     chapter: `Practice Test Four`,
-    question: `A woman reports to the physician's office complaining of urinary frequency and pain and burning on urination. The nurse expects that which procedures will be ordered for this client?`,
+    prompt: `A woman reports to the physician's office complaining of urinary frequency and pain and burning on urination. The nurse expects that which procedures will be ordered for this client?`,
     options: [
       `Urine for culture and sensitivity`,
       `CBC and BUN`,
@@ -14061,7 +14060,7 @@ export const QUESTION_BANK = [
     id: 1002,
     category: `Comprehensive`,
     chapter: `Practice Test Four`,
-    question: `A 38-year-old client who has mitral stenosis is hospitalized for a valve replacement. Which condition is the client most likely to report having had earlier in life?`,
+    prompt: `A 38-year-old client who has mitral stenosis is hospitalized for a valve replacement. Which condition is the client most likely to report having had earlier in life?`,
     options: [
       `Meningitis`,
       `Syphilis`,
@@ -14075,7 +14074,7 @@ export const QUESTION_BANK = [
     id: 1003,
     category: `Comprehensive`,
     chapter: `Practice Test Four`,
-    question: `Following cardiac surgery, a client's urine output for the last hour is 20 mL. The nurse understands that this indicates which of the following?`,
+    prompt: `Following cardiac surgery, a client's urine output for the last hour is 20 mL. The nurse understands that this indicates which of the following?`,
     options: [
       `Possible hyperkalemia`,
       `Insufficient cardiac output`,
@@ -14089,7 +14088,7 @@ export const QUESTION_BANK = [
     id: 1004,
     category: `Comprehensive`,
     chapter: `Practice Test Four`,
-    question: `A 20-year-old woman is admitted to the hospital following an accident. Her uncle, a physician from out of state, visits her and asks to see her chart. How should the nurse respond?`,
+    prompt: `A 20-year-old woman is admitted to the hospital following an accident. Her uncle, a physician from out of state, visits her and asks to see her chart. How should the nurse respond?`,
     options: [
       `Comply with the request and give the chart to the physician`,
       `Explain that written permission from his niece is needed first`,
@@ -14103,7 +14102,7 @@ export const QUESTION_BANK = [
     id: 1005,
     category: `Comprehensive`,
     chapter: `Practice Test Four`,
-    question: `An adult is admitted for surgery today. Immediately after administering the preoperative medications of meperidine and atropine, the nurse notes that the operative permit has not been signed. Which action should the nurse take?`,
+    prompt: `An adult is admitted for surgery today. Immediately after administering the preoperative medications of meperidine and atropine, the nurse notes that the operative permit has not been signed. Which action should the nurse take?`,
     options: [
       `Have the client sign the operative permit immediately before the medications take effect`,
       `Have the client's next of kin sign the permission form`,
@@ -14117,7 +14116,7 @@ export const QUESTION_BANK = [
     id: 1006,
     category: `Comprehensive`,
     chapter: `Practice Test Four`,
-    question: `The nurse is administering hygienic care to an elderly client in her home. What should the nurse wash first?`,
+    prompt: `The nurse is administering hygienic care to an elderly client in her home. What should the nurse wash first?`,
     options: [
       `Perineal area`,
       `Face`,
@@ -14131,7 +14130,7 @@ export const QUESTION_BANK = [
     id: 1007,
     category: `Comprehensive`,
     chapter: `Practice Test Four`,
-    question: `The family of a 90-year-old resident in a long-term care facility asks the nurse why the client only gets a shower three times a week. What information is most important for the nurse to include when answering the question?`,
+    prompt: `The family of a 90-year-old resident in a long-term care facility asks the nurse why the client only gets a shower three times a week. What information is most important for the nurse to include when answering the question?`,
     options: [
       `The staff members have limited time and must schedule all the residents.`,
       `The client's skin is dry; too many showers will dry the skin further.`,
@@ -14145,7 +14144,7 @@ export const QUESTION_BANK = [
     id: 1008,
     category: `Comprehensive`,
     chapter: `Practice Test Four`,
-    question: `The nurse is giving home care to an elderly client with angina pectoris and Type 2 diabetes mellitus. Which observation is of most concern and should be reported immediately?`,
+    prompt: `The nurse is giving home care to an elderly client with angina pectoris and Type 2 diabetes mellitus. Which observation is of most concern and should be reported immediately?`,
     options: [
       `The client reports chest discomfort yesterday while taking a walk.`,
       `The nurse observes several brown spots on the client's arms and legs.`,
@@ -14159,7 +14158,7 @@ export const QUESTION_BANK = [
     id: 1009,
     category: `Comprehensive`,
     chapter: `Practice Test Four`,
-    question: `All of the following clients assigned to LPN/LVN ring their call bells. Which client needs the most immediate attention?`,
+    prompt: `All of the following clients assigned to LPN/LVN ring their call bells. Which client needs the most immediate attention?`,
     options: [
       `A 72-year-old diabetic who is blind says she has to go to the bathroom.`,
       `A 75-year-old client who has rheumatoid arthritis asks for pain medication.`,
@@ -14173,7 +14172,7 @@ export const QUESTION_BANK = [
     id: 1010,
     category: `Comprehensive`,
     chapter: `Practice Test Four`,
-    question: `The nurse notes all of the following. Which should be attended to first?`,
+    prompt: `The nurse notes all of the following. Which should be attended to first?`,
     options: [
       `A blind client is calling out stating that she cannot find the call bell.`,
       `There is a water spill on the floor near the bed of an elderly client who ambulates regularly.`,
@@ -14187,7 +14186,7 @@ export const QUESTION_BANK = [
     id: 1011,
     category: `Comprehensive`,
     chapter: `Practice Test Four`,
-    question: `The nurse is to insert an indwelling catheter in a male. Which action is appropriate?`,
+    prompt: `The nurse is to insert an indwelling catheter in a male. Which action is appropriate?`,
     options: [
       `Cleanse the meatus before preparing the catheter for insertion`,
       `Wash hands before starting the procedure`,
@@ -14201,7 +14200,7 @@ export const QUESTION_BANK = [
     id: 1012,
     category: `Comprehensive`,
     chapter: `Practice Test Four`,
-    question: `At 10:00 A.M., the nurse discovers a 75-year-old woman who is hospitalized with congestive heart failure on the floor beside the bed. She has a bruise on her leg, but x-rays reveal no fractures. How should the nurse record the incident in the client's chart?`,
+    prompt: `At 10:00 A.M., the nurse discovers a 75-year-old woman who is hospitalized with congestive heart failure on the floor beside the bed. She has a bruise on her leg, but x-rays reveal no fractures. How should the nurse record the incident in the client's chart?`,
     options: [
       `"Client fell out of bed at 10 A.M. Physician notified. Incident report completed."`,
       `"Client found on floor beside bed at 10 A.M. Alert and oriented times 3. States she slipped as she was standing up. Bruise (3 inches by 2 inches) on left hip. Denies pain. Dr. ____________ examined client. X-rays taken."`,
@@ -14215,7 +14214,7 @@ export const QUESTION_BANK = [
     id: 1013,
     category: `Comprehensive`,
     chapter: `Practice Test Four`,
-    question: `The nurse is caring for a 78-year-old woman in a long-term care facility. The client is sitting in a geriatric chair with the attached tray in place. The client is agitated and appears to be sliding down in the chair. What is the best action for the nurse to take?`,
+    prompt: `The nurse is caring for a 78-year-old woman in a long-term care facility. The client is sitting in a geriatric chair with the attached tray in place. The client is agitated and appears to be sliding down in the chair. What is the best action for the nurse to take?`,
     options: [
       `Ask the supervisor for advice`,
       `Put a jacket restraint on the client`,
@@ -14229,7 +14228,7 @@ export const QUESTION_BANK = [
     id: 1014,
     category: `Comprehensive`,
     chapter: `Practice Test Four`,
-    question: `The nurse is observing a certified nursing assistant (CNA) caring for a client who has AIDS. Which action, if observed, is not correct?`,
+    prompt: `The nurse is observing a certified nursing assistant (CNA) caring for a client who has AIDS. Which action, if observed, is not correct?`,
     options: [
       `The CNA wears gloves when cleaning the client after an episode of fecal incontinence.`,
       `The CNA uses chlorine bleach to wipe up blood after the client cut himself shaving.`,
@@ -14243,7 +14242,7 @@ export const QUESTION_BANK = [
     id: 1015,
     category: `Comprehensive`,
     chapter: `Practice Test Four`,
-    question: `An adult who has chronic obstructive pulmonary disease (COPD) is receiving oxygen at home via nasal cannula. In addition to instructing the client and his family about not smoking when oxygen is in use, what should the nurse plan to include in the teaching?`,
+    prompt: `An adult who has chronic obstructive pulmonary disease (COPD) is receiving oxygen at home via nasal cannula. In addition to instructing the client and his family about not smoking when oxygen is in use, what should the nurse plan to include in the teaching?`,
     options: [
       `If the prescribed liter flow does not relieve his difficulty breathing, increase the liter flow by up to 2 L/min every four hours.`,
       `Try not to shuffle across the carpeted floor.`,
@@ -14257,7 +14256,7 @@ export const QUESTION_BANK = [
     id: 1016,
     category: `Comprehensive`,
     chapter: `Practice Test Four`,
-    question: `An adult had major abdominal surgery this morning under general anesthesia. When the client arrives in the recovery room, she is very lethargic and restless. Her BP is 150/98; pulse is 110 and irregular; and respirations are 30 breaths per minute and shallow. Postoperative orders include meperidine (Demerol) 75 mg IM for operative site pain; reinforce dressings PRN; oxygen at 6 L/min PRN; irrigate nasogastric tube every 2 hours and PRN; IV 2500 cc D5W in 24 hours. What should the nurse do next?`,
+    prompt: `An adult had major abdominal surgery this morning under general anesthesia. When the client arrives in the recovery room, she is very lethargic and restless. Her BP is 150/98; pulse is 110 and irregular; and respirations are 30 breaths per minute and shallow. Postoperative orders include meperidine (Demerol) 75 mg IM for operative site pain; reinforce dressings PRN; oxygen at 6 L/min PRN; irrigate nasogastric tube every 2 hours and PRN; IV 2500 cc D5W in 24 hours. What should the nurse do next?`,
     options: [
       `Carefully inspect the dressings for any drainage`,
       `Irrigate the nasogastric tube`,
@@ -14271,7 +14270,7 @@ export const QUESTION_BANK = [
     id: 1017,
     category: `Comprehensive`,
     chapter: `Practice Test Four`,
-    question: `An adult client who had major abdominal surgery is returned to her room on the surgical nursing unit. The postanesthesia nurse reports that the client is awake and has stable vital signs. She has a nasogastric tube in place that is attached to intermittent suction. How should the nurse position the client?`,
+    prompt: `An adult client who had major abdominal surgery is returned to her room on the surgical nursing unit. The postanesthesia nurse reports that the client is awake and has stable vital signs. She has a nasogastric tube in place that is attached to intermittent suction. How should the nurse position the client?`,
     options: [
       `Supine`,
       `Semi-sitting`,
@@ -14285,7 +14284,7 @@ export const QUESTION_BANK = [
     id: 1018,
     category: `Comprehensive`,
     chapter: `Practice Test Four`,
-    question: `The nurse is to open a sterile package. How should the nurse plan to open the first flap?`,
+    prompt: `The nurse is to open a sterile package. How should the nurse plan to open the first flap?`,
     options: [
       `Toward the nurse`,
       `Away from the nurse`,
@@ -14299,7 +14298,7 @@ export const QUESTION_BANK = [
     id: 1019,
     category: `Comprehensive`,
     chapter: `Practice Test Four`,
-    question: `A 66-year-old woman is being evaluated for pernicious anemia. Which assessment findings would be most apt to be present in a client with pernicious anemia?`,
+    prompt: `A 66-year-old woman is being evaluated for pernicious anemia. Which assessment findings would be most apt to be present in a client with pernicious anemia?`,
     options: [
       `Easy bruising`,
       `Pain in the legs`,
@@ -14313,7 +14312,7 @@ export const QUESTION_BANK = [
     id: 1020,
     category: `Comprehensive`,
     chapter: `Practice Test Four`,
-    question: `A Schilling test has been ordered for a client. What is the nurse's primary responsibility in relation to this test?`,
+    prompt: `A Schilling test has been ordered for a client. What is the nurse's primary responsibility in relation to this test?`,
     options: [
       `Collect the blood samples`,
       `Collect a 24-hour urine sample`,
@@ -14327,7 +14326,7 @@ export const QUESTION_BANK = [
     id: 1021,
     category: `Comprehensive`,
     chapter: `Practice Test Four`,
-    question: `A throat culture is positive for Streptococcus. An antibiotic is prescribed. Which question is it essential for the nurse to ask the client before administering the medication?`,
+    prompt: `A throat culture is positive for Streptococcus. An antibiotic is prescribed. Which question is it essential for the nurse to ask the client before administering the medication?`,
     options: [
       `Has the client ever had an adverse reaction to sulfa drugs?`,
       `Is the client currently taking vitamins?`,
@@ -14341,7 +14340,7 @@ export const QUESTION_BANK = [
     id: 1022,
     category: `Comprehensive`,
     chapter: `Practice Test Four`,
-    question: `The nurse is caring for an adult who had a kidney transplant. He is taking maintenance doses of cyclosporine and prednisone. Which of the following is the greatest cause for concern to the nurse?`,
+    prompt: `The nurse is caring for an adult who had a kidney transplant. He is taking maintenance doses of cyclosporine and prednisone. Which of the following is the greatest cause for concern to the nurse?`,
     options: [
       `Moon face`,
       `Acne`,
@@ -14355,7 +14354,7 @@ export const QUESTION_BANK = [
     id: 1023,
     category: `Comprehensive`,
     chapter: `Practice Test Four`,
-    question: `During a home visit, the nurse observes a man who is recovering from a left total hip replacement. Which observation indicates that the client understands his care?`,
+    prompt: `During a home visit, the nurse observes a man who is recovering from a left total hip replacement. Which observation indicates that the client understands his care?`,
     options: [
       `He is sitting in a soft, overstuffed easy chair.`,
       `He bends over to pat his cat.`,
@@ -14369,7 +14368,7 @@ export const QUESTION_BANK = [
     id: 1024,
     category: `Comprehensive`,
     chapter: `Practice Test Four`,
-    question: `A 17-year-old client is admitted following a seizure. That evening, the nurse goes into the room and notes that the client has obviously been crying. The client says to the nurse, "Now that I have epilepsy, I am a freak." What is the best initial response for the nurse to make?`,
+    prompt: `A 17-year-old client is admitted following a seizure. That evening, the nurse goes into the room and notes that the client has obviously been crying. The client says to the nurse, "Now that I have epilepsy, I am a freak." What is the best initial response for the nurse to make?`,
     options: [
       `"It must be very difficult for you to realize you have epilepsy."`,
       `"Don't say that. You might be having a few seizures now, but I'm sure the doctor will be able to control them."`,
@@ -14383,7 +14382,7 @@ export const QUESTION_BANK = [
     id: 1025,
     category: `Comprehensive`,
     chapter: `Practice Test Four`,
-    question: `The physician orders phenytoin (Dilantin) and phenobarbital for a client admitted with a cerebrovascular accident. The nurse knows that these drugs are administered for what purpose?`,
+    prompt: `The physician orders phenytoin (Dilantin) and phenobarbital for a client admitted with a cerebrovascular accident. The nurse knows that these drugs are administered for what purpose?`,
     options: [
       `To prevent seizures`,
       `To promote sleep`,
@@ -14397,7 +14396,7 @@ export const QUESTION_BANK = [
     id: 1026,
     category: `Comprehensive`,
     chapter: `Practice Test Four`,
-    question: `An adult who has cholecystitis reports clay-colored stools and moderate jaundice. The nurse knows that which is the best explanation for the presence of clay-colored stools and jaundice?`,
+    prompt: `An adult who has cholecystitis reports clay-colored stools and moderate jaundice. The nurse knows that which is the best explanation for the presence of clay-colored stools and jaundice?`,
     options: [
       `There is an obstruction in the pancreatic duct.`,
       `There are gallstones in the gallbladder.`,
@@ -14411,7 +14410,7 @@ export const QUESTION_BANK = [
     id: 1027,
     category: `Comprehensive`,
     chapter: `Practice Test Four`,
-    question: `Following a cholecystectomy, drainage from the client's T tube for the first 24 hours after the operation was 350 cc. What is the appropriate nursing action?`,
+    prompt: `Following a cholecystectomy, drainage from the client's T tube for the first 24 hours after the operation was 350 cc. What is the appropriate nursing action?`,
     options: [
       `Notify the physician`,
       `Raise the level of the drainage bag to decrease the rate of flow.`,
@@ -14425,7 +14424,7 @@ export const QUESTION_BANK = [
     id: 1028,
     category: `Comprehensive`,
     chapter: `Practice Test Four`,
-    question: `The nurse is caring for a client who had a total thyroidectomy. What should the nurse plan to observe the client for immediately after his return to the nursing care unit?`,
+    prompt: `The nurse is caring for a client who had a total thyroidectomy. What should the nurse plan to observe the client for immediately after his return to the nursing care unit?`,
     options: [
       `Hoarseness`,
       `Signs of hypercalcemia`,
@@ -14439,7 +14438,7 @@ export const QUESTION_BANK = [
     id: 1029,
     category: `Comprehensive`,
     chapter: `Practice Test Four`,
-    question: `The nurse is caring for a woman who has diabetic neuropathy. The nurse knows that the client needs more instruction when the client makes which statement?`,
+    prompt: `The nurse is caring for a woman who has diabetic neuropathy. The nurse knows that the client needs more instruction when the client makes which statement?`,
     options: [
       `"I'll use a hot water bottle if my feet hurt."`,
       `"I should dry my feet and toes carefully."`,
@@ -14453,7 +14452,7 @@ export const QUESTION_BANK = [
     id: 1030,
     category: `Comprehensive`,
     chapter: `Practice Test Four`,
-    question: `The nurse is auscultating an elderly bedridden client's breath sounds and hears crackles. What is the best interpretation of this finding?`,
+    prompt: `The nurse is auscultating an elderly bedridden client's breath sounds and hears crackles. What is the best interpretation of this finding?`,
     options: [
       `This is normal for the client's age.`,
       `This is suggestive of an immediately life-threatening condition.`,
@@ -14467,7 +14466,7 @@ export const QUESTION_BANK = [
     id: 1031,
     category: `Comprehensive`,
     chapter: `Practice Test Four`,
-    question: `The nurse is providing home care to an elderly woman who had a cerebro-vascular accident several weeks ago. All of the following need to be done. Which should the nurse plan to do first?`,
+    prompt: `The nurse is providing home care to an elderly woman who had a cerebro-vascular accident several weeks ago. All of the following need to be done. Which should the nurse plan to do first?`,
     options: [
       `Auscultate lung fields`,
       `Hygienic care`,
@@ -14481,7 +14480,7 @@ export const QUESTION_BANK = [
     id: 1032,
     category: `Comprehensive`,
     chapter: `Practice Test Four`,
-    question: `An older adult is seen in clinic. During the assessment process, all of the following are expressed or noted. Which is of most immediate concern to the nurse?`,
+    prompt: `An older adult is seen in clinic. During the assessment process, all of the following are expressed or noted. Which is of most immediate concern to the nurse?`,
     options: [
       `The client's daughter says that the client has become increasingly forgetful.`,
       `The client has a productive cough.`,
@@ -14495,7 +14494,7 @@ export const QUESTION_BANK = [
     id: 1033,
     category: `Comprehensive`,
     chapter: `Practice Test Four`,
-    question: `All of the following need to be done. Which should the nurse do first?`,
+    prompt: `All of the following need to be done. Which should the nurse do first?`,
     options: [
       `A client who had surgery earlier today asks for pain medication.`,
       `A client who is two days postoperative needs a dressing change.`,
@@ -14509,7 +14508,7 @@ export const QUESTION_BANK = [
     id: 1034,
     category: `Comprehensive`,
     chapter: `Practice Test Four`,
-    question: `The nurse is about to medicate a client who is to have surgery today. The client says, "I do not understand what the doctor is going to do," and asks the nurse to explain specific details of the surgery. The client has already signed an operative permit. What is the best action for the nurse to take at this time?`,
+    prompt: `The nurse is about to medicate a client who is to have surgery today. The client says, "I do not understand what the doctor is going to do," and asks the nurse to explain specific details of the surgery. The client has already signed an operative permit. What is the best action for the nurse to take at this time?`,
     options: [
       `Attempt to answer the client's questions`,
       `Notify the physician of the client's concerns prior to medicating the client`,
@@ -14523,7 +14522,7 @@ export const QUESTION_BANK = [
     id: 1035,
     category: `Comprehensive`,
     chapter: `Practice Test Four`,
-    question: `The nurse has completed teaching the client about his low-sodium, low-fat diet. Which menu, if selected by the client, would indicate to the nurse that the client understands his diet?`,
+    prompt: `The nurse has completed teaching the client about his low-sodium, low-fat diet. Which menu, if selected by the client, would indicate to the nurse that the client understands his diet?`,
     options: [
       `Mashed potatoes, spinach, and meatloaf`,
       `Swordfish with Hollandaise sauce, carrots, and rice pilaf`,
@@ -14537,7 +14536,7 @@ export const QUESTION_BANK = [
     id: 1036,
     category: `Comprehensive`,
     chapter: `Practice Test Four`,
-    question: `The afternoon following a thyroidectomy, the client experiences all of the following. Which one indicates to the nurse that the client is experiencing a serious complication?`,
+    prompt: `The afternoon following a thyroidectomy, the client experiences all of the following. Which one indicates to the nurse that the client is experiencing a serious complication?`,
     options: [
       `A sore throat`,
       `Pain at the surgical site`,
@@ -14551,7 +14550,7 @@ export const QUESTION_BANK = [
     id: 1037,
     category: `Comprehensive`,
     chapter: `Practice Test Four`,
-    question: `The nurse is caring for a client who had a colostomy. Which comment by the client indicates that she is showing an interest in learning about her colostomy?`,
+    prompt: `The nurse is caring for a client who had a colostomy. Which comment by the client indicates that she is showing an interest in learning about her colostomy?`,
     options: [
       `"Why did this problem have to happen to me?"`,
       `"What is the bag of water for?"`,
@@ -14565,7 +14564,7 @@ export const QUESTION_BANK = [
     id: 1038,
     category: `Comprehensive`,
     chapter: `Practice Test Four`,
-    question: `The client is scheduled for a paracentesis. What should the nurse expect to do prior to the procedure?`,
+    prompt: `The client is scheduled for a paracentesis. What should the nurse expect to do prior to the procedure?`,
     options: [
       `Insert an indwelling catheter`,
       `Have the client void`,
@@ -14579,7 +14578,7 @@ export const QUESTION_BANK = [
     id: 1039,
     category: `Comprehensive`,
     chapter: `Practice Test Four`,
-    question: `The nurse is caring for a client who is to be on bed rest for two weeks. What should the nurse do to prevent atelectasis?`,
+    prompt: `The nurse is caring for a client who is to be on bed rest for two weeks. What should the nurse do to prevent atelectasis?`,
     options: [
       `Encourage the client to deep breathe and cough every two hours`,
       `Encourage the client to flex and extend her feet every two hours`,
@@ -14593,7 +14592,7 @@ export const QUESTION_BANK = [
     id: 1040,
     category: `Comprehensive`,
     chapter: `Practice Test Four`,
-    question: `The nurse is administering a tuberculin skin test. How should the nurse insert the needle when administering the skin test?`,
+    prompt: `The nurse is administering a tuberculin skin test. How should the nurse insert the needle when administering the skin test?`,
     options: [
       `At a 10-degree angle`,
       `At a 30-degree angle`,
@@ -14607,7 +14606,7 @@ export const QUESTION_BANK = [
     id: 1041,
     category: `Comprehensive`,
     chapter: `Practice Test Four`,
-    question: `The nurse is teaching a community group about healthy lifestyles to prevent cancer and heart disease. Which comment by a member of the group indicates a need for more teaching?`,
+    prompt: `The nurse is teaching a community group about healthy lifestyles to prevent cancer and heart disease. Which comment by a member of the group indicates a need for more teaching?`,
     options: [
       `"Smoking is not good for you."`,
       `"Reducing fat intake helps reduce the risk of heart disease."`,
@@ -14621,7 +14620,7 @@ export const QUESTION_BANK = [
     id: 1042,
     category: `Comprehensive`,
     chapter: `Practice Test Four`,
-    question: `The parents of a child who is in for a 1-year well-baby check ask what immunizations the child needs. The nurse checks the child's record and determines that the child has had immunizations as recommended during the first year. What should the nurse reply?`,
+    prompt: `The parents of a child who is in for a 1-year well-baby check ask what immunizations the child needs. The nurse checks the child's record and determines that the child has had immunizations as recommended during the first year. What should the nurse reply?`,
     options: [
       `MMR and rotavirus`,
       `Hepatitis B and polio`,
@@ -14635,7 +14634,7 @@ export const QUESTION_BANK = [
     id: 1043,
     category: `Comprehensive`,
     chapter: `Practice Test Four`,
-    question: `The nurse is providing home care. Which assessment finding would suggest to the nurse that the elderly client should be evaluated for abuse?`,
+    prompt: `The nurse is providing home care. Which assessment finding would suggest to the nurse that the elderly client should be evaluated for abuse?`,
     options: [
       `The client says, "My daughter takes some of my Social Security money. She says it's to pay for my food and medicine."`,
       `The client has several bruises on her arms and legs.`,
@@ -14649,7 +14648,7 @@ export const QUESTION_BANK = [
     id: 1044,
     category: `Comprehensive`,
     chapter: `Practice Test Four`,
-    question: `The nurse is assessing the client's abdomen. Which should the nurse do first?`,
+    prompt: `The nurse is assessing the client's abdomen. Which should the nurse do first?`,
     options: [
       `Auscultate`,
       `Percuss`,
@@ -14663,7 +14662,7 @@ export const QUESTION_BANK = [
     id: 1045,
     category: `Comprehensive`,
     chapter: `Practice Test Four`,
-    question: `The nurse is teaching a young woman how to perform breast self-examination. Which comment, if made by the client, indicates that the teaching has been effective?`,
+    prompt: `The nurse is teaching a young woman how to perform breast self-examination. Which comment, if made by the client, indicates that the teaching has been effective?`,
     options: [
       `"I should examine my breasts every year."`,
       `"I need to see the doctor every six months for a breast exam."`,
@@ -14677,7 +14676,7 @@ export const QUESTION_BANK = [
     id: 1046,
     category: `Comprehensive`,
     chapter: `Practice Test Four`,
-    question: `The parents of an infant ask the nurse in the physician's office what diseases the DPT shot protects against. What should the nurse include when replying?`,
+    prompt: `The parents of an infant ask the nurse in the physician's office what diseases the DPT shot protects against. What should the nurse include when replying?`,
     options: [
       `Diarrhea, polio, and typhoid`,
       `Diphtheria, whooping cough, and tetanus`,
@@ -14691,7 +14690,7 @@ export const QUESTION_BANK = [
     id: 1047,
     category: `Comprehensive`,
     chapter: `Practice Test Four`,
-    question: `The nurse is providing home care to a postoperative client who has a wound infection. What is essential to include when teaching the family about infection transmission?`,
+    prompt: `The nurse is providing home care to a postoperative client who has a wound infection. What is essential to include when teaching the family about infection transmission?`,
     options: [
       `The client should stay isolated from the rest of the family.`,
       `No one who is pregnant should care for the client.`,
@@ -14705,7 +14704,7 @@ export const QUESTION_BANK = [
     id: 1048,
     category: `Comprehensive`,
     chapter: `Practice Test Four`,
-    question: `An adult is scheduled for surgery today and has signed an operative permit. As the nurse is about to administer the client's preoperative medication, the client says that she has changed her mind and no longer wishes to have the surgery. How should the nurse respond?`,
+    prompt: `An adult is scheduled for surgery today and has signed an operative permit. As the nurse is about to administer the client's preoperative medication, the client says that she has changed her mind and no longer wishes to have the surgery. How should the nurse respond?`,
     options: [
       `"Once you have signed the permit form, you cannot change your mind."`,
       `"I will give you the medication and call your doctor about your change of mind."`,
@@ -14719,7 +14718,7 @@ export const QUESTION_BANK = [
     id: 1049,
     category: `Comprehensive`,
     chapter: `Practice Test Four`,
-    question: `The nurse is providing home care to a confused client. The client's family is using a restraint to keep the client from pulling out her indwelling catheter. What should the nurse plan to include when teaching the family?`,
+    prompt: `The nurse is providing home care to a confused client. The client's family is using a restraint to keep the client from pulling out her indwelling catheter. What should the nurse plan to include when teaching the family?`,
     options: [
       `Remove the restraints for one hour three times a day.`,
       `Check the restrained extremities every hour for circulation.`,
@@ -14733,7 +14732,7 @@ export const QUESTION_BANK = [
     id: 1050,
     category: `Comprehensive`,
     chapter: `Practice Test Four`,
-    question: `A client who has Parkinson's disease is having difficulty ambulating. The nurse knows that the client and his family understand safety issues when the client is seen wearing which type of shoe?`,
+    prompt: `A client who has Parkinson's disease is having difficulty ambulating. The nurse knows that the client and his family understand safety issues when the client is seen wearing which type of shoe?`,
     options: [
       `Rubber-soled shoe`,
       `Smooth-soled shoes`,
@@ -14747,7 +14746,7 @@ export const QUESTION_BANK = [
     id: 1051,
     category: `Comprehensive`,
     chapter: `Practice Test Four`,
-    question: `The nurse administered an intramuscular injection to an adult. How should the nurse dispose of the needle and syringe?`,
+    prompt: `The nurse administered an intramuscular injection to an adult. How should the nurse dispose of the needle and syringe?`,
     options: [
       `Immediately place syringe and needle in the disposal container.`,
       `Recap the needle and place syringe and needle in the disposal container.`,
@@ -14761,7 +14760,7 @@ export const QUESTION_BANK = [
     id: 1052,
     category: `Comprehensive`,
     chapter: `Practice Test Four`,
-    question: `The nurse is caring for a client who is receiving oxygen therapy. A visitor yells at the nurse saying there is a fire burning in the wastebasket on the other side of the room. What should the nurse do initially?`,
+    prompt: `The nurse is caring for a client who is receiving oxygen therapy. A visitor yells at the nurse saying there is a fire burning in the wastebasket on the other side of the room. What should the nurse do initially?`,
     options: [
       `Go for help`,
       `Ask the visitor to go for help while the nurse calms the client`,
@@ -14775,7 +14774,7 @@ export const QUESTION_BANK = [
     id: 1053,
     category: `Comprehensive`,
     chapter: `Practice Test Four`,
-    question: `A young woman comes to the physician's office seeking contraceptive advice. The client reports all of the following. Which contraindicates the use of oral contraceptives?`,
+    prompt: `A young woman comes to the physician's office seeking contraceptive advice. The client reports all of the following. Which contraindicates the use of oral contraceptives?`,
     options: [
       `A gonorrhea infection last year`,
       `Thrombophlebitis in the legs six months ago`,
@@ -14789,7 +14788,7 @@ export const QUESTION_BANK = [
     id: 1054,
     category: `Comprehensive`,
     chapter: `Practice Test Four`,
-    question: `When planning care for a woman who is admitted in labor, it is most important for the nurse to obtain which of the following information about the client?`,
+    prompt: `When planning care for a woman who is admitted in labor, it is most important for the nurse to obtain which of the following information about the client?`,
     options: [
       `Age of the client and due date`,
       `Frequency and duration of contractions`,
@@ -14803,7 +14802,7 @@ export const QUESTION_BANK = [
     id: 1055,
     category: `Comprehensive`,
     chapter: `Practice Test Four`,
-    question: `A woman who is 32 weeks gestation comes to her physician's office. Which finding is of most concern to the office nurse?`,
+    prompt: `A woman who is 32 weeks gestation comes to her physician's office. Which finding is of most concern to the office nurse?`,
     options: [
       `Trace of glucose in the urine`,
       `Weight gain of 4 lb in one month`,
@@ -14817,7 +14816,7 @@ export const QUESTION_BANK = [
     id: 1056,
     category: `Comprehensive`,
     chapter: `Practice Test Four`,
-    question: `The nurse is planning care for a group of senior citizens. The nurse should plan activities that promote achievement of which developmental task?`,
+    prompt: `The nurse is planning care for a group of senior citizens. The nurse should plan activities that promote achievement of which developmental task?`,
     options: [
       `Identity`,
       `Intimacy`,
@@ -14831,7 +14830,7 @@ export const QUESTION_BANK = [
     id: 1057,
     category: `Comprehensive`,
     chapter: `Practice Test Four`,
-    question: `A young couple asks the nurse what method of contraception they should use. What information is most important for the nurse to have before giving an answer?`,
+    prompt: `A young couple asks the nurse what method of contraception they should use. What information is most important for the nurse to have before giving an answer?`,
     options: [
       `The exact age of the couple`,
       `The sexual history of both partners`,
@@ -14845,7 +14844,7 @@ export const QUESTION_BANK = [
     id: 1058,
     category: `Comprehensive`,
     chapter: `Practice Test Four`,
-    question: `The nurse is making a home visit to the mother of an 8-lb baby boy born five days ago. Which observation indicates that the mother understands the care of the newborn?`,
+    prompt: `The nurse is making a home visit to the mother of an 8-lb baby boy born five days ago. Which observation indicates that the mother understands the care of the newborn?`,
     options: [
       `The mother is concerned about the fact that the baby has a soft stool after every breast feeding.`,
       `The mother gives the baby a sponge bath but does not put him in a tub.`,
@@ -14859,7 +14858,7 @@ export const QUESTION_BANK = [
     id: 1059,
     category: `Comprehensive`,
     chapter: `Practice Test Four`,
-    question: `The nurse in a college health clinic is teaching the male students testicular self-examination. Which statement made by one of the young men indicates a need for more teaching?`,
+    prompt: `The nurse in a college health clinic is teaching the male students testicular self-examination. Which statement made by one of the young men indicates a need for more teaching?`,
     options: [
       `"I should do a testicular self-examination every month."`,
       `"When I am taking a shower is a good time to do the self-exam."`,
@@ -14873,7 +14872,7 @@ export const QUESTION_BANK = [
     id: 1060,
     category: `Comprehensive`,
     chapter: `Practice Test Four`,
-    question: `The nurse has been interacting for several weeks with a client on the psychiatric unit. The nurse is to be transferred to another unit. Which comment by the client indicates separation anxiety?`,
+    prompt: `The nurse has been interacting for several weeks with a client on the psychiatric unit. The nurse is to be transferred to another unit. Which comment by the client indicates separation anxiety?`,
     options: [
       `"We had a good time at the party last night. You should have been here."`,
       `"Some of us are going to the museum next week. Too bad you can't go."`,
@@ -14887,7 +14886,7 @@ export const QUESTION_BANK = [
     id: 1061,
     category: `Comprehensive`,
     chapter: `Practice Test Four`,
-    question: `The nurse is caring for a client who is very demanding. She frequently rings the bell and asks to have her pillow fluffed or the water glass filled. Which response by the nurse will likely be most effective?`,
+    prompt: `The nurse is caring for a client who is very demanding. She frequently rings the bell and asks to have her pillow fluffed or the water glass filled. Which response by the nurse will likely be most effective?`,
     options: [
       `Answer the bell quickly each time she rings`,
       `Say, "I do not have time to be in your room constantly."`,
@@ -14901,7 +14900,7 @@ export const QUESTION_BANK = [
     id: 1062,
     category: `Comprehensive`,
     chapter: `Practice Test Four`,
-    question: `An elderly client is severely dehydrated. Which is the best way to assess the effectiveness of fluid restoration therapy?`,
+    prompt: `An elderly client is severely dehydrated. Which is the best way to assess the effectiveness of fluid restoration therapy?`,
     options: [
       `Assess the client's skin turgor every shift.`,
       `Record weights daily`,
@@ -14915,7 +14914,7 @@ export const QUESTION_BANK = [
     id: 1063,
     category: `Comprehensive`,
     chapter: `Practice Test Four`,
-    question: `The nurse is caring for a client who is recovering from a cerebrovascular accident and is partially paralyzed on the right side. How should the nurse position the chair when getting the client out of bed?`,
+    prompt: `The nurse is caring for a client who is recovering from a cerebrovascular accident and is partially paralyzed on the right side. How should the nurse position the chair when getting the client out of bed?`,
     options: [
       `On the right side of the bed facing the foot of the bed`,
       `On the right side of the bed facing the head of the bed`,
@@ -14929,7 +14928,7 @@ export const QUESTION_BANK = [
     id: 1064,
     category: `Comprehensive`,
     chapter: `Practice Test Four`,
-    question: `An adult woman who broke her right ankle is seen in the physician's office one week after the cast was applied. Which observation indicates to the office nurse that the client is using crutches correctly?`,
+    prompt: `An adult woman who broke her right ankle is seen in the physician's office one week after the cast was applied. Which observation indicates to the office nurse that the client is using crutches correctly?`,
     options: [
       `The client moves the left crutch forward, then the right foot, then the right crutch, and finally the left foot.`,
       `The client moves the left crutch and the right foot together, and then moves the right crutch and the left foot together.`,
@@ -14943,7 +14942,7 @@ export const QUESTION_BANK = [
     id: 1065,
     category: `Comprehensive`,
     chapter: `Practice Test Four`,
-    question: `The nurse observes a certified nursing assistant (CNA) moving a client up in bed. Which action by the nursing assistant indicates a need for more instruction in how to move a client?`,
+    prompt: `The nurse observes a certified nursing assistant (CNA) moving a client up in bed. Which action by the nursing assistant indicates a need for more instruction in how to move a client?`,
     options: [
       `Using a pull sheet`,
       `Asking another nursing assistant to help`,
@@ -14957,7 +14956,7 @@ export const QUESTION_BANK = [
     id: 1066,
     category: `Comprehensive`,
     chapter: `Practice Test Four`,
-    question: `While caring for a woman who delivered a healthy term infant six hours ago, the nurse notes that the fundus is soft, 2 cm above the umbilicus, and off to the left. The lochia is red. The nurse suspects that the client has which problem?`,
+    prompt: `While caring for a woman who delivered a healthy term infant six hours ago, the nurse notes that the fundus is soft, 2 cm above the umbilicus, and off to the left. The lochia is red. The nurse suspects that the client has which problem?`,
     options: [
       `Retained placental fragments`,
       `Perineal laceration`,
@@ -14971,7 +14970,7 @@ export const QUESTION_BANK = [
     id: 1067,
     category: `Comprehensive`,
     chapter: `Practice Test Four`,
-    question: `The mother of a 1-week-old infant says to the nurse, "When will that ugly black cord thing come off?" How should the nurse reply?`,
+    prompt: `The mother of a 1-week-old infant says to the nurse, "When will that ugly black cord thing come off?" How should the nurse reply?`,
     options: [
       `"Are you wiping it with alcohol each time you change the baby's diaper?"`,
       `"It usually comes off in 10 days to three weeks."`,
@@ -14985,7 +14984,7 @@ export const QUESTION_BANK = [
     id: 1068,
     category: `Comprehensive`,
     chapter: `Practice Test Four`,
-    question: `A 6-month-old infant is being seen in the doctor's office. Which observation by the nurse should be brought to the physician's attention?`,
+    prompt: `A 6-month-old infant is being seen in the doctor's office. Which observation by the nurse should be brought to the physician's attention?`,
     options: [
       `The baby sits up but needs slight support.`,
       `The baby was 7 lb at birth and now weighs 10 lb.`,
@@ -14999,7 +14998,7 @@ export const QUESTION_BANK = [
     id: 1069,
     category: `Comprehensive`,
     chapter: `Practice Test Four`,
-    question: `The nurse is to administer a tube feeding to an adult. What action is essential before administering the feeding?`,
+    prompt: `The nurse is to administer a tube feeding to an adult. What action is essential before administering the feeding?`,
     options: [
       `Position the client in a supine position`,
       `Check the position of the feeding tube`,
@@ -15013,7 +15012,7 @@ export const QUESTION_BANK = [
     id: 1070,
     category: `Comprehensive`,
     chapter: `Practice Test Four`,
-    question: `An adult who had a mastectomy yesterday says to the nurse, "I guess I'm not a real woman anymore. How could my husband possibly love me now?" What is the best response for the nurse to make?`,
+    prompt: `An adult who had a mastectomy yesterday says to the nurse, "I guess I'm not a real woman anymore. How could my husband possibly love me now?" What is the best response for the nurse to make?`,
     options: [
       `"You don't feel like a woman now?"`,
       `"Has your husband said anything to you?"`,
@@ -15027,7 +15026,7 @@ export const QUESTION_BANK = [
     id: 1071,
     category: `Comprehensive`,
     chapter: `Practice Test Four`,
-    question: `A client who has been waiting for several hours in the clinic waiting room suddenly begins to shout, "I need some attention and I need it now!" How should the nurse respond initially?`,
+    prompt: `A client who has been waiting for several hours in the clinic waiting room suddenly begins to shout, "I need some attention and I need it now!" How should the nurse respond initially?`,
     options: [
       `Tell the client to be quiet and that she will be seen as soon as possible`,
       `Immediately call security and the police`,
@@ -15041,7 +15040,7 @@ export const QUESTION_BANK = [
     id: 1072,
     category: `Comprehensive`,
     chapter: `Practice Test Four`,
-    question: `The mother of 6-month-old twins is in the doctor's office because one of the infants has an ear infection. The mother says to the nurse, "I just don't know if I can handle another problem. It is all so overwhelming." How should the nurse respond initially?`,
+    prompt: `The mother of 6-month-old twins is in the doctor's office because one of the infants has an ear infection. The mother says to the nurse, "I just don't know if I can handle another problem. It is all so overwhelming." How should the nurse respond initially?`,
     options: [
       `"You're their mother. I'm sure you know what's best for them."`,
       `"Have you called social services to see if you qualify for assistance?"`,
@@ -15055,7 +15054,7 @@ export const QUESTION_BANK = [
     id: 1073,
     category: `Comprehensive`,
     chapter: `Practice Test Four`,
-    question: `There have been several clients recently who have fallen in the long-term care facility. The nurse would like to reduce the number of falls. Which action is likely to do the most to help prevent falls?`,
+    prompt: `There have been several clients recently who have fallen in the long-term care facility. The nurse would like to reduce the number of falls. Which action is likely to do the most to help prevent falls?`,
     options: [
       `Ask the nursing assistants to watch the clients more carefully.`,
       `Restrain clients who cannot walk independently.`,
@@ -15069,7 +15068,7 @@ export const QUESTION_BANK = [
     id: 1074,
     category: `Comprehensive`,
     chapter: `Practice Test Four`,
-    question: `The nurse is observing a nursing assistant providing care. Which action indicates that the nursing assistant understands universal precautions?`,
+    prompt: `The nurse is observing a nursing assistant providing care. Which action indicates that the nursing assistant understands universal precautions?`,
     options: [
       `The nursing assistant washes hands first thing in the morning before giving care to any client and again after all morning care is completed.`,
       `The nursing assistant wears gloves during all client contact.`,
@@ -15083,7 +15082,7 @@ export const QUESTION_BANK = [
     id: 1075,
     category: `Comprehensive`,
     chapter: `Practice Test Four`,
-    question: `The nurse is changing a dressing. Which event indicates a break in sterile technique?`,
+    prompt: `The nurse is changing a dressing. Which event indicates a break in sterile technique?`,
     options: [
       `The nurse opens the sterile dressing set by opening the first flap away from herself.`,
       `The nurse turns around when answering a question asked by the client in the other bed.`,
@@ -15097,7 +15096,7 @@ export const QUESTION_BANK = [
     id: 1076,
     category: `Comprehensive`,
     chapter: `Practice Test Four`,
-    question: `The nurse is assisting at a disaster shelter setup following a devastating earthquake. What is the most common problem the nurse is likely to see in those who come to the shelter?`,
+    prompt: `The nurse is assisting at a disaster shelter setup following a devastating earthquake. What is the most common problem the nurse is likely to see in those who come to the shelter?`,
     options: [
       `Thirst`,
       `Traumatic injuries`,
@@ -15111,7 +15110,7 @@ export const QUESTION_BANK = [
     id: 1077,
     category: `Comprehensive`,
     chapter: `Practice Test Four`,
-    question: `The nurse is caring for a frail elderly client in her home. Which behavior, if observed or reported, should the nurse report to the supervisor for further evaluation of possible abuse?`,
+    prompt: `The nurse is caring for a frail elderly client in her home. Which behavior, if observed or reported, should the nurse report to the supervisor for further evaluation of possible abuse?`,
     options: [
       `The client's daughter is attempting to be declared her mother's legal guardian.`,
       `The client is frequently left in bed alone in the house for several hours at a time.`,
@@ -15125,7 +15124,7 @@ export const QUESTION_BANK = [
     id: 1078,
     category: `Comprehensive`,
     chapter: `Practice Test Four`,
-    question: `A woman is being seen in the physician's office for a medical complaint. When she is called to see the physician, she goes to the restroom and washes her hands over and over, missing her allotted time with the physician. How should the nurse deal with this woman?`,
+    prompt: `A woman is being seen in the physician's office for a medical complaint. When she is called to see the physician, she goes to the restroom and washes her hands over and over, missing her allotted time with the physician. How should the nurse deal with this woman?`,
     options: [
       `Send her home without seeing the doctor if she is not available when called`,
       `Give her advance warning that she will be seeing the physician and tell her that if she needs to wash her hands, she should do so`,
@@ -15139,7 +15138,7 @@ export const QUESTION_BANK = [
     id: 1079,
     category: `Comprehensive`,
     chapter: `Practice Test Four`,
-    question: `A woman who was recently widowed says to the nurse, "I just can't believe he's gone. Sometimes I even think I see him standing there." What does this comment indicate about the client?`,
+    prompt: `A woman who was recently widowed says to the nurse, "I just can't believe he's gone. Sometimes I even think I see him standing there." What does this comment indicate about the client?`,
     options: [
       `She is in an early stage of normal grief.`,
       `She may be hallucinating.`,
@@ -15153,7 +15152,7 @@ export const QUESTION_BANK = [
     id: 1080,
     category: `Comprehensive`,
     chapter: `Practice Test Four`,
-    question: `The preoperative client is from a different country and tells the nurse that his family will be coming for a prayer service. Eighteen persons arrive and start chanting in the client's semi-private room. What is the best response for the nurse?`,
+    prompt: `The preoperative client is from a different country and tells the nurse that his family will be coming for a prayer service. Eighteen persons arrive and start chanting in the client's semi-private room. What is the best response for the nurse?`,
     options: [
       `Explain that visitors are limited to two per client`,
       `Ask the client's roommate if he/she objects to so many persons in the room`,
@@ -15167,7 +15166,7 @@ export const QUESTION_BANK = [
     id: 1081,
     category: `Comprehensive`,
     chapter: `Practice Test Four`,
-    question: `An adolescent is to be admitted to the orthopedic floor with several fractures. The client has been taking hallucinogens this evening. What should the nurse expect on admission because the client is using hallucinogens?`,
+    prompt: `An adolescent is to be admitted to the orthopedic floor with several fractures. The client has been taking hallucinogens this evening. What should the nurse expect on admission because the client is using hallucinogens?`,
     options: [
       `Severe depression`,
       `Violent behavior`,
@@ -15181,7 +15180,7 @@ export const QUESTION_BANK = [
     id: 1082,
     category: `Comprehensive`,
     chapter: `Practice Test Four`,
-    question: `An adult has completed an alcohol detoxification program and is being discharged with disulfiram (Antabuse). Which statement that the client makes indicates a need for more teaching?`,
+    prompt: `An adult has completed an alcohol detoxification program and is being discharged with disulfiram (Antabuse). Which statement that the client makes indicates a need for more teaching?`,
     options: [
       `"I have learned my lesson. I won't drink more than two beers."`,
       `"I will not use mouthwash while I am taking Antabuse."`,
@@ -15195,7 +15194,7 @@ export const QUESTION_BANK = [
     id: 1083,
     category: `Comprehensive`,
     chapter: `Practice Test Four`,
-    question: `The nurse is caring for a woman who is admitted following a beating by her husband. The woman says, "It wasn't really his fault. Dinner was late." The husband arrives to visit his wife with a large bouquet of flowers and a box of chocolates. The woman later says to the nurse, "He feels so bad about what he did and says it will never happen again." What concept should guide the nurse when replying to the client?`,
+    prompt: `The nurse is caring for a woman who is admitted following a beating by her husband. The woman says, "It wasn't really his fault. Dinner was late." The husband arrives to visit his wife with a large bouquet of flowers and a box of chocolates. The woman later says to the nurse, "He feels so bad about what he did and says it will never happen again." What concept should guide the nurse when replying to the client?`,
     options: [
       `Men who abuse their wives and then repent usually do not do it again.`,
       `The woman is quite perceptive and should be safe when she is discharged.`,
@@ -15209,7 +15208,7 @@ export const QUESTION_BANK = [
     id: 1084,
     category: `Comprehensive`,
     chapter: `Practice Test Four`,
-    question: `Which characteristic is most likely to be present in persons who abuse others?`,
+    prompt: `Which characteristic is most likely to be present in persons who abuse others?`,
     options: [
       `Financial security`,
       `Positive self-image`,
@@ -15223,7 +15222,7 @@ export const QUESTION_BANK = [
     id: 1085,
     category: `Comprehensive`,
     chapter: `Practice Test Four`,
-    question: `An adult man believes that someone is poisoning his food. What is the best nursing action in response to this belief?`,
+    prompt: `An adult man believes that someone is poisoning his food. What is the best nursing action in response to this belief?`,
     options: [
       `Explain to him that no one is poisoning his food`,
       `Tell him that the food is prepared in the hospital under secure conditions`,
@@ -15237,7 +15236,7 @@ export const QUESTION_BANK = [
     id: 1086,
     category: `Comprehensive`,
     chapter: `Practice Test Four`,
-    question: `A newly admitted client is exhibiting signs of severe anxiety. She is pacing back and forth and has difficulty concentrating on the nurse's questions. What nursing action is most appropriate at this time?`,
+    prompt: `A newly admitted client is exhibiting signs of severe anxiety. She is pacing back and forth and has difficulty concentrating on the nurse's questions. What nursing action is most appropriate at this time?`,
     options: [
       `Tell the client to sit down and get control of herself`,
       `Leave the room until she regains control`,
@@ -15251,7 +15250,7 @@ export const QUESTION_BANK = [
     id: 1087,
     category: `Comprehensive`,
     chapter: `Practice Test Four`,
-    question: `A 2-year-old child is seen in the pediatrician's office. The child screams when the nurse approaches him to give him the ordered IM medication. How should the nurse approach the child?`,
+    prompt: `A 2-year-old child is seen in the pediatrician's office. The child screams when the nurse approaches him to give him the ordered IM medication. How should the nurse approach the child?`,
     options: [
       `Tell him to stop screaming and he can have a lollipop after he gets the shot`,
       `Ask him to point to the leg he wants you to use`,
@@ -15265,7 +15264,7 @@ export const QUESTION_BANK = [
     id: 1088,
     category: `Comprehensive`,
     chapter: `Practice Test Four`,
-    question: `An adult who is admitted for surgery today says to the nurse, "I'm so afraid. Do you think the doctor knows what he is doing? Does anyone ever survive this type of operation?" How should the nurse reply?`,
+    prompt: `An adult who is admitted for surgery today says to the nurse, "I'm so afraid. Do you think the doctor knows what he is doing? Does anyone ever survive this type of operation?" How should the nurse reply?`,
     options: [
       `"People who have this type of surgery almost always survive and get better."`,
       `"Don't worry; your doctor is very skilled and has done many operations like yours."`,
@@ -15281,7 +15280,7 @@ export const QUESTION_BANK = [
     id: 1089,
     category: `Comprehensive`,
     chapter: `Practice Test Five`,
-    question: `An adult client who had a cervical laminectomy is returned to her room on the nursing care unit. The postanesthesia nurse reports that the client is awake and has stable vital signs. The nurse should position the client in which of the following positions?`,
+    prompt: `An adult client who had a cervical laminectomy is returned to her room on the nursing care unit. The postanesthesia nurse reports that the client is awake and has stable vital signs. The nurse should position the client in which of the following positions?`,
     options: [
       `Supine`,
       `Semi-reclining`,
@@ -15295,7 +15294,7 @@ export const QUESTION_BANK = [
     id: 1090,
     category: `Comprehensive`,
     chapter: `Practice Test Five`,
-    question: `An adult postoperative client vomits, and his abdominal wound eviscerates. What is the best initial action for the nurse to take?`,
+    prompt: `An adult postoperative client vomits, and his abdominal wound eviscerates. What is the best initial action for the nurse to take?`,
     options: [
       `Cover the exposed coils of intestine with sterile moist towels or dressings`,
       `Pack the intestines back into the abdominal cavity`,
@@ -15309,7 +15308,7 @@ export const QUESTION_BANK = [
     id: 1091,
     category: `Comprehensive`,
     chapter: `Practice Test Five`,
-    question: `Thirty-six hours after major surgery, a client has a temperature of 100°F. What is the most likely cause of the temperature elevation?`,
+    prompt: `Thirty-six hours after major surgery, a client has a temperature of 100°F. What is the most likely cause of the temperature elevation?`,
     options: [
       `Dehydration`,
       `Atelectasis`,
@@ -15323,7 +15322,7 @@ export const QUESTION_BANK = [
     id: 1092,
     category: `Comprehensive`,
     chapter: `Practice Test Five`,
-    question: `The nurse is preparing to administer preoperative medication of meperidine and atropine to an elderly adult who is scheduled for surgery. The client tells the nurse that he has glaucoma and wants to take his eye drops before going to the operating room. What is the best action for the nurse to take?`,
+    prompt: `The nurse is preparing to administer preoperative medication of meperidine and atropine to an elderly adult who is scheduled for surgery. The client tells the nurse that he has glaucoma and wants to take his eye drops before going to the operating room. What is the best action for the nurse to take?`,
     options: [
       `Administer medication as ordered and encourage the client to take his eye drops`,
       `Check with the physician before administering preoperative medication`,
@@ -15337,7 +15336,7 @@ export const QUESTION_BANK = [
     id: 1093,
     category: `Comprehensive`,
     chapter: `Practice Test Five`,
-    question: `An adult client has been medicated for elective surgery. The operating room nurse discovers that the consent form for surgery has not been signed. What should the nurse do?`,
+    prompt: `An adult client has been medicated for elective surgery. The operating room nurse discovers that the consent form for surgery has not been signed. What should the nurse do?`,
     options: [
       `Have the client sign the consent form`,
       `Tell the physician that the consent form has not been signed`,
@@ -15351,7 +15350,7 @@ export const QUESTION_BANK = [
     id: 1094,
     category: `Comprehensive`,
     chapter: `Practice Test Five`,
-    question: `An elderly man has just returned from the operating room where he spent several hours in lithotomy position during a perineal prostatectomy. Which assessment should the nurse make because the client was in lithotomy position during surgery?`,
+    prompt: `An elderly man has just returned from the operating room where he spent several hours in lithotomy position during a perineal prostatectomy. Which assessment should the nurse make because the client was in lithotomy position during surgery?`,
     options: [
       `Lower extremity pulses, paresthesias, and pain`,
       `The presence of bowel sounds`,
@@ -15365,7 +15364,7 @@ export const QUESTION_BANK = [
     id: 1095,
     category: `Comprehensive`,
     chapter: `Practice Test Five`,
-    question: `An elderly client is admitted to a skilled nursing care facility. When doing a skin assessment, the nurse notes a 3-cm round area of partial-thickness skin loss that looks like a blister on the client's sacrum. The nurse interprets this to be a:`,
+    prompt: `An elderly client is admitted to a skilled nursing care facility. When doing a skin assessment, the nurse notes a 3-cm round area of partial-thickness skin loss that looks like a blister on the client's sacrum. The nurse interprets this to be a:`,
     options: [
       `stage I pressure ulcer.`,
       `stage II pressure ulcer.`,
@@ -15379,7 +15378,7 @@ export const QUESTION_BANK = [
     id: 1096,
     category: `Comprehensive`,
     chapter: `Practice Test Five`,
-    question: `The nurse is caring for a client who has been placed on a hypothermia blanket. What should the nurse include in the care plan?`,
+    prompt: `The nurse is caring for a client who has been placed on a hypothermia blanket. What should the nurse include in the care plan?`,
     options: [
       `Take frequent vital signs and perform frequent skin assessments`,
       `Leave the hypothermia blanket on until the client's temperature reaches 98.6°F`,
@@ -15393,7 +15392,7 @@ export const QUESTION_BANK = [
     id: 1097,
     category: `Comprehensive`,
     chapter: `Practice Test Five`,
-    question: `The physician's orders include warm compresses to the left leg three times a day for treatment of an open wound. Which action is appropriate when carrying out these orders?`,
+    prompt: `The physician's orders include warm compresses to the left leg three times a day for treatment of an open wound. Which action is appropriate when carrying out these orders?`,
     options: [
       `Use medical aseptic technique.`,
       `Leave the wet compress open to the air.`,
@@ -15407,7 +15406,7 @@ export const QUESTION_BANK = [
     id: 1098,
     category: `Comprehensive`,
     chapter: `Practice Test Five`,
-    question: `An adult is on a clear liquid diet. Which food should the nurse offer him?`,
+    prompt: `An adult is on a clear liquid diet. Which food should the nurse offer him?`,
     options: [
       `A milkshake`,
       `Fruited gelatin`,
@@ -15421,7 +15420,7 @@ export const QUESTION_BANK = [
     id: 1099,
     category: `Comprehensive`,
     chapter: `Practice Test Five`,
-    question: `Four clients have signaled with their call bell for the nurse. Who should the nurse observe first?`,
+    prompt: `Four clients have signaled with their call bell for the nurse. Who should the nurse observe first?`,
     options: [
       `An adult who needs assistance walking to the bathroom`,
       `A postoperative client who is asking for pain medication`,
@@ -15435,7 +15434,7 @@ export const QUESTION_BANK = [
     id: 1100,
     category: `Comprehensive`,
     chapter: `Practice Test Five`,
-    question: `The nurse is caring for a client who was in a motor vehicle accident. His blood pressure is dropping rapidly. What should the nurse observe the client for before placing the client in shock position?`,
+    prompt: `The nurse is caring for a client who was in a motor vehicle accident. His blood pressure is dropping rapidly. What should the nurse observe the client for before placing the client in shock position?`,
     options: [
       `Long bone fractures`,
       `Air embolus`,
@@ -15449,7 +15448,7 @@ export const QUESTION_BANK = [
     id: 1101,
     category: `Comprehensive`,
     chapter: `Practice Test Five`,
-    question: `The nurse is teaching family members how to correctly transfer a client who has right hemiplegia from the bed to a wheelchair. Which observation indicates that the family understands how to transfer the client?`,
+    prompt: `The nurse is teaching family members how to correctly transfer a client who has right hemiplegia from the bed to a wheelchair. Which observation indicates that the family understands how to transfer the client?`,
     options: [
       `The wheelchair is placed parallel to the bed on the affected side.`,
       `The family members lift the client up by having her place her arms around their necks.`,
@@ -15463,7 +15462,7 @@ export const QUESTION_BANK = [
     id: 1102,
     category: `Comprehensive`,
     chapter: `Practice Test Five`,
-    question: `An adult is being discharged from the emergency room with instructions to apply a cold pack to his sprained ankle. The client asks why it is necessary to use a cold pack. The nurse replies that the cold pack will do which of the following?`,
+    prompt: `An adult is being discharged from the emergency room with instructions to apply a cold pack to his sprained ankle. The client asks why it is necessary to use a cold pack. The nurse replies that the cold pack will do which of the following?`,
     options: [
       `Keep the sprain from becoming a fracture`,
       `Prevent bruising and ecchymosis from occurring`,
@@ -15477,7 +15476,7 @@ export const QUESTION_BANK = [
     id: 1103,
     category: `Comprehensive`,
     chapter: `Practice Test Five`,
-    question: `An adult has received an injection of immunoglobulin. The client asks what this injection will do for him. The nurse's reply includes the information that he will develop which type of immunity as a result of this injection?`,
+    prompt: `An adult has received an injection of immunoglobulin. The client asks what this injection will do for him. The nurse's reply includes the information that he will develop which type of immunity as a result of this injection?`,
     options: [
       `Active natural immunity`,
       `Active artificial immunity`,
@@ -15491,7 +15490,7 @@ export const QUESTION_BANK = [
     id: 1104,
     category: `Comprehensive`,
     chapter: `Practice Test Five`,
-    question: `An adult is receiving total parenteral nutrition (TPN). Which assessment is essential for the nurse to make?`,
+    prompt: `An adult is receiving total parenteral nutrition (TPN). Which assessment is essential for the nurse to make?`,
     options: [
       `Number of bowel movements`,
       `Confirmation that the tube is in the stomach`,
@@ -15505,7 +15504,7 @@ export const QUESTION_BANK = [
     id: 1105,
     category: `Comprehensive`,
     chapter: `Practice Test Five`,
-    question: `An adult is on long-term aspirin therapy and complains of tinnitus. Which interpretation by the nurse is accurate?`,
+    prompt: `An adult is on long-term aspirin therapy and complains of tinnitus. Which interpretation by the nurse is accurate?`,
     options: [
       `The aspirin is working as expected.`,
       `The client ingested more medication than was recommended.`,
@@ -15519,7 +15518,7 @@ export const QUESTION_BANK = [
     id: 1106,
     category: `Comprehensive`,
     chapter: `Practice Test Five`,
-    question: `An adult is to receive a narcotic analgesic via patient-controlled analgesia (PCA). Which statement by the client indicates that the client understands how the PCA works?`,
+    prompt: `An adult is to receive a narcotic analgesic via patient-controlled analgesia (PCA). Which statement by the client indicates that the client understands how the PCA works?`,
     options: [
       `"When I press this button, the machine will always give me more medicine."`,
       `"I will press the button whenever I begin to experience pain."`,
@@ -15533,7 +15532,7 @@ export const QUESTION_BANK = [
     id: 1107,
     category: `Comprehensive`,
     chapter: `Practice Test Five`,
-    question: `The nurse is caring for a client who had knee surgery this morning. Postoperative orders include a narcotic every three to four hours as needed for operative site pain and an ice bag. At 7:00 P.M., the client asks for pain medication. He was last medicated at 3:30 P.M. What is the best initial nursing action?`,
+    prompt: `The nurse is caring for a client who had knee surgery this morning. Postoperative orders include a narcotic every three to four hours as needed for operative site pain and an ice bag. At 7:00 P.M., the client asks for pain medication. He was last medicated at 3:30 P.M. What is the best initial nursing action?`,
     options: [
       `Administer the prescribed analgesic`,
       `Assess the location and nature of the pain`,
@@ -15547,7 +15546,7 @@ export const QUESTION_BANK = [
     id: 1108,
     category: `Comprehensive`,
     chapter: `Practice Test Five`,
-    question: `An adult is receiving external radiation therapy. What should the nurse include in the teaching plan about care of the skin at the radiation site?`,
+    prompt: `An adult is receiving external radiation therapy. What should the nurse include in the teaching plan about care of the skin at the radiation site?`,
     options: [
       `Tape a loose dressing to the radiation site.`,
       `Shower each evening before therapy.`,
@@ -15561,7 +15560,7 @@ export const QUESTION_BANK = [
     id: 1109,
     category: `Comprehensive`,
     chapter: `Practice Test Five`,
-    question: `A client is receiving chemotherapy for cancer and develops thrombocytopenia. What should the nurse include in the client's plan of care because of the thrombocytopenia?`,
+    prompt: `A client is receiving chemotherapy for cancer and develops thrombocytopenia. What should the nurse include in the client's plan of care because of the thrombocytopenia?`,
     options: [
       `Place the client in a semi-upright position.`,
       `Limit the client's intake of fluids.`,
@@ -15575,7 +15574,7 @@ export const QUESTION_BANK = [
     id: 1110,
     category: `Comprehensive`,
     chapter: `Practice Test Five`,
-    question: `An adult is admitted with a head injury following an accident. He has a severe headache and asks the nurse why he cannot have something for pain. The nurse understands that the client should not receive a narcotic analgesic for which reason?`,
+    prompt: `An adult is admitted with a head injury following an accident. He has a severe headache and asks the nurse why he cannot have something for pain. The nurse understands that the client should not receive a narcotic analgesic for which reason?`,
     options: [
       `Narcotic analgesics cause mydriasis, which will raise intracranial pressure.`,
       `Narcotic analgesics are not effective for pain caused by brain trauma.`,
@@ -15589,7 +15588,7 @@ export const QUESTION_BANK = [
     id: 1111,
     category: `Comprehensive`,
     chapter: `Practice Test Five`,
-    question: `A client is scheduled for a cataract extraction. Preoperatively, 1% atropine is instilled into the client's right eye. The nurse knows that this drug would be contraindicated if the client also had which of the following conditions?`,
+    prompt: `A client is scheduled for a cataract extraction. Preoperatively, 1% atropine is instilled into the client's right eye. The nurse knows that this drug would be contraindicated if the client also had which of the following conditions?`,
     options: [
       `Bradycardia`,
       `Hypothyroidism`,
@@ -15603,7 +15602,7 @@ export const QUESTION_BANK = [
     id: 1112,
     category: `Comprehensive`,
     chapter: `Practice Test Five`,
-    question: `An adult is admitted with Guillain-Barré syndrome. On day 3 of hospitalization, the client's muscle weakness worsens, and he is no longer able to stand with support. He is also having difficulty swallowing and talking. The priority in the nursing care plan at this time is to prevent which problem?`,
+    prompt: `An adult is admitted with Guillain-Barré syndrome. On day 3 of hospitalization, the client's muscle weakness worsens, and he is no longer able to stand with support. He is also having difficulty swallowing and talking. The priority in the nursing care plan at this time is to prevent which problem?`,
     options: [
       `Aspiration pneumonia`,
       `Decubitus ulcers`,
@@ -15617,7 +15616,7 @@ export const QUESTION_BANK = [
     id: 1113,
     category: `Comprehensive`,
     chapter: `Practice Test Five`,
-    question: `A young woman is admitted to the hospital complaining of severe fatigue and weakness of several weeks in duration. Her physician suspects a diagnosis of myasthenia gravis. Which additional findings would the nurse expect the client to have?`,
+    prompt: `A young woman is admitted to the hospital complaining of severe fatigue and weakness of several weeks in duration. Her physician suspects a diagnosis of myasthenia gravis. Which additional findings would the nurse expect the client to have?`,
     options: [
       `Ataxia and poor coordination`,
       `Diplopia and ptosis of the eyelids`,
@@ -15631,7 +15630,7 @@ export const QUESTION_BANK = [
     id: 1114,
     category: `Comprehensive`,
     chapter: `Practice Test Five`,
-    question: `The nurse is caring for a client who has a C6 spinal cord injury. He complains of blurred vision and a severe headache. His blood pressure is 210/140. What action should the nurse take initially?`,
+    prompt: `The nurse is caring for a client who has a C6 spinal cord injury. He complains of blurred vision and a severe headache. His blood pressure is 210/140. What action should the nurse take initially?`,
     options: [
       `Check for bladder distention`,
       `Place in Trendelenburg position`,
@@ -15645,7 +15644,7 @@ export const QUESTION_BANK = [
     id: 1115,
     category: `Comprehensive`,
     chapter: `Practice Test Five`,
-    question: `The charge nurse in a long-term care facility is making assignments. When assigning personnel to care for residents, which principle is important?`,
+    prompt: `The charge nurse in a long-term care facility is making assignments. When assigning personnel to care for residents, which principle is important?`,
     options: [
       `Assignments should be rotated on a daily basis.`,
       `Clients who are confused often do better with the same caregiver for several days.`,
@@ -15659,7 +15658,7 @@ export const QUESTION_BANK = [
     id: 1116,
     category: `Comprehensive`,
     chapter: `Practice Test Five`,
-    question: `The family of a young man who has been declared brain dead following an accident tells the nurse that the doctors said their son would be a good organ donor. They ask the nurse if donating his organs would mean that they could not have a regular funeral. Which response by the nurse is most accurate?`,
+    prompt: `The family of a young man who has been declared brain dead following an accident tells the nurse that the doctors said their son would be a good organ donor. They ask the nurse if donating his organs would mean that they could not have a regular funeral. Which response by the nurse is most accurate?`,
     options: [
       `"Donating organs does deface the body, so a closed casket is necessary."`,
       `"Ask the physician which organs would be donated."`,
@@ -15673,7 +15672,7 @@ export const QUESTION_BANK = [
     id: 1117,
     category: `Comprehensive`,
     chapter: `Practice Test Five`,
-    question: `All of the following tasks need to be done. Which one can the LPN/LVN safely delegate to the certified nursing assistant (CNA)?`,
+    prompt: `All of the following tasks need to be done. Which one can the LPN/LVN safely delegate to the certified nursing assistant (CNA)?`,
     options: [
       `Tube feeding for a client with a nasogastric tube`,
       `Routine vital signs for a group of clients`,
@@ -15687,7 +15686,7 @@ export const QUESTION_BANK = [
     id: 1118,
     category: `Comprehensive`,
     chapter: `Practice Test Five`,
-    question: `The nurse is new to the resident facility and is administering medications. One of the clients does not have a readable identification band in place. What should the nurse do?`,
+    prompt: `The nurse is new to the resident facility and is administering medications. One of the clients does not have a readable identification band in place. What should the nurse do?`,
     options: [
       `Ask the client what his name is`,
       `Ask the client if he is Mr. _________`,
@@ -15701,7 +15700,7 @@ export const QUESTION_BANK = [
     id: 1119,
     category: `Comprehensive`,
     chapter: `Practice Test Five`,
-    question: `The nurse is caring for all of the following persons. Which one is most in need of restraints?`,
+    prompt: `The nurse is caring for all of the following persons. Which one is most in need of restraints?`,
     options: [
       `An elderly man who is sitting in a chair`,
       `A confused postoperative client who is picking at his nasal oxygen and nasogastric (NG) tube`,
@@ -15715,7 +15714,7 @@ export const QUESTION_BANK = [
     id: 1120,
     category: `Comprehensive`,
     chapter: `Practice Test Five`,
-    question: `The RN charge nurse hands the LPN/LVN a syringe filled with medication that the RN has just drawn and asks the LPN/LVN to administer this to a client. How should the LPN/LVN respond?`,
+    prompt: `The RN charge nurse hands the LPN/LVN a syringe filled with medication that the RN has just drawn and asks the LPN/LVN to administer this to a client. How should the LPN/LVN respond?`,
     options: [
       `Do as requested by the charge nurse`,
       `Ask the charge nurse what the medication is and then administer it`,
@@ -15729,7 +15728,7 @@ export const QUESTION_BANK = [
     id: 1121,
     category: `Comprehensive`,
     chapter: `Practice Test Five`,
-    question: `An adult client in an acute care facility says to the nurse, "I hope this hospital doesn't have student doctors and nurses. I do not want a student taking care of me." The nurse's response should be based on which of the following understandings?`,
+    prompt: `An adult client in an acute care facility says to the nurse, "I hope this hospital doesn't have student doctors and nurses. I do not want a student taking care of me." The nurse's response should be based on which of the following understandings?`,
     options: [
       `When a client signs permission for treatment in a hospital, this includes treatment by medical and nursing students.`,
       `The client has the right to know if the hospital is affiliated with a medical school and to refuse care by students.`,
@@ -15743,7 +15742,7 @@ export const QUESTION_BANK = [
     id: 1122,
     category: `Comprehensive`,
     chapter: `Practice Test Five`,
-    question: `An adult client in an acute care setting asks the nurse to show him his hospital records. The nurse's response should reflect which understanding?`,
+    prompt: `An adult client in an acute care setting asks the nurse to show him his hospital records. The nurse's response should reflect which understanding?`,
     options: [
       `The client has no right to see his records without a court order.`,
       `The client must have the physician's approval before he can see his records.`,
@@ -15757,7 +15756,7 @@ export const QUESTION_BANK = [
     id: 1123,
     category: `Comprehensive`,
     chapter: `Practice Test Five`,
-    question: `The LPN/LVN has delegated basic hygienic care of several clients to a certified nursing assistant. Which action by the nurse will ensure that the clients receive the best care?`,
+    prompt: `The LPN/LVN has delegated basic hygienic care of several clients to a certified nursing assistant. Which action by the nurse will ensure that the clients receive the best care?`,
     options: [
       `Observe the nursing assistant during the performance of all care`,
       `Ask the nursing assistant if there were any problems`,
@@ -15771,7 +15770,7 @@ export const QUESTION_BANK = [
     id: 1124,
     category: `Comprehensive`,
     chapter: `Practice Test Five`,
-    question: `A client who is withdrawing from alcohol says to the nurse, "There are snakes on the wall." Which action should the nurse take initially?`,
+    prompt: `A client who is withdrawing from alcohol says to the nurse, "There are snakes on the wall." Which action should the nurse take initially?`,
     options: [
       `Reassure the client that there are no snakes`,
       `Turn the lights on brighter`,
@@ -15785,7 +15784,7 @@ export const QUESTION_BANK = [
     id: 1125,
     category: `Comprehensive`,
     chapter: `Practice Test Five`,
-    question: `The client is scheduled for a myelogram today. The permit has been signed. The client tells the nurse that she has changed her mind and does not want to have the procedure. What should the nurse do?`,
+    prompt: `The client is scheduled for a myelogram today. The permit has been signed. The client tells the nurse that she has changed her mind and does not want to have the procedure. What should the nurse do?`,
     options: [
       `Tell the client that once permission has been given, the procedure has to be done`,
       `Tell the client that the physician will be very upset if she does not have it done`,
@@ -15799,7 +15798,7 @@ export const QUESTION_BANK = [
     id: 1126,
     category: `Comprehensive`,
     chapter: `Practice Test Five`,
-    question: `The nurse is caring for a woman who is receiving internal radiation for cancer of the cervix. Which nursing action will do most to reduce the risk of radiation exposure to other clients?`,
+    prompt: `The nurse is caring for a woman who is receiving internal radiation for cancer of the cervix. Which nursing action will do most to reduce the risk of radiation exposure to other clients?`,
     options: [
       `Keep the door to the client's room closed.`,
       `Place the client in the bed closest to the outside window.`,
@@ -15813,7 +15812,7 @@ export const QUESTION_BANK = [
     id: 1127,
     category: `Comprehensive`,
     chapter: `Practice Test Five`,
-    question: `The nurse is caring for a 79-year-old client. Which observation is not normal and should be reported for follow-up?`,
+    prompt: `The nurse is caring for a 79-year-old client. Which observation is not normal and should be reported for follow-up?`,
     options: [
       `The client has several brown spots on her cheek and neck.`,
       `The client says, "I move slower than I used to."`,
@@ -15827,7 +15826,7 @@ export const QUESTION_BANK = [
     id: 1128,
     category: `Comprehensive`,
     chapter: `Practice Test Five`,
-    question: `The nurse is caring for an aging client. Which statement the client makes indicates that he is having difficulty with the developmental tasks of aging?`,
+    prompt: `The nurse is caring for an aging client. Which statement the client makes indicates that he is having difficulty with the developmental tasks of aging?`,
     options: [
       `"I like to make toys for my grandchildren."`,
       `"I used to be a farmer, but now I can't do all that hard work."`,
@@ -15841,7 +15840,7 @@ export const QUESTION_BANK = [
     id: 1129,
     category: `Comprehensive`,
     chapter: `Practice Test Five`,
-    question: `A young woman who is at 32 weeks gestation reports to the physician's office for a routine prenatal visit. Which comment by the woman must be reported to the physician?`,
+    prompt: `A young woman who is at 32 weeks gestation reports to the physician's office for a routine prenatal visit. Which comment by the woman must be reported to the physician?`,
     options: [
       `"I had to stop wearing my rings because my fingers are swollen."`,
       `"I seem to be hotter than everyone else."`,
@@ -15855,7 +15854,7 @@ export const QUESTION_BANK = [
     id: 1130,
     category: `Comprehensive`,
     chapter: `Practice Test Five`,
-    question: `The nurse is caring for an older adult. Which statement made by the client is not typical of normal aging?`,
+    prompt: `The nurse is caring for an older adult. Which statement made by the client is not typical of normal aging?`,
     options: [
       `"I seem to be more sensitive to the taste of salt than I used to be."`,
       `"I have trouble reading the newspaper."`,
@@ -15869,7 +15868,7 @@ export const QUESTION_BANK = [
     id: 1131,
     category: `Comprehensive`,
     chapter: `Practice Test Five`,
-    question: `The nurse is to obtain pedal pulses on a client following a cardiac catheterization. Which is the proper procedure?`,
+    prompt: `The nurse is to obtain pedal pulses on a client following a cardiac catheterization. Which is the proper procedure?`,
     options: [
       `Place the fingertips against the wrist bone.`,
       `Place the stethoscope over the apex of the heart.`,
@@ -15883,7 +15882,7 @@ export const QUESTION_BANK = [
     id: 1132,
     category: `Comprehensive`,
     chapter: `Practice Test Five`,
-    question: `The nurse is to obtain an apical-radial pulse on a client. Which statement is true regarding obtaining an apical-radial pulse?`,
+    prompt: `The nurse is to obtain an apical-radial pulse on a client. Which statement is true regarding obtaining an apical-radial pulse?`,
     options: [
       `After taking the apical pulse, the nurse immediately takes the radial pulse.`,
       `The radial pulse is usually higher than the apical pulse.`,
@@ -15897,7 +15896,7 @@ export const QUESTION_BANK = [
     id: 1133,
     category: `Comprehensive`,
     chapter: `Practice Test Five`,
-    question: `The nurse is assessing the client's vital signs and notes that the client is breathing very noisily. The nurse describes this pattern of breathing as:`,
+    prompt: `The nurse is assessing the client's vital signs and notes that the client is breathing very noisily. The nurse describes this pattern of breathing as:`,
     options: [
       `hyperpnea`,
       `Cheyne-Stokes`,
@@ -15911,7 +15910,7 @@ export const QUESTION_BANK = [
     id: 1134,
     category: `Comprehensive`,
     chapter: `Practice Test Five`,
-    question: `The nurse is obtaining a blood pressure on a client who weighs over 300 pounds. The nurse chooses to use a large cuff for which of the following reasons?`,
+    prompt: `The nurse is obtaining a blood pressure on a client who weighs over 300 pounds. The nurse chooses to use a large cuff for which of the following reasons?`,
     options: [
       `A large cuff is more comfortable for the client.`,
       `Using a cuff that is too small causes the blood pressure reading to be abnormally high.`,
@@ -15925,7 +15924,7 @@ export const QUESTION_BANK = [
     id: 1135,
     category: `Comprehensive`,
     chapter: `Practice Test Five`,
-    question: `A postoperative client is to be discharged today. She will need to change her dressing daily. Which statement she makes indicates that she understands the process?`,
+    prompt: `A postoperative client is to be discharged today. She will need to change her dressing daily. Which statement she makes indicates that she understands the process?`,
     options: [
       `"I will wash my hands before and after I change the dressing."`,
       `"I can touch the dressings with my hands if I only touch the edges."`,
@@ -15939,7 +15938,7 @@ export const QUESTION_BANK = [
     id: 1136,
     category: `Comprehensive`,
     chapter: `Practice Test Five`,
-    question: `The nurse is caring for a client who is on bed rest for an extended period of time. When planning care, the nurse knows that which nursing action will do most to help prevent muscle atrophy?`,
+    prompt: `The nurse is caring for a client who is on bed rest for an extended period of time. When planning care, the nurse knows that which nursing action will do most to help prevent muscle atrophy?`,
     options: [
       `Perform passive range-of-motion exercises on the client`,
       `Turn the client at two-hour intervals`,
@@ -15953,7 +15952,7 @@ export const QUESTION_BANK = [
     id: 1137,
     category: `Comprehensive`,
     chapter: `Practice Test Five`,
-    question: `The nurse is caring for a client who has been on bed rest for several weeks. Which problem is least likely to be related to bed rest?`,
+    prompt: `The nurse is caring for a client who has been on bed rest for several weeks. Which problem is least likely to be related to bed rest?`,
     options: [
       `Muscle atrophy`,
       `Hypostatic pneumonia`,
@@ -15967,7 +15966,7 @@ export const QUESTION_BANK = [
     id: 1138,
     category: `Comprehensive`,
     chapter: `Practice Test Five`,
-    question: `The nurse is planning care for a client who must remain in bed for several weeks. Which action will do most to prevent the development of pressure ulcers?`,
+    prompt: `The nurse is planning care for a client who must remain in bed for several weeks. Which action will do most to prevent the development of pressure ulcers?`,
     options: [
       `Performing range-of-motion exercises`,
       `Deep breathing and coughing`,
@@ -15981,7 +15980,7 @@ export const QUESTION_BANK = [
     id: 1139,
     category: `Comprehensive`,
     chapter: `Practice Test Five`,
-    question: `The nurse is observing a certified nursing assistant move a client. Which action, if observed, indicates that the nursing assistant needs more instruction?`,
+    prompt: `The nurse is observing a certified nursing assistant move a client. Which action, if observed, indicates that the nursing assistant needs more instruction?`,
     options: [
       `The assistant stands with feet spread apart.`,
       `The assistant bends from the waist.`,
@@ -15995,7 +15994,7 @@ export const QUESTION_BANK = [
     id: 1140,
     category: `Comprehensive`,
     chapter: `Practice Test Five`,
-    question: `An adult client who is ambulating in the corridor with the nurse becomes dizzy and faint. What should the nurse do at this time?`,
+    prompt: `An adult client who is ambulating in the corridor with the nurse becomes dizzy and faint. What should the nurse do at this time?`,
     options: [
       `Have her put her head between her legs`,
       `Quickly go to get help`,
@@ -16009,7 +16008,7 @@ export const QUESTION_BANK = [
     id: 1141,
     category: `Comprehensive`,
     chapter: `Practice Test Five`,
-    question: `The nurse is caring for a client admitted with a sickle cell crisis. Which assessment finding is not consistent with the diagnosis?`,
+    prompt: `The nurse is caring for a client admitted with a sickle cell crisis. Which assessment finding is not consistent with the diagnosis?`,
     options: [
       `Enlarged liver and spleen`,
       `Jaundice and icterus`,
@@ -16023,7 +16022,7 @@ export const QUESTION_BANK = [
     id: 1142,
     category: `Comprehensive`,
     chapter: `Practice Test Five`,
-    question: `The wife of a man who is diagnosed with angina pectoris asks the nurse how she would know if her husband had a heart attack rather than angina. What should the nurse include in the reply?`,
+    prompt: `The wife of a man who is diagnosed with angina pectoris asks the nurse how she would know if her husband had a heart attack rather than angina. What should the nurse include in the reply?`,
     options: [
       `Crushing chest pain not relieved by nitroglycerin is likely to be a heart attack.`,
       `Epigastric pain relieved by antacids is likely to be angina.`,
@@ -16037,7 +16036,7 @@ export const QUESTION_BANK = [
     id: 1143,
     category: `Comprehensive`,
     chapter: `Practice Test Five`,
-    question: `The nurse is caring for a man who has recently been diagnosed with angina. Which statement he makes indicates understanding of his condition?`,
+    prompt: `The nurse is caring for a man who has recently been diagnosed with angina. Which statement he makes indicates understanding of his condition?`,
     options: [
       `"I should not exercise now that I have angina."`,
       `"If I have chest pain, I will take nitroglycerin."`,
@@ -16051,7 +16050,7 @@ export const QUESTION_BANK = [
     id: 1144,
     category: `Comprehensive`,
     chapter: `Practice Test Five`,
-    question: `The mother of a boy who has recently been diagnosed with sickle cell anemia is pregnant and asks the nurse if her unborn baby will have sickle cell anemia. What information should the nurse include in the answer?`,
+    prompt: `The mother of a boy who has recently been diagnosed with sickle cell anemia is pregnant and asks the nurse if her unborn baby will have sickle cell anemia. What information should the nurse include in the answer?`,
     options: [
       `Sickle cell anemia is a contagious disease, but your child should no longer be communicable by the time the baby is born.`,
       `When both parents are carriers, there is a 25% chance that each child will have sickle cell anemia.`,
@@ -16065,7 +16064,7 @@ export const QUESTION_BANK = [
     id: 1145,
     category: `Comprehensive`,
     chapter: `Practice Test Five`,
-    question: `What nursing action is essential when oxygen is ordered for a client who is living at home?`,
+    prompt: `What nursing action is essential when oxygen is ordered for a client who is living at home?`,
     options: [
       `Assist the client and family in checking all electrical appliances in the vicinity for frayed cords.`,
       `Encourage the client and family to purchase fire extinguishers.`,
@@ -16079,7 +16078,7 @@ export const QUESTION_BANK = [
     id: 1146,
     category: `Comprehensive`,
     chapter: `Practice Test Five`,
-    question: `An adult who has a tracheostomy needs to be suctioned. How should the nurse position the client for this procedure?`,
+    prompt: `An adult who has a tracheostomy needs to be suctioned. How should the nurse position the client for this procedure?`,
     options: [
       `Supine`,
       `Semi-sitting`,
@@ -16093,7 +16092,7 @@ export const QUESTION_BANK = [
     id: 1147,
     category: `Comprehensive`,
     chapter: `Practice Test Five`,
-    question: `The client is admitted for a bronchoscopy this morning. Which question is essential for the nurse to ask the client?`,
+    prompt: `The client is admitted for a bronchoscopy this morning. Which question is essential for the nurse to ask the client?`,
     options: [
       `"When did you last eat?"`,
       `"Did you take the laxative as ordered?"`,
@@ -16107,7 +16106,7 @@ export const QUESTION_BANK = [
     id: 1148,
     category: `Comprehensive`,
     chapter: `Practice Test Five`,
-    question: `The nurse is caring for a client who had thoracic surgery yesterday and has a chest tube attached to water seal drainage. The client's family asks why he has to have a chest tube. What should the nurse include in the response?`,
+    prompt: `The nurse is caring for a client who had thoracic surgery yesterday and has a chest tube attached to water seal drainage. The client's family asks why he has to have a chest tube. What should the nurse include in the response?`,
     options: [
       `The chest tube allows air to enter the thoracic cavity to equalize pressures in the lung.`,
       `The chest tube removes air from the pleural cavity and promotes reexpansion of the lung.`,
@@ -16121,7 +16120,7 @@ export const QUESTION_BANK = [
     id: 1149,
     category: `Comprehensive`,
     chapter: `Practice Test Five`,
-    question: `The nurse is caring for a client who had a chest tube inserted and attached to portable water seal drainage two days ago. There is no bubbling in the water seal chamber. What should the nurse assess initially?`,
+    prompt: `The nurse is caring for a client who had a chest tube inserted and attached to portable water seal drainage two days ago. There is no bubbling in the water seal chamber. What should the nurse assess initially?`,
     options: [
       `Observe the wound for excess drainage`,
       `Check the system for air leaks`,
@@ -16135,7 +16134,7 @@ export const QUESTION_BANK = [
     id: 1150,
     category: `Comprehensive`,
     chapter: `Practice Test Five`,
-    question: `The client is receiving a gentamicin IV. Which finding may indicate an adverse response to gentamicin?`,
+    prompt: `The client is receiving a gentamicin IV. Which finding may indicate an adverse response to gentamicin?`,
     options: [
       `Decreased urine output`,
       `Blurred vision`,
@@ -16149,7 +16148,7 @@ export const QUESTION_BANK = [
     id: 1151,
     category: `Comprehensive`,
     chapter: `Practice Test Five`,
-    question: `The nurse is caring for a client who had a cystoscopy earlier in the day. Which symptom from the client is of greatest concern to the nurse?`,
+    prompt: `The nurse is caring for a client who had a cystoscopy earlier in the day. Which symptom from the client is of greatest concern to the nurse?`,
     options: [
       `Complaint of back pain`,
       `Tea-colored urine`,
@@ -16163,7 +16162,7 @@ export const QUESTION_BANK = [
     id: 1152,
     category: `Comprehensive`,
     chapter: `Practice Test Five`,
-    question: `A client who is diagnosed with cystitis has been given a prescription for phenazopyridine (Pyridium). She asks the nurse why she has been given this medication. What should the nurse reply?`,
+    prompt: `A client who is diagnosed with cystitis has been given a prescription for phenazopyridine (Pyridium). She asks the nurse why she has been given this medication. What should the nurse reply?`,
     options: [
       `"Pyridium is an antibiotic that will kill the bacteria causing your infection."`,
       `"Pyridium is an analgesic that will make you less aware of the pain and discomfort."`,
@@ -16177,7 +16176,7 @@ export const QUESTION_BANK = [
     id: 1153,
     category: `Comprehensive`,
     chapter: `Practice Test Five`,
-    question: `An adult is admitted with suspected urolithiasis. Which nursing diagnosis is of highest priority when planning nursing care for this client immediately after admission?`,
+    prompt: `An adult is admitted with suspected urolithiasis. Which nursing diagnosis is of highest priority when planning nursing care for this client immediately after admission?`,
     options: [
       `Acute pain`,
       `Diarrhea`,
@@ -16191,7 +16190,7 @@ export const QUESTION_BANK = [
     id: 1154,
     category: `Comprehensive`,
     chapter: `Practice Test Five`,
-    question: `When admitting a client who has acute glomerulonephritis, the nurse expects that the client will report which information?`,
+    prompt: `When admitting a client who has acute glomerulonephritis, the nurse expects that the client will report which information?`,
     options: [
       `Recent bladder infection`,
       `History of previous kidney infections`,
@@ -16205,7 +16204,7 @@ export const QUESTION_BANK = [
     id: 1155,
     category: `Comprehensive`,
     chapter: `Practice Test Five`,
-    question: `The nurse is caring for an adult who has kidney stones. Which action is essential for the nurse to take?`,
+    prompt: `The nurse is caring for an adult who has kidney stones. Which action is essential for the nurse to take?`,
     options: [
       `Take blood pressure frequently`,
       `Keep the client on bed rest`,
@@ -16219,7 +16218,7 @@ export const QUESTION_BANK = [
     id: 1156,
     category: `Comprehensive`,
     chapter: `Practice Test Five`,
-    question: `The client is to be discharged after passing a uric acid kidney stone. This is the third time the client has been hospitalized for kidney stones. The nurse should teach the client to do which of the following?`,
+    prompt: `The client is to be discharged after passing a uric acid kidney stone. This is the third time the client has been hospitalized for kidney stones. The nurse should teach the client to do which of the following?`,
     options: [
       `Eat generous amounts of chicken and organ meats`,
       `Drink lots of water`,
@@ -16233,7 +16232,7 @@ export const QUESTION_BANK = [
     id: 1157,
     category: `Comprehensive`,
     chapter: `Practice Test Five`,
-    question: `The client has just had a basal cell carcinoma removed in the doctor's office. Which statement the client makes indicates understanding regarding prevention and early detection of basal cell carcinoma?`,
+    prompt: `The client has just had a basal cell carcinoma removed in the doctor's office. Which statement the client makes indicates understanding regarding prevention and early detection of basal cell carcinoma?`,
     options: [
       `"Moles that are round and brown should be seen immediately by my doctor."`,
       `"I should wear long sleeves when I am out in the sun."`,
@@ -16247,7 +16246,7 @@ export const QUESTION_BANK = [
     id: 1158,
     category: `Comprehensive`,
     chapter: `Practice Test Five`,
-    question: `Which statement made by an adolescent indicates understanding of how to reduce risk of osteoporosis later in life?`,
+    prompt: `Which statement made by an adolescent indicates understanding of how to reduce risk of osteoporosis later in life?`,
     options: [
       `"I will be careful not to sprain my ankle when I play sports."`,
       `"I drink a glass of milk with every meal."`,
@@ -16261,7 +16260,7 @@ export const QUESTION_BANK = [
     id: 1159,
     category: `Comprehensive`,
     chapter: `Practice Test Five`,
-    question: `The nurse is caring for a client who has right-sided weakness and has been told to use a cane for walking. Which action by the client indicates that he can use a cane correctly?`,
+    prompt: `The nurse is caring for a client who has right-sided weakness and has been told to use a cane for walking. Which action by the client indicates that he can use a cane correctly?`,
     options: [
       `He holds the cane in his right hand and moves the cane with the right leg when walking.`,
       `He moves the cane from hand to hand when walking.`,
@@ -16275,7 +16274,7 @@ export const QUESTION_BANK = [
     id: 1160,
     category: `Comprehensive`,
     chapter: `Practice Test Five`,
-    question: `An adult has low back pain. Which position is likely to be most comfortable for the client?`,
+    prompt: `An adult has low back pain. Which position is likely to be most comfortable for the client?`,
     options: [
       `Prone`,
       `Supine`,
@@ -16289,7 +16288,7 @@ export const QUESTION_BANK = [
     id: 1161,
     category: `Comprehensive`,
     chapter: `Practice Test Five`,
-    question: `One of the campers at summer camp sprains his ankle. What action can the nurse take to help reduce the pain?`,
+    prompt: `One of the campers at summer camp sprains his ankle. What action can the nurse take to help reduce the pain?`,
     options: [
       `Encourage the camper to gently exercise the ankle several times every hour`,
       `Apply an ice pack to the ankle`,
@@ -16303,7 +16302,7 @@ export const QUESTION_BANK = [
     id: 1162,
     category: `Comprehensive`,
     chapter: `Practice Test Five`,
-    question: `A home care client says she is having difficulty getting to sleep at night. Which suggestion could the nurse make to help the client?`,
+    prompt: `A home care client says she is having difficulty getting to sleep at night. Which suggestion could the nurse make to help the client?`,
     options: [
       `Exercise shortly before going to bed.`,
       `Drink a cola beverage during the evening.`,
@@ -16317,7 +16316,7 @@ export const QUESTION_BANK = [
     id: 1163,
     category: `Comprehensive`,
     chapter: `Practice Test Five`,
-    question: `The client's blood gas values are: pH = 7.35; CO2 = 60; HCO3 = 34; and pO2 = 60. The nurse correctly interprets these to indicate that the client is in which state?`,
+    prompt: `The client's blood gas values are: pH = 7.35; CO2 = 60; HCO3 = 34; and pO2 = 60. The nurse correctly interprets these to indicate that the client is in which state?`,
     options: [
       `Compensated respiratory acidosis`,
       `Partly compensated metabolic alkalosis`,
@@ -16331,7 +16330,7 @@ export const QUESTION_BANK = [
     id: 1164,
     category: `Comprehensive`,
     chapter: `Practice Test Five`,
-    question: `What question should the nurse ask the client who presents for an MRI test?`,
+    prompt: `What question should the nurse ask the client who presents for an MRI test?`,
     options: [
       `"Are you allergic to iodine or shellfish?"`,
       `"When did you last eat or drink anything?"`,
@@ -16345,7 +16344,7 @@ export const QUESTION_BANK = [
     id: 1165,
     category: `Comprehensive`,
     chapter: `Practice Test Five`,
-    question: `The nurse notes all of the following. Which situation needs immediate attention?`,
+    prompt: `The nurse notes all of the following. Which situation needs immediate attention?`,
     options: [
       `Dirty linen has fallen on the floor beside the bed of a bedridden client.`,
       `Breakfast dishes remain on the overbed table two hours after mealtime.`,
@@ -16359,7 +16358,7 @@ export const QUESTION_BANK = [
     id: 1166,
     category: `Comprehensive`,
     chapter: `Practice Test Five`,
-    question: `While caring for a woman who delivered a healthy term infant six hours ago, the nurse notes that the fundus is soft, 2 cm above the umbilicus, and off to the left. The lochia is red. The nurse suspects that the client has which problem?`,
+    prompt: `While caring for a woman who delivered a healthy term infant six hours ago, the nurse notes that the fundus is soft, 2 cm above the umbilicus, and off to the left. The lochia is red. The nurse suspects that the client has which problem?`,
     options: [
       `Retained placental fragments`,
       `Perineal laceration`,
@@ -16373,7 +16372,7 @@ export const QUESTION_BANK = [
     id: 1167,
     category: `Comprehensive`,
     chapter: `Practice Test Five`,
-    question: `The mother of a 1-week-old infant says to the nurse, "When will that ugly black cord thing come off?" How should the nurse reply?`,
+    prompt: `The mother of a 1-week-old infant says to the nurse, "When will that ugly black cord thing come off?" How should the nurse reply?`,
     options: [
       `"Are you wiping it with alcohol each time you change the baby's diaper?"`,
       `"It usually comes off in 10 days to three weeks."`,
@@ -16387,7 +16386,7 @@ export const QUESTION_BANK = [
     id: 1168,
     category: `Comprehensive`,
     chapter: `Practice Test Five`,
-    question: `A 6-month-old infant is being seen in the doctor's office. Which observation by the nurse should be brought to the physician's attention?`,
+    prompt: `A 6-month-old infant is being seen in the doctor's office. Which observation by the nurse should be brought to the physician's attention?`,
     options: [
       `The baby sits up but needs slight support.`,
       `The baby was 7 lb at birth and now weighs 10 lb.`,
@@ -16401,7 +16400,7 @@ export const QUESTION_BANK = [
     id: 1169,
     category: `Comprehensive`,
     chapter: `Practice Test Five`,
-    question: `The nurse is to administer a tube feeding to an adult. What action is essential before administering the feeding?`,
+    prompt: `The nurse is to administer a tube feeding to an adult. What action is essential before administering the feeding?`,
     options: [
       `Position the client in a supine position`,
       `Check the position of the feeding tube`,
@@ -16415,7 +16414,7 @@ export const QUESTION_BANK = [
     id: 1170,
     category: `Comprehensive`,
     chapter: `Practice Test Five`,
-    question: `An adult who had a mastectomy yesterday says to the nurse, "I guess I'm not a real woman anymore. How could my husband possibly love me now?" What is the best response for the nurse to make?`,
+    prompt: `An adult who had a mastectomy yesterday says to the nurse, "I guess I'm not a real woman anymore. How could my husband possibly love me now?" What is the best response for the nurse to make?`,
     options: [
       `"You don't feel like a woman now?"`,
       `"Has your husband said anything to you?"`,
@@ -16429,7 +16428,7 @@ export const QUESTION_BANK = [
     id: 1171,
     category: `Comprehensive`,
     chapter: `Practice Test Five`,
-    question: `A client who has been waiting for several hours in the clinic waiting room suddenly begins to shout, "I need some attention and I need it now!" How should the nurse respond initially?`,
+    prompt: `A client who has been waiting for several hours in the clinic waiting room suddenly begins to shout, "I need some attention and I need it now!" How should the nurse respond initially?`,
     options: [
       `Tell the client to be quiet and that she will be seen as soon as possible`,
       `Immediately call security and the police`,
@@ -16443,7 +16442,7 @@ export const QUESTION_BANK = [
     id: 1172,
     category: `Comprehensive`,
     chapter: `Practice Test Five`,
-    question: `The mother of 6-month-old twins is in the doctor's office because one of the infants has an ear infection. The mother says to the nurse, "I just don't know if I can handle another problem. It is all so overwhelming." How should the nurse respond initially?`,
+    prompt: `The mother of 6-month-old twins is in the doctor's office because one of the infants has an ear infection. The mother says to the nurse, "I just don't know if I can handle another problem. It is all so overwhelming." How should the nurse respond initially?`,
     options: [
       `"You're their mother. I'm sure you know what's best for them."`,
       `"Have you called social services to see if you qualify for assistance?"`,
@@ -16457,7 +16456,7 @@ export const QUESTION_BANK = [
     id: 1173,
     category: `Comprehensive`,
     chapter: `Practice Test Five`,
-    question: `There have been several clients recently who have fallen in the long-term care facility. The nurse would like to reduce the number of falls. Which action is likely to do the most to help prevent falls?`,
+    prompt: `There have been several clients recently who have fallen in the long-term care facility. The nurse would like to reduce the number of falls. Which action is likely to do the most to help prevent falls?`,
     options: [
       `Ask the nursing assistants to watch the clients more carefully.`,
       `Restrain clients who cannot walk independently.`,
@@ -16471,7 +16470,7 @@ export const QUESTION_BANK = [
     id: 1174,
     category: `Comprehensive`,
     chapter: `Practice Test Five`,
-    question: `The nurse is observing a nursing assistant providing care. Which action indicates that the nursing assistant understands universal precautions?`,
+    prompt: `The nurse is observing a nursing assistant providing care. Which action indicates that the nursing assistant understands universal precautions?`,
     options: [
       `The nursing assistant washes hands first thing in the morning before giving care to any client and again after all morning care is completed.`,
       `The nursing assistant wears gloves during all client contact.`,
@@ -16485,7 +16484,7 @@ export const QUESTION_BANK = [
     id: 1175,
     category: `Comprehensive`,
     chapter: `Practice Test Five`,
-    question: `The nurse is changing a dressing. Which event indicates a break in sterile technique?`,
+    prompt: `The nurse is changing a dressing. Which event indicates a break in sterile technique?`,
     options: [
       `The nurse opens the sterile dressing set by opening the first flap away from herself.`,
       `The nurse turns around when answering a question asked by the client in the other bed.`,
@@ -16499,7 +16498,7 @@ export const QUESTION_BANK = [
     id: 1176,
     category: `Comprehensive`,
     chapter: `Practice Test Five`,
-    question: `The nurse is assisting at a disaster shelter setup following a devastating earthquake. What is the most common problem the nurse is likely to see in those who come to the shelter?`,
+    prompt: `The nurse is assisting at a disaster shelter setup following a devastating earthquake. What is the most common problem the nurse is likely to see in those who come to the shelter?`,
     options: [
       `Thirst`,
       `Traumatic injuries`,
@@ -16513,7 +16512,7 @@ export const QUESTION_BANK = [
     id: 1177,
     category: `Comprehensive`,
     chapter: `Practice Test Five`,
-    question: `The nurse is caring for a frail elderly client in her home. Which behavior, if observed or reported, should the nurse report to the supervisor for further evaluation of possible abuse?`,
+    prompt: `The nurse is caring for a frail elderly client in her home. Which behavior, if observed or reported, should the nurse report to the supervisor for further evaluation of possible abuse?`,
     options: [
       `The client's daughter is attempting to be declared her mother's legal guardian.`,
       `The client is frequently left in bed alone in the house for several hours at a time.`,
@@ -16527,7 +16526,7 @@ export const QUESTION_BANK = [
     id: 1178,
     category: `Comprehensive`,
     chapter: `Practice Test Five`,
-    question: `A woman is being seen in the physician's office for a medical complaint. When she is called to see the physician, she goes to the restroom and washes her hands over and over, missing her allotted time with the physician. How should the nurse deal with this woman?`,
+    prompt: `A woman is being seen in the physician's office for a medical complaint. When she is called to see the physician, she goes to the restroom and washes her hands over and over, missing her allotted time with the physician. How should the nurse deal with this woman?`,
     options: [
       `Send her home without seeing the doctor if she is not available when called`,
       `Give her advance warning that she will be seeing the physician and tell her that if she needs to wash her hands, she should do so`,
@@ -16541,7 +16540,7 @@ export const QUESTION_BANK = [
     id: 1179,
     category: `Comprehensive`,
     chapter: `Practice Test Five`,
-    question: `A woman who was recently widowed says to the nurse, "I just can't believe he's gone. Sometimes I even think I see him standing there." What does this comment indicate about the client?`,
+    prompt: `A woman who was recently widowed says to the nurse, "I just can't believe he's gone. Sometimes I even think I see him standing there." What does this comment indicate about the client?`,
     options: [
       `She is in an early stage of normal grief.`,
       `She may be hallucinating.`,
@@ -16555,7 +16554,7 @@ export const QUESTION_BANK = [
     id: 1180,
     category: `Comprehensive`,
     chapter: `Practice Test Five`,
-    question: `The preoperative client is from a different country and tells the nurse that his family will be coming for a prayer service. Eighteen persons arrive and start chanting in the client's semi-private room. What is the best response for the nurse?`,
+    prompt: `The preoperative client is from a different country and tells the nurse that his family will be coming for a prayer service. Eighteen persons arrive and start chanting in the client's semi-private room. What is the best response for the nurse?`,
     options: [
       `Explain that visitors are limited to two per client`,
       `Ask the client's roommate if he/she objects to so many persons in the room`,
@@ -16569,7 +16568,7 @@ export const QUESTION_BANK = [
     id: 1181,
     category: `Comprehensive`,
     chapter: `Practice Test Five`,
-    question: `An adolescent is to be admitted to the orthopedic floor with several fractures. The client has been taking hallucinogens this evening. What should the nurse expect on admission because the client is using hallucinogens?`,
+    prompt: `An adolescent is to be admitted to the orthopedic floor with several fractures. The client has been taking hallucinogens this evening. What should the nurse expect on admission because the client is using hallucinogens?`,
     options: [
       `Severe depression`,
       `Violent behavior`,
@@ -16583,7 +16582,7 @@ export const QUESTION_BANK = [
     id: 1182,
     category: `Comprehensive`,
     chapter: `Practice Test Five`,
-    question: `An adult has completed an alcohol detoxification program and is being discharged with disulfiram (Antabuse). Which statement that the client makes indicates a need for more teaching?`,
+    prompt: `An adult has completed an alcohol detoxification program and is being discharged with disulfiram (Antabuse). Which statement that the client makes indicates a need for more teaching?`,
     options: [
       `"I have learned my lesson. I won't drink more than two beers."`,
       `"I will not use mouthwash while I am taking Antabuse."`,
@@ -16597,7 +16596,7 @@ export const QUESTION_BANK = [
     id: 1183,
     category: `Comprehensive`,
     chapter: `Practice Test Five`,
-    question: `The nurse is caring for a woman who is admitted following a beating by her husband. The woman says, "It wasn't really his fault. Dinner was late." The husband arrives to visit his wife with a large bouquet of flowers and a box of chocolates. The woman later says to the nurse, "He feels so bad about what he did and says it will never happen again." What concept should guide the nurse when replying to the client?`,
+    prompt: `The nurse is caring for a woman who is admitted following a beating by her husband. The woman says, "It wasn't really his fault. Dinner was late." The husband arrives to visit his wife with a large bouquet of flowers and a box of chocolates. The woman later says to the nurse, "He feels so bad about what he did and says it will never happen again." What concept should guide the nurse when replying to the client?`,
     options: [
       `Men who abuse their wives and then repent usually do not do it again.`,
       `The woman is quite perceptive and should be safe when she is discharged.`,
@@ -16611,7 +16610,7 @@ export const QUESTION_BANK = [
     id: 1184,
     category: `Comprehensive`,
     chapter: `Practice Test Five`,
-    question: `Which characteristic is most likely to be present in persons who abuse others?`,
+    prompt: `Which characteristic is most likely to be present in persons who abuse others?`,
     options: [
       `Financial security`,
       `Positive self-image`,
@@ -16625,7 +16624,7 @@ export const QUESTION_BANK = [
     id: 1185,
     category: `Comprehensive`,
     chapter: `Practice Test Five`,
-    question: `An adult man believes that someone is poisoning his food. What is the best nursing action in response to this belief?`,
+    prompt: `An adult man believes that someone is poisoning his food. What is the best nursing action in response to this belief?`,
     options: [
       `Explain to him that no one is poisoning his food`,
       `Tell him that the food is prepared in the hospital under secure conditions`,
@@ -16639,7 +16638,7 @@ export const QUESTION_BANK = [
     id: 1186,
     category: `Comprehensive`,
     chapter: `Practice Test Five`,
-    question: `A newly admitted client is exhibiting signs of severe anxiety. She is pacing back and forth and has difficulty concentrating on the nurse's questions. What nursing action is most appropriate at this time?`,
+    prompt: `A newly admitted client is exhibiting signs of severe anxiety. She is pacing back and forth and has difficulty concentrating on the nurse's questions. What nursing action is most appropriate at this time?`,
     options: [
       `Tell the client to sit down and get control of herself`,
       `Leave the room until she regains control`,
@@ -16653,7 +16652,7 @@ export const QUESTION_BANK = [
     id: 1187,
     category: `Comprehensive`,
     chapter: `Practice Test Five`,
-    question: `A 2-year-old child is seen in the pediatrician's office. The child screams when the nurse approaches him to give him the ordered IM medication. How should the nurse approach the child?`,
+    prompt: `A 2-year-old child is seen in the pediatrician's office. The child screams when the nurse approaches him to give him the ordered IM medication. How should the nurse approach the child?`,
     options: [
       `Tell him to stop screaming and he can have a lollipop after he gets the shot`,
       `Ask him to point to the leg he wants you to use`,
@@ -16667,7 +16666,7 @@ export const QUESTION_BANK = [
     id: 1188,
     category: `Comprehensive`,
     chapter: `Practice Test Five`,
-    question: `An adult who is admitted for surgery today says to the nurse, "I'm so afraid. Do you think the doctor knows what he is doing? Does anyone ever survive this type of operation?" How should the nurse reply?`,
+    prompt: `An adult who is admitted for surgery today says to the nurse, "I'm so afraid. Do you think the doctor knows what he is doing? Does anyone ever survive this type of operation?" How should the nurse reply?`,
     options: [
       `"People who have this type of surgery almost always survive and get better."`,
       `"Don't worry; your doctor is very skilled and has done many operations like yours."`,
@@ -16683,7 +16682,7 @@ export const QUESTION_BANK = [
     id: 1189,
     category: `Comprehensive`,
     chapter: `Practice Test Six`,
-    question: `A client has fludrocortisone acetate (Florinef) prescribed. What blood tests should the nurse monitor when administering this drug?`,
+    prompt: `A client has fludrocortisone acetate (Florinef) prescribed. What blood tests should the nurse monitor when administering this drug?`,
     options: [
       `Liver function tests`,
       `Renal function tests`,
@@ -16697,7 +16696,7 @@ export const QUESTION_BANK = [
     id: 1190,
     category: `Comprehensive`,
     chapter: `Practice Test Six`,
-    question: `A 40-year-old woman is admitted in labor with high blood pressure, edema, and proteinuria. She is started on magnesium sulfate. The nurse caring for her should be sure to keep which drug at the bedside?`,
+    prompt: `A 40-year-old woman is admitted in labor with high blood pressure, edema, and proteinuria. She is started on magnesium sulfate. The nurse caring for her should be sure to keep which drug at the bedside?`,
     options: [
       `Calcium gluconate`,
       `Naloxone (Narcan)`,
@@ -16711,7 +16710,7 @@ export const QUESTION_BANK = [
     id: 1191,
     category: `Comprehensive`,
     chapter: `Practice Test Six`,
-    question: `A woman who is in labor is being treated for preeclampsia. How will the nurse know if the client develops eclampsia?`,
+    prompt: `A woman who is in labor is being treated for preeclampsia. How will the nurse know if the client develops eclampsia?`,
     options: [
       `The client has albuminuria.`,
       `The client has a seizure.`,
@@ -16725,7 +16724,7 @@ export const QUESTION_BANK = [
     id: 1192,
     category: `Comprehensive`,
     chapter: `Practice Test Six`,
-    question: `A 2-month-old infant is admitted with pyloric stenosis and will be going to surgery. What toy should the nurse provide for this infant?`,
+    prompt: `A 2-month-old infant is admitted with pyloric stenosis and will be going to surgery. What toy should the nurse provide for this infant?`,
     options: [
       `A stuffed teddy bear with a large colorful bow`,
       `A "busy box"`,
@@ -16739,7 +16738,7 @@ export const QUESTION_BANK = [
     id: 1193,
     category: `Comprehensive`,
     chapter: `Practice Test Six`,
-    question: `A 4-year-old child with Down syndrome is admitted to the hospital with pneumonia. She has a heart murmur and appears to be in respiratory distress. Her mother asks why her child has a heart murmur. What is the best nursing response?`,
+    prompt: `A 4-year-old child with Down syndrome is admitted to the hospital with pneumonia. She has a heart murmur and appears to be in respiratory distress. Her mother asks why her child has a heart murmur. What is the best nursing response?`,
     options: [
       `"Because she has pneumonia, her heart is working harder and causes the murmur."`,
       `"Heart murmurs come and go in children. It is not a great concern."`,
@@ -16753,7 +16752,7 @@ export const QUESTION_BANK = [
     id: 1194,
     category: `Comprehensive`,
     chapter: `Practice Test Six`,
-    question: `A 7-year-old boy is in the hospital with Reye's syndrome. He has been ill for two weeks with the flu. He ran high fevers and was treated with four baby aspirin alternating with 325-mg chewable Tylenol and sponge baths to control the fever. He also had a rash on his body that was itchy, and his mother used lotion and Benadryl to control the itching. Besides history of the flu, which factor in his history is associated with development of Reye's syndrome?`,
+    prompt: `A 7-year-old boy is in the hospital with Reye's syndrome. He has been ill for two weeks with the flu. He ran high fevers and was treated with four baby aspirin alternating with 325-mg chewable Tylenol and sponge baths to control the fever. He also had a rash on his body that was itchy, and his mother used lotion and Benadryl to control the itching. Besides history of the flu, which factor in his history is associated with development of Reye's syndrome?`,
     options: [
       `The use of diphenhydramine (Benadryl)`,
       `The use of acetaminophen (Tylenol)`,
@@ -16767,7 +16766,7 @@ export const QUESTION_BANK = [
     id: 1195,
     category: `Comprehensive`,
     chapter: `Practice Test Six`,
-    question: `A 15-month-old child with Hirschsprung's disease comes for a checkup. The mother reports all of the following. Which indicates a need for more instruction?`,
+    prompt: `A 15-month-old child with Hirschsprung's disease comes for a checkup. The mother reports all of the following. Which indicates a need for more instruction?`,
     options: [
       `The mother limits the child's physical activity to preserve calories.`,
       `The child receives daily saline enemas.`,
@@ -16781,7 +16780,7 @@ export const QUESTION_BANK = [
     id: 1196,
     category: `Comprehensive`,
     chapter: `Practice Test Six`,
-    question: `A mother noticed a large abdominal mass when helping her 3-year-old child bathe. The child is taken to the physician and admitted to the hospital after an intravenous pyelogram (IVP) confirms the diagnosis of Wilms' tumor. Which nursing action is essential to include in the nursing care plan?`,
+    prompt: `A mother noticed a large abdominal mass when helping her 3-year-old child bathe. The child is taken to the physician and admitted to the hospital after an intravenous pyelogram (IVP) confirms the diagnosis of Wilms' tumor. Which nursing action is essential to include in the nursing care plan?`,
     options: [
       `Strain all urine and save for analysis.`,
       `Avoid palpating the abdomen.`,
@@ -16795,7 +16794,7 @@ export const QUESTION_BANK = [
     id: 1197,
     category: `Comprehensive`,
     chapter: `Practice Test Six`,
-    question: `A woman who is pregnant for the first time asks the nurse when during pregnancy is the best time to take Lamaze classes. What should the nurse respond?`,
+    prompt: `A woman who is pregnant for the first time asks the nurse when during pregnancy is the best time to take Lamaze classes. What should the nurse respond?`,
     options: [
       `During the first trimester`,
       `During the second trimester`,
@@ -16809,7 +16808,7 @@ export const QUESTION_BANK = [
     id: 1198,
     category: `Comprehensive`,
     chapter: `Practice Test Six`,
-    question: `A woman who comes in for prenatal care has a history of herpes with outbreaks that occur every six months to a year. She asks if this means she will have a cesarean delivery. How should the nurse respond?`,
+    prompt: `A woman who comes in for prenatal care has a history of herpes with outbreaks that occur every six months to a year. She asks if this means she will have a cesarean delivery. How should the nurse respond?`,
     options: [
       `"If you have active lesions when you go into labor, you will need a cesarean section."`,
       `"Cesarean delivery is the only way to protect your baby from herpes."`,
@@ -16823,7 +16822,7 @@ export const QUESTION_BANK = [
     id: 1199,
     category: `Comprehensive`,
     chapter: `Practice Test Six`,
-    question: `The nurse is discussing health concerns with a group of adolescent girls. When discussing genital warts caused by condyloma acuminata (HPV), the nurse should emphasize that the organism increases the risk of which condition?`,
+    prompt: `The nurse is discussing health concerns with a group of adolescent girls. When discussing genital warts caused by condyloma acuminata (HPV), the nurse should emphasize that the organism increases the risk of which condition?`,
     options: [
       `Infertility`,
       `Congenital anomalies`,
@@ -16837,7 +16836,7 @@ export const QUESTION_BANK = [
     id: 1200,
     category: `Comprehensive`,
     chapter: `Practice Test Six`,
-    question: `The nurse caring for newborns observes for jaundice. Which type of jaundice is likely to be most serious?`,
+    prompt: `The nurse caring for newborns observes for jaundice. Which type of jaundice is likely to be most serious?`,
     options: [
       `Jaundice that occurs during the first day of life`,
       `Jaundice occurring after 48 hours of life`,
@@ -16851,7 +16850,7 @@ export const QUESTION_BANK = [
     id: 1201,
     category: `Comprehensive`,
     chapter: `Practice Test Six`,
-    question: `The mother of a newborn asks why the nurse is checking the baby's nose. The nurse replies that it is important to check nasal patency because the newborn:`,
+    prompt: `The mother of a newborn asks why the nurse is checking the baby's nose. The nurse replies that it is important to check nasal patency because the newborn:`,
     options: [
       `does not have the ability to sneeze.`,
       `must breathe through his nose.`,
@@ -16865,7 +16864,7 @@ export const QUESTION_BANK = [
     id: 1202,
     category: `Comprehensive`,
     chapter: `Practice Test Six`,
-    question: `The nurse is caring for a 31-year-old gravida 2, para 1 woman who is in labor. The woman calls the nurse and says, "My water has broken and I feel something between my legs." The nurse looks and sees a loop of umbilical cord at the vaginal outlet. After signaling for help, what should the nurse do?`,
+    prompt: `The nurse is caring for a 31-year-old gravida 2, para 1 woman who is in labor. The woman calls the nurse and says, "My water has broken and I feel something between my legs." The nurse looks and sees a loop of umbilical cord at the vaginal outlet. After signaling for help, what should the nurse do?`,
     options: [
       `Try to replace the cord with a sterile gloved hand`,
       `Place the mother in knee-chest position`,
@@ -16879,7 +16878,7 @@ export const QUESTION_BANK = [
     id: 1203,
     category: `Comprehensive`,
     chapter: `Practice Test Six`,
-    question: `A laboring woman prefers to lie in the supine position during labor. The nurse teaches her that this is not a good position for which reason?`,
+    prompt: `A laboring woman prefers to lie in the supine position during labor. The nurse teaches her that this is not a good position for which reason?`,
     options: [
       `It will cause more back pressure.`,
       `Her baby will not come down well into the pelvis.`,
@@ -16893,7 +16892,7 @@ export const QUESTION_BANK = [
     id: 1204,
     category: `Comprehensive`,
     chapter: `Practice Test Six`,
-    question: `All of the following clients are on the unit. Which one is most likely to develop urinary retention?`,
+    prompt: `All of the following clients are on the unit. Which one is most likely to develop urinary retention?`,
     options: [
       `A woman who had a modified radical mastectomy yesterday`,
       `A man who had an abdominal cholecystectomy this morning`,
@@ -16907,7 +16906,7 @@ export const QUESTION_BANK = [
     id: 1205,
     category: `Comprehensive`,
     chapter: `Practice Test Six`,
-    question: `A client who had a total knee replacement is to be discharged today. Which statement that the client makes indicates a need for further instruction?`,
+    prompt: `A client who had a total knee replacement is to be discharged today. Which statement that the client makes indicates a need for further instruction?`,
     options: [
       `"When I am walking, I will wear that ugly immobilizer."`,
       `"I will sit with my leg elevated."`,
@@ -16921,7 +16920,7 @@ export const QUESTION_BANK = [
     id: 1206,
     category: `Comprehensive`,
     chapter: `Practice Test Six`,
-    question: `An adult is receiving cancer chemotherapy. Metoclopramide (Reglan) is also prescribed. The client asks why she is getting Reglan. How should the nurse respond?`,
+    prompt: `An adult is receiving cancer chemotherapy. Metoclopramide (Reglan) is also prescribed. The client asks why she is getting Reglan. How should the nurse respond?`,
     options: [
       `"Reglan helps to prevent bleeding that may occur as a side effect of your other medications."`,
       `"Reglan helps to prevent any nausea and vomiting that may occur as a side effect of your other medications."`,
@@ -16935,7 +16934,7 @@ export const QUESTION_BANK = [
     id: 1207,
     category: `Comprehensive`,
     chapter: `Practice Test Six`,
-    question: `A very tall, heavy-set man is admitted. The nurse is taking vital signs. Which statement is correct concerning taking the blood pressure?`,
+    prompt: `A very tall, heavy-set man is admitted. The nurse is taking vital signs. Which statement is correct concerning taking the blood pressure?`,
     options: [
       `10 mm should be added to each reading to compensate for the cuff size.`,
       `15 mm should be subtracted from the systolic reading, and 10 mm should be subtracted from the diastolic reading.`,
@@ -16949,7 +16948,7 @@ export const QUESTION_BANK = [
     id: 1208,
     category: `Comprehensive`,
     chapter: `Practice Test Six`,
-    question: `The nurse is auscultating the lungs in a postoperative client and hears something that sounds like a cellophane bag being wrinkled when the client takes in a breath. How should the nurse record this finding?`,
+    prompt: `The nurse is auscultating the lungs in a postoperative client and hears something that sounds like a cellophane bag being wrinkled when the client takes in a breath. How should the nurse record this finding?`,
     options: [
       `Crackles`,
       `Stridor`,
@@ -16963,7 +16962,7 @@ export const QUESTION_BANK = [
     id: 1209,
     category: `Comprehensive`,
     chapter: `Practice Test Six`,
-    question: `The client who is scheduled for a knee replacement asks the nurse why she should donate her own blood before surgery. How should the nurse respond?`,
+    prompt: `The client who is scheduled for a knee replacement asks the nurse why she should donate her own blood before surgery. How should the nurse respond?`,
     options: [
       `"The blood bank is very short of blood."`,
       `"Your own blood is the correct type for you."`,
@@ -16977,7 +16976,7 @@ export const QUESTION_BANK = [
     id: 1210,
     category: `Comprehensive`,
     chapter: `Practice Test Six`,
-    question: `The client who is receiving hydantoin (Dilantin) tells the nurse his urine is pink-colored. What action should the nurse take?`,
+    prompt: `The client who is receiving hydantoin (Dilantin) tells the nurse his urine is pink-colored. What action should the nurse take?`,
     options: [
       `Report this serious side effect immediately to the physician`,
       `Reassure the client that this occurs often in persons taking Dilantin`,
@@ -16991,7 +16990,7 @@ export const QUESTION_BANK = [
     id: 1211,
     category: `Comprehensive`,
     chapter: `Practice Test Six`,
-    question: `A woman who was recently diagnosed with multiple myeloma says to the nurse, "Why did this happen to me? I've always been a good person. What did I do to deserve this?" What should the nurse do initially?`,
+    prompt: `A woman who was recently diagnosed with multiple myeloma says to the nurse, "Why did this happen to me? I've always been a good person. What did I do to deserve this?" What should the nurse do initially?`,
     options: [
       `Remind the client that she is not dying now and has some time left`,
       `Call the chaplain to discuss why it happened to her`,
@@ -17005,7 +17004,7 @@ export const QUESTION_BANK = [
     id: 1212,
     category: `Comprehensive`,
     chapter: `Practice Test Six`,
-    question: `A client asks the home care nurse to look at the bruises on her arms and legs. The woman also tells the nurse that her gums bleed when she uses dental floss or brushes her teeth. The client is taking all of the following medications. Which is most likely related to the client's symptoms?`,
+    prompt: `A client asks the home care nurse to look at the bruises on her arms and legs. The woman also tells the nurse that her gums bleed when she uses dental floss or brushes her teeth. The client is taking all of the following medications. Which is most likely related to the client's symptoms?`,
     options: [
       `Metformin (Glucophage)`,
       `Estrogen (Premarin)`,
@@ -17019,7 +17018,7 @@ export const QUESTION_BANK = [
     id: 1213,
     category: `Comprehensive`,
     chapter: `Practice Test Six`,
-    question: `The client is taking streptomycin, isoniazid, and rifampin (Rimactane). Which statement indicates toxicity to isoniazid?`,
+    prompt: `The client is taking streptomycin, isoniazid, and rifampin (Rimactane). Which statement indicates toxicity to isoniazid?`,
     options: [
       `My ears ring all the time.`,
       `I have sharp pains in my legs.`,
@@ -17033,7 +17032,7 @@ export const QUESTION_BANK = [
     id: 1214,
     category: `Comprehensive`,
     chapter: `Practice Test Six`,
-    question: `The nurse observes the certified nursing assistant doing all of the following. Which action needs correction?`,
+    prompt: `The nurse observes the certified nursing assistant doing all of the following. Which action needs correction?`,
     options: [
       `Changing the dressing of a client with an abdominal wound`,
       `Asking a standing client to sit down while vital signs are taken`,
@@ -17047,7 +17046,7 @@ export const QUESTION_BANK = [
     id: 1215,
     category: `Comprehensive`,
     chapter: `Practice Test Six`,
-    question: `A man who has diabetes complains of hunger; is pale, shaky, and perspiring; and has cool skin. What is the most appropriate initial action for the nurse?`,
+    prompt: `A man who has diabetes complains of hunger; is pale, shaky, and perspiring; and has cool skin. What is the most appropriate initial action for the nurse?`,
     options: [
       `Call the physician for orders`,
       `Give the client cola to drink`,
@@ -17061,7 +17060,7 @@ export const QUESTION_BANK = [
     id: 1216,
     category: `Comprehensive`,
     chapter: `Practice Test Six`,
-    question: `A client who had a total thyroidectomy this morning returns to the nursing care unit. How should the nurse position the client?`,
+    prompt: `A client who had a total thyroidectomy this morning returns to the nursing care unit. How should the nurse position the client?`,
     options: [
       `Semi-sitting`,
       `Supine`,
@@ -17075,7 +17074,7 @@ export const QUESTION_BANK = [
     id: 1217,
     category: `Comprehensive`,
     chapter: `Practice Test Six`,
-    question: `All of the following clients need care. Who should the nurse see first?`,
+    prompt: `All of the following clients need care. Who should the nurse see first?`,
     options: [
       `A diabetic whose blood sugar is 40`,
       `A postoperative client who is complaining of severe pain`,
@@ -17089,7 +17088,7 @@ export const QUESTION_BANK = [
     id: 1218,
     category: `Comprehensive`,
     chapter: `Practice Test Six`,
-    question: `The nurse is working with a person who was just diagnosed with diabetes mellitus Type 2. What should the nurse teach the client first?`,
+    prompt: `The nurse is working with a person who was just diagnosed with diabetes mellitus Type 2. What should the nurse teach the client first?`,
     options: [
       `How to self-inject insulin`,
       `How to follow a diabetic diet`,
@@ -17103,7 +17102,7 @@ export const QUESTION_BANK = [
     id: 1219,
     category: `Comprehensive`,
     chapter: `Practice Test Six`,
-    question: `The nurse is caring for a person admitted with myasthenia gravis. What should be included in the nursing care plan for this person?`,
+    prompt: `The nurse is caring for a person admitted with myasthenia gravis. What should be included in the nursing care plan for this person?`,
     options: [
       `Have the client bathe late in the day.`,
       `Check swallowing reflexes before feeding.`,
@@ -17117,7 +17116,7 @@ export const QUESTION_BANK = [
     id: 1220,
     category: `Comprehensive`,
     chapter: `Practice Test Six`,
-    question: `Which of the following clients should be cared for first?`,
+    prompt: `Which of the following clients should be cared for first?`,
     options: [
       `An elderly woman who has been incontinent of urine in bed`,
       `An elderly man who has had fecal incontinence`,
@@ -17131,7 +17130,7 @@ export const QUESTION_BANK = [
     id: 1221,
     category: `Comprehensive`,
     chapter: `Practice Test Six`,
-    question: `The nurse is caring for a person who is admitted with progressive amyotrophic lateral sclerosis (ALS). What nursing care measure should the nurse expect to be ordered for this client?`,
+    prompt: `The nurse is caring for a person who is admitted with progressive amyotrophic lateral sclerosis (ALS). What nursing care measure should the nurse expect to be ordered for this client?`,
     options: [
       `Change dressing daily`,
       `Monitor IV fluids`,
@@ -17145,7 +17144,7 @@ export const QUESTION_BANK = [
     id: 1222,
     category: `Comprehensive`,
     chapter: `Practice Test Six`,
-    question: `All of the following need to be done. Which should the nurse delegate to the certified nursing assistant?`,
+    prompt: `All of the following need to be done. Which should the nurse delegate to the certified nursing assistant?`,
     options: [
       `Administering PRN acetaminophen to a person who has arthritis`,
       `Hygienic care to a person who had a cerebrovascular accident (CVA)`,
@@ -17159,7 +17158,7 @@ export const QUESTION_BANK = [
     id: 1223,
     category: `Comprehensive`,
     chapter: `Practice Test Six`,
-    question: `The nurse is assessing a 78-year-old woman. The woman says she has some bladder discomfort and urinary frequency. She also says, "I mind the cold so, but I don't seem to shiver. I don't have much energy these days." Her temperature is 98.9°F, pulse is 76, respirations are 20, and blood pressure is 140/88. Which findings are of most concern to the nurse and need to be further evaluated?`,
+    prompt: `The nurse is assessing a 78-year-old woman. The woman says she has some bladder discomfort and urinary frequency. She also says, "I mind the cold so, but I don't seem to shiver. I don't have much energy these days." Her temperature is 98.9°F, pulse is 76, respirations are 20, and blood pressure is 140/88. Which findings are of most concern to the nurse and need to be further evaluated?`,
     options: [
       `Temperature, pulse, and respirations`,
       `Blood pressure and temperature`,
@@ -17173,7 +17172,7 @@ export const QUESTION_BANK = [
     id: 1224,
     category: `Comprehensive`,
     chapter: `Practice Test Six`,
-    question: `All of the following individuals live at home with their families. Which of the following persons is least at risk for abuse?`,
+    prompt: `All of the following individuals live at home with their families. Which of the following persons is least at risk for abuse?`,
     options: [
       `An 82-year-old woman who is incontinent and bosses people around`,
       `An 80-year-old man who is ambulatory with help following a brain attack`,
@@ -17187,7 +17186,7 @@ export const QUESTION_BANK = [
     id: 1225,
     category: `Comprehensive`,
     chapter: `Practice Test Six`,
-    question: `Triazolam (Halcion) 0.25 mg is ordered for a client at bedtime. When the nurse goes to give the medication, the client asks the nurse to leave it at the bedside because she wants to finish reading a book. What is the best action for the nurse to take?`,
+    prompt: `Triazolam (Halcion) 0.25 mg is ordered for a client at bedtime. When the nurse goes to give the medication, the client asks the nurse to leave it at the bedside because she wants to finish reading a book. What is the best action for the nurse to take?`,
     options: [
       `Leave the medication at the bedside as requested`,
       `Return in one hour and offer the medication again`,
@@ -17201,7 +17200,7 @@ export const QUESTION_BANK = [
     id: 1226,
     category: `Comprehensive`,
     chapter: `Practice Test Six`,
-    question: `The family of a frail elderly man who is bedridden asks the nurse what they can do to prevent bedsores. Which response by the nurse is best?`,
+    prompt: `The family of a frail elderly man who is bedridden asks the nurse what they can do to prevent bedsores. Which response by the nurse is best?`,
     options: [
       `"Get him out of bed at least once a day."`,
       `"Turn him every two hours."`,
@@ -17215,7 +17214,7 @@ export const QUESTION_BANK = [
     id: 1227,
     category: `Comprehensive`,
     chapter: `Practice Test Six`,
-    question: `After returning from the postanesthesia care unit, a man who had abdominal surgery is ordered to be in semi-sitting position. What is the primary reason for this position for this client?`,
+    prompt: `After returning from the postanesthesia care unit, a man who had abdominal surgery is ordered to be in semi-sitting position. What is the primary reason for this position for this client?`,
     options: [
       `To prevent venous stasis`,
       `To promote circulation`,
@@ -17229,7 +17228,7 @@ export const QUESTION_BANK = [
     id: 1228,
     category: `Comprehensive`,
     chapter: `Practice Test Six`,
-    question: `A woman who has been hospitalized for several days says she is having trouble getting to sleep. What is the best initial nursing intervention?`,
+    prompt: `A woman who has been hospitalized for several days says she is having trouble getting to sleep. What is the best initial nursing intervention?`,
     options: [
       `Offer her a back rub.`,
       `Ask her what she is worrying about.`,
@@ -17243,7 +17242,7 @@ export const QUESTION_BANK = [
     id: 1229,
     category: `Comprehensive`,
     chapter: `Practice Test Six`,
-    question: `The nurse is observing a nursing assistant move a client from bed to chair. Which action by the nursing assistant indicates a lack of understanding about transfer techniques?`,
+    prompt: `The nurse is observing a nursing assistant move a client from bed to chair. Which action by the nursing assistant indicates a lack of understanding about transfer techniques?`,
     options: [
       `Bending from the waist when moving the person`,
       `Keeping the feet separated when lifting and moving the person`,
@@ -17257,7 +17256,7 @@ export const QUESTION_BANK = [
     id: 1230,
     category: `Comprehensive`,
     chapter: `Practice Test Six`,
-    question: `A woman is scheduled for an electromyography procedure (EMG) in the outpatient department. What should the nurse say to the woman?`,
+    prompt: `A woman is scheduled for an electromyography procedure (EMG) in the outpatient department. What should the nurse say to the woman?`,
     options: [
       `"Do not eat or drink anything after midnight the night before the procedure."`,
       `"Are you allergic to shellfish or iodine?"`,
@@ -17271,7 +17270,7 @@ export const QUESTION_BANK = [
     id: 1231,
     category: `Comprehensive`,
     chapter: `Practice Test Six`,
-    question: `The nurse checks the lab values of a newly admitted client. RBC: 4.0 million/mm3, WBC: 1500/mm3, Platelets: 40,000/mm3. What nursing actions are indicated because of these lab values?`,
+    prompt: `The nurse checks the lab values of a newly admitted client. RBC: 4.0 million/mm3, WBC: 1500/mm3, Platelets: 40,000/mm3. What nursing actions are indicated because of these lab values?`,
     options: [
       `Keep the client on bed rest and protective isolation.`,
       `Plan for protective isolation and do not give injections.`,
@@ -17285,7 +17284,7 @@ export const QUESTION_BANK = [
     id: 1232,
     category: `Comprehensive`,
     chapter: `Practice Test Six`,
-    question: `The nurse is caring for a client who is receiving an intravenous infusion. Which finding would indicate that the client's IV has infiltrated?`,
+    prompt: `The nurse is caring for a client who is receiving an intravenous infusion. Which finding would indicate that the client's IV has infiltrated?`,
     options: [
       `The client's arm is red and warm to the touch.`,
       `The IV is running faster than the desired rate.`,
@@ -17299,7 +17298,7 @@ export const QUESTION_BANK = [
     id: 1233,
     category: `Comprehensive`,
     chapter: `Practice Test Six`,
-    question: `The nurse has been teaching a woman who has iron deficiency anemia. Which menu, if selected, indicates that the woman understands her dietary instructions?`,
+    prompt: `The nurse has been teaching a woman who has iron deficiency anemia. Which menu, if selected, indicates that the woman understands her dietary instructions?`,
     options: [
       `Applesauce, green beans, bread, and butter`,
       `Peanut butter and jelly sandwich, carrots, and milk`,
@@ -17313,7 +17312,7 @@ export const QUESTION_BANK = [
     id: 1234,
     category: `Comprehensive`,
     chapter: `Practice Test Six`,
-    question: `A client is admitted with pernicious anemia. The client reports all of the following. Which is most likely related to the admitting diagnosis?`,
+    prompt: `A client is admitted with pernicious anemia. The client reports all of the following. Which is most likely related to the admitting diagnosis?`,
     options: [
       `"I often have diarrhea."`,
       `"My tongue is more red and thick than usual."`,
@@ -17327,7 +17326,7 @@ export const QUESTION_BANK = [
     id: 1235,
     category: `Comprehensive`,
     chapter: `Practice Test Six`,
-    question: `A man who had a right below-the-knee amputation is placed in the prone position for one hour three times a day. The nurse explains to the man that this is done to prevent which problem?`,
+    prompt: `A man who had a right below-the-knee amputation is placed in the prone position for one hour three times a day. The nurse explains to the man that this is done to prevent which problem?`,
     options: [
       `Atelectasis`,
       `Thrombophlebitis`,
@@ -17341,7 +17340,7 @@ export const QUESTION_BANK = [
     id: 1236,
     category: `Comprehensive`,
     chapter: `Practice Test Six`,
-    question: `The client has contact dermatitis from poison ivy. Which statement, if made by the client, indicates that he understands how to care for his condition?`,
+    prompt: `The client has contact dermatitis from poison ivy. Which statement, if made by the client, indicates that he understands how to care for his condition?`,
     options: [
       `"A hot bath should make the itching go away."`,
       `"I will use a good strong soap when I wash the affected areas."`,
@@ -17355,7 +17354,7 @@ export const QUESTION_BANK = [
     id: 1237,
     category: `Comprehensive`,
     chapter: `Practice Test Six`,
-    question: `The nurse is caring for a client who has psoriasis. Which observation by the nurse is most consistent with the diagnosis?`,
+    prompt: `The nurse is caring for a client who has psoriasis. Which observation by the nurse is most consistent with the diagnosis?`,
     options: [
       `The client has thick, yellow toenails.`,
       `The client has open, weeping lesions.`,
@@ -17369,7 +17368,7 @@ export const QUESTION_BANK = [
     id: 1238,
     category: `Comprehensive`,
     chapter: `Practice Test Six`,
-    question: `The nurse is caring for a man who has severe burns and had a skin graft. What nursing care measure is appropriate at the graft site the day of the graft?`,
+    prompt: `The nurse is caring for a man who has severe burns and had a skin graft. What nursing care measure is appropriate at the graft site the day of the graft?`,
     options: [
       `Leave the graft site open to the air.`,
       `Elevate the recipient site.`,
@@ -17383,7 +17382,7 @@ export const QUESTION_BANK = [
     id: 1239,
     category: `Comprehensive`,
     chapter: `Practice Test Six`,
-    question: `The nurse is to make several home visits today. All of the visits are within a 5-mile radius. All of the following persons need to be seen. Which person should the nurse visit first?`,
+    prompt: `The nurse is to make several home visits today. All of the visits are within a 5-mile radius. All of the following persons need to be seen. Which person should the nurse visit first?`,
     options: [
       `An older adult who has diabetes, peripheral vascular disease, and leg ulcers and needs hygienic care and wound care`,
       `An adult who has multiple myeloma and needs her weekly injection of interferon`,
@@ -17397,7 +17396,7 @@ export const QUESTION_BANK = [
     id: 1240,
     category: `Comprehensive`,
     chapter: `Practice Test Six`,
-    question: `The nurse is caring for a client who was admitted following a motor vehicle accident. The client's blood pressure one hour ago was 118/76, and pulse was 80; now the blood pressure is 90/60, and pulse is 98. What action should the nurse take initially?`,
+    prompt: `The nurse is caring for a client who was admitted following a motor vehicle accident. The client's blood pressure one hour ago was 118/76, and pulse was 80; now the blood pressure is 90/60, and pulse is 98. What action should the nurse take initially?`,
     options: [
       `Continue to monitor the blood pressure`,
       `Ask another nurse to check the blood pressure reading`,
@@ -17411,7 +17410,7 @@ export const QUESTION_BANK = [
     id: 1241,
     category: `Comprehensive`,
     chapter: `Practice Test Six`,
-    question: `The nurse is caring for a person who has a nasogastric tube attached to drainage. Which complaint by the client needs to be reported to the charge nurse?`,
+    prompt: `The nurse is caring for a person who has a nasogastric tube attached to drainage. Which complaint by the client needs to be reported to the charge nurse?`,
     options: [
       `Dry mouth`,
       `Weak muscles`,
@@ -17425,7 +17424,7 @@ export const QUESTION_BANK = [
     id: 1242,
     category: `Comprehensive`,
     chapter: `Practice Test Six`,
-    question: `A cooling blanket is ordered for an adult client who has a temperature of 106°F. What nursing action is essential because the client has a cooling blanket?`,
+    prompt: `A cooling blanket is ordered for an adult client who has a temperature of 106°F. What nursing action is essential because the client has a cooling blanket?`,
     options: [
       `Keep a padded tongue blade at the bedside.`,
       `Turn every two hours.`,
@@ -17439,7 +17438,7 @@ export const QUESTION_BANK = [
     id: 1243,
     category: `Comprehensive`,
     chapter: `Practice Test Six`,
-    question: `The nurse is to suction a client. What action is essential prior to inserting the suction catheter?`,
+    prompt: `The nurse is to suction a client. What action is essential prior to inserting the suction catheter?`,
     options: [
       `Clear the mouth and throat of secretions.`,
       `Lower the head of the bed.`,
@@ -17453,7 +17452,7 @@ export const QUESTION_BANK = [
     id: 1244,
     category: `Comprehensive`,
     chapter: `Practice Test Six`,
-    question: `The nurse is caring for a man who has chronic emphysema and is receiving oxygen at 2 L/min. The nurse enters the room to find that his wife has turned the oxygen up to 10 L/min because her husband is having increasing difficulty breathing. What is the best immediate action for the nurse to take?`,
+    prompt: `The nurse is caring for a man who has chronic emphysema and is receiving oxygen at 2 L/min. The nurse enters the room to find that his wife has turned the oxygen up to 10 L/min because her husband is having increasing difficulty breathing. What is the best immediate action for the nurse to take?`,
     options: [
       `Explain to the wife that his oxygen was ordered at 2 L/min and it should stay there until the physician orders something else`,
       `Turn the oxygen setting back to 2 L/min`,
@@ -17467,7 +17466,7 @@ export const QUESTION_BANK = [
     id: 1245,
     category: `Comprehensive`,
     chapter: `Practice Test Six`,
-    question: `The nurse discovers that a hospitalized client is not breathing and has no pulse. After calling for help, what should the nurse do next?`,
+    prompt: `The nurse discovers that a hospitalized client is not breathing and has no pulse. After calling for help, what should the nurse do next?`,
     options: [
       `Give the client two breaths`,
       `Administer five chest compressions`,
@@ -17481,7 +17480,7 @@ export const QUESTION_BANK = [
     id: 1246,
     category: `Comprehensive`,
     chapter: `Practice Test Six`,
-    question: `The nurse is caring for a man who has radiation pellets in his mouth for mouth cancer. The nurse discovers one of the pellets in the sheets. What should the nurse do initially?`,
+    prompt: `The nurse is caring for a man who has radiation pellets in his mouth for mouth cancer. The nurse discovers one of the pellets in the sheets. What should the nurse do initially?`,
     options: [
       `Check the client's mouth for other loose pellets`,
       `Using long-handled forceps, put the pellet in a lead-lined container`,
@@ -17495,7 +17494,7 @@ export const QUESTION_BANK = [
     id: 1247,
     category: `Comprehensive`,
     chapter: `Practice Test Six`,
-    question: `The physician has ordered crutches and specified that the client use a four-point gait. Which action by the client indicates an understanding of the four-point gait?`,
+    prompt: `The physician has ordered crutches and specified that the client use a four-point gait. Which action by the client indicates an understanding of the four-point gait?`,
     options: [
       `The client moves the left foot, then the left crutch, followed by the right foot and the right crutch.`,
       `The client moves the left foot, then the right foot, followed by the left crutch and the right crutch.`,
@@ -17509,7 +17508,7 @@ export const QUESTION_BANK = [
     id: 1248,
     category: `Comprehensive`,
     chapter: `Practice Test Six`,
-    question: `A man is a client in a semi-private room. When a new person is admitted to his room, he says to the nurse, "What is wrong with the man in the other bed?" How should the nurse respond?`,
+    prompt: `A man is a client in a semi-private room. When a new person is admitted to his room, he says to the nurse, "What is wrong with the man in the other bed?" How should the nurse respond?`,
     options: [
       `Tell the man he should ask him himself`,
       `Tell the man in general terms the new client's diagnosis`,
@@ -17523,7 +17522,7 @@ export const QUESTION_BANK = [
     id: 1249,
     category: `Comprehensive`,
     chapter: `Practice Test Six`,
-    question: `An adult is to go to surgery this morning. When the nurse goes to medicate the client, she notes that she has a ring with several shiny stones in it on her left ring finger. There are no relatives present. What is the best nursing action?`,
+    prompt: `An adult is to go to surgery this morning. When the nurse goes to medicate the client, she notes that she has a ring with several shiny stones in it on her left ring finger. There are no relatives present. What is the best nursing action?`,
     options: [
       `Tape the ring before medicating the client.`,
       `Ask the client to put the ring in the bedside drawer.`,
@@ -17537,7 +17536,7 @@ export const QUESTION_BANK = [
     id: 1250,
     category: `Comprehensive`,
     chapter: `Practice Test Six`,
-    question: `The nurse is providing home care for a client who has Parkinson's disease and is ambulatory. Which activity will help to prevent slipping and falling?`,
+    prompt: `The nurse is providing home care for a client who has Parkinson's disease and is ambulatory. Which activity will help to prevent slipping and falling?`,
     options: [
       `Encourage the client to wear smooth-soled shoes.`,
       `Leave the bed rails up at all times.`,
@@ -17551,7 +17550,7 @@ export const QUESTION_BANK = [
     id: 1251,
     category: `Comprehensive`,
     chapter: `Practice Test Six`,
-    question: `The LPN/LVN in a long-term care facility sees and hears a nursing assistant give a resident a hard slap. What initial action should the LPN/LVN take?`,
+    prompt: `The LPN/LVN in a long-term care facility sees and hears a nursing assistant give a resident a hard slap. What initial action should the LPN/LVN take?`,
     options: [
       `Be alert to further incidences of a similar nature`,
       `Report the incident to the supervisor`,
@@ -17565,7 +17564,7 @@ export const QUESTION_BANK = [
     id: 1252,
     category: `Comprehensive`,
     chapter: `Practice Test Six`,
-    question: `The nurse is giving preoperative medication to an adult who is scheduled for surgery. The client says to the nurse that she does not want to have a transfusion during surgery because it is against her religion. The client has signed a consent form for surgery. How should the nurse respond?`,
+    prompt: `The nurse is giving preoperative medication to an adult who is scheduled for surgery. The client says to the nurse that she does not want to have a transfusion during surgery because it is against her religion. The client has signed a consent form for surgery. How should the nurse respond?`,
     options: [
       `Explain that she has signed a consent form for surgery and that includes the use of transfusions if necessary`,
       `Explain that the surgeon will probably not perform surgery if she won't have a transfusion`,
@@ -17579,7 +17578,7 @@ export const QUESTION_BANK = [
     id: 1253,
     category: `Comprehensive`,
     chapter: `Practice Test Six`,
-    question: `The daughter of a 78-year-old woman asks the nurse why her mother is giving away some of her belongings to her children and grandchildren. What should the nurse include when responding?`,
+    prompt: `The daughter of a 78-year-old woman asks the nurse why her mother is giving away some of her belongings to her children and grandchildren. What should the nurse include when responding?`,
     options: [
       `Older adults usually become more generous.`,
       `It is normal for older adults to think about and prepare for their own death.`,
@@ -17593,7 +17592,7 @@ export const QUESTION_BANK = [
     id: 1254,
     category: `Comprehensive`,
     chapter: `Practice Test Six`,
-    question: `The nurse in a residence facility for older adults is planning for the year. During which month should the influenza vaccine be offered to the residents?`,
+    prompt: `The nurse in a residence facility for older adults is planning for the year. During which month should the influenza vaccine be offered to the residents?`,
     options: [
       `May`,
       `July`,
@@ -17607,7 +17606,7 @@ export const QUESTION_BANK = [
     id: 1255,
     category: `Comprehensive`,
     chapter: `Practice Test Six`,
-    question: `The nurse is giving instructions to a group of women about breast self-examination. Which statement indicates that the client needs more instruction about the procedure?`,
+    prompt: `The nurse is giving instructions to a group of women about breast self-examination. Which statement indicates that the client needs more instruction about the procedure?`,
     options: [
       `"I will perform the exam every month after my period."`,
       `"I should do the exam both standing and lying down."`,
@@ -17621,7 +17620,7 @@ export const QUESTION_BANK = [
     id: 1256,
     category: `Comprehensive`,
     chapter: `Practice Test Six`,
-    question: `The nurse is teaching a group of women about health issues. Today's topic is food poisoning. Which statement indicates a need for further instruction?`,
+    prompt: `The nurse is teaching a group of women about health issues. Today's topic is food poisoning. Which statement indicates a need for further instruction?`,
     options: [
       `"I always wash my hands after I put raw meat in to cook."`,
       `"I should put foods away in the refrigerator immediately after meals."`,
@@ -17635,7 +17634,7 @@ export const QUESTION_BANK = [
     id: 1257,
     category: `Comprehensive`,
     chapter: `Practice Test Six`,
-    question: `The nurse is to administer a tuberculin skin test. What is the correct procedure?`,
+    prompt: `The nurse is to administer a tuberculin skin test. What is the correct procedure?`,
     options: [
       `Give it subcutaneously in the inner aspect of the forearm.`,
       `Use a 21-gauge needle and administer in the forearm.`,
@@ -17649,7 +17648,7 @@ export const QUESTION_BANK = [
     id: 1258,
     category: `Comprehensive`,
     chapter: `Practice Test Six`,
-    question: `The nurse is planning care for a client who has a hearing impairment. Which action will likely help the most with communication?`,
+    prompt: `The nurse is planning care for a client who has a hearing impairment. Which action will likely help the most with communication?`,
     options: [
       `Repeat everything twice`,
       `Speak loudly`,
@@ -17663,7 +17662,7 @@ export const QUESTION_BANK = [
     id: 1259,
     category: `Comprehensive`,
     chapter: `Practice Test Six`,
-    question: `An 80-year-old woman has been hospitalized for three days with pneumonia. She is now able to sit in a chair for the first time. How should the nurse plan care for today?`,
+    prompt: `An 80-year-old woman has been hospitalized for three days with pneumonia. She is now able to sit in a chair for the first time. How should the nurse plan care for today?`,
     options: [
       `Give her a bed bath and make her bed. Get her up in the chair later.`,
       `Get her up in the chair and have her give herself a bath while the nurse makes the bed.`,
@@ -17677,7 +17676,7 @@ export const QUESTION_BANK = [
     id: 1260,
     category: `Comprehensive`,
     chapter: `Practice Test Six`,
-    question: `The nurse is to administer a tube feeding to a client. Before administering the feeding, what is essential for the nurse to do?`,
+    prompt: `The nurse is to administer a tube feeding to a client. Before administering the feeding, what is essential for the nurse to do?`,
     options: [
       `Ask the client if she feels full`,
       `Aspirate the nasogastric tube and check for acid`,
@@ -17691,7 +17690,7 @@ export const QUESTION_BANK = [
     id: 1261,
     category: `Comprehensive`,
     chapter: `Practice Test Six`,
-    question: `The nurse is planning an approach to decrease urinary incontinence in an elderly client. Which activity will do the most to help prevent incontinence?`,
+    prompt: `The nurse is planning an approach to decrease urinary incontinence in an elderly client. Which activity will do the most to help prevent incontinence?`,
     options: [
       `Restrict fluids until continence has been achieved and then hydrate well.`,
       `Offer the bedpan at two-hour intervals during the day and every four hours at night.`,
@@ -17705,7 +17704,7 @@ export const QUESTION_BANK = [
     id: 1262,
     category: `Comprehensive`,
     chapter: `Practice Test Six`,
-    question: `A woman in a residence facility is having difficulty sleeping at night. Which action by the nurse is most appropriate initially?`,
+    prompt: `A woman in a residence facility is having difficulty sleeping at night. Which action by the nurse is most appropriate initially?`,
     options: [
       `Ask the physician for a sleeping medication`,
       `Offer the woman a back rub and warm milk`,
@@ -17719,7 +17718,7 @@ export const QUESTION_BANK = [
     id: 1263,
     category: `Comprehensive`,
     chapter: `Practice Test Six`,
-    question: `A postoperative client is having difficulty voiding. Palpation of the bladder indicates that the bladder is full. What should the nurse do initially?`,
+    prompt: `A postoperative client is having difficulty voiding. Palpation of the bladder indicates that the bladder is full. What should the nurse do initially?`,
     options: [
       `Ask the physician for a catheterization order`,
       `Pour water over the client's perineum`,
@@ -17733,7 +17732,7 @@ export const QUESTION_BANK = [
     id: 1264,
     category: `Comprehensive`,
     chapter: `Practice Test Six`,
-    question: `The physician has recommended that the client increase the amount of dietary iron. The nurse knows that the client understands the recommendation when the client selects which foods?`,
+    prompt: `The physician has recommended that the client increase the amount of dietary iron. The nurse knows that the client understands the recommendation when the client selects which foods?`,
     options: [
       `Orange juice, scrambled eggs, and toast`,
       `Hot dog and roll, French fries, and cola`,
@@ -17747,7 +17746,7 @@ export const QUESTION_BANK = [
     id: 1265,
     category: `Comprehensive`,
     chapter: `Practice Test Six`,
-    question: `The nurse is to start oxygen therapy via nasal cannula. Which action is correct?`,
+    prompt: `The nurse is to start oxygen therapy via nasal cannula. Which action is correct?`,
     options: [
       `Set the oxygen at 12 L/min.`,
       `Lubricate the cannula with petrolatum before inserting.`,
@@ -17761,7 +17760,7 @@ export const QUESTION_BANK = [
     id: 1266,
     category: `Comprehensive`,
     chapter: `Practice Test Six`,
-    question: `A woman calls the physician's office stating that her 16-year-old daughter took 20 or 30 sleeping pills. The mother tells the nurse that her daughter is awake and says, "Leave me alone. I just want to die." How should the nurse respond?`,
+    prompt: `A woman calls the physician's office stating that her 16-year-old daughter took 20 or 30 sleeping pills. The mother tells the nurse that her daughter is awake and says, "Leave me alone. I just want to die." How should the nurse respond?`,
     options: [
       `"Ask her why she wants to die."`,
       `"Try to convince her that she wants to live."`,
@@ -17775,7 +17774,7 @@ export const QUESTION_BANK = [
     id: 1267,
     category: `Comprehensive`,
     chapter: `Practice Test Six`,
-    question: `A wet-to-dry dressing is ordered for a client who has a decubitus ulcer. Which technique is appropriate?`,
+    prompt: `A wet-to-dry dressing is ordered for a client who has a decubitus ulcer. Which technique is appropriate?`,
     options: [
       `Irrigate the wound and then apply a dry dressing and cover with a wet compress.`,
       `Apply a wet dressing for two hours followed by a dry dressing for two hours.`,
@@ -17789,7 +17788,7 @@ export const QUESTION_BANK = [
     id: 1268,
     category: `Comprehensive`,
     chapter: `Practice Test Six`,
-    question: `The nurse is providing home care to a confused older adult. The family members have tied the client in a chair with a large leather belt. They say the client wanders if he isn't restrained. What initial nursing action is most appropriate?`,
+    prompt: `The nurse is providing home care to a confused older adult. The family members have tied the client in a chair with a large leather belt. They say the client wanders if he isn't restrained. What initial nursing action is most appropriate?`,
     options: [
       `Report the family to family protective services.`,
       `Congratulate the family on solving the problem.`,
@@ -17803,7 +17802,7 @@ export const QUESTION_BANK = [
     id: 1269,
     category: `Comprehensive`,
     chapter: `Practice Test Six`,
-    question: `The nurse is assessing the nursing care unit in a long-term facility for fire hazards. Which finding is the greatest fire hazard?`,
+    prompt: `The nurse is assessing the nursing care unit in a long-term facility for fire hazards. Which finding is the greatest fire hazard?`,
     options: [
       `Some of the nurses and nursing assistants smoke in the restroom.`,
       `There are several cardboard boxes and cleaning supplies stored in the room with the emergency oxygen supply.`,
@@ -17817,7 +17816,7 @@ export const QUESTION_BANK = [
     id: 1270,
     category: `Comprehensive`,
     chapter: `Practice Test Six`,
-    question: `A woman who recently had a simple mastectomy is about to be discharged. She seems very concerned about such things as where to find the best prosthesis, suitable underwear, and swimsuits, and adjusting to life with only one breast. Which resource is appropriate for the nurse to recommend?`,
+    prompt: `A woman who recently had a simple mastectomy is about to be discharged. She seems very concerned about such things as where to find the best prosthesis, suitable underwear, and swimsuits, and adjusting to life with only one breast. Which resource is appropriate for the nurse to recommend?`,
     options: [
       `A psychologist or psychiatrist`,
       `Reach to Recovery`,
@@ -17831,7 +17830,7 @@ export const QUESTION_BANK = [
     id: 1271,
     category: `Comprehensive`,
     chapter: `Practice Test Six`,
-    question: `A man who had a cerebro vascular accident has expressive aphasia. Which approach will help communication the most?`,
+    prompt: `A man who had a cerebro vascular accident has expressive aphasia. Which approach will help communication the most?`,
     options: [
       `The nurse should write to the client and the client should write back.`,
       `The nurse should anticipate the client's needs as much as possible.`,
@@ -17845,7 +17844,7 @@ export const QUESTION_BANK = [
     id: 1272,
     category: `Comprehensive`,
     chapter: `Practice Test Six`,
-    question: `An upset client says to the nurse, "Where did you learn to be a nurse? You don't know anything." How should the nurse respond?`,
+    prompt: `An upset client says to the nurse, "Where did you learn to be a nurse? You don't know anything." How should the nurse respond?`,
     options: [
       `"I'm sorry you feel that way."`,
       `"I went to a fine nursing school."`,
@@ -17859,7 +17858,7 @@ export const QUESTION_BANK = [
     id: 1273,
     category: `Comprehensive`,
     chapter: `Practice Test Six`,
-    question: `A terminally ill client says to the nurse, "Do you believe in heaven?" How should the nurse respond?`,
+    prompt: `A terminally ill client says to the nurse, "Do you believe in heaven?" How should the nurse respond?`,
     options: [
       `"Yes, I believe in heaven and hell."`,
       `"My personal belief is private."`,
@@ -17873,7 +17872,7 @@ export const QUESTION_BANK = [
     id: 1274,
     category: `Comprehensive`,
     chapter: `Practice Test Six`,
-    question: `The nurse is assessing a child admitted who has a fractured humerus. The family says the child fell. Which piece of information would cause the nurse to suspect child abuse?`,
+    prompt: `The nurse is assessing a child admitted who has a fractured humerus. The family says the child fell. Which piece of information would cause the nurse to suspect child abuse?`,
     options: [
       `The child has been to the emergency room twice in the last month.`,
       `The child also has several bruises on the arms and legs.`,
@@ -17887,7 +17886,7 @@ export const QUESTION_BANK = [
     id: 1275,
     category: `Comprehensive`,
     chapter: `Practice Test Six`,
-    question: `Which comment, if made by the client, indicates adjustment to the diagnosis of Type 1 diabetes mellitus?`,
+    prompt: `Which comment, if made by the client, indicates adjustment to the diagnosis of Type 1 diabetes mellitus?`,
     options: [
       `"Will it ever get easier to give myself a shot?"`,
       `"This can't be happening to me!"`,
@@ -17901,7 +17900,7 @@ export const QUESTION_BANK = [
     id: 1276,
     category: `Comprehensive`,
     chapter: `Practice Test Six`,
-    question: `An adult who is admitted to the hospital for a colostomy says to the nurse, "I'm so scared. Do you think I'll make it?" What is the nurse's best initial response?`,
+    prompt: `An adult who is admitted to the hospital for a colostomy says to the nurse, "I'm so scared. Do you think I'll make it?" What is the nurse's best initial response?`,
     options: [
       `"Of course you'll make it."`,
       `"Why are you so scared?"`,
@@ -17915,7 +17914,7 @@ export const QUESTION_BANK = [
     id: 1277,
     category: `Comprehensive`,
     chapter: `Practice Test Six`,
-    question: `The wife of a man who is comatose following a head injury asks the nurse if she should visit him since he is unresponsive. How should the nurse reply initially?`,
+    prompt: `The wife of a man who is comatose following a head injury asks the nurse if she should visit him since he is unresponsive. How should the nurse reply initially?`,
     options: [
       `Explain that since he is unresponsive there is no need for her to be here`,
       `Tell her that the nurse will call if there is any change`,
@@ -17929,7 +17928,7 @@ export const QUESTION_BANK = [
     id: 1278,
     category: `Comprehensive`,
     chapter: `Practice Test Six`,
-    question: `A 14-year-old girl is brought to the emergency room because she is difficult to arouse. She is 5 feet, 8 inches tall and weighs 80 pounds. What additional findings would the nurse expect to be present?`,
+    prompt: `A 14-year-old girl is brought to the emergency room because she is difficult to arouse. She is 5 feet, 8 inches tall and weighs 80 pounds. What additional findings would the nurse expect to be present?`,
     options: [
       `Tachycardia`,
       `Amenorrhea`,
@@ -17943,7 +17942,7 @@ export const QUESTION_BANK = [
     id: 1279,
     category: `Comprehensive`,
     chapter: `Practice Test Six`,
-    question: `An adult is admitted to a detoxification unit for withdrawal from alcohol. Which medication does the nurse expect will be ordered for the client upon admission?`,
+    prompt: `An adult is admitted to a detoxification unit for withdrawal from alcohol. Which medication does the nurse expect will be ordered for the client upon admission?`,
     options: [
       `Thiamin`,
       `Antabuse`,
@@ -17957,7 +17956,7 @@ export const QUESTION_BANK = [
     id: 1280,
     category: `Comprehensive`,
     chapter: `Practice Test Six`,
-    question: `The nurse is discussing dementia with the families of older adults. All of the following behaviors are reported. Which behavior is most suggestive of dementia?`,
+    prompt: `The nurse is discussing dementia with the families of older adults. All of the following behaviors are reported. Which behavior is most suggestive of dementia?`,
     options: [
       `The woman can't remember the birth year of each of her six children.`,
       `A woman walked to the store and got lost on the way home.`,
@@ -17971,7 +17970,7 @@ export const QUESTION_BANK = [
     id: 1281,
     category: `Comprehensive`,
     chapter: `Practice Test Six`,
-    question: `A behavior modification program is planned for an adolescent who exhibits disruptive behavior. Which action by the nurse is most consistent with a behavior modification program?`,
+    prompt: `A behavior modification program is planned for an adolescent who exhibits disruptive behavior. Which action by the nurse is most consistent with a behavior modification program?`,
     options: [
       `Punish the client if she becomes disruptive.`,
       `Give the client extra privileges when she is not disruptive for a day.`,
@@ -17985,7 +17984,7 @@ export const QUESTION_BANK = [
     id: 1282,
     category: `Comprehensive`,
     chapter: `Practice Test Six`,
-    question: `A client on the psychiatric unit does not get to the dining room to eat because she is continually washing her hands and doesn't finish until after lunch. What should be included in the nursing care plan?`,
+    prompt: `A client on the psychiatric unit does not get to the dining room to eat because she is continually washing her hands and doesn't finish until after lunch. What should be included in the nursing care plan?`,
     options: [
       `Give the client a choice between eating lunch and performing her ritual.`,
       `Tell the client an hour before lunch so she can perform her ritual before lunch.`,
@@ -17999,7 +17998,7 @@ export const QUESTION_BANK = [
     id: 1283,
     category: `Comprehensive`,
     chapter: `Practice Test Six`,
-    question: `The nurse has been assigned a client who is thought to be suicidal. All of the following are in the client's room. Which is safe to leave in the room?`,
+    prompt: `The nurse has been assigned a client who is thought to be suicidal. All of the following are in the client's room. Which is safe to leave in the room?`,
     options: [
       `Paper cup`,
       `Leather belt`,
@@ -18013,7 +18012,7 @@ export const QUESTION_BANK = [
     id: 1284,
     category: `Comprehensive`,
     chapter: `Practice Test Six`,
-    question: `The nurse has just completed a dressing change on an elderly client who is allowed bathroom privileges. Which action is most essential for the nurse to take before leaving the client's bedside?`,
+    prompt: `The nurse has just completed a dressing change on an elderly client who is allowed bathroom privileges. Which action is most essential for the nurse to take before leaving the client's bedside?`,
     options: [
       `Wash hands`,
       `Lower the bed`,
@@ -18027,7 +18026,7 @@ export const QUESTION_BANK = [
     id: 1285,
     category: `Comprehensive`,
     chapter: `Practice Test Six`,
-    question: `The nurse is caring for a woman who has internal radiation for cancer of the cervix. Which of the following situations poses the greatest risk for others?`,
+    prompt: `The nurse is caring for a woman who has internal radiation for cancer of the cervix. Which of the following situations poses the greatest risk for others?`,
     options: [
       `The client's daughter spends several hours sitting next to the client's bed.`,
       `The client's husband kisses her and visits for five minutes before leaving.`,
@@ -18041,7 +18040,7 @@ export const QUESTION_BANK = [
     id: 1286,
     category: `Comprehensive`,
     chapter: `Practice Test Six`,
-    question: `An infant is to be admitted with severe diarrhea. Which room assignment is best for this infant?`,
+    prompt: `An infant is to be admitted with severe diarrhea. Which room assignment is best for this infant?`,
     options: [
       `A private room`,
       `A room close to the nurse's station`,
@@ -18055,7 +18054,7 @@ export const QUESTION_BANK = [
     id: 1287,
     category: `Comprehensive`,
     chapter: `Practice Test Six`,
-    question: `A client who is blind is admitted to the hospital for surgery tomorrow. The client is able to get out of bed and eat until midnight. Which nursing action is most appropriate?`,
+    prompt: `A client who is blind is admitted to the hospital for surgery tomorrow. The client is able to get out of bed and eat until midnight. Which nursing action is most appropriate?`,
     options: [
       `Describe the surroundings and the objects in the room to the client.`,
       `Put up the side rails and have the client ask for help when getting out of bed for any reason.`,
@@ -18069,7 +18068,7 @@ export const QUESTION_BANK = [
     id: 1288,
     category: `Comprehensive`,
     chapter: `Practice Test Six`,
-    question: `The nurse is providing care in the home to a person who has AIDS. Which behavior, if observed by the nurse, indicates a need for further instruction?`,
+    prompt: `The nurse is providing care in the home to a person who has AIDS. Which behavior, if observed by the nurse, indicates a need for further instruction?`,
     options: [
       `The client uses the same dishes as the rest of the family.`,
       `The client shares a bathroom with the rest of the family.`,
@@ -18085,7 +18084,7 @@ export const QUESTION_BANK = [
     id: 1289,
     category: `Comprehensive`,
     chapter: `Practice Test Seven`,
-    question: `Which nursing diagnosis is most appropriate for a client who has Cushing's syndrome?`,
+    prompt: `Which nursing diagnosis is most appropriate for a client who has Cushing's syndrome?`,
     options: [
       `Risk for injury related to osteoporosis`,
       `Pain related to cold intolerance`,
@@ -18099,7 +18098,7 @@ export const QUESTION_BANK = [
     id: 1290,
     category: `Comprehensive`,
     chapter: `Practice Test Seven`,
-    question: `A woman comes into the labor suite stating that her water has broken and she is in labor. Which symptoms point to the possible presence of placenta previa?`,
+    prompt: `A woman comes into the labor suite stating that her water has broken and she is in labor. Which symptoms point to the possible presence of placenta previa?`,
     options: [
       `Sudden knife-like pain in the lower abdomen accompanied by profuse vaginal bleeding`,
       `Dark red vaginal discharge that started after she saw the physician this morning`,
@@ -18113,7 +18112,7 @@ export const QUESTION_BANK = [
     id: 1291,
     category: `Comprehensive`,
     chapter: `Practice Test Seven`,
-    question: `A 13-month-old child is admitted to the pediatric unit with diarrhea and vomiting. The mother tells the nurse that she is worried because her son does not yet walk. She says her other children walked at eight and nine months and asks what could be wrong with this child. How should the nurse respond?`,
+    prompt: `A 13-month-old child is admitted to the pediatric unit with diarrhea and vomiting. The mother tells the nurse that she is worried because her son does not yet walk. She says her other children walked at eight and nine months and asks what could be wrong with this child. How should the nurse respond?`,
     options: [
       `"All babies are different. It is not abnormal that the baby is not yet walking."`,
       `"The baby should be walking. I'll let the doctor know he is behind developmentally."`,
@@ -18127,7 +18126,7 @@ export const QUESTION_BANK = [
     id: 1292,
     category: `Comprehensive`,
     chapter: `Practice Test Seven`,
-    question: `A woman brings her 6-month-old daughter to a clinic for a checkup and immunizations. The mother tells the nurse that her infant is cranky, has a bad cold, and has not eaten well the last few days. She asks if the baby will still be able to get her shots. The child's temperature is 100.8°F. How should the nurse respond?`,
+    prompt: `A woman brings her 6-month-old daughter to a clinic for a checkup and immunizations. The mother tells the nurse that her infant is cranky, has a bad cold, and has not eaten well the last few days. She asks if the baby will still be able to get her shots. The child's temperature is 100.8°F. How should the nurse respond?`,
     options: [
       `"There is no problem in giving the shots just because your baby has a cold."`,
       `"Your baby will have her checkup, but we will wait until her cold is better before giving her shots."`,
@@ -18141,7 +18140,7 @@ export const QUESTION_BANK = [
     id: 1293,
     category: `Comprehensive`,
     chapter: `Practice Test Seven`,
-    question: `The mother of a 2-month-old child asks the nurse when she should start her son on solids. He is taking about 30 oz of formula per day. How should the nurse respond?`,
+    prompt: `The mother of a 2-month-old child asks the nurse when she should start her son on solids. He is taking about 30 oz of formula per day. How should the nurse respond?`,
     options: [
       `"This is a good time to begin."`,
       `"When he is taking a quart per day."`,
@@ -18155,7 +18154,7 @@ export const QUESTION_BANK = [
     id: 1294,
     category: `Comprehensive`,
     chapter: `Practice Test Seven`,
-    question: `An infant is suspected of having coarctation of the aorta. Which assessment finding is most related to coarctation of the aorta?`,
+    prompt: `An infant is suspected of having coarctation of the aorta. Which assessment finding is most related to coarctation of the aorta?`,
     options: [
       `Respirations are 70 per minute.`,
       `Blood pressure is higher in the upper extremities than in the lower extremities.`,
@@ -18169,7 +18168,7 @@ export const QUESTION_BANK = [
     id: 1295,
     category: `Comprehensive`,
     chapter: `Practice Test Seven`,
-    question: `A young child with a history of grand mal seizures is in public school. He is on phenobarbital and hydantoin (Dilantin) to control the seizures. His teacher tells the nurse that he has not had any seizures but he does keep falling asleep in class. What should the nurse include when discussing his drowsiness with the teacher?`,
+    prompt: `A young child with a history of grand mal seizures is in public school. He is on phenobarbital and hydantoin (Dilantin) to control the seizures. His teacher tells the nurse that he has not had any seizures but he does keep falling asleep in class. What should the nurse include when discussing his drowsiness with the teacher?`,
     options: [
       `It is common in children who take barbiturates.`,
       `It usually occurs after seizures; let him sleep.`,
@@ -18183,7 +18182,7 @@ export const QUESTION_BANK = [
     id: 1296,
     category: `Comprehensive`,
     chapter: `Practice Test Seven`,
-    question: `The nurse is teaching a woman the normal changes of pregnancy. Which statement by the woman indicates correct understanding?`,
+    prompt: `The nurse is teaching a woman the normal changes of pregnancy. Which statement by the woman indicates correct understanding?`,
     options: [
       `"There is decreased oxygen consumption during pregnancy."`,
       `"There is an increased rate of peristalsis in the GI tract."`,
@@ -18197,7 +18196,7 @@ export const QUESTION_BANK = [
     id: 1297,
     category: `Comprehensive`,
     chapter: `Practice Test Seven`,
-    question: `A prenatal client tests positive for chlamydia in her ninth month. She asks why she should be treated since she does not have symptoms. The nurse should tell the client that if she is not treated before delivery, there is a risk of which problem?`,
+    prompt: `A prenatal client tests positive for chlamydia in her ninth month. She asks why she should be treated since she does not have symptoms. The nurse should tell the client that if she is not treated before delivery, there is a risk of which problem?`,
     options: [
       `Transplacental infection of the fetus`,
       `Neonatal ophthalmia`,
@@ -18211,7 +18210,7 @@ export const QUESTION_BANK = [
     id: 1298,
     category: `Comprehensive`,
     chapter: `Practice Test Seven`,
-    question: `A baby is delivered following a pregnancy complicated by gestational diabetes. What should the nurse observe the baby for?`,
+    prompt: `A baby is delivered following a pregnancy complicated by gestational diabetes. What should the nurse observe the baby for?`,
     options: [
       `Infection`,
       `Hyperglycemia`,
@@ -18225,7 +18224,7 @@ export const QUESTION_BANK = [
     id: 1299,
     category: `Comprehensive`,
     chapter: `Practice Test Seven`,
-    question: `A laboring woman who has dystocia is receiving oxytocin. The nurse observes a contraction lasting 90 seconds. What should the nurse do first?`,
+    prompt: `A laboring woman who has dystocia is receiving oxytocin. The nurse observes a contraction lasting 90 seconds. What should the nurse do first?`,
     options: [
       `Slow down the rate of the oxytocin`,
       `Turn the woman on her left side`,
@@ -18239,7 +18238,7 @@ export const QUESTION_BANK = [
     id: 1300,
     category: `Comprehensive`,
     chapter: `Practice Test Seven`,
-    question: `A laboring woman says to the LPN/LVN, "My baby is coming! My baby is coming!" She was last checked 15 minutes ago and was 5 cm dilated. What should the LPN/LVN do initially?`,
+    prompt: `A laboring woman says to the LPN/LVN, "My baby is coming! My baby is coming!" She was last checked 15 minutes ago and was 5 cm dilated. What should the LPN/LVN do initially?`,
     options: [
       `Have her checked to see if she has progressed`,
       `Reassure her that she cannot be that far along`,
@@ -18253,7 +18252,7 @@ export const QUESTION_BANK = [
     id: 1301,
     category: `Comprehensive`,
     chapter: `Practice Test Seven`,
-    question: `A baby boy is delivered after a rapid labor of three hours. What nursing action takes priority in the immediate newborn period?`,
+    prompt: `A baby boy is delivered after a rapid labor of three hours. What nursing action takes priority in the immediate newborn period?`,
     options: [
       `Suctioning with a bulb syringe`,
       `Wrapping the baby in warm blankets`,
@@ -18267,7 +18266,7 @@ export const QUESTION_BANK = [
     id: 1302,
     category: `Comprehensive`,
     chapter: `Practice Test Seven`,
-    question: `The nurse is talking with a group of young people who are preparing to spend a weekend camping in the woods. Which information is essential to include in the discussion?`,
+    prompt: `The nurse is talking with a group of young people who are preparing to spend a weekend camping in the woods. Which information is essential to include in the discussion?`,
     options: [
       `Wear long pants and long sleeves to prevent tick bites.`,
       `Sunscreen is not necessary because you will be moving and perspiring.`,
@@ -18281,7 +18280,7 @@ export const QUESTION_BANK = [
     id: 1303,
     category: `Comprehensive`,
     chapter: `Practice Test Seven`,
-    question: `The client who is receiving cancer chemotherapy asks why the physician recommended she take it in the evening. The nurse's response should include which information?`,
+    prompt: `The client who is receiving cancer chemotherapy asks why the physician recommended she take it in the evening. The nurse's response should include which information?`,
     options: [
       `It is best to have one set time to take it. It really doesn't matter what time.`,
       `Taking it in the evening means that any nausea that may occur will be during the night when you are asleep and not during meal times.`,
@@ -18295,7 +18294,7 @@ export const QUESTION_BANK = [
     id: 1304,
     category: `Comprehensive`,
     chapter: `Practice Test Seven`,
-    question: `The nurse is auscultating the lungs in a postoperative client and hears something that sounds like a cellophane bag being wrinkled when the client takes in a breath. What nursing care is essential because of the finding?`,
+    prompt: `The nurse is auscultating the lungs in a postoperative client and hears something that sounds like a cellophane bag being wrinkled when the client takes in a breath. What nursing care is essential because of the finding?`,
     options: [
       `Start emergency oxygen and notify the physician.`,
       `Have the client take several deep breaths and cough every two hours.`,
@@ -18309,7 +18308,7 @@ export const QUESTION_BANK = [
     id: 1305,
     category: `Comprehensive`,
     chapter: `Practice Test Seven`,
-    question: `A client who had a total thyroidectomy this morning is to be admitted to the surgical floor. What should the nurse have readily available when the client arrives?`,
+    prompt: `A client who had a total thyroidectomy this morning is to be admitted to the surgical floor. What should the nurse have readily available when the client arrives?`,
     options: [
       `Tracheostomy set`,
       `Catheterization tray`,
@@ -18323,7 +18322,7 @@ export const QUESTION_BANK = [
     id: 1306,
     category: `Comprehensive`,
     chapter: `Practice Test Seven`,
-    question: `Iron drops were ordered for a toddler who has iron deficiency anemia. What observation of the child by the nurse indicates that the child is receiving the medication?`,
+    prompt: `Iron drops were ordered for a toddler who has iron deficiency anemia. What observation of the child by the nurse indicates that the child is receiving the medication?`,
     options: [
       `The child is pale and lethargic.`,
       `The child's skin has brown spots.`,
@@ -18337,7 +18336,7 @@ export const QUESTION_BANK = [
     id: 1307,
     category: `Comprehensive`,
     chapter: `Practice Test Seven`,
-    question: `Which statement made by the parents of a child who has sickle cell anemia indicates understanding of how to reduce the incidence of crises?`,
+    prompt: `Which statement made by the parents of a child who has sickle cell anemia indicates understanding of how to reduce the incidence of crises?`,
     options: [
       `"I should not let my child play outdoors."`,
       `"My child should drink lots of fluids every day."`,
@@ -18351,7 +18350,7 @@ export const QUESTION_BANK = [
     id: 1308,
     category: `Comprehensive`,
     chapter: `Practice Test Seven`,
-    question: `A person who has psoriasis is seen in the clinic. The lesions are covered with coal tar. Which instruction should the nurse give the client?`,
+    prompt: `A person who has psoriasis is seen in the clinic. The lesions are covered with coal tar. Which instruction should the nurse give the client?`,
     options: [
       `"Call if you have nausea and vomiting."`,
       `"Protect the area from sunlight for 24 hours."`,
@@ -18365,7 +18364,7 @@ export const QUESTION_BANK = [
     id: 1309,
     category: `Comprehensive`,
     chapter: `Practice Test Seven`,
-    question: `The nurse is to observe the client for shock. The client's admitting vital signs are blood pressure (BP) = 116/70, pulse = 86, and respirations = 24. Which finding, if observed, would be most suggestive of shock?`,
+    prompt: `The nurse is to observe the client for shock. The client's admitting vital signs are blood pressure (BP) = 116/70, pulse = 86, and respirations = 24. Which finding, if observed, would be most suggestive of shock?`,
     options: [
       `BP = 140/60`,
       `Pulse = 100`,
@@ -18379,7 +18378,7 @@ export const QUESTION_BANK = [
     id: 1310,
     category: `Comprehensive`,
     chapter: `Practice Test Seven`,
-    question: `A nursing assistant comes to the LPN/LVN and complains that she has more residents to care for than another nursing assistant (NA). She has one more resident assigned to her than the other NA. However, the other NA has more total care residents than the complaining NA. How should the LPN/LVN handle this situation?`,
+    prompt: `A nursing assistant comes to the LPN/LVN and complains that she has more residents to care for than another nursing assistant (NA). She has one more resident assigned to her than the other NA. However, the other NA has more total care residents than the complaining NA. How should the LPN/LVN handle this situation?`,
     options: [
       `Tell the complaining NA that this is the assignment`,
       `Promise to give her an easier assignment tomorrow`,
@@ -18393,7 +18392,7 @@ export const QUESTION_BANK = [
     id: 1311,
     category: `Comprehensive`,
     chapter: `Practice Test Seven`,
-    question: `An adult who is being admitted to the medical floor with a bleeding ulcer exhibits all of the following. Which finding suggests that the client may be experiencing alcohol withdrawal symptoms?`,
+    prompt: `An adult who is being admitted to the medical floor with a bleeding ulcer exhibits all of the following. Which finding suggests that the client may be experiencing alcohol withdrawal symptoms?`,
     options: [
       `BP = 90/60`,
       `Dizziness`,
@@ -18407,7 +18406,7 @@ export const QUESTION_BANK = [
     id: 1312,
     category: `Comprehensive`,
     chapter: `Practice Test Seven`,
-    question: `The client has a prolonged prothrombin time. What question is important to ask the client when interpreting this information?`,
+    prompt: `The client has a prolonged prothrombin time. What question is important to ask the client when interpreting this information?`,
     options: [
       `How often do you eat meat?`,
       `How much alcohol do you drink?`,
@@ -18421,7 +18420,7 @@ export const QUESTION_BANK = [
     id: 1313,
     category: `Comprehensive`,
     chapter: `Practice Test Seven`,
-    question: `The nurse is caring for a newly admitted man who has kidney stones. The man asks if he can get up and take a walk. How should the nurse respond?`,
+    prompt: `The nurse is caring for a newly admitted man who has kidney stones. The man asks if he can get up and take a walk. How should the nurse respond?`,
     options: [
       `"It is better for you to remain in bed until the stones pass."`,
       `"Stay in bed until I check with your physician."`,
@@ -18435,7 +18434,7 @@ export const QUESTION_BANK = [
     id: 1314,
     category: `Comprehensive`,
     chapter: `Practice Test Seven`,
-    question: `The nurse is discussing preventive health care with a group of women. Which woman should the nurse advise to have a mammogram?`,
+    prompt: `The nurse is discussing preventive health care with a group of women. Which woman should the nurse advise to have a mammogram?`,
     options: [
       `A 20-year-old who says her breasts hurt before her period`,
       `A 25-year-old who was hit in the breast area by a ball`,
@@ -18449,7 +18448,7 @@ export const QUESTION_BANK = [
     id: 1315,
     category: `Comprehensive`,
     chapter: `Practice Test Seven`,
-    question: `A 79-year-old client asks the nurse if she needs any shots. She reports having had "all the usual shots when I was younger." Which immunization is most important for this person to receive?`,
+    prompt: `A 79-year-old client asks the nurse if she needs any shots. She reports having had "all the usual shots when I was younger." Which immunization is most important for this person to receive?`,
     options: [
       `DPT`,
       `MMR`,
@@ -18463,7 +18462,7 @@ export const QUESTION_BANK = [
     id: 1316,
     category: `Comprehensive`,
     chapter: `Practice Test Seven`,
-    question: `The LPN/LVN is to assist the school nurse in scoliosis screening. What instructions should be given to the students?`,
+    prompt: `The LPN/LVN is to assist the school nurse in scoliosis screening. What instructions should be given to the students?`,
     options: [
       `Wear a bathing suit under your clothes on the examination day.`,
       `Bring a urine sample to school.`,
@@ -18477,7 +18476,7 @@ export const QUESTION_BANK = [
     id: 1317,
     category: `Comprehensive`,
     chapter: `Practice Test Seven`,
-    question: `A woman who had a tuberculosis test three days ago reports to the nurse to have the test read. Which finding, if present, indicates a positive result and a need for referral and follow-up?`,
+    prompt: `A woman who had a tuberculosis test three days ago reports to the nurse to have the test read. Which finding, if present, indicates a positive result and a need for referral and follow-up?`,
     options: [
       `A red area 12 mm in diameter`,
       `A raised area 10 mm in diameter`,
@@ -18491,7 +18490,7 @@ export const QUESTION_BANK = [
     id: 1318,
     category: `Comprehensive`,
     chapter: `Practice Test Seven`,
-    question: `The nurse is to administer a tuberculin skin test. At what angle should the nurse insert the needle?`,
+    prompt: `The nurse is to administer a tuberculin skin test. At what angle should the nurse insert the needle?`,
     options: [
       `A 10-degree angle`,
       `A 30-degree angle`,
@@ -18505,7 +18504,7 @@ export const QUESTION_BANK = [
     id: 1319,
     category: `Comprehensive`,
     chapter: `Practice Test Seven`,
-    question: `The nurse is discussing child safety with a group of mothers of toddlers. Which statement indicates a need for more instruction?`,
+    prompt: `The nurse is discussing child safety with a group of mothers of toddlers. Which statement indicates a need for more instruction?`,
     options: [
       `"My child should be in the back seat in a front-facing car seat."`,
       `"My little one needs constant supervision."`,
@@ -18519,7 +18518,7 @@ export const QUESTION_BANK = [
     id: 1320,
     category: `Comprehensive`,
     chapter: `Practice Test Seven`,
-    question: `Which statement, if made by the client, indicates a possible problem?`,
+    prompt: `Which statement, if made by the client, indicates a possible problem?`,
     options: [
       `"I have a bowel movement every other day."`,
       `"My stools recently are black."`,
@@ -18533,7 +18532,7 @@ export const QUESTION_BANK = [
     id: 1321,
     category: `Comprehensive`,
     chapter: `Practice Test Seven`,
-    question: `The client has recently had a colostomy. The nurse is providing home care and is teaching the client about care of his colostomy. Which comment by the client indicates understanding of the care of his colostomy?`,
+    prompt: `The client has recently had a colostomy. The nurse is providing home care and is teaching the client about care of his colostomy. Which comment by the client indicates understanding of the care of his colostomy?`,
     options: [
       `"I will use hot water to irrigate the colostomy."`,
       `"If my skin gets red, I will put alcohol on it."`,
@@ -18547,7 +18546,7 @@ export const QUESTION_BANK = [
     id: 1322,
     category: `Comprehensive`,
     chapter: `Practice Test Seven`,
-    question: `The nurse is doing a pain assessment on the client who has chronic back pain. Which assessment is of greatest value?`,
+    prompt: `The nurse is doing a pain assessment on the client who has chronic back pain. Which assessment is of greatest value?`,
     options: [
       `Observe the client for grimaces, flinching, and other signs of pain.`,
       `Monitor the client's blood pressure.`,
@@ -18561,7 +18560,7 @@ export const QUESTION_BANK = [
     id: 1323,
     category: `Comprehensive`,
     chapter: `Practice Test Seven`,
-    question: `After admission for elective surgery, an adult says to the nurse, "They asked me if I had advance directives. I don't even know what that is." What is the best response by the nurse?`,
+    prompt: `After admission for elective surgery, an adult says to the nurse, "They asked me if I had advance directives. I don't even know what that is." What is the best response by the nurse?`,
     options: [
       `Advance directives are usually written by persons who have a terminal illness. They are not indicated for elective surgery.`,
       `An advance directive is a document that tells the medical and nursing staff what your wishes are regarding certain health care items should you not be able to make decisions for yourself.`,
@@ -18575,7 +18574,7 @@ export const QUESTION_BANK = [
     id: 1324,
     category: `Comprehensive`,
     chapter: `Practice Test Seven`,
-    question: `The nurse is caring for a client who had a total gastrectomy performed this morning. When the client returns to the nursing care unit, the drainage from the nasogastric tube is red. What is the nurse's best response to this?`,
+    prompt: `The nurse is caring for a client who had a total gastrectomy performed this morning. When the client returns to the nursing care unit, the drainage from the nasogastric tube is red. What is the nurse's best response to this?`,
     options: [
       `Report it immediately to the charge nurse or the physician`,
       `Record the finding and continue to observe`,
@@ -18589,7 +18588,7 @@ export const QUESTION_BANK = [
     id: 1325,
     category: `Comprehensive`,
     chapter: `Practice Test Seven`,
-    question: `The nurse is to administer a nasogastric tube feeding to a client. Which action is essential prior to administering the feeding?`,
+    prompt: `The nurse is to administer a nasogastric tube feeding to a client. Which action is essential prior to administering the feeding?`,
     options: [
       `Position the client in supine position.`,
       `Aspirate contents from the nasogastric tube and check the pH.`,
@@ -18603,7 +18602,7 @@ export const QUESTION_BANK = [
     id: 1326,
     category: `Comprehensive`,
     chapter: `Practice Test Seven`,
-    question: `The nurse is assisting a client with deep breathing and coughing exercises following abdominal surgery. What instruction is most appropriate for the nurse to give the client?`,
+    prompt: `The nurse is assisting a client with deep breathing and coughing exercises following abdominal surgery. What instruction is most appropriate for the nurse to give the client?`,
     options: [
       `Hold your breath for several seconds and then breathe out forcefully.`,
       `Splint your incision while taking in deep breaths and coughing.`,
@@ -18617,7 +18616,7 @@ export const QUESTION_BANK = [
     id: 1327,
     category: `Comprehensive`,
     chapter: `Practice Test Seven`,
-    question: `The nurse is caring for all of the following clients. Who is probably at greatest risk for skin breakdown and will need special nursing care measures?`,
+    prompt: `The nurse is caring for all of the following clients. Who is probably at greatest risk for skin breakdown and will need special nursing care measures?`,
     options: [
       `A 75-year-old who is admitted with a broken hip`,
       `An 80-year-old who is admitted with angina`,
@@ -18631,7 +18630,7 @@ export const QUESTION_BANK = [
     id: 1328,
     category: `Comprehensive`,
     chapter: `Practice Test Seven`,
-    question: `The nurse is to perform a routine blood glucose check on a diabetic client before administering insulin. Which action is correct?`,
+    prompt: `The nurse is to perform a routine blood glucose check on a diabetic client before administering insulin. Which action is correct?`,
     options: [
       `Puncture the end of the thumb in the middle of the fleshy part.`,
       `Puncture the end of the finger on the side.`,
@@ -18645,7 +18644,7 @@ export const QUESTION_BANK = [
     id: 1329,
     category: `Comprehensive`,
     chapter: `Practice Test Seven`,
-    question: `A woman is in the clinic complaining of urinary frequency, urgency, and pain on urination. Orders include a urine for culture and administration of sulfisoxazole (Gantrisin) and phenazopyridine (Pyridium). Which action should the nurse take first?`,
+    prompt: `A woman is in the clinic complaining of urinary frequency, urgency, and pain on urination. Orders include a urine for culture and administration of sulfisoxazole (Gantrisin) and phenazopyridine (Pyridium). Which action should the nurse take first?`,
     options: [
       `Obtain a clean catch urine from the client.`,
       `Ask the client if she is allergic to sulfa drugs.`,
@@ -18659,7 +18658,7 @@ export const QUESTION_BANK = [
     id: 1330,
     category: `Comprehensive`,
     chapter: `Practice Test Seven`,
-    question: `An 8-year-old boy has just had a fiberglass cast applied to his right lower leg following a fractured ankle. The nurse is discussing care of the cast with the parents. Which instruction should be included?`,
+    prompt: `An 8-year-old boy has just had a fiberglass cast applied to his right lower leg following a fractured ankle. The nurse is discussing care of the cast with the parents. Which instruction should be included?`,
     options: [
       `Since water does not dissolve a fiberglass cast, your child may take a bath.`,
       `Check the toes on the right leg to be sure they are warm.`,
@@ -18673,7 +18672,7 @@ export const QUESTION_BANK = [
     id: 1331,
     category: `Comprehensive`,
     chapter: `Practice Test Seven`,
-    question: `The nurse is caring for a woman admitted with thrombocytopenia. Which instruction should the nurse give the client?`,
+    prompt: `The nurse is caring for a woman admitted with thrombocytopenia. Which instruction should the nurse give the client?`,
     options: [
       `Call me when you need to go to the bathroom.`,
       `Do not use dental floss or a firm toothbrush.`,
@@ -18687,7 +18686,7 @@ export const QUESTION_BANK = [
     id: 1332,
     category: `Comprehensive`,
     chapter: `Practice Test Seven`,
-    question: `At 10:30 A.M., a young woman who has diabetes calls the nurse and says she feels "funny." The nurse notes that she is cool to the touch but her skin is moist. When the nurse asks her if she is hungry, she responds in an irritable manner that she is hungry. Which initial nursing action is appropriate?`,
+    prompt: `At 10:30 A.M., a young woman who has diabetes calls the nurse and says she feels "funny." The nurse notes that she is cool to the touch but her skin is moist. When the nurse asks her if she is hungry, she responds in an irritable manner that she is hungry. Which initial nursing action is appropriate?`,
     options: [
       `Administer her noon dose of insulin early.`,
       `Call the lab to draw a blood glucose.`,
@@ -18701,7 +18700,7 @@ export const QUESTION_BANK = [
     id: 1333,
     category: `Comprehensive`,
     chapter: `Practice Test Seven`,
-    question: `A newborn is to receive phototherapy for hyperbilirubinemia. Which nursing action is essential?`,
+    prompt: `A newborn is to receive phototherapy for hyperbilirubinemia. Which nursing action is essential?`,
     options: [
       `Keep the infant NPO for two hours before the treatment.`,
       `Ask the mother to stay away from the infant during the treatment.`,
@@ -18715,7 +18714,7 @@ export const QUESTION_BANK = [
     id: 1334,
     category: `Comprehensive`,
     chapter: `Practice Test Seven`,
-    question: `A child at school trips on a shoe lace and falls. Her ankle swells immediately, and the child is in a great deal of pain. What is the best initial action for the nurse to take?`,
+    prompt: `A child at school trips on a shoe lace and falls. Her ankle swells immediately, and the child is in a great deal of pain. What is the best initial action for the nurse to take?`,
     options: [
       `Keep the foot down`,
       `Apply a warm compress`,
@@ -18729,7 +18728,7 @@ export const QUESTION_BANK = [
     id: 1335,
     category: `Comprehensive`,
     chapter: `Practice Test Seven`,
-    question: `Oxygen has been ordered for a client who was admitted to the hospital with congestive heart failure. Which assessment finding indicates that the oxygen has been effective?`,
+    prompt: `Oxygen has been ordered for a client who was admitted to the hospital with congestive heart failure. Which assessment finding indicates that the oxygen has been effective?`,
     options: [
       `The client no longer complains of pain.`,
       `The client's respiratory rate has decreased from 36 to 24.`,
@@ -18743,7 +18742,7 @@ export const QUESTION_BANK = [
     id: 1336,
     category: `Comprehensive`,
     chapter: `Practice Test Seven`,
-    question: `An adult is admitted with meningitis. During the acute phase of the illness, which measure should the nurse include in the nursing care plan to reduce the chance of seizures?`,
+    prompt: `An adult is admitted with meningitis. During the acute phase of the illness, which measure should the nurse include in the nursing care plan to reduce the chance of seizures?`,
     options: [
       `Play the client's favorite music.`,
       `Stimulate the client every two hours.`,
@@ -18757,7 +18756,7 @@ export const QUESTION_BANK = [
     id: 1337,
     category: `Comprehensive`,
     chapter: `Practice Test Seven`,
-    question: `The evening nurse caring for an adult who had a partial gastrectomy this morning notes that the drainage from the nasogastric tube is bright red. What action should the nurse take?`,
+    prompt: `The evening nurse caring for an adult who had a partial gastrectomy this morning notes that the drainage from the nasogastric tube is bright red. What action should the nurse take?`,
     options: [
       `Chart the drainage amount and color`,
       `Report the findings immediately to the charge nurse`,
@@ -18771,7 +18770,7 @@ export const QUESTION_BANK = [
     id: 1338,
     category: `Comprehensive`,
     chapter: `Practice Test Seven`,
-    question: `The nurse is caring for a man who had a transsphenoidal hypophysectomy earlier today. He says he has to spit a lot. What nursing action is essential?`,
+    prompt: `The nurse is caring for a man who had a transsphenoidal hypophysectomy earlier today. He says he has to spit a lot. What nursing action is essential?`,
     options: [
       `Ask him to blow his nose.`,
       `Do a glucose test on his mouth secretions.`,
@@ -18785,7 +18784,7 @@ export const QUESTION_BANK = [
     id: 1339,
     category: `Comprehensive`,
     chapter: `Practice Test Seven`,
-    question: `A client is admitted with a possible gastric ulcer. Suddenly he calls to the nurse and says, "It hurts so bad." The client is pale and diaphoretic. What should the nurse do initially?`,
+    prompt: `A client is admitted with a possible gastric ulcer. Suddenly he calls to the nurse and says, "It hurts so bad." The client is pale and diaphoretic. What should the nurse do initially?`,
     options: [
       `Call the physician`,
       `Touch the abdomen`,
@@ -18799,7 +18798,7 @@ export const QUESTION_BANK = [
     id: 1340,
     category: `Comprehensive`,
     chapter: `Practice Test Seven`,
-    question: `A blood transfusion has just been started on an adult. Which assessment is most essential during the first hour?`,
+    prompt: `A blood transfusion has just been started on an adult. Which assessment is most essential during the first hour?`,
     options: [
       `Temperature`,
       `Blood pressure`,
@@ -18813,7 +18812,7 @@ export const QUESTION_BANK = [
     id: 1341,
     category: `Comprehensive`,
     chapter: `Practice Test Seven`,
-    question: `An adult is admitted in severe hypovolemic shock following an auto accident. A transfusion is ordered. What type of blood is given when the client's blood type is not known?`,
+    prompt: `An adult is admitted in severe hypovolemic shock following an auto accident. A transfusion is ordered. What type of blood is given when the client's blood type is not known?`,
     options: [
       `O positive`,
       `O negative`,
@@ -18827,7 +18826,7 @@ export const QUESTION_BANK = [
     id: 1342,
     category: `Comprehensive`,
     chapter: `Practice Test Seven`,
-    question: `The client has been vomiting for several days. Which blood gas values is he likely to have?`,
+    prompt: `The client has been vomiting for several days. Which blood gas values is he likely to have?`,
     options: [
       `pH = 7.32; CO2 = 60; HCO3 = 30`,
       `pH = 7.32; CO2 = 33; HCO3 = 18`,
@@ -18841,7 +18840,7 @@ export const QUESTION_BANK = [
     id: 1343,
     category: `Comprehensive`,
     chapter: `Practice Test Seven`,
-    question: `The nurse is caring for an elderly woman who had surgery on her right foot yesterday. The woman had a broken left arm three months ago and has osteoarthritis. Which type of assistive device will probably be most appropriate for this client?`,
+    prompt: `The nurse is caring for an elderly woman who had surgery on her right foot yesterday. The woman had a broken left arm three months ago and has osteoarthritis. Which type of assistive device will probably be most appropriate for this client?`,
     options: [
       `Quad cane`,
       `Crutches`,
@@ -18855,7 +18854,7 @@ export const QUESTION_BANK = [
     id: 1344,
     category: `Comprehensive`,
     chapter: `Practice Test Seven`,
-    question: `The hospital nurse administers CPR to an adult male who is found unconscious, has no pulse, and is not breathing. What is the ratio of chest compressions to respirations for one-person rescue?`,
+    prompt: `The hospital nurse administers CPR to an adult male who is found unconscious, has no pulse, and is not breathing. What is the ratio of chest compressions to respirations for one-person rescue?`,
     options: [
       `Fifteen chest compressions to one breath`,
       `Fifteen chest compressions to two breaths`,
@@ -18869,7 +18868,7 @@ export const QUESTION_BANK = [
     id: 1345,
     category: `Comprehensive`,
     chapter: `Practice Test Seven`,
-    question: `The nurse is caring for a client who had a portable water seal chest drainage system inserted today. Which observation indicates that the client's drainage system is working properly?`,
+    prompt: `The nurse is caring for a client who had a portable water seal chest drainage system inserted today. Which observation indicates that the client's drainage system is working properly?`,
     options: [
       `There are no bubbles in the water seal bottle.`,
       `The suction control chamber has continuous bubbles.`,
@@ -18883,7 +18882,7 @@ export const QUESTION_BANK = [
     id: 1346,
     category: `Comprehensive`,
     chapter: `Practice Test Seven`,
-    question: `What should the nurse do when ambulating a client who has a portable wound drainage system?`,
+    prompt: `What should the nurse do when ambulating a client who has a portable wound drainage system?`,
     options: [
       `Remove the drainage catheter during ambulation`,
       `Fasten the collection device below the wound`,
@@ -18897,7 +18896,7 @@ export const QUESTION_BANK = [
     id: 1347,
     category: `Comprehensive`,
     chapter: `Practice Test Seven`,
-    question: `The nurse is discussing positioning with the family of a client who is at home following a total hip replacement a week ago. Which should be included in the discussion?`,
+    prompt: `The nurse is discussing positioning with the family of a client who is at home following a total hip replacement a week ago. Which should be included in the discussion?`,
     options: [
       `Keep the client on his unaffected side most of the time.`,
       `Position the client to maintain hip flexion.`,
@@ -18911,7 +18910,7 @@ export const QUESTION_BANK = [
     id: 1348,
     category: `Comprehensive`,
     chapter: `Practice Test Seven`,
-    question: `An 80-year-old woman is having difficulty sleeping. Which nursing action is most appropriate initially?`,
+    prompt: `An 80-year-old woman is having difficulty sleeping. Which nursing action is most appropriate initially?`,
     options: [
       `Ask the physician for an order for a sleeping medication.`,
       `Encourage the client to do mild exercises a half hour before going to bed.`,
@@ -18925,7 +18924,7 @@ export const QUESTION_BANK = [
     id: 1349,
     category: `Comprehensive`,
     chapter: `Practice Test Seven`,
-    question: `The nurse is providing home care to an elderly woman who had a cerebrovascular accident (CVA) and has right-sided hemiplegia. She is living with her daughter. Which observation indicates that the family needs more instruction?`,
+    prompt: `The nurse is providing home care to an elderly woman who had a cerebrovascular accident (CVA) and has right-sided hemiplegia. She is living with her daughter. Which observation indicates that the family needs more instruction?`,
     options: [
       `The client's arms and legs are exercised every day.`,
       `The daughter gets her mother out of bed several times a day.`,
@@ -18939,7 +18938,7 @@ export const QUESTION_BANK = [
     id: 1350,
     category: `Comprehensive`,
     chapter: `Practice Test Seven`,
-    question: `The family of a 48-year-old woman who has multiple sclerosis and spends most of her time in bed or in a chair asks the nurse why they have been told they should have her take deep breaths and cough frequently. What should the nurse include in the reply?`,
+    prompt: `The family of a 48-year-old woman who has multiple sclerosis and spends most of her time in bed or in a chair asks the nurse why they have been told they should have her take deep breaths and cough frequently. What should the nurse include in the reply?`,
     options: [
       `Deep breathing and coughing will help her to move her secretions so she will not develop pneumonia.`,
       `Deep breathing and coughing help to prevent clots from developing in the lung.`,
@@ -18953,7 +18952,7 @@ export const QUESTION_BANK = [
     id: 1351,
     category: `Comprehensive`,
     chapter: `Practice Test Seven`,
-    question: `An adult is admitted with gastroenteritis. The physician has ordered prochlorperazine (Compazine) 10 mg PO tid PRN or prochlorperazine (Compazine) 5 mg suppository every 6 hours PRN and loperamide (Imodium) 2 mg PO PRN. The client has an episode of diarrhea and complains of nausea. What should the nurse administer?`,
+    prompt: `An adult is admitted with gastroenteritis. The physician has ordered prochlorperazine (Compazine) 10 mg PO tid PRN or prochlorperazine (Compazine) 5 mg suppository every 6 hours PRN and loperamide (Imodium) 2 mg PO PRN. The client has an episode of diarrhea and complains of nausea. What should the nurse administer?`,
     options: [
       `Prochlorperazine (Compazine) PO`,
       `Loperamide (Imodium)`,
@@ -18967,7 +18966,7 @@ export const QUESTION_BANK = [
     id: 1352,
     category: `Comprehensive`,
     chapter: `Practice Test Seven`,
-    question: `A clear liquid diet is ordered for an adult following surgery. All of the following are on the client's tray. Which should be removed by the nurse?`,
+    prompt: `A clear liquid diet is ordered for an adult following surgery. All of the following are on the client's tray. Which should be removed by the nurse?`,
     options: [
       `Ice cream`,
       `Beef broth`,
@@ -18981,7 +18980,7 @@ export const QUESTION_BANK = [
     id: 1353,
     category: `Comprehensive`,
     chapter: `Practice Test Seven`,
-    question: `The nurse is administering digoxin to a 6-month-old infant. Which finding would cause the nurse to withhold the medication and notify the charge nurse or the physician?`,
+    prompt: `The nurse is administering digoxin to a 6-month-old infant. Which finding would cause the nurse to withhold the medication and notify the charge nurse or the physician?`,
     options: [
       `Apical heart rate of 85`,
       `Appears lethargic`,
@@ -18995,7 +18994,7 @@ export const QUESTION_BANK = [
     id: 1354,
     category: `Comprehensive`,
     chapter: `Practice Test Seven`,
-    question: `The nurse is teaching a client how to care for a colostomy. Which factor indicates that the client needs more instruction?`,
+    prompt: `The nurse is teaching a client how to care for a colostomy. Which factor indicates that the client needs more instruction?`,
     options: [
       `The client says, "I will change the bag as soon as it gets full."`,
       `The client is observed irrigating the colostomy while sitting on the toilet.`,
@@ -19009,7 +19008,7 @@ export const QUESTION_BANK = [
     id: 1355,
     category: `Comprehensive`,
     chapter: `Practice Test Seven`,
-    question: `The nurse is caring for a client who has dentures. Which action by the nurse is not appropriate?`,
+    prompt: `The nurse is caring for a client who has dentures. Which action by the nurse is not appropriate?`,
     options: [
       `Place a washcloth in the bottom of the sink before cleaning the dentures.`,
       `Brush the dentures with toothpaste.`,
@@ -19023,7 +19022,7 @@ export const QUESTION_BANK = [
     id: 1356,
     category: `Comprehensive`,
     chapter: `Practice Test Seven`,
-    question: `The LPN/LVN is making assignments in a long-term care facility. Staff on duty include another LPN and a new certified nursing assistant. Which client can most safely be assigned to the nursing assistant?`,
+    prompt: `The LPN/LVN is making assignments in a long-term care facility. Staff on duty include another LPN and a new certified nursing assistant. Which client can most safely be assigned to the nursing assistant?`,
     options: [
       `Ms. A., 92 years old, has dementia and advancing congestive heart failure (CHF).`,
       `Ms. B., 83 years old, has Alzheimer's and Parkinson's and is ambulatory with assistance.`,
@@ -19037,7 +19036,7 @@ export const QUESTION_BANK = [
     id: 1357,
     category: `Comprehensive`,
     chapter: `Practice Test Seven`,
-    question: `The nurse is caring for a client who is terminally ill. Upon admission, the client signed advance directives indicating that she does not wish to have any resuscitative measures. The client is now in and out of consciousness. Her daughter comes to the nurse and says, "I want everything done for my mother if she stops breathing." How should the nurse respond?`,
+    prompt: `The nurse is caring for a client who is terminally ill. Upon admission, the client signed advance directives indicating that she does not wish to have any resuscitative measures. The client is now in and out of consciousness. Her daughter comes to the nurse and says, "I want everything done for my mother if she stops breathing." How should the nurse respond?`,
     options: [
       `Remove the "Do Not Resuscitate" order from the chart.`,
       `Discuss the client's advance directives with the daughter.`,
@@ -19051,7 +19050,7 @@ export const QUESTION_BANK = [
     id: 1358,
     category: `Comprehensive`,
     chapter: `Practice Test Seven`,
-    question: `When explaining Standard Precautions to a client, the nurse should explain that the primary purpose of Standard Precautions is to:`,
+    prompt: `When explaining Standard Precautions to a client, the nurse should explain that the primary purpose of Standard Precautions is to:`,
     options: [
       `protect the client with a weak immune system.`,
       `prevent the spread of AIDS.`,
@@ -19065,7 +19064,7 @@ export const QUESTION_BANK = [
     id: 1359,
     category: `Comprehensive`,
     chapter: `Practice Test Seven`,
-    question: `Upon entering a client's room, the nurse sees and smells smoke and flames. What is the best initial nursing action?`,
+    prompt: `Upon entering a client's room, the nurse sees and smells smoke and flames. What is the best initial nursing action?`,
     options: [
       `Attempt to fight the fire.`,
       `Move the client out of the room.`,
@@ -19079,7 +19078,7 @@ export const QUESTION_BANK = [
     id: 1360,
     category: `Comprehensive`,
     chapter: `Practice Test Seven`,
-    question: `An adult who has liver disease secondary to alcohol abuse has just been told that alcohol is causing his health problems. The nurse expects that the client's initial response will most likely be which of the following?`,
+    prompt: `An adult who has liver disease secondary to alcohol abuse has just been told that alcohol is causing his health problems. The nurse expects that the client's initial response will most likely be which of the following?`,
     options: [
       `"I don't drink enough to hurt my health."`,
       `"How could this happen to me? I've always been a good person."`,
@@ -19093,7 +19092,7 @@ export const QUESTION_BANK = [
     id: 1361,
     category: `Comprehensive`,
     chapter: `Practice Test Seven`,
-    question: `The client is receiving chemotherapy for cancer. Which statement, if made by the client, would indicate that she has accepted the diagnosis and treatment?`,
+    prompt: `The client is receiving chemotherapy for cancer. Which statement, if made by the client, would indicate that she has accepted the diagnosis and treatment?`,
     options: [
       `"I hate getting that treatment."`,
       `"The doctor isn't sure if I really have cancer."`,
@@ -19107,7 +19106,7 @@ export const QUESTION_BANK = [
     id: 1362,
     category: `Comprehensive`,
     chapter: `Practice Test Seven`,
-    question: `A hospitalized client asks what is wrong with the person in the next bed. How should the nurse reply?`,
+    prompt: `A hospitalized client asks what is wrong with the person in the next bed. How should the nurse reply?`,
     options: [
       `Ask the client why he wants to know`,
       `Give the client a vague answer`,
@@ -19121,7 +19120,7 @@ export const QUESTION_BANK = [
     id: 1363,
     category: `Comprehensive`,
     chapter: `Practice Test Seven`,
-    question: `An adult is being admitted with possible pneumonia. His history indicates he had a tonsillectomy as a child and tuberculosis 10 years ago, which was arrested. Which room assignment is most appropriate?`,
+    prompt: `An adult is being admitted with possible pneumonia. His history indicates he had a tonsillectomy as a child and tuberculosis 10 years ago, which was arrested. Which room assignment is most appropriate?`,
     options: [
       `A room without a roommate`,
       `Isolation`,
@@ -19135,7 +19134,7 @@ export const QUESTION_BANK = [
     id: 1364,
     category: `Comprehensive`,
     chapter: `Practice Test Seven`,
-    question: `Which activity is appropriate to assign to a certified nursing assistant?`,
+    prompt: `Which activity is appropriate to assign to a certified nursing assistant?`,
     options: [
       `Evaluate vital signs`,
       `Monitor tube feedings`,
@@ -19149,7 +19148,7 @@ export const QUESTION_BANK = [
     id: 1365,
     category: `Comprehensive`,
     chapter: `Practice Test Seven`,
-    question: `An adult who recently had an amputation has an above-the-knee prosthesis. Which nursing action will do the most to help the client adjust to the prosthesis?`,
+    prompt: `An adult who recently had an amputation has an above-the-knee prosthesis. Which nursing action will do the most to help the client adjust to the prosthesis?`,
     options: [
       `Adjust the prosthesis for the client.`,
       `Offer the client a cane or a walker for ease of movement.`,
@@ -19163,7 +19162,7 @@ export const QUESTION_BANK = [
     id: 1366,
     category: `Comprehensive`,
     chapter: `Practice Test Seven`,
-    question: `The nurse is monitoring a client who is going through barbiturate withdrawal. Which symptom is of most concern to the nurse?`,
+    prompt: `The nurse is monitoring a client who is going through barbiturate withdrawal. Which symptom is of most concern to the nurse?`,
     options: [
       `Nausea and vomiting`,
       `Anxiety`,
@@ -19177,7 +19176,7 @@ export const QUESTION_BANK = [
     id: 1367,
     category: `Comprehensive`,
     chapter: `Practice Test Seven`,
-    question: `An adult has a substance abuse problem. Which statement, if made by the client, indicates the best understanding of the problem?`,
+    prompt: `An adult has a substance abuse problem. Which statement, if made by the client, indicates the best understanding of the problem?`,
     options: [
       `"I can never use that drug again."`,
       `"When I am off the drug for two years, I will be cured."`,
@@ -19191,7 +19190,7 @@ export const QUESTION_BANK = [
     id: 1368,
     category: `Comprehensive`,
     chapter: `Practice Test Seven`,
-    question: `The nurse is caring for a woman whose husband beats her regularly. Which is the most important long-term goal for this woman?`,
+    prompt: `The nurse is caring for a woman whose husband beats her regularly. Which is the most important long-term goal for this woman?`,
     options: [
       `Provide a long-term support group`,
       `Help her feel like a survivor`,
@@ -19205,7 +19204,7 @@ export const QUESTION_BANK = [
     id: 1369,
     category: `Comprehensive`,
     chapter: `Practice Test Seven`,
-    question: `The nurse has delegated the task of taking the temperature of a client with a new tympanic thermometer to a certified nursing assistant. The nursing assistant says, "This looks easy. I am good at figuring things out." What is the nurse's responsibility?`,
+    prompt: `The nurse has delegated the task of taking the temperature of a client with a new tympanic thermometer to a certified nursing assistant. The nursing assistant says, "This looks easy. I am good at figuring things out." What is the nurse's responsibility?`,
     options: [
       `Allow the nursing assistant to proceed.`,
       `Assign the task to another nursing assistant.`,
@@ -19219,7 +19218,7 @@ export const QUESTION_BANK = [
     id: 1370,
     category: `Comprehensive`,
     chapter: `Practice Test Seven`,
-    question: `While the nurse is preparing medications, a code occurs. One of the nursing assistants offers to help by administering the medications. What is the best response by the nurse?`,
+    prompt: `While the nurse is preparing medications, a code occurs. One of the nursing assistants offers to help by administering the medications. What is the best response by the nurse?`,
     options: [
       `Allow the nursing assistant to give the medications`,
       `Hold the medications until after the code`,
@@ -19233,7 +19232,7 @@ export const QUESTION_BANK = [
     id: 1371,
     category: `Comprehensive`,
     chapter: `Practice Test Seven`,
-    question: `The nurse enters the room of a woman who had a vaginal hysterectomy three days ago and finds her crying. What is the best initial approach for the nurse?`,
+    prompt: `The nurse enters the room of a woman who had a vaginal hysterectomy three days ago and finds her crying. What is the best initial approach for the nurse?`,
     options: [
       `Ask her what seems to be troubling her`,
       `Reassure her that feeling depressed is normal after this type of surgery`,
@@ -19247,7 +19246,7 @@ export const QUESTION_BANK = [
     id: 1372,
     category: `Comprehensive`,
     chapter: `Practice Test Seven`,
-    question: `A client who is scheduled for surgery today says to the nurse, "Do you think I'll survive the surgery?" What is the best initial response for the nurse to give?`,
+    prompt: `A client who is scheduled for surgery today says to the nurse, "Do you think I'll survive the surgery?" What is the best initial response for the nurse to give?`,
     options: [
       `"Don't worry, your surgeon is good."`,
       `"Tell me about your concerns."`,
@@ -19261,7 +19260,7 @@ export const QUESTION_BANK = [
     id: 1373,
     category: `Comprehensive`,
     chapter: `Practice Test Seven`,
-    question: `The nurse is assessing a client's emotional state and coping strategies. Evidence of which behavior is of most concern to the nurse?`,
+    prompt: `The nurse is assessing a client's emotional state and coping strategies. Evidence of which behavior is of most concern to the nurse?`,
     options: [
       `Anxiety`,
       `Dysfunctional family unit`,
@@ -19275,7 +19274,7 @@ export const QUESTION_BANK = [
     id: 1374,
     category: `Comprehensive`,
     chapter: `Practice Test Seven`,
-    question: `Following a motor vehicle accident, the client does not know where he is or what year it is and has short-term memory impairment. Which nursing action is most appropriate?`,
+    prompt: `Following a motor vehicle accident, the client does not know where he is or what year it is and has short-term memory impairment. Which nursing action is most appropriate?`,
     options: [
       `Offer several choices to the client.`,
       `Give simple directions to the client.`,
@@ -19289,7 +19288,7 @@ export const QUESTION_BANK = [
     id: 1375,
     category: `Comprehensive`,
     chapter: `Practice Test Seven`,
-    question: `The nurse is changing a wet to dry dressing. Which action is appropriate?`,
+    prompt: `The nurse is changing a wet to dry dressing. Which action is appropriate?`,
     options: [
       `Pouring sterile solution directly into the wound`,
       `Removing the old dressings with sterile gloves`,
@@ -19303,7 +19302,7 @@ export const QUESTION_BANK = [
     id: 1376,
     category: `Comprehensive`,
     chapter: `Practice Test Seven`,
-    question: `The nurse is providing home care for a client who is visually impaired. What safety precaution is most appropriate for this client?`,
+    prompt: `The nurse is providing home care for a client who is visually impaired. What safety precaution is most appropriate for this client?`,
     options: [
       `Remove scatter rugs`,
       `Have hand rails in the bathroom.`,
@@ -19317,7 +19316,7 @@ export const QUESTION_BANK = [
     id: 1377,
     category: `Comprehensive`,
     chapter: `Practice Test Seven`,
-    question: `An adult client complains of dizziness when getting out of bed in the morning. Which instruction should the nurse give the nursing assistant regarding care of this client?`,
+    prompt: `An adult client complains of dizziness when getting out of bed in the morning. Which instruction should the nurse give the nursing assistant regarding care of this client?`,
     options: [
       `Have the client wear slippers when getting out of bed.`,
       `Have the client sit on the edge of the bed for a few minutes.`,
@@ -19331,7 +19330,7 @@ export const QUESTION_BANK = [
     id: 1378,
     category: `Comprehensive`,
     chapter: `Practice Test Seven`,
-    question: `An adult had exploratory surgery and postoperatively had an exacerbation of asthma. The client is on a rebreathing mask and seems upset and angry. What is the best nursing approach?`,
+    prompt: `An adult had exploratory surgery and postoperatively had an exacerbation of asthma. The client is on a rebreathing mask and seems upset and angry. What is the best nursing approach?`,
     options: [
       `Ask the physician for an order for lorazepam (Ativan).`,
       `Spend some time with the client.`,
@@ -19345,7 +19344,7 @@ export const QUESTION_BANK = [
     id: 1379,
     category: `Comprehensive`,
     chapter: `Practice Test Seven`,
-    question: `An adult client became incontinent while hospitalized. The client now drinks very little. The nurse understands that this is:`,
+    prompt: `An adult client became incontinent while hospitalized. The client now drinks very little. The nurse understands that this is:`,
     options: [
       `a coping strategy`,
       `a defense mechanism`,
@@ -19359,7 +19358,7 @@ export const QUESTION_BANK = [
     id: 1380,
     category: `Comprehensive`,
     chapter: `Practice Test Seven`,
-    question: `The nurse is evaluating the progress of a client who has had a cerebro vascular accident and realizes there has been limited progress. What should the nurse do?`,
+    prompt: `The nurse is evaluating the progress of a client who has had a cerebro vascular accident and realizes there has been limited progress. What should the nurse do?`,
     options: [
       `Transfer the client to another caregiver`,
       `Reassess the goals with the client`,
@@ -19373,7 +19372,7 @@ export const QUESTION_BANK = [
     id: 1381,
     category: `Comprehensive`,
     chapter: `Practice Test Seven`,
-    question: `The nurse is assessing a client who may be bulimic. What objective finding indicates bulimia?`,
+    prompt: `The nurse is assessing a client who may be bulimic. What objective finding indicates bulimia?`,
     options: [
       `Low self-esteem`,
       `Loss of tooth enamel`,
@@ -19387,7 +19386,7 @@ export const QUESTION_BANK = [
     id: 1382,
     category: `Comprehensive`,
     chapter: `Practice Test Seven`,
-    question: `When caring for an abused client, what is most important for the nurse to do initially?`,
+    prompt: `When caring for an abused client, what is most important for the nurse to do initially?`,
     options: [
       `Provide a safe place for the victim`,
       `Refer the victim to a long-term support group`,
@@ -19401,7 +19400,7 @@ export const QUESTION_BANK = [
     id: 1383,
     category: `Comprehensive`,
     chapter: `Practice Test Seven`,
-    question: `The nurse is bathing a client who has contact isolation ordered. The nurse wears gloves. What else is needed?`,
+    prompt: `The nurse is bathing a client who has contact isolation ordered. The nurse wears gloves. What else is needed?`,
     options: [
       `Face mask`,
       `Sterile gloves`,
@@ -19415,7 +19414,7 @@ export const QUESTION_BANK = [
     id: 1384,
     category: `Comprehensive`,
     chapter: `Practice Test Seven`,
-    question: `The nurse is performing a sterile dressing change. Which action is essential?`,
+    prompt: `The nurse is performing a sterile dressing change. Which action is essential?`,
     options: [
       `Touching the corners of the dressing with clean gloves`,
       `Discussing the wound with the client during the dressing change`,
@@ -19429,7 +19428,7 @@ export const QUESTION_BANK = [
     id: 1385,
     category: `Comprehensive`,
     chapter: `Practice Test Seven`,
-    question: `The nurse is teaching a client who has short-term memory loss how to use the call light. Which factor is least essential for the nurse to assess when teaching this client?`,
+    prompt: `The nurse is teaching a client who has short-term memory loss how to use the call light. Which factor is least essential for the nurse to assess when teaching this client?`,
     options: [
       `Visual status`,
       `Ambulatory difficulty`,
@@ -19443,7 +19442,7 @@ export const QUESTION_BANK = [
     id: 1386,
     category: `Comprehensive`,
     chapter: `Practice Test Seven`,
-    question: `An adult asks the nurse why she must have her skin shaved prior to surgery. What is the best nursing response? Reducing the hair by shaving:`,
+    prompt: `An adult asks the nurse why she must have her skin shaved prior to surgery. What is the best nursing response? Reducing the hair by shaving:`,
     options: [
       `reduces infection by removing hair, which harbors bacteria.`,
       `provides a clean area on which to operate.`,
@@ -19457,7 +19456,7 @@ export const QUESTION_BANK = [
     id: 1387,
     category: `Comprehensive`,
     chapter: `Practice Test Seven`,
-    question: `An adult who is undergoing diagnostic tests to diagnose a possible malignancy angrily says to the nurse, "You don't know anything. I want someone competent caring for me." What is the best initial nursing response?`,
+    prompt: `An adult who is undergoing diagnostic tests to diagnose a possible malignancy angrily says to the nurse, "You don't know anything. I want someone competent caring for me." What is the best initial nursing response?`,
     options: [
       `"I am a competent nurse. What would you like?"`,
       `"It must be difficult having all those tests. How can I help you?"`,
@@ -19471,7 +19470,7 @@ export const QUESTION_BANK = [
     id: 1388,
     category: `Comprehensive`,
     chapter: `Practice Test Seven`,
-    question: `A client who is admitted for surgery reports drinking eight or nine beers every day. Two days after surgery, the nurse notes the client is shaking and seems disoriented. The nurse's response is based on which understanding of his behavior?`,
+    prompt: `A client who is admitted for surgery reports drinking eight or nine beers every day. Two days after surgery, the nurse notes the client is shaking and seems disoriented. The nurse's response is based on which understanding of his behavior?`,
     options: [
       `The client has probably consumed alcohol since surgery.`,
       `The client may be having a reaction to the narcotics used for pain control.`,
@@ -19487,7 +19486,7 @@ export const QUESTION_BANK = [
     id: 1389,
     category: `Comprehensive`,
     chapter: `Practice Test Eight`,
-    question: `An infant had a repair of a myelomeningocele two days ago. Which assessment is most important to detect a problem commonly seen following myelomeningocele repair?`,
+    prompt: `An infant had a repair of a myelomeningocele two days ago. Which assessment is most important to detect a problem commonly seen following myelomeningocele repair?`,
     options: [
       `Bowel sounds`,
       `Pulse oximetry`,
@@ -19501,7 +19500,7 @@ export const QUESTION_BANK = [
     id: 1390,
     category: `Comprehensive`,
     chapter: `Practice Test Eight`,
-    question: `The mother of a 2-year-old child tells the nurse she is embarrassed when her child plays with other children because he does not share his toys or even interact with the other children. The nurse's response to the mother is based on the knowledge that a 2-year-old usually engages in which type of play?`,
+    prompt: `The mother of a 2-year-old child tells the nurse she is embarrassed when her child plays with other children because he does not share his toys or even interact with the other children. The nurse's response to the mother is based on the knowledge that a 2-year-old usually engages in which type of play?`,
     options: [
       `Solitary`,
       `Parallel`,
@@ -19515,7 +19514,7 @@ export const QUESTION_BANK = [
     id: 1391,
     category: `Comprehensive`,
     chapter: `Practice Test Eight`,
-    question: `The parents of a child with tetralogy of Fallot ask the nurse why it is called a cyanotic heart defect. The nurse responds that it is called a cyanotic heart defect because:`,
+    prompt: `The parents of a child with tetralogy of Fallot ask the nurse why it is called a cyanotic heart defect. The nurse responds that it is called a cyanotic heart defect because:`,
     options: [
       `it has four separate defects.`,
       `it involves left-to-right shunting.`,
@@ -19529,7 +19528,7 @@ export const QUESTION_BANK = [
     id: 1392,
     category: `Comprehensive`,
     chapter: `Practice Test Eight`,
-    question: `A mother brings her 1-month-old son to the clinic for a well-baby visit. The child has a moderately severe hypospadias that was seen by a urologist in the newborn nursery. The mother is upset that the doctors would not circumcise her son before he was discharged. What information should the nurse include when responding to the mother?`,
+    prompt: `A mother brings her 1-month-old son to the clinic for a well-baby visit. The child has a moderately severe hypospadias that was seen by a urologist in the newborn nursery. The mother is upset that the doctors would not circumcise her son before he was discharged. What information should the nurse include when responding to the mother?`,
     options: [
       `The foreskin should not be removed because it will be used in the repair of the hypospadias.`,
       `The child's condition did not allow for elective surgery. It will be done at a later date when he is stronger.`,
@@ -19543,7 +19542,7 @@ export const QUESTION_BANK = [
     id: 1393,
     category: `Comprehensive`,
     chapter: `Practice Test Eight`,
-    question: `An 8-year-old child is admitted to the hospital with pneumonia. The child has had frequent respiratory infections. A chloride sweat test is ordered. The nurse knows that the reason for this test is to rule out which condition?`,
+    prompt: `An 8-year-old child is admitted to the hospital with pneumonia. The child has had frequent respiratory infections. A chloride sweat test is ordered. The nurse knows that the reason for this test is to rule out which condition?`,
     options: [
       `Pernicious anemia`,
       `Diabetes insipidus`,
@@ -19557,7 +19556,7 @@ export const QUESTION_BANK = [
     id: 1394,
     category: `Comprehensive`,
     chapter: `Practice Test Eight`,
-    question: `Written instructions to pregnant women include instructions to perform Kegel exercises. One of the women asks the nurse why these exercises are important. The nurse should reply that the purpose of these exercises is to:`,
+    prompt: `Written instructions to pregnant women include instructions to perform Kegel exercises. One of the women asks the nurse why these exercises are important. The nurse should reply that the purpose of these exercises is to:`,
     options: [
       `increase circulation to the uterus.`,
       `strengthen the muscles of the pelvic floor.`,
@@ -19571,7 +19570,7 @@ export const QUESTION_BANK = [
     id: 1395,
     category: `Comprehensive`,
     chapter: `Practice Test Eight`,
-    question: `A 26-year-old woman with a history of heart disease is admitted in labor. She has been on bed rest for four months to prevent dyspnea. During labor, this client is likely to receive which of the following?`,
+    prompt: `A 26-year-old woman with a history of heart disease is admitted in labor. She has been on bed rest for four months to prevent dyspnea. During labor, this client is likely to receive which of the following?`,
     options: [
       `Extra intravenous fluid to expand her blood volume`,
       `General anesthesia`,
@@ -19585,7 +19584,7 @@ export const QUESTION_BANK = [
     id: 1396,
     category: `Comprehensive`,
     chapter: `Practice Test Eight`,
-    question: `All of the following women are seen in the physician's office. Which is at greatest risk for preterm labor?`,
+    prompt: `All of the following women are seen in the physician's office. Which is at greatest risk for preterm labor?`,
     options: [
       `A primigravida who has gained 30 lb during her pregnancy`,
       `A 35-year-old carrying a small baby`,
@@ -19599,7 +19598,7 @@ export const QUESTION_BANK = [
     id: 1397,
     category: `Comprehensive`,
     chapter: `Practice Test Eight`,
-    question: `A new mother asks the nurse when the baby's umbilical cord will fall off. The nurse replies that it usually takes how many days to detach?`,
+    prompt: `A new mother asks the nurse when the baby's umbilical cord will fall off. The nurse replies that it usually takes how many days to detach?`,
     options: [
       `1–2 days`,
       `3–5 days`,
@@ -19613,7 +19612,7 @@ export const QUESTION_BANK = [
     id: 1398,
     category: `Comprehensive`,
     chapter: `Practice Test Eight`,
-    question: `A new mother is two days postpartum, is breastfeeding her infant, and now is preparing for discharge. She states that for contraception she is going to use her diaphragm, which she still has. The nurse's response should be based on which information?`,
+    prompt: `A new mother is two days postpartum, is breastfeeding her infant, and now is preparing for discharge. She states that for contraception she is going to use her diaphragm, which she still has. The nurse's response should be based on which information?`,
     options: [
       `Diaphragms need to be refitted after the birth of a baby.`,
       `As long as the diaphragm is in good shape, the client can continue to use it.`,
@@ -19627,7 +19626,7 @@ export const QUESTION_BANK = [
     id: 1399,
     category: `Comprehensive`,
     chapter: `Practice Test Eight`,
-    question: `A laboring woman has been pushing for one hour and is not making progress. The nurse knows that which of the following could hinder the descent of the fetus in the second stage of labor?`,
+    prompt: `A laboring woman has been pushing for one hour and is not making progress. The nurse knows that which of the following could hinder the descent of the fetus in the second stage of labor?`,
     options: [
       `A full bladder`,
       `Paracervical block given during the first stage of labor`,
@@ -19641,7 +19640,7 @@ export const QUESTION_BANK = [
     id: 1400,
     category: `Comprehensive`,
     chapter: `Practice Test Eight`,
-    question: `The nurse is providing home care to a man who had a transsphenoidal hypophysectomy the day before yesterday. Which behavior by the client indicates a need for more teaching?`,
+    prompt: `The nurse is providing home care to a man who had a transsphenoidal hypophysectomy the day before yesterday. Which behavior by the client indicates a need for more teaching?`,
     options: [
       `He bends over to tie his shoes.`,
       `He tells the nurse he takes a lot of pills every day.`,
@@ -19655,7 +19654,7 @@ export const QUESTION_BANK = [
     id: 1401,
     category: `Comprehensive`,
     chapter: `Practice Test Eight`,
-    question: `An adult has been diagnosed with Bell's palsy and asks what causes it. The nurse knows that which of the following is correct?`,
+    prompt: `An adult has been diagnosed with Bell's palsy and asks what causes it. The nurse knows that which of the following is correct?`,
     options: [
       `Bell's palsy is caused by the chickenpox virus.`,
       `The cause is unknown.`,
@@ -19669,7 +19668,7 @@ export const QUESTION_BANK = [
     id: 1402,
     category: `Comprehensive`,
     chapter: `Practice Test Eight`,
-    question: `Magnetic resonance imaging has been ordered for a client. Which factor should the nurse report to the physician?`,
+    prompt: `Magnetic resonance imaging has been ordered for a client. Which factor should the nurse report to the physician?`,
     options: [
       `The client states she had an allergic reaction to iodine.`,
       `The client has a pacemaker.`,
@@ -19683,7 +19682,7 @@ export const QUESTION_BANK = [
     id: 1403,
     category: `Comprehensive`,
     chapter: `Practice Test Eight`,
-    question: `A woman is admitted with Hodgkin's disease. Which does the nurse expect the client to report?`,
+    prompt: `A woman is admitted with Hodgkin's disease. Which does the nurse expect the client to report?`,
     options: [
       `Swollen lymph nodes`,
       `A painful rash`,
@@ -19697,7 +19696,7 @@ export const QUESTION_BANK = [
     id: 1404,
     category: `Comprehensive`,
     chapter: `Practice Test Eight`,
-    question: `A client who has congestive heart failure is being admitted. How should the nurse position this client?`,
+    prompt: `A client who has congestive heart failure is being admitted. How should the nurse position this client?`,
     options: [
       `Supine`,
       `Sims'`,
@@ -19711,7 +19710,7 @@ export const QUESTION_BANK = [
     id: 1405,
     category: `Comprehensive`,
     chapter: `Practice Test Eight`,
-    question: `Which assessment is most essential before administering digoxin to an adult?`,
+    prompt: `Which assessment is most essential before administering digoxin to an adult?`,
     options: [
       `Ask the client if he has chest pain.`,
       `Take an apical pulse.`,
@@ -19725,7 +19724,7 @@ export const QUESTION_BANK = [
     id: 1406,
     category: `Comprehensive`,
     chapter: `Practice Test Eight`,
-    question: `The LPN/LVN is caring for an adult who has pneumonia. The nurse should instruct the nursing assistant to report which information immediately?`,
+    prompt: `The LPN/LVN is caring for an adult who has pneumonia. The nurse should instruct the nursing assistant to report which information immediately?`,
     options: [
       `Restlessness`,
       `Pink-colored skin`,
@@ -19739,7 +19738,7 @@ export const QUESTION_BANK = [
     id: 1407,
     category: `Comprehensive`,
     chapter: `Practice Test Eight`,
-    question: `A low-sodium, high-potassium diet is ordered for a client. Which food selection made by the client indicates understanding of the prescribed diet?`,
+    prompt: `A low-sodium, high-potassium diet is ordered for a client. Which food selection made by the client indicates understanding of the prescribed diet?`,
     options: [
       `Orange juice, baked chicken, and a cucumber and tomato salad`,
       `Milk, roast beef, and spinach salad`,
@@ -19753,7 +19752,7 @@ export const QUESTION_BANK = [
     id: 1408,
     category: `Comprehensive`,
     chapter: `Practice Test Eight`,
-    question: `The nurse is teaching unlicensed personnel about preventing the spread of disease in the health care environment. The nurse knows that the personnel understand when they state that which is the most important way to prevent the spread of disease?`,
+    prompt: `The nurse is teaching unlicensed personnel about preventing the spread of disease in the health care environment. The nurse knows that the personnel understand when they state that which is the most important way to prevent the spread of disease?`,
     options: [
       `Isolating infected clients`,
       `Consistently washing hands`,
@@ -19767,7 +19766,7 @@ export const QUESTION_BANK = [
     id: 1409,
     category: `Comprehensive`,
     chapter: `Practice Test Eight`,
-    question: `The LPN/LVN is to perform a sterile procedure. Which action will maintain a sterile field?`,
+    prompt: `The LPN/LVN is to perform a sterile procedure. Which action will maintain a sterile field?`,
     options: [
       `Keeping the sterile field within the line of vision`,
       `Opening sterile packages with sterile gloves`,
@@ -19781,7 +19780,7 @@ export const QUESTION_BANK = [
     id: 1410,
     category: `Comprehensive`,
     chapter: `Practice Test Eight`,
-    question: `A 56-year-old man is visiting the doctor for the first time in seven years for treatment for an infected finger. The office nurse wants him to make an appointment for a physical. The nurse knows that he does not understand the importance of a physical when he makes which statement?`,
+    prompt: `A 56-year-old man is visiting the doctor for the first time in seven years for treatment for an infected finger. The office nurse wants him to make an appointment for a physical. The nurse knows that he does not understand the importance of a physical when he makes which statement?`,
     options: [
       `"I know my blood sugar and weight should be monitored."`,
       `"I am healthy. If I wasn't, I'd have some problems."`,
@@ -19795,7 +19794,7 @@ export const QUESTION_BANK = [
     id: 1411,
     category: `Comprehensive`,
     chapter: `Practice Test Eight`,
-    question: `The nurse is preparing a client for a kidney-ureter-bladder x-ray (KUB). What is included in the preparation?`,
+    prompt: `The nurse is preparing a client for a kidney-ureter-bladder x-ray (KUB). What is included in the preparation?`,
     options: [
       `Keeping the client NPO`,
       `Explaining the procedure`,
@@ -19809,7 +19808,7 @@ export const QUESTION_BANK = [
     id: 1412,
     category: `Comprehensive`,
     chapter: `Practice Test Eight`,
-    question: `The nurse is caring for a client who has a cervical radioactive implant. Which action is not appropriate for the nurse when caring for this client?`,
+    prompt: `The nurse is caring for a client who has a cervical radioactive implant. Which action is not appropriate for the nurse when caring for this client?`,
     options: [
       `Post a radioactive symbol on the client's chart and on the door to the room.`,
       `Put on gloves to remove any radioactive implant that may have come out.`,
@@ -19823,7 +19822,7 @@ export const QUESTION_BANK = [
     id: 1413,
     category: `Comprehensive`,
     chapter: `Practice Test Eight`,
-    question: `The nurse is preparing a client environment that will reduce the chance of falls. Which action is appropriate?`,
+    prompt: `The nurse is preparing a client environment that will reduce the chance of falls. Which action is appropriate?`,
     options: [
       `Keep the half side rails down on the side the client uses to get out of bed.`,
       `Keep the lights down since glare bothers some clients.`,
@@ -19837,7 +19836,7 @@ export const QUESTION_BANK = [
     id: 1414,
     category: `Comprehensive`,
     chapter: `Practice Test Eight`,
-    question: `A nurse's aide who had a tuberculosis test planted two days ago has a reddened area 15-mm in diameter. The aide asks the nurse what this means. The nurse understands that the test result is:`,
+    prompt: `A nurse's aide who had a tuberculosis test planted two days ago has a reddened area 15-mm in diameter. The aide asks the nurse what this means. The nurse understands that the test result is:`,
     options: [
       `positive, indicating the aide has been exposed to tuberculosis.`,
       `positive, indicating the aide has active tuberculosis.`,
@@ -19851,7 +19850,7 @@ export const QUESTION_BANK = [
     id: 1415,
     category: `Comprehensive`,
     chapter: `Practice Test Eight`,
-    question: `A woman who has emphysema is on continuous oxygen therapy. She appears anxious and short of breath. Her husband increases the oxygen flow to 6 L/min. The nurse knows this action is most likely to:`,
+    prompt: `A woman who has emphysema is on continuous oxygen therapy. She appears anxious and short of breath. Her husband increases the oxygen flow to 6 L/min. The nurse knows this action is most likely to:`,
     options: [
       `make breathing easier`,
       `decrease her blood oxygen levels.`,
@@ -19865,7 +19864,7 @@ export const QUESTION_BANK = [
     id: 1416,
     category: `Comprehensive`,
     chapter: `Practice Test Eight`,
-    question: `An adult who is waiting for a cardiac catheterization is joking with the staff. The nurse understands that this behavior is most likely:`,
+    prompt: `An adult who is waiting for a cardiac catheterization is joking with the staff. The nurse understands that this behavior is most likely:`,
     options: [
       `a coping mechanism for the client.`,
       `an inappropriate behavior for a serious procedure.`,
@@ -19879,7 +19878,7 @@ export const QUESTION_BANK = [
     id: 1417,
     category: `Comprehensive`,
     chapter: `Practice Test Eight`,
-    question: `An adult had an open cholecystectomy and has an open wound. The client refuses to look at the area during the dressing change. What is the most likely reason for this behavior?`,
+    prompt: `An adult had an open cholecystectomy and has an open wound. The client refuses to look at the area during the dressing change. What is the most likely reason for this behavior?`,
     options: [
       `Denial of surgery`,
       `Change in body image`,
@@ -19893,7 +19892,7 @@ export const QUESTION_BANK = [
     id: 1418,
     category: `Comprehensive`,
     chapter: `Practice Test Eight`,
-    question: `The nurse is supervising an unlicensed person who is giving oral care to an unconscious client. Which observation indicates that the unlicensed person needs further instruction?`,
+    prompt: `The nurse is supervising an unlicensed person who is giving oral care to an unconscious client. Which observation indicates that the unlicensed person needs further instruction?`,
     options: [
       `The client is in a lateral position with the head turned to the side during oral care.`,
       `The client is positioned in an upright position.`,
@@ -19907,7 +19906,7 @@ export const QUESTION_BANK = [
     id: 1419,
     category: `Comprehensive`,
     chapter: `Practice Test Eight`,
-    question: `Which activity should not be assigned to an unlicensed person?`,
+    prompt: `Which activity should not be assigned to an unlicensed person?`,
     options: [
       `Record all oral intake.`,
       `Measure all output`,
@@ -19921,7 +19920,7 @@ export const QUESTION_BANK = [
     id: 1420,
     category: `Comprehensive`,
     chapter: `Practice Test Eight`,
-    question: `The nurse observes a client using a walker. Which observation indicates that the client needs more instruction?`,
+    prompt: `The nurse observes a client using a walker. Which observation indicates that the client needs more instruction?`,
     options: [
       `The client uses the walker to pull herself out of a chair.`,
       `The client moves the walker forward and then takes a step.`,
@@ -19935,7 +19934,7 @@ export const QUESTION_BANK = [
     id: 1421,
     category: `Comprehensive`,
     chapter: `Practice Test Eight`,
-    question: `A hearing-impaired client is becoming withdrawn and depressed. He reports that even with a hearing aid, he is having increased difficulty hearing. Which suggestion is least likely to be helpful?`,
+    prompt: `A hearing-impaired client is becoming withdrawn and depressed. He reports that even with a hearing aid, he is having increased difficulty hearing. Which suggestion is least likely to be helpful?`,
     options: [
       `Get a hearing guide dog.`,
       `Join a social club.`,
@@ -19949,7 +19948,7 @@ export const QUESTION_BANK = [
     id: 1422,
     category: `Comprehensive`,
     chapter: `Practice Test Eight`,
-    question: `An adult is taking phenazopyridine hydrochloride (Pyridium) 200 mg PO tid after meals. Which comment by the client indicates a lack of understanding about the medication?`,
+    prompt: `An adult is taking phenazopyridine hydrochloride (Pyridium) 200 mg PO tid after meals. Which comment by the client indicates a lack of understanding about the medication?`,
     options: [
       `"If I take my medications after meals, I avoid upsetting my stomach."`,
       `"I am concerned that my urine is bright orange."`,
@@ -19963,7 +19962,7 @@ export const QUESTION_BANK = [
     id: 1423,
     category: `Comprehensive`,
     chapter: `Practice Test Eight`,
-    question: `An adult who is hospitalized with congestive heart failure is receiving an intravenous infusion. The nurse is checking the IV. Which of the following is of greatest concern to the nurse?`,
+    prompt: `An adult who is hospitalized with congestive heart failure is receiving an intravenous infusion. The nurse is checking the IV. Which of the following is of greatest concern to the nurse?`,
     options: [
       `The insertion site`,
       `The volume infused`,
@@ -19977,7 +19976,7 @@ export const QUESTION_BANK = [
     id: 1424,
     category: `Comprehensive`,
     chapter: `Practice Test Eight`,
-    question: `The nurse is working to prevent falls in a restraint-free environment. Which of the following is inappropriate for the nurse to delegate to assistive personnel?`,
+    prompt: `The nurse is working to prevent falls in a restraint-free environment. Which of the following is inappropriate for the nurse to delegate to assistive personnel?`,
     options: [
       `Making sure the bed is in low position`,
       `Making sure the bedside table is within reach of the client`,
@@ -19991,7 +19990,7 @@ export const QUESTION_BANK = [
     id: 1425,
     category: `Comprehensive`,
     chapter: `Practice Test Eight`,
-    question: `Prior to administering a feeding, the nurse checks for placement of a feeding tube. What is the best way to do this?`,
+    prompt: `Prior to administering a feeding, the nurse checks for placement of a feeding tube. What is the best way to do this?`,
     options: [
       `Check for residual`,
       `Measure the pH of aspirated gastrointestinal fluid`,
@@ -20005,7 +20004,7 @@ export const QUESTION_BANK = [
     id: 1426,
     category: `Comprehensive`,
     chapter: `Practice Test Eight`,
-    question: `The nurse has assigned a nursing assistant to give the client a bath. Which observation reported by the nursing assistant requires immediate attention by the nurse?`,
+    prompt: `The nurse has assigned a nursing assistant to give the client a bath. Which observation reported by the nursing assistant requires immediate attention by the nurse?`,
     options: [
       `A red area on the back that disappears after it is massaged`,
       `A red area on the hip that does not go away after the area is massaged`,
@@ -20019,7 +20018,7 @@ export const QUESTION_BANK = [
     id: 1427,
     category: `Comprehensive`,
     chapter: `Practice Test Eight`,
-    question: `The nurse is evaluating how a client who has a halo brace is reacting to this change in his body image. Which statement by the client indicates a need for additional support in adjusting to the brace?`,
+    prompt: `The nurse is evaluating how a client who has a halo brace is reacting to this change in his body image. Which statement by the client indicates a need for additional support in adjusting to the brace?`,
     options: [
       `"I shall avoid going out in public since I may bump into people."`,
       `"I don't mind that people look at me."`,
@@ -20033,7 +20032,7 @@ export const QUESTION_BANK = [
     id: 1428,
     category: `Comprehensive`,
     chapter: `Practice Test Eight`,
-    question: `A throat culture is ordered for an adult who has a sore throat. The nurse asks the client if he has taken any medications to treat himself. Which medication, if reported by the client, would be of greatest concern to the nurse?`,
+    prompt: `A throat culture is ordered for an adult who has a sore throat. The nurse asks the client if he has taken any medications to treat himself. Which medication, if reported by the client, would be of greatest concern to the nurse?`,
     options: [
       `Aspirin`,
       `A throat lozenge`,
@@ -20047,7 +20046,7 @@ export const QUESTION_BANK = [
     id: 1429,
     category: `Comprehensive`,
     chapter: `Practice Test Eight`,
-    question: `The nurse is preparing to give an adult a subcutaneous injection of heparin. What should the nurse check prior to giving the medication?`,
+    prompt: `The nurse is preparing to give an adult a subcutaneous injection of heparin. What should the nurse check prior to giving the medication?`,
     options: [
       `International normalized ratio (INR)`,
       `Bleeding time`,
@@ -20061,7 +20060,7 @@ export const QUESTION_BANK = [
     id: 1430,
     category: `Comprehensive`,
     chapter: `Practice Test Eight`,
-    question: `A young woman has routine blood work done at her prenatal appointment. The results indicate that she has a hemoglobin level of 10 g/dL. The nurse explains to her that this result is:`,
+    prompt: `A young woman has routine blood work done at her prenatal appointment. The results indicate that she has a hemoglobin level of 10 g/dL. The nurse explains to her that this result is:`,
     options: [
       `high`,
       `insignificant`,
@@ -20075,7 +20074,7 @@ export const QUESTION_BANK = [
     id: 1431,
     category: `Comprehensive`,
     chapter: `Practice Test Eight`,
-    question: `The nurse is caring for a client who has congestive heart failure. Which finding indicates that her condition is getting worse?`,
+    prompt: `The nurse is caring for a client who has congestive heart failure. Which finding indicates that her condition is getting worse?`,
     options: [
       `An increase in urine output`,
       `A decrease in blood pressure`,
@@ -20089,7 +20088,7 @@ export const QUESTION_BANK = [
     id: 1432,
     category: `Comprehensive`,
     chapter: `Practice Test Eight`,
-    question: `A 72-year-old woman is being treated for pneumonia. Physician's orders include an antibiotic, oxygen PRN for O2 saturation less than 90, and pulse oximetry every 4 hours. The nurse obtains a pulse oximetry reading of 82% on room air. What is the best action for the nurse to take?`,
+    prompt: `A 72-year-old woman is being treated for pneumonia. Physician's orders include an antibiotic, oxygen PRN for O2 saturation less than 90, and pulse oximetry every 4 hours. The nurse obtains a pulse oximetry reading of 82% on room air. What is the best action for the nurse to take?`,
     options: [
       `Report the finding to the physician`,
       `Report the finding to the registered nurse to get instructions`,
@@ -20103,7 +20102,7 @@ export const QUESTION_BANK = [
     id: 1433,
     category: `Comprehensive`,
     chapter: `Practice Test Eight`,
-    question: `A 14-year-old is going home with a permanent tracheostomy. Which comment by the child's mother indicates to the nurse that the parent needs more instruction?`,
+    prompt: `A 14-year-old is going home with a permanent tracheostomy. Which comment by the child's mother indicates to the nurse that the parent needs more instruction?`,
     options: [
       `"I need to ask the doctor how many times a day I can suction my child."`,
       `"I will suction if my child cannot effectively cough up sputum."`,
@@ -20117,7 +20116,7 @@ export const QUESTION_BANK = [
     id: 1434,
     category: `Comprehensive`,
     chapter: `Practice Test Eight`,
-    question: `The nurse is working on a plan to assist an abused client back into the work situation. Which will likely be most helpful in decreasing the trauma for the client?`,
+    prompt: `The nurse is working on a plan to assist an abused client back into the work situation. Which will likely be most helpful in decreasing the trauma for the client?`,
     options: [
       `Support from significant others`,
       `Support from a counselor`,
@@ -20131,7 +20130,7 @@ export const QUESTION_BANK = [
     id: 1435,
     category: `Comprehensive`,
     chapter: `Practice Test Eight`,
-    question: `A 10-year-old child is admitted to the hospital with injuries. Which finding most suggests that additional assessment for child abuse is indicated?`,
+    prompt: `A 10-year-old child is admitted to the hospital with injuries. Which finding most suggests that additional assessment for child abuse is indicated?`,
     options: [
       `The child asks to have friends visit.`,
       `The child asks to have a teacher bring in homework.`,
@@ -20145,7 +20144,7 @@ export const QUESTION_BANK = [
     id: 1436,
     category: `Comprehensive`,
     chapter: `Practice Test Eight`,
-    question: `The nurse is to move a client up in bed without any help. Where should the nurse place the client's pillow?`,
+    prompt: `The nurse is to move a client up in bed without any help. Where should the nurse place the client's pillow?`,
     options: [
       `At the bottom of the bed`,
       `On the bedside stand`,
@@ -20159,7 +20158,7 @@ export const QUESTION_BANK = [
     id: 1437,
     category: `Comprehensive`,
     chapter: `Practice Test Eight`,
-    question: `The nurse's neighbor complains to the nurse that he feels tired all the time. Which comment suggests to the nurse that the man may have a serious sleep disorder?`,
+    prompt: `The nurse's neighbor complains to the nurse that he feels tired all the time. Which comment suggests to the nurse that the man may have a serious sleep disorder?`,
     options: [
       `"My wife complains because I snore off and on all night."`,
       `"I like to nap in the afternoon."`,
@@ -20173,7 +20172,7 @@ export const QUESTION_BANK = [
     id: 1438,
     category: `Comprehensive`,
     chapter: `Practice Test Eight`,
-    question: `A mentally retarded, nonverbal, ambulatory client is found sitting on the floor unable to get up. The LPN/LVN notes the client appears to be in great pain, and his right leg is out of alignment. What is the most important action for the nurse to take as the client is readied for ambulance transport?`,
+    prompt: `A mentally retarded, nonverbal, ambulatory client is found sitting on the floor unable to get up. The LPN/LVN notes the client appears to be in great pain, and his right leg is out of alignment. What is the most important action for the nurse to take as the client is readied for ambulance transport?`,
     options: [
       `Give the client pain medication`,
       `Immobilize the leg`,
@@ -20187,7 +20186,7 @@ export const QUESTION_BANK = [
     id: 1439,
     category: `Comprehensive`,
     chapter: `Practice Test Eight`,
-    question: `The nurse enters an adult's room to premedicate for surgery. The client says, "You know, nurse, that form I signed said something about a nephrectomy. What does that mean?" How should the nurse respond initially?`,
+    prompt: `The nurse enters an adult's room to premedicate for surgery. The client says, "You know, nurse, that form I signed said something about a nephrectomy. What does that mean?" How should the nurse respond initially?`,
     options: [
       `"What did your surgeon explain to you about your operation?"`,
       `"Don't worry about the technical terms. We'll take good care of you."`,
@@ -20201,7 +20200,7 @@ export const QUESTION_BANK = [
     id: 1440,
     category: `Comprehensive`,
     chapter: `Practice Test Eight`,
-    question: `An insulin-dependent diabetic is admitted with a blood sugar of 415 mg/dL. His wife states, "He always follows his diabetic diet religiously and administers his insulin using a sliding scale twice a day." Upon reviewing his chart, the nurse notes that the client has been hospitalized four times during the past three months for a medical diagnosis of hyperglycemia secondary to noncompliance with medical regimen. When questioned, he says, "It's a little too complicated to keep track of when I need to eat and when I need to check my blood and take my medicine." Which nursing diagnosis is most appropriate?`,
+    prompt: `An insulin-dependent diabetic is admitted with a blood sugar of 415 mg/dL. His wife states, "He always follows his diabetic diet religiously and administers his insulin using a sliding scale twice a day." Upon reviewing his chart, the nurse notes that the client has been hospitalized four times during the past three months for a medical diagnosis of hyperglycemia secondary to noncompliance with medical regimen. When questioned, he says, "It's a little too complicated to keep track of when I need to eat and when I need to check my blood and take my medicine." Which nursing diagnosis is most appropriate?`,
     options: [
       `Impaired adjustment`,
       `Impaired home maintenance`,
@@ -20215,7 +20214,7 @@ export const QUESTION_BANK = [
     id: 1441,
     category: `Comprehensive`,
     chapter: `Practice Test Eight`,
-    question: `The nurse who is the primary caregiver for an adult client receives a telephone report from the Microbiology Department that the client's blood culture is positive for gram-negative rods. The client is not on antibiotics. What should the nurse do first?`,
+    prompt: `The nurse who is the primary caregiver for an adult client receives a telephone report from the Microbiology Department that the client's blood culture is positive for gram-negative rods. The client is not on antibiotics. What should the nurse do first?`,
     options: [
       `Document the result in the appropriate area of the chart`,
       `Inform the client that the nurse now knows what is causing his illness`,
@@ -20229,7 +20228,7 @@ export const QUESTION_BANK = [
     id: 1442,
     category: `Comprehensive`,
     chapter: `Practice Test Eight`,
-    question: `While writing a report at 3:15 in the afternoon, the nurse realizes that she forgot to chart the client's physical therapy, which occurred at 10:30 A.M. Which is the appropriate action for the nurse to take?`,
+    prompt: `While writing a report at 3:15 in the afternoon, the nurse realizes that she forgot to chart the client's physical therapy, which occurred at 10:30 A.M. Which is the appropriate action for the nurse to take?`,
     options: [
       `The nurse should ask the incoming nurse to record it.`,
       `The nurse should date and time an entry for 3:15 P.M., and then write "Late entry (date: 10:30 A.M.)" before making the addition.`,
@@ -20243,7 +20242,7 @@ export const QUESTION_BANK = [
     id: 1443,
     category: `Comprehensive`,
     chapter: `Practice Test Eight`,
-    question: `The nurse notes that a client has received a medication by mistake. What should the nurse do?`,
+    prompt: `The nurse notes that a client has received a medication by mistake. What should the nurse do?`,
     options: [
       `Notify the physician, complete an incident report and make a separate note, in the nursing documentation, of the error, the client's response, and any treatment received by the client due to the medication error`,
       `Complete an incident report and reference it in the nurse's notes`,
@@ -20257,7 +20256,7 @@ export const QUESTION_BANK = [
     id: 1444,
     category: `Comprehensive`,
     chapter: `Practice Test Eight`,
-    question: `A newly diagnosed diabetic has worked as a manual laborer all his life. He requires teaching so that he can manage his diabetes after discharge. The nurse has given him booklets designed for clients who need an introduction to diabetes. When the nurse evaluates his learning from the booklets, he says he doesn't have his glasses and couldn't read the booklets. When the nurse offers large-print material, he says his wife usually takes care of things at home and that the nurse should work with her because she prepares all the meals and keeps track of the medicines for both of them. Which understanding of the client's behavior is most likely correct?`,
+    prompt: `A newly diagnosed diabetic has worked as a manual laborer all his life. He requires teaching so that he can manage his diabetes after discharge. The nurse has given him booklets designed for clients who need an introduction to diabetes. When the nurse evaluates his learning from the booklets, he says he doesn't have his glasses and couldn't read the booklets. When the nurse offers large-print material, he says his wife usually takes care of things at home and that the nurse should work with her because she prepares all the meals and keeps track of the medicines for both of them. Which understanding of the client's behavior is most likely correct?`,
     options: [
       `He is in denial about his diagnosis.`,
       `He is not willing to take responsibility for his own learning.`,
@@ -20271,7 +20270,7 @@ export const QUESTION_BANK = [
     id: 1445,
     category: `Comprehensive`,
     chapter: `Practice Test Eight`,
-    question: `The nurse is caring for a preschooler who needs stitches resulting from an injury received during play in the yard. What would be the most appropriate way to prepare the child for the treatment he will receive?`,
+    prompt: `The nurse is caring for a preschooler who needs stitches resulting from an injury received during play in the yard. What would be the most appropriate way to prepare the child for the treatment he will receive?`,
     options: [
       `Tell the child the nurse and the doctor will "make things all better."`,
       `Use dolls and explain through play and simulation what will be done.`,
@@ -20285,7 +20284,7 @@ export const QUESTION_BANK = [
     id: 1446,
     category: `Comprehensive`,
     chapter: `Practice Test Eight`,
-    question: `A 76-year-old man living at the long-term care facility has lost 10 lb in the last two months. He states that although he has had dentures for two years, they have not felt comfortable for the past three or four months so he rarely uses them at mealtime. The nurse's first priority would be to ask the client's physician to do which of the following?`,
+    prompt: `A 76-year-old man living at the long-term care facility has lost 10 lb in the last two months. He states that although he has had dentures for two years, they have not felt comfortable for the past three or four months so he rarely uses them at mealtime. The nurse's first priority would be to ask the client's physician to do which of the following?`,
     options: [
       `Order a mechanical soft or edentulous diet for the client`,
       `Order a dental consult to correct the client's problem`,
@@ -20299,7 +20298,7 @@ export const QUESTION_BANK = [
     id: 1447,
     category: `Comprehensive`,
     chapter: `Practice Test Eight`,
-    question: `A client who has hypokalemia asks the nurse for dietary advice on what foods would help this problem. What should the nurse tell the client?`,
+    prompt: `A client who has hypokalemia asks the nurse for dietary advice on what foods would help this problem. What should the nurse tell the client?`,
     options: [
       `Eggs and cheese`,
       `Fruits, especially oranges, bananas, and prunes`,
@@ -20313,7 +20312,7 @@ export const QUESTION_BANK = [
     id: 1448,
     category: `Comprehensive`,
     chapter: `Practice Test Eight`,
-    question: `The client complains of frequent insomnia affecting her ability to rest well. Which of the following factors or lifestyle choices in her assessment history most likely contributes to her inability to sleep?`,
+    prompt: `The client complains of frequent insomnia affecting her ability to rest well. Which of the following factors or lifestyle choices in her assessment history most likely contributes to her inability to sleep?`,
     options: [
       `Having a slight snack at bedtime`,
       `Heart disease prevention of one baby aspirin each day`,
@@ -20327,7 +20326,7 @@ export const QUESTION_BANK = [
     id: 1449,
     category: `Comprehensive`,
     chapter: `Practice Test Eight`,
-    question: `The client is unable to adequately bathe himself because he has dressings on his hands that cannot get wet. What is the most appropriate nursing diagnosis for this assessment finding?`,
+    prompt: `The client is unable to adequately bathe himself because he has dressings on his hands that cannot get wet. What is the most appropriate nursing diagnosis for this assessment finding?`,
     options: [
       `Risk for infection`,
       `Deficient knowledge`,
@@ -20341,7 +20340,7 @@ export const QUESTION_BANK = [
     id: 1450,
     category: `Comprehensive`,
     chapter: `Practice Test Eight`,
-    question: `The nurse has delegated care of a client who is very hard of hearing to an unlicensed person. Which of the following would be the least helpful information to give to the unlicensed person to better facilitate communications with the client?`,
+    prompt: `The nurse has delegated care of a client who is very hard of hearing to an unlicensed person. Which of the following would be the least helpful information to give to the unlicensed person to better facilitate communications with the client?`,
     options: [
       `Reduce background noise`,
       `Adjust the hearing aid.`,
@@ -20355,7 +20354,7 @@ export const QUESTION_BANK = [
     id: 1451,
     category: `Comprehensive`,
     chapter: `Practice Test Eight`,
-    question: `The nurse is assessing a 16-year-old mother for potential child abuse. Which factor is most important when assessing the potential for child abuse?`,
+    prompt: `The nurse is assessing a 16-year-old mother for potential child abuse. Which factor is most important when assessing the potential for child abuse?`,
     options: [
       `Age of the mother`,
       `Marital status`,
@@ -20369,7 +20368,7 @@ export const QUESTION_BANK = [
     id: 1452,
     category: `Comprehensive`,
     chapter: `Practice Test Eight`,
-    question: `An adult is receiving intermittent tube feedings. When the nurse aspirates and measures the gastric contents, the client's wife asks the nurse what she is doing. What information is most important to include in the response?`,
+    prompt: `An adult is receiving intermittent tube feedings. When the nurse aspirates and measures the gastric contents, the client's wife asks the nurse what she is doing. What information is most important to include in the response?`,
     options: [
       `The procedure is done to test that the tube is working.`,
       `The procedure is done to check the placement of the tube.`,
@@ -20383,7 +20382,7 @@ export const QUESTION_BANK = [
     id: 1453,
     category: `Comprehensive`,
     chapter: `Practice Test Eight`,
-    question: `Before giving furosemide (Lasix) to an adult, the nurse checks the laboratory report for the last serum potassium level. Which finding would be of concern to the nurse?`,
+    prompt: `Before giving furosemide (Lasix) to an adult, the nurse checks the laboratory report for the last serum potassium level. Which finding would be of concern to the nurse?`,
     options: [
       `3.2 mEq/L`,
       `3.7 mEq/L`,
@@ -20397,7 +20396,7 @@ export const QUESTION_BANK = [
     id: 1454,
     category: `Comprehensive`,
     chapter: `Practice Test Eight`,
-    question: `A 6-year-old was just diagnosed with pediculosis capitis. Which comment by the mother of the child indicates to the nurse in the physician's office that she does not understand how this condition is spread?`,
+    prompt: `A 6-year-old was just diagnosed with pediculosis capitis. Which comment by the mother of the child indicates to the nurse in the physician's office that she does not understand how this condition is spread?`,
     options: [
       `"I need to wash all his bed sheets in hot water."`,
       `"I will call the school nurse and tell her."`,
@@ -20411,7 +20410,7 @@ export const QUESTION_BANK = [
     id: 1455,
     category: `Comprehensive`,
     chapter: `Practice Test Eight`,
-    question: `An 85-year-old woman is hospitalized with a fractured hip. She complains to the LPN/LVN that she feels something is wrong and her chest hurts. The nurse notes the client has tachypnea. What should the nurse do immediately?`,
+    prompt: `An 85-year-old woman is hospitalized with a fractured hip. She complains to the LPN/LVN that she feels something is wrong and her chest hurts. The nurse notes the client has tachypnea. What should the nurse do immediately?`,
     options: [
       `Administer oxygen`,
       `Take vital signs`,
@@ -20425,7 +20424,7 @@ export const QUESTION_BANK = [
     id: 1456,
     category: `Comprehensive`,
     chapter: `Practice Test Eight`,
-    question: `Joan is at lunch in the hospital cafeteria with a nurse coworker. Joan is very allergic to nuts and always carries her anaphylactic kit with her. Joan tells her coworker that there must have been nuts in something she ate because she is having increasing difficulty breathing. What should the nurse do immediately?`,
+    prompt: `Joan is at lunch in the hospital cafeteria with a nurse coworker. Joan is very allergic to nuts and always carries her anaphylactic kit with her. Joan tells her coworker that there must have been nuts in something she ate because she is having increasing difficulty breathing. What should the nurse do immediately?`,
     options: [
       `Take her to the hospital emergency room`,
       `Administer the medication in her friend's anaphylactic kit`,
@@ -20439,7 +20438,7 @@ export const QUESTION_BANK = [
     id: 1457,
     category: `Comprehensive`,
     chapter: `Practice Test Eight`,
-    question: `A client who had bowel surgery is to be NPO for several days. The nurse anticipates that the client will have an order for:`,
+    prompt: `A client who had bowel surgery is to be NPO for several days. The nurse anticipates that the client will have an order for:`,
     options: [
       `diet therapy`,
       `enteral nutrition`,
@@ -20453,7 +20452,7 @@ export const QUESTION_BANK = [
     id: 1458,
     category: `Comprehensive`,
     chapter: `Practice Test Eight`,
-    question: `A client who has Mycoplasma pneumonia needs to go to the radiology department for a chest x-ray. What should the client wear?`,
+    prompt: `A client who has Mycoplasma pneumonia needs to go to the radiology department for a chest x-ray. What should the client wear?`,
     options: [
       `A face shield`,
       `A surgical mask`,
@@ -20467,7 +20466,7 @@ export const QUESTION_BANK = [
     id: 1459,
     category: `Comprehensive`,
     chapter: `Practice Test Eight`,
-    question: `A new client is admitted with a major abscess on her thigh caused by scratching mosquito bites with dirty hands after digging in her garden. She is on isolation precautions in a private room after surgical debridement. The physician changes her dressings daily. What should the nurse wear when providing care for this client?`,
+    prompt: `A new client is admitted with a major abscess on her thigh caused by scratching mosquito bites with dirty hands after digging in her garden. She is on isolation precautions in a private room after surgical debridement. The physician changes her dressings daily. What should the nurse wear when providing care for this client?`,
     options: [
       `An N95 respirator and gloves`,
       `Eye protection and a face mask`,
@@ -20481,7 +20480,7 @@ export const QUESTION_BANK = [
     id: 1460,
     category: `Comprehensive`,
     chapter: `Practice Test Eight`,
-    question: `The nurse is assisting in the attempt to control bleeding from an artery. What personal protection equipment should be worn?`,
+    prompt: `The nurse is assisting in the attempt to control bleeding from an artery. What personal protection equipment should be worn?`,
     options: [
       `Gloves only`,
       `Gown, gloves, mask, and goggles`,
@@ -20495,7 +20494,7 @@ export const QUESTION_BANK = [
     id: 1461,
     category: `Comprehensive`,
     chapter: `Practice Test Eight`,
-    question: `A 63-year-old woman is taking digitalis, baby aspirin, potassium (K-Dur), and furosemide (Lasix) daily. She complains of multiple symptoms, which include muscle cramps and facial tics. Physical exam reveals positive Chvostek's and Trousseau's signs, hypotension, and confusion. The nurse suspects she has hypomagnesemia. What else should the nurse expect?`,
+    prompt: `A 63-year-old woman is taking digitalis, baby aspirin, potassium (K-Dur), and furosemide (Lasix) daily. She complains of multiple symptoms, which include muscle cramps and facial tics. Physical exam reveals positive Chvostek's and Trousseau's signs, hypotension, and confusion. The nurse suspects she has hypomagnesemia. What else should the nurse expect?`,
     options: [
       `Laboratory tests to reveal high serum calcium and potassium levels`,
       `Laboratory tests to reveal low serum calcium and potassium levels`,
@@ -20509,7 +20508,7 @@ export const QUESTION_BANK = [
     id: 1462,
     category: `Comprehensive`,
     chapter: `Practice Test Eight`,
-    question: `An adult has experienced significant vomiting and diarrhea for the past 24 hours. Her chloride level is 90 mEq/L. What would the nurse expect to find when interpreting her sodium level?`,
+    prompt: `An adult has experienced significant vomiting and diarrhea for the past 24 hours. Her chloride level is 90 mEq/L. What would the nurse expect to find when interpreting her sodium level?`,
     options: [
       `It would be high.`,
       `It is impossible to predict the sodium level with this information.`,
@@ -20523,7 +20522,7 @@ export const QUESTION_BANK = [
     id: 1463,
     category: `Comprehensive`,
     chapter: `Practice Test Eight`,
-    question: `A postoperative client has a nasogastric (NG) tube following bowel surgery. The orders read, "acetaminophen 650 PRN for fever above 101°F." The client has a temperature of 101.4°F. What is the most appropriate nursing action?`,
+    prompt: `A postoperative client has a nasogastric (NG) tube following bowel surgery. The orders read, "acetaminophen 650 PRN for fever above 101°F." The client has a temperature of 101.4°F. What is the most appropriate nursing action?`,
     options: [
       `Administer the acetaminophen by rectal suppository.`,
       `Administer the acetaminophen by elixir through the NG tube and turn suction off for 30 minutes.`,
@@ -20537,7 +20536,7 @@ export const QUESTION_BANK = [
     id: 1464,
     category: `Comprehensive`,
     chapter: `Practice Test Eight`,
-    question: `The nurse is preparing a client with a severe case of inflamed hemorrhoids for a rectal examination by the physician. What is the best position to place her in on the examination table?`,
+    prompt: `The nurse is preparing a client with a severe case of inflamed hemorrhoids for a rectal examination by the physician. What is the best position to place her in on the examination table?`,
     options: [
       `Dorsal recumbent`,
       `Knee-chest`,
@@ -20551,7 +20550,7 @@ export const QUESTION_BANK = [
     id: 1465,
     category: `Comprehensive`,
     chapter: `Practice Test Eight`,
-    question: `The nurse notes that the client has a pulse deficit. What is the most appropriate action for the nurse?`,
+    prompt: `The nurse notes that the client has a pulse deficit. What is the most appropriate action for the nurse?`,
     options: [
       `Document this as a normal finding.`,
       `Instruct the client to report to the clinic for a weekly reevaluation.`,
@@ -20565,7 +20564,7 @@ export const QUESTION_BANK = [
     id: 1466,
     category: `Comprehensive`,
     chapter: `Practice Test Eight`,
-    question: `A postoperative client has pain medication ordered PRN for discomfort. During the first assessment, the nurse notes that the client has not received pain medication all day. His vital signs are within normal limits, but he is sweating profusely. He smiles at you while speaking and states that he is not hot but is still experiencing some pain and has been since early this morning. What is the most appropriate nursing action?`,
+    prompt: `A postoperative client has pain medication ordered PRN for discomfort. During the first assessment, the nurse notes that the client has not received pain medication all day. His vital signs are within normal limits, but he is sweating profusely. He smiles at you while speaking and states that he is not hot but is still experiencing some pain and has been since early this morning. What is the most appropriate nursing action?`,
     options: [
       `Administer the largest dose of pain medication allowed because he has been without it all day and then allow him to rest undisturbed.`,
       `Administer the minimum dose of medication and reassess his level of pain 30 minutes after administration.`,
@@ -20579,7 +20578,7 @@ export const QUESTION_BANK = [
     id: 1467,
     category: `Comprehensive`,
     chapter: `Practice Test Eight`,
-    question: `A woman is scheduled for a breast biopsy. She is crying and says, "I am so upset because I watched my mother die from ovarian cancer." What is the most appropriate nursing diagnosis?`,
+    prompt: `A woman is scheduled for a breast biopsy. She is crying and says, "I am so upset because I watched my mother die from ovarian cancer." What is the most appropriate nursing diagnosis?`,
     options: [
       `Fear`,
       `Anxiety`,
@@ -20593,7 +20592,7 @@ export const QUESTION_BANK = [
     id: 1468,
     category: `Comprehensive`,
     chapter: `Practice Test Eight`,
-    question: `Which diagnosis for the client with tuberculosis would have the greatest impact on public health?`,
+    prompt: `Which diagnosis for the client with tuberculosis would have the greatest impact on public health?`,
     options: [
       `Ineffective breathing pattern`,
       `Deficient knowledge`,
@@ -20607,7 +20606,7 @@ export const QUESTION_BANK = [
     id: 1469,
     category: `Comprehensive`,
     chapter: `Practice Test Eight`,
-    question: `A client comes to the emergency room with complaints of "numbness, tingling, and coldness" of her left leg. She is able to walk. You note that the skin appears pale and is cool to the touch. What should the nurse do first?`,
+    prompt: `A client comes to the emergency room with complaints of "numbness, tingling, and coldness" of her left leg. She is able to walk. You note that the skin appears pale and is cool to the touch. What should the nurse do first?`,
     options: [
       `Ask if she had had a similar condition in her arms or the other leg`,
       `Notify the physician immediately`,
@@ -20621,7 +20620,7 @@ export const QUESTION_BANK = [
     id: 1470,
     category: `Comprehensive`,
     chapter: `Practice Test Eight`,
-    question: `The nurse has taken the vital signs of a 95-year-old client: oral temperature = 98.6°F; pulse = 84 with a regular irregularity; respirations = 18; blood pressure = 140/86. Which nursing assessment(s) should be done first to obtain more data?`,
+    prompt: `The nurse has taken the vital signs of a 95-year-old client: oral temperature = 98.6°F; pulse = 84 with a regular irregularity; respirations = 18; blood pressure = 140/86. Which nursing assessment(s) should be done first to obtain more data?`,
     options: [
       `Apical pulse for one minute`,
       `Carotid pulse and temperature`,
@@ -20635,7 +20634,7 @@ export const QUESTION_BANK = [
     id: 1471,
     category: `Comprehensive`,
     chapter: `Practice Test Eight`,
-    question: `An adult has returned to the nursing care unit following abdominal surgery. She has an order for meperidine IM PRN for severe pain or acetaminophen #3 PO PRN for mild to moderate pain. The nurse asks the client if she is experiencing pain now, and she states, "Yes, I am." What is the most appropriate initial action for the nurse?`,
+    prompt: `An adult has returned to the nursing care unit following abdominal surgery. She has an order for meperidine IM PRN for severe pain or acetaminophen #3 PO PRN for mild to moderate pain. The nurse asks the client if she is experiencing pain now, and she states, "Yes, I am." What is the most appropriate initial action for the nurse?`,
     options: [
       `Administer the meperidine since she is less than 24 hours postop`,
       `Administer the acetaminophen #3 because meperidine can be given if the acetaminophen does not relieve the pain`,
@@ -20649,7 +20648,7 @@ export const QUESTION_BANK = [
     id: 1472,
     category: `Comprehensive`,
     chapter: `Practice Test Eight`,
-    question: `The nurse is admitting an adult woman to the ambulatory surgery unit at 6:30 A.M. The assessment reveals that her blood pressure is elevated, her pulse and respirations are rapid, she is diaphoretic, and she has dilated pupils. The nurse attempts to reinforce her preoperative teaching for today's surgery, but the woman cannot restate anything about her previous instructions. She is wringing her hands and seems to be on the verge of tears. What is the most appropriate initial nursing action?`,
+    prompt: `The nurse is admitting an adult woman to the ambulatory surgery unit at 6:30 A.M. The assessment reveals that her blood pressure is elevated, her pulse and respirations are rapid, she is diaphoretic, and she has dilated pupils. The nurse attempts to reinforce her preoperative teaching for today's surgery, but the woman cannot restate anything about her previous instructions. She is wringing her hands and seems to be on the verge of tears. What is the most appropriate initial nursing action?`,
     options: [
       `Administer her prescribed preoperative medication now.`,
       `Ask her, "How are you feeling right now?"`,
@@ -20663,7 +20662,7 @@ export const QUESTION_BANK = [
     id: 1473,
     category: `Comprehensive`,
     chapter: `Practice Test Eight`,
-    question: `The client states, "My discharge plan leaves me with a lot to do. I don't think I can do it. I'm never good at doing things." The nurse knows the client lacks:`,
+    prompt: `The client states, "My discharge plan leaves me with a lot to do. I don't think I can do it. I'm never good at doing things." The nurse knows the client lacks:`,
     options: [
       `maturation`,
       `organization`,
@@ -20677,7 +20676,7 @@ export const QUESTION_BANK = [
     id: 1474,
     category: `Comprehensive`,
     chapter: `Practice Test Eight`,
-    question: `The nurse is caring for an older client who insists on having a "hot toddy" laced with liquor at bedtime to help her sleep. How should the nurse respond in order to give culturally sensitive and appropriate care?`,
+    prompt: `The nurse is caring for an older client who insists on having a "hot toddy" laced with liquor at bedtime to help her sleep. How should the nurse respond in order to give culturally sensitive and appropriate care?`,
     options: [
       `"Is that something you learned from a relative or a friend?"`,
       `"No one your age should be drinking at bedtime."`,
@@ -20691,7 +20690,7 @@ export const QUESTION_BANK = [
     id: 1475,
     category: `Comprehensive`,
     chapter: `Practice Test Eight`,
-    question: `A 55-year-old woman is recovering from a bowel resection. She is receiving epidural analgesia. She lived by herself right up until admission and has no cognitive deficits. All of the following interventions will reduce the risk of client falls. Which would be most appropriate for this client?`,
+    prompt: `A 55-year-old woman is recovering from a bowel resection. She is receiving epidural analgesia. She lived by herself right up until admission and has no cognitive deficits. All of the following interventions will reduce the risk of client falls. Which would be most appropriate for this client?`,
     options: [
       `Apply a vest restraint around her so she cannot get out of bed.`,
       `Make sure someone is always present in her room to prevent her from getting out of bed.`,
@@ -20705,7 +20704,7 @@ export const QUESTION_BANK = [
     id: 1476,
     category: `Comprehensive`,
     chapter: `Practice Test Eight`,
-    question: `A nurse prepared the 9:00 A.M. medications for his clients and then was called off the unit briefly before he was able to administer them. Who may administer the medications to the clients now?`,
+    prompt: `A nurse prepared the 9:00 A.M. medications for his clients and then was called off the unit briefly before he was able to administer them. Who may administer the medications to the clients now?`,
     options: [
       `Any licensed nurse assigned to the unit and familiar with the clients`,
       `A pharmacy technician certified to administer medications`,
@@ -20719,7 +20718,7 @@ export const QUESTION_BANK = [
     id: 1477,
     category: `Comprehensive`,
     chapter: `Practice Test Eight`,
-    question: `In the past 12-month period, a man has been arrested twice for driving while intoxicated. He is able to perform his activities of daily living without the use of alcohol and restricts his drinking to weekends. This client meets the criteria for which of the following?`,
+    prompt: `In the past 12-month period, a man has been arrested twice for driving while intoxicated. He is able to perform his activities of daily living without the use of alcohol and restricts his drinking to weekends. This client meets the criteria for which of the following?`,
     options: [
       `Alcohol withdrawal syndrome`,
       `Bad judgment syndrome`,
@@ -20733,7 +20732,7 @@ export const QUESTION_BANK = [
     id: 1478,
     category: `Comprehensive`,
     chapter: `Practice Test Eight`,
-    question: `A client with a knee injury is scheduled for an MRI examination. The nurse explains the test to the client. Which finding in the client would make the client ineligible for this type of exam?`,
+    prompt: `A client with a knee injury is scheduled for an MRI examination. The nurse explains the test to the client. Which finding in the client would make the client ineligible for this type of exam?`,
     options: [
       `Presence of a metal plate in the leg from an old fracture`,
       `Presence of a ceramic artificial hip`,
@@ -20747,7 +20746,7 @@ export const QUESTION_BANK = [
     id: 1479,
     category: `Comprehensive`,
     chapter: `Practice Test Eight`,
-    question: `Which of these clients is at greatest risk for the complications associated with osteoporosis?`,
+    prompt: `Which of these clients is at greatest risk for the complications associated with osteoporosis?`,
     options: [
       `A 22-year-old woman with anorexia nervosa who is not having menstrual periods`,
       `A 65-year-old Asian-American man who is sedentary, has a low calcium intake, and takes corticosteroids for chronic obstructive pulmonary disease`,
@@ -20761,7 +20760,7 @@ export const QUESTION_BANK = [
     id: 1480,
     category: `Comprehensive`,
     chapter: `Practice Test Eight`,
-    question: `An adult admitted for surgery also is diagnosed with obsessive-compulsive disorder. The client spends most of her time in the bathroom washing her hands. The client is scheduled for surgery at 8:00 A.M. and is to be premedicated at 7:00 A.M. Which nursing action will be most appropriate?`,
+    prompt: `An adult admitted for surgery also is diagnosed with obsessive-compulsive disorder. The client spends most of her time in the bathroom washing her hands. The client is scheduled for surgery at 8:00 A.M. and is to be premedicated at 7:00 A.M. Which nursing action will be most appropriate?`,
     options: [
       `Inform the client at 6:30 A.M. that she will soon be medicated and have to stay in bed after that.`,
       `When medicating the client, explain to her that she will not be able to get up after receiving the medication.`,
@@ -20775,7 +20774,7 @@ export const QUESTION_BANK = [
     id: 1481,
     category: `Comprehensive`,
     chapter: `Practice Test Eight`,
-    question: `A 43-year-old woman with lupus erythematosus expresses frustration about the unpredictable course of her illness and the change in her physical appearance. Which nursing intervention would be most appropriate?`,
+    prompt: `A 43-year-old woman with lupus erythematosus expresses frustration about the unpredictable course of her illness and the change in her physical appearance. Which nursing intervention would be most appropriate?`,
     options: [
       `Explore with her the effect the lupus has on her occupation, leisure activities, and personal relationships.`,
       `Explain to her that things could be worse and that she could have a more serious illness, such as terminal cancer, to help her put her situation into perspective.`,
@@ -20789,7 +20788,7 @@ export const QUESTION_BANK = [
     id: 1482,
     category: `Comprehensive`,
     chapter: `Practice Test Eight`,
-    question: `A child's burn is debrided each day with hydrotherapy to remove the eschar. The child's parents ask why this immersion is necessary. What is the most appropriate response for the nurse to make?`,
+    prompt: `A child's burn is debrided each day with hydrotherapy to remove the eschar. The child's parents ask why this immersion is necessary. What is the most appropriate response for the nurse to make?`,
     options: [
       `"By removing the scab or crusting daily in the special bath, we help prevent infection and then the healthy tissue may be covered by skin grafts."`,
       `"By submersion in a whirlpool bath, we can better exercise her limbs to prevent contractures."`,
@@ -20803,7 +20802,7 @@ export const QUESTION_BANK = [
     id: 1483,
     category: `Comprehensive`,
     chapter: `Practice Test Eight`,
-    question: `The nurse is caring for a client who was admitted for treatment of schizoaffective disorder with visual hallucinations. He tells the nurse that he sees extraterrestrials that are coming to get him. What is the best nursing response?`,
+    prompt: `The nurse is caring for a client who was admitted for treatment of schizoaffective disorder with visual hallucinations. He tells the nurse that he sees extraterrestrials that are coming to get him. What is the best nursing response?`,
     options: [
       `"You know that extraterrestrials are make-believe."`,
       `Call his physician and report this visual hallucination.`,
@@ -20817,7 +20816,7 @@ export const QUESTION_BANK = [
     id: 1484,
     category: `Comprehensive`,
     chapter: `Practice Test Eight`,
-    question: `An adult is almost ready for discharge. She has a complicated care regimen to follow. When conducting client teaching, the nurse notes that the client cannot recall basic information that was discussed the day before. The client also appears distracted. When asked if she is feeling comfortable about leaving the hospital, she states, "There's just too much to learn. I know I'm going to get home and mess something up." The nurse realizes that the client may be experiencing:`,
+    prompt: `An adult is almost ready for discharge. She has a complicated care regimen to follow. When conducting client teaching, the nurse notes that the client cannot recall basic information that was discussed the day before. The client also appears distracted. When asked if she is feeling comfortable about leaving the hospital, she states, "There's just too much to learn. I know I'm going to get home and mess something up." The nurse realizes that the client may be experiencing:`,
     options: [
       `mild anxiety`,
       `moderate anxiety`,
@@ -20831,7 +20830,7 @@ export const QUESTION_BANK = [
     id: 1485,
     category: `Comprehensive`,
     chapter: `Practice Test Eight`,
-    question: `The family of an 88-year-old woman who was admitted with severe dehydration says to the nurse, "Why don't you just tie down her arms so she won't try to get out her IV?" What is the best response for the nurse to make?`,
+    prompt: `The family of an 88-year-old woman who was admitted with severe dehydration says to the nurse, "Why don't you just tie down her arms so she won't try to get out her IV?" What is the best response for the nurse to make?`,
     options: [
       `Ask the physician for an order to restrain the woman`,
       `Explain to the family that restraints are not allowed in the hospital unless the doctor orders them`,
@@ -20845,7 +20844,7 @@ export const QUESTION_BANK = [
     id: 1486,
     category: `Comprehensive`,
     chapter: `Practice Test Eight`,
-    question: `An adult client is to have a portable chest x-ray in his room. The client's wife and pregnant daughter are visiting. Which action is essential for the nurse?`,
+    prompt: `An adult client is to have a portable chest x-ray in his room. The client's wife and pregnant daughter are visiting. Which action is essential for the nurse?`,
     options: [
       `Ask the pregnant daughter to leave the room and have the wife assist in holding the client.`,
       `Have the client wear a lead apron over his chest and abdomen.`,
@@ -20859,7 +20858,7 @@ export const QUESTION_BANK = [
     id: 1487,
     category: `Comprehensive`,
     chapter: `Practice Test Eight`,
-    question: `The LPN/LVN is providing home care to an elderly widow who has senile dementia. The woman tells the nurse that her daughter hits her and tells her to shut up. The nurse notes one ecchymotic area on the client's right forearm. The daughter seems attentive to the woman when the nurse is present. What action should the nurse take?`,
+    prompt: `The LPN/LVN is providing home care to an elderly widow who has senile dementia. The woman tells the nurse that her daughter hits her and tells her to shut up. The nurse notes one ecchymotic area on the client's right forearm. The daughter seems attentive to the woman when the nurse is present. What action should the nurse take?`,
     options: [
       `Immediately call the police`,
       `Ask the daughter why she abuses her mother`,
@@ -20873,7 +20872,7 @@ export const QUESTION_BANK = [
     id: 1488,
     category: `Comprehensive`,
     chapter: `Practice Test Eight`,
-    question: `A nurse from the float pool is giving medications on a pediatric unit and is to give medications to a 2-year-old child in room 534, bed B. The child in that room does not have an identification band. What is the best action for the nurse to take?`,
+    prompt: `A nurse from the float pool is giving medications on a pediatric unit and is to give medications to a 2-year-old child in room 534, bed B. The child in that room does not have an identification band. What is the best action for the nurse to take?`,
     options: [
       `Ask the child what his name is`,
       `Give the medication to the child in room 534, bed B`,
