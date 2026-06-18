@@ -1,7 +1,11 @@
+import { blueprint, questions as starterQuestions, studyGuide } from "./nclex-data.js";
+import { textbookQuestions } from "./textbook-bank.js";
+import { supplementalQuestions } from "./supplemental-bank.js";
 import { guideSections } from "./guide-content.js";
 import { researchGuideSections } from "./research-guides.js";
 import { learningResources } from "./learning-resources.js";
-import { QUESTION_BANK, CATEGORIES } from "./question-bank.js";
+import { nmcnSaturationQuestions } from "./nmcn-saturation-bank.js";
+import { newTextbookQuestions } from "./new-textbook-questions.js";
 
 const $ = (selector) => document.querySelector(selector);
 const $$ = (selector) => [...document.querySelectorAll(selector)];
@@ -41,14 +45,13 @@ function escapeHtml(value) {
     .replaceAll("'", "&#039;");
 }
 
-// Normalize new question bank: convert answer from number to array format
-const rawQuestions = QUESTION_BANK.map(q => ({
-  ...q,
-  answer: Array.isArray(q.answer) ? q.answer : [q.answer],
-}));
-const clearQuestions = rawQuestions.filter(q =>
-  q.question && q.options && q.options.length >= 2 && q.answer && q.answer.length > 0
-);
+const rawQuestions = [
+  ...(textbookQuestions.length ? textbookQuestions : starterQuestions),
+  ...supplementalQuestions,
+  ...nmcnSaturationQuestions,
+  ...newTextbookQuestions
+];
+const clearQuestions = rawQuestions.filter(isClearQuestion);
 const questionById = new Map(clearQuestions.map((question) => [question.id, question]));
 const savedSession = JSON.parse(localStorage.getItem("ad-session") || "{}");
 
