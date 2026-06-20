@@ -1,11 +1,13 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="cyan">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>A_D</title>
+    <title>A_D CBT Hub</title>
     <link rel="stylesheet" href="./styles.css" />
     <link rel="icon" type="image/x-icon" href="./favicon.ico" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.39.0/dist/umd/supabase.min.js"></script>
     <script>
       // Pre-initialize Supabase immediately after CDN loads
@@ -23,35 +25,12 @@
     </script>
   </head>
   <body>
-  <!-- Google Login Bar -->
-  <div id="login-bar" style="
-    display:none;
-    position:fixed;
-    top:0; left:0; right:0;
-    background:#00c9a7;
-    color:#000;
-    padding:10px 20px;
-    z-index:99999;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    font-family:sans-serif;
-    font-size:14px;
-    box-shadow:0 2px 8px rgba(0,0,0,0.2);
-  ">
-    <span id="login-bar-msg">🎓 Sign in to save your chat history across all devices</span>
-    <div style="display:flex;gap:10px;align-items:center;">
-      <span id="login-bar-user" style="font-weight:600;"></span>
-      <button id="login-bar-btn" onclick="handleLoginClick()" style="
-        background:#000;
-        color:#00c9a7;
-        border:none;
-        border-radius:8px;
-        padding:6px 16px;
-        font-weight:700;
-        cursor:pointer;
-        font-size:13px;
-      ">Sign in with Google</button>
+    
+  <div id="login-bar">
+    <span id="login-bar-msg"><i class="fa-solid fa-cloud-arrow-up"></i> Sign in to save your chat history across all devices</span>
+    <div class="login-actions">
+      <span id="login-bar-user"></span>
+      <button id="login-bar-btn" onclick="handleLoginClick()">Sign in with Google</button>
     </div>
   </div>
 
@@ -59,7 +38,7 @@
       <aside class="sidebar" aria-label="Study dashboard">
         <div class="brand">
           <p class="eyebrow">Council exam prep</p>
-          <h1>A_D</h1>
+          <h1>A_D CBT Hub</h1>
           <p class="subtle">Textbook, NMCN, council, OSCE, and hospital-final CBT prep.</p>
         </div>
 
@@ -75,11 +54,21 @@
         </section>
 
         <nav class="nav" aria-label="Prep modes">
-          <button class="nav__item is-active" type="button" data-view="practice">Practice</button>
-          <button class="nav__item" type="button" data-view="cbt">CBT Exam</button>
-          <button class="nav__item" type="button" data-view="review">Review</button>
-          <button class="nav__item" type="button" data-view="guide">Study Guide</button>
+          <button class="nav__item is-active" type="button" data-view="practice"><i class="fa-solid fa-pen-fancy"></i> Practice</button>
+          <button class="nav__item" type="button" data-view="cbt"><i class="fa-solid fa-laptop-code"></i> CBT Exam</button>
+          <button class="nav__item" type="button" data-view="review"><i class="fa-solid fa-chart-line"></i> Review</button>
+          <button class="nav__item" type="button" data-view="guide"><i class="fa-solid fa-book-open"></i> Study Guide</button>
         </nav>
+
+        <div class="theme-switcher">
+          <p class="eyebrow">Workspace Color</p>
+          <div class="theme-grid">
+            <button class="theme-dot" data-theme-set="cyan" style="background: #20f7d2;"></button>
+            <button class="theme-dot" data-theme-set="amethyst" style="background: #bf5af2;"></button>
+            <button class="theme-dot" data-theme-set="crimson" style="background: #ff3b30;"></button>
+            <button class="theme-dot" data-theme-set="silver" style="background: #f5f5f7;"></button>
+          </div>
+        </div>
       </aside>
 
       <section class="workspace">
@@ -104,7 +93,7 @@
               Chapter
               <select id="chapter-filter"></select>
             </label>
-            <button id="shuffle-button" class="icon-button" type="button" title="Shuffle question">↻</button>
+            <button id="shuffle-button" class="icon-button" type="button" title="Shuffle question"><i class="fa-solid fa-shuffle"></i></button>
           </div>
 
           <article class="question-panel" aria-live="polite">
@@ -115,9 +104,9 @@
             <h3 id="practice-question"></h3>
             <div id="practice-options" class="options"></div>
             <div class="panel-actions">
-              <button id="previous-question" type="button">Previous</button>
-              <button id="check-answer" class="primary" type="button">Check answer</button>
-              <button id="next-question" type="button">Next</button>
+              <button id="previous-question" type="button"><i class="fa-solid fa-arrow-left"></i> Previous</button>
+              <button id="check-answer" class="primary" type="button">Check answer <i class="fa-solid fa-check"></i></button>
+              <button id="next-question" type="button">Next <i class="fa-solid fa-arrow-right"></i></button>
             </div>
             <div id="practice-rationale" class="rationale" hidden></div>
           </article>
@@ -140,7 +129,7 @@
                 <input id="exam-minutes" type="number" min="5" max="180" value="35" />
               </label>
             </div>
-            <button id="start-exam" class="primary" type="button">Start CBT</button>
+            <button id="start-exam" class="primary" type="button"><i class="fa-solid fa-play"></i> Start CBT</button>
           </div>
 
           <article id="exam-panel" class="question-panel" hidden>
@@ -151,9 +140,9 @@
             <h3 id="exam-question"></h3>
             <div id="exam-options" class="options"></div>
             <div class="panel-actions">
-              <button id="exam-prev" type="button">Back</button>
-              <button id="exam-next" class="primary" type="button">Next</button>
-              <button id="submit-exam" type="button">Submit</button>
+              <button id="exam-prev" type="button"><i class="fa-solid fa-arrow-left"></i> Back</button>
+              <button id="exam-next" class="primary" type="button">Next <i class="fa-solid fa-arrow-right"></i></button>
+              <button id="submit-exam" type="button" style="border-color: #ff3b30; color: #ff3b30;">Submit Exam</button>
             </div>
             <div class="exam-review-block">
               <div class="question-meta">
@@ -173,7 +162,7 @@
               <p class="eyebrow">Weak areas</p>
               <h3>Performance by client need</h3>
             </div>
-            <button id="reset-progress" type="button">Reset progress</button>
+            <button id="reset-progress" type="button"><i class="fa-solid fa-rotate-right"></i> Reset progress</button>
           </div>
           <div id="category-bars" class="bars"></div>
           <div id="missed-list" class="missed-list"></div>
@@ -203,219 +192,19 @@
 
     <script type="module" src="./src/app.js"></script>
 
-    <!-- A_D Tutor Chatbot -->
-    <style>
-
-      /* ===== RESPONSIVE LOGIN BAR ===== */
-      #login-bar {
-        position: fixed;
-        top: 0; left: 0; right: 0;
-        background: #00c9a7;
-        color: #000;
-        padding: 8px 16px;
-        z-index: 99999;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        font-family: sans-serif;
-        font-size: 13px;
-        box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-        flex-wrap: wrap;
-        gap: 6px;
-      }
-      #login-bar-msg { flex: 1; min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-      #login-bar-btn {
-        background: #000;
-        color: #00c9a7;
-        border: none;
-        border-radius: 8px;
-        padding: 5px 14px;
-        font-weight: 700;
-        cursor: pointer;
-        font-size: 12px;
-        white-space: nowrap;
-      }
-
-      /* ===== TUTOR BUTTON ===== */
-
-      /* ===== LOGIN BAR ===== */
-      #login-bar {
-        position: fixed;
-        top: 0; left: 0; right: 0;
-        background: #00c9a7;
-        color: #000;
-        padding: 8px 16px;
-        z-index: 99999;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        font-family: sans-serif;
-        font-size: 13px;
-        box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-        gap: 8px;
-      }
-      #login-bar-msg { flex: 1; font-weight: 500; font-size: 12px; }
-      #login-bar-btn {
-        background: #000;
-        color: #00c9a7;
-        border: none;
-        border-radius: 8px;
-        padding: 6px 14px;
-        font-weight: 700;
-        cursor: pointer;
-        font-size: 12px;
-        white-space: nowrap;
-      }
-
-      /* ===== TUTOR BUTTON ===== */
-      #tutor-btn {
-        position: fixed;
-        bottom: 20px;
-        right: 16px;
-        width: 52px;
-        height: 52px;
-        border-radius: 50%;
-        background: #00c9a7;
-        color: #000;
-        border: none;
-        font-size: 24px;
-        cursor: pointer;
-        box-shadow: 0 4px 16px rgba(0,201,167,0.4);
-        z-index: 9999;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-
-      /* ===== TUTOR PANEL ===== */
-      #tutor-panel {
-        position: fixed;
-        bottom: 80px;
-        right: 16px;
-        width: min(340px, calc(100vw - 24px));
-        height: min(480px, calc(100vh - 120px));
-        background: #1a1a2e;
-        border: 1px solid #00c9a7;
-        border-radius: 16px;
-        display: none;
-        flex-direction: column;
-        z-index: 9999;
-        box-shadow: 0 8px 32px rgba(0,0,0,0.5);
-        overflow: hidden;
-      }
-      #tutor-panel.open { display: flex; }
-      #tutor-header {
-        background: #00c9a7;
-        color: #000;
-        padding: 10px 14px;
-        font-weight: 700;
-        font-size: 13px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        flex-shrink: 0;
-      }
-      #tutor-close {
-        background: none;
-        border: none;
-        font-size: 18px;
-        cursor: pointer;
-        color: #000;
-        font-weight: bold;
-      }
-      #tutor-messages {
-        flex: 1;
-        overflow-y: auto;
-        padding: 10px;
-        display: flex;
-        flex-direction: column;
-        gap: 8px;
-      }
-      .tutor-msg {
-        padding: 8px 12px;
-        border-radius: 10px;
-        font-size: 13px;
-        line-height: 1.5;
-        max-width: 90%;
-        word-wrap: break-word;
-      }
-      .tutor-msg.bot { background: #0f3460; color: #e0e0e0; align-self: flex-start; }
-      .tutor-msg.user { background: #00c9a7; color: #000; align-self: flex-end; font-weight: 600; }
-      .tutor-msg.typing { background: #0f3460; color: #888; align-self: flex-start; font-style: italic; }
-      #tutor-input-row {
-        display: flex;
-        border-top: 1px solid #333;
-        padding: 8px;
-        gap: 6px;
-        flex-shrink: 0;
-      }
-      #tutor-input {
-        flex: 1;
-        background: #0f3460;
-        border: 1px solid #333;
-        border-radius: 8px;
-        color: #fff;
-        padding: 8px 10px;
-        font-size: 13px;
-        outline: none;
-        min-width: 0;
-      }
-      #tutor-input::placeholder { color: #666; }
-      #tutor-send {
-        background: #00c9a7;
-        border: none;
-        border-radius: 8px;
-        padding: 8px 12px;
-        color: #000;
-        font-weight: 700;
-        cursor: pointer;
-        font-size: 14px;
-        flex-shrink: 0;
-      }
-      #tutor-send:disabled { opacity: 0.5; }
-
-      @media (max-width: 768px) {
-        /* Raise button above mobile browser nav bar */
-        #tutor-btn {
-          bottom: 72px !important;
-          right: 12px !important;
-          width: 48px !important;
-          height: 48px !important;
-          font-size: 22px !important;
-        }
-        /* Make panel full width and avoid browser chrome */
-        #tutor-panel {
-          right: 8px !important;
-          left: 8px !important;
-          width: auto !important;
-          bottom: 130px !important;
-          height: calc(100vh - 200px) !important;
-          max-height: 400px !important;
-        }
-        /* Make login bar text smaller on mobile */
-        #login-bar {
-          padding: 6px 10px !important;
-          font-size: 11px !important;
-        }
-        #login-bar-msg {
-          font-size: 10px !important;
-        }
-      }
-    </style>
-
-    <button id="tutor-btn" title="Ask A_D Tutor">🎓</button>
+    <button id="tutor-btn" title="Ask A_D Tutor"><i class="fa-solid fa-user-doctor"></i></button>
 
     <div id="tutor-panel">
       <div id="tutor-header">
-        <span>🎓 A_D Nursing Tutor</span>
-        <button id="tutor-close">✕</button>
+        <span><i class="fa-solid fa-robot"></i> A_D Nursing Tutor</span>
+        <button id="tutor-close"><i class="fa-solid fa-xmark"></i></button>
       </div>
       <div id="tutor-messages">
         <div class="tutor-msg bot">Hi! I am your A_D Nursing Tutor. Ask me about any question, concept, or topic and I will explain it clearly!</div>
       </div>
       <div id="tutor-input-row">
         <input id="tutor-input" type="text" placeholder="Ask a nursing question..." />
-        <button id="tutor-send">&#10148;</button>
+        <button id="tutor-send"><i class="fa-solid fa-paper-plane"></i></button>
       </div>
     </div>
 
@@ -540,8 +329,8 @@
           var name = (user.user_metadata && user.user_metadata.full_name)
             ? user.user_metadata.full_name.split(' ')[0]
             : (user.email ? user.email.split('@')[0] : 'You');
-          loginBarMsg.textContent = 'Welcome, ' + name + '! Chat history saved across devices.';
-          loginBarBtn.textContent = 'Sign out';
+          loginBarMsg.innerHTML = '<i class="fa-solid fa-circle-check"></i> Welcome, ' + name + '! Chat history saved.';
+          loginBarBtn.innerHTML = '<i class="fa-solid fa-right-from-bracket"></i> Sign out';
           loginBarBtn.onclick = async function() {
             try {
               if (sbClient) {
@@ -562,8 +351,8 @@
             setTimeout(function() { window.location.reload(); }, 500);
           };
         } else {
-          loginBarMsg.textContent = 'Sign in to save your chat history across all devices';
-          loginBarBtn.textContent = 'Sign in with Google';
+          loginBarMsg.innerHTML = '<i class="fa-solid fa-cloud-arrow-up"></i> Sign in to save your chat history across all devices';
+          loginBarBtn.innerHTML = '<i class="fa-brands fa-google"></i> Sign in with Google';
           loginBarBtn.onclick = function() { doGoogleSignIn(); };
         }
       }
