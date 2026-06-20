@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>A_D CBT Hub - Premium Portal</title>
+    <title>A_D CBT Hub - Premium Engine Portal</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
@@ -14,7 +14,7 @@
 
     <div class="app-container">
         
-        <!-- Ultra-Fluid Navigation Sidebar -->
+        <!-- Ultra-Fluid Navigation Sidebar (Now houses Login Status and Sign Out) -->
         <aside class="premium-sidebar" id="sidebar">
             <div class="sidebar-header">
                 <div class="logo-wrapper">
@@ -46,27 +46,34 @@
                 </a>
             </nav>
 
-            <!-- Bottom Interactive Options -->
+            <!-- Bottom Interactive Sidebar Anchor Desk (Houses Profile, Settings, and Sign-Out) -->
             <div class="sidebar-footer">
                 <button class="menu-item settings-trigger-btn" id="settings-toggle">
                     <i class="fa-solid fa-sliders menu-icon spin-on-hover"></i>
                     <span class="menu-label">Settings Desk</span>
                 </button>
+                
+                <div class="sidebar-auth-anchor-panel">
+                    <div class="auth-user-badge">
+                        <div class="auth-status-dot online"></div>
+                        <span class="auth-user-name" id="sidebar-user-display">Adama (Active)</span>
+                    </div>
+                    <button class="sidebar-signout-btn" id="auth-signout-trigger">
+                        <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                        <span class="menu-label">Sign Out</span>
+                    </button>
+                </div>
             </div>
         </aside>
 
         <!-- Main Display Arena -->
         <main class="main-content-arena">
-            <!-- Top Premium Status Banner -->
+            <!-- Top Premium Status Banner (Cleaned of authentication triggers) -->
             <header class="premium-status-bar">
                 <div class="banner-message">
                     <i class="fa-solid fa-circle-check notification-glow-icon"></i>
-                    <span>Welcome, Adama! Session active with cloud persistence.</span>
+                    <span>Welcome back, Adama! System connected to cloud database core.</span>
                 </div>
-                <button class="sign-out-btn" id="auth-signout-trigger">
-                    <span>Sign out</span>
-                    <i class="fa-solid fa-arrow-right-from-bracket"></i>
-                </button>
             </header>
 
             <!-- Dynamic Section Display Viewport -->
@@ -76,28 +83,31 @@
                 <div class="viewport-panel active" id="practice-view">
                     <div class="section-title-block">
                         <h2>Practice Engine Module</h2>
-                        <p>Review untimed nursing questions with immediate rationales and breakdown insights.</p>
+                        <p>Review untimed nursing questions with immediate rationales and learning style breakdowns.</p>
                     </div>
-                    <!-- Core Question Canvas Hook -->
-                    <div id="practice-questions-root" class="dynamic-canvas-container">
-                        <!-- Your original JavaScript will inject active question layouts here -->
-                        <div class="placeholder-loading-card">
-                            <i class="fa-solid fa-circle-notch fa-spin"></i> Loading Practice Bank Content...
-                        </div>
-                    </div>
+                    <!-- Active Question Canvas Hook -->
+                    <div id="practice-questions-root" class="dynamic-canvas-container"></div>
                 </div>
 
-                <!-- CBT EXAM VIEWPORT -->
+                <!-- CBT EXAM VIEWPORT (Fully Timed Framework) -->
                 <div class="viewport-panel" id="cbt-view">
                     <div class="section-title-block">
                         <h2>Real-Time CBT Simulation</h2>
                         <p>Strictly timed standard exam conditions mapping hospital-final environments.</p>
                     </div>
-                    <div id="exam-engine-root" class="dynamic-canvas-container">
-                        <div class="placeholder-loading-card">
-                            <i class="fa-solid fa-stopwatch"></i> Ready to initialize timed examination block.
+                    
+                    <!-- Integrated Exam Controller Dashboard Bar -->
+                    <div class="exam-controller-dashboard-bar" id="exam-timer-banner" style="display: none;">
+                        <div class="timer-stat-pill">
+                            <i class="fa-solid fa-clock-rotate-left"></i>
+                            <span id="exam-countdown-clock">60:00</span>
+                        </div>
+                        <div class="progress-tracker-text">
+                            Question <span id="exam-current-index-display">1</span> of <span id="exam-total-count-display">0</span>
                         </div>
                     </div>
+
+                    <div id="exam-engine-root" class="dynamic-canvas-container"></div>
                 </div>
 
                 <!-- REVIEW FAILED WORK VIEWPORT -->
@@ -106,11 +116,7 @@
                         <h2>Review Matrix (Failed Work)</h2>
                         <p>Analyze missed question criteria, breakdown diagnostic errors, and clear incorrect selections.</p>
                     </div>
-                    <div id="review-matrix-root" class="dynamic-canvas-container">
-                        <div class="empty-state-notice">
-                            <i class="fa-solid fa-champagne-glasses"></i> No failed questions on file! Keep up the excellent work.
-                        </div>
-                    </div>
+                    <div id="review-matrix-root" class="dynamic-canvas-container"></div>
                 </div>
 
                 <!-- STUDY GUIDE VIEWPORT -->
@@ -119,20 +125,7 @@
                         <h2>Curriculum Guide Library</h2>
                         <p>Syllabi maps, NMCN blueprint breakdowns, and core nursing guidelines.</p>
                     </div>
-                    <div id="curriculum-library-root" class="dynamic-canvas-container">
-                        <!-- Static Reference Cards -->
-                        <div class="interactive-cards-container">
-                            <div class="glow-card">
-                                <div class="card-glow-element"></div>
-                                <div class="card-body-content">
-                                    <div class="card-icon-frame"><i class="fa-solid fa-heart-pulse"></i></div>
-                                    <h3>Cardiovascular Pharmacology</h3>
-                                    <p>Comprehensive analysis of antiarrhythmics, beta-blockers, and cardiac glycosides.</p>
-                                    <button class="card-action-trigger">Launch Syllabus</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <div id="curriculum-library-root" class="dynamic-canvas-container"></div>
                 </div>
 
                 <!-- HIGH-END KINETIC PROFILE & CONFIGURATION DRAWER -->
@@ -202,7 +195,7 @@
         </main>
     </div>
 
-    <!-- INTEGRATED PREMIUM CORE TUTOR CHATBOT INTERFACE CONTAINER -->
+    <!-- INTEGRATED LOW-ANCHOR PREMIUM CORE TUTOR CHATBOT INTERFACE CONTAINER (Repositioned to bottom corner) -->
     <div class="chatbot-dock-wrapper" id="chatbot-wrapper">
         <button class="chatbot-toggle-trigger" id="chatbot-toggle" aria-label="Toggle Nursing Tutor Bot">
             <i class="fa-solid fa-user-doctor"></i>
