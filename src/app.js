@@ -121,19 +121,67 @@ function shuffle(items) {
 }
 
 function populateFilters() {
-  const categories = ["All categories", ...new Set(questions.map((q) => q.category))];
+  // Map categories to NMCN nursing council exam categories
+  const nursingCategories = [
+    "All categories",
+    "Medical-Surgical Nursing",
+    "Pediatric Nursing",
+    "Maternal & Child Health",
+    "Mental Health Nursing",
+    "Community Health Nursing",
+    "Pharmacology & Medications",
+    "Fundamentals of Nursing",
+    "Anatomy & Physiology",
+    "Nutrition & Dietetics",
+    "Comprehensive Practice",
+  ];
+  categoryFilter.innerHTML = nursingCategories.map((item) => `<option value="${item}">${item}</option>`).join("");
+  // Map each question to nursing council category
+  window._nursingCategoryMap = {
+    "Physiological Adaptation": "Medical-Surgical Nursing",
+    "Health Promotion & Maintenance": "Community Health Nursing",
+    "Psychosocial Integrity": "Mental Health Nursing",
+    "Safe & Effective Care Environment": "Fundamentals of Nursing",
+    "Pharmacological Therapies": "Pharmacology & Medications",
+    "Comprehensive": "Comprehensive Practice",
+    "Pediatrics": "Pediatric Nursing",
+    "Maternal": "Maternal & Child Health",
+    "Maternity": "Maternal & Child Health",
+    "Nutrition": "Nutrition & Dietetics",
+    "Anatomy": "Anatomy & Physiology",
+  };
+  // Chapter filter hidden but kept for compatibility
   const chapters = ["All chapters", ...new Set(questions.map((q) => q.chapter))];
-  categoryFilter.innerHTML = categories.map((item) => `<option value="${item}">${item}</option>`).join("");
   chapterFilter.innerHTML = chapters.map((item) => `<option value="${item}">${item}</option>`).join("");
+}
+
+function getNursingCategory(q) {
+  const map = window._nursingCategoryMap || {};
+  // Check category field
+  for (const [key, val] of Object.entries(map)) {
+    if (q.category && q.category.includes(key)) return val;
+    if (q.chapter && q.chapter.includes(key)) return val;
+  }
+  // Special chapter-based mapping
+  if (q.chapter) {
+    const ch = q.chapter.toLowerCase();
+    if (ch.includes('cardio') || ch.includes('respiratory') || ch.includes('gastro') || ch.includes('renal') || ch.includes('neuro') || ch.includes('musculo') || ch.includes('endocrine') || ch.includes('integument') || ch.includes('hematol') || ch.includes('genitourin') || ch.includes('cancer') || ch.includes('perioper')) return 'Medical-Surgical Nursing';
+    if (ch.includes('pediatr')) return 'Pediatric Nursing';
+    if (ch.includes('maternal') || ch.includes('maternity') || ch.includes('reproductive') || ch.includes('obstet')) return 'Maternal & Child Health';
+    if (ch.includes('mental') || ch.includes('psych')) return 'Mental Health Nursing';
+    if (ch.includes('pharmacol')) return 'Pharmacology & Medications';
+    if (ch.includes('nutrition') || ch.includes('diet')) return 'Nutrition & Dietetics';
+    if (ch.includes('older') || ch.includes('community') || ch.includes('health promot')) return 'Community Health Nursing';
+    if (ch.includes('practice test') || ch.includes('comprehensive')) return 'Comprehensive Practice';
+  }
+  return 'Medical-Surgical Nursing';
 }
 
 function applyFilters() {
   const category = categoryFilter.value;
-  const chapter = chapterFilter.value;
   state.filtered = questions.filter((q) => {
-    const categoryMatch = category === "All categories" || q.category === category;
-    const chapterMatch = chapter === "All chapters" || q.chapter === chapter;
-    return categoryMatch && chapterMatch;
+    if (category === "All categories") return true;
+    return getNursingCategory(q) === category;
   });
   state.practiceIndex = 0;
   saveSession();
@@ -362,7 +410,7 @@ function renderPractice() {
     $("#practice-options").innerHTML = "";
     return;
   }
-  $("#practice-category").textContent = `${question.category} - ${question.chapter}`;
+  $("#practice-category").textContent = getNursingCategory(question);
   $("#practice-progress").textContent = `${state.practiceIndex + 1} of ${state.filtered.length}`;
   $("#practice-question").textContent = question.prompt;
   renderOptions($("#practice-options"), question, state.practiceAnswers[question.id] || []);
@@ -405,8 +453,15 @@ function switchView(view) {
     review: ["Performance", "Review weak areas"],
     guide: ["Study map", "High-yield council exam guide"]
   };
-  $("#view-kicker").textContent = titles[view][0];
-  $("#view-title").textContent = titles[view][1];
+  // Update sidebar nav active state
+  document.querySelectorAll('.sb-nav-item').forEach(b => b.classList.toggle('is-active', b.dataset.view === view));
+  // Update topnav label
+  const navLabels = {practice:'Practice', cbt:'CBT Exam', review:'Review', guide:'Study Guide'};
+  const topnavEl = document.getElementById('topnav-view');
+  if (topnavEl) topnavEl.textContent = navLabels[view] || view;
+  // These elements may not exist in new UI
+  try { $("#view-kicker").textContent = titles[view][0]; } catch(e) {}
+  try { $("#view-title").textContent = titles[view][1]; } catch(e) {}
   if (view !== "cbt" || !state.timerId) {
     $("#timer-label").textContent = view === "cbt" ? "Ready" : "Untimed";
     $("#timer-value").textContent = "00:00";
@@ -447,7 +502,7 @@ function startExam() {
 function renderExam() {
   const question = state.exam[state.examIndex];
   if (!question) return;
-  $("#exam-category").textContent = `${question.category} - ${question.chapter}`;
+  $("#exam-category").textContent = getNursingCategory(question);
   $("#exam-progress").textContent = `${state.examIndex + 1} of ${state.exam.length}`;
   $("#exam-question").textContent = question.prompt;
   renderOptions($("#exam-options"), question, state.examAnswers[question.id] || []);
@@ -534,6 +589,11 @@ function submitExam() {
 
 function renderProgress() {
   $("#bank-count").textContent = questions.length;
+  // Sync to sidebar and topnav
+  const sbCount = document.getElementById('sb-bank-count');
+  const topCount = document.getElementById('topnav-count');
+  if (sbCount) sbCount.textContent = questions.length;
+  if (topCount) topCount.textContent = questions.length + ' Qs';
   const records = Object.values(state.progress);
   const mastery = records.length ? Math.round((records.filter((r) => r.correct).length / records.length) * 100) : 0;
   $("#mastery-score").textContent = `${mastery}%`;
