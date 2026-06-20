@@ -22,7 +22,6 @@
   </head>
   <body>
     <main class="app">
-      <!-- Collapsible Sidebar -->
       <aside id="main-sidebar" class="sidebar" aria-label="Study dashboard">
         <div class="sidebar-content">
           <div class="brand">
@@ -50,7 +49,6 @@
 
           <div class="theme-switcher glass-panel">
             <p class="eyebrow">Workspace Color</p>
-            <!-- 50 Color Palette Grid injected via JS -->
             <div id="color-palette" class="theme-grid-scroll"></div>
           </div>
         </div>
@@ -59,7 +57,7 @@
       <section class="workspace">
         <header class="topbar glass-panel">
           <div class="topbar-left">
-            <button id="sidebar-toggle" class="icon-button" title="Toggle Sidebar"><i class="fa-solid fa-bars"></i></button>
+            <button id="sidebar-toggle" class="icon-button" title="Toggle Sidebar"><i class="fa-solid fa-bars-staggered"></i></button>
             <div>
               <p id="view-kicker" class="eyebrow">Learning mode</p>
               <h2 id="view-title">Practice with instant rationales</h2>
@@ -178,25 +176,22 @@
         <span><i class="fa-solid fa-robot"></i> A_D Tutor</span>
         <button id="tutor-close"><i class="fa-solid fa-xmark"></i></button>
       </div>
-      <div id="tutor-messages">
-        <!-- Messages go here -->
-      </div>
+      <div id="tutor-messages"></div>
       <div id="tutor-input-row">
         <input id="tutor-input" type="text" placeholder="iMessage..." />
         <button id="tutor-send" class="primary"><i class="fa-solid fa-arrow-up"></i></button>
       </div>
     </div>
 
-    <!-- UI, Color Palette & Sidebar Interaction -->
     <script>
-      // 50+ Custom Color Palette (Apple-inspired vibrant hues)
+      // Expanded Fancy Colors (Purples, Golds, Reds, Blues, Yellows)
       const colors = [
-        '#20f7d2', '#34c759', '#30d158', '#32d74b', '#86c93b', '#b5e48c', '#d9ed92', '#ffcc00', 
-        '#ffd60a', '#ff9f0a', '#ff8c00', '#f3722c', '#ff453a', '#ff3b30', '#ff375f', '#ef476f', 
-        '#ff595e', '#f15bb5', '#bf5af2', '#d580ff', '#af52de', '#9b5de5', '#5e5ce6', '#6a4c93', 
-        '#007aff', '#0a84ff', '#1982c4', '#64d2ff', '#40c8e0', '#118ab2', '#00bbf9', '#00f5d4', 
-        '#52b69a', '#168aad', '#43aa8b', '#06d6a0', '#2a9d8f', '#e9c46a', '#f4a261', '#e76f51', 
-        '#e0aaff', '#c77dff', '#9d4edd', '#7b2cbf', '#f5f5f7', '#d1d1d6', '#aeaeb2', '#8e8e93'
+        /* Cyans & Greens */ '#20f7d2', '#00f5d4', '#06d6a0', '#34c759', '#32d74b', '#b5e48c', 
+        /* Golds & Yellows */'#ffcc00', '#ffd60a', '#ffb703', '#fb8500', '#e9c46a', '#f4a261',
+        /* Reds & Oranges */ '#ff3b30', '#ff453a', '#ef476f', '#e76f51', '#f3722c', '#d90429',
+        /* Purples & Pinks */'#bf5af2', '#d580ff', '#af52de', '#9d4edd', '#7b2cbf', '#f15bb5', '#ff375f', 
+        /* Blues & Navys */  '#007aff', '#0a84ff', '#1982c4', '#64d2ff', '#00bbf9', '#118ab2', '#0028ff',
+        /* Neutrals */       '#f5f5f7', '#d1d1d6', '#aeaeb2', '#8e8e93'
       ];
 
       function hexToRgb(hex) {
@@ -210,8 +205,7 @@
         document.documentElement.style.setProperty('--accent', hex);
         document.documentElement.style.setProperty('--accent-strong', hex);
         document.documentElement.style.setProperty('--accent-rgb', hexToRgb(hex));
-        // Save to local storage (survives logout)
-        localStorage.setItem('ad-theme-color', hex);
+        localStorage.setItem('ad-theme-color', hex); // Auto-save preference
       }
 
       const paletteContainer = document.getElementById('color-palette');
@@ -227,10 +221,23 @@
       const savedTheme = localStorage.getItem('ad-theme-color');
       if (savedTheme) applyThemeColor(savedTheme);
 
-      // Toggle Sidebar
+      // Mobile-Favored Sidebar Toggle Logic
       const sidebar = document.getElementById('main-sidebar');
       const toggleBtn = document.getElementById('sidebar-toggle');
-      toggleBtn.addEventListener('click', () => sidebar.classList.toggle('collapsed'));
+      const navItems = document.querySelectorAll('.nav__item');
+
+      toggleBtn.addEventListener('click', () => {
+        sidebar.classList.toggle('open');
+      });
+
+      // Auto-hide sidebar on mobile when a section is selected
+      navItems.forEach(item => {
+        item.addEventListener('click', () => {
+          if (window.innerWidth <= 768) {
+            sidebar.classList.remove('open');
+          }
+        });
+      });
 
       // Liquid Glass Mouse Tracker
       document.addEventListener('mousemove', (e) => {
@@ -242,7 +249,6 @@
       });
     </script>
 
-    <!-- Supabase Logic -->
     <script>
       var SB_URL = 'https://bhdyyuiuzepsixvfcirg.supabase.co';
       var SB_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJoZHl5dWl1emVwc2l4dmZjaXJnIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODEzOTY3MzAsImV4cCI6MjA5Njk3MjczMH0.jETQkiWg_R7hU7Z85B6fdt7BUhKPP5wRSc4ndh8C4rA';
@@ -260,7 +266,6 @@
       var tutorMessages = document.getElementById('tutor-messages');
       var tutorInput = document.getElementById('tutor-input');
       var tutorSend = document.getElementById('tutor-send');
-      
       var loginBarBtn = document.getElementById('login-bar-btn');
       var loginBarMsg = document.getElementById('login-bar-msg');
 
@@ -344,7 +349,6 @@
           loginBarBtn.className = "glass-panel";
           loginBarBtn.onclick = async function() {
             try { if (sbClient) await sbClient.auth.signOut({ scope: 'global' }); } catch(e) {}
-            // Clears auth but leaves ad-theme-color intact
             Object.keys(localStorage).forEach(function(key) {
               if (key.startsWith('sb-') || key.includes('supabase') || key === 'ad-tutor-chat') localStorage.removeItem(key);
             });
