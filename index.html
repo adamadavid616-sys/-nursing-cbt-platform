@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Premium CBT Preparation Platform</title>
+    <title>A_D CBT Hub - Premium Portal</title>
     <link rel="stylesheet" href="styles.css">
-    <!-- FontAwesome for Premium Interface Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
@@ -19,8 +18,8 @@
         <aside class="premium-sidebar" id="sidebar">
             <div class="sidebar-header">
                 <div class="logo-wrapper">
-                    <i class="fa-solid fa-graduation-cap platform-logo-icon"></i>
-                    <span class="logo-text">CBT Hub</span>
+                    <i class="fa-solid fa-user-shield platform-logo-icon"></i>
+                    <span class="logo-text">A_D CBT Hub</span>
                 </div>
                 <button class="sidebar-toggle-btn" id="sidebar-toggle" aria-label="Toggle Navigation">
                     <i class="fa-solid fa-bars-staggered"></i>
@@ -29,29 +28,29 @@
 
             <!-- Main Navigation Items -->
             <nav class="sidebar-menu">
-                <a href="#" class="menu-item active" data-view="practice">
-                    <i class="fa-solid fa-file-signature menu-icon"></i>
-                    <span class="menu-label">Practice</span>
+                <a href="#" class="menu-item active" data-target="practice-view">
+                    <i class="fa-solid fa-pen-fancy menu-icon"></i>
+                    <span class="menu-label">Practice Engine</span>
                 </a>
-                <a href="#" class="menu-item" data-view="exam">
-                    <i class="fa-solid fa-laptop-code menu-icon"></i>
-                    <span class="menu-label">CBT Exam</span>
+                <a href="#" class="menu-item" data-target="cbt-view">
+                    <i class="fa-solid fa-stopwatch menu-icon"></i>
+                    <span class="menu-label">CBT Simulation</span>
                 </a>
-                <a href="#" class="menu-item" data-view="review">
-                    <i class="fa-solid fa-chart-line menu-icon"></i>
-                    <span class="menu-label">Review</span>
+                <a href="#" class="menu-item" data-target="review-view">
+                    <i class="fa-solid fa-triangle-exclamation menu-icon"></i>
+                    <span class="menu-label">Review Failed Work</span>
                 </a>
-                <a href="#" class="menu-item" data-view="guide">
-                    <i class="fa-solid fa-book-open menu-icon"></i>
-                    <span class="menu-label">Study Guide</span>
+                <a href="#" class="menu-item" data-target="guide-view">
+                    <i class="fa-solid fa-book-bookmark menu-icon"></i>
+                    <span class="menu-label">Study Guides</span>
                 </a>
             </nav>
 
-            <!-- Bottom Interactive Ecosystem Anchors -->
+            <!-- Bottom Interactive Options -->
             <div class="sidebar-footer">
                 <button class="menu-item settings-trigger-btn" id="settings-toggle">
                     <i class="fa-solid fa-sliders menu-icon spin-on-hover"></i>
-                    <span class="menu-label">Settings & Profile</span>
+                    <span class="menu-label">Settings Desk</span>
                 </button>
             </div>
         </aside>
@@ -61,90 +60,110 @@
             <!-- Top Premium Status Banner -->
             <header class="premium-status-bar">
                 <div class="banner-message">
-                    <i class="fa-solid fa-cloud-shield notification-glow-icon"></i>
-                    <span>Welcome, Adama! Chat history saved across devices.</span>
+                    <i class="fa-solid fa-circle-check notification-glow-icon"></i>
+                    <span>Welcome, Adama! Session active with cloud persistence.</span>
                 </div>
-                <button class="sign-out-btn">
+                <button class="sign-out-btn" id="auth-signout-trigger">
                     <span>Sign out</span>
                     <i class="fa-solid fa-arrow-right-from-bracket"></i>
                 </button>
             </header>
 
-            <!-- Dashboard Interaction Viewport -->
-            <section class="content-viewport" id="content-viewport">
+            <!-- Dynamic Section Display Viewport -->
+            <section class="content-viewport">
                 
-                <!-- Main Grid Section (Cleaned of the removed 11038 Questions and 100% Mastery cards) -->
-                <div class="dashboard-grid active-view-panel" id="dashboard-main-view">
-                    <div class="hero-intro-text">
-                        <h2>Hospital-Final CBT Prep Desk</h2>
-                        <p>Textbook, NMCN, council, OSCE, and hospital-final CBT preparation system modules.</p>
+                <!-- PRACTICE VIEWPORT -->
+                <div class="viewport-panel active" id="practice-view">
+                    <div class="section-title-block">
+                        <h2>Practice Engine Module</h2>
+                        <p>Review untimed nursing questions with immediate rationales and breakdown insights.</p>
                     </div>
-
-                    <div class="interactive-cards-container">
-                        <!-- Practice Module Card -->
-                        <div class="glow-card" data-tilt>
-                            <div class="card-glow-element"></div>
-                            <div class="card-body-content">
-                                <div class="card-icon-frame"><i class="fa-solid fa-pen-fancy"></i></div>
-                                <h3>Practice Engine</h3>
-                                <p>Review untimed clinical question modules with immediate rationales.</p>
-                                <button class="card-action-trigger">Launch Module</button>
-                            </div>
+                    <!-- Core Question Canvas Hook -->
+                    <div id="practice-questions-root" class="dynamic-canvas-container">
+                        <!-- Your original JavaScript will inject active question layouts here -->
+                        <div class="placeholder-loading-card">
+                            <i class="fa-solid fa-circle-notch fa-spin"></i> Loading Practice Bank Content...
                         </div>
+                    </div>
+                </div>
 
-                        <!-- CBT Exam Card -->
-                        <div class="glow-card" data-tilt>
-                            <div class="card-glow-element"></div>
-                            <div class="card-body-content">
-                                <div class="card-icon-frame"><i class="fa-solid fa-stopwatch"></i></div>
-                                <h3>Simulated Examination</h3>
-                                <p>Full-length real-time standard testing layouts mirroring final environments.</p>
-                                <button class="card-action-trigger">Begin Simulation</button>
-                            </div>
+                <!-- CBT EXAM VIEWPORT -->
+                <div class="viewport-panel" id="cbt-view">
+                    <div class="section-title-block">
+                        <h2>Real-Time CBT Simulation</h2>
+                        <p>Strictly timed standard exam conditions mapping hospital-final environments.</p>
+                    </div>
+                    <div id="exam-engine-root" class="dynamic-canvas-container">
+                        <div class="placeholder-loading-card">
+                            <i class="fa-solid fa-stopwatch"></i> Ready to initialize timed examination block.
                         </div>
+                    </div>
+                </div>
 
-                        <!-- Study Guide Card -->
-                        <div class="glow-card" data-tilt>
-                            <div class="card-glow-element"></div>
-                            <div class="card-body-content">
-                                <div class="card-icon-frame"><i class="fa-solid fa-graduation-cap"></i></div>
-                                <h3>Curriculum Guides</h3>
-                                <p>Review customized core syllabi breakdown blueprints safely.</p>
-                                <button class="card-action-trigger">Open Library</button>
+                <!-- REVIEW FAILED WORK VIEWPORT -->
+                <div class="viewport-panel" id="review-view">
+                    <div class="section-title-block">
+                        <h2>Review Matrix (Failed Work)</h2>
+                        <p>Analyze missed question criteria, breakdown diagnostic errors, and clear incorrect selections.</p>
+                    </div>
+                    <div id="review-matrix-root" class="dynamic-canvas-container">
+                        <div class="empty-state-notice">
+                            <i class="fa-solid fa-champagne-glasses"></i> No failed questions on file! Keep up the excellent work.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- STUDY GUIDE VIEWPORT -->
+                <div class="viewport-panel" id="guide-view">
+                    <div class="section-title-block">
+                        <h2>Curriculum Guide Library</h2>
+                        <p>Syllabi maps, NMCN blueprint breakdowns, and core nursing guidelines.</p>
+                    </div>
+                    <div id="curriculum-library-root" class="dynamic-canvas-container">
+                        <!-- Static Reference Cards -->
+                        <div class="interactive-cards-container">
+                            <div class="glow-card">
+                                <div class="card-glow-element"></div>
+                                <div class="card-body-content">
+                                    <div class="card-icon-frame"><i class="fa-solid fa-heart-pulse"></i></div>
+                                    <h3>Cardiovascular Pharmacology</h3>
+                                    <p>Comprehensive analysis of antiarrhythmics, beta-blockers, and cardiac glycosides.</p>
+                                    <button class="card-action-trigger">Launch Syllabus</button>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Hidden Kinetic Personal Profile & Theme Control Desk Module -->
+                <!-- HIGH-END KINETIC PROFILE & CONFIGURATION DRAWER -->
                 <div class="customizer-panel-overlay" id="customizer-drawer">
                     <div class="customizer-drawer-body">
                         <div class="drawer-header-row">
-                            <h3><i class="fa-solid fa-user-gear header-accent-icon"></i> Profile & Customization</h3>
+                            <h3><i class="fa-solid fa-user-gear header-accent-icon"></i> Workspace Dashboard</h3>
                             <button class="close-drawer-btn" id="close-customizer-btn"><i class="fa-solid fa-xmark"></i></button>
                         </div>
 
-                        <!-- Mini User Profile Card Component -->
+                        <!-- User Profile Metadata Box (Houses Hidden Metric Data) -->
                         <div class="profile-card-widget">
                             <div class="avatar-ring-container">
                                 <div class="avatar-pulse-glow"></div>
                                 <img src="https://api.dicebear.com/7.x/bottts/svg?seed=Adama" alt="User Avatar" class="profile-avatar-img">
                             </div>
                             <div class="profile-metadata">
-                                <h4>Adama</h4>
-                                <span class="profile-subtext">Premium Portal Member</span>
+                                <h4>David Adama</h4>
+                                <span class="profile-subtext">A_D Elite Member</span>
                                 <div class="hidden-stats-capsule">
-                                    <span><i class="fa-solid fa-database"></i> 11,038 Qs Available</span>
-                                    <span><i class="fa-solid fa-award"></i> 100% Mastery Score</span>
+                                    <span><i class="fa-solid fa-database"></i> 11,038 Global Questions</span>
+                                    <span><i class="fa-solid fa-graduation-cap"></i> 100% Target Mastery Score</span>
                                 </div>
                             </div>
                         </div>
 
                         <hr class="panel-divider">
 
-                        <!-- Premium Themes Switcher Grid Layout -->
+                        <!-- Multi-Color Workspace Switchboard Engine -->
                         <div class="theme-selector-section">
-                            <h5>Select Ecosystem Theme</h5>
+                            <h5>Select Workspace Aesthetic</h5>
                             <div class="theme-button-grid">
                                 <button class="theme-picker-btn active-theme" data-theme-set="cyan" style="--accent-preview: #00f0ff;">
                                     <span class="theme-dot"></span> Cyber Cyan
@@ -158,10 +177,16 @@
                                 <button class="theme-picker-btn" data-theme-set="crimson" style="--accent-preview: #ff3b30;">
                                     <span class="theme-dot"></span> Crimson Velvet
                                 </button>
+                                <button class="theme-picker-btn" data-theme-set="emerald" style="--accent-preview: #34c759;">
+                                    <span class="theme-dot"></span> Emerald Matrix
+                                </button>
+                                <button class="theme-picker-btn" data-theme-set="gold" style="--accent-preview: #ffcc00;">
+                                    <span class="theme-dot"></span> Midnight Gold
+                                </button>
                             </div>
                         </div>
 
-                        <!-- Cursor Radial Glow Adjustment Module -->
+                        <!-- Spotlight Engine Adjustment Slider -->
                         <div class="glow-intensity-section">
                             <h5>Cursor Spotlight Density</h5>
                             <div class="glow-slider-wrapper">
@@ -175,6 +200,38 @@
 
             </section>
         </main>
+    </div>
+
+    <!-- INTEGRATED PREMIUM CORE TUTOR CHATBOT INTERFACE CONTAINER -->
+    <div class="chatbot-dock-wrapper" id="chatbot-wrapper">
+        <button class="chatbot-toggle-trigger" id="chatbot-toggle" aria-label="Toggle Nursing Tutor Bot">
+            <i class="fa-solid fa-user-doctor"></i>
+            <span class="chatbot-pulse-indicator"></span>
+        </button>
+        
+        <div class="chatbot-window-box" id="chatbot-window">
+            <div class="chat-window-header">
+                <div class="chat-bot-profile">
+                    <div class="online-indicator-dot"></div>
+                    <div class="bot-meta-info">
+                        <h4>A_D AI Nursing Tutor</h4>
+                        <span>Syllabus & Clinical Expert</span>
+                    </div>
+                </div>
+                <button class="chat-minimize-btn" id="chat-minimize"><i class="fa-solid fa-minus"></i></button>
+            </div>
+            
+            <div class="chat-messages-viewport" id="chat-messages-container">
+                <div class="system-chat-bubble">
+                    Hello Adama! I am your interactive AI Clinical Assistant. Ask me anything regarding your active question sets, rationales, or study guidelines!
+                </div>
+            </div>
+            
+            <div class="chat-input-row-bar">
+                <input type="text" id="chat-user-input" placeholder="Inquire about clinical rationales..." autocomplete="off">
+                <button id="chat-send-trigger" aria-label="Send Message"><i class="fa-solid fa-paper-plane"></i></button>
+            </div>
+        </div>
     </div>
 
     <script src="app.js"></script>
