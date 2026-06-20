@@ -1,643 +1,182 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>A_D</title>
-    <link rel="stylesheet" href="./styles.css" />
-    <link rel="icon" type="image/x-icon" href="./favicon.ico" />
-    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.39.0/dist/umd/supabase.min.js"></script>
-    <script>
-      // Pre-initialize Supabase immediately after CDN loads
-      window._sbInit = function(url, key) {
-        try {
-          if (window.supabase && url && url !== 'https://bhdyyuiuzepsixvfcirg.supabase.co') {
-            window._sb = window.supabase.createClient(url, key);
-            window._supabaseReady = true;
-            console.log('Supabase initialized successfully');
-          }
-        } catch(e) {
-          console.error('Supabase init error:', e);
-        }
-      };
-    </script>
-  </head>
-  <body>
-  <!-- Google Login Bar -->
-  <div id="login-bar" style="
-    display:none;
-    position:fixed;
-    top:0; left:0; right:0;
-    background:#00c9a7;
-    color:#000;
-    padding:10px 20px;
-    z-index:99999;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    font-family:sans-serif;
-    font-size:14px;
-    box-shadow:0 2px 8px rgba(0,0,0,0.2);
-  ">
-    <span id="login-bar-msg">🎓 Sign in to save your chat history across all devices</span>
-    <div style="display:flex;gap:10px;align-items:center;">
-      <span id="login-bar-user" style="font-weight:600;"></span>
-      <button id="login-bar-btn" onclick="handleLoginClick()" style="
-        background:#000;
-        color:#00c9a7;
-        border:none;
-        border-radius:8px;
-        padding:6px 16px;
-        font-weight:700;
-        cursor:pointer;
-        font-size:13px;
-      ">Sign in with Google</button>
-    </div>
-  </div>
+<!DOCTYPE html>
+<html lang="en" data-theme="cyan">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium CBT Preparation Platform</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- FontAwesome for Premium Interface Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
 
-    <main class="app">
-      <aside class="sidebar" id="app-sidebar" aria-label="Study dashboard">
-        <div class="brand">
-          <div class="brand-top">
-            <p class="eyebrow nav-label-text">Council exam prep</p>
-            <button id="sidebar-toggle" class="sidebar-toggle-btn" type="button" aria-label="Toggle Navigation">☰</button>
-          </div>
-          <h1 class="brand-title">A_D</h1>
-          <p class="subtle nav-label-text">Textbook, NMCN, council, OSCE, and hospital-final CBT prep.</p>
-        </div>
+    <!-- Dynamic Spotlight Mesh Container -->
+    <div class="spotlight-layer" id="global-spotlight"></div>
 
-        <section class="metric-grid" aria-label="Progress summary">
-          <div class="metric-card" title="Total Questions">
-            <span id="bank-count">0</span>
-            <p class="nav-label-text">Questions</p>
-          </div>
-          <div class="metric-card" title="Mastery Level">
-            <span id="mastery-score">0%</span>
-            <p class="nav-label-text">Mastery</p>
-          </div>
-        </section>
-
-        <nav class="nav" aria-label="Prep modes">
-          <button class="nav__item is-active" type="button" data-view="practice" title="Practice Mode">
-            <span class="nav-icon">📝</span>
-            <span class="nav-label-text">Practice</span>
-          </button>
-          <button class="nav__item" type="button" data-view="cbt" title="CBT Exam Simulation">
-            <span class="nav-icon">💻</span>
-            <span class="nav-label-text">CBT Exam</span>
-          </button>
-          <button class="nav__item" type="button" data-view="review" title="Review Weak Areas">
-            <span class="nav-icon">📊</span>
-            <span class="nav-label-text">Review</span>
-          </button>
-          <button class="nav__item" type="button" data-view="guide" title="High-Yield Study Guide">
-            <span class="nav-icon">📚</span>
-            <span class="nav-label-text">Study Guide</span>
-          </button>
-        </nav>
-      </aside>
-
-      <section class="workspace">
-        <header class="topbar">
-          <div>
-            <p id="view-kicker" class="eyebrow">Learning mode</p>
-            <h2 id="view-title">Practice with instant rationales</h2>
-          </div>
-          <div class="timer" aria-live="polite">
-            <span id="timer-label">Untimed</span>
-            <strong id="timer-value">00:00</strong>
-          </div>
-        </header>
-
-        <section id="practice-view" class="view is-visible">
-          <div class="toolbar" aria-label="Practice filters">
-            <div class="custom-select-wrapper">
-              <span class="custom-select-label">Category</span>
-              <select id="category-filter" class="premium-select"></select>
+    <div class="app-container">
+        
+        <!-- Ultra-Fluid Navigation Sidebar -->
+        <aside class="premium-sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <div class="logo-wrapper">
+                    <i class="fa-solid fa-graduation-cap platform-logo-icon"></i>
+                    <span class="logo-text">CBT Hub</span>
+                </div>
+                <button class="sidebar-toggle-btn" id="sidebar-toggle" aria-label="Toggle Navigation">
+                    <i class="fa-solid fa-bars-staggered"></i>
+                </button>
             </div>
-            <div class="custom-select-wrapper">
-              <span class="custom-select-label">Chapter</span>
-              <select id="chapter-filter" class="premium-select"></select>
+
+            <!-- Main Navigation Items -->
+            <nav class="sidebar-menu">
+                <a href="#" class="menu-item active" data-view="practice">
+                    <i class="fa-solid fa-file-signature menu-icon"></i>
+                    <span class="menu-label">Practice</span>
+                </a>
+                <a href="#" class="menu-item" data-view="exam">
+                    <i class="fa-solid fa-laptop-code menu-icon"></i>
+                    <span class="menu-label">CBT Exam</span>
+                </a>
+                <a href="#" class="menu-item" data-view="review">
+                    <i class="fa-solid fa-chart-line menu-icon"></i>
+                    <span class="menu-label">Review</span>
+                </a>
+                <a href="#" class="menu-item" data-view="guide">
+                    <i class="fa-solid fa-book-open menu-icon"></i>
+                    <span class="menu-label">Study Guide</span>
+                </a>
+            </nav>
+
+            <!-- Bottom Interactive Ecosystem Anchors -->
+            <div class="sidebar-footer">
+                <button class="menu-item settings-trigger-btn" id="settings-toggle">
+                    <i class="fa-solid fa-sliders menu-icon spin-on-hover"></i>
+                    <span class="menu-label">Settings & Profile</span>
+                </button>
             </div>
-            <button id="shuffle-button" class="icon-button" type="button" title="Shuffle question">↻</button>
-          </div>
+        </aside>
 
-          <article class="question-panel animate-fade-in" aria-live="polite">
-            <div class="question-meta">
-              <span id="practice-category"></span>
-              <span id="practice-progress"></span>
-            </div>
-            <h3 id="practice-question"></h3>
-            <div id="practice-options" class="options"></div>
-            <div class="panel-actions">
-              <button id="previous-question" type="button">Previous</button>
-              <button id="check-answer" class="primary" type="button">Check answer</button>
-              <button id="next-question" type="button">Next</button>
-            </div>
-            <div id="practice-rationale" class="rationale animate-slide-down" hidden></div>
-          </article>
-        </section>
+        <!-- Main Display Arena -->
+        <main class="main-content-arena">
+            <!-- Top Premium Status Banner -->
+            <header class="premium-status-bar">
+                <div class="banner-message">
+                    <i class="fa-solid fa-cloud-shield notification-glow-icon"></i>
+                    <span>Welcome, Adama! Chat history saved across devices.</span>
+                </div>
+                <button class="sign-out-btn">
+                    <span>Sign out</span>
+                    <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                </button>
+            </header>
 
-        <section id="cbt-view" class="view">
-          <div id="exam-setup" class="exam-setup animate-fade-in">
-            <div>
-              <p class="eyebrow">Simulation</p>
-              <h3>Computer-based test mode</h3>
-              <p class="subtle">Timed, no instant feedback, mixed categories, and a final review screen.</p>
-            </div>
-            <div class="setup-grid">
-              <label>
-                Number of questions
-                <input id="exam-size" type="number" min="10" max="48" value="25" />
-              </label>
-              <label>
-                Minutes
-                <input id="exam-minutes" type="number" min="5" max="180" value="35" />
-              </label>
-            </div>
-            <button id="start-exam" class="primary" type="button">Start CBT</button>
-          </div>
+            <!-- Dashboard Interaction Viewport -->
+            <section class="content-viewport" id="content-viewport">
+                
+                <!-- Main Grid Section (Cleaned of the removed 11038 Questions and 100% Mastery cards) -->
+                <div class="dashboard-grid active-view-panel" id="dashboard-main-view">
+                    <div class="hero-intro-text">
+                        <h2>Hospital-Final CBT Prep Desk</h2>
+                        <p>Textbook, NMCN, council, OSCE, and hospital-final CBT preparation system modules.</p>
+                    </div>
 
-          <article id="exam-panel" class="question-panel animate-fade-in" hidden>
-            <div class="question-meta">
-              <span id="exam-category"></span>
-              <span id="exam-progress"></span>
-            </div>
-            <h3 id="exam-question"></h3>
-            <div id="exam-options" class="options"></div>
-            <div class="panel-actions">
-              <button id="exam-prev" type="button">Back</button>
-              <button id="exam-next" class="primary" type="button">Next</button>
-              <button id="submit-exam" type="button">Submit</button>
-            </div>
-            <div class="exam-review-block">
-              <div class="question-meta">
-                <span>Question navigator</span>
-                <span id="exam-answered-count">0 answered</span>
-              </div>
-              <div id="exam-jump-list" class="exam-jump-list"></div>
-            </div>
-          </article>
+                    <div class="interactive-cards-container">
+                        <!-- Practice Module Card -->
+                        <div class="glow-card" data-tilt>
+                            <div class="card-glow-element"></div>
+                            <div class="card-body-content">
+                                <div class="card-icon-frame"><i class="fa-solid fa-pen-fancy"></i></div>
+                                <h3>Practice Engine</h3>
+                                <p>Review untimed clinical question modules with immediate rationales.</p>
+                                <button class="card-action-trigger">Launch Module</button>
+                            </div>
+                        </div>
 
-          <section id="exam-results" class="results animate-fade-in" hidden></section>
-        </section>
+                        <!-- CBT Exam Card -->
+                        <div class="glow-card" data-tilt>
+                            <div class="card-glow-element"></div>
+                            <div class="card-body-content">
+                                <div class="card-icon-frame"><i class="fa-solid fa-stopwatch"></i></div>
+                                <h3>Simulated Examination</h3>
+                                <p>Full-length real-time standard testing layouts mirroring final environments.</p>
+                                <button class="card-action-trigger">Begin Simulation</button>
+                            </div>
+                        </div>
 
-        <section id="review-view" class="view">
-          <div class="review-head animate-fade-in">
-            <div>
-              <p class="eyebrow">Weak areas</p>
-              <h3>Performance by client need</h3>
-            </div>
-            <button id="reset-progress" type="button">Reset progress</button>
-          </div>
-          <div id="category-bars" class="bars animate-fade-in"></div>
-          <div id="missed-list" class="missed-list animate-fade-in"></div>
-        </section>
+                        <!-- Study Guide Card -->
+                        <div class="glow-card" data-tilt>
+                            <div class="card-glow-element"></div>
+                            <div class="card-body-content">
+                                <div class="card-icon-frame"><i class="fa-solid fa-graduation-cap"></i></div>
+                                <h3>Curriculum Guides</h3>
+                                <p>Review customized core syllabi breakdown blueprints safely.</p>
+                                <button class="card-action-trigger">Open Library</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-        <section id="guide-view" class="view">
-          <div class="guide-layout animate-fade-in">
-            <article>
-              <p class="eyebrow">Guide</p>
-              <h3>Passing strategy and exam guides</h3>
-              <div id="study-guide" class="guide-list"></div>
-            </article>
-            <article class="blueprint">
-              <p class="eyebrow">2026 NCLEX-PN</p>
-              <h3>Blueprint weighting</h3>
-              <div id="blueprint-list"></div>
-              <p class="source-note">
-                Current exam blueprint checked against the official NCSBN 2026 NCLEX-PN Test Plan. A_D also includes
-                local council, NMCN, OSCE, and hospital-final materials that passed the clarity filter.
-              </p>
-            </article>
-          </div>
-        </section>
+                <!-- Hidden Kinetic Personal Profile & Theme Control Desk Module -->
+                <div class="customizer-panel-overlay" id="customizer-drawer">
+                    <div class="customizer-drawer-body">
+                        <div class="drawer-header-row">
+                            <h3><i class="fa-solid fa-user-gear header-accent-icon"></i> Profile & Customization</h3>
+                            <button class="close-drawer-btn" id="close-customizer-btn"><i class="fa-solid fa-xmark"></i></button>
+                        </div>
 
-      </section>
-    </main>
+                        <!-- Mini User Profile Card Component -->
+                        <div class="profile-card-widget">
+                            <div class="avatar-ring-container">
+                                <div class="avatar-pulse-glow"></div>
+                                <img src="https://api.dicebear.com/7.x/bottts/svg?seed=Adama" alt="User Avatar" class="profile-avatar-img">
+                            </div>
+                            <div class="profile-metadata">
+                                <h4>Adama</h4>
+                                <span class="profile-subtext">Premium Portal Member</span>
+                                <div class="hidden-stats-capsule">
+                                    <span><i class="fa-solid fa-database"></i> 11,038 Qs Available</span>
+                                    <span><i class="fa-solid fa-award"></i> 100% Mastery Score</span>
+                                </div>
+                            </div>
+                        </div>
 
-    <script type="module" src="./src/app.js"></script>
+                        <hr class="panel-divider">
 
-    <!-- A_D Tutor Chatbot -->
-    <style>
-      /* ===== RESPONSIVE LOGIN BAR ===== */
-      #login-bar {
-        position: fixed;
-        top: 0; left: 0; right: 0;
-        background: #00c9a7;
-        color: #000;
-        padding: 8px 16px;
-        z-index: 99999;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        font-family: sans-serif;
-        font-size: 13px;
-        box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-        flex-wrap: wrap;
-        gap: 6px;
-      }
-      #login-bar-msg { flex: 1; min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-      #login-bar-btn {
-        background: #000;
-        color: #00c9a7;
-        border: none;
-        border-radius: 8px;
-        padding: 5px 14px;
-        font-weight: 700;
-        cursor: pointer;
-        font-size: 12px;
-        white-space: nowrap;
-      }
+                        <!-- Premium Themes Switcher Grid Layout -->
+                        <div class="theme-selector-section">
+                            <h5>Select Ecosystem Theme</h5>
+                            <div class="theme-button-grid">
+                                <button class="theme-picker-btn active-theme" data-theme-set="cyan" style="--accent-preview: #00f0ff;">
+                                    <span class="theme-dot"></span> Cyber Cyan
+                                </button>
+                                <button class="theme-picker-btn" data-theme-set="silver" style="--accent-preview: #f5f5f7;">
+                                    <span class="theme-dot"></span> Apple Minimalist
+                                </button>
+                                <button class="theme-picker-btn" data-theme-set="amethyst" style="--accent-preview: #bf5af2;">
+                                    <span class="theme-dot"></span> Deep Amethyst
+                                </button>
+                                <button class="theme-picker-btn" data-theme-set="crimson" style="--accent-preview: #ff3b30;">
+                                    <span class="theme-dot"></span> Crimson Velvet
+                                </button>
+                            </div>
+                        </div>
 
-      /* ===== TUTOR BUTTON ===== */
-      #tutor-btn {
-        position: fixed;
-        bottom: 20px;
-        right: 16px;
-        width: 52px;
-        height: 52px;
-        border-radius: 50%;
-        background: #00c9a7;
-        color: #000;
-        border: none;
-        font-size: 24px;
-        cursor: pointer;
-        box-shadow: 0 4px 16px rgba(0,201,167,0.4);
-        z-index: 9999;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
-      }
-      #tutor-btn:hover {
-        transform: scale(1.08) rotate(8deg);
-      }
+                        <!-- Cursor Radial Glow Adjustment Module -->
+                        <div class="glow-intensity-section">
+                            <h5>Cursor Spotlight Density</h5>
+                            <div class="glow-slider-wrapper">
+                                <i class="fa-solid fa-eye-low"></i>
+                                <input type="range" id="glow-radius-slider" min="150" max="600" value="350" class="premium-range-slider">
+                                <i class="fa-solid fa-eye"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-      /* ===== TUTOR PANEL ===== */
-      #tutor-panel {
-        position: fixed;
-        bottom: 80px;
-        right: 16px;
-        width: min(340px, calc(100vw - 24px));
-        height: min(480px, calc(100vh - 120px));
-        background: #1a1a2e;
-        border: 1px solid #00c9a7;
-        border-radius: 16px;
-        display: none;
-        flex-direction: column;
-        z-index: 9999;
-        box-shadow: 0 8px 32px rgba(0,0,0,0.5);
-        overflow: hidden;
-        transform: translateY(15px);
-        opacity: 0;
-        transition: transform 0.25s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.25s linear;
-      }
-      #tutor-panel.open { 
-        display: flex; 
-        transform: translateY(0);
-        opacity: 1;
-      }
-      #tutor-header {
-        background: #00c9a7;
-        color: #000;
-        padding: 10px 14px;
-        font-weight: 700;
-        font-size: 13px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        flex-shrink: 0;
-      }
-      #tutor-close {
-        background: none;
-        border: none;
-        font-size: 18px;
-        cursor: pointer;
-        color: #000;
-        font-weight: bold;
-      }
-      #tutor-messages {
-        flex: 1;
-        overflow-y: auto;
-        padding: 10px;
-        display: flex;
-        flex-direction: column;
-        gap: 8px;
-      }
-      .tutor-msg {
-        padding: 8px 12px;
-        border-radius: 10px;
-        font-size: 13px;
-        line-height: 1.5;
-        max-width: 90%;
-        word-wrap: break-word;
-      }
-      .tutor-msg.bot { background: #0f3460; color: #e0e0e0; align-self: flex-start; }
-      .tutor-msg.user { background: #00c9a7; color: #000; align-self: flex-end; font-weight: 600; }
-      .tutor-msg.typing { background: #0f3460; color: #888; align-self: flex-start; font-style: italic; }
-      #tutor-input-row {
-        display: flex;
-        border-top: 1px solid #333;
-        padding: 8px;
-        gap: 6px;
-        flex-shrink: 0;
-      }
-      #tutor-input {
-        flex: 1;
-        background: #0f3460;
-        border: 1px solid #333;
-        border-radius: 8px;
-        color: #fff;
-        padding: 8px 10px;
-        font-size: 13px;
-        outline: none;
-        min-width: 0;
-      }
-      #tutor-input::placeholder { color: #666; }
-      #tutor-send {
-        background: #00c9a7;
-        border: none;
-        border-radius: 8px;
-        padding: 8px 12px;
-        color: #000;
-        font-weight: 700;
-        cursor: pointer;
-        font-size: 14px;
-        flex-shrink: 0;
-      }
-      #tutor-send:disabled { opacity: 0.5; }
-
-      @media (max-width: 768px) {
-        #tutor-btn {
-          bottom: 72px !important;
-          right: 12px !important;
-          width: 48px !important;
-          height: 48px !important;
-          font-size: 22px !important;
-        }
-        #tutor-panel {
-          right: 8px !important;
-          left: 8px !important;
-          width: auto !important;
-          bottom: 130px !important;
-          height: calc(100vh - 200px) !important;
-          max-height: 400px !important;
-        }
-        #login-bar {
-          padding: 6px 10px !important;
-          font-size: 11px !important;
-        }
-        #login-bar-msg {
-          font-size: 10px !important;
-        }
-      }
-    </style>
-
-    <button id="tutor-btn" title="Ask A_D Tutor">🎓</button>
-
-    <div id="tutor-panel">
-      <div id="tutor-header">
-        <span>🎓 A_D Nursing Tutor</span>
-        <button id="tutor-close">✕</button>
-      </div>
-      <div id="tutor-messages">
-        <div class="tutor-msg bot">Hi! I am your A_D Nursing Tutor. Ask me about any question, concept, or topic and I will explain it clearly!</div>
-      </div>
-      <div id="tutor-input-row">
-        <input id="tutor-input" type="text" placeholder="Ask a nursing question..." />
-        <button id="tutor-send">&#10148;</button>
-      </div>
+            </section>
+        </main>
     </div>
 
-    <script>
-      var SB_URL = 'https://bhdyyuiuzepsixvfcirg.supabase.co';
-      var SB_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJoZHl5dWl1emVwc2l4dmZjaXJnIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODEzOTY3MzAsImV4cCI6MjA5Njk3MjczMH0.jETQkiWg_R7hU7Z85B6fdt7BUhKPP5wRSc4ndh8C4rA';
-      var APP_URL = 'https://nursing-cbt-platform.onrender.com';
-      var CHAT_KEY = 'ad-tutor-chat';
-      var MAX_MSGS = 100;
-
-      var chatHistory = [];
-      var currentUser = null;
-      var sbClient = null;
-
-      var tutorBtn = document.getElementById('tutor-btn');
-      var tutorPanel = document.getElementById('tutor-panel');
-      var tutorClose = document.getElementById('tutor-close');
-      var tutorMessages = document.getElementById('tutor-messages');
-      var tutorInput = document.getElementById('tutor-input');
-      var tutorSend = document.getElementById('tutor-send');
-      var loginBar = document.getElementById('login-bar');
-      var loginBarBtn = document.getElementById('login-bar-btn');
-      var loginBarMsg = document.getElementById('login-bar-msg');
-
-      tutorBtn.addEventListener('click', function() { 
-        if(tutorPanel.classList.contains('open')){
-          tutorPanel.style.opacity = '0';
-          tutorPanel.style.transform = 'translateY(15px)';
-          setTimeout(function() { tutorPanel.classList.remove('open'); }, 250);
-        } else {
-          tutorPanel.classList.add('open');
-          setTimeout(function() {
-            tutorPanel.style.opacity = '1';
-            tutorPanel.style.transform = 'translateY(0)';
-          }, 10);
-        }
-      });
-      
-      tutorClose.addEventListener('click', function() { 
-        tutorPanel.style.opacity = '0';
-        tutorPanel.style.transform = 'translateY(15px)';
-        setTimeout(function() { tutorPanel.classList.remove('open'); }, 250);
-      });
-
-      function saveLocal(h) {
-        try { localStorage.setItem(CHAT_KEY, JSON.stringify(h.slice(-MAX_MSGS))); } catch(e) {}
-      }
-      function loadLocal() {
-        try { return JSON.parse(localStorage.getItem(CHAT_KEY) || '[]'); } catch(e) { return []; }
-      }
-
-      function addMsg(text, type) {
-        var div = document.createElement('div');
-        div.className = 'tutor-msg ' + type;
-        div.textContent = text;
-        tutorMessages.appendChild(div);
-        tutorMessages.scrollTop = tutorMessages.scrollHeight;
-        return div;
-      }
-
-      function renderHistory(history) {
-        tutorMessages.innerHTML = '<div class="tutor-msg bot">Hi! I am your A_D Nursing Tutor. Ask me about any question, concept, or topic and I will explain it clearly!</div>';
-        history.forEach(function(m) {
-          addMsg(m.content, m.role === 'assistant' ? 'bot' : 'user');
-        });
-      }
-
-      async function sendMessage() {
-        var text = tutorInput.value.trim();
-        if (!text) return;
-        addMsg(text, 'user');
-        chatHistory.push({ role: 'user', content: text });
-        tutorInput.value = '';
-        tutorSend.disabled = true;
-        var typing = addMsg('Thinking...', 'typing');
-        try {
-          var res = await fetch('/api/chat', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ messages: chatHistory, context: { questionCount: 1488 } })
-          });
-          var data = await res.json();
-          typing.remove();
-          var reply = data.reply || data.error || 'Sorry, could not get a response.';
-          addMsg(reply, 'bot');
-          chatHistory.push({ role: 'assistant', content: reply });
-          saveLocal(chatHistory);
-          if (currentUser && sbClient) saveCloud(chatHistory);
-        } catch(err) {
-          typing.remove();
-          addMsg('Connection error. Please try again.', 'bot');
-        }
-        tutorSend.disabled = false;
-        tutorInput.focus();
-      }
-
-      tutorSend.addEventListener('click', sendMessage);
-      tutorInput.addEventListener('keydown', function(e) { if (e.key === 'Enter') sendMessage(); });
-
-      async function saveCloud(h) {
-        if (!sbClient || !currentUser) return;
-        try {
-          var { error } = await sbClient.from('chat_history').upsert({
-            user_id: currentUser.id,
-            messages: h.slice(-MAX_MSGS),
-            updated_at: new Date().toISOString()
-          }, { onConflict: 'user_id' });
-          if (error) console.error('Save cloud error:', error);
-        } catch(e) { console.error('saveCloud exception:', e); }
-      }
-
-      async function loadCloud(accessToken, userId) {
-        try {
-          var { data, error } = await sbClient.from('chat_history')
-            .select('messages')
-            .eq('user_id', userId)
-            .single();
-          if (error) { return []; }
-          return data?.messages || [];
-        } catch(e) { return []; }
-      }
-
-      function setLoginBar(user) {
-        if (!loginBar) return;
-        if (user) {
-          var name = (user.user_metadata && user.user_metadata.full_name)
-            ? user.user_metadata.full_name.split(' ')[0]
-            : (user.email ? user.email.split('@')[0] : 'You');
-          loginBarMsg.textContent = 'Welcome, ' + name + '! Chat history saved across devices.';
-          loginBarBtn.textContent = 'Sign out';
-          loginBarBtn.onclick = async function() {
-            try {
-              if (sbClient) {
-                await sbClient.auth.signOut({ scope: 'global' });
-              }
-            } catch(e) {}
-            Object.keys(localStorage).forEach(function(key) {
-              if (key.startsWith('sb-') || key.includes('supabase') || key === 'ad-tutor-chat') {
-                localStorage.removeItem(key);
-              }
-            });
-            currentUser = null;
-            chatHistory = [];
-            renderHistory([]);
-            setLoginBar(null);
-            setTimeout(function() { window.location.reload(); }, 500);
-          };
-        } else {
-          loginBarMsg.textContent = 'Sign in to save your chat history across all devices';
-          loginBarBtn.textContent = 'Sign in with Google';
-          loginBarBtn.onclick = function() { doGoogleSignIn(); };
-        }
-      }
-
-      function doGoogleSignIn() {
-        if (!sbClient) {
-          alert('Auth not ready. Please wait a moment and try again.');
-          return;
-        }
-        sbClient.auth.signInWithOAuth({
-          provider: 'google',
-          options: {
-            redirectTo: APP_URL,
-            queryParams: {
-              prompt: 'select_account',
-              access_type: 'offline'
-            }
-          }
-        }).catch(function(e) {
-          alert('Sign in error: ' + e.message);
-        });
-      }
-
-      if (loginBarBtn) {
-        loginBarBtn.onclick = function() { doGoogleSignIn(); };
-      }
-
-      function waitForSupabase(callback) {
-        if (window.supabase) {
-          callback();
-        } else {
-          var attempts = 0;
-          var interval = setInterval(function() {
-            attempts++;
-            if (window.supabase) {
-              clearInterval(interval);
-              callback();
-            } else if (attempts > 20) {
-              clearInterval(interval);
-            }
-          }, 200);
-        }
-      }
-
-      function init() {
-        var local = loadLocal();
-        if (local.length > 0) { chatHistory = local; renderHistory(chatHistory); }
-
-        waitForSupabase(async function() {
-          try {
-            sbClient = window.supabase.createClient(SB_URL, SB_KEY);
-            var sessionData = await sbClient.auth.getSession();
-            var session = sessionData.data.session;
-
-            if (session) {
-              currentUser = session.user;
-              currentUser.access_token = session.access_token;
-              setLoginBar(currentUser);
-              var cloud = await loadCloud(session.access_token, session.user.id);
-              if (cloud && cloud.length > 0) { chatHistory = cloud; renderHistory(chatHistory); }
-            } else {
-              setLoginBar(null);
-            }
-
-            sbClient.auth.onAuthStateChange(async function(event, session) {
-              if (session) {
-                currentUser = session.user;
-                currentUser.access_token = session.access_token;
-                setLoginBar(currentUser);
-                var cloud = await loadCloud(session.access_token, session.user.id);
-                if (cloud && cloud.length > 0) { chatHistory = cloud; renderHistory(chatHistory); }
-              } else {
-                currentUser = null;
-                setLoginBar(null);
-              }
-            });
-          } catch(e) {}
-        });
-      }
-
-      window.addEventListener('load', init);
-    </script>
-  </body>
+    <script src="app.js"></script>
+</body>
 </html>
