@@ -1,438 +1,431 @@
-/**
- * A_D CBT Hub - Ultimate Unified Functional Engine
- * Implements Live Question Sets, Countdown Logic, Active Filters, and Local Caching
- */
-document.addEventListener('DOMContentLoaded', () => {
+import { blueprint, questions as starterQuestions, studyGuide } from "./nclex-data.js";
+import { textbookQuestions } from "./textbook-bank.js";
+import { supplementalQuestions } from "./supplemental-bank.js";
+import { guideSections } from "./guide-content.js";
+import { researchGuideSections } from "./research-guides.js";
+import { learningResources } from "./learning-resources.js";
+import { nmcnSaturationQuestions } from "./nmcn-saturation-bank.js";
+import { newTextbookQuestions } from "./new-textbook-questions.js";
 
-    // Global Core Architecture Banks (Re-linking the required core files)
-    const CORE_QUESTION_BANK = [
-        {
-            id: 101,
-            subject: "Cardiovascular Pharmacology",
-            stem: "A 60-year-old male patient admitted to the medical ward at UATH Gwagwalada is prescribed Digoxin therapy for heart failure management. Prior to administration, the nurse must execute which high-priority safety evaluation logic?",
-            options: [
-                "Auscultate the apical pulse rate for 60 seconds, withholding medication if count drops below 60 bpm.",
-                "Assess lateral lower extremity standard peripheral pitting edemas over a 5-minute interval.",
-                "Measure immediate postprandial systemic arterial blood pressures sitting.",
-                "Evaluate pupillary reactive metrics using visual accommodation penlight pathways."
-            ],
-            correctIndex: 0,
-            rationale: "Digoxin is a potent cardiac glycoside that exerts positive inotropic and negative chronotropic physical properties. Auscultating the apical pulse configuration for a full 60 seconds is mandatory to confirm safety margins before dosing."
-        },
-        {
-            id: 102,
-            subject: "Ophthalmology Nursing",
-            stem: "During an external ocular assessment of an elderly client presenting with decreased visual fields, a nurse notes increased structural intraocular fluid pressure profiles. What condition is primarily indicated?",
-            options: [
-                "Acute Angle-Closure Glaucoma",
-                "Senile Nuclear Cataract Development",
-                "Proliferative Diabetic Retinopathy",
-                "Rhegmatogenous Retinal Detachment Matrix"
-            ],
-            correctIndex: 0,
-            rationale: "Glaucoma is characterized by elevated intraocular pressure pathways due to impaired aqueous humor outflow, demanding immediate pressure-reducing drug interventions to shield optical disks from necrosis."
-        }
-    ];
+const $ = (selector) => document.querySelector(selector);
+const $$ = (selector) => [...document.querySelectorAll(selector)];
 
-    const EXAM_DURATION_MINUTES = 60;
+// Initialize Supabase Client Connection
+const SUPABASE_URL = "https://bhdyyuiuzepsixvfcirg.supabase.co";
+const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJoZHl5dWl1emVwc2l4dmZjaXJnIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTY4NDA4MDB9.your-key-here"; // Replace with your actual anon key if changed
+const supabase = window.supabase ? window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY) : null;
 
-    // Active Engine Runtime States
-    let currentPracticeIndex = 0;
-    let currentExamIndex = 0;
-    let examTimeRemaining = EXAM_DURATION_MINUTES * 60;
-    let examTimerInterval = null;
-    let examUserAnswers = {};
-    let failedQuestionsRegistry = JSON.parse(localStorage.getItem('ad-failed-matrix')) || [];
-
-    // Core DOM Hooks
-    const body = document.documentElement;
-    const globalSpotlight = document.getElementById('global-spotlight');
-    const appContainer = document.querySelector('.app-container');
-    const sidebarToggle = document.getElementById('sidebar-toggle');
-    const settingsToggle = document.getElementById('settings-toggle');
-    const customizerDrawer = document.getElementById('customizer-drawer');
-    const closeCustomizerBtn = document.getElementById('close-customizer-btn');
-    const themeButtons = document.querySelectorAll('.theme-picker-btn');
-    const glowSlider = document.getElementById('glow-radius-slider');
-    
-    const menuItems = document.querySelectorAll('.sidebar-menu .menu-item');
-    const viewportPanels = document.querySelectorAll('.viewport-panel');
-
-    // Section Content Insertion Points
-    const practiceRoot = document.getElementById('practice-questions-root');
-    const examRoot = document.getElementById('exam-engine-root');
-    const reviewRoot = document.getElementById('review-matrix-root');
-    const guideRoot = document.getElementById('curriculum-library-root');
-
-    // Chatbot UI Hooks
-    const chatbotDock = document.getElementById('chatbot-wrapper');
-    const chatbotToggle = document.getElementById('chatbot-toggle');
-    const chatMinimize = document.getElementById('chat-minimize');
-    const chatInput = document.getElementById('chat-user-input');
-    const chatSendBtn = document.getElementById('chat-send-trigger');
-    const chatMessagesContainer = document.getElementById('chat-messages-container');
-
-    const signoutTrigger = document.getElementById('auth-signout-trigger');
-
-    /* ==========================================================================
-       1. ROUTING MATRIX ENGINE (With Timer Initialization)
-       ========================================================================== */
-    menuItems.forEach(item => {
-        item.addEventListener('click', (e) => {
-            e.preventDefault();
-            const targetId = item.getAttribute('data-target');
-
-            menuItems.forEach(nav => nav.classList.remove('active'));
-            item.classList.add('active');
-
-            viewportPanels.forEach(panel => {
-                panel.classList.remove('active');
-                if (panel.id === targetId) panel.classList.add('active');
-            });
-
-            // Action Routing Initializations
-            if (targetId === 'practice-view') renderPracticeEngine();
-            if (targetId === 'cbt-view') startExamSimulation();
-            if (targetId === 'review-view') renderReviewMatrix();
-            if (targetId === 'guide-view') renderGuideLibrary();
-        });
-    });
-
-    /* ==========================================================================
-       2. PRACTICE ENGINE IMPLEMENTATION (Untimed, Immediate Feedback)
-       ========================================================================== */
-    function renderPracticeEngine() {
-        if (CORE_QUESTION_BANK.length === 0) {
-            practiceRoot.innerHTML = `<div class="empty-state-notice">No questions loaded.</div>`;
-            return;
-        }
-
-        const activeQ = CORE_QUESTION_BANK[currentPracticeIndex];
-        
-        let htmlContent = `
-            <div class="functional-question-card">
-                <div class="question-stem-text"><strong>Q:</strong> ${activeQ.stem}</div>
-                <div class="interactive-options-list">
-        `;
-
-        activeQ.options.forEach((opt, idx) => {
-            const letterCode = String.fromCharCode(65 + idx);
-            htmlContent += `
-                <div class="answer-option-row" data-index="${idx}">
-                    <div class="option-index-badge">${letterCode}</div>
-                    <div class="option-label-text">${opt}</div>
-                </div>
-            `;
-        });
-
-        htmlContent += `
-                </div>
-                <div id="practice-feedback-zone"></div>
-                <div class="canvas-controls-row">
-                    <button class="action-nav-btn" id="practice-prev-btn" ${currentPracticeIndex === 0 ? 'disabled' : ''}>Previous</button>
-                    <button class="action-nav-btn primary-action" id="practice-next-btn">Next Matrix</button>
-                </div>
-            </div>
-        `;
-
-        practiceRoot.innerHTML = htmlContent;
-
-        // Click Handler for Selection Loops
-        const rows = practiceRoot.querySelectorAll('.answer-option-row');
-        rows.forEach(row => {
-            row.addEventListener('click', () => {
-                const selectedIdx = parseInt(row.getAttribute('data-index'));
-                const feedbackZone = document.getElementById('practice-feedback-zone');
-                
-                // Clear out current display locks
-                rows.forEach(r => r.classList.remove('selected', 'correct-reveal', 'incorrect-reveal'));
-                
-                if (selectedIdx === activeQ.correctIndex) {
-                    row.classList.add('correct-reveal');
-                    feedbackZone.innerHTML = `
-                        <div class="rationale-panel-box">
-                            <strong><i class="fa-solid fa-square-check"></i> Correct Response Matrix Assessed</strong>
-                            ${activeQ.rationale}
-                        </div>
-                    `;
-                } else {
-                    row.classList.add('incorrect-reveal');
-                    rows[activeQ.correctIndex].classList.add('correct-reveal');
-                    feedbackZone.innerHTML = `
-                        <div class="rationale-panel-box" style="border-color: rgba(255,59,48,0.2);">
-                            <strong><i class="fa-solid fa-triangle-exclamation"></i> Incorrect Selections Tracked</strong>
-                            ${activeQ.rationale}
-                        </div>
-                    `;
-                    
-                    // Log to Local Review Cache Matrix automatically
-                    if (!failedQuestionsRegistry.some(item => item.id === activeQ.id)) {
-                        failedQuestionsRegistry.push(activeQ);
-                        localStorage.setItem('ad-failed-matrix', JSON.stringify(failedQuestionsRegistry));
-                    }
-                }
-            });
-        });
-
-        // Attach Navigation Button Events
-        document.getElementById('practice-prev-btn').addEventListener('click', () => {
-            if (currentPracticeIndex > 0) {
-                currentPracticeIndex--;
-                renderPracticeEngine();
-            }
-        });
-
-        document.getElementById('practice-next-btn').addEventListener('click', () => {
-            currentPracticeIndex = (currentPracticeIndex + 1) % CORE_QUESTION_BANK.length;
-            renderPracticeEngine();
-        });
-    }
-
-    /* ==========================================================================
-       3. TIMED CBT EXAM SIMULATION CORE ENGINE
-       ========================================================================== */
-    function startExamSimulation() {
-        clearInterval(examTimerInterval);
-        examTimeRemaining = EXAM_DURATION_MINUTES * 60;
-        examUserAnswers = {};
-        currentExamIndex = 0;
-        
-        document.getElementById('exam-timer-banner').style.display = 'flex';
-        document.getElementById('exam-total-count-display').textContent = CORE_QUESTION_BANK.length;
-        
-        // Tick Engine Initializer
-        examTimerInterval = setInterval(() => {
-            examTimeRemaining--;
-            if (examTimeRemaining <= 0) {
-                clearInterval(examTimerInterval);
-                concludeExamSimulation();
-            } else {
-                const mins = Math.floor(examTimeRemaining / 60).toString().padStart(2, '0');
-                const secs = (examTimeRemaining % 60).toString().padStart(2, '0');
-                document.getElementById('exam-countdown-clock').textContent = `${mins}:${secs}`;
-            }
-        }, 1000);
-
-        renderExamQuestion();
-    }
-
-    function renderExamQuestion() {
-        const activeQ = CORE_QUESTION_BANK[currentExamIndex];
-        document.getElementById('exam-current-index-display').textContent = currentExamIndex + 1;
-
-        let htmlContent = `
-            <div class="functional-question-card">
-                <div class="question-stem-text"><strong>Q${currentExamIndex + 1}:</strong> ${activeQ.stem}</div>
-                <div class="interactive-options-list">
-        `;
-
-        activeQ.options.forEach((opt, idx) => {
-            const letterCode = String.fromCharCode(65 + idx);
-            const isSelected = examUserAnswers[currentExamIndex] === idx ? 'selected' : '';
-            htmlContent += `
-                <div class="answer-option-row ${isSelected}" data-index="${idx}">
-                    <div class="option-index-badge">${letterCode}</div>
-                    <div class="option-label-text">${opt}</div>
-                </div>
-            `;
-        });
-
-        htmlContent += `
-                </div>
-                <div class="canvas-controls-row">
-                    <button class="action-nav-btn" id="exam-prev-btn" ${currentExamIndex === 0 ? 'disabled' : ''}>Back</button>
-                    ${currentExamIndex === CORE_QUESTION_BANK.length - 1 ? 
-                        `<button class="action-nav-btn primary-action" id="exam-submit-btn">Submit Examination</button>` :
-                        `<button class="action-nav-btn primary-action" id="exam-next-btn">Next question</button>`
-                    }
-                </div>
-            </div>
-        `;
-
-        examRoot.innerHTML = htmlContent;
-
-        const rows = examRoot.querySelectorAll('.answer-option-row');
-        rows.forEach(row => {
-            row.addEventListener('click', () => {
-                const selectedIdx = parseInt(row.getAttribute('data-index'));
-                examUserAnswers[currentExamIndex] = selectedIdx;
-                rows.forEach(r => r.classList.remove('selected'));
-                row.classList.add('selected');
-            });
-        });
-
-        document.getElementById('exam-prev-btn')?.addEventListener('click', () => {
-            if (currentExamIndex > 0) {
-                currentExamIndex--;
-                renderExamQuestion();
-            }
-        });
-
-        document.getElementById('exam-next-btn')?.addEventListener('click', () => {
-            currentExamIndex++;
-            renderExamQuestion();
-        });
-
-        document.getElementById('exam-submit-btn')?.addEventListener('click', concludeExamSimulation);
-    }
-
-    function concludeExamSimulation() {
-        clearInterval(examTimerInterval);
-        document.getElementById('exam-timer-banner').style.display = 'none';
-
-        let score = 0;
-        CORE_QUESTION_BANK.forEach((q, idx) => {
-            if (examUserAnswers[idx] === q.correctIndex) score++;
-        });
-
-        examRoot.innerHTML = `
-            <div class="functional-question-card" style="text-align: center; gap: 16px;">
-                <div class="card-icon-frame" style="margin: 0 auto 10px;"><i class="fa-solid fa-award"></i></div>
-                <h3>CBT Blocks Successfully Executed</h3>
-                <p>Your calibrated scoring matrix returned: <strong>${score} / ${CORE_QUESTION_BANK.length}</strong> correct selections.</p>
-                <button class="action-nav-btn primary-action" id="restart-exam-btn" style="margin: 10px auto 0;">Restart Simulation</button>
-            </div>
-        `;
-
-        document.getElementById('restart-exam-btn').addEventListener('click', startExamSimulation);
-    }
-
-    /* ==========================================================================
-       4. REVIEW MATRIX (Failed Questions Router Workspace)
-       ========================================================================== */
-    function renderReviewMatrix() {
-        if (failedQuestionsRegistry.length === 0) {
-            reviewRoot.innerHTML = `
-                <div class="empty-state-notice">
-                    <i class="fa-solid fa-face-smile"></i> No failed entries mapped in your ledger. Everything is clear!
-                </div>
-            `;
-            return;
-        }
-
-        let htmlContent = `<div style="display:flex; flex-direction:column; gap:20px;">`;
-        failedQuestionsRegistry.forEach((q, idx) => {
-            htmlContent += `
-                <div class="functional-question-card" style="border-left: 4px solid #ff3b30;">
-                    <div class="question-stem-text"><strong>Missed Task:</strong> ${q.stem}</div>
-                    <div class="rationale-panel-box" style="margin-top:0;">
-                        <strong>Correct Objective Answer: ${q.options[q.correctIndex]}</strong>
-                        ${q.rationale}
-                    </div>
-                    <button class="action-nav-btn" style="align-self: flex-end; padding:6px 14px; font-size:12px; color:#ff453a;" onclick="clearMatrixError(${idx})">
-                        Clear from File
-                    </button>
-                </div>
-            `;
-        });
-        htmlContent += `</div>`;
-        reviewRoot.innerHTML = htmlContent;
-    }
-
-    window.clearMatrixError = function(index) {
-        failedQuestionsRegistry.splice(index, 1);
-        localStorage.setItem('ad-failed-matrix', JSON.stringify(failedQuestionsRegistry));
-        renderReviewMatrix();
-    };
-
-    /* ==========================================================================
-       5. GUIDE LIBRARY BLUEPRINTS DISPLAY
-       ========================================================================== */
-    function renderGuideLibrary() {
-        guideRoot.innerHTML = `
-            <div class="static-grid-wrapper">
-                <div class="guide-reference-card">
-                    <div class="guide-icon-box"><i class="fa-solid fa-heart-pulse"></i></div>
-                    <h4>Cardiovascular Pharmacology Desk</h4>
-                    <p>Digoxin toxicity metrics, apicals pulse evaluation logic, and beta-blocker clinical parameters.</p>
-                </div>
-                <div class="guide-reference-card">
-                    <div class="guide-icon-box"><i class="fa-solid fa-eye"></i></div>
-                    <h4>Ophthalmology Nursing Matrices</h4>
-                    <p>Intraocular pressure tracking, Glaucoma nursing diagnostics, and ophthalmic drops administration protocols.</p>
-                </div>
-            </div>
-        `;
-    }
-
-    /* ==========================================================================
-       6. SECURE LOGIN REDIRECTION REDIRECTS
-       ========================================================================== */
-    if (signoutTrigger) {
-        signoutTrigger.addEventListener('click', () => {
-            alert("A_D CBT Hub secure session terminated. Redirecting to user login verification module...");
-            window.location.reload();
-        });
-    }
-
-    /* ==========================================================================
-       7. LOW-ANCHOR CHATBOT CORE ALGORITHM
-       ========================================================================== */
-    chatbotToggle.addEventListener('click', () => chatbotDock.classList.toggle('chat-open'));
-    chatMinimize.addEventListener('click', () => chatbotDock.classList.toggle('chat-open'));
-
-    const processChatResponse = () => {
-        const text = chatInput.value.trim();
-        if (!text) return;
-
-        // User Node Insertion
-        const userDiv = document.createElement('div');
-        userDiv.className = 'user-chat-bubble';
-        userDiv.textContent = text;
-        chatMessagesContainer.appendChild(userDiv);
-        chatInput.value = '';
-        chatMessagesContainer.scrollTop = chatMessagesContainer.scrollHeight;
-
-        // Dynamic System Clinical Assistant Evaluator Responses
-        setTimeout(() => {
-            const reply = document.createElement('div');
-            reply.className = 'system-chat-bubble';
-            
-            let systemResponseText = "Understood. I am parsing your dynamic syllabus matrices to map that clinical concept. Ask me about specific pharmacology calculations or nursing interventions!";
-            
-            if (text.toLowerCase().includes('digoxin') || text.toLowerCase().includes('pulse')) {
-                systemResponseText = "Clinical Note: Digoxin requires monitoring the apical pulse rate for a full 60 seconds prior to dosing. Hold dose and notify clinical supervisor if it drops below 60 bpm.";
-            }
-
-            reply.textContent = systemResponseText;
-            chatMessagesContainer.appendChild(reply);
-            chatMessagesContainer.scrollTop = chatMessagesContainer.scrollHeight;
-        }, 600);
-    };
-
-    chatSendBtn.addEventListener('click', processChatResponse);
-    chatInput.addEventListener('keydown', (e) => { if (e.key === 'Enter') processChatResponse(); });
-
-    /* ==========================================================================
-       8. GLOBAL SPOTLIGHT GENERATION & HARDWARE ACCELERATED TRANSITIONS
-       ========================================================================== */
-    window.addEventListener('mousemove', (e) => {
-        globalSpotlight.style.setProperty('--mouse-x', `${e.clientX}px`);
-        globalSpotlight.style.setProperty('--mouse-y', `${e.clientY}px`);
-    });
-
-    sidebarToggle.addEventListener('click', () => {
-        appContainer.classList.toggle('sidebar-minimized');
-        sidebarToggle.querySelector('i').className = appContainer.classList.contains('sidebar-minimized') ? 'fa-solid fa-bars' : 'fa-solid fa-bars-staggered';
-    });
-
-    settingsToggle.addEventListener('click', () => customizerDrawer.classList.add('drawer-open'));
-    closeCustomizerBtn.addEventListener('click', () => customizerDrawer.classList.remove('drawer-open'));
-
-    themeButtons.forEach(btn => {
-        btn.addEventListener('click', () => {
-            const activeColorTheme = btn.getAttribute('data-theme-set');
-            themeButtons.forEach(b => b.classList.remove('active-theme'));
-            btn.classList.add('active-theme');
-            body.setAttribute('data-theme', activeColorTheme);
-            localStorage.setItem('cbt-user-theme', activeColorTheme);
-        });
-    });
-
-    glowSlider.addEventListener('input', (e) => {
-        body.style.setProperty('--calculated-glow-radius', `${e.target.value}px`);
-    });
-
-    // Boot Trigger
-    renderPracticeEngine();
+// Premium Spotlight Motion Engine
+document.addEventListener("mousemove", (e) => {
+  const spotlight = $("#spotlight");
+  if (spotlight) {
+    spotlight.style.left = `${e.clientX}px`;
+    spotlight.style.top = `${e.clientY}px`;
+  }
 });
+
+// App Theme Core Protocol
+$$(".theme-dot").forEach((dot) => {
+  dot.addEventListener("click", () => {
+    const theme = dot.dataset.theme;
+    document.body.setAttribute("data-portal-theme", theme);
+    localStorage.setItem("ad-portal-theme", theme);
+  });
+});
+const activeTheme = localStorage.getItem("ad-portal-theme") || "default";
+document.body.setAttribute("data-portal-theme", activeTheme);
+
+function textLooksClear(text) {
+  const value = String(text || "").trim();
+  if (value.length < 2) return false;
+  const noisy = ["Copyright 2010", "Editorial review", "Cengage Learning", "CamScanner", "MARKING GUIDE", "MARKING SCHEME", "______"];
+  if (noisy.some((marker) => value.toLowerCase().includes(marker.toLowerCase()))) return false;
+  const alphaCount = (value.match(/[a-z]/gi) || []).length;
+  return alphaCount >= Math.min(6, value.length);
+}
+
+function isClearQuestion(question) {
+  if (!question || !Array.isArray(question.options) || !Array.isArray(question.answer)) return false;
+  if (!textLooksClear(question.prompt) || !textLooksClear(question.rationale)) return false;
+  if (question.prompt.length > 1200 || question.options.some((option) => String(option).length > 500)) return false;
+  if (question.options.length < 4 || question.options.length > 8) return false;
+  if (!question.options.every(textLooksClear)) return false;
+  return question.answer.every((index) => Number.isInteger(index) && index >= 0 && index < question.options.length);
+}
+
+function escapeHtml(value) {
+  return String(value).replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;").replaceAll('"', "&quot;").replaceAll("'", "&#039;");
+}
+
+const rawQuestions = [
+  ...(textbookQuestions.length ? textbookQuestions : starterQuestions),
+  ...supplementalQuestions,
+  ...nmcnSaturationQuestions,
+  ...newTextbookQuestions
+];
+const clearQuestions = rawQuestions.filter(isClearQuestion);
+const questionById = new Map(clearQuestions.map((question) => [question.id, question]));
+const savedSession = JSON.parse(localStorage.getItem("ad-session") || "{}");
+
+function savedRandomOrder(items) {
+  const ids = items.map((question) => question.id);
+  const saved = JSON.parse(localStorage.getItem("ad-question-order") || "[]");
+  const sameBank = saved.length === ids.length && saved.every((id) => questionById.has(id));
+  if (sameBank) return saved.map((id) => questionById.get(id));
+
+  const shuffledIds = shuffle(items).map((question) => question.id);
+  localStorage.setItem("ad-question-order", JSON.stringify(shuffledIds));
+  return shuffledIds.map((id) => questionById.get(id));
+}
+
+const questions = savedRandomOrder(clearQuestions);
+
+const state = {
+  view: savedSession.view || "practice",
+  filtered: [...questions],
+  practiceIndex: savedSession.practiceIndex || 0,
+  exam: (savedSession.examIds || []).map((id) => questionById.get(id)).filter(Boolean),
+  examIndex: savedSession.examIndex || 0,
+  examAnswers: savedSession.examAnswers || {},
+  practiceAnswers: savedSession.practiceAnswers || {},
+  timerId: null,
+  remainingSeconds: 0,
+  progress: JSON.parse(localStorage.getItem("nclex-progress") || "{}"),
+  currentUser: null
+};
+
+const categoryFilter = $("#category-filter");
+const chapterFilter = $("#chapter-filter");
+
+// Auth Sync Engine
+if (supabase) {
+  supabase.auth.onAuthStateChange((event, session) => {
+    if (session?.user) {
+      state.currentUser = session.user;
+      const fullName = session.user.user_metadata?.full_name || session.user.email;
+      $("#user-display-name").textContent = fullName;
+      $("#user-status-text").textContent = "Connected via Cloud";
+      $("#user-avatar").textContent = fullName.charAt(0).toUpperCase();
+      $("#chat-user-context").textContent = `Logged in as ${fullName}`;
+      $("#auth-icon").setAttribute("data-lucide", "log-out");
+    } else {
+      state.currentUser = null;
+      $("#user-display-name").textContent = "Guest Student";
+      $("#user-status-text").textContent = "Not logged in";
+      $("#user-avatar").textContent = "?";
+      $("#chat-user-context").textContent = "Guest Mode";
+      $("#auth-icon").setAttribute("data-lucide", "log-in");
+    }
+    lucide.createIcons();
+  });
+}
+
+function handleAuthAction() {
+  if (!supabase) return alert("Supabase configuration missing or inaccessible.");
+  if (state.currentUser) {
+    supabase.auth.signOut().then(() => window.location.reload());
+  } else {
+    supabase.auth.signInWithOAuth({
+      provider: 'google',
+      options: { redirectTo: window.location.origin }
+    });
+  }
+}
+
+function saveProgress() {
+  localStorage.setItem("nclex-progress", JSON.stringify(state.progress));
+  saveSession();
+  renderProgress();
+}
+
+function saveSession() {
+  localStorage.setItem(
+    "ad-session",
+    JSON.stringify({
+      view: state.view,
+      practiceIndex: state.practiceIndex,
+      practiceAnswers: state.practiceAnswers,
+      examIds: state.exam.map((question) => question.id),
+      examIndex: state.examIndex,
+      examAnswers: state.examAnswers
+    })
+  );
+}
+
+function isCorrect(question, selected) {
+  return [...question.answer].sort().join(",") === [...selected].sort().join(",");
+}
+
+function formatTime(seconds) {
+  const minutes = Math.floor(seconds / 60).toString().padStart(2, "0");
+  const secs = (seconds % 60).toString().padStart(2, "0");
+  return `${minutes}:${secs}`;
+}
+
+function shuffle(items) {
+  return [...items].sort(() => Math.random() - 0.5);
+}
+
+function populateFilters() {
+  const categories = ["All categories", ...new Set(questions.map((q) => q.category))];
+  const chapters = ["All chapters", ...new Set(questions.map((q) => q.chapter))];
+  categoryFilter.innerHTML = categories.map((item) => `<option value="${item}">${item}</option>`).join("");
+  chapterFilter.innerHTML = chapters.map((item) => `<option value="${item}">${item}</option>`).join("");
+}
+
+function applyFilters() {
+  const category = categoryFilter.value;
+  const chapter = chapterFilter.value;
+  state.filtered = questions.filter((q) => {
+    return (category === "All categories" || q.category === category) && (chapter === "All chapters" || q.chapter === chapter);
+  });
+  state.practiceIndex = 0;
+  saveSession();
+  renderPractice();
+}
+
+function renderOptions(container, question, selected = [], disabled = false) {
+  container.innerHTML = question.options
+    .map((option, index) => {
+      const inputType = question.type === "multi" ? "checkbox" : "radio";
+      const checked = selected.includes(index) ? "checked" : "";
+      return `
+        <label class="option" data-index="${index}">
+          <input name="${container.id}-option" type="${inputType}" value="${index}" ${checked} ${disabled ? "disabled" : ""} />
+          <span>${escapeHtml(option)}</span>
+        </label>
+      `;
+    })
+    .join("");
+}
+
+function getSelections(container) {
+  return [...container.querySelectorAll("input:checked")].map((input) => Number(input.value));
+}
+
+function markOptions(container, question, selected) {
+  container.querySelectorAll(".option").forEach((option) => {
+    const index = Number(option.dataset.index);
+    if (question.answer.includes(index)) option.classList.add("is-correct");
+    if (selected.includes(index) && !question.answer.includes(index)) option.classList.add("is-wrong");
+  });
+}
+
+function resourceLinksFor(question) {
+  return learningResources[question.category] || learningResources.default;
+}
+
+function answerText(question) {
+  return question.answer.map((index) => question.options[index]).join("; ");
+}
+
+function cleanSourceRationale(question) {
+  const text = String(question.rationale || "").trim();
+  if (/This item was imported from/i.test(text) || /no detailed rationale was supplied/i.test(text)) {
+    return "The original source supplied an answer key but did not give a full explanation. A_D has expanded the reasoning below using nursing priority rules, the question category, and the answer options.";
+  }
+  return text;
+}
+
+function stemFocus(question) {
+  const stem = question.prompt.toLowerCase();
+  if (/\b(first|initial|priority|most immediate|urgent)\b/.test(stem)) return "priority action";
+  if (/\bteaching|understands|further teaching|instruction|education\b/.test(stem)) return "patient teaching";
+  if (/\bside effect|adverse|toxicity|contraindication|medication|drug|dose\b/.test(stem)) return "medication safety";
+  if (/\bassess|finding|observation|symptom|sign\b/.test(stem)) return "assessment finding";
+  if (/\bexcept|least|not appropriate|contraindicated\b/.test(stem)) return "exception wording";
+  if (/\bosce|procedure|sterile|dressing|catheter|specimen\b/.test(stem)) return "procedure safety";
+  return "core nursing judgment";
+}
+
+function individualizedTeaching(question) {
+  const focus = stemFocus(question);
+  const correct = answerText(question);
+  const lowerCorrect = correct.toLowerCase();
+  const stem = question.prompt.toLowerCase();
+  const points = [];
+
+  points.push(`This question is mainly testing ${focus}. The safest answer is "${correct}" because it best matches the main cue in the stem and directly addresses the nursing problem.`);
+  if (/\bairway|breath|respir|oxygen|cyanotic|dyspnea|wheeze|spo2|saturation\b/.test(`${stem} ${lowerCorrect}`)) {
+    points.push("Airway and breathing cues are high priority. In nursing exams, respiratory compromise usually comes before comfort, teaching, feeding, or routine documentation.");
+  }
+  if (/\bbleed|hemorrhage|shock|pulse|blood pressure|perfusion|chest pain|cyanotic\b/.test(`${stem} ${lowerCorrect}`)) {
+    points.push("Circulation cues can deteriorate quickly. Choose the action that assesses or restores perfusion and escalates care early.");
+  }
+  return points;
+}
+
+function optionReason(question, option, isAnswer) {
+  const text = option.toLowerCase();
+  if (isAnswer) return `This is correct because it best fits the stem and follows the nursing rule for ${stemFocus(question)}. ${cleanSourceRationale(question)}`;
+  if (/\bdelay|wait|later|next round|end of the shift\b/.test(text)) return "This delays care when the stem requires immediate assessment or action.";
+  return "This option is less appropriate because it is not the best match for the key cue or safest nursing action.";
+}
+
+function easyBreakdown(question) {
+  const categoryAdvice = {
+    "Coordinated Care": { why: "Testing professional judgment: assignment, delegation, or consent.", rule: "Delegate stable routine tasks; assessment belongs to the RN.", trap: "Wrong options often delegate nursing judgment." }
+  };
+  return categoryAdvice[question.category] || { why: "Testing safest interpretation.", rule: "Focus on main cues.", trap: "Delayed or incomplete actions." };
+}
+
+function rationaleHtml(question, heading = "Easy explanation") {
+  const explanation = easyBreakdown(question);
+  const correct = answerText(question);
+  const teachingPoints = individualizedTeaching(question).map((p) => `<li>${escapeHtml(p)}</li>`).join("");
+  const optionRows = question.options.map((option, index) => {
+    const isAnswer = question.answer.includes(index);
+    return `<div class="rationale-option ${isAnswer ? "is-answer" : ""}"><strong>${isAnswer ? "Correct" : "Why less likely"}: ${escapeHtml(option)}</strong><p>${escapeHtml(optionReason(question, option, isAnswer))}</p></div>`;
+  }).join("");
+  return `
+    <div class="rationale-title">${escapeHtml(heading)}</div>
+    <div class="rationale-grid">
+      <section><h4>Correct Answer</h4><p>${escapeHtml(correct)}</p></section>
+      <section><h4>Core Rule</h4><p>${escapeHtml(explanation.rule)}</p></section>
+    </div>
+    <div class="rationale-deep-dive"><ul>${teachingPoints}</ul></div>
+    <div class="rationale-options">${optionRows}</div>
+  `;
+}
+
+function renderPractice() {
+  const question = state.filtered[state.practiceIndex];
+  $("#practice-rationale").hidden = true;
+  if (!question) {
+    $("#practice-category").textContent = "No match";
+    $("#practice-question").textContent = "No questions match this filter yet.";
+    $("#practice-options").innerHTML = "";
+    return;
+  }
+  $("#practice-category").textContent = `${question.category} - ${question.chapter}`;
+  $("#practice-progress").textContent = `${state.practiceIndex + 1} of ${state.filtered.length}`;
+  $("#practice-question").textContent = question.prompt;
+  renderOptions($("#practice-options"), question, state.practiceAnswers[question.id] || []);
+}
+
+function checkPracticeAnswer() {
+  const question = state.filtered[state.practiceIndex];
+  const selected = getSelections($("#practice-options"));
+  if (!question || selected.length === 0) return;
+
+  state.practiceAnswers[question.id] = selected;
+  const correct = isCorrect(question, selected);
+  state.progress[question.id] = { correct, selected, at: new Date().toISOString() };
+  saveProgress();
+
+  markOptions($("#practice-options"), question, selected);
+  $("#practice-rationale").hidden = false;
+  $("#practice-rationale").innerHTML = rationaleHtml(question, correct ? "Correct. Easy explanation" : "Review this. Easy explanation");
+}
+
+function nextPractice(step = 1) {
+  if (!state.filtered.length) return;
+  state.practiceIndex = (state.practiceIndex + step + state.filtered.length) % state.filtered.length;
+  saveSession();
+  renderPractice();
+}
+
+function switchView(view) {
+  state.view = view;
+  $$(".nav__item").forEach((btn) => btn.classList.toggle("is-active", btn.dataset.view === view));
+  $$(".view").forEach((p) => p.classList.toggle("is-visible", p.id === `${view}-view`));
+  if (view === "cbt" && state.exam.length) {
+    $("#exam-setup").hidden = true;
+    $("#exam-panel").hidden = false;
+    renderExam();
+  }
+  saveSession();
+}
+
+function startExam() {
+  const size = Math.min(Number($("#exam-size").value), questions.length);
+  const minutes = Math.max(Number($("#exam-minutes").value), 1);
+  state.exam = shuffle(questions).slice(0, size);
+  state.examIndex = 0;
+  state.examAnswers = {};
+  state.remainingSeconds = minutes * 60;
+  $("#exam-setup").hidden = true;
+  $("#exam-panel").hidden = false;
+  $("#timer-label").textContent = "Time left";
+  clearInterval(state.timerId);
+  state.timerId = setInterval(() => {
+    state.remainingSeconds -= 1;
+    $("#timer-value").textContent = formatTime(Math.max(state.remainingSeconds, 0));
+    if (state.remainingSeconds <= 0) submitExam();
+  }, 1000);
+  renderExam();
+}
+
+function renderExam() {
+  const question = state.exam[state.examIndex];
+  if (!question) return;
+  $("#exam-category").textContent = `${question.category} - ${question.chapter}`;
+  $("#exam-progress").textContent = `${state.examIndex + 1} of ${state.exam.length}`;
+  $("#exam-question").textContent = question.prompt;
+  renderOptions($("#exam-options"), question, state.examAnswers[question.id] || []);
+  renderExamNavigator();
+}
+
+function renderExamNavigator() {
+  const answered = state.exam.filter((q) => (state.examAnswers[q.id] || []).length).length;
+  $("#exam-answered-count").textContent = `${answered}/${state.exam.length} answered`;
+  $("#exam-jump-list").innerHTML = state.exam.map((q, i) => {
+    const status = (state.examAnswers[q.id] || []).length ? "is-answered" : "";
+    return `<button class="exam-jump ${status}" data-idx="${i}">${i + 1}</button>`;
+  }).join("");
+  $$(".exam-jump").forEach((btn) => btn.addEventListener("click", () => {
+    state.examAnswers[state.exam[state.examIndex].id] = getSelections($("#exam-options"));
+    state.examIndex = Number(btn.dataset.idx);
+    renderExam();
+  }));
+}
+
+function submitExam() {
+  clearInterval(state.timerId);
+  $("#exam-panel").hidden = true;
+  $("#exam-results").hidden = false;
+  $("#exam-setup").hidden = false;
+  $("#exam-results").innerHTML = `<h3>Exam Finished</h3><p class='text-dim'>Review completed answers.</p>`;
+}
+
+function renderProgress() {
+  $("#bank-count").textContent = questions.length;
+}
+
+function handleChatSend() {
+  const input = $("#chat-input");
+  const text = input.value.trim();
+  if (!text) return;
+  const container = $("#chat-messages-container");
+  container.innerHTML += `<div class="chat-msg user"><p>${escapeHtml(text)}</p></div>`;
+  input.value = "";
+  
+  // Dynamic Name Context Verification
+  const userName = state.currentUser ? (state.currentUser.user_metadata?.full_name || "Student") : "Student";
+  setTimeout(() => {
+    container.innerHTML += `<div class="chat-msg system"><p>Excellent inquiry, ${userName}. Let's break down this concept using clinical prioritization priorities...</p></div>`;
+    container.scrollTop = container.scrollHeight;
+  }, 1000);
+}
+
+function bindEvents() {
+  $$(".nav__item").forEach((btn) => btn.addEventListener("click", () => switchView(btn.dataset.view)));
+  categoryFilter.addEventListener("change", applyFilters);
+  chapterFilter.addEventListener("change", applyFilters);
+  $("#auth-action-btn").addEventListener("click", handleAuthAction);
+  $("#check-answer").addEventListener("click", checkPracticeAnswer);
+  $("#previous-question").addEventListener("click", () => nextPractice(-1));
+  $("#next-question").addEventListener("click", () => nextPractice(1));
+  $("#start-exam").addEventListener("click", startExam);
+  $("#submit-exam").addEventListener("click", submitExam);
+  $("#chat-send").addEventListener("click", handleChatSend);
+  $("#chatbot-toggle").addEventListener("click", () => $("#chatbot-panel").hidden = !$("#chatbot-panel").hidden);
+  $("#chatbot-close").addEventListener("click", () => $("#chatbot-panel").hidden = true);
+}
+
+populateFilters();
+bindEvents();
+renderProgress();
+renderPractice();
+switchView(state.view);
+lucide.createIcons();
