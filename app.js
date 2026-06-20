@@ -10,35 +10,18 @@ import { newTextbookQuestions } from "./new-textbook-questions.js";
 const $ = (selector) => document.querySelector(selector);
 const $$ = (selector) => [...document.querySelectorAll(selector)];
 
-// Initialize Supabase Client Connection
-const SUPABASE_URL = "https://bhdyyuiuzepsixvfcirg.supabase.co";
-const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJoZHl5dWl1emVwc2l4dmZjaXJnIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTY4NDA4MDB9.your-key-here"; // Replace with your actual anon key if changed
-const supabase = window.supabase ? window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY) : null;
-
-// Premium Spotlight Motion Engine
-document.addEventListener("mousemove", (e) => {
-  const spotlight = $("#spotlight");
-  if (spotlight) {
-    spotlight.style.left = `${e.clientX}px`;
-    spotlight.style.top = `${e.clientY}px`;
-  }
-});
-
-// App Theme Core Protocol
-$$(".theme-dot").forEach((dot) => {
-  dot.addEventListener("click", () => {
-    const theme = dot.dataset.theme;
-    document.body.setAttribute("data-portal-theme", theme);
-    localStorage.setItem("ad-portal-theme", theme);
-  });
-});
-const activeTheme = localStorage.getItem("ad-portal-theme") || "default";
-document.body.setAttribute("data-portal-theme", activeTheme);
-
 function textLooksClear(text) {
   const value = String(text || "").trim();
   if (value.length < 2) return false;
-  const noisy = ["Copyright 2010", "Editorial review", "Cengage Learning", "CamScanner", "MARKING GUIDE", "MARKING SCHEME", "______"];
+  const noisy = [
+    "Copyright 2010",
+    "Editorial review",
+    "Cengage Learning",
+    "CamScanner",
+    "MARKING GUIDE",
+    "MARKING SCHEME",
+    "______"
+  ];
   if (noisy.some((marker) => value.toLowerCase().includes(marker.toLowerCase()))) return false;
   const alphaCount = (value.match(/[a-z]/gi) || []).length;
   return alphaCount >= Math.min(6, value.length);
@@ -54,7 +37,12 @@ function isClearQuestion(question) {
 }
 
 function escapeHtml(value) {
-  return String(value).replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;").replaceAll('"', "&quot;").replaceAll("'", "&#039;");
+  return String(value)
+    .replaceAll("&", "&amp;")
+    .replaceAll("<", "&lt;")
+    .replaceAll(">", "&gt;")
+    .replaceAll('"', "&quot;")
+    .replaceAll("'", "&#039;");
 }
 
 const rawQuestions = [
@@ -90,47 +78,11 @@ const state = {
   practiceAnswers: savedSession.practiceAnswers || {},
   timerId: null,
   remainingSeconds: 0,
-  progress: JSON.parse(localStorage.getItem("nclex-progress") || "{}"),
-  currentUser: null
+  progress: JSON.parse(localStorage.getItem("nclex-progress") || "{}")
 };
 
 const categoryFilter = $("#category-filter");
 const chapterFilter = $("#chapter-filter");
-
-// Auth Sync Engine
-if (supabase) {
-  supabase.auth.onAuthStateChange((event, session) => {
-    if (session?.user) {
-      state.currentUser = session.user;
-      const fullName = session.user.user_metadata?.full_name || session.user.email;
-      $("#user-display-name").textContent = fullName;
-      $("#user-status-text").textContent = "Connected via Cloud";
-      $("#user-avatar").textContent = fullName.charAt(0).toUpperCase();
-      $("#chat-user-context").textContent = `Logged in as ${fullName}`;
-      $("#auth-icon").setAttribute("data-lucide", "log-out");
-    } else {
-      state.currentUser = null;
-      $("#user-display-name").textContent = "Guest Student";
-      $("#user-status-text").textContent = "Not logged in";
-      $("#user-avatar").textContent = "?";
-      $("#chat-user-context").textContent = "Guest Mode";
-      $("#auth-icon").setAttribute("data-lucide", "log-in");
-    }
-    lucide.createIcons();
-  });
-}
-
-function handleAuthAction() {
-  if (!supabase) return alert("Supabase configuration missing or inaccessible.");
-  if (state.currentUser) {
-    supabase.auth.signOut().then(() => window.location.reload());
-  } else {
-    supabase.auth.signInWithOAuth({
-      provider: 'google',
-      options: { redirectTo: window.location.origin }
-    });
-  }
-}
 
 function saveProgress() {
   localStorage.setItem("nclex-progress", JSON.stringify(state.progress));
@@ -153,7 +105,9 @@ function saveSession() {
 }
 
 function isCorrect(question, selected) {
-  return [...question.answer].sort().join(",") === [...selected].sort().join(",");
+  const expected = [...question.answer].sort().join(",");
+  const actual = [...selected].sort().join(",");
+  return expected === actual;
 }
 
 function formatTime(seconds) {
@@ -177,7 +131,9 @@ function applyFilters() {
   const category = categoryFilter.value;
   const chapter = chapterFilter.value;
   state.filtered = questions.filter((q) => {
-    return (category === "All categories" || q.category === category) && (chapter === "All chapters" || q.chapter === chapter);
+    const categoryMatch = category === "All categories" || q.category === category;
+    const chapterMatch = chapter === "All chapters" || q.chapter === chapter;
+    return categoryMatch && chapterMatch;
   });
   state.practiceIndex = 0;
   saveSession();
@@ -246,45 +202,153 @@ function individualizedTeaching(question) {
   const points = [];
 
   points.push(`This question is mainly testing ${focus}. The safest answer is "${correct}" because it best matches the main cue in the stem and directly addresses the nursing problem.`);
+
   if (/\bairway|breath|respir|oxygen|cyanotic|dyspnea|wheeze|spo2|saturation\b/.test(`${stem} ${lowerCorrect}`)) {
     points.push("Airway and breathing cues are high priority. In nursing exams, respiratory compromise usually comes before comfort, teaching, feeding, or routine documentation.");
   }
   if (/\bbleed|hemorrhage|shock|pulse|blood pressure|perfusion|chest pain|cyanotic\b/.test(`${stem} ${lowerCorrect}`)) {
     points.push("Circulation cues can deteriorate quickly. Choose the action that assesses or restores perfusion and escalates care early.");
   }
+  if (/\bfever|infection|sterile|asepsis|hand hygiene|isolation|wound|catheter\b/.test(`${stem} ${lowerCorrect}`)) {
+    points.push("The infection-control principle is to prevent organism transfer before it reaches the patient or a sterile body site.");
+  }
+  if (/\bdrug|medication|insulin|digoxin|warfarin|furosemide|antibiotic|opioid|dose\b/.test(`${stem} ${lowerCorrect}`)) {
+    points.push("For drug questions, connect the medication to the required nursing check: allergy, vital sign, lab value, dose, route, expected effect, and danger sign.");
+  }
+  if (/\bpregnan|postpartum|newborn|labour|labor|breastfeeding|immunization|child|infant\b/.test(`${stem} ${lowerCorrect}`)) {
+    points.push("For maternal-child questions, first separate normal findings from danger signs, then choose the option that protects mother, fetus, newborn, or child from the most immediate harm.");
+  }
+  if (/\bsuicide|hallucination|anxiety|depression|mental|psychiatric|therapeutic\b/.test(`${stem} ${lowerCorrect}`)) {
+    points.push("For psychosocial questions, safety and therapeutic communication matter. Acknowledge feelings, assess risk, avoid false reassurance, and do not argue with altered perceptions.");
+  }
+  if (/\bexcept|least|not appropriate|needs further teaching|incorrect\b/.test(stem)) {
+    points.push("Be careful with negative wording. The correct answer may be the unsafe, false, or least appropriate statement rather than the best nursing action.");
+  }
+
+  points.push("A fast way to confirm the answer is to ask: does this option solve the exact problem in the stem, and is it safer than the other choices?");
   return points;
 }
 
 function optionReason(question, option, isAnswer) {
   const text = option.toLowerCase();
-  if (isAnswer) return `This is correct because it best fits the stem and follows the nursing rule for ${stemFocus(question)}. ${cleanSourceRationale(question)}`;
-  if (/\bdelay|wait|later|next round|end of the shift\b/.test(text)) return "This delays care when the stem requires immediate assessment or action.";
-  return "This option is less appropriate because it is not the best match for the key cue or safest nursing action.";
+  if (isAnswer) {
+    return `This is correct because it best fits the stem and follows the nursing rule for ${stemFocus(question)}. ${cleanSourceRationale(question)}`;
+  }
+  if (/\bdelay|wait|later|next round|end of the shift\b/.test(text)) return "This is less appropriate because it delays care when the stem requires assessment, prevention, or immediate action.";
+  if (/\bignore|normal|document as normal|no need\b/.test(text)) return "This is less appropriate because it minimizes a cue that may need nursing assessment or reporting.";
+  if (/\bwithout|skip|before doing it|no assessment\b/.test(text)) return "This is less appropriate because it skips a safety, assessment, or procedure step.";
+  if (/\baspirin|double|extra dose|stop|share|abruptly\b/.test(text)) return "This is less appropriate because it creates medication-safety risk.";
+  if (/\bflat|heavy meal|feed|ambulate\b/.test(text) && /\bbreath|dyspnea|cyanotic|oxygen|chest\b/.test(question.prompt.toLowerCase())) return "This is less appropriate because it does not protect airway, breathing, or circulation first.";
+  if (/\breassure|don't worry|calm down|dramatic\b/.test(text)) return "This is less appropriate because reassurance without assessment can miss a serious clinical or psychosocial risk.";
+  if (/\bfamily|relative|friend\b/.test(text) && /\bconsent|confidential|privacy|adult\b/.test(question.prompt.toLowerCase())) return "This is less appropriate because it may violate consent, autonomy, or confidentiality.";
+  return "This option is less appropriate because it is not the best match for the key cue, priority word, or safest nursing action in the stem.";
 }
 
 function easyBreakdown(question) {
   const categoryAdvice = {
-    "Coordinated Care": { why: "Testing professional judgment: assignment, delegation, or consent.", rule: "Delegate stable routine tasks; assessment belongs to the RN.", trap: "Wrong options often delegate nursing judgment." }
+    "Coordinated Care": {
+      why: "The item is testing professional judgment: priority, assignment, documentation, consent, confidentiality, advocacy, referral, or legal accountability.",
+      rule: "Keep the client safe, protect rights and confidentiality, delegate only stable routine tasks, and remember that assessment, teaching, and evaluation remain nursing responsibilities.",
+      trap: "Wrong options often delay reporting, delegate nursing judgment, breach confidentiality, or ignore documentation."
+    },
+    "Safety and Infection Prevention and Control": {
+      why: "The item is testing harm prevention. The safest answer usually prevents infection, injury, exposure, falls, medication error, or procedure contamination.",
+      rule: "Hand hygiene, standard precautions, sterile technique, isolation, patient identification, and immediate safety checks come before comfort or routine tasks.",
+      trap: "Wrong options often skip hand hygiene, break sterile field, delay urgent safety action, or assume gloves replace infection-control practice."
+    },
+    "Health Promotion and Maintenance": {
+      why: "The item is testing prevention, normal development, maternity/newborn care, screening, immunization, nutrition, and patient teaching.",
+      rule: "First separate normal findings from danger signs, then choose the answer that teaches clearly or prevents complications.",
+      trap: "Wrong options often treat normal findings as emergencies, miss danger signs, or give teaching that is too absolute or culturally unsafe."
+    },
+    "Psychosocial Integrity": {
+      why: "The item is testing emotional safety, communication, coping, mental health assessment, crisis response, and therapeutic relationship.",
+      rule: "Use open-ended, nonjudgmental responses. Acknowledge feelings, assess safety, avoid false reassurance, and do not argue with hallucinations or delusions.",
+      trap: "Wrong options commonly give advice too quickly, ask 'why' in a blaming way, promise secrecy, or leave a high-risk client alone."
+    },
+    "Basic Care and Comfort": {
+      why: "The item is testing essential bedside care: comfort, hygiene, mobility, nutrition, elimination, positioning, sleep, skin care, and assistive devices.",
+      rule: "Choose the action that is safe, practical, patient-centered, and prevents common complications such as pressure injury, aspiration, constipation, or immobility.",
+      trap: "Wrong options often force activity, ignore dignity, skip assessment, or choose convenience over safety."
+    },
+    "Pharmacological Therapies": {
+      why: "The item is testing medication safety, drug action, side effects, toxicity, contraindications, dose checks, and patient teaching.",
+      rule: "Before giving a drug, check the right patient, drug, dose, route, time, indication, allergy, relevant vital sign/lab, and expected response.",
+      trap: "Wrong options often ignore allergies, vital signs, glucose/electrolytes, bleeding signs, toxicity, or advise stopping medication abruptly."
+    },
+    "Reduction of Risk Potential": {
+      why: "The item is testing early detection of complications through labs, diagnostics, procedures, vital signs, pre/postoperative care, and monitoring.",
+      rule: "Look for the finding that signals deterioration and should be reported before harm occurs.",
+      trap: "Wrong options often focus on routine comfort while ignoring abnormal labs, bleeding, respiratory change, neurologic change, or procedure complications."
+    },
+    "Physiological Adaptation": {
+      why: "The item is testing response to illness and urgent clinical judgment in acute or chronic disease.",
+      rule: "Use ABCs, perfusion, bleeding, shock, neurologic status, fluid/electrolyte balance, and worsening symptoms to decide priority.",
+      trap: "Wrong options often delay emergency care, treat a minor symptom first, or ignore the pathophysiology behind the cues."
+    }
   };
-  return categoryAdvice[question.category] || { why: "Testing safest interpretation.", rule: "Focus on main cues.", trap: "Delayed or incomplete actions." };
+  return categoryAdvice[question.category] || {
+    why: "The item is testing the safest nursing interpretation of the stem.",
+    rule: "Focus on the main cue, identify the nursing problem, and choose the option that directly addresses it.",
+    trap: "Wrong options are usually delayed, unsafe, unrelated, incomplete, or not the priority."
+  };
 }
 
 function rationaleHtml(question, heading = "Easy explanation") {
   const explanation = easyBreakdown(question);
   const correct = answerText(question);
-  const teachingPoints = individualizedTeaching(question).map((p) => `<li>${escapeHtml(p)}</li>`).join("");
-  const optionRows = question.options.map((option, index) => {
-    const isAnswer = question.answer.includes(index);
-    return `<div class="rationale-option ${isAnswer ? "is-answer" : ""}"><strong>${isAnswer ? "Correct" : "Why less likely"}: ${escapeHtml(option)}</strong><p>${escapeHtml(optionReason(question, option, isAnswer))}</p></div>`;
-  }).join("");
+  const teachingPoints = individualizedTeaching(question)
+    .map((point) => `<li>${escapeHtml(point)}</li>`)
+    .join("");
+  const optionRows = question.options
+    .map((option, index) => {
+      const isAnswer = question.answer.includes(index);
+      const label = isAnswer ? "Correct" : "Why less likely";
+      const reason = optionReason(question, option, isAnswer);
+      return `
+        <div class="rationale-option ${isAnswer ? "is-answer" : ""}">
+          <strong>${label}: ${escapeHtml(option)}</strong>
+          <p>${escapeHtml(reason)}</p>
+        </div>
+      `;
+    })
+    .join("");
+  const links = resourceLinksFor(question)
+    .map(([label, url]) => `<a href="${escapeHtml(url)}" target="_blank" rel="noreferrer">${escapeHtml(label)}</a>`)
+    .join("");
   return `
     <div class="rationale-title">${escapeHtml(heading)}</div>
     <div class="rationale-grid">
-      <section><h4>Correct Answer</h4><p>${escapeHtml(correct)}</p></section>
-      <section><h4>Core Rule</h4><p>${escapeHtml(explanation.rule)}</p></section>
+      <section>
+        <h4>Correct Answer</h4>
+        <p>${escapeHtml(correct)}</p>
+      </section>
+      <section>
+        <h4>What The Question Is Testing</h4>
+        <p>${escapeHtml(explanation.why)}</p>
+      </section>
+      <section>
+        <h4>Core Nursing Rule</h4>
+        <p>${escapeHtml(explanation.rule)}</p>
+      </section>
+      <section>
+        <h4>Common Trap</h4>
+        <p>${escapeHtml(explanation.trap)}</p>
+      </section>
+      <section>
+        <h4>Source Rationale</h4>
+        <p>${escapeHtml(cleanSourceRationale(question))}</p>
+      </section>
     </div>
-    <div class="rationale-deep-dive"><ul>${teachingPoints}</ul></div>
-    <div class="rationale-options">${optionRows}</div>
+    <div class="rationale-deep-dive">
+      <h4>Detailed Teaching Explanation</h4>
+      <ul>${teachingPoints}</ul>
+    </div>
+    <div class="rationale-options">
+      <h4>Option-by-option review</h4>
+      ${optionRows}
+    </div>
+    <div class="resource-links"><span>Further study:</span>${links}</div>
   `;
 }
 
@@ -293,6 +357,7 @@ function renderPractice() {
   $("#practice-rationale").hidden = true;
   if (!question) {
     $("#practice-category").textContent = "No match";
+    $("#practice-progress").textContent = "";
     $("#practice-question").textContent = "No questions match this filter yet.";
     $("#practice-options").innerHTML = "";
     return;
@@ -319,6 +384,11 @@ function checkPracticeAnswer() {
 }
 
 function nextPractice(step = 1) {
+  const current = state.filtered[state.practiceIndex];
+  if (current) {
+    const selected = getSelections($("#practice-options"));
+    if (selected.length) state.practiceAnswers[current.id] = selected;
+  }
   if (!state.filtered.length) return;
   state.practiceIndex = (state.practiceIndex + step + state.filtered.length) % state.filtered.length;
   saveSession();
@@ -327,13 +397,28 @@ function nextPractice(step = 1) {
 
 function switchView(view) {
   state.view = view;
-  $$(".nav__item").forEach((btn) => btn.classList.toggle("is-active", btn.dataset.view === view));
-  $$(".view").forEach((p) => p.classList.toggle("is-visible", p.id === `${view}-view`));
+  $$(".nav__item").forEach((button) => button.classList.toggle("is-active", button.dataset.view === view));
+  $$(".view").forEach((panel) => panel.classList.toggle("is-visible", panel.id === `${view}-view`));
+  const titles = {
+    practice: ["Learning mode", "Practice with instant rationales"],
+    cbt: ["Simulation", "CBT exam mode"],
+    review: ["Performance", "Review weak areas"],
+    guide: ["Study map", "High-yield council exam guide"]
+  };
+  $("#view-kicker").textContent = titles[view][0];
+  $("#view-title").textContent = titles[view][1];
+  if (view !== "cbt" || !state.timerId) {
+    $("#timer-label").textContent = view === "cbt" ? "Ready" : "Untimed";
+    $("#timer-value").textContent = "00:00";
+  }
   if (view === "cbt" && state.exam.length) {
     $("#exam-setup").hidden = true;
+    $("#exam-results").hidden = true;
     $("#exam-panel").hidden = false;
+    state.examIndex = Math.min(state.examIndex, state.exam.length - 1);
     renderExam();
   }
+  renderProgress();
   saveSession();
 }
 
@@ -345,8 +430,10 @@ function startExam() {
   state.examAnswers = {};
   state.remainingSeconds = minutes * 60;
   $("#exam-setup").hidden = true;
+  $("#exam-results").hidden = true;
   $("#exam-panel").hidden = false;
   $("#timer-label").textContent = "Time left";
+  $("#timer-value").textContent = formatTime(state.remainingSeconds);
   clearInterval(state.timerId);
   state.timerId = setInterval(() => {
     state.remainingSeconds -= 1;
@@ -354,6 +441,7 @@ function startExam() {
     if (state.remainingSeconds <= 0) submitExam();
   }, 1000);
   renderExam();
+  saveSession();
 }
 
 function renderExam() {
@@ -363,69 +451,192 @@ function renderExam() {
   $("#exam-progress").textContent = `${state.examIndex + 1} of ${state.exam.length}`;
   $("#exam-question").textContent = question.prompt;
   renderOptions($("#exam-options"), question, state.examAnswers[question.id] || []);
+  $("#exam-prev").disabled = state.examIndex === 0;
+  $("#exam-next").textContent = state.examIndex === state.exam.length - 1 ? "Review" : "Next";
   renderExamNavigator();
 }
 
+function storeExamAnswer() {
+  const question = state.exam[state.examIndex];
+  state.examAnswers[question.id] = getSelections($("#exam-options"));
+  saveSession();
+}
+
+function moveExam(step) {
+  storeExamAnswer();
+  state.examIndex = Math.min(Math.max(state.examIndex + step, 0), state.exam.length - 1);
+  saveSession();
+  renderExam();
+}
+
+function jumpExam(index) {
+  storeExamAnswer();
+  state.examIndex = index;
+  saveSession();
+  renderExam();
+}
+
 function renderExamNavigator() {
-  const answered = state.exam.filter((q) => (state.examAnswers[q.id] || []).length).length;
+  const answered = state.exam.filter((question) => (state.examAnswers[question.id] || []).length).length;
   $("#exam-answered-count").textContent = `${answered}/${state.exam.length} answered`;
-  $("#exam-jump-list").innerHTML = state.exam.map((q, i) => {
-    const status = (state.examAnswers[q.id] || []).length ? "is-answered" : "";
-    return `<button class="exam-jump ${status}" data-idx="${i}">${i + 1}</button>`;
-  }).join("");
-  $$(".exam-jump").forEach((btn) => btn.addEventListener("click", () => {
-    state.examAnswers[state.exam[state.examIndex].id] = getSelections($("#exam-options"));
-    state.examIndex = Number(btn.dataset.idx);
-    renderExam();
-  }));
+  $("#exam-jump-list").innerHTML = state.exam
+    .map((question, index) => {
+      const status = (state.examAnswers[question.id] || []).length ? "is-answered" : "";
+      const active = index === state.examIndex ? "is-current" : "";
+      return `<button class="exam-jump ${status} ${active}" type="button" data-exam-index="${index}">${index + 1}</button>`;
+    })
+    .join("");
+  $$("#exam-jump-list .exam-jump").forEach((button) => {
+    button.addEventListener("click", () => jumpExam(Number(button.dataset.examIndex)));
+  });
 }
 
 function submitExam() {
+  if (!state.exam.length) return;
+  storeExamAnswer();
   clearInterval(state.timerId);
+  state.timerId = null;
   $("#exam-panel").hidden = true;
   $("#exam-results").hidden = false;
   $("#exam-setup").hidden = false;
-  $("#exam-results").innerHTML = `<h3>Exam Finished</h3><p class='text-dim'>Review completed answers.</p>`;
+  $("#timer-label").textContent = "Completed";
+
+  const rows = state.exam.map((question) => {
+    const selected = state.examAnswers[question.id] || [];
+    const correct = isCorrect(question, selected);
+    state.progress[question.id] = { correct, selected, at: new Date().toISOString() };
+    return { question, selected, correct };
+  });
+  saveProgress();
+  saveSession();
+
+  const score = rows.filter((row) => row.correct).length;
+  $("#exam-results").innerHTML = `
+    <p class="eyebrow">CBT result</p>
+    <h3>Exam submitted</h3>
+    <div class="score">${score}/${rows.length}</div>
+    <p class="subtle">Review the rationales below, then use the Review tab to target weak client-needs categories.</p>
+    <div class="missed-list">
+      ${rows
+        .map(
+          ({ question, selected, correct }) => `
+          <div class="missed-card">
+            <strong>${correct ? "Correct" : "Missed"} - ${escapeHtml(question.category)}</strong>
+            <p>${escapeHtml(question.prompt)}</p>
+            <p><strong>Answer:</strong> ${question.answer.map((i) => escapeHtml(question.options[i])).join("; ")}</p>
+            ${rationaleHtml(question, "Easy explanation")}
+          </div>`
+        )
+        .join("")}
+    </div>
+  `;
 }
 
 function renderProgress() {
   $("#bank-count").textContent = questions.length;
+  const records = Object.values(state.progress);
+  const mastery = records.length ? Math.round((records.filter((r) => r.correct).length / records.length) * 100) : 0;
+  $("#mastery-score").textContent = `${mastery}%`;
+
+  const bars = blueprint.map(([category]) => {
+    const categoryQuestions = questions.filter((q) => q.category === category);
+    const answered = categoryQuestions.filter((q) => state.progress[q.id]);
+    const correct = answered.filter((q) => state.progress[q.id].correct).length;
+    const pct = answered.length ? Math.round((correct / answered.length) * 100) : 0;
+    return `
+      <div class="bar">
+        <div class="bar__row"><strong>${escapeHtml(category)}</strong><span>${correct}/${answered.length || categoryQuestions.length} - ${pct}%</span></div>
+        <div class="bar__track"><div class="bar__fill" style="width:${pct}%"></div></div>
+      </div>
+    `;
+  });
+  $("#category-bars").innerHTML = bars.join("");
+
+  const missed = questions.filter((q) => state.progress[q.id] && !state.progress[q.id].correct).slice(-12).reverse();
+  $("#missed-list").innerHTML = missed.length
+    ? missed
+        .map(
+          (q) => `
+          <div class="missed-card">
+            <strong>${escapeHtml(q.category)} - ${escapeHtml(q.chapter)}</strong>
+            <p>${escapeHtml(q.prompt)}</p>
+            ${rationaleHtml(q, "Correct focus")}
+          </div>`
+        )
+        .join("")
+    : `<p class="subtle">No missed questions yet. Start Practice or CBT mode to build your review list.</p>`;
 }
 
-function handleChatSend() {
-  const input = $("#chat-input");
-  const text = input.value.trim();
-  if (!text) return;
-  const container = $("#chat-messages-container");
-  container.innerHTML += `<div class="chat-msg user"><p>${escapeHtml(text)}</p></div>`;
-  input.value = "";
-  
-  // Dynamic Name Context Verification
-  const userName = state.currentUser ? (state.currentUser.user_metadata?.full_name || "Student") : "Student";
-  setTimeout(() => {
-    container.innerHTML += `<div class="chat-msg system"><p>Excellent inquiry, ${userName}. Let's break down this concept using clinical prioritization priorities...</p></div>`;
-    container.scrollTop = container.scrollHeight;
-  }, 1000);
+function renderGuide() {
+  const importedStrategyOnly = guideSections.filter((item) => item.group === "Textbook exam strategy");
+  const allGuides = [...researchGuideSections, ...importedStrategyOnly].filter((item) => {
+    const content = `${item.source || ""} ${item.title || ""} ${(item.points || []).join(" ")}`.toLowerCase();
+    return !content.includes("dako college");
+  });
+  if (allGuides.length) {
+    const groups = [...new Set(allGuides.map((item) => item.group))];
+    $("#study-guide").innerHTML = groups
+      .map((group) => {
+        const cards = allGuides
+          .filter((item) => item.group === group)
+          .map(
+            (item) => `
+              <div class="guide-card">
+                <span class="guide-source">${escapeHtml(item.source)}</span>
+                <strong>${escapeHtml(item.title)}</strong>
+                <ul>${item.points.map((point) => `<li>${escapeHtml(point)}</li>`).join("")}</ul>
+                ${
+                  item.links
+                    ? `<div class="resource-links">${item.links
+                        .map(([label, url]) => `<a href="${escapeHtml(url)}" target="_blank" rel="noreferrer">${escapeHtml(label)}</a>`)
+                        .join("")}</div>`
+                    : ""
+                }
+              </div>
+            `
+          )
+          .join("");
+        return `<section class="guide-group"><h4>${escapeHtml(group)}</h4>${cards}</section>`;
+      })
+      .join("");
+  } else {
+    $("#study-guide").innerHTML = studyGuide
+      .map((item) => `<div class="guide-card"><strong>${escapeHtml(item.title)}</strong><p>${escapeHtml(item.points)}</p></div>`)
+      .join("");
+  }
+
+  $("#blueprint-list").innerHTML = blueprint
+    .map(([category, weight, focus]) => `<div class="blueprint-card"><strong>${escapeHtml(category)}</strong><p>${escapeHtml(weight)} of items - ${escapeHtml(focus)}</p></div>`)
+    .join("");
 }
 
 function bindEvents() {
-  $$(".nav__item").forEach((btn) => btn.addEventListener("click", () => switchView(btn.dataset.view)));
+  $$(".nav__item").forEach((button) => button.addEventListener("click", () => switchView(button.dataset.view)));
   categoryFilter.addEventListener("change", applyFilters);
   chapterFilter.addEventListener("change", applyFilters);
-  $("#auth-action-btn").addEventListener("click", handleAuthAction);
+  $("#shuffle-button").addEventListener("click", () => {
+    state.filtered = shuffle(state.filtered);
+    state.practiceIndex = 0;
+    localStorage.setItem("ad-question-order", JSON.stringify(shuffle(questions).map((question) => question.id)));
+    saveSession();
+    renderPractice();
+  });
   $("#check-answer").addEventListener("click", checkPracticeAnswer);
   $("#previous-question").addEventListener("click", () => nextPractice(-1));
   $("#next-question").addEventListener("click", () => nextPractice(1));
   $("#start-exam").addEventListener("click", startExam);
+  $("#exam-next").addEventListener("click", () => moveExam(1));
+  $("#exam-prev").addEventListener("click", () => moveExam(-1));
   $("#submit-exam").addEventListener("click", submitExam);
-  $("#chat-send").addEventListener("click", handleChatSend);
-  $("#chatbot-toggle").addEventListener("click", () => $("#chatbot-panel").hidden = !$("#chatbot-panel").hidden);
-  $("#chatbot-close").addEventListener("click", () => $("#chatbot-panel").hidden = true);
+  $("#reset-progress").addEventListener("click", () => {
+    state.progress = {};
+    saveProgress();
+  });
 }
 
 populateFilters();
 bindEvents();
+renderGuide();
 renderProgress();
 renderPractice();
 switchView(state.view);
-lucide.createIcons();
