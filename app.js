@@ -56,7 +56,7 @@ const questions = savedRandomOrder(clearQuestions);
 const savedSession = JSON.parse(localStorage.getItem("ad-session") || "{}");
 
 const state = {
-  view: "dashboard", // FORCED DEFAULT VIEW
+  view: "dashboard", // Default View
   filtered: [...questions],
   practiceIndex: savedSession.practiceIndex || 0,
   exam: (savedSession.examIds || []).map((id) => questionById.get(id)).filter(Boolean),
@@ -296,8 +296,8 @@ function switchView(view) {
   $("#view-kicker").textContent = titles[view][0];
   $("#view-title").textContent = titles[view][1];
   
-  // COMPLETELY HIDE TIMER ON DASHBOARD/GUIDE/REVIEW
-  const timerBlock = $(".timer");
+  // EXPLICIT TIMER OVERRIDE TO HIDE ON DASHBOARD
+  const timerBlock = document.querySelector(".timer");
   if(timerBlock) {
     if (view === "dashboard" || view === "guide" || view === "review") {
       timerBlock.style.display = "none";
@@ -525,7 +525,7 @@ function init() {
   renderProgress();
   renderGuide();
   bindEvents();
-  switchView(state.view);
+  switchView(state.view); // Explicitly trigger the timer override check on load
 }
 
 init();

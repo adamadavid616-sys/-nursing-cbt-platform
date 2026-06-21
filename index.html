@@ -10,9 +10,7 @@
     
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.39.0/dist/umd/supabase.min.js"></script>
     <script>
-      window._sbInit = function(url, key) {
-        // intentionally empty - Supabase init handled in login script below
-      };
+      window._sbInit = function(url, key) {};
     </script>
   </head>
   <body>
@@ -80,7 +78,7 @@
           <div style="position:relative;z-index:1;padding:40px 20px;display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:75vh;text-align:center;">
             
             <div style="margin-bottom:40px; animation: slideUp 0.6s ease-out forwards;">
-              <p class="eyebrow" id="dash-greeting" style="font-size: 1.1rem; margin-bottom: 12px; color: var(--accent);">Good morning 🌤️</p>
+              <p class="eyebrow" id="dash-greeting" style="font-size: 1.1rem; margin-bottom: 12px; color: var(--accent);">Good morning, Future Nurse 🌤️</p>
               <h2 id="dash-title" style="font-size:3.8rem;font-weight:800;margin:0;background:linear-gradient(135deg,var(--accent),#fff);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;text-shadow:0 10px 40px rgba(var(--accent-rgb), 0.3);letter-spacing:-1px;">
                 A_D Nursing Hub
               </h2>
@@ -107,18 +105,11 @@
 
         <section id="practice-view" class="view">
           <div class="toolbar glass-panel" aria-label="Practice filters">
-            <label>
-              Category
-              <select id="category-filter"></select>
-            </label>
+            <label>Category <select id="category-filter"></select></label>
             <button id="shuffle-button" class="icon-button primary" type="button" title="Shuffle question"><i class="fa-solid fa-shuffle"></i></button>
           </div>
-
           <article class="question-panel glass-panel" aria-live="polite">
-            <div class="question-meta">
-              <span id="practice-category"></span>
-              <span id="practice-progress"></span>
-            </div>
+            <div class="question-meta"><span id="practice-category"></span><span id="practice-progress"></span></div>
             <h3 id="practice-question"></h3>
             <div id="practice-options" class="options"></div>
             <div class="panel-actions">
@@ -132,55 +123,31 @@
 
         <section id="cbt-view" class="view">
           <div id="exam-setup" class="exam-setup glass-panel">
-            <div>
-              <p class="eyebrow">Simulation</p>
-              <h3>Computer-based test mode</h3>
-              <p class="subtle">Timed, no instant feedback, mixed categories, and a final review screen.</p>
-            </div>
+            <div><p class="eyebrow">Simulation</p><h3>Computer-based test mode</h3></div>
             <div class="setup-grid">
-              <label>
-                Questions
-                <input id="exam-size" type="number" min="10" max="48" value="25" class="glass-panel" />
-              </label>
-              <label>
-                Minutes
-                <input id="exam-minutes" type="number" min="5" max="180" value="35" class="glass-panel" />
-              </label>
+              <label>Questions <input id="exam-size" type="number" min="10" max="48" value="25" class="glass-panel" /></label>
+              <label>Minutes <input id="exam-minutes" type="number" min="5" max="180" value="35" class="glass-panel" /></label>
             </div>
             <button id="start-exam" class="primary" type="button"><i class="fa-solid fa-play"></i> Start CBT</button>
           </div>
-
           <article id="exam-panel" class="question-panel glass-panel" hidden>
-            <div class="question-meta">
-              <span id="exam-category"></span>
-              <span id="exam-progress"></span>
-            </div>
+            <div class="question-meta"><span id="exam-category"></span><span id="exam-progress"></span></div>
             <h3 id="exam-question"></h3>
             <div id="exam-options" class="options"></div>
             <div class="panel-actions">
               <button id="exam-prev" type="button" class="glass-panel"><i class="fa-solid fa-arrow-left"></i> Back</button>
               <button id="exam-next" class="primary" type="button">Next <i class="fa-solid fa-arrow-right"></i></button>
-              <button id="submit-exam" type="button" style="border-color: #ff3b30; color: #ff3b30;" class="glass-panel">Submit Exam</button>
+              <button id="submit-exam" type="button" style="border-color: #ff3b30; color: #ff3b30;" class="glass-panel">Submit</button>
             </div>
-            <div class="exam-review-block">
-              <div class="question-meta">
-                <span>Question navigator</span>
-                <span id="exam-answered-count">0 answered</span>
-              </div>
-              <div id="exam-jump-list" class="exam-jump-list"></div>
-            </div>
+            <div class="exam-review-block"><div id="exam-jump-list" class="exam-jump-list"></div></div>
           </article>
-
           <section id="exam-results" class="results glass-panel" hidden></section>
         </section>
 
         <section id="review-view" class="view">
           <div class="review-head glass-panel">
-            <div>
-              <p class="eyebrow">Weak areas</p>
-              <h3>Performance by client need</h3>
-            </div>
-            <button id="reset-progress" type="button" class="glass-panel"><i class="fa-solid fa-rotate-right"></i> Reset progress</button>
+            <div><p class="eyebrow">Weak areas</p><h3>Performance by client need</h3></div>
+            <button id="reset-progress" type="button" class="glass-panel"><i class="fa-solid fa-rotate-right"></i> Reset</button>
           </div>
           <div id="category-bars" class="bars glass-panel"></div>
           <div id="missed-list" class="missed-list"></div>
@@ -188,16 +155,8 @@
 
         <section id="guide-view" class="view">
           <div class="guide-layout">
-            <article class="glass-panel">
-              <p class="eyebrow">Guide</p>
-              <h3>Passing strategy and exam guides</h3>
-              <div id="study-guide" class="guide-list"></div>
-            </article>
-            <article class="blueprint glass-panel">
-              <p class="eyebrow">2026 NCLEX-PN</p>
-              <h3>Blueprint weighting</h3>
-              <div id="blueprint-list"></div>
-            </article>
+            <article class="glass-panel"><p class="eyebrow">Guide</p><h3>Strategy</h3><div id="study-guide" class="guide-list"></div></article>
+            <article class="blueprint glass-panel"><p class="eyebrow">NCLEX-PN</p><h3>Blueprint</h3><div id="blueprint-list"></div></article>
           </div>
         </section>
       </section>
@@ -220,16 +179,12 @@
     </div>
 
     <script>
-      // Single, distinct colors (No Repetitions)
+      // 24 Standard, Premium Themes
       const colors = [
-        '#20f7d2', // Cyan (Default)
-        '#34c759', // Green
-        '#ffcc00', // Gold
-        '#ff3b30', // Red
-        '#bf5af2', // Purple
-        '#0a84ff', // Blue
-        '#f15bb5', // Pink
-        '#f5f5f7'  // Silver/White
+        '#64748b', '#71717a', '#737373', '#ef4444', '#f97316', '#f59e0b', 
+        '#eab308', '#84cc16', '#22c55e', '#10b981', '#14b8a6', '#20f7d2', 
+        '#06b6d4', '#0ea5e9', '#3b82f6', '#6366f1', '#8b5cf6', '#a855f7', 
+        '#d946ef', '#ec4899', '#f43f5e', '#ff3b30', '#0a84ff', '#f5f5f7'
       ];
 
       function hexToRgb(hex) {
@@ -243,7 +198,7 @@
         document.documentElement.style.setProperty('--accent', hex);
         document.documentElement.style.setProperty('--accent-strong', hex);
         document.documentElement.style.setProperty('--accent-rgb', hexToRgb(hex));
-        localStorage.setItem('ad-theme-color', hex); // Auto-save preference
+        localStorage.setItem('ad-theme-color', hex);
       }
 
       const paletteContainer = document.getElementById('color-palette');
@@ -255,11 +210,10 @@
         paletteContainer.appendChild(dot);
       });
 
-      // Load saved theme on boot
       const savedTheme = localStorage.getItem('ad-theme-color');
       if (savedTheme) applyThemeColor(savedTheme);
 
-      // Mobile-Favored Sidebar Toggle Logic
+      // Desktop & Mobile Sidebar Toggle Logic
       const sidebar = document.getElementById('main-sidebar');
       const toggleBtn = document.getElementById('sidebar-toggle');
       const navItems = document.querySelectorAll('.nav__item');
@@ -277,13 +231,20 @@
       }
 
       toggleBtn.addEventListener('click', () => {
-        sidebar.classList.contains('open') ? closeSidebar() : openSidebar();
+        if (window.innerWidth <= 768) {
+          sidebar.classList.contains('open') ? closeSidebar() : openSidebar();
+        } else {
+          // Desktop toggle
+          sidebar.classList.toggle('collapsed');
+        }
       });
 
       sidebarOverlay.addEventListener('click', closeSidebar);
 
       navItems.forEach(item => {
-        item.addEventListener('click', () => closeSidebar());
+        item.addEventListener('click', () => {
+          if (window.innerWidth <= 768) closeSidebar();
+        });
       });
 
       // Liquid Glass Mouse Tracker
@@ -371,11 +332,7 @@
       async function saveCloud(h) {
         if (!sbClient || !currentUser) return;
         try {
-          await sbClient.from('chat_history').upsert({
-            user_id: currentUser.id,
-            messages: h.slice(-MAX_MSGS),
-            updated_at: new Date().toISOString()
-          }, { onConflict: 'user_id' });
+          await sbClient.from('chat_history').upsert({ user_id: currentUser.id, messages: h.slice(-MAX_MSGS), updated_at: new Date().toISOString() }, { onConflict: 'user_id' });
         } catch(e) {}
       }
 
@@ -390,8 +347,8 @@
       function setLoginBar(user) {
         if (!loginBarBtn) return;
         if (user) {
-          var name = (user.user_metadata && user.user_metadata.full_name) ? user.user_metadata.full_name.split(' ')[0] : 'You';
-          loginBarMsg.innerHTML = '<i class="fa-solid fa-circle-check" style="color:var(--accent)"></i> Welcome, ' + name + '!';
+          var name = (user.user_metadata && user.user_metadata.full_name) ? user.user_metadata.full_name.split(' ')[0] : 'Nurse';
+          loginBarMsg.innerHTML = '<i class="fa-solid fa-circle-check" style="color:var(--accent)"></i> Signed in as ' + name;
           loginBarBtn.innerHTML = '<i class="fa-solid fa-right-from-bracket"></i> Sign out';
           loginBarBtn.className = "glass-panel";
           loginBarBtn.onclick = async function() {
@@ -399,14 +356,16 @@
             Object.keys(localStorage).forEach(function(key) {
               if (key.startsWith('sb-') || key.includes('supabase') || key === 'ad-tutor-chat') localStorage.removeItem(key);
             });
-            currentUser = null; chatHistory = []; renderHistory([]); setLoginBar(null);
+            currentUser = null; chatHistory = []; renderHistory([]); setLoginBar(null); window.updatePersonalGreeting(null);
             setTimeout(function() { window.location.reload(); }, 500);
           };
+          window.updatePersonalGreeting(name);
         } else {
           loginBarMsg.innerHTML = '<i class="fa-solid fa-cloud-arrow-up"></i> Sign in to save history';
           loginBarBtn.innerHTML = '<i class="fa-brands fa-google"></i> Sign in';
           loginBarBtn.className = "primary glass-panel";
           loginBarBtn.onclick = function() { window.doGoogleSignIn(); };
+          window.updatePersonalGreeting(null);
         }
       }
 
@@ -415,114 +374,46 @@
         sbClient.auth.signInWithOAuth({ provider: 'google', options: { redirectTo: APP_URL, queryParams: { prompt: 'select_account', access_type: 'offline' } } });
       };
 
-      function waitForSupabase(callback) {
-        if (window.supabase) { callback(); } else {
-          var attempts = 0;
-          var interval = setInterval(function() {
-            attempts++;
-            if (window.supabase) { clearInterval(interval); callback(); }
-            else if (attempts > 20) { clearInterval(interval); console.warn('Supabase CDN failed to load'); }
-          }, 200);
-        }
-      }
-
       function init() {
         var local = loadLocal();
         if (local.length > 0) { chatHistory = local; renderHistory(chatHistory); }
-        waitForSupabase(async function() {
-          try {
-            sbClient = window.supabase.createClient(SB_URL, SB_KEY);
-            var sessionData = await sbClient.auth.getSession();
-            var session = sessionData.data.session;
-            if (session) {
-              currentUser = session.user; currentUser.access_token = session.access_token;
-              setLoginBar(currentUser);
-              var cloud = await loadCloud(session.access_token, session.user.id);
-              if (cloud && cloud.length > 0) { chatHistory = cloud; renderHistory(chatHistory); }
-            } else { setLoginBar(null); }
-
-            sbClient.auth.onAuthStateChange(async function(event, session) {
+        var attempts = 0;
+        var interval = setInterval(async function() {
+          attempts++;
+          if (window.supabase) {
+            clearInterval(interval);
+            try {
+              sbClient = window.supabase.createClient(SB_URL, SB_KEY);
+              var sessionData = await sbClient.auth.getSession();
+              var session = sessionData.data.session;
               if (session) {
                 currentUser = session.user; currentUser.access_token = session.access_token;
                 setLoginBar(currentUser);
                 var cloud = await loadCloud(session.access_token, session.user.id);
                 if (cloud && cloud.length > 0) { chatHistory = cloud; renderHistory(chatHistory); }
-              } else { currentUser = null; setLoginBar(null); }
-            });
-          } catch(e) { console.error('Supabase setup error:', e); }
-        });
+              } else { setLoginBar(null); }
+
+              sbClient.auth.onAuthStateChange(async function(event, session) {
+                if (session) {
+                  currentUser = session.user; currentUser.access_token = session.access_token;
+                  setLoginBar(currentUser);
+                  var cloud = await loadCloud(session.access_token, session.user.id);
+                  if (cloud && cloud.length > 0) { chatHistory = cloud; renderHistory(chatHistory); }
+                } else { currentUser = null; setLoginBar(null); }
+              });
+            } catch(e) { console.error('Supabase setup error:', e); }
+          } else if (attempts > 20) { clearInterval(interval); }
+        }, 200);
       }
       window.addEventListener('load', init);
     </script>
 
     <script>
-    // ===== CURSOR TRAIL =====
+    // ===== DASHBOARD LOGIC (Greeting & 50+ Facts) =====
     (function() {
-      const canvas = document.getElementById('cursor-canvas');
-      const ctx = canvas.getContext('2d');
-      let W = canvas.width = window.innerWidth;
-      let H = canvas.height = window.innerHeight;
-      let particles = [];
-
-      window.addEventListener('resize', () => { W = canvas.width = window.innerWidth; H = canvas.height = window.innerHeight; });
-
-      function getAccentRGB() {
-        return getComputedStyle(document.documentElement).getPropertyValue('--accent-rgb').trim() || '32,247,210';
-      }
-
-      class Particle {
-        constructor(x, y) {
-          this.x = x + (Math.random() - 0.5) * 4;
-          this.y = y + (Math.random() - 0.5) * 4;
-          this.vx = (Math.random() - 0.5) * 1.2;
-          this.vy = (Math.random() - 0.5) * 1.2 - 0.3;
-          this.alpha = 0.85;
-          this.decay = 0.028 + Math.random() * 0.018;
-          this.size = 1.5 + Math.random() * 3;
-          this.rgb = getAccentRGB();
-        }
-        update() { this.x += this.vx; this.y += this.vy; this.vy += 0.02; this.alpha -= this.decay; this.size *= 0.97; }
-        draw() {
-          if (this.alpha <= 0) return;
-          ctx.save();
-          ctx.globalAlpha = this.alpha;
-          ctx.shadowColor = `rgba(${this.rgb},0.6)`;
-          ctx.shadowBlur = 8;
-          ctx.beginPath();
-          ctx.arc(this.x, this.y, Math.max(0.1, this.size), 0, Math.PI * 2);
-          ctx.fillStyle = `rgba(${this.rgb},${this.alpha})`;
-          ctx.fill();
-          ctx.restore();
-        }
-      }
-
-      let frame = 0;
-      window.addEventListener('mousemove', (e) => {
-        frame++;
-        if (frame % 2 === 0) particles.push(new Particle(e.clientX, e.clientY));
-        if (particles.length > 100) particles = particles.slice(-100);
-      });
-      window.addEventListener('touchmove', (e) => {
-        const t = e.touches[0];
-        particles.push(new Particle(t.clientX, t.clientY));
-        if (particles.length > 60) particles = particles.slice(-60);
-      }, { passive: true });
-
-      function animate() {
-        ctx.clearRect(0, 0, W, H);
-        for (let i = particles.length - 1; i >= 0; i--) {
-          particles[i].update(); particles[i].draw();
-          if (particles[i].alpha <= 0) particles.splice(i, 1);
-        }
-        requestAnimationFrame(animate);
-      }
-      animate();
-    })();
-
-    // ===== DASHBOARD LOGIC (Greeting & Facts) =====
-    (function() {
+      // Extensive array of high-yield facts
       const facts = [
-        { icon:'💉', text:'The normal adult heart rate is 60-100 bpm. Anything above 100 is tachycardia; below 60 is bradycardia.', category:'Cardiovascular' },
+        { icon:'❤️', text:'The normal adult heart rate is 60-100 bpm. Anything above 100 is tachycardia; below 60 is bradycardia.', category:'Cardiovascular' },
         { icon:'🫁', text:'Normal respiratory rate for adults is 12-20 breaths/min. Tachypnea (>20) is an early warning sign of deterioration.', category:'Respiratory' },
         { icon:'🌡️', text:'Normal body temperature is 36.1–37.2°C (97–99°F). Fever is defined as >38°C (100.4°F).', category:'Fundamentals' },
         { icon:'💊', text:'The "5 Rights" of medication administration: Right Patient, Right Drug, Right Dose, Right Route, Right Time.', category:'Pharmacology' },
@@ -531,7 +422,46 @@
         { icon:'🔬', text:'Normal blood glucose is 3.9–5.6 mmol/L (70–100 mg/dL) fasting. Diabetes is diagnosed at ≥7.0 mmol/L.', category:'Endocrine' },
         { icon:'🏥', text:'SBAR (Situation, Background, Assessment, Recommendation) is the gold standard communication tool in handover.', category:'Clinical Skills' },
         { icon:'❤️', text:'The left anterior descending (LAD) artery supplies the anterior wall of the left ventricle — occlusion causes the most dangerous MI.', category:'Cardiovascular' },
-        { icon:'🛡️', text:'Standard precautions apply to ALL patients regardless of diagnosis — includes hand hygiene, PPE, and safe sharps disposal.', category:'Infection Control' }
+        { icon:'🛡️', text:'Standard precautions apply to ALL patients regardless of diagnosis — includes hand hygiene, PPE, and safe sharps disposal.', category:'Infection Control' },
+        { icon:'🩸', text:'Normal haemoglobin: Males 13.5–17.5 g/dL, Females 12–15.5 g/dL. Below 8 g/dL usually requires transfusion.', category:'Haematology' },
+        { icon:'🧬', text:'Potassium normal range is 3.5–5.0 mEq/L. Hypokalaemia (<3.5) causes muscle weakness and cardiac arrhythmias.', category:'Electrolytes' },
+        { icon:'🌙', text:'Sleep deprivation in patients increases pain sensitivity, slows healing, and raises cortisol — always prioritise rest periods.', category:'Holistic Care' },
+        { icon:'⚕️', text:'The nursing process: Assessment → Diagnosis → Planning → Implementation → Evaluation (ADPIE).', category:'Nursing Process' },
+        { icon:'🩻', text:'Normal SpO₂ is 95–100%. Below 90% is hypoxaemia requiring immediate oxygen therapy.', category:'Respiratory' },
+        { icon:'💧', text:'Normal urine output is 0.5–1 mL/kg/hr. Output <0.5 mL/kg/hr for 2+ hours indicates oliguria — report immediately.', category:'Renal' },
+        { icon:'🍽️', text:'NPO (Nil Per Os) means nothing by mouth. Patients are usually NPO for 6-8 hours before surgery to reduce aspiration risk.', category:'Perioperative' },
+        { icon:'🤱', text:'Fundal height in centimeters roughly equals gestational age in weeks after 20 weeks. E.g., 28cm ≈ 28 weeks.', category:'Maternal Health' },
+        { icon:'🧘', text:'Therapeutic communication techniques include open-ended questions, reflection, clarification, and silence — avoid advice-giving.', category:'Mental Health' },
+        { icon:'⚠️', text:'Anaphylaxis is a severe, life-threatening allergic reaction. First-line treatment is intramuscular Adrenaline (Epinephrine).', category:'Emergency' },
+        { icon:'🧪', text:'Normal Sodium (Na+) levels are 135-145 mEq/L. Hyponatremia can lead to confusion and seizures.', category:'Electrolytes' },
+        { icon:'🦴', text:'Osteoporosis makes bones brittle. Weight-bearing exercises and adequate calcium/vitamin D intake are essential for prevention.', category:'Musculoskeletal' },
+        { icon:'👁️', text:'Glaucoma causes increased intraocular pressure leading to optic nerve damage. It is a leading cause of irreversible blindness.', category:'Sensory' },
+        { icon:'👶', text:'The fontanelles in an infant allow for brain growth. The anterior fontanelle usually closes between 12-18 months.', category:'Paediatrics' },
+        { icon:'🚑', text:'In CPR for adults, the compression-to-ventilation ratio is 30:2, at a rate of 100-120 compressions per minute.', category:'Emergency' },
+        { icon:'🍔', text:'A low-sodium diet is crucial for managing hypertension and heart failure to reduce fluid retention.', category:'Nutrition' },
+        { icon:'🩺', text:'A murmur is an abnormal heart sound usually caused by turbulent blood flow through a defective valve.', category:'Cardiovascular' },
+        { icon:'🧠', text:'Stroke symptoms can be remembered with FAST: Face drooping, Arm weakness, Speech difficulty, Time to call emergency.', category:'Neurology' },
+        { icon:'🩸', text:'Type O negative blood is the universal donor, meaning it can be given to patients of any blood type in an emergency.', category:'Haematology' },
+        { icon:'🦠', text:'Antibiotic resistance occurs when bacteria mutate and defeat the drugs designed to kill them. Complete the full course!', category:'Pharmacology' },
+        { icon:'🤰', text:'Folic acid supplementation during pregnancy is vital to prevent neural tube defects like spina bifida.', category:'Maternal Health' },
+        { icon:'🏃', text:'Deep Vein Thrombosis (DVT) is a blood clot in a deep vein, usually the leg. Early ambulation prevents it.', category:'Medical-Surgical' },
+        { icon:'🚭', text:'Smoking cessation dramatically reduces the risk of COPD, lung cancer, and cardiovascular diseases.', category:'Health Promotion' },
+        { icon:'📉', text:'Hypoglycemia symptoms include sweating, trembling, dizziness, and confusion. Treat immediately with fast-acting carbs.', category:'Endocrine' },
+        { icon:'🔥', text:'The Rule of Nines is used to quickly assess the percentage of total body surface area burned in a patient.', category:'Emergency' },
+        { icon:'🛌', text:'To prevent pressure ulcers, reposition immobile patients at least every 2 hours and keep skin clean and dry.', category:'Fundamentals' },
+        { icon:'👶', text:'Moro reflex is a normal startle response in newborns, usually disappearing by 3 to 6 months of age.', category:'Paediatrics' },
+        { icon:'🧪', text:'Normal WBC count is 4,500 to 11,000 per microliter. Leukocytosis often indicates an active infection.', category:'Diagnostics' },
+        { icon:'💊', text:'Digoxin toxicity signs include nausea, vomiting, visual disturbances (yellow halos), and arrhythmias. Check apical pulse first.', category:'Pharmacology' },
+        { icon:'🫁', text:'Asthma is characterized by reversible airway inflammation and bronchospasm. Albuterol is a common rescue inhaler.', category:'Respiratory' },
+        { icon:'🧠', text:'Dementia is a progressive decline in cognitive function. Alzheimer\'s disease is the most common cause.', category:'Geriatrics' },
+        { icon:'🩸', text:'Normal Platelet count is 150,000 to 450,000. Thrombocytopenia increases the risk of severe bleeding.', category:'Haematology' },
+        { icon:'💧', text:'Dehydration in infants presents with a sunken fontanelle, absence of tears, and decreased wet diapers.', category:'Paediatrics' },
+        { icon:'🌡️', text:'Malignant hyperthermia is a severe reaction to certain anesthetics, characterized by a rapid rise in temperature and muscle rigidity.', category:'Perioperative' },
+        { icon:'🤰', text:'Preeclampsia is a pregnancy complication marked by high blood pressure and protein in the urine after 20 weeks.', category:'Maternal Health' },
+        { icon:'🧠', text:'Schizophrenia involves delusions, hallucinations, and disorganized thinking. Antipsychotics are the primary treatment.', category:'Mental Health' },
+        { icon:'🦠', text:'Tuberculosis (TB) is an airborne disease. Patients must be placed in a negative pressure room with airborne precautions.', category:'Infection Control' },
+        { icon:'🍎', text:'Vitamin K is essential for blood clotting and is given as an injection to newborns to prevent bleeding disorders.', category:'Paediatrics' },
+        { icon:'🫀', text:'Atrial Fibrillation (AFib) is an irregular, often rapid heart rate that causes poor blood flow and increases stroke risk.', category:'Cardiovascular' }
       ];
 
       let factIdx = 0;
@@ -539,7 +469,6 @@
       window.rotateFact = function() {
         factIdx = (factIdx + 1) % facts.length;
         showFact();
-        if ('vibrate' in navigator) try { navigator.vibrate(8); } catch(e) {}
       };
 
       function showFact() {
@@ -562,15 +491,17 @@
         }, 200);
       }
 
-      function updateGreeting() {
+      window.updatePersonalGreeting = function(name) {
         const h = new Date().getHours();
-        let greet = 'Good evening 🌙';
-        if (h < 12) greet = 'Good morning 🌤️';
-        else if (h < 18) greet = 'Good afternoon ☀️';
+        let greetTime = 'Good evening 🌙';
+        if (h < 12) greetTime = 'Good morning 🌤️';
+        else if (h < 18) greetTime = 'Good afternoon ☀️';
         
         const el = document.getElementById('dash-greeting');
-        if (el) el.textContent = greet;
-      }
+        if (el) {
+          el.textContent = name ? `${greetTime}, ${name}` : `${greetTime}, Future Nurse`;
+        }
+      };
 
       window.switchViewDash = function(view) {
         const btn = document.querySelector(`.nav__item[data-view="${view}"]`);
@@ -579,16 +510,16 @@
 
       let factTimer;
       function initDashboard() {
-        updateGreeting();
+        window.updatePersonalGreeting(null); // Defaults until Supabase loads
         showFact();
         clearInterval(factTimer);
-        factTimer = setInterval(() => window.rotateFact(), 15000); // Auto-rotate every 15s
+        factTimer = setInterval(() => window.rotateFact(), 12000); // Auto-rotate every 12s
       }
 
       window.addEventListener('load', initDashboard);
     })();
 
-    // ===== THREE.JS 3D DASHBOARD ANIMATION =====
+    // ===== ENHANCED THREE.JS 3D DASHBOARD ANIMATION =====
     (function() {
       function init3D() {
         const dashView = document.getElementById('dashboard-view');
@@ -608,15 +539,35 @@
           camera.position.z = 8;
 
           const objects = [];
+          let particlesMesh;
 
           function getAccentHex() {
             return getComputedStyle(document.documentElement).getPropertyValue('--accent').trim() || '#20f7d2';
           }
 
-          function createMedicalObjects() {
+          function createSceneObjects() {
             scene.clear();
             const color = new THREE.Color(getAccentHex());
 
+            // 1. Particle System (Stardust/Fluid)
+            const particlesGeo = new THREE.BufferGeometry();
+            const particlesCount = 700;
+            const posArray = new Float32Array(particlesCount * 3);
+            for(let i = 0; i < particlesCount * 3; i++) {
+                posArray[i] = (Math.random() - 0.5) * 20;
+            }
+            particlesGeo.setAttribute('position', new THREE.BufferAttribute(posArray, 3));
+            const particlesMat = new THREE.PointsMaterial({
+                size: 0.05,
+                color: color,
+                transparent: true,
+                opacity: 0.4,
+                blending: THREE.AdditiveBlending
+            });
+            particlesMesh = new THREE.Points(particlesGeo, particlesMat);
+            scene.add(particlesMesh);
+
+            // 2. Medical Geometries
             const matWire = new THREE.MeshBasicMaterial({ color, wireframe: true, transparent: true, opacity: 0.25 });
             const matSolid = new THREE.MeshBasicMaterial({ color, transparent: true, opacity: 0.08 });
             const matLine = new THREE.LineBasicMaterial({ color, transparent: true, opacity: 0.5 });
@@ -634,8 +585,8 @@
             const helixPoints1 = [], helixPoints2 = [];
             for (let i = 0; i < 80; i++) {
               const t = (i / 79) * Math.PI * 6 - Math.PI * 3;
-              helixPoints1.push(new THREE.Vector3(Math.cos(t)*0.3, t*0.2, Math.sin(t)*0.3));
-              helixPoints2.push(new THREE.Vector3(Math.cos(t+Math.PI)*0.3, t*0.2, Math.sin(t+Math.PI)*0.3));
+              helixPoints1.push(new THREE.Vector3(Math.cos(t)*0.4, t*0.25, Math.sin(t)*0.4));
+              helixPoints2.push(new THREE.Vector3(Math.cos(t+Math.PI)*0.4, t*0.25, Math.sin(t+Math.PI)*0.4));
             }
             const helix1 = new THREE.Line(new THREE.BufferGeometry().setFromPoints(helixPoints1), matLine.clone());
             const helix2 = new THREE.Line(new THREE.BufferGeometry().setFromPoints(helixPoints2), matLine.clone());
@@ -643,13 +594,13 @@
             scene.add(helix1); scene.add(helix2);
             objects.push({ solid: helix1, wire: helix2, rotX: 0.003, rotY: 0.006, floatSpeed: 0.4, floatAmp: 0.3, startY: 0 });
 
-            addObj(new THREE.TorusGeometry(1.5, 0.08, 16, 80), 5, 2, -6, 0.3, 0.5); // Stethoscope Torus
+            addObj(new THREE.TorusGeometry(1.5, 0.08, 16, 80), 5, 2, -6, 0.3, 0.5); // Torus
             addObj(new THREE.DodecahedronGeometry(1.2), -4, -2, -5, 0.2, 0.3); // Cell
             addObj(new THREE.IcosahedronGeometry(1.0), 4.5, -3, -4, 0.5, 0.2); // Molecule
             addObj(new THREE.OctahedronGeometry(1.1), -2, 3.5, -5, 0.3, 0.6); // Crystal
           }
 
-          createMedicalObjects();
+          createSceneObjects();
 
           function resize() {
             const w = dashView.clientWidth || window.innerWidth;
@@ -674,6 +625,12 @@
             camera.position.y += (-mouseY - camera.position.y) * 0.02;
             camera.lookAt(scene.position);
 
+            // Rotate Particles
+            if(particlesMesh) {
+                particlesMesh.rotation.y = t * 0.05;
+                particlesMesh.rotation.x = t * 0.02;
+            }
+
             objects.forEach((o, i) => {
               if(o.solid) { o.solid.rotation.x += o.rotX; o.solid.rotation.y += o.rotY; }
               if(o.wire) { o.wire.rotation.x += o.rotX; o.wire.rotation.y += o.rotY; }
@@ -689,7 +646,7 @@
           const origSetProperty = document.documentElement.style.setProperty;
           document.documentElement.style.setProperty = function(prop, val) {
             origSetProperty.call(this, prop, val);
-            if (prop === '--accent') createMedicalObjects();
+            if (prop === '--accent') createSceneObjects();
           };
         };
         document.head.appendChild(script);
