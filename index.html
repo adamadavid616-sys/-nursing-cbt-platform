@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="./styles.css" />
     <link rel="icon" type="image/x-icon" href="./favicon.ico" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
+    
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.39.0/dist/umd/supabase.min.js"></script>
     <script>
       window._sbInit = function(url, key) {
@@ -39,11 +39,11 @@
           </div>
 
           <nav class="nav" aria-label="Prep modes">
-            <button class="nav__item is-active glass-panel" type="button" data-view="practice"><i class="fa-solid fa-pen-fancy"></i> Practice</button>
+            <button class="nav__item is-active glass-panel" type="button" data-view="dashboard"><i class="fa-solid fa-gauge"></i> Dashboard</button>
+            <button class="nav__item glass-panel" type="button" data-view="practice"><i class="fa-solid fa-pen-fancy"></i> Practice</button>
             <button class="nav__item glass-panel" type="button" data-view="cbt"><i class="fa-solid fa-laptop-code"></i> CBT Exam</button>
             <button class="nav__item glass-panel" type="button" data-view="review"><i class="fa-solid fa-chart-line"></i> Review</button>
             <button class="nav__item glass-panel" type="button" data-view="guide"><i class="fa-solid fa-book-open"></i> Study Guide</button>
-            <button class="nav__item glass-panel" type="button" data-view="dashboard"><i class="fa-solid fa-gauge-high"></i> Dashboard</button>
           </nav>
 
           <div class="theme-switcher glass-panel">
@@ -58,8 +58,8 @@
           <div class="topbar-left">
             <button id="sidebar-toggle" class="icon-button" title="Toggle Sidebar"><i class="fa-solid fa-bars-staggered"></i></button>
             <div>
-              <p id="view-kicker" class="eyebrow">Learning mode</p>
-              <h2 id="view-title">Practice with instant rationales</h2>
+              <p id="view-kicker" class="eyebrow">Welcome</p>
+              <h2 id="view-title">Your personalized study dashboard</h2>
             </div>
           </div>
           <div class="timer glass-panel" aria-live="polite">
@@ -68,7 +68,23 @@
           </div>
         </header>
 
-        <section id="practice-view" class="view is-visible">
+        <!-- ==== DASHBOARD SECTION ==== -->
+        <section id="dashboard-view" class="view is-visible">
+          <div class="dashboard-container glass-panel">
+            <div class="dashboard-content">
+              <h3 id="dashboard-fact"></h3>
+              <p class="subtle">Interact with the floating objects for more insights.</p>
+            </div>
+            <div class="interactive-objects">
+              <!-- Placeholder for 3D objects -->
+              <div class="object object-1"></div>
+              <div class="object object-2"></div>
+              <div class="object object-3"></div>
+            </div>
+          </div>
+        </section>
+
+        <section id="practice-view" class="view">
           <div class="toolbar glass-panel" aria-label="Practice filters">
             <label>
               Category
@@ -102,11 +118,11 @@
             </div>
             <div class="setup-grid">
               <label>
-                Questions
+                Number of Questions
                 <input id="exam-size" type="number" min="10" max="48" value="25" class="glass-panel" />
               </label>
               <label>
-                Minutes
+                Total Time (Minutes)
                 <input id="exam-minutes" type="number" min="5" max="180" value="35" class="glass-panel" />
               </label>
             </div>
@@ -163,52 +179,6 @@
             </article>
           </div>
         </section>
-
-        <!-- NEW DASHBOARD SECTION -->
-        <section id="dashboard-view" class="view">
-            <div class="dashboard-intro">
-                <p class="eyebrow">Welcome to your Hub</p>
-                <h2>General Information & Facts</h2>
-                <p class="subtle">Discover key insights and random facts about council courses and nursing.</p>
-            </div>
-            <div class="dashboard-content">
-                <!-- Content will be populated by JS -->
-                <div class="dashboard-card">
-                  <i class="fa-solid fa-lightbulb"></i>
-                  <h4>Did You Know?</h4>
-                  <p>The average registered nurse completes over 1.5 million patient assessments in a typical 40-year career.</p>
-                </div>
-                <div class="dashboard-card">
-                  <i class="fa-solid fa-graduation-cap"></i>
-                  <h4>Course Spotlight</h4>
-                  <p><strong>Pediatric Assessment:</strong> Focus on developmental stages, common childhood illnesses, and age-appropriate communication techniques.</p>
-                </div>
-                <div class="dashboard-card">
-                  <i class="fa-solid fa-flask-vial"></i>
-                  <h4>Lab Value Quick Check</h4>
-                  <p><strong>Potassium (K+):</strong> Normal range is 3.5-5.0 mEq/L. Crucial for cardiac function and nerve impulses.</p>
-                </div>
-                <div class="dashboard-card">
-                  <i class="fa-solid fa- stethoscope"></i>
-                  <h4>Random Fact</h4>
-                  <p>The stethoscope was invented in 1816 by René Laennec, primarily to protect his modesty and overcome his shyness when examining female patients.</p>
-                </div>
-                <div class="dashboard-card">
-                   <i class="fa-solid fa-briefcase-medical"></i>
-                  <h4>Nursing Concept</h4>
-                  <p><strong>Maslow's Hierarchy of Needs:</strong> Prioritize physiological needs (breathing, circulation) before safety, then love/belonging, esteem, and self-actualization.</p>
-                </div>
-                <div class="dashboard-card">
-                   <i class="fa-solid fa-brain"></i>
-                  <h4>Mindfulness Moment</h4>
-                  <p>Taking short breaks to practice deep breathing can significantly reduce stress and improve focus during long study sessions.</p>
-                </div>
-            </div>
-            <!-- Placeholder for potential floating 3D objects (requires JS implementation) -->
-            <!-- <div class="floating-object"></div> -->
-        </section>
-        <!-- END DASHBOARD SECTION -->
-
       </section>
     </main>
 
@@ -223,7 +193,7 @@
       </div>
       <div id="tutor-messages"></div>
       <div id="tutor-input-row">
-        <input id="tutor-input" type="text" placeholder="Ask me anything..." />
+        <input id="tutor-input" type="text" placeholder="Ask about nursing council exams..." />
         <button id="tutor-send" class="primary"><i class="fa-solid fa-arrow-up"></i></button>
       </div>
     </div>
@@ -231,10 +201,10 @@
     <script>
       // Expanded Fancy Colors (Purples, Golds, Reds, Blues, Yellows)
       const colors = [
-        /* Cyans & Greens */ '#20f7d2', '#06d6a0', '#34c759', '#32d74b', '#b5e48c',
+        /* Cyans & Greens */ '#20f7d2', '#00f5d4', '#06d6a0', '#34c759', '#32d74b', '#b5e48c', 
         /* Golds & Yellows */'#ffcc00', '#ffd60a', '#ffb703', '#fb8500', '#e9c46a', '#f4a261',
-        /* Reds & Oranges */ '#ff3b30', '#ef476f', '#e76f51', '#f3722c', '#d90429',
-        /* Purples & Pinks */'#bf5af2', '#d580ff', '#af52de', '#9d4edd', '#7b2cbf', '#f15bb5', '#ff375f',
+        /* Reds & Oranges */ '#ff3b30', '#ff453a', '#ef476f', '#e76f51', '#f3722c', '#d90429',
+        /* Purples & Pinks */'#bf5af2', '#d580ff', '#af52de', '#9d4edd', '#7b2cbf', '#f15bb5', '#ff375f', 
         /* Blues & Navys */  '#007aff', '#0a84ff', '#1982c4', '#64d2ff', '#00bbf9', '#118ab2', '#0028ff',
         /* Neutrals */       '#f5f5f7', '#d1d1d6', '#aeaeb2', '#8e8e93'
       ];
@@ -288,23 +258,19 @@
       document.addEventListener('mousemove', (e) => {
         document.querySelectorAll('.glass-panel, .option').forEach(card => {
           const rect = card.getBoundingClientRect();
-          // Check if card is within viewport before calculating mouse position relative to it
-          if (rect.width > 0 && rect.height > 0 &&
-              rect.right > 0 && rect.left < window.innerWidth &&
-              rect.bottom > 0 && rect.top < window.innerHeight) {
-            card.style.setProperty('--mouse-x', `${e.clientX - rect.left}px`);
-            card.style.setProperty('--mouse-y', `${e.clientY - rect.top}px`);
-          }
+          card.style.setProperty('--mouse-x', `${e.clientX - rect.left}px`);
+          card.style.setProperty('--mouse-y', `${e.clientY - rect.top}px`);
         });
       });
     </script>
 
     <script>
-      var SB_URL = 'https://bhdyyuiuzepsixvfcirg.supabase.co';
-      var SB_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJoZHl5dWl1emVwc2l4dmZjaXJnIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODEzOTY3MzAsImV4cCI6MjA5Njk3MjczMH0.jETQkiWg_R7hU7Z85B6fdt7BUhKPP5wRSc4ndh8C4rA';
-      var APP_URL = 'https://nursing-cbt-platform.onrender.com'; // Ensure this matches your deployed URL
+      // IMPORTANT: Replace with your actual Supabase URL and Key
+      var SB_URL = 'https://bhdyyuiuzepsixvfcirg.supabase.co'; // Replace with your Supabase URL
+      var SB_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJoZHl5dWl1emVwc2l4dmZjaXJnIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODEzOTY3MzAsImV4cCI6MjA5Njk3MjczMH0.jETQkiWg_R7hU7Z85B6fdt7BUhKPP5wRSc4ndh8C4rA'; // Replace with your Supabase Anon Key
+      var APP_URL = 'https://nursing-cbt-platform.onrender.com'; // Replace with your application's deployed URL
       var CHAT_KEY = 'ad-tutor-chat';
-      var MAX_MSGS = 100;
+      var MAX_MSGS = 100; // Max messages to keep in local storage history
 
       var chatHistory = [];
       var currentUser = null;
@@ -318,7 +284,8 @@
       var tutorSend = document.getElementById('tutor-send');
       var loginBarBtn = document.getElementById('login-bar-btn');
       var loginBarMsg = document.getElementById('login-bar-msg');
-      var loginActions = document.querySelector('.login-actions'); // To potentially hide user info if needed
+      var loginBarUser = document.getElementById('login-bar-user');
+
 
       tutorBtn.addEventListener('click', function() { tutorPanel.classList.toggle('open'); });
       tutorClose.addEventListener('click', function() { tutorPanel.classList.remove('open'); });
@@ -349,12 +316,12 @@
         tutorSend.disabled = true;
         var typing = addMsg('Thinking...', 'typing');
         try {
-          const response = await fetch('/api/chat', {
+          var res = await fetch('/api/chat', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ messages: chatHistory, context: { /* Add context if needed, e.g., current question, topic */ } })
+            body: JSON.stringify({ messages: chatHistory, context: { questionCount: 9572 } }) // Example context, adjust as needed
           });
-          const data = await response.json();
+          var data = await res.json();
           typing.remove();
           var reply = data.reply || data.error || 'Sorry, could not get a response.';
           addMsg(reply, 'bot');
@@ -364,7 +331,6 @@
         } catch(err) {
           typing.remove();
           addMsg('Connection error. Please try again.', 'bot');
-          console.error('Chat API error:', err);
         }
         tutorSend.disabled = false;
         tutorInput.focus();
@@ -373,142 +339,118 @@
       tutorSend.addEventListener('click', sendMessage);
       tutorInput.addEventListener('keydown', function(e) { if (e.key === 'Enter') sendMessage(); });
 
+      // Function to save chat history to Supabase
       async function saveCloud(h) {
         if (!sbClient || !currentUser) return;
         try {
-          const { error } = await sbClient.from('chat_history').upsert({
+          await sbClient.from('chat_history').upsert({
             user_id: currentUser.id,
-            messages: h.slice(-MAX_MSGS),
+            messages: h.slice(-MAX_MSGS), // Save only the last MAX_MSGS
             updated_at: new Date().toISOString()
           }, { onConflict: 'user_id' });
-          if (error) console.error('Cloud save error:', error);
-        } catch(e) { console.error('Cloud save exception:', e); }
+        } catch(e) {
+          console.error("Error saving chat to Supabase:", e);
+        }
       }
 
-      async function loadCloud(userId) {
+      // Function to load chat history from Supabase
+      async function loadCloud(accessToken, userId) {
         if (!sbClient) return [];
         try {
-          const { data, error } = await sbClient.from('chat_history').select('messages').eq('user_id', userId).single();
+          var { data, error } = await sbClient.from('chat_history').select('messages').eq('user_id', userId).single();
           if (error) {
-            console.error('Cloud load error:', error);
+            console.error("Error loading chat from Supabase:", error.message);
             return [];
           }
           return data?.messages || [];
-        } catch(e) { console.error('Cloud load exception:', e); return []; }
+        } catch(e) {
+          console.error("Error loading chat from Supabase:", e);
+          return [];
+        }
       }
 
+      // Function to update the login bar UI
       function setLoginBar(user) {
         if (!loginBarBtn) return;
         if (user) {
           var name = (user.user_metadata && user.user_metadata.full_name) ? user.user_metadata.full_name.split(' ')[0] : 'You';
-          loginBarMsg.innerHTML = `<i class="fa-solid fa-circle-check" style="color:var(--accent)"></i> Welcome, ${name}!`;
+          loginBarMsg.innerHTML = '<i class="fa-solid fa-circle-check" style="color:var(--accent)"></i> Welcome, ' + name + '!';
+          loginBarUser.textContent = name; // Display user's name
           loginBarBtn.innerHTML = '<i class="fa-solid fa-right-from-bracket"></i> Sign out';
-          loginBarBtn.className = "glass-panel"; // Removed 'primary' to keep it simple
+          loginBarBtn.className = "glass-panel"; // Styling for sign out button
           loginBarBtn.onclick = async function() {
-            try { if (sbClient) await sbClient.auth.signOut({ scope: 'global' }); } catch(e) { console.error('Sign out error:', e) }
-            // Clear relevant local storage for a clean logout
+            try { if (sbClient) await sbClient.auth.signOut({ scope: 'global' }); } catch(e) {}
+            // Clear session data from local storage
             Object.keys(localStorage).forEach(function(key) {
-              if (key.startsWith('sb-') || key.includes('supabase') || key === 'ad-tutor-chat') {
+              if (key.startsWith('sb-') || key.includes('supabase') || key === 'ad-tutor-chat' || key === 'ad-session' || key === 'nclex-progress') {
                 localStorage.removeItem(key);
               }
             });
             currentUser = null; chatHistory = []; renderHistory([]); setLoginBar(null);
-            // Reload page to ensure clean state
-            setTimeout(function() { window.location.reload(); }, 500);
+            setTimeout(function() { window.location.reload(); }, 500); // Reload to clear state
           };
-          // Optionally hide user display if not needed
-          if(loginActions) loginActions.style.display = 'block';
         } else {
           loginBarMsg.innerHTML = '<i class="fa-solid fa-cloud-arrow-up"></i> Sign in to save history';
+          loginBarUser.textContent = ''; // Clear user name
           loginBarBtn.innerHTML = '<i class="fa-brands fa-google"></i> Sign in';
-          loginBarBtn.className = "primary glass-panel"; // Re-apply primary style for sign in
+          loginBarBtn.className = "primary glass-panel"; // Styling for sign in button
           loginBarBtn.onclick = function() { window.doGoogleSignIn(); };
-          if(loginActions) loginActions.style.display = 'block';
         }
       }
 
+      // Initiates Google Sign-In with Supabase
       window.doGoogleSignIn = function() {
-        if (!sbClient) return alert('Authentication not ready. Please wait a moment and try again.');
-        sbClient.auth.signInWithOAuth({
-          provider: 'google',
-          options: {
-            // Use APP_URL for redirect if available, otherwise use current window location
-            redirectTo: APP_URL || window.location.origin,
-            queryParams: { prompt: 'select_account', access_type: 'offline' }
-          }
-        });
+        if (!sbClient) return alert('Auth not ready. Please wait a moment and try again.');
+        sbClient.auth.signInWithOAuth({ provider: 'google', options: { redirectTo: APP_URL, queryParams: { prompt: 'select_account', access_type: 'offline' } } });
       };
 
+      // Waits for Supabase script to load before proceeding
       function waitForSupabase(callback) {
-        if (window.supabase) {
-          callback();
-        } else {
+        if (window.supabase) { callback(); } else {
           var attempts = 0;
           var interval = setInterval(function() {
             attempts++;
-            if (window.supabase) {
-              clearInterval(interval);
-              callback();
-            } else if (attempts > 30) { // Increased attempts for slower connections
-              clearInterval(interval);
-              console.warn('Supabase CDN failed to load after multiple attempts.');
-            }
+            if (window.supabase) { clearInterval(interval); callback(); }
+            else if (attempts > 20) { clearInterval(interval); console.warn('Supabase CDN failed to load'); }
           }, 200);
         }
       }
 
+      // Initializes the application, including Supabase, login, and chat history
       function init() {
-        var local = loadLocal();
-        if (local.length > 0) {
-          chatHistory = local;
-          renderHistory(chatHistory);
-        }
-
+        var localHistory = loadLocal();
+        if (localHistory.length > 0) { chatHistory = localHistory; renderHistory(chatHistory); }
+        
         waitForSupabase(async function() {
           try {
             sbClient = window.supabase.createClient(SB_URL, SB_KEY);
-            // Check for existing session
-            const { data: sessionData } = await sbClient.auth.getSession();
-
-            if (sessionData && sessionData.session) {
-              currentUser = sessionData.session.user;
-              currentUser.access_token = sessionData.session.access_token; // Store token if needed for other API calls
+            var sessionData = await sbClient.auth.getSession();
+            var session = sessionData.data.session;
+            
+            if (session) {
+              currentUser = session.user;
+              currentUser.access_token = session.access_token; // Store access token for potential future use
               setLoginBar(currentUser);
-              const cloudHistory = await loadCloud(currentUser.id);
-              if (cloudHistory && cloudHistory.length > 0) {
-                chatHistory = cloudHistory;
-                renderHistory(chatHistory);
-              }
-            } else {
-              setLoginBar(null); // User is not logged in
-            }
+              var cloudHistory = await loadCloud(session.access_token, session.user.id);
+              if (cloudHistory.length > 0) { chatHistory = cloudHistory; renderHistory(chatHistory); }
+            } else { setLoginBar(null); }
 
             // Listen for authentication state changes
-            sbClient.auth.onAuthStateChange((event, session) => {
-              if (event === 'SIGNED_OUT') {
+            sbClient.auth.onAuthStateChange(async function(event, session) {
+              if (session) {
+                currentUser = session.user;
+                setLoginBar(currentUser);
+                var cloudHistory = await loadCloud(session.access_token, session.user.id);
+                if (cloudHistory.length > 0) { chatHistory = cloudHistory; renderHistory(chatHistory); }
+              } else {
                 currentUser = null;
                 setLoginBar(null);
-                // Clear local chat history on sign out to prevent mixing sessions
-                chatHistory = [];
-                saveLocal([]);
-                renderHistory([]);
-              } else if (event === 'SIGNED_IN' && session) {
-                currentUser = session.user;
-                currentUser.access_token = session.access_token;
-                setLoginBar(currentUser);
-                // Load cloud history on sign in
-                loadCloud(currentUser.id).then(cloudHistory => {
-                  if (cloudHistory && cloudHistory.length > 0) {
-                    chatHistory = cloudHistory;
-                    renderHistory(chatHistory);
-                  }
-                });
               }
             });
-          } catch(e) {
-            console.error('Supabase setup or initialization error:', e);
-            // Optionally inform the user about auth failure
-            loginBarMsg.innerHTML = '<i class="fa-solid fa-triangle-exclamation" style="color:var(--rose)"></i> Auth failed';
+          } catch(e) { 
+            console.error('Supabase setup error:', e); 
+            // Optionally handle errors more gracefully, e.g., disable login if Supabase fails
+            setLoginBar(null); // Ensure login bar is in sign-in state if Supabase fails
           }
         });
       }
@@ -526,46 +468,44 @@
       let mouse = { x: W/2, y: H/2 };
       let frame = 0;
 
+      // Resize canvas on window resize
       window.addEventListener('resize', () => {
         W = canvas.width = window.innerWidth;
         H = canvas.height = window.innerHeight;
       });
 
+      // Function to get the current accent color from CSS variables
       function getAccentColor() {
-        // Safely get computed style
-        const accentColor = getComputedStyle(document.documentElement).getPropertyValue('--accent').trim() || '#20f7d2';
-        // Ensure color is a valid hex format before parsing
-        if (!/^#[0-9A-F]{6}$/i.test(accentColor)) {
-          console.warn(`Invalid accent color found: ${accentColor}. Using default.`);
-          return { r: 32, g: 247, b: 210, hex: '#20f7d2' }; // Default to accent
-        }
-        const r = parseInt(accentColor.slice(1,3), 16);
-        const g = parseInt(accentColor.slice(3,5), 16);
-        const b = parseInt(accentColor.slice(5,7), 16);
-        return { r, g, b, hex: accentColor };
+        const hex = getComputedStyle(document.documentElement)
+          .getPropertyValue('--accent').trim() || '#20f7d2'; // Default to accent color
+        const r = parseInt(hex.slice(1,3), 16);
+        const g = parseInt(hex.slice(3,5), 16);
+        const b = parseInt(hex.slice(5,7), 16);
+        return { r, g, b, hex };
       }
 
+      // Particle class for the trailing effect
       class Particle {
         constructor(x, y, color) {
-          this.x = x + (Math.random() - 0.5) * 6;
+          this.x = x + (Math.random() - 0.5) * 6; // Slight random offset
           this.y = y + (Math.random() - 0.5) * 6;
-          this.vx = (Math.random() - 0.5) * 1.5;
-          this.vy = (Math.random() - 0.5) * 1.5 - 0.5; // Slight upward initial velocity
-          this.alpha = 1; // Start fully opaque
-          this.decay = 0.035 + Math.random() * 0.03; // Faster decay for less persistence
-          this.size = 2 + Math.random() * 3; // Slightly smaller max size
+          this.vx = (Math.random() - 0.5) * 1.5; // Initial horizontal velocity
+          this.vy = (Math.random() - 0.5) * 1.5 - 0.5; // Initial vertical velocity (slightly upwards)
+          this.alpha = 0.9; // Starting opacity
+          this.decay = 0.025 + Math.random() * 0.02; // Rate of fading
+          this.size = 2 + Math.random() * 4; // Initial size
           this.color = color;
-          // Removed glow effect: this.glow = Math.random() > 0.5;
+          // Removed glow effect here as per request
         }
         update() {
           this.x += this.vx;
           this.y += this.vy;
-          this.vy += 0.04; // Slightly stronger gravity
-          this.alpha -= this.decay;
-          this.size *= 0.96; // Slightly faster shrinking
+          this.vy += 0.03; // Simulate gravity/downward pull
+          this.alpha -= this.decay; // Fade out
+          this.size *= 0.97; // Shrink over time
         }
         draw() {
-          if (this.alpha <= 0) return;
+          if (this.alpha <= 0) return; // Don't draw if fully faded
           ctx.save();
           ctx.globalAlpha = this.alpha;
           ctx.beginPath();
@@ -576,108 +516,105 @@
         }
       }
 
-      // Removed Sparkle class and related logic
-
+      // Add event listener for mouse movement
       window.addEventListener('mousemove', (e) => {
         mouse.x = e.clientX;
         mouse.y = e.clientY;
         frame++;
-        const color = getAccentColor();
-        // Add trail particles
-        if (frame % 2 === 0) { // Add particles at a slightly slower rate
-          particles.push(new Particle(e.clientX, e.clientY, color));
+        const color = getAccentColor(); // Get the current accent color
 
-          // Limit particle count to avoid performance issues
-          if (particles.length > 120) { // Reduced max particles slightly
-            particles = particles.slice(-120); // Keep only the last N particles
-          }
+        // Add new particles at a certain interval to create the trail
+        if (frame % 2 === 0) { // Add a particle every 2 frames
+          particles.push(new Particle(e.clientX, e.clientY, color));
+        }
+        
+        // Limit the number of particles to prevent performance issues
+        if (particles.length > 100) { // Adjusted particle limit
+          particles = particles.filter(p => p.alpha > 0.1).slice(-100); // Keep particles that are still visible
         }
       });
 
-      // Touch support for mobile
+      // Added touch support for mobile devices
       window.addEventListener('touchmove', (e) => {
         const t = e.touches[0];
-        if (!t) return;
         const color = getAccentColor();
+        // Add a particle for each touch point (or just the first one)
         particles.push(new Particle(t.clientX, t.clientY, color));
-        if (particles.length > 60) particles = particles.slice(-60); // Limit for touch
-      }, { passive: true });
+        // Limit particles for touch as well
+        if (particles.length > 60) { 
+          particles = particles.slice(-60); 
+        }
+      }, { passive: true }); // Use passive: true for better scroll performance
 
+      // Animation loop for drawing particles
       function animate() {
-        ctx.clearRect(0, 0, W, H);
+        ctx.clearRect(0, 0, W, H); // Clear the entire canvas
         for (let i = particles.length - 1; i >= 0; i--) {
           const p = particles[i];
-          p.update();
-          p.draw();
-          if (p.alpha <= 0 || p.size < 0.2) { // Remove particles that have faded or shrunk too small
+          p.update(); // Update particle position and properties
+          p.draw();   // Draw the particle
+          // Remove particles that have fully faded or shrunk too small
+          if (p.alpha <= 0 || p.size < 0.2) {
             particles.splice(i, 1);
           }
         }
-        requestAnimationFrame(animate);
+        requestAnimationFrame(animate); // Request the next frame
       }
-      animate();
+      animate(); // Start the animation loop
     })();
 
     // ===== HAPTICS =====
     (function() {
+      // Function to trigger vibration
       function haptic(pattern) {
         if ('vibrate' in navigator) {
-          try { navigator.vibrate(pattern); } catch(e) { console.warn('Vibration API error:', e); }
+          try { navigator.vibrate(pattern); } catch(e) {}
         }
       }
 
-      // Light tap on any button or interactive element
+      // Add click listener to the document to capture all button clicks
       document.addEventListener('click', function(e) {
-        const interactiveElement = e.target.closest('button, .option, .nav__item, .theme-dot, #sidebar-toggle');
-        if (!interactiveElement) return;
+        // Check if the click event originated from a button or a similar interactive element
+        const btn = e.target.closest('button, .option, .nav__item, .theme-dot');
+        if (!btn) return; // If not an interactive element, do nothing
 
-        // Get haptic pattern based on element type or class
-        let pattern = null;
-        if (interactiveElement.classList.contains('primary')) {
-          pattern = [10, 30, 10]; // Double tap for primary actions
-        } else if (interactiveElement.classList.contains('option')) {
-          pattern = 8; // Soft tap on options
-        } else if (interactiveElement.classList.contains('nav__item') || interactiveElement.id === 'sidebar-toggle') {
-          pattern = [5, 20, 5]; // Navigation feel
+        // Apply different haptic patterns based on button type
+        if (btn.classList.contains('primary')) {
+          haptic([10, 30, 10]); // Stronger vibration for primary actions
+        } else if (btn.classList.contains('option')) {
+          haptic(8); // Subtle vibration for selecting answer options
+        } else if (btn.classList.contains('nav__item')) {
+          haptic([5, 20, 5]); // Navigation feel for menu items
         } else {
-          pattern = 6; // Light tap for other buttons
+          haptic(6); // Standard light vibration for other buttons
         }
-        haptic(pattern);
-      }, { passive: true }); // Use passive: true for better scroll performance
+      });
 
-      // MutationObserver to detect answer feedback for success/error haptics
+      // MutationObserver to detect when answer feedback classes are added
       const observer = new MutationObserver(function(mutations) {
-        mutations.forEach(function(mutation) {
-          mutation.addedNodes.forEach(function(node) {
-            // Check for answer feedback classes on option elements
-            if (node.classList && (node.classList.contains('is-correct') || node.classList.contains('is-wrong'))) {
-              const optionElement = node.closest('.option'); // Find the parent option
-              if (optionElement) {
-                if (node.classList.contains('is-correct')) {
-                  haptic([10, 50, 10, 50, 30]); // Success pattern
-                } else if (node.classList.contains('is-wrong')) {
-                  haptic([20, 80, 20]); // Error pattern
-                }
-              }
+        mutations.forEach(function(m) {
+          m.addedNodes.forEach(function(node) {
+            // Check if the added node has the 'is-correct' class
+            if (node.classList && node.classList.contains('is-correct')) {
+              haptic([10, 50, 10, 50, 30]); // Success vibration pattern
+            }
+            // Check if the added node has the 'is-wrong' class
+            if (node.classList && node.classList.contains('is-wrong')) {
+              haptic([20, 80, 20]); // Error vibration pattern
             }
           });
         });
       });
 
-      // Function to observe the options containers
-      function observeOptionsContainers() {
+      // Function to set up the observer on the answer option containers
+      function observeOptions() {
         const containers = document.querySelectorAll('#practice-options, #exam-options');
-        containers.forEach(container => {
-          observer.observe(container, {
-            subtree: true, // Observe descendants
-            childList: true, // Observe addition/removal of nodes
-            attributes: true, // Observe attribute changes
-            attributeFilter: ['class'] // Specifically watch for class changes
-          });
+        containers.forEach(c => {
+          observer.observe(c, { subtree: true, childList: true, attributes: true, attributeFilter: ['class'] });
         });
       }
-      // Ensure the observer is set up after the DOM is ready
-      window.addEventListener('load', observeOptionsContainers);
+      // Start observing when the DOM is fully loaded
+      window.addEventListener('load', observeOptions);
     })();
     </script>
 
