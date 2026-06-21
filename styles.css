@@ -99,7 +99,6 @@ button:active { transform: scale(0.96); }
   background: var(--panel-2); /* Use a slightly different panel color */
   backdrop-filter: blur(60px) saturate(200%);
   -webkit-backdrop-filter: blur(60px) saturate(200%);
-  border-right: 1px solid var(--line);
   transition: transform 0.4s var(--ease-fluid), width 0.4s var(--ease-fluid);
   z-index: 1000;
   height: 100vh;
@@ -109,6 +108,7 @@ button:active { transform: scale(0.96); }
   top: 0;
   transform: translateX(-100%); /* Hidden by default */
   box-shadow: 0 0 50px rgba(0,0,0,0.8); /* Shadow when open */
+  border-right: 1px solid var(--line); /* Keep border */
 }
 
 /* Sidebar open state */
@@ -116,13 +116,13 @@ button:active { transform: scale(0.96); }
   transform: translateX(0); /* Slides in when .open is added */
 }
 
-/* Make sidebar visible on larger screens but still allow toggle */
+/* Make sidebar visible and part of flow on larger screens, but still collapsible */
 @media (min-width: 769px) {
   .sidebar {
     position: static; /* Not fixed, part of the flow */
     transform: translateX(0); /* Always visible */
     box-shadow: none; /* No shadow needed */
-    border-right: 1px solid var(--line); /* Re-add border if removed */
+    border-right: 1px solid var(--line); /* Ensure border is present */
   }
   /* Ensure workspace takes up remaining space */
   .app {
@@ -317,7 +317,7 @@ select, input, textarea { min-height: 44px; background: transparent; color: var(
   padding: 12px 20px;
 }
 #tutor-input:focus {
-  border-color: var(--accent);
+  border-color: rgba(var(--accent-rgb), 0.6);
   background: rgba(0,0,0,0.5);
 }
 #tutor-send {
@@ -522,6 +522,7 @@ body {
   padding: 60px 40px;
   position: relative;
   overflow: hidden; /* Important for containing floating objects */
+  border-radius: 16px; /* Match glass-panel */
 }
 
 .dashboard-content h3 {
@@ -529,6 +530,7 @@ body {
   margin-bottom: 16px;
   line-height: 1.2;
   color: var(--accent); /* Make the fact stand out */
+  text-shadow: 0 0 15px rgba(var(--accent-rgb), 0.6); /* Add glow to fact */
 }
 
 .dashboard-content p {
@@ -554,6 +556,7 @@ body {
   filter: blur(30px); /* Soften the glow */
   pointer-events: auto; /* Make them interactive (though currently just visual) */
   animation: float 8s ease-in-out infinite alternate;
+  opacity: 0.7;
 }
 
 /* Specific object styles with varying sizes, positions, and animations */

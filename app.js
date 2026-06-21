@@ -92,6 +92,8 @@ const state = {
 // --- DOM Elements ---
 const categoryFilter = $("#category-filter");
 const dashboardFactElement = $("#dashboard-fact");
+const sidebar = $("#main-sidebar"); // Get sidebar element
+const toggleBtn = $("#sidebar-toggle"); // Get toggle button
 
 // --- Utility Functions ---
 function saveProgress() {
@@ -361,11 +363,23 @@ function switchView(view) {
     // Ensure examIndex is valid
     state.examIndex = Math.min(state.examIndex, state.exam.length - 1);
     renderExam(); // Render the current exam question
+    renderExamNavigator(); // Ensure navigator is updated
   } else if (view === "cbt" && !state.exam.length) {
     // If no exam loaded, ensure setup is visible
     $("#exam-setup").hidden = false;
     $("#exam-panel").hidden = true;
     $("#exam-results").hidden = true;
+  }
+  
+  // Handle sidebar visibility based on screen size and view
+  if (window.innerWidth <= 768) {
+    if (view !== "dashboard") { // Keep sidebar visible for dashboard on mobile
+      sidebar.classList.remove('open');
+    } else {
+      sidebar.classList.add('open'); // Ensure sidebar is open for dashboard view on mobile
+    }
+  } else {
+    sidebar.classList.add('open'); // Ensure sidebar is open on desktop
   }
 
   renderProgress(); // Update progress indicators
@@ -406,6 +420,7 @@ function startExam() {
   }, 1000);
   
   renderExam(); // Render the first question
+  renderExamNavigator(); // Render the navigator
   saveSession(); // Save the new exam state
 }
 
@@ -424,8 +439,6 @@ function renderExam() {
   $("#exam-prev").disabled = state.examIndex === 0;
   // Change "Next" button text to "Review" on the last question
   $("#exam-next").textContent = state.examIndex === state.exam.length - 1 ? "Review" : "Next";
-  
-  renderExamNavigator(); // Update the question navigator
 }
 
 // Store the user's answer for the current CBT exam question
@@ -442,6 +455,7 @@ function moveExam(step) {
   state.examIndex = Math.min(Math.max(state.examIndex + step, 0), state.exam.length - 1);
   saveSession(); // Save the updated index
   renderExam(); // Render the next/previous question
+  renderExamNavigator(); // Update navigator
 }
 
 // Jump directly to a specific question in the CBT exam
@@ -450,6 +464,7 @@ function jumpExam(index) {
   state.examIndex = index; // Set the new index
   saveSession(); // Save the updated index
   renderExam(); // Render the selected question
+  renderExamNavigator(); // Update navigator
 }
 
 // Render the question navigator (jump list and answered count)
@@ -560,7 +575,7 @@ function renderGuide() {
   });
   
   if (allGuides.length) {
-    const groups = [...new Set(allGuides.map((item) => item.group))];
+    const groups = [...new Set(allAllGuides.map((item) => item.group))];
     $("#study-guide").innerHTML = groups
       .map((group) => {
         const cards = allGuides
@@ -608,6 +623,7 @@ const nursingFacts = [
   "The best way to prepare for the NCLEX is consistent practice with a focus on understanding the underlying principles and rationales."
 ];
 
+// Displays a random nursing fact on the dashboard
 function displayRandomFact() {
   if (dashboardFactElement) {
     const randomIndex = Math.floor(Math.random() * nursingFacts.length);
@@ -619,6 +635,11 @@ function displayRandomFact() {
 function bindEvents() {
   categoryFilter.addEventListener("change", applyFilters);
   
+  // Sidebar toggle event listener
+  toggleBtn.addEventListener('click', () => {
+    sidebar.classList.toggle('open');
+  });
+
   // Practice view buttons
   $("#shuffle-button").addEventListener("click", () => {
     state.filtered = shuffle(state.filtered); // Shuffle the currently filtered list
