@@ -287,6 +287,7 @@ function switchView(view) {
   $$(".nav__item").forEach((button) => button.classList.toggle("is-active", button.dataset.view === view));
   $$(".view").forEach((panel) => panel.classList.toggle("is-visible", panel.id === `${view}-view`));
   const titles = {
+    dashboard: ["Welcome", "Your nursing prep hub"],
     practice: ["Learning mode", "Practice with instant rationales"],
     cbt: ["Simulation", "CBT exam mode"],
     review: ["Performance", "Review weak areas"],
