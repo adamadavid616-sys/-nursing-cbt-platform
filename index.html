@@ -3,280 +3,126 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>A_D — Nursing Council Exam Prep</title>
+    <title>A_D CBT Hub</title>
     <link rel="stylesheet" href="./styles.css" />
     <link rel="icon" type="image/x-icon" href="./favicon.ico" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.39.0/dist/umd/supabase.min.js"></script>
+    <script>
+      window._sbInit = function(url, key) {
+        // intentionally empty - Supabase init handled in login script below
+      };
+    </script>
   </head>
   <body>
+    <!-- Cursor trail canvas -->
+    <canvas id="cursor-canvas"></canvas>
 
-    <!-- ===== SIDEBAR OVERLAY ===== -->
-    <div id="sidebar-overlay" class="sidebar-overlay" onclick="closeSidebar()"></div>
-
-    <!-- ===== COLLAPSIBLE SIDEBAR ===== -->
-    <aside id="main-sidebar" class="main-sidebar">
-      <div class="sidebar-inner">
-
-        <!-- Brand -->
-        <div class="sb-brand">
-          <div class="sb-brand-logo">A_D</div>
-          <div>
-            <div class="sb-brand-title">Nursing Prep</div>
-            <div class="sb-brand-sub">Council · NMCN · NCLEX</div>
+    <main class="app">
+      <aside id="main-sidebar" class="sidebar" aria-label="Study dashboard">
+        <div class="sidebar-content">
+          <div class="brand">
+            <p class="eyebrow">Council exam prep</p>
+            <h1>A_D CBT Hub</h1>
+            <p class="subtle">Textbook, NMCN, council, OSCE, and hospital-final CBT prep.</p>
           </div>
-          <button class="sb-close-btn" onclick="closeSidebar()">✕</button>
-        </div>
 
-        <!-- User Profile -->
-        <div class="sb-user" id="sb-user-section">
-          <div class="sb-user-avatar" id="sb-avatar">👤</div>
-          <div class="sb-user-info">
-            <div class="sb-user-name" id="sb-user-name">Guest</div>
-            <div class="sb-user-email" id="sb-user-email">Not signed in</div>
-          </div>
-        </div>
-        <button class="sb-signin-btn" id="sb-signin-btn" onclick="doGoogleSignIn()">
-          <span>🔑</span> Sign in with Google
-        </button>
-
-        <!-- Stats -->
-        <div class="sb-stats">
-          <div class="sb-stat">
-            <span id="sb-bank-count">0</span>
-            <label>Questions</label>
-          </div>
-          <div class="sb-stat">
-            <span id="sb-mastery">0%</span>
-            <label>Mastery</label>
-          </div>
-          <div class="sb-stat">
-            <span id="sb-streak">0</span>
-            <label>Streak</label>
-          </div>
-        </div>
-
-        <!-- Navigation -->
-        <div class="sb-section-label">Study Modes</div>
-        <nav class="sb-nav">
-          <button class="sb-nav-item is-active" data-view="practice" onclick="switchViewFromSidebar('practice')">
-            <span class="sb-nav-icon">📝</span> Practice
-            <span class="sb-nav-badge">Instant feedback</span>
-          </button>
-          <button class="sb-nav-item" data-view="cbt" onclick="switchViewFromSidebar('cbt')">
-            <span class="sb-nav-icon">⏱️</span> CBT Exam
-            <span class="sb-nav-badge">Timed simulation</span>
-          </button>
-          <button class="sb-nav-item" data-view="review" onclick="switchViewFromSidebar('review')">
-            <span class="sb-nav-icon">📊</span> Review
-            <span class="sb-nav-badge">Weak areas</span>
-          </button>
-          <button class="sb-nav-item" data-view="guide" onclick="switchViewFromSidebar('guide')">
-            <span class="sb-nav-icon">📚</span> Study Guide
-            <span class="sb-nav-badge">Strategy</span>
-          </button>
-        </nav>
-
-        <!-- Settings -->
-        <div class="sb-section-label">Settings</div>
-        <button class="sb-settings-toggle" onclick="toggleSettings()">
-          <span>⚙️</span> Customize Platform
-          <span class="sb-settings-arrow" id="settings-arrow">▸</span>
-        </button>
-
-        <div class="sb-settings-panel" id="settings-panel">
-
-          <!-- Color Themes -->
-          <div class="sb-setting-group">
-            <div class="sb-setting-label">🎨 Color Theme</div>
-            <div class="theme-grid">
-              <button class="theme-btn active" data-theme="teal" onclick="setTheme('teal')" title="Teal (Default)">
-                <span class="theme-swatch" style="background:linear-gradient(135deg,#00c9a7,#0f3460)"></span>
-                Teal
-              </button>
-              <button class="theme-btn" data-theme="purple" onclick="setTheme('purple')" title="Purple Neon">
-                <span class="theme-swatch" style="background:linear-gradient(135deg,#a855f7,#1a0533)"></span>
-                Purple
-              </button>
-              <button class="theme-btn" data-theme="blue" onclick="setTheme('blue')" title="Blue Cyber">
-                <span class="theme-swatch" style="background:linear-gradient(135deg,#3b82f6,#0c1445)"></span>
-                Blue
-              </button>
-              <button class="theme-btn" data-theme="orange" onclick="setTheme('orange')" title="Orange Fire">
-                <span class="theme-swatch" style="background:linear-gradient(135deg,#f97316,#2d0a00)"></span>
-                Orange
-              </button>
-              <button class="theme-btn" data-theme="green" onclick="setTheme('green')" title="Matrix Green">
-                <span class="theme-swatch" style="background:linear-gradient(135deg,#22c55e,#002211)"></span>
-                Green
-              </button>
-              <button class="theme-btn" data-theme="gold" onclick="setTheme('gold')" title="Gold Classic">
-                <span class="theme-swatch" style="background:linear-gradient(135deg,#eab308,#1a1100)"></span>
-                Gold
+          <div id="sidebar-login" class="glass-panel login-widget">
+            <span id="login-bar-msg"><i class="fa-solid fa-cloud-arrow-up"></i> Sign in to save history</span>
+            <div class="login-actions">
+              <span id="login-bar-user"></span>
+              <button id="login-bar-btn" class="primary" onclick="window.doGoogleSignIn()">
+                <i class="fa-brands fa-google"></i> Sign in
               </button>
             </div>
           </div>
 
-          <!-- Glow Intensity -->
-          <div class="sb-setting-group">
-            <div class="sb-setting-label">✨ Glow Intensity</div>
-            <div class="glow-options">
-              <button class="glow-btn" data-glow="none" onclick="setGlow('none')">Off</button>
-              <button class="glow-btn active" data-glow="subtle" onclick="setGlow('subtle')">Subtle</button>
-              <button class="glow-btn" data-glow="medium" onclick="setGlow('medium')">Medium</button>
-              <button class="glow-btn" data-glow="intense" onclick="setGlow('intense')">Intense</button>
+          <nav class="nav" aria-label="Prep modes">
+            <button class="nav__item is-active glass-panel" type="button" data-view="practice"><i class="fa-solid fa-pen-fancy"></i> Practice</button>
+            <button class="nav__item glass-panel" type="button" data-view="cbt"><i class="fa-solid fa-laptop-code"></i> CBT Exam</button>
+            <button class="nav__item glass-panel" type="button" data-view="review"><i class="fa-solid fa-chart-line"></i> Review</button>
+            <button class="nav__item glass-panel" type="button" data-view="guide"><i class="fa-solid fa-book-open"></i> Study Guide</button>
+          </nav>
+
+          <div class="theme-switcher glass-panel">
+            <p class="eyebrow">Workspace Color</p>
+            <div id="color-palette" class="theme-grid-scroll"></div>
+          </div>
+        </div>
+      </aside>
+
+      <section class="workspace">
+        <header class="topbar glass-panel">
+          <div class="topbar-left">
+            <button id="sidebar-toggle" class="icon-button" title="Toggle Sidebar"><i class="fa-solid fa-bars-staggered"></i></button>
+            <div>
+              <p id="view-kicker" class="eyebrow">Learning mode</p>
+              <h2 id="view-title">Practice with instant rationales</h2>
             </div>
           </div>
-
-          <!-- Font Size -->
-          <div class="sb-setting-group">
-            <div class="sb-setting-label">🔤 Question Font Size</div>
-            <div class="font-options">
-              <button class="font-btn" data-size="sm" onclick="setFontSize('sm')">S</button>
-              <button class="font-btn active" data-size="md" onclick="setFontSize('md')">M</button>
-              <button class="font-btn" data-size="lg" onclick="setFontSize('lg')">L</button>
-              <button class="font-btn" data-size="xl" onclick="setFontSize('xl')">XL</button>
-            </div>
-          </div>
-
-          <!-- Timer Sound -->
-          <div class="sb-setting-group">
-            <div class="sb-setting-label">🔔 Timer Alert</div>
-            <label class="sb-toggle">
-              <input type="checkbox" id="timer-sound-toggle" onchange="toggleTimerSound()" />
-              <span class="sb-toggle-slider"></span>
-              <span>Sound when time is low</span>
-            </label>
-          </div>
-
-          <!-- Auto-advance -->
-          <div class="sb-setting-group">
-            <div class="sb-setting-label">⚡ Auto-advance</div>
-            <label class="sb-toggle">
-              <input type="checkbox" id="auto-advance-toggle" onchange="toggleAutoAdvance()" />
-              <span class="sb-toggle-slider"></span>
-              <span>Next question after correct answer</span>
-            </label>
-          </div>
-
-          <!-- Reset -->
-          <div class="sb-setting-group">
-            <button class="sb-danger-btn" onclick="confirmResetProgress()">🗑️ Reset All Progress</button>
-          </div>
-
-        </div>
-
-        <!-- AI Tutor shortcut -->
-        <div class="sb-section-label">AI Tutor</div>
-        <button class="sb-tutor-btn" onclick="closeSidebar(); document.getElementById('tutor-panel').classList.toggle('open')">
-          <span>🎓</span> Ask A_D Nursing Tutor
-        </button>
-
-        <!-- Footer -->
-        <div class="sb-footer">
-          <div>A_D Platform © 2026</div>
-          <div>NMCN · NCLEX · OSCE</div>
-        </div>
-
-      </div>
-    </aside>
-
-    <!-- Hidden nav buttons required by app.js (DO NOT REMOVE) -->
-    <div style="display:none" aria-hidden="true">
-      <button class="nav__item" data-view="practice">Practice</button>
-      <button class="nav__item" data-view="cbt">CBT Exam</button>
-      <button class="nav__item" data-view="review">Review</button>
-      <button class="nav__item" data-view="guide">Study Guide</button>
-    </div>
-
-    <!-- ===== MAIN APP ===== -->
-    <main class="app-main">
-
-      <!-- Top Bar -->
-      <header class="topnav">
-        <button class="menu-btn" onclick="openSidebar()" aria-label="Open menu">
-          <span></span><span></span><span></span>
-        </button>
-        <div class="topnav-center">
-          <span id="topnav-view">Practice</span>
-        </div>
-        <div class="topnav-right">
-          <div class="topnav-stats">
-            <span id="topnav-count">0 Qs</span>
-            <span id="topnav-mastery">0%</span>
-          </div>
-          <div class="timer-mini" aria-live="polite">
+          <div class="timer glass-panel" aria-live="polite">
             <span id="timer-label">Untimed</span>
             <strong id="timer-value">00:00</strong>
           </div>
-        </div>
-      </header>
+        </header>
 
-      <!-- Workspace -->
-      <section class="workspace">
-
-        <!-- PRACTICE VIEW -->
         <section id="practice-view" class="view is-visible">
-          <div class="view-header">
-            <h2>Practice</h2>
-            <p class="view-sub">Instant feedback with full rationales</p>
-          </div>
-
-          <div class="toolbar">
-            <label class="filter-label">
-              <span>Category</span>
+          <div class="toolbar glass-panel" aria-label="Practice filters">
+            <label>
+              Category
               <select id="category-filter"></select>
             </label>
-            <button id="shuffle-button" class="icon-button" type="button" title="Shuffle">↻</button>
+            <button id="shuffle-button" class="icon-button primary" type="button" title="Shuffle question"><i class="fa-solid fa-shuffle"></i></button>
           </div>
 
-          <article class="question-panel" aria-live="polite">
+          <article class="question-panel glass-panel" aria-live="polite">
             <div class="question-meta">
-              <span id="practice-category" class="q-tag"></span>
-              <span id="practice-progress" class="q-progress"></span>
+              <span id="practice-category"></span>
+              <span id="practice-progress"></span>
             </div>
-            <h3 id="practice-question" class="question-text"></h3>
+            <h3 id="practice-question"></h3>
             <div id="practice-options" class="options"></div>
             <div class="panel-actions">
-              <button id="previous-question" type="button">← Previous</button>
-              <button id="check-answer" class="primary" type="button">Check Answer</button>
-              <button id="next-question" type="button">Next →</button>
+              <button id="previous-question" type="button" class="glass-panel"><i class="fa-solid fa-arrow-left"></i> Previous</button>
+              <button id="check-answer" class="primary" type="button">Check answer <i class="fa-solid fa-check"></i></button>
+              <button id="next-question" type="button" class="glass-panel">Next <i class="fa-solid fa-arrow-right"></i></button>
             </div>
-            <div id="practice-rationale" class="rationale" hidden></div>
+            <div id="practice-rationale" class="rationale glass-panel" hidden></div>
           </article>
         </section>
 
-        <!-- CBT VIEW -->
         <section id="cbt-view" class="view">
-          <div class="view-header">
-            <h2>CBT Exam</h2>
-            <p class="view-sub">Timed simulation — no instant feedback</p>
-          </div>
-
-          <div id="exam-setup" class="exam-setup">
+          <div id="exam-setup" class="exam-setup glass-panel">
+            <div>
+              <p class="eyebrow">Simulation</p>
+              <h3>Computer-based test mode</h3>
+              <p class="subtle">Timed, no instant feedback, mixed categories, and a final review screen.</p>
+            </div>
             <div class="setup-grid">
               <label>
                 Questions
-                <input id="exam-size" type="number" min="10" max="48" value="25" />
+                <input id="exam-size" type="number" min="10" max="48" value="25" class="glass-panel" />
               </label>
               <label>
                 Minutes
-                <input id="exam-minutes" type="number" min="5" max="180" value="35" />
+                <input id="exam-minutes" type="number" min="5" max="180" value="35" class="glass-panel" />
               </label>
             </div>
-            <button id="start-exam" class="primary" type="button">Start CBT Exam</button>
+            <button id="start-exam" class="primary" type="button"><i class="fa-solid fa-play"></i> Start CBT</button>
           </div>
 
-          <article id="exam-panel" class="question-panel" hidden>
+          <article id="exam-panel" class="question-panel glass-panel" hidden>
             <div class="question-meta">
-              <span id="exam-category" class="q-tag"></span>
-              <span id="exam-progress" class="q-progress"></span>
+              <span id="exam-category"></span>
+              <span id="exam-progress"></span>
             </div>
-            <h3 id="exam-question" class="question-text"></h3>
+            <h3 id="exam-question"></h3>
             <div id="exam-options" class="options"></div>
             <div class="panel-actions">
-              <button id="exam-prev" type="button">← Back</button>
-              <button id="exam-next" class="primary" type="button">Next →</button>
-              <button id="submit-exam" type="button">Submit Exam</button>
+              <button id="exam-prev" type="button" class="glass-panel"><i class="fa-solid fa-arrow-left"></i> Back</button>
+              <button id="exam-next" class="primary" type="button">Next <i class="fa-solid fa-arrow-right"></i></button>
+              <button id="submit-exam" type="button" style="border-color: #ff3b30; color: #ff3b30;" class="glass-panel">Submit Exam</button>
             </div>
             <div class="exam-review-block">
               <div class="question-meta">
@@ -287,761 +133,139 @@
             </div>
           </article>
 
-          <section id="exam-results" class="results" hidden></section>
+          <section id="exam-results" class="results glass-panel" hidden></section>
         </section>
 
-        <!-- REVIEW VIEW -->
         <section id="review-view" class="view">
-          <div class="view-header">
-            <h2>Review</h2>
-            <p class="view-sub">Performance by category — focus your weak areas</p>
+          <div class="review-head glass-panel">
+            <div>
+              <p class="eyebrow">Weak areas</p>
+              <h3>Performance by client need</h3>
+            </div>
+            <button id="reset-progress" type="button" class="glass-panel"><i class="fa-solid fa-rotate-right"></i> Reset progress</button>
           </div>
-          <div class="review-head">
-            <button id="reset-progress" type="button">Reset Progress</button>
-          </div>
-          <div id="category-bars" class="bars"></div>
+          <div id="category-bars" class="bars glass-panel"></div>
           <div id="missed-list" class="missed-list"></div>
         </section>
 
-        <!-- GUIDE VIEW -->
         <section id="guide-view" class="view">
-          <div class="view-header">
-            <h2>Study Guide</h2>
-            <p class="view-sub">Strategy, blueprint, and exam guides</p>
-          </div>
           <div class="guide-layout">
-            <article>
+            <article class="glass-panel">
+              <p class="eyebrow">Guide</p>
+              <h3>Passing strategy and exam guides</h3>
               <div id="study-guide" class="guide-list"></div>
             </article>
-            <article class="blueprint">
+            <article class="blueprint glass-panel">
               <p class="eyebrow">2026 NCLEX-PN</p>
               <h3>Blueprint weighting</h3>
               <div id="blueprint-list"></div>
-              <p class="source-note">Current exam blueprint checked against the official NCSBN 2026 NCLEX-PN Test Plan.</p>
             </article>
           </div>
         </section>
-
       </section>
     </main>
 
-    <!-- Hidden elements app.js needs -->
-    <span id="bank-count" style="display:none">0</span>
-    <span id="mastery-score" style="display:none">0%</span>
-    <select id="chapter-filter" style="display:none"></select>
+    <script type="module" src="./src/app.js"></script>
 
-    <!-- Chatbot -->
-    <button id="tutor-btn" title="Ask A_D Tutor">🎓</button>
+    <button id="tutor-btn" title="Ask A_D Tutor" class="glass-panel"><i class="fa-solid fa-user-doctor"></i></button>
 
-    <div id="tutor-panel">
+    <div id="tutor-panel" class="apple-glass">
       <div id="tutor-header">
-        <span>🎓 A_D Nursing Tutor</span>
-        <button id="tutor-close">✕</button>
+        <span><i class="fa-solid fa-robot"></i> A_D Tutor</span>
+        <button id="tutor-close"><i class="fa-solid fa-xmark"></i></button>
       </div>
-      <div id="tutor-messages">
-        <div class="tutor-msg bot">Hi! I am your A_D Nursing Tutor. Ask me about any question or nursing concept!</div>
-      </div>
+      <div id="tutor-messages"></div>
       <div id="tutor-input-row">
-        <input id="tutor-input" type="text" placeholder="Ask a nursing question..." />
-        <button id="tutor-send">➤</button>
+        <input id="tutor-input" type="text" placeholder="iMessage..." />
+        <button id="tutor-send" class="primary"><i class="fa-solid fa-arrow-up"></i></button>
       </div>
     </div>
 
-    <script type="module" src="./src/app.js"></script>
+    <script>
+      // Expanded Fancy Colors (Purples, Golds, Reds, Blues, Yellows)
+      const colors = [
+        /* Cyans & Greens */ '#20f7d2', '#00f5d4', '#06d6a0', '#34c759', '#32d74b', '#b5e48c', 
+        /* Golds & Yellows */'#ffcc00', '#ffd60a', '#ffb703', '#fb8500', '#e9c46a', '#f4a261',
+        /* Reds & Oranges */ '#ff3b30', '#ff453a', '#ef476f', '#e76f51', '#f3722c', '#d90429',
+        /* Purples & Pinks */'#bf5af2', '#d580ff', '#af52de', '#9d4edd', '#7b2cbf', '#f15bb5', '#ff375f', 
+        /* Blues & Navys */  '#007aff', '#0a84ff', '#1982c4', '#64d2ff', '#00bbf9', '#118ab2', '#0028ff',
+        /* Neutrals */       '#f5f5f7', '#d1d1d6', '#aeaeb2', '#8e8e93'
+      ];
 
-    <style>
-      /* ===== CSS THEME VARIABLES ===== */
-      :root {
-        --accent: #00c9a7;
-        --accent-glow: rgba(0,201,167,0.4);
-        --accent-dark: #00a589;
-        --bg-primary: #000;
-        --bg-secondary: #0a0a0f;
-        --bg-card: #0f0f1a;
-        --bg-sidebar: #060610;
-        --ink: #e8e8f0;
-        --ink-muted: #8888aa;
-        --line: #1e1e30;
-        --glow-strength: 0.35;
-        --font-scale: 1;
+      function hexToRgb(hex) {
+        const r = parseInt(hex.slice(1, 3), 16);
+        const g = parseInt(hex.slice(3, 5), 16);
+        const b = parseInt(hex.slice(5, 7), 16);
+        return `${r}, ${g}, ${b}`;
       }
 
-      /* THEMES */
-      [data-theme="purple"] {
-        --accent: #a855f7;
-        --accent-glow: rgba(168,85,247,0.4);
-        --accent-dark: #9333ea;
-        --bg-card: #1a0533;
-        --bg-sidebar: #110022;
-        --line: #2d1050;
-      }
-      [data-theme="blue"] {
-        --accent: #3b82f6;
-        --accent-glow: rgba(59,130,246,0.4);
-        --accent-dark: #2563eb;
-        --bg-card: #0c1445;
-        --bg-sidebar: #080d30;
-        --line: #1a2560;
-      }
-      [data-theme="orange"] {
-        --accent: #f97316;
-        --accent-glow: rgba(249,115,22,0.4);
-        --accent-dark: #ea6c0a;
-        --bg-card: #1a0800;
-        --bg-sidebar: #100500;
-        --line: #2d1400;
-      }
-      [data-theme="green"] {
-        --accent: #22c55e;
-        --accent-glow: rgba(34,197,94,0.4);
-        --accent-dark: #16a34a;
-        --bg-card: #002211;
-        --bg-sidebar: #001508;
-        --line: #003318;
-      }
-      [data-theme="gold"] {
-        --accent: #eab308;
-        --accent-glow: rgba(234,179,8,0.4);
-        --accent-dark: #ca8a04;
-        --bg-card: #1a1100;
-        --bg-sidebar: #100900;
-        --line: #2d1f00;
+      function applyThemeColor(hex) {
+        document.documentElement.style.setProperty('--accent', hex);
+        document.documentElement.style.setProperty('--accent-strong', hex);
+        document.documentElement.style.setProperty('--accent-rgb', hexToRgb(hex));
+        localStorage.setItem('ad-theme-color', hex); // Auto-save preference
       }
 
-      /* GLOW VARIANTS */
-      [data-glow="none"] { --glow-strength: 0; }
-      [data-glow="subtle"] { --glow-strength: 0.25; }
-      [data-glow="medium"] { --glow-strength: 0.5; }
-      [data-glow="intense"] { --glow-strength: 0.85; }
+      const paletteContainer = document.getElementById('color-palette');
+      colors.forEach(color => {
+        const dot = document.createElement('button');
+        dot.className = 'theme-dot';
+        dot.style.background = color;
+        dot.onclick = () => applyThemeColor(color);
+        paletteContainer.appendChild(dot);
+      });
 
-      /* FONT SIZES */
-      [data-fontsize="sm"] { --font-scale: 0.88; }
-      [data-fontsize="md"] { --font-scale: 1; }
-      [data-fontsize="lg"] { --font-scale: 1.15; }
-      [data-fontsize="xl"] { --font-scale: 1.3; }
+      // Load saved theme on boot
+      const savedTheme = localStorage.getItem('ad-theme-color');
+      if (savedTheme) applyThemeColor(savedTheme);
 
-      * { box-sizing: border-box; margin: 0; padding: 0; }
-      body { background: var(--bg-primary); color: var(--ink); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; min-height: 100vh; overflow-x: hidden; }
+      // Mobile-Favored Sidebar Toggle Logic
+      const sidebar = document.getElementById('main-sidebar');
+      const toggleBtn = document.getElementById('sidebar-toggle');
+      const navItems = document.querySelectorAll('.nav__item');
 
-      /* ===== SIDEBAR OVERLAY ===== */
-      .sidebar-overlay {
-        position: fixed; inset: 0; background: rgba(0,0,0,0.6);
-        z-index: 1000; opacity: 0; pointer-events: none;
-        transition: opacity 0.3s;
-        backdrop-filter: blur(2px);
-      }
-      .sidebar-overlay.active { opacity: 1; pointer-events: all; }
+      toggleBtn.addEventListener('click', () => {
+        sidebar.classList.toggle('open');
+      });
 
-      /* ===== MAIN SIDEBAR ===== */
-      .main-sidebar {
-        position: fixed; left: 0; top: 0; bottom: 0;
-        width: 300px; z-index: 1001;
-        transform: translateX(-100%);
-        transition: transform 0.3s cubic-bezier(0.4,0,0.2,1);
-        background: var(--bg-sidebar);
-        border-right: 1px solid var(--line);
-        overflow-y: auto;
-        overflow-x: hidden;
-      }
-      .main-sidebar.open { transform: translateX(0); }
-      .sidebar-inner { padding: 20px 16px 40px; display: flex; flex-direction: column; gap: 4px; min-height: 100%; }
+      // Auto-hide sidebar on mobile when a section is selected
+      navItems.forEach(item => {
+        item.addEventListener('click', () => {
+          if (window.innerWidth <= 768) {
+            sidebar.classList.remove('open');
+          }
+        });
+      });
 
-      /* Sidebar Brand */
-      .sb-brand { display: flex; align-items: center; gap: 12px; padding: 8px 0 20px; border-bottom: 1px solid var(--line); margin-bottom: 16px; }
-      .sb-brand-logo { width: 42px; height: 42px; border-radius: 12px; background: var(--accent); color: #000; font-weight: 900; font-size: 16px; display: flex; align-items: center; justify-content: center; box-shadow: 0 0 20px var(--accent-glow); flex-shrink: 0; }
-      .sb-brand-title { font-weight: 700; font-size: 15px; }
-      .sb-brand-sub { font-size: 11px; color: var(--ink-muted); }
-      .sb-close-btn { margin-left: auto; background: none; border: none; color: var(--ink-muted); font-size: 18px; cursor: pointer; padding: 4px; flex-shrink: 0; }
-
-      /* User Section */
-      .sb-user { display: none; align-items: center; gap: 10px; padding: 10px 12px; background: var(--bg-card); border-radius: 12px; border: 1px solid var(--line); margin-bottom: 8px; }
-      .sb-user.logged-in { display: flex; }
-      .sb-user-avatar { width: 36px; height: 36px; border-radius: 50%; background: var(--accent); color: #000; font-size: 18px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
-      .sb-user-name { font-weight: 600; font-size: 14px; }
-      .sb-user-email { font-size: 11px; color: var(--ink-muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 160px; }
-      .sb-signin-btn { width: 100%; padding: 10px 14px; background: var(--accent); color: #000; border: none; border-radius: 10px; font-weight: 700; font-size: 13px; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px; margin-bottom: 16px; transition: opacity 0.2s; }
-      .sb-signin-btn:hover { opacity: 0.85; }
-      .sb-signin-btn.signed-in { background: var(--bg-card); color: var(--ink); border: 1px solid var(--line); }
-
-      /* Stats */
-      .sb-stats { display: grid; grid-template-columns: repeat(3,1fr); gap: 8px; margin-bottom: 16px; }
-      .sb-stat { background: var(--bg-card); border: 1px solid var(--line); border-radius: 10px; padding: 10px 6px; text-align: center; }
-      .sb-stat span { display: block; font-size: 18px; font-weight: 700; color: var(--accent); text-shadow: 0 0 calc(12px * var(--glow-strength)) var(--accent-glow); }
-      .sb-stat label { font-size: 10px; color: var(--ink-muted); text-transform: uppercase; letter-spacing: 0.5px; }
-
-      /* Section Label */
-      .sb-section-label { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.2px; color: var(--ink-muted); padding: 12px 4px 6px; }
-
-      /* Nav */
-      .sb-nav { display: flex; flex-direction: column; gap: 4px; margin-bottom: 8px; }
-      .sb-nav-item { display: flex; align-items: center; gap: 10px; padding: 10px 12px; background: none; border: 1px solid transparent; border-radius: 10px; color: var(--ink-muted); font-size: 14px; font-weight: 500; cursor: pointer; transition: all 0.2s; text-align: left; width: 100%; }
-      .sb-nav-item:hover { background: var(--bg-card); color: var(--ink); border-color: var(--line); }
-      .sb-nav-item.is-active { background: var(--bg-card); color: var(--accent); border-color: var(--accent); box-shadow: 0 0 12px rgba(0,0,0,0.3), inset 0 0 20px rgba(var(--accent-glow), 0.05); }
-      .sb-nav-icon { font-size: 16px; }
-      .sb-nav-badge { margin-left: auto; font-size: 10px; color: var(--ink-muted); background: var(--bg-secondary); padding: 2px 6px; border-radius: 4px; }
-
-      /* Settings Toggle */
-      .sb-settings-toggle { display: flex; align-items: center; gap: 10px; width: 100%; padding: 10px 12px; background: var(--bg-card); border: 1px solid var(--line); border-radius: 10px; color: var(--ink); font-size: 14px; cursor: pointer; margin-bottom: 4px; }
-      .sb-settings-arrow { margin-left: auto; transition: transform 0.2s; }
-      .sb-settings-arrow.open { transform: rotate(90deg); }
-
-      /* Settings Panel */
-      .sb-settings-panel { display: none; background: var(--bg-card); border: 1px solid var(--line); border-radius: 10px; padding: 14px; margin-bottom: 8px; }
-      .sb-settings-panel.open { display: block; }
-      .sb-setting-group { margin-bottom: 14px; }
-      .sb-setting-group:last-child { margin-bottom: 0; }
-      .sb-setting-label { font-size: 12px; font-weight: 600; color: var(--ink-muted); margin-bottom: 8px; }
-
-      /* Theme Grid */
-      .theme-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 6px; }
-      .theme-btn { display: flex; flex-direction: column; align-items: center; gap: 4px; padding: 6px; background: var(--bg-secondary); border: 1px solid var(--line); border-radius: 8px; color: var(--ink-muted); font-size: 11px; cursor: pointer; transition: all 0.2s; }
-      .theme-btn.active, .theme-btn:hover { border-color: var(--accent); color: var(--ink); }
-      .theme-swatch { width: 28px; height: 18px; border-radius: 4px; display: block; }
-
-      /* Glow Options */
-      .glow-options, .font-options { display: flex; gap: 6px; }
-      .glow-btn, .font-btn { flex: 1; padding: 5px; background: var(--bg-secondary); border: 1px solid var(--line); border-radius: 6px; color: var(--ink-muted); font-size: 12px; cursor: pointer; transition: all 0.2s; }
-      .glow-btn.active, .font-btn.active, .glow-btn:hover, .font-btn:hover { border-color: var(--accent); color: var(--accent); }
-
-      /* Toggle */
-      .sb-toggle { display: flex; align-items: center; gap: 10px; cursor: pointer; font-size: 12px; color: var(--ink-muted); }
-      .sb-toggle input { display: none; }
-      .sb-toggle-slider { width: 36px; height: 20px; background: var(--line); border-radius: 10px; position: relative; flex-shrink: 0; transition: background 0.2s; }
-      .sb-toggle-slider::after { content: ''; position: absolute; left: 2px; top: 2px; width: 16px; height: 16px; background: var(--ink-muted); border-radius: 50%; transition: all 0.2s; }
-      .sb-toggle input:checked + .sb-toggle-slider { background: var(--accent); }
-      .sb-toggle input:checked + .sb-toggle-slider::after { left: 18px; background: #000; }
-
-      /* Danger Button */
-      .sb-danger-btn { width: 100%; padding: 8px; background: none; border: 1px solid #ff4444; border-radius: 8px; color: #ff4444; font-size: 12px; cursor: pointer; }
-      .sb-danger-btn:hover { background: rgba(255,68,68,0.1); }
-
-      /* AI Tutor Button */
-      .sb-tutor-btn { display: flex; align-items: center; gap: 10px; width: 100%; padding: 10px 12px; background: linear-gradient(135deg, var(--accent), var(--accent-dark)); color: #000; border: none; border-radius: 10px; font-weight: 700; font-size: 14px; cursor: pointer; margin-bottom: 8px; box-shadow: 0 4px 16px var(--accent-glow); }
-
-      /* Footer */
-      .sb-footer { margin-top: auto; padding-top: 20px; text-align: center; font-size: 10px; color: var(--ink-muted); }
-
-      /* ===== TOP NAV ===== */
-      .topnav { position: sticky; top: 0; z-index: 100; display: flex; align-items: center; gap: 12px; padding: 10px 16px; background: var(--bg-secondary); border-bottom: 1px solid var(--line); backdrop-filter: blur(8px); }
-      .menu-btn { display: flex; flex-direction: column; gap: 5px; padding: 6px; background: none; border: none; cursor: pointer; }
-      .menu-btn span { width: 22px; height: 2px; background: var(--ink); border-radius: 2px; display: block; transition: all 0.2s; }
-      .topnav-center { flex: 1; text-align: center; font-weight: 700; font-size: 15px; }
-      .topnav-right { display: flex; align-items: center; gap: 12px; }
-      .topnav-stats { display: flex; gap: 8px; font-size: 12px; color: var(--accent); font-weight: 600; }
-      .timer-mini { text-align: right; }
-      .timer-mini span { display: block; font-size: 10px; color: var(--ink-muted); }
-      .timer-mini strong { font-size: 14px; font-weight: 700; color: var(--accent); }
-
-      /* ===== WORKSPACE ===== */
-      .app-main { min-height: 100vh; display: flex; flex-direction: column; }
-      .workspace { flex: 1; padding: 20px 16px 100px; max-width: 860px; margin: 0 auto; width: 100%; }
-
-      /* ===== VIEW HEADER ===== */
-      .view { display: none; }
-      .view.is-visible { display: block; }
-      .view-header { margin-bottom: 20px; padding-bottom: 16px; border-bottom: 1px solid var(--line); }
-      .view-header h2 { font-size: 1.8rem; font-weight: 700; color: var(--ink); margin-bottom: 4px; }
-      .view-sub { font-size: 14px; color: var(--ink-muted); }
-
-      /* ===== TOOLBAR ===== */
-      .toolbar { display: flex; align-items: flex-end; gap: 12px; margin-bottom: 20px; flex-wrap: wrap; }
-      .filter-label { display: flex; flex-direction: column; gap: 5px; font-size: 12px; font-weight: 600; color: var(--ink-muted); text-transform: uppercase; letter-spacing: 0.5px; }
-      .filter-label select { background: var(--bg-card); border: 1px solid var(--line); color: var(--ink); padding: 8px 12px; border-radius: 8px; font-size: 14px; min-width: 200px; cursor: pointer; }
-      .filter-label select:focus { outline: none; border-color: var(--accent); }
-      .icon-button { background: var(--bg-card); border: 1px solid var(--line); color: var(--ink); width: 38px; height: 38px; border-radius: 8px; font-size: 18px; cursor: pointer; display: flex; align-items: center; justify-content: center; }
-
-      /* ===== QUESTION PANEL ===== */
-      .question-panel { background: var(--bg-card); border: 1px solid var(--line); border-radius: 16px; padding: 24px; box-shadow: 0 4px 24px rgba(0,0,0,0.3); }
-      .question-meta { display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px; }
-      .q-tag { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.8px; color: var(--accent); background: rgba(var(--accent-glow), 0.1); padding: 3px 8px; border-radius: 4px; border: 1px solid var(--accent); }
-      .q-progress { font-size: 12px; color: var(--ink-muted); }
-      .question-text { font-size: calc(1.15rem * var(--font-scale)); line-height: 1.6; margin-bottom: 20px; color: var(--ink); }
-
-      /* ===== OPTIONS ===== */
-      .options { display: grid; gap: 10px; margin-bottom: 20px; }
-      .option { display: flex; align-items: flex-start; gap: 12px; padding: 14px 16px; background: var(--bg-secondary); border: 1.5px solid var(--line); border-radius: 10px; cursor: pointer; transition: all 0.18s; font-size: calc(0.95rem * var(--font-scale)); line-height: 1.5; }
-      .option:hover { border-color: var(--accent); background: var(--bg-card); }
-      .option input { margin-top: 2px; accent-color: var(--accent); flex-shrink: 0; }
-      .option.is-correct { border-color: #22c55e; background: rgba(34,197,94,0.08); }
-      .option.is-wrong { border-color: #ef4444; background: rgba(239,68,68,0.08); }
-
-      /* ===== PANEL ACTIONS ===== */
-      .panel-actions { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 16px; }
-      .panel-actions button { padding: 10px 20px; border-radius: 8px; font-weight: 600; font-size: 14px; cursor: pointer; border: 1px solid var(--line); background: var(--bg-secondary); color: var(--ink); transition: all 0.18s; }
-      .panel-actions button:hover { border-color: var(--accent); color: var(--accent); }
-      .panel-actions .primary { background: var(--accent); color: #000; border-color: var(--accent); box-shadow: 0 4px 16px var(--accent-glow); }
-      .panel-actions .primary:hover { opacity: 0.9; }
-
-      /* ===== RATIONALE ===== */
-      .rationale { margin-top: 16px; padding: 20px; background: var(--bg-secondary); border: 1px solid var(--line); border-radius: 12px; font-size: 14px; }
-      .rationale-title { font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.8px; color: var(--accent); margin-bottom: 14px; }
-      .rationale-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 16px; }
-      .rationale-grid section { background: var(--bg-card); border: 1px solid var(--line); border-radius: 8px; padding: 12px; }
-      .rationale-grid h4 { font-size: 11px; text-transform: uppercase; letter-spacing: 0.5px; color: var(--accent); margin-bottom: 6px; }
-      .rationale-grid p { font-size: 13px; line-height: 1.5; color: var(--ink-muted); }
-      .rationale-deep-dive { margin-bottom: 14px; }
-      .rationale-deep-dive h4 { font-size: 13px; font-weight: 700; color: var(--ink); margin-bottom: 8px; }
-      .rationale-deep-dive ul { padding-left: 18px; }
-      .rationale-deep-dive li { font-size: 13px; line-height: 1.6; color: var(--ink-muted); margin-bottom: 6px; }
-      .rationale-options h4 { font-size: 13px; font-weight: 700; color: var(--ink); margin-bottom: 8px; }
-      .rationale-option { padding: 10px 12px; border-radius: 8px; border: 1px solid var(--line); margin-bottom: 8px; }
-      .rationale-option.is-answer { border-color: #22c55e; background: rgba(34,197,94,0.06); }
-      .rationale-option strong { display: block; font-size: 13px; margin-bottom: 4px; }
-      .rationale-option p { font-size: 12px; color: var(--ink-muted); line-height: 1.5; }
-      .resource-links { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 12px; font-size: 12px; }
-      .resource-links a { color: var(--accent); text-decoration: none; }
-      .resource-links span { color: var(--ink-muted); }
-
-      /* ===== EXAM SETUP ===== */
-      .exam-setup { background: var(--bg-card); border: 1px solid var(--line); border-radius: 16px; padding: 24px; }
-      .setup-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 20px; }
-      .setup-grid label { display: flex; flex-direction: column; gap: 6px; font-size: 13px; font-weight: 600; color: var(--ink-muted); }
-      .setup-grid input { background: var(--bg-secondary); border: 1px solid var(--line); color: var(--ink); padding: 10px 12px; border-radius: 8px; font-size: 16px; }
-      .setup-grid input:focus { outline: none; border-color: var(--accent); }
-
-      /* ===== EXAM JUMP LIST ===== */
-      .exam-review-block { margin-top: 16px; }
-      .exam-jump-list { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
-      .exam-jump-list button { width: 36px; height: 36px; border-radius: 6px; border: 1px solid var(--line); background: var(--bg-secondary); color: var(--ink); font-size: 12px; cursor: pointer; }
-      .exam-jump-list button.is-answered { border-color: var(--accent); color: var(--accent); }
-      .exam-jump-list button.is-current { background: var(--accent); color: #000; }
-
-      /* ===== RESULTS ===== */
-      .results { background: var(--bg-card); border: 1px solid var(--line); border-radius: 16px; padding: 24px; }
-
-      /* ===== REVIEW ===== */
-      .review-head { display: flex; justify-content: flex-end; margin-bottom: 16px; }
-      .review-head button { padding: 8px 16px; background: none; border: 1px solid var(--line); color: var(--ink-muted); border-radius: 8px; font-size: 13px; cursor: pointer; }
-      .bars { display: flex; flex-direction: column; gap: 10px; margin-bottom: 24px; }
-      .bar__row { display: flex; align-items: center; gap: 12px; }
-      .bar__label { font-size: 12px; color: var(--ink-muted); min-width: 180px; }
-      .bar__track { flex: 1; height: 8px; border-radius: 999px; background: var(--line); overflow: hidden; }
-      .bar__fill { height: 100%; background: var(--accent); border-radius: 999px; box-shadow: 0 0 8px var(--accent-glow); }
-      .bar__count { font-size: 12px; color: var(--ink-muted); min-width: 50px; text-align: right; }
-      .missed-list { display: grid; gap: 12px; }
-      .missed-card { background: var(--bg-card); border: 1px solid var(--line); border-radius: 10px; padding: 14px; }
-      .missed-card h4 { font-size: 13px; font-weight: 600; margin-bottom: 6px; }
-      .missed-card p { font-size: 12px; color: var(--ink-muted); }
-
-      /* ===== GUIDE ===== */
-      .guide-layout { display: grid; grid-template-columns: 1fr 300px; gap: 24px; }
-      .guide-list { display: flex; flex-direction: column; gap: 12px; }
-      .guide-card { background: var(--bg-card); border: 1px solid var(--line); border-radius: 10px; padding: 14px; cursor: pointer; }
-      .guide-card h4 { font-size: 14px; font-weight: 600; margin-bottom: 6px; }
-      .guide-card p { font-size: 12px; color: var(--ink-muted); }
-      .blueprint { background: var(--bg-card); border: 1px solid var(--line); border-radius: 12px; padding: 16px; align-self: start; }
-      .blueprint h3 { font-size: 15px; margin-bottom: 12px; }
-      #blueprint-list { display: flex; flex-direction: column; gap: 8px; margin-bottom: 12px; }
-      .source-note { font-size: 11px; color: var(--ink-muted); line-height: 1.5; }
-      .eyebrow { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: var(--accent); margin-bottom: 4px; }
-
-      /* ===== CHATBOT ===== */
-      #tutor-btn {
-        position: fixed; bottom: 20px; right: 16px;
-        width: 52px; height: 52px; border-radius: 50%;
-        background: var(--accent); color: #000; border: none;
-        font-size: 24px; cursor: pointer;
-        box-shadow: 0 4px 20px var(--accent-glow);
-        z-index: 9999; display: flex; align-items: center; justify-content: center;
-        transition: transform 0.2s;
-      }
-      #tutor-btn:hover { transform: scale(1.1); }
-      #tutor-panel {
-        position: fixed; bottom: 80px; right: 16px;
-        width: min(340px, calc(100vw - 24px));
-        height: min(480px, calc(100vh - 120px));
-        background: var(--bg-sidebar); border: 1px solid var(--accent);
-        border-radius: 16px; display: none; flex-direction: column;
-        z-index: 9999; box-shadow: 0 8px 32px rgba(0,0,0,0.6), 0 0 30px var(--accent-glow);
-        overflow: hidden;
-      }
-      #tutor-panel.open { display: flex; }
-      #tutor-header { background: var(--accent); color: #000; padding: 10px 14px; font-weight: 700; font-size: 13px; display: flex; justify-content: space-between; align-items: center; }
-      #tutor-close { background: none; border: none; font-size: 18px; cursor: pointer; color: #000; font-weight: bold; }
-      #tutor-messages { flex: 1; overflow-y: auto; padding: 10px; display: flex; flex-direction: column; gap: 8px; }
-      .tutor-msg { padding: 8px 12px; border-radius: 10px; font-size: 13px; line-height: 1.5; max-width: 90%; word-wrap: break-word; }
-      .tutor-msg.bot { background: var(--bg-card); color: var(--ink); align-self: flex-start; }
-      .tutor-msg.user { background: var(--accent); color: #000; align-self: flex-end; font-weight: 600; }
-      .tutor-msg.typing { background: var(--bg-card); color: var(--ink-muted); align-self: flex-start; font-style: italic; }
-      #tutor-input-row { display: flex; border-top: 1px solid var(--line); padding: 8px; gap: 6px; }
-      #tutor-input { flex: 1; background: var(--bg-card); border: 1px solid var(--line); border-radius: 8px; color: var(--ink); padding: 8px 10px; font-size: 13px; outline: none; min-width: 0; }
-      #tutor-input::placeholder { color: var(--ink-muted); }
-      #tutor-send { background: var(--accent); border: none; border-radius: 8px; padding: 8px 12px; color: #000; font-weight: 700; cursor: pointer; font-size: 14px; }
-      #tutor-send:disabled { opacity: 0.5; }
-
-      /* ===== MISC ===== */
-      .subtle { font-size: 13px; color: var(--ink-muted); }
-      .primary { background: var(--accent) !important; color: #000 !important; border-color: var(--accent) !important; }
-      h3 { font-size: 1.3rem; font-weight: 700; }
-
-      /* ===== RESPONSIVE ===== */
-      @media (max-width: 640px) {
-        .workspace { padding: 16px 12px 120px; }
-        .question-panel { padding: 16px; }
-        .rationale-grid { grid-template-columns: 1fr; }
-        .guide-layout { grid-template-columns: 1fr; }
-        .setup-grid { grid-template-columns: 1fr; }
-        #tutor-btn { bottom: 72px; right: 12px; }
-        #tutor-panel { right: 8px; left: 8px; width: auto; bottom: 130px; }
-        .topnav-stats { display: none; }
-      }
-
-      /* ===== GLASSMORPHISM ===== */
-      .glass {
-        background: rgba(255,255,255,0.04) !important;
-        backdrop-filter: blur(16px) saturate(180%) !important;
-        -webkit-backdrop-filter: blur(16px) saturate(180%) !important;
-        border: 1px solid rgba(255,255,255,0.08) !important;
-      }
-
-      /* Background gradient canvas */
-      body::before {
-        content: '';
-        position: fixed;
-        inset: 0;
-        background:
-          radial-gradient(ellipse 80% 60% at 20% 10%, rgba(0,201,167,0.12) 0%, transparent 60%),
-          radial-gradient(ellipse 60% 50% at 80% 90%, rgba(0,201,167,0.08) 0%, transparent 60%),
-          radial-gradient(ellipse 50% 40% at 60% 40%, rgba(0,100,80,0.06) 0%, transparent 50%);
-        pointer-events: none;
-        z-index: 0;
-      }
-      [data-theme="purple"] body::before {
-        background: radial-gradient(ellipse 80% 60% at 20% 10%, rgba(168,85,247,0.12) 0%, transparent 60%), radial-gradient(ellipse 60% 50% at 80% 90%, rgba(168,85,247,0.08) 0%, transparent 60%);
-      }
-      [data-theme="blue"] body::before {
-        background: radial-gradient(ellipse 80% 60% at 20% 10%, rgba(59,130,246,0.12) 0%, transparent 60%), radial-gradient(ellipse 60% 50% at 80% 90%, rgba(59,130,246,0.08) 0%, transparent 60%);
-      }
-      [data-theme="orange"] body::before {
-        background: radial-gradient(ellipse 80% 60% at 20% 10%, rgba(249,115,22,0.12) 0%, transparent 60%), radial-gradient(ellipse 60% 50% at 80% 90%, rgba(249,115,22,0.08) 0%, transparent 60%);
-      }
-      [data-theme="green"] body::before {
-        background: radial-gradient(ellipse 80% 60% at 20% 10%, rgba(34,197,94,0.12) 0%, transparent 60%), radial-gradient(ellipse 60% 50% at 80% 90%, rgba(34,197,94,0.08) 0%, transparent 60%);
-      }
-      [data-theme="gold"] body::before {
-        background: radial-gradient(ellipse 80% 60% at 20% 10%, rgba(234,179,8,0.12) 0%, transparent 60%), radial-gradient(ellipse 60% 50% at 80% 90%, rgba(234,179,8,0.08) 0%, transparent 60%);
-      }
-
-      /* Make sure content appears above the bg */
-      main, aside, header, .workspace, .sidebar-inner, #tutor-panel { position: relative; z-index: 1; }
-
-      /* Glass Sidebar */
-      .main-sidebar {
-        background: rgba(6,6,16,0.85) !important;
-        backdrop-filter: blur(24px) saturate(180%) !important;
-        -webkit-backdrop-filter: blur(24px) saturate(180%) !important;
-        border-right: 1px solid rgba(255,255,255,0.07) !important;
-        box-shadow: 4px 0 40px rgba(0,0,0,0.4) !important;
-      }
-
-      /* Glass Top Nav */
-      .topnav {
-        background: rgba(10,10,20,0.7) !important;
-        backdrop-filter: blur(20px) saturate(160%) !important;
-        -webkit-backdrop-filter: blur(20px) saturate(160%) !important;
-        border-bottom: 1px solid rgba(255,255,255,0.07) !important;
-        box-shadow: 0 1px 0 rgba(var(--accent-glow), 0.1) !important;
-      }
-
-      /* Glass Question Panel */
-      .question-panel {
-        background: rgba(15,15,26,0.6) !important;
-        backdrop-filter: blur(20px) saturate(150%) !important;
-        -webkit-backdrop-filter: blur(20px) saturate(150%) !important;
-        border: 1px solid rgba(255,255,255,0.08) !important;
-        box-shadow:
-          0 8px 32px rgba(0,0,0,0.4),
-          0 0 0 1px rgba(var(--accent-glow),0.05),
-          inset 0 1px 0 rgba(255,255,255,0.05) !important;
-      }
-
-      /* Glass Sidebar Stats */
-      .sb-stat {
-        background: rgba(255,255,255,0.04) !important;
-        backdrop-filter: blur(8px) !important;
-        border: 1px solid rgba(255,255,255,0.08) !important;
-      }
-
-      /* Glass Settings Panel */
-      .sb-settings-panel {
-        background: rgba(255,255,255,0.03) !important;
-        backdrop-filter: blur(12px) !important;
-        border: 1px solid rgba(255,255,255,0.07) !important;
-      }
-
-      /* Glass Nav Items */
-      .sb-nav-item.is-active {
-        background: rgba(var(--accent-glow), 0.12) !important;
-        backdrop-filter: blur(8px) !important;
-        border-color: rgba(0,201,167,0.4) !important;
-        box-shadow: 0 0 20px rgba(0,201,167,0.1), inset 0 1px 0 rgba(255,255,255,0.08) !important;
-      }
-      .sb-nav-item:hover:not(.is-active) {
-        background: rgba(255,255,255,0.04) !important;
-      }
-
-      /* Glass Settings Toggle */
-      .sb-settings-toggle {
-        background: rgba(255,255,255,0.04) !important;
-        border: 1px solid rgba(255,255,255,0.08) !important;
-        backdrop-filter: blur(8px) !important;
-      }
-
-      /* Glass User Section */
-      .sb-user {
-        background: rgba(255,255,255,0.04) !important;
-        border: 1px solid rgba(255,255,255,0.08) !important;
-        backdrop-filter: blur(8px) !important;
-      }
-
-      /* Glass Toolbar Select */
-      .filter-label select {
-        background: rgba(255,255,255,0.04) !important;
-        backdrop-filter: blur(8px) !important;
-        border: 1px solid rgba(255,255,255,0.1) !important;
-      }
-
-      /* Glass Exam Setup */
-      .exam-setup {
-        background: rgba(15,15,26,0.6) !important;
-        backdrop-filter: blur(20px) !important;
-        -webkit-backdrop-filter: blur(20px) !important;
-        border: 1px solid rgba(255,255,255,0.08) !important;
-        box-shadow: 0 8px 32px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.05) !important;
-      }
-
-      /* Glass Rationale */
-      .rationale {
-        background: rgba(255,255,255,0.03) !important;
-        backdrop-filter: blur(12px) !important;
-        border: 1px solid rgba(255,255,255,0.07) !important;
-      }
-      .rationale-grid section {
-        background: rgba(255,255,255,0.04) !important;
-        border: 1px solid rgba(255,255,255,0.07) !important;
-      }
-      .rationale-option {
-        background: rgba(255,255,255,0.03) !important;
-      }
-
-      /* Glass Options */
-      .option {
-        background: rgba(255,255,255,0.03) !important;
-        border: 1.5px solid rgba(255,255,255,0.08) !important;
-        transition: all 0.2s ease !important;
-      }
-      .option:hover {
-        background: rgba(0,201,167,0.06) !important;
-        border-color: rgba(0,201,167,0.4) !important;
-        box-shadow: 0 0 16px rgba(0,201,167,0.08) !important;
-        transform: translateX(2px) !important;
-      }
-      .option.is-correct {
-        background: rgba(34,197,94,0.08) !important;
-        border-color: rgba(34,197,94,0.6) !important;
-        box-shadow: 0 0 20px rgba(34,197,94,0.15) !important;
-      }
-      .option.is-wrong {
-        background: rgba(239,68,68,0.08) !important;
-        border-color: rgba(239,68,68,0.6) !important;
-      }
-
-      /* Glass Missed Cards */
-      .missed-card {
-        background: rgba(255,255,255,0.03) !important;
-        border: 1px solid rgba(255,255,255,0.07) !important;
-        backdrop-filter: blur(8px) !important;
-      }
-
-      /* Glass Chatbot */
-      #tutor-panel {
-        background: rgba(6,6,20,0.88) !important;
-        backdrop-filter: blur(24px) saturate(180%) !important;
-        -webkit-backdrop-filter: blur(24px) saturate(180%) !important;
-        border: 1px solid rgba(0,201,167,0.3) !important;
-        box-shadow: 0 8px 40px rgba(0,0,0,0.6), 0 0 30px rgba(0,201,167,0.1) !important;
-      }
-      .tutor-msg.bot {
-        background: rgba(255,255,255,0.06) !important;
-        backdrop-filter: blur(8px) !important;
-      }
-
-      /* Glass Results */
-      .results {
-        background: rgba(15,15,26,0.6) !important;
-        backdrop-filter: blur(20px) !important;
-        border: 1px solid rgba(255,255,255,0.08) !important;
-      }
-
-      /* Accent glow on primary buttons */
-      .panel-actions .primary, .sb-tutor-btn, #start-exam {
-        box-shadow: 0 4px 20px var(--accent-glow), 0 0 0 1px rgba(255,255,255,0.1) !important;
-      }
-
-      /* Smooth glow pulse on accent elements */
-      @keyframes glowPulse {
-        0%, 100% { box-shadow: 0 0 20px var(--accent-glow); }
-        50% { box-shadow: 0 0 35px var(--accent-glow), 0 0 60px rgba(0,201,167,0.1); }
-      }
-      .sb-brand-logo { animation: glowPulse 3s ease-in-out infinite; }
-
-      /* Floating particles background effect */
-      .sb-brand-logo::after {
-        content: '';
-        position: absolute;
-        inset: -4px;
-        border-radius: 14px;
-        background: transparent;
-        border: 1px solid rgba(0,201,167,0.3);
-        animation: glowPulse 3s ease-in-out infinite;
-      }
-      .sb-brand-logo { position: relative; }
-
-      /* Blueprint glass */
-      .blueprint {
-        background: rgba(255,255,255,0.03) !important;
-        backdrop-filter: blur(12px) !important;
-        border: 1px solid rgba(255,255,255,0.07) !important;
-      }
-      .guide-card {
-        background: rgba(255,255,255,0.03) !important;
-        backdrop-filter: blur(8px) !important;
-        border: 1px solid rgba(255,255,255,0.07) !important;
-        transition: all 0.2s !important;
-      }
-      .guide-card:hover {
-        background: rgba(255,255,255,0.06) !important;
-        border-color: rgba(0,201,167,0.3) !important;
-        transform: translateY(-2px) !important;
-        box-shadow: 0 8px 24px rgba(0,0,0,0.3) !important;
-      }
-
-      /* Overlay + sidebar smoother */
-      .sidebar-overlay {
-        background: rgba(0,0,0,0.5) !important;
-        backdrop-filter: blur(4px) !important;
-      }
-    </style>
+      // Liquid Glass Mouse Tracker
+      document.addEventListener('mousemove', (e) => {
+        document.querySelectorAll('.glass-panel, .option').forEach(card => {
+          const rect = card.getBoundingClientRect();
+          card.style.setProperty('--mouse-x', `${e.clientX - rect.left}px`);
+          card.style.setProperty('--mouse-y', `${e.clientY - rect.top}px`);
+        });
+      });
+    </script>
 
     <script>
-      // ===== SIDEBAR =====
-      function openSidebar() {
-        document.getElementById('main-sidebar').classList.add('open');
-        document.getElementById('sidebar-overlay').classList.add('active');
-        document.body.style.overflow = 'hidden';
-      }
-      function closeSidebar() {
-        document.getElementById('main-sidebar').classList.remove('open');
-        document.getElementById('sidebar-overlay').classList.remove('active');
-        document.body.style.overflow = '';
-      }
-
-      // Sync sidebar nav with app.js nav
-      function switchViewFromSidebar(view) {
-        // Trigger the hidden nav__item button that app.js attached listeners to
-        const btn = document.querySelector(`.nav__item[data-view="${view}"]`);
-        if (btn) {
-          btn.click();
-        } else {
-          // Fallback: manually toggle views
-          document.querySelectorAll('.view').forEach(v => v.classList.toggle('is-visible', v.id === view + '-view'));
-        }
-        // Update sidebar active state
-        document.querySelectorAll('.sb-nav-item').forEach(b => b.classList.toggle('is-active', b.dataset.view === view));
-        // Update topnav label
-        const labels = {practice:'Practice', cbt:'CBT Exam', review:'Review', guide:'Study Guide'};
-        const lbl = document.getElementById('topnav-view');
-        if (lbl) lbl.textContent = labels[view] || view;
-        closeSidebar();
-      }
-
-      // Sync bank count to sidebar
-      const bankCountObs = new MutationObserver(() => {
-        const v = document.getElementById('bank-count')?.textContent || '0';
-        document.getElementById('sb-bank-count').textContent = v;
-        document.getElementById('topnav-count').textContent = v + ' Qs';
-      });
-      document.addEventListener('DOMContentLoaded', () => {
-        const bc = document.getElementById('bank-count');
-        if (bc) bankCountObs.observe(bc, { childList: true, subtree: true, characterData: true });
-        const ms = document.getElementById('mastery-score');
-        if (ms) new MutationObserver(() => {
-          const v = ms.textContent || '0%';
-          document.getElementById('sb-mastery').textContent = v;
-          document.getElementById('topnav-mastery').textContent = v;
-        }).observe(ms, { childList: true, subtree: true, characterData: true });
-      });
-
-      // ===== SETTINGS =====
-      function toggleSettings() {
-        const panel = document.getElementById('settings-panel');
-        const arrow = document.getElementById('settings-arrow');
-        panel.classList.toggle('open');
-        arrow.classList.toggle('open');
-      }
-
-      function setTheme(theme) {
-        document.documentElement.setAttribute('data-theme', theme);
-        document.querySelectorAll('.theme-btn').forEach(b => b.classList.remove('active'));
-        document.querySelector(`.theme-btn[data-theme="${theme}"]`)?.classList.add('active');
-        localStorage.setItem('ad-theme', theme);
-      }
-
-      function setGlow(glow) {
-        document.documentElement.setAttribute('data-glow', glow);
-        document.querySelectorAll('.glow-btn').forEach(b => b.classList.remove('active'));
-        document.querySelector(`.glow-btn[data-glow="${glow}"]`)?.classList.add('active');
-        localStorage.setItem('ad-glow', glow);
-      }
-
-      function setFontSize(size) {
-        document.documentElement.setAttribute('data-fontsize', size);
-        document.querySelectorAll('.font-btn').forEach(b => b.classList.remove('active'));
-        document.querySelector(`.font-btn[data-size="${size}"]`)?.classList.add('active');
-        localStorage.setItem('ad-fontsize', size);
-      }
-
-      function toggleTimerSound() {
-        localStorage.setItem('ad-timer-sound', document.getElementById('timer-sound-toggle').checked);
-      }
-      function toggleAutoAdvance() {
-        localStorage.setItem('ad-auto-advance', document.getElementById('auto-advance-toggle').checked);
-      }
-
-      function confirmResetProgress() {
-        if (confirm('Reset all your progress? This cannot be undone.')) {
-          const btn = document.getElementById('reset-progress');
-          if (btn) btn.click();
-        }
-      }
-
-      // Load saved settings
-      (function loadSettings() {
-        const theme = localStorage.getItem('ad-theme') || 'teal';
-        const glow = localStorage.getItem('ad-glow') || 'subtle';
-        const fontSize = localStorage.getItem('ad-fontsize') || 'md';
-        setTheme(theme); setGlow(glow); setFontSize(fontSize);
-        const timerSound = localStorage.getItem('ad-timer-sound') === 'true';
-        const autoAdv = localStorage.getItem('ad-auto-advance') === 'true';
-        document.getElementById('timer-sound-toggle').checked = timerSound;
-        document.getElementById('auto-advance-toggle').checked = autoAdv;
-      })();
-
-      // ===== SUPABASE / AUTH =====
       var SB_URL = 'https://bhdyyuiuzepsixvfcirg.supabase.co';
       var SB_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJoZHl5dWl1emVwc2l4dmZjaXJnIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODEzOTY3MzAsImV4cCI6MjA5Njk3MjczMH0.jETQkiWg_R7hU7Z85B6fdt7BUhKPP5wRSc4ndh8C4rA';
       var APP_URL = 'https://nursing-cbt-platform.onrender.com';
       var CHAT_KEY = 'ad-tutor-chat';
       var MAX_MSGS = 100;
-      var chatHistory = [], currentUser = null, sbClient = null;
 
-      // DOM refs
+      var chatHistory = [];
+      var currentUser = null;
+      var sbClient = null;
+
       var tutorBtn = document.getElementById('tutor-btn');
       var tutorPanel = document.getElementById('tutor-panel');
       var tutorClose = document.getElementById('tutor-close');
       var tutorMessages = document.getElementById('tutor-messages');
       var tutorInput = document.getElementById('tutor-input');
       var tutorSend = document.getElementById('tutor-send');
+      var loginBarBtn = document.getElementById('login-bar-btn');
+      var loginBarMsg = document.getElementById('login-bar-msg');
 
       tutorBtn.addEventListener('click', function() { tutorPanel.classList.toggle('open'); });
       tutorClose.addEventListener('click', function() { tutorPanel.classList.remove('open'); });
@@ -1051,14 +275,15 @@
 
       function addMsg(text, type) {
         var div = document.createElement('div');
-        div.className = 'tutor-msg ' + type;
+        div.className = 'tutor-msg ' + type + (type === 'bot' ? ' glass-msg' : '');
         div.textContent = text;
         tutorMessages.appendChild(div);
         tutorMessages.scrollTop = tutorMessages.scrollHeight;
         return div;
       }
+
       function renderHistory(history) {
-        tutorMessages.innerHTML = '<div class="tutor-msg bot">Hi! I am your A_D Nursing Tutor. Ask me about any question or nursing concept!</div>';
+        tutorMessages.innerHTML = '<div class="tutor-msg bot glass-msg">Hi! I am your A_D Nursing Tutor. Ask me about any question, concept, or topic and I will explain it clearly!</div>';
         history.forEach(function(m) { addMsg(m.content, m.role === 'assistant' ? 'bot' : 'user'); });
       }
 
@@ -1071,7 +296,11 @@
         tutorSend.disabled = true;
         var typing = addMsg('Thinking...', 'typing');
         try {
-          var res = await fetch('/api/chat', { method: 'POST', headers: {'Content-Type':'application/json'}, body: JSON.stringify({ messages: chatHistory, context: { questionCount: 9572 } }) });
+          var res = await fetch('/api/chat', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ messages: chatHistory, context: { questionCount: 9572 } })
+          });
           var data = await res.json();
           typing.remove();
           var reply = data.reply || data.error || 'Sorry, could not get a response.';
@@ -1079,72 +308,73 @@
           chatHistory.push({ role: 'assistant', content: reply });
           saveLocal(chatHistory);
           if (currentUser && sbClient) saveCloud(chatHistory);
-        } catch(err) { typing.remove(); addMsg('Connection error. Please try again.', 'bot'); }
+        } catch(err) {
+          typing.remove();
+          addMsg('Connection error. Please try again.', 'bot');
+        }
         tutorSend.disabled = false;
         tutorInput.focus();
       }
+
       tutorSend.addEventListener('click', sendMessage);
       tutorInput.addEventListener('keydown', function(e) { if (e.key === 'Enter') sendMessage(); });
 
       async function saveCloud(h) {
         if (!sbClient || !currentUser) return;
-        try { await sbClient.from('chat_history').upsert({ user_id: currentUser.id, messages: h.slice(-MAX_MSGS), updated_at: new Date().toISOString() }, { onConflict: 'user_id' }); } catch(e) {}
-      }
-      async function loadCloud(userId) {
-        try { var {data} = await sbClient.from('chat_history').select('messages').eq('user_id', userId).single(); return data?.messages || []; } catch(e) { return []; }
-      }
-
-      function updateSidebarUser(user) {
-        var userSection = document.getElementById('sb-user-section');
-        var signInBtn = document.getElementById('sb-signin-btn');
-        if (user) {
-          var name = (user.user_metadata?.full_name || user.email || 'User').split(' ')[0];
-          document.getElementById('sb-user-name').textContent = name;
-          document.getElementById('sb-user-email').textContent = user.email || '';
-          document.getElementById('sb-avatar').textContent = name[0].toUpperCase();
-          userSection.classList.add('logged-in');
-          signInBtn.textContent = '🚪 Sign out';
-          signInBtn.classList.add('signed-in');
-          signInBtn.onclick = doSignOut;
-        } else {
-          userSection.classList.remove('logged-in');
-          signInBtn.innerHTML = '<span>🔑</span> Sign in with Google';
-          signInBtn.classList.remove('signed-in');
-          signInBtn.onclick = doGoogleSignIn;
-        }
-      }
-
-      function doGoogleSignIn() {
-        if (!sbClient) { alert('Auth not ready. Please refresh.'); return; }
-        sbClient.auth.signInWithOAuth({ provider: 'google', options: { redirectTo: APP_URL, queryParams: { prompt: 'select_account', access_type: 'offline' } } });
-      }
-
-      async function doSignOut() {
         try {
-          if (sbClient) {
-            await sbClient.auth.signOut({ scope: 'global' });
-          }
-        } catch(e) { console.log('signout error:', e); }
-        // Clear ALL supabase session data from localStorage
-        const keysToRemove = [];
-        for (let i = 0; i < localStorage.length; i++) {
-          const k = localStorage.key(i);
-          if (k && (k.startsWith('sb-') || k.includes('supabase') || k.includes('auth') || k === CHAT_KEY)) {
-            keysToRemove.push(k);
-          }
-        }
-        keysToRemove.forEach(k => localStorage.removeItem(k));
-        currentUser = null;
-        chatHistory = [];
-        renderHistory([]);
-        updateSidebarUser(null);
-        // Force full page reload after short delay
-        setTimeout(() => { window.location.href = window.location.origin; }, 400);
+          await sbClient.from('chat_history').upsert({
+            user_id: currentUser.id,
+            messages: h.slice(-MAX_MSGS),
+            updated_at: new Date().toISOString()
+          }, { onConflict: 'user_id' });
+        } catch(e) {}
       }
 
-      function waitForSupabase(cb) {
-        if (window.supabase) { cb(); return; }
-        var t = 0, iv = setInterval(() => { if (window.supabase) { clearInterval(iv); cb(); } else if (++t > 30) clearInterval(iv); }, 200);
+      async function loadCloud(accessToken, userId) {
+        try {
+          var { data, error } = await sbClient.from('chat_history').select('messages').eq('user_id', userId).single();
+          if (error) return [];
+          return data?.messages || [];
+        } catch(e) { return []; }
+      }
+
+      function setLoginBar(user) {
+        if (!loginBarBtn) return;
+        if (user) {
+          var name = (user.user_metadata && user.user_metadata.full_name) ? user.user_metadata.full_name.split(' ')[0] : 'You';
+          loginBarMsg.innerHTML = '<i class="fa-solid fa-circle-check" style="color:var(--accent)"></i> Welcome, ' + name + '!';
+          loginBarBtn.innerHTML = '<i class="fa-solid fa-right-from-bracket"></i> Sign out';
+          loginBarBtn.className = "glass-panel";
+          loginBarBtn.onclick = async function() {
+            try { if (sbClient) await sbClient.auth.signOut({ scope: 'global' }); } catch(e) {}
+            Object.keys(localStorage).forEach(function(key) {
+              if (key.startsWith('sb-') || key.includes('supabase') || key === 'ad-tutor-chat') localStorage.removeItem(key);
+            });
+            currentUser = null; chatHistory = []; renderHistory([]); setLoginBar(null);
+            setTimeout(function() { window.location.reload(); }, 500);
+          };
+        } else {
+          loginBarMsg.innerHTML = '<i class="fa-solid fa-cloud-arrow-up"></i> Sign in to save history';
+          loginBarBtn.innerHTML = '<i class="fa-brands fa-google"></i> Sign in';
+          loginBarBtn.className = "primary glass-panel";
+          loginBarBtn.onclick = function() { window.doGoogleSignIn(); };
+        }
+      }
+
+      window.doGoogleSignIn = function() {
+        if (!sbClient) return alert('Auth not ready. Please wait a moment and try again.');
+        sbClient.auth.signInWithOAuth({ provider: 'google', options: { redirectTo: APP_URL, queryParams: { prompt: 'select_account', access_type: 'offline' } } });
+      };
+
+      function waitForSupabase(callback) {
+        if (window.supabase) { callback(); } else {
+          var attempts = 0;
+          var interval = setInterval(function() {
+            attempts++;
+            if (window.supabase) { clearInterval(interval); callback(); }
+            else if (attempts > 20) { clearInterval(interval); console.warn('Supabase CDN failed to load'); }
+          }, 200);
+        }
       }
 
       function init() {
@@ -1153,22 +383,222 @@
         waitForSupabase(async function() {
           try {
             sbClient = window.supabase.createClient(SB_URL, SB_KEY);
-            var { data: { session } } = await sbClient.auth.getSession();
+            var sessionData = await sbClient.auth.getSession();
+            var session = sessionData.data.session;
             if (session) {
-              currentUser = session.user;
-              updateSidebarUser(currentUser);
-              var cloud = await loadCloud(currentUser.id);
-              if (cloud?.length > 0) { chatHistory = cloud; renderHistory(chatHistory); }
-            } else { updateSidebarUser(null); }
-            sbClient.auth.onAuthStateChange(async (_, sess) => {
-              currentUser = sess?.user || null;
-              updateSidebarUser(currentUser);
-              if (currentUser) { var cloud = await loadCloud(currentUser.id); if (cloud?.length > 0) { chatHistory = cloud; renderHistory(chatHistory); } }
+              currentUser = session.user; currentUser.access_token = session.access_token;
+              setLoginBar(currentUser);
+              var cloud = await loadCloud(session.access_token, session.user.id);
+              if (cloud && cloud.length > 0) { chatHistory = cloud; renderHistory(chatHistory); }
+            } else { setLoginBar(null); }
+
+            sbClient.auth.onAuthStateChange(async function(event, session) {
+              if (session) {
+                currentUser = session.user; currentUser.access_token = session.access_token;
+                setLoginBar(currentUser);
+                var cloud = await loadCloud(session.access_token, session.user.id);
+                if (cloud && cloud.length > 0) { chatHistory = cloud; renderHistory(chatHistory); }
+              } else { currentUser = null; setLoginBar(null); }
             });
-          } catch(e) { console.error('Auth error:', e); }
+          } catch(e) { console.error('Supabase setup error:', e); }
         });
       }
       window.addEventListener('load', init);
     </script>
+
+    <script>
+    // ===== CURSOR TRAIL =====
+    (function() {
+      const canvas = document.getElementById('cursor-canvas');
+      const ctx = canvas.getContext('2d');
+      let W = canvas.width = window.innerWidth;
+      let H = canvas.height = window.innerHeight;
+      let particles = [];
+      let mouse = { x: W/2, y: H/2 };
+      let frame = 0;
+
+      window.addEventListener('resize', () => {
+        W = canvas.width = window.innerWidth;
+        H = canvas.height = window.innerHeight;
+      });
+
+      function getAccentColor() {
+        const hex = getComputedStyle(document.documentElement)
+          .getPropertyValue('--accent').trim() || '#20f7d2';
+        const r = parseInt(hex.slice(1,3), 16);
+        const g = parseInt(hex.slice(3,5), 16);
+        const b = parseInt(hex.slice(5,7), 16);
+        return { r, g, b, hex };
+      }
+
+      class Particle {
+        constructor(x, y, color) {
+          this.x = x + (Math.random() - 0.5) * 6;
+          this.y = y + (Math.random() - 0.5) * 6;
+          this.vx = (Math.random() - 0.5) * 1.5;
+          this.vy = (Math.random() - 0.5) * 1.5 - 0.5;
+          this.alpha = 0.9;
+          this.decay = 0.025 + Math.random() * 0.02;
+          this.size = 2 + Math.random() * 4;
+          this.color = color;
+          this.glow = Math.random() > 0.5;
+        }
+        update() {
+          this.x += this.vx;
+          this.y += this.vy;
+          this.vy += 0.03;
+          this.alpha -= this.decay;
+          this.size *= 0.97;
+        }
+        draw() {
+          if (this.alpha <= 0) return;
+          ctx.save();
+          ctx.globalAlpha = this.alpha;
+          if (this.glow) {
+            ctx.shadowColor = this.color.hex;
+            ctx.shadowBlur = 12;
+          }
+          ctx.beginPath();
+          ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+          ctx.fillStyle = `rgba(${this.color.r}, ${this.color.g}, ${this.color.b}, ${this.alpha})`;
+          ctx.fill();
+          ctx.restore();
+        }
+      }
+
+      // Sparkle star particle
+      class Sparkle {
+        constructor(x, y, color) {
+          this.x = x + (Math.random() - 0.5) * 20;
+          this.y = y + (Math.random() - 0.5) * 20;
+          this.alpha = 1;
+          this.size = 1 + Math.random() * 3;
+          this.rotation = Math.random() * Math.PI * 2;
+          this.color = color;
+          this.life = 0;
+          this.maxLife = 30 + Math.random() * 20;
+        }
+        update() {
+          this.life++;
+          this.alpha = 1 - (this.life / this.maxLife);
+          this.rotation += 0.1;
+          this.size *= 0.99;
+        }
+        draw() {
+          if (this.alpha <= 0) return;
+          ctx.save();
+          ctx.globalAlpha = this.alpha * 0.8;
+          ctx.translate(this.x, this.y);
+          ctx.rotate(this.rotation);
+          ctx.shadowColor = this.color.hex;
+          ctx.shadowBlur = 8;
+          ctx.strokeStyle = `rgba(${this.color.r}, ${this.color.g}, ${this.color.b}, ${this.alpha})`;
+          ctx.lineWidth = 1;
+          const s = this.size * 3;
+          ctx.beginPath();
+          for (let i = 0; i < 4; i++) {
+            const angle = (i / 4) * Math.PI * 2;
+            const outer = s;
+            const inner = s * 0.3;
+            if (i === 0) ctx.moveTo(Math.cos(angle) * outer, Math.sin(angle) * outer);
+            else {
+              ctx.lineTo(Math.cos(angle - Math.PI/4) * inner, Math.sin(angle - Math.PI/4) * inner);
+              ctx.lineTo(Math.cos(angle) * outer, Math.sin(angle) * outer);
+            }
+          }
+          ctx.closePath();
+          ctx.stroke();
+          ctx.restore();
+        }
+      }
+
+      window.addEventListener('mousemove', (e) => {
+        mouse.x = e.clientX;
+        mouse.y = e.clientY;
+        frame++;
+        const color = getAccentColor();
+        // Add trail particles
+        if (frame % 2 === 0) {
+          particles.push(new Particle(e.clientX, e.clientY, color));
+          if (frame % 8 === 0) {
+            particles.push(new Sparkle(e.clientX, e.clientY, color));
+          }
+        }
+        // Limit particle count
+        if (particles.length > 120) {
+          particles = particles.filter(p => p.alpha > 0.1).slice(-120);
+        }
+      });
+
+      // Touch support for mobile
+      window.addEventListener('touchmove', (e) => {
+        const t = e.touches[0];
+        const color = getAccentColor();
+        particles.push(new Particle(t.clientX, t.clientY, color));
+        if (particles.length > 60) particles = particles.slice(-60);
+      }, { passive: true });
+
+      function animate() {
+        ctx.clearRect(0, 0, W, H);
+        for (let i = particles.length - 1; i >= 0; i--) {
+          const p = particles[i];
+          p.update();
+          p.draw();
+          if (p.alpha <= 0 || p.size < 0.2) particles.splice(i, 1);
+        }
+        requestAnimationFrame(animate);
+      }
+      animate();
+    })();
+
+    // ===== HAPTICS =====
+    (function() {
+      function haptic(pattern) {
+        if ('vibrate' in navigator) {
+          try { navigator.vibrate(pattern); } catch(e) {}
+        }
+      }
+
+      // Light tap on any button
+      document.addEventListener('click', function(e) {
+        const btn = e.target.closest('button, .option, .nav__item, .theme-dot');
+        if (!btn) return;
+
+        if (btn.classList.contains('primary')) {
+          haptic([10, 30, 10]); // Double tap for primary actions
+        } else if (btn.classList.contains('option')) {
+          haptic(8); // Soft tap on options
+        } else if (btn.classList.contains('nav__item')) {
+          haptic([5, 20, 5]); // Navigation feel
+        } else {
+          haptic(6); // Light tap for other buttons
+        }
+      });
+
+      // Success haptic on correct answer
+      const observer = new MutationObserver(function(mutations) {
+        mutations.forEach(function(m) {
+          m.addedNodes.forEach(function(node) {
+            if (node.classList && node.classList.contains('is-correct')) {
+              haptic([10, 50, 10, 50, 30]); // Success pattern
+            }
+            if (node.classList && node.classList.contains('is-wrong')) {
+              haptic([20, 80, 20]); // Error pattern
+            }
+          });
+        });
+      });
+
+      // Observe options container for answer feedback
+      function observeOptions() {
+        const containers = document.querySelectorAll('#practice-options, #exam-options');
+        containers.forEach(c => {
+          observer.observe(c, { subtree: true, childList: true, attributes: true, attributeFilter: ['class'] });
+        });
+      }
+      window.addEventListener('load', observeOptions);
+    })();
+    </script>
+
   </body>
 </html>
