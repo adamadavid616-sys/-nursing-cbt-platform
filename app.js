@@ -290,7 +290,8 @@ function switchView(view) {
     practice: ["Learning mode", "Practice with instant rationales"],
     cbt: ["Simulation", "CBT exam mode"],
     review: ["Performance", "Review weak areas"],
-    guide: ["Study map", "High-yield council exam guide"]
+    guide: ["Study map", "High-yield council exam guide"],
+    dashboard: ["Dashboard", "General info and facts"] // Added for new dashboard view
   };
   $("#view-kicker").textContent = titles[view][0];
   $("#view-title").textContent = titles[view][1];
@@ -383,7 +384,7 @@ function submitExam() {
   state.timerId = null;
   $("#exam-panel").hidden = true;
   $("#exam-results").hidden = false;
-  $("#exam-setup").hidden = false;
+  $("#exam-setup").hidden = false; // Show setup again for re-testing
   $("#timer-label").textContent = "Completed";
 
   const rows = state.exam.map((question) => {
@@ -406,8 +407,9 @@ function submitExam() {
           <div class="missed-card glass-panel" style="padding: 20px; margin-bottom: 15px;">
             <strong style="color: ${correct ? 'var(--accent)' : 'var(--rose)'}">${correct ? "Correct" : "Missed"} - ${escapeHtml(question.category)}</strong>
             <p>${escapeHtml(question.prompt)}</p>
-            <p><strong>Answer:</strong> ${question.answer.map((i) => escapeHtml(question.options[i])).join("; ")}</p>
-            ${rationaleHtml(question, "Explanation")}
+            <p><strong>Your Answer:</strong> ${selected.map((i) => escapeHtml(question.options[i])).join("; ") || 'Not answered'}</p>
+            <p><strong>Correct Answer:</strong> ${question.answer.map((i) => escapeHtml(question.options[i])).join("; ")}</p>
+            ${rationaleHtml(question, correct ? "Explanation" : "Review this explanation")}
           </div>`
         ).join("")}
     </div>
@@ -475,6 +477,31 @@ function renderGuide() {
   `).join("");
 }
 
+function renderDashboard() {
+  // Placeholder for Dashboard content.
+  // You would typically fetch data or use static content here.
+  $("#dashboard-view").innerHTML = `
+    <div class="dashboard-content glass-panel">
+      <div class="dashboard-card">
+        <i class="fa-solid fa-lightbulb"></i>
+        <h4>Did You Know?</h4>
+        <p>The average registered nurse completes over 1.5 million patient assessments in a typical 40-year career.</p>
+      </div>
+      <div class="dashboard-card">
+        <i class="fa-solid fa-graduation-cap"></i>
+        <h4>Council Course Spotlight</h4>
+        <p><strong>Pediatric Assessment:</strong> Focus on developmental stages, common childhood illnesses, and age-appropriate communication techniques.</p>
+      </div>
+      <div class="dashboard-card">
+        <i class="fa-solid fa-flask-vial"></i>
+        <h4>Lab Value Quick Check</h4>
+        <p><strong>Potassium (K+):</strong> Normal range is 3.5-5.0 mEq/L. Crucial for cardiac function and nerve impulses.</p>
+      </div>
+    </div>
+  `;
+}
+
+
 function bindEvents() {
   categoryFilter.addEventListener("change", applyFilters);
   $("#shuffle-button").addEventListener("click", () => {
@@ -504,6 +531,23 @@ function bindEvents() {
     }
   });
   $$(".nav__item").forEach((button) => button.addEventListener("click", () => switchView(button.dataset.view)));
+
+  // Sidebar toggle event listener
+  const sidebar = document.getElementById('main-sidebar');
+  const toggleBtn = document.getElementById('sidebar-toggle');
+  toggleBtn.addEventListener('click', () => {
+    sidebar.classList.toggle('open');
+  });
+
+  // Close sidebar on mobile when nav item is clicked
+  const navItems = document.querySelectorAll('.nav__item');
+  navItems.forEach(item => {
+    item.addEventListener('click', () => {
+      if (window.innerWidth <= 768) {
+        sidebar.classList.remove('open');
+      }
+    });
+  });
 }
 
 function init() {
@@ -512,6 +556,7 @@ function init() {
   renderPractice();
   renderProgress();
   renderGuide();
+  renderDashboard(); // Render the dashboard content
   bindEvents();
   switchView(state.view);
 }
