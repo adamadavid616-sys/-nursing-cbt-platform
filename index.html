@@ -75,8 +75,8 @@
               <h3 id="dashboard-fact"></h3>
               <p class="subtle">Interact with the floating objects for more insights.</p>
             </div>
+            <!-- Interactive 3D Objects (using CSS for effect) -->
             <div class="interactive-objects">
-              <!-- Placeholder for 3D objects -->
               <div class="object object-1"></div>
               <div class="object object-2"></div>
               <div class="object object-3"></div>
@@ -495,7 +495,6 @@
           this.decay = 0.025 + Math.random() * 0.02; // Rate of fading
           this.size = 2 + Math.random() * 4; // Initial size
           this.color = color;
-          // Removed glow effect here as per request
         }
         update() {
           this.x += this.vx;

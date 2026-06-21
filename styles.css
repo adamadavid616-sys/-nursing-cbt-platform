@@ -92,6 +92,7 @@ button:active { transform: scale(0.96); }
 /* ==== LAYOUT ==== */
 .app { display: flex; min-height: 100vh; position: relative; overflow: hidden; }
 
+/* Sidebar: Hidden by default on mobile, toggled via button */
 .sidebar {
   width: 280px;
   flex-shrink: 0;
@@ -103,14 +104,33 @@ button:active { transform: scale(0.96); }
   z-index: 1000;
   height: 100vh;
   overflow-y: auto;
-  position: fixed; /* Initially fixed, will be controlled by JS */
+  position: fixed; /* Fixed positioning for sidebar */
   left: 0;
   top: 0;
-  transform: translateX(0); /* Sidebar is visible by default in desktop */
+  transform: translateX(-100%); /* Hidden by default */
+  box-shadow: 0 0 50px rgba(0,0,0,0.8); /* Shadow when open */
 }
 
-.sidebar.open {
-  transform: translateX(0); /* Keep visible on desktop */
+/* Sidebar open state */
+.sidebar.open { 
+  transform: translateX(0); /* Slides in when .open is added */
+}
+
+/* Make sidebar visible on larger screens but still allow toggle */
+@media (min-width: 769px) {
+  .sidebar {
+    position: static; /* Not fixed, part of the flow */
+    transform: translateX(0); /* Always visible */
+    box-shadow: none; /* No shadow needed */
+    border-right: 1px solid var(--line); /* Re-add border if removed */
+  }
+  /* Ensure workspace takes up remaining space */
+  .app {
+    display: flex;
+  }
+  .workspace {
+    flex: 1; /* Allow workspace to grow */
+  }
 }
 
 .sidebar-content { padding: 32px 24px; display: flex; flex-direction: column; gap: 26px; min-height: 100%; }
@@ -491,22 +511,6 @@ body {
   z-index: 99998; /* Ensure it's above most elements */
 }
 
-/* Glow pulse animation on accent elements - REMOVED as requested for cursor trail */
-/* @keyframes accentGlow {
-  0%, 100% { box-shadow: 0 0 20px rgba(var(--accent-rgb), 0.3); }
-  50% { box-shadow: 0 0 40px rgba(var(--accent-rgb), 0.6), 0 0 80px rgba(var(--accent-rgb), 0.15); }
-}
-.primary { animation: accentGlow 3s ease-in-out infinite !important; }
-.primary:hover { animation: none !important; } */
-
-/* Mobile enhancements */
-@media (max-width: 768px) {
-  .sidebar {
-    background: rgba(4, 4, 8, 0.8) !important;
-    backdrop-filter: blur(80px) saturate(200%) !important;
-  }
-}
-
 /* ==== DASHBOARD STYLES ==== */
 .dashboard-container {
   display: flex;
@@ -532,7 +536,7 @@ body {
   color: var(--muted);
 }
 
-/* Interactive 3D Objects (Conceptual) */
+/* Interactive 3D Objects (Conceptual using CSS animations) */
 .interactive-objects {
   position: absolute;
   top: 0;
