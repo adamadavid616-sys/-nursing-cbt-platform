@@ -387,7 +387,7 @@
           var res = await fetch('/api/chat', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ messages: chatHistory, context: { questionCount: 1579 } })
+            body: JSON.stringify({ messages: chatHistory, context: { questionCount: 9572 } })
           });
           var data = await res.json();
           typing.remove();
@@ -690,7 +690,7 @@
         const masteryEl = document.getElementById('mastery-score');
         const dq = document.getElementById('dash-questions');
         const dm = document.getElementById('dash-mastery');
-        if (bankEl && dq) dq.textContent = parseInt(bankEl.textContent || '0').toLocaleString() || '1,579';
+        if (bankEl && dq) dq.textContent = parseInt(bankEl.textContent || '0').toLocaleString();
         if (masteryEl && dm) dm.textContent = masteryEl.textContent || '0%';
         const sessions = parseInt(localStorage.getItem('ad-sessions') || '0');
         const ds = document.getElementById('dash-sessions');
