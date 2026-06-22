@@ -10,25 +10,21 @@
     
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.39.0/dist/umd/supabase.min.js"></script>
     <script>
-      window._sbInit = function(url, key) {
-        // intentionally empty - Supabase init handled in login script below
-      };
+      window._sbInit = function(url, key) {};
     </script>
   </head>
   <body>
-    <!-- Cursor trail canvas -->
     <canvas id="cursor-canvas"></canvas>
 
     <main class="app">
-      <!-- Sidebar Overlay -->
-    <div id="sidebar-overlay" style="
-      position:fixed;inset:0;background:rgba(0,0,0,0.5);
-      backdrop-filter:blur(4px);z-index:999;
-      opacity:0;pointer-events:none;
-      transition:opacity 0.3s ease;
-    "></div>
+      <div id="sidebar-overlay" style="
+        position:fixed;inset:0;background:rgba(0,0,0,0.5);
+        backdrop-filter:blur(4px);z-index:999;
+        opacity:0;pointer-events:none;
+        transition:opacity 0.3s ease;
+      "></div>
 
-    <aside id="main-sidebar" class="sidebar" aria-label="Study dashboard">
+      <aside id="main-sidebar" class="sidebar" aria-label="Study dashboard">
         <div class="sidebar-content">
           <div class="brand">
             <p class="eyebrow">Council exam prep</p>
@@ -47,8 +43,8 @@
           </div>
 
           <nav class="nav" aria-label="Prep modes">
-            <button class="nav__item glass-panel" type="button" data-view="dashboard"><i class="fa-solid fa-gauge-high"></i> Dashboard</button>
-            <button class="nav__item is-active glass-panel" type="button" data-view="practice"><i class="fa-solid fa-pen-fancy"></i> Practice</button>
+            <button class="nav__item is-active glass-panel" type="button" data-view="dashboard"><i class="fa-solid fa-gauge-high"></i> Dashboard</button>
+            <button class="nav__item glass-panel" type="button" data-view="practice"><i class="fa-solid fa-pen-fancy"></i> Practice</button>
             <button class="nav__item glass-panel" type="button" data-view="cbt"><i class="fa-solid fa-laptop-code"></i> CBT Exam</button>
             <button class="nav__item glass-panel" type="button" data-view="review"><i class="fa-solid fa-chart-line"></i> Review</button>
             <button class="nav__item glass-panel" type="button" data-view="guide"><i class="fa-solid fa-book-open"></i> Study Guide</button>
@@ -66,8 +62,8 @@
           <div class="topbar-left">
             <button id="sidebar-toggle" class="icon-button" title="Toggle Sidebar"><i class="fa-solid fa-bars-staggered"></i></button>
             <div>
-              <p id="view-kicker" class="eyebrow">Learning mode</p>
-              <h2 id="view-title">Practice with instant rationales</h2>
+              <p id="view-kicker" class="eyebrow">Welcome</p>
+              <h2 id="view-title">Your nursing prep hub</h2>
             </div>
           </div>
           <div class="timer glass-panel" aria-live="polite">
@@ -76,88 +72,44 @@
           </div>
         </header>
 
-<section id="dashboard-view" class="view">
-          <!-- Three.js 3D Canvas -->
+        <section id="dashboard-view" class="view is-visible">
           <canvas id="three-canvas" style="position:absolute;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:0;"></canvas>
 
-          <div style="position:relative;z-index:1;padding:20px 0;">
-            <!-- Welcome Header -->
-            <div class="glass-panel" style="padding:28px 32px;margin-bottom:24px;text-align:center;background:rgba(10,10,20,0.4);">
-              <p class="eyebrow" id="dash-greeting">Good morning</p>
-              <h2 id="dash-title" style="font-size:2rem;margin:8px 0;background:linear-gradient(135deg,var(--accent),#fff);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">
+          <div style="position:relative;z-index:1;padding:40px 20px;display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:75vh;text-align:center;">
+            
+            <div style="margin-bottom:40px; animation: slideUp 0.6s ease-out forwards;">
+              <p class="eyebrow" id="dash-greeting" style="font-size: 1.1rem; margin-bottom: 12px; color: var(--accent);">Good morning, Future Nurse 🌤️</p>
+              <h2 id="dash-title" style="font-size:3.8rem;font-weight:800;margin:0;background:linear-gradient(135deg,var(--accent),#fff);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;text-shadow:0 10px 40px rgba(var(--accent-rgb), 0.3);letter-spacing:-1px;">
                 A_D Nursing Hub
               </h2>
-              <p style="color:var(--muted);font-size:14px;">NMCN · NCLEX · OSCE · Hospital-Final CBT Prep</p>
+              <p style="color:var(--muted);font-size:1.15rem;margin-top:16px;">NMCN · NCLEX · OSCE · Hospital-Final CBT Prep</p>
             </div>
 
-            <!-- Stats Row -->
-            <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:24px;">
-              <div class="glass-panel dash-stat" style="padding:20px;text-align:center;cursor:pointer;" onclick="switchViewDash('practice')">
-                <div style="font-size:2rem;color:var(--accent);font-weight:800;text-shadow:0 0 20px var(--accent);" id="dash-questions">9,572</div>
-                <div style="font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin-top:4px;">Questions</div>
-                <div style="font-size:10px;color:var(--accent);margin-top:6px;opacity:0.7;">Tap to practice →</div>
+            <div class="glass-panel" id="fact-card" style="padding:40px;max-width:750px;width:100%;margin-bottom:40px;cursor:pointer;transition:all 0.4s;border-left: 4px solid var(--accent);border-radius: 20px;" onclick="rotateFact()">
+              <div style="display:flex;align-items:center;justify-content:center;gap:12px;margin-bottom:20px;">
+                <span style="font-size:24px;" id="fact-icon">💡</span>
+                <span class="eyebrow" style="font-size:1rem; margin:0;">Clinical Fact of the Day</span>
+                <span style="position:absolute;right:24px;font-size:12px;color:var(--muted);"><i class="fa-solid fa-rotate-right"></i> Tap to cycle</span>
               </div>
-              <div class="glass-panel dash-stat" style="padding:20px;text-align:center;cursor:pointer;" onclick="switchViewDash('review')">
-                <div style="font-size:2rem;color:var(--accent);font-weight:800;text-shadow:0 0 20px var(--accent);" id="dash-mastery">0%</div>
-                <div style="font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin-top:4px;">Mastery</div>
-                <div style="font-size:10px;color:var(--accent);margin-top:6px;opacity:0.7;">View review →</div>
-              </div>
-              <div class="glass-panel dash-stat" style="padding:20px;text-align:center;cursor:pointer;" onclick="switchViewDash('cbt')">
-                <div style="font-size:2rem;color:var(--accent);font-weight:800;text-shadow:0 0 20px var(--accent);" id="dash-sessions">0</div>
-                <div style="font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin-top:4px;">Sessions</div>
-                <div style="font-size:10px;color:var(--accent);margin-top:6px;opacity:0.7;">Start CBT →</div>
-              </div>
+              <p id="fact-text" style="font-size:1.35rem;line-height:1.6;color:var(--ink);font-weight:400;margin:0;">Loading nursing fact...</p>
+              <div id="fact-category" style="margin-top:20px;font-size:0.9rem;color:var(--accent);text-transform:uppercase;letter-spacing:1.5px;font-weight:700;"></div>
             </div>
 
-            <!-- Did You Know Fact Card -->
-            <div class="glass-panel" id="fact-card" style="padding:24px 28px;margin-bottom:24px;cursor:pointer;transition:all 0.3s;" onclick="rotateFact()">
-              <div style="display:flex;align-items:center;gap:12px;margin-bottom:12px;">
-                <span style="font-size:22px;" id="fact-icon">💡</span>
-                <span class="eyebrow">Did You Know?</span>
-                <span style="margin-left:auto;font-size:11px;color:var(--muted);">Tap for next fact</span>
-              </div>
-              <p id="fact-text" style="font-size:15px;line-height:1.7;color:var(--ink);">Loading nursing fact...</p>
-              <div id="fact-category" style="margin-top:10px;font-size:11px;color:var(--accent);text-transform:uppercase;letter-spacing:0.8px;"></div>
-            </div>
-
-            <!-- Quick Actions -->
-            <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:24px;">
-              <button class="glass-panel primary" onclick="switchViewDash('practice')" style="padding:16px;justify-content:center;font-size:14px;font-weight:600;">
-                <i class="fa-solid fa-pen-fancy"></i> Start Practicing
+            <div style="display:flex;gap:20px;flex-wrap:wrap;justify-content:center;">
+              <button class="glass-panel primary" onclick="switchViewDash('practice')" style="padding:18px 40px;font-size:1.1rem;font-weight:700;border-radius:100px;text-transform:uppercase;letter-spacing:1px;">
+                <i class="fa-solid fa-play"></i> Enter Practice Mode
               </button>
-              <button class="glass-panel" onclick="switchViewDash('cbt')" style="padding:16px;justify-content:center;font-size:14px;color:var(--accent);border-color:rgba(var(--accent-rgb),0.4);">
-                <i class="fa-solid fa-stopwatch"></i> Take CBT Exam
-              </button>
-            </div>
-
-            <!-- Council Exam Topics -->
-            <div class="glass-panel" style="padding:20px;margin-bottom:24px;">
-              <p class="eyebrow" style="margin-bottom:16px;">NMCN Council Exam Topics</p>
-              <div id="topic-grid" style="display:grid;grid-template-columns:repeat(2,1fr);gap:10px;"></div>
-            </div>
-
-            <!-- Today's Tip -->
-            <div class="glass-panel" id="tip-card" style="padding:20px;border-left:3px solid var(--accent);">
-              <p class="eyebrow" style="margin-bottom:8px;">Exam Tip of the Day</p>
-              <p id="tip-text" style="font-size:13px;line-height:1.7;color:var(--muted);"></p>
             </div>
           </div>
         </section>
 
-        <section id="practice-view" class="view is-visible">
+        <section id="practice-view" class="view">
           <div class="toolbar glass-panel" aria-label="Practice filters">
-            <label>
-              Category
-              <select id="category-filter"></select>
-            </label>
+            <label>Category <select id="category-filter"></select></label>
             <button id="shuffle-button" class="icon-button primary" type="button" title="Shuffle question"><i class="fa-solid fa-shuffle"></i></button>
           </div>
-
           <article class="question-panel glass-panel" aria-live="polite">
-            <div class="question-meta">
-              <span id="practice-category"></span>
-              <span id="practice-progress"></span>
-            </div>
+            <div class="question-meta"><span id="practice-category"></span><span id="practice-progress"></span></div>
             <h3 id="practice-question"></h3>
             <div id="practice-options" class="options"></div>
             <div class="panel-actions">
@@ -171,55 +123,31 @@
 
         <section id="cbt-view" class="view">
           <div id="exam-setup" class="exam-setup glass-panel">
-            <div>
-              <p class="eyebrow">Simulation</p>
-              <h3>Computer-based test mode</h3>
-              <p class="subtle">Timed, no instant feedback, mixed categories, and a final review screen.</p>
-            </div>
+            <div><p class="eyebrow">Simulation</p><h3>Computer-based test mode</h3></div>
             <div class="setup-grid">
-              <label>
-                Questions
-                <input id="exam-size" type="number" min="10" max="48" value="25" class="glass-panel" />
-              </label>
-              <label>
-                Minutes
-                <input id="exam-minutes" type="number" min="5" max="180" value="35" class="glass-panel" />
-              </label>
+              <label>Questions <input id="exam-size" type="number" min="10" max="48" value="25" class="glass-panel" /></label>
+              <label>Minutes <input id="exam-minutes" type="number" min="5" max="180" value="35" class="glass-panel" /></label>
             </div>
             <button id="start-exam" class="primary" type="button"><i class="fa-solid fa-play"></i> Start CBT</button>
           </div>
-
           <article id="exam-panel" class="question-panel glass-panel" hidden>
-            <div class="question-meta">
-              <span id="exam-category"></span>
-              <span id="exam-progress"></span>
-            </div>
+            <div class="question-meta"><span id="exam-category"></span><span id="exam-progress"></span></div>
             <h3 id="exam-question"></h3>
             <div id="exam-options" class="options"></div>
             <div class="panel-actions">
               <button id="exam-prev" type="button" class="glass-panel"><i class="fa-solid fa-arrow-left"></i> Back</button>
               <button id="exam-next" class="primary" type="button">Next <i class="fa-solid fa-arrow-right"></i></button>
-              <button id="submit-exam" type="button" style="border-color: #ff3b30; color: #ff3b30;" class="glass-panel">Submit Exam</button>
+              <button id="submit-exam" type="button" style="border-color: #ff3b30; color: #ff3b30;" class="glass-panel">Submit</button>
             </div>
-            <div class="exam-review-block">
-              <div class="question-meta">
-                <span>Question navigator</span>
-                <span id="exam-answered-count">0 answered</span>
-              </div>
-              <div id="exam-jump-list" class="exam-jump-list"></div>
-            </div>
+            <div class="exam-review-block"><div id="exam-jump-list" class="exam-jump-list"></div></div>
           </article>
-
           <section id="exam-results" class="results glass-panel" hidden></section>
         </section>
 
         <section id="review-view" class="view">
           <div class="review-head glass-panel">
-            <div>
-              <p class="eyebrow">Weak areas</p>
-              <h3>Performance by client need</h3>
-            </div>
-            <button id="reset-progress" type="button" class="glass-panel"><i class="fa-solid fa-rotate-right"></i> Reset progress</button>
+            <div><p class="eyebrow">Weak areas</p><h3>Performance by client need</h3></div>
+            <button id="reset-progress" type="button" class="glass-panel"><i class="fa-solid fa-rotate-right"></i> Reset</button>
           </div>
           <div id="category-bars" class="bars glass-panel"></div>
           <div id="missed-list" class="missed-list"></div>
@@ -227,16 +155,8 @@
 
         <section id="guide-view" class="view">
           <div class="guide-layout">
-            <article class="glass-panel">
-              <p class="eyebrow">Guide</p>
-              <h3>Passing strategy and exam guides</h3>
-              <div id="study-guide" class="guide-list"></div>
-            </article>
-            <article class="blueprint glass-panel">
-              <p class="eyebrow">2026 NCLEX-PN</p>
-              <h3>Blueprint weighting</h3>
-              <div id="blueprint-list"></div>
-            </article>
+            <article class="glass-panel"><p class="eyebrow">Guide</p><h3>Strategy</h3><div id="study-guide" class="guide-list"></div></article>
+            <article class="blueprint glass-panel"><p class="eyebrow">NCLEX-PN</p><h3>Blueprint</h3><div id="blueprint-list"></div></article>
           </div>
         </section>
       </section>
@@ -259,14 +179,12 @@
     </div>
 
     <script>
-      // Expanded Fancy Colors (Purples, Golds, Reds, Blues, Yellows)
+      // 24 Standard, Premium Themes
       const colors = [
-        /* Cyans & Greens */ '#20f7d2', '#00f5d4', '#06d6a0', '#34c759', '#32d74b', '#b5e48c', 
-        /* Golds & Yellows */'#ffcc00', '#ffd60a', '#ffb703', '#fb8500', '#e9c46a', '#f4a261',
-        /* Reds & Oranges */ '#ff3b30', '#ff453a', '#ef476f', '#e76f51', '#f3722c', '#d90429',
-        /* Purples & Pinks */'#bf5af2', '#d580ff', '#af52de', '#9d4edd', '#7b2cbf', '#f15bb5', '#ff375f', 
-        /* Blues & Navys */  '#007aff', '#0a84ff', '#1982c4', '#64d2ff', '#00bbf9', '#118ab2', '#0028ff',
-        /* Neutrals */       '#f5f5f7', '#d1d1d6', '#aeaeb2', '#8e8e93'
+        '#64748b', '#71717a', '#737373', '#ef4444', '#f97316', '#f59e0b', 
+        '#eab308', '#84cc16', '#22c55e', '#10b981', '#14b8a6', '#20f7d2', 
+        '#06b6d4', '#0ea5e9', '#3b82f6', '#6366f1', '#8b5cf6', '#a855f7', 
+        '#d946ef', '#ec4899', '#f43f5e', '#ff3b30', '#0a84ff', '#f5f5f7'
       ];
 
       function hexToRgb(hex) {
@@ -280,7 +198,7 @@
         document.documentElement.style.setProperty('--accent', hex);
         document.documentElement.style.setProperty('--accent-strong', hex);
         document.documentElement.style.setProperty('--accent-rgb', hexToRgb(hex));
-        localStorage.setItem('ad-theme-color', hex); // Auto-save preference
+        localStorage.setItem('ad-theme-color', hex);
       }
 
       const paletteContainer = document.getElementById('color-palette');
@@ -292,17 +210,15 @@
         paletteContainer.appendChild(dot);
       });
 
-      // Load saved theme on boot
       const savedTheme = localStorage.getItem('ad-theme-color');
       if (savedTheme) applyThemeColor(savedTheme);
 
-      // Mobile-Favored Sidebar Toggle Logic
+      // Desktop & Mobile Sidebar Toggle Logic
       const sidebar = document.getElementById('main-sidebar');
       const toggleBtn = document.getElementById('sidebar-toggle');
       const navItems = document.querySelectorAll('.nav__item');
       const sidebarOverlay = document.getElementById('sidebar-overlay');
 
-      // Sidebar starts HIDDEN on ALL screens
       function openSidebar() {
         sidebar.classList.add('open');
         sidebarOverlay.classList.add('active');
@@ -315,14 +231,20 @@
       }
 
       toggleBtn.addEventListener('click', () => {
-        sidebar.classList.contains('open') ? closeSidebar() : openSidebar();
+        if (window.innerWidth <= 768) {
+          sidebar.classList.contains('open') ? closeSidebar() : openSidebar();
+        } else {
+          // Desktop toggle
+          sidebar.classList.toggle('collapsed');
+        }
       });
 
       sidebarOverlay.addEventListener('click', closeSidebar);
 
-      // Auto-hide sidebar when nav section is selected
       navItems.forEach(item => {
-        item.addEventListener('click', () => closeSidebar());
+        item.addEventListener('click', () => {
+          if (window.innerWidth <= 768) closeSidebar();
+        });
       });
 
       // Liquid Glass Mouse Tracker
@@ -410,11 +332,7 @@
       async function saveCloud(h) {
         if (!sbClient || !currentUser) return;
         try {
-          await sbClient.from('chat_history').upsert({
-            user_id: currentUser.id,
-            messages: h.slice(-MAX_MSGS),
-            updated_at: new Date().toISOString()
-          }, { onConflict: 'user_id' });
+          await sbClient.from('chat_history').upsert({ user_id: currentUser.id, messages: h.slice(-MAX_MSGS), updated_at: new Date().toISOString() }, { onConflict: 'user_id' });
         } catch(e) {}
       }
 
@@ -429,8 +347,8 @@
       function setLoginBar(user) {
         if (!loginBarBtn) return;
         if (user) {
-          var name = (user.user_metadata && user.user_metadata.full_name) ? user.user_metadata.full_name.split(' ')[0] : 'You';
-          loginBarMsg.innerHTML = '<i class="fa-solid fa-circle-check" style="color:var(--accent)"></i> Welcome, ' + name + '!';
+          var name = (user.user_metadata && user.user_metadata.full_name) ? user.user_metadata.full_name.split(' ')[0] : 'Nurse';
+          loginBarMsg.innerHTML = '<i class="fa-solid fa-circle-check" style="color:var(--accent)"></i> Signed in as ' + name;
           loginBarBtn.innerHTML = '<i class="fa-solid fa-right-from-bracket"></i> Sign out';
           loginBarBtn.className = "glass-panel";
           loginBarBtn.onclick = async function() {
@@ -438,14 +356,16 @@
             Object.keys(localStorage).forEach(function(key) {
               if (key.startsWith('sb-') || key.includes('supabase') || key === 'ad-tutor-chat') localStorage.removeItem(key);
             });
-            currentUser = null; chatHistory = []; renderHistory([]); setLoginBar(null);
+            currentUser = null; chatHistory = []; renderHistory([]); setLoginBar(null); window.updatePersonalGreeting(null);
             setTimeout(function() { window.location.reload(); }, 500);
           };
+          window.updatePersonalGreeting(name);
         } else {
           loginBarMsg.innerHTML = '<i class="fa-solid fa-cloud-arrow-up"></i> Sign in to save history';
           loginBarBtn.innerHTML = '<i class="fa-brands fa-google"></i> Sign in';
           loginBarBtn.className = "primary glass-panel";
           loginBarBtn.onclick = function() { window.doGoogleSignIn(); };
+          window.updatePersonalGreeting(null);
         }
       }
 
@@ -454,148 +374,56 @@
         sbClient.auth.signInWithOAuth({ provider: 'google', options: { redirectTo: APP_URL, queryParams: { prompt: 'select_account', access_type: 'offline' } } });
       };
 
-      function waitForSupabase(callback) {
-        if (window.supabase) { callback(); } else {
-          var attempts = 0;
-          var interval = setInterval(function() {
-            attempts++;
-            if (window.supabase) { clearInterval(interval); callback(); }
-            else if (attempts > 20) { clearInterval(interval); console.warn('Supabase CDN failed to load'); }
-          }, 200);
-        }
-      }
-
       function init() {
         var local = loadLocal();
         if (local.length > 0) { chatHistory = local; renderHistory(chatHistory); }
-        waitForSupabase(async function() {
-          try {
-            sbClient = window.supabase.createClient(SB_URL, SB_KEY);
-            var sessionData = await sbClient.auth.getSession();
-            var session = sessionData.data.session;
-            if (session) {
-              currentUser = session.user; currentUser.access_token = session.access_token;
-              setLoginBar(currentUser);
-              var cloud = await loadCloud(session.access_token, session.user.id);
-              if (cloud && cloud.length > 0) { chatHistory = cloud; renderHistory(chatHistory); }
-            } else { setLoginBar(null); }
-
-            sbClient.auth.onAuthStateChange(async function(event, session) {
+        var attempts = 0;
+        var interval = setInterval(async function() {
+          attempts++;
+          if (window.supabase) {
+            clearInterval(interval);
+            try {
+              sbClient = window.supabase.createClient(SB_URL, SB_KEY);
+              var sessionData = await sbClient.auth.getSession();
+              var session = sessionData.data.session;
               if (session) {
                 currentUser = session.user; currentUser.access_token = session.access_token;
                 setLoginBar(currentUser);
                 var cloud = await loadCloud(session.access_token, session.user.id);
                 if (cloud && cloud.length > 0) { chatHistory = cloud; renderHistory(chatHistory); }
-              } else { currentUser = null; setLoginBar(null); }
-            });
-          } catch(e) { console.error('Supabase setup error:', e); }
-        });
+              } else { setLoginBar(null); }
+
+              sbClient.auth.onAuthStateChange(async function(event, session) {
+                if (session) {
+                  currentUser = session.user; currentUser.access_token = session.access_token;
+                  setLoginBar(currentUser);
+                  var cloud = await loadCloud(session.access_token, session.user.id);
+                  if (cloud && cloud.length > 0) { chatHistory = cloud; renderHistory(chatHistory); }
+                } else { currentUser = null; setLoginBar(null); }
+              });
+            } catch(e) { console.error('Supabase setup error:', e); }
+          } else if (attempts > 20) { clearInterval(interval); }
+        }, 200);
       }
       window.addEventListener('load', init);
     </script>
 
     <script>
-    // ===== CURSOR TRAIL (no sparkles) =====
+    // ===== DASHBOARD LOGIC (Greeting & 50+ Facts) =====
     (function() {
-      const canvas = document.getElementById('cursor-canvas');
-      const ctx = canvas.getContext('2d');
-      let W = canvas.width = window.innerWidth;
-      let H = canvas.height = window.innerHeight;
-      let particles = [];
-
-      window.addEventListener('resize', () => { W = canvas.width = window.innerWidth; H = canvas.height = window.innerHeight; });
-
-      function getAccentRGB() {
-        const v = getComputedStyle(document.documentElement).getPropertyValue('--accent-rgb').trim() || '32,247,210';
-        return v;
-      }
-
-      class Particle {
-        constructor(x, y) {
-          this.x = x + (Math.random() - 0.5) * 4;
-          this.y = y + (Math.random() - 0.5) * 4;
-          this.vx = (Math.random() - 0.5) * 1.2;
-          this.vy = (Math.random() - 0.5) * 1.2 - 0.3;
-          this.alpha = 0.85;
-          this.decay = 0.028 + Math.random() * 0.018;
-          this.size = 1.5 + Math.random() * 3;
-          this.rgb = getAccentRGB();
-        }
-        update() { this.x += this.vx; this.y += this.vy; this.vy += 0.02; this.alpha -= this.decay; this.size *= 0.97; }
-        draw() {
-          if (this.alpha <= 0) return;
-          ctx.save();
-          ctx.globalAlpha = this.alpha;
-          ctx.shadowColor = `rgba(${this.rgb},0.6)`;
-          ctx.shadowBlur = 8;
-          ctx.beginPath();
-          ctx.arc(this.x, this.y, Math.max(0.1, this.size), 0, Math.PI * 2);
-          ctx.fillStyle = `rgba(${this.rgb},${this.alpha})`;
-          ctx.fill();
-          ctx.restore();
-        }
-      }
-
-      let frame = 0;
-      window.addEventListener('mousemove', (e) => {
-        frame++;
-        if (frame % 2 === 0) particles.push(new Particle(e.clientX, e.clientY));
-        if (particles.length > 100) particles = particles.slice(-100);
-      });
-      window.addEventListener('touchmove', (e) => {
-        const t = e.touches[0];
-        particles.push(new Particle(t.clientX, t.clientY));
-        if (particles.length > 60) particles = particles.slice(-60);
-      }, { passive: true });
-
-      function animate() {
-        ctx.clearRect(0, 0, W, H);
-        for (let i = particles.length - 1; i >= 0; i--) {
-          particles[i].update(); particles[i].draw();
-          if (particles[i].alpha <= 0) particles.splice(i, 1);
-        }
-        requestAnimationFrame(animate);
-      }
-      animate();
-    })();
-
-    // ===== HAPTICS =====
-    (function() {
-      function haptic(p) { if ('vibrate' in navigator) try { navigator.vibrate(p); } catch(e) {} }
-      document.addEventListener('click', function(e) {
-        const b = e.target.closest('button, .option, .nav__item, .theme-dot, .dash-stat');
-        if (!b) return;
-        if (b.classList.contains('primary')) haptic([8,20,8]);
-        else if (b.classList.contains('option')) haptic(6);
-        else if (b.classList.contains('nav__item')) haptic([4,15,4]);
-        else haptic(5);
-      });
-      const obs = new MutationObserver(m => m.forEach(mu => mu.addedNodes.forEach(n => {
-        if (n.classList) {
-          if (n.classList.contains('is-correct')) haptic([8,40,8,40,20]);
-          if (n.classList.contains('is-wrong')) haptic([15,60,15]);
-        }
-      })));
-      window.addEventListener('load', () => {
-        document.querySelectorAll('#practice-options,#exam-options').forEach(c => obs.observe(c, { subtree:true, childList:true, attributes:true, attributeFilter:['class'] }));
-      });
-    })();
-
-    // ===== DASHBOARD =====
-    (function() {
+      // Extensive array of high-yield facts
       const facts = [
-        { icon:'💉', text:'The normal adult heart rate is 60-100 bpm. Anything above 100 is tachycardia; below 60 is bradycardia.', category:'Cardiovascular' },
+        { icon:'❤️', text:'The normal adult heart rate is 60-100 bpm. Anything above 100 is tachycardia; below 60 is bradycardia.', category:'Cardiovascular' },
         { icon:'🫁', text:'Normal respiratory rate for adults is 12-20 breaths/min. Tachypnea (>20) is an early warning sign of deterioration.', category:'Respiratory' },
         { icon:'🌡️', text:'Normal body temperature is 36.1–37.2°C (97–99°F). Fever is defined as >38°C (100.4°F).', category:'Fundamentals' },
         { icon:'💊', text:'The "5 Rights" of medication administration: Right Patient, Right Drug, Right Dose, Right Route, Right Time.', category:'Pharmacology' },
         { icon:'🧠', text:'The Glasgow Coma Scale (GCS) assesses eye opening, verbal response, and motor response. Max score is 15 (fully conscious).', category:'Neurology' },
-        { icon:'🩺', text:'Maslow's hierarchy in nursing prioritises physiological needs first — airway, breathing, circulation before psychological needs.', category:'Fundamentals' },
+        { icon:'🩺', text:'Maslow\'s hierarchy in nursing prioritises physiological needs first — airway, breathing, circulation before psychological needs.', category:'Fundamentals' },
         { icon:'🔬', text:'Normal blood glucose is 3.9–5.6 mmol/L (70–100 mg/dL) fasting. Diabetes is diagnosed at ≥7.0 mmol/L.', category:'Endocrine' },
         { icon:'🏥', text:'SBAR (Situation, Background, Assessment, Recommendation) is the gold standard communication tool in handover.', category:'Clinical Skills' },
-        { icon:'👶', text:'APGAR score (Appearance, Pulse, Grimace, Activity, Respiration) is assessed at 1 and 5 minutes after birth. Normal is 7–10.', category:'Paediatrics' },
         { icon:'❤️', text:'The left anterior descending (LAD) artery supplies the anterior wall of the left ventricle — occlusion causes the most dangerous MI.', category:'Cardiovascular' },
-        { icon:'🩸', text:'Normal haemoglobin: Males 13.5–17.5 g/dL, Females 12–15.5 g/dL. Below 8 g/dL usually requires transfusion.', category:'Haematology' },
         { icon:'🛡️', text:'Standard precautions apply to ALL patients regardless of diagnosis — includes hand hygiene, PPE, and safe sharps disposal.', category:'Infection Control' },
+        { icon:'🩸', text:'Normal haemoglobin: Males 13.5–17.5 g/dL, Females 12–15.5 g/dL. Below 8 g/dL usually requires transfusion.', category:'Haematology' },
         { icon:'🧬', text:'Potassium normal range is 3.5–5.0 mEq/L. Hypokalaemia (<3.5) causes muscle weakness and cardiac arrhythmias.', category:'Electrolytes' },
         { icon:'🌙', text:'Sleep deprivation in patients increases pain sensitivity, slows healing, and raises cortisol — always prioritise rest periods.', category:'Holistic Care' },
         { icon:'⚕️', text:'The nursing process: Assessment → Diagnosis → Planning → Implementation → Evaluation (ADPIE).', category:'Nursing Process' },
@@ -604,136 +432,100 @@
         { icon:'🍽️', text:'NPO (Nil Per Os) means nothing by mouth. Patients are usually NPO for 6-8 hours before surgery to reduce aspiration risk.', category:'Perioperative' },
         { icon:'🤱', text:'Fundal height in centimeters roughly equals gestational age in weeks after 20 weeks. E.g., 28cm ≈ 28 weeks.', category:'Maternal Health' },
         { icon:'🧘', text:'Therapeutic communication techniques include open-ended questions, reflection, clarification, and silence — avoid advice-giving.', category:'Mental Health' },
-      ];
-
-      const tips = [
-        'When in doubt in an MCQ, select the answer that prioritises SAFETY and ABC (Airway, Breathing, Circulation).',
-        'For pharmacology questions, remember: "First do no harm" — if a drug causes harm in the question stem, hold it and notify the doctor.',
-        'Priority questions: always stabilise the AIRWAY first, then breathing, then circulation.',
-        'SATA (Select All That Apply) questions: treat each option as a True/False. Never leave them all selected.',
-        'Delegation rule: RNs assess and evaluate — delegate routine stable care to LPNs/CNAs, never assessment.',
-        'If a patient is confused and restless after surgery — think HYPOXIA first, not pain medication.',
-        'For paediatric questions, remember Erikson's stages: Infants = Trust vs Mistrust; Toddlers = Autonomy vs Shame.',
-        'Read question stems carefully for key words: "FIRST", "PRIORITY", "IMMEDIATELY", "EXCEPT", "NOT".',
-        'Normal lab values to memorise: Na 135-145, K 3.5-5.0, Cl 96-106, CO₂ 22-26 mEq/L.',
-        'When you see "therapeutic communication" — the correct answer almost always involves acknowledging feelings first.',
-      ];
-
-      const topics = [
-        { name:'Medical-Surgical', icon:'🏥', color:'rgba(32,247,210,0.15)' },
-        { name:'Paediatrics', icon:'👶', color:'rgba(255,204,0,0.12)' },
-        { name:'Mental Health', icon:'🧠', color:'rgba(168,85,247,0.15)' },
-        { name:'Maternal Health', icon:'🤱', color:'rgba(255,59,48,0.12)' },
-        { name:'Pharmacology', icon:'💊', color:'rgba(59,130,246,0.15)' },
-        { name:'Community Health', icon:'🌍', color:'rgba(34,197,94,0.12)' },
-        { name:'Fundamentals', icon:'📋', color:'rgba(249,115,22,0.15)' },
-        { name:'Nutrition', icon:'🍎', color:'rgba(234,179,8,0.12)' },
+        { icon:'⚠️', text:'Anaphylaxis is a severe, life-threatening allergic reaction. First-line treatment is intramuscular Adrenaline (Epinephrine).', category:'Emergency' },
+        { icon:'🧪', text:'Normal Sodium (Na+) levels are 135-145 mEq/L. Hyponatremia can lead to confusion and seizures.', category:'Electrolytes' },
+        { icon:'🦴', text:'Osteoporosis makes bones brittle. Weight-bearing exercises and adequate calcium/vitamin D intake are essential for prevention.', category:'Musculoskeletal' },
+        { icon:'👁️', text:'Glaucoma causes increased intraocular pressure leading to optic nerve damage. It is a leading cause of irreversible blindness.', category:'Sensory' },
+        { icon:'👶', text:'The fontanelles in an infant allow for brain growth. The anterior fontanelle usually closes between 12-18 months.', category:'Paediatrics' },
+        { icon:'🚑', text:'In CPR for adults, the compression-to-ventilation ratio is 30:2, at a rate of 100-120 compressions per minute.', category:'Emergency' },
+        { icon:'🍔', text:'A low-sodium diet is crucial for managing hypertension and heart failure to reduce fluid retention.', category:'Nutrition' },
+        { icon:'🩺', text:'A murmur is an abnormal heart sound usually caused by turbulent blood flow through a defective valve.', category:'Cardiovascular' },
+        { icon:'🧠', text:'Stroke symptoms can be remembered with FAST: Face drooping, Arm weakness, Speech difficulty, Time to call emergency.', category:'Neurology' },
+        { icon:'🩸', text:'Type O negative blood is the universal donor, meaning it can be given to patients of any blood type in an emergency.', category:'Haematology' },
+        { icon:'🦠', text:'Antibiotic resistance occurs when bacteria mutate and defeat the drugs designed to kill them. Complete the full course!', category:'Pharmacology' },
+        { icon:'🤰', text:'Folic acid supplementation during pregnancy is vital to prevent neural tube defects like spina bifida.', category:'Maternal Health' },
+        { icon:'🏃', text:'Deep Vein Thrombosis (DVT) is a blood clot in a deep vein, usually the leg. Early ambulation prevents it.', category:'Medical-Surgical' },
+        { icon:'🚭', text:'Smoking cessation dramatically reduces the risk of COPD, lung cancer, and cardiovascular diseases.', category:'Health Promotion' },
+        { icon:'📉', text:'Hypoglycemia symptoms include sweating, trembling, dizziness, and confusion. Treat immediately with fast-acting carbs.', category:'Endocrine' },
+        { icon:'🔥', text:'The Rule of Nines is used to quickly assess the percentage of total body surface area burned in a patient.', category:'Emergency' },
+        { icon:'🛌', text:'To prevent pressure ulcers, reposition immobile patients at least every 2 hours and keep skin clean and dry.', category:'Fundamentals' },
+        { icon:'👶', text:'Moro reflex is a normal startle response in newborns, usually disappearing by 3 to 6 months of age.', category:'Paediatrics' },
+        { icon:'🧪', text:'Normal WBC count is 4,500 to 11,000 per microliter. Leukocytosis often indicates an active infection.', category:'Diagnostics' },
+        { icon:'💊', text:'Digoxin toxicity signs include nausea, vomiting, visual disturbances (yellow halos), and arrhythmias. Check apical pulse first.', category:'Pharmacology' },
+        { icon:'🫁', text:'Asthma is characterized by reversible airway inflammation and bronchospasm. Albuterol is a common rescue inhaler.', category:'Respiratory' },
+        { icon:'🧠', text:'Dementia is a progressive decline in cognitive function. Alzheimer\'s disease is the most common cause.', category:'Geriatrics' },
+        { icon:'🩸', text:'Normal Platelet count is 150,000 to 450,000. Thrombocytopenia increases the risk of severe bleeding.', category:'Haematology' },
+        { icon:'💧', text:'Dehydration in infants presents with a sunken fontanelle, absence of tears, and decreased wet diapers.', category:'Paediatrics' },
+        { icon:'🌡️', text:'Malignant hyperthermia is a severe reaction to certain anesthetics, characterized by a rapid rise in temperature and muscle rigidity.', category:'Perioperative' },
+        { icon:'🤰', text:'Preeclampsia is a pregnancy complication marked by high blood pressure and protein in the urine after 20 weeks.', category:'Maternal Health' },
+        { icon:'🧠', text:'Schizophrenia involves delusions, hallucinations, and disorganized thinking. Antipsychotics are the primary treatment.', category:'Mental Health' },
+        { icon:'🦠', text:'Tuberculosis (TB) is an airborne disease. Patients must be placed in a negative pressure room with airborne precautions.', category:'Infection Control' },
+        { icon:'🍎', text:'Vitamin K is essential for blood clotting and is given as an injection to newborns to prevent bleeding disorders.', category:'Paediatrics' },
+        { icon:'🫀', text:'Atrial Fibrillation (AFib) is an irregular, often rapid heart rate that causes poor blood flow and increases stroke risk.', category:'Cardiovascular' }
       ];
 
       let factIdx = 0;
 
-      function rotateFact() {
+      window.rotateFact = function() {
         factIdx = (factIdx + 1) % facts.length;
         showFact();
-        if ('vibrate' in navigator) try { navigator.vibrate(8); } catch(e) {}
-      }
-      window.rotateFact = rotateFact;
+      };
 
       function showFact() {
         const f = facts[factIdx];
         const el = document.getElementById('fact-text');
         const ic = document.getElementById('fact-icon');
         const cat = document.getElementById('fact-category');
-        if (!el) return;
         const card = document.getElementById('fact-card');
+        
+        if (!el || !card) return;
         card.style.opacity = '0';
         card.style.transform = 'translateY(8px)';
+        
         setTimeout(() => {
           el.textContent = f.text;
           ic.textContent = f.icon;
           cat.textContent = f.category;
-          card.style.transition = 'all 0.4s cubic-bezier(0.25,1,0.5,1)';
           card.style.opacity = '1';
           card.style.transform = 'translateY(0)';
         }, 200);
       }
 
-      function updateGreeting() {
+      window.updatePersonalGreeting = function(name) {
         const h = new Date().getHours();
-        const greet = h < 12 ? 'Good morning 🌤️' : h < 17 ? 'Good afternoon ☀️' : 'Good evening 🌙';
+        let greetTime = 'Good evening 🌙';
+        if (h < 12) greetTime = 'Good morning 🌤️';
+        else if (h < 18) greetTime = 'Good afternoon ☀️';
+        
         const el = document.getElementById('dash-greeting');
-        if (el) el.textContent = greet;
-      }
-
-      function buildTopics() {
-        const grid = document.getElementById('topic-grid');
-        if (!grid) return;
-        grid.innerHTML = topics.map(t => `
-          <div class="glass-panel" onclick="switchViewDash('practice')" style="
-            padding:14px 16px;cursor:pointer;background:${t.color};
-            display:flex;align-items:center;gap:10px;
-            border-radius:14px;transition:all 0.2s;
-          " onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
-            <span style="font-size:20px">${t.icon}</span>
-            <span style="font-size:13px;font-weight:600">${t.name}</span>
-          </div>`).join('');
-      }
-
-      function setTip() {
-        const tip = tips[Math.floor(Math.random() * tips.length)];
-        const el = document.getElementById('tip-text');
-        if (el) el.textContent = tip;
-      }
-
-      function updateDashStats() {
-        const bankEl = document.getElementById('bank-count');
-        const masteryEl = document.getElementById('mastery-score');
-        const dq = document.getElementById('dash-questions');
-        const dm = document.getElementById('dash-mastery');
-        if (bankEl && dq) dq.textContent = parseInt(bankEl.textContent || '0').toLocaleString();
-        if (masteryEl && dm) dm.textContent = masteryEl.textContent || '0%';
-        const sessions = parseInt(localStorage.getItem('ad-sessions') || '0');
-        const ds = document.getElementById('dash-sessions');
-        if (ds) ds.textContent = sessions;
-      }
+        if (el) {
+          el.textContent = name ? `${greetTime}, ${name}` : `${greetTime}, Future Nurse`;
+        }
+      };
 
       window.switchViewDash = function(view) {
         const btn = document.querySelector(`.nav__item[data-view="${view}"]`);
         if (btn) btn.click();
       };
 
-      // Auto-rotate facts every 15s
       let factTimer;
-      function startFactRotation() {
-        clearInterval(factTimer);
-        factTimer = setInterval(() => rotateFact(), 15000);
-      }
-
-      // Init dashboard
       function initDashboard() {
-        updateGreeting();
+        window.updatePersonalGreeting(null); // Defaults until Supabase loads
         showFact();
-        buildTopics();
-        setTip();
-        setTimeout(updateDashStats, 1500);
-        startFactRotation();
-
-        // Observe bank-count changes
-        const bc = document.getElementById('bank-count');
-        if (bc) new MutationObserver(updateDashStats).observe(bc, { childList: true, characterData: true, subtree: true });
+        clearInterval(factTimer);
+        factTimer = setInterval(() => window.rotateFact(), 12000); // Auto-rotate every 12s
       }
 
       window.addEventListener('load', initDashboard);
     })();
 
-    // ===== THREE.JS 3D DASHBOARD OBJECTS =====
+    // ===== ENHANCED THREE.JS 3D DASHBOARD ANIMATION =====
     (function() {
       function init3D() {
         const dashView = document.getElementById('dashboard-view');
         const canvas = document.getElementById('three-canvas');
         if (!canvas || !dashView) return;
 
-        // Dynamically load Three.js
         const script = document.createElement('script');
         script.src = 'https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js';
         script.onload = function() {
@@ -746,21 +538,36 @@
           const camera = new THREE.PerspectiveCamera(60, 1, 0.1, 1000);
           camera.position.z = 8;
 
+          const objects = [];
+          let particlesMesh;
+
           function getAccentHex() {
             return getComputedStyle(document.documentElement).getPropertyValue('--accent').trim() || '#20f7d2';
           }
 
-          function hexToColor(hex) {
-            return new THREE.Color(hex);
-          }
-
-          // Create floating objects
-          const objects = [];
-
-          function createMedicalObjects() {
+          function createSceneObjects() {
             scene.clear();
-            const color = hexToColor(getAccentHex());
+            const color = new THREE.Color(getAccentHex());
 
+            // 1. Particle System (Stardust/Fluid)
+            const particlesGeo = new THREE.BufferGeometry();
+            const particlesCount = 700;
+            const posArray = new Float32Array(particlesCount * 3);
+            for(let i = 0; i < particlesCount * 3; i++) {
+                posArray[i] = (Math.random() - 0.5) * 20;
+            }
+            particlesGeo.setAttribute('position', new THREE.BufferAttribute(posArray, 3));
+            const particlesMat = new THREE.PointsMaterial({
+                size: 0.05,
+                color: color,
+                transparent: true,
+                opacity: 0.4,
+                blending: THREE.AdditiveBlending
+            });
+            particlesMesh = new THREE.Points(particlesGeo, particlesMat);
+            scene.add(particlesMesh);
+
+            // 2. Medical Geometries
             const matWire = new THREE.MeshBasicMaterial({ color, wireframe: true, transparent: true, opacity: 0.25 });
             const matSolid = new THREE.MeshBasicMaterial({ color, transparent: true, opacity: 0.08 });
             const matLine = new THREE.LineBasicMaterial({ color, transparent: true, opacity: 0.5 });
@@ -768,63 +575,40 @@
             function addObj(geo, x, y, z, rx, ry) {
               const solid = new THREE.Mesh(geo, matSolid.clone());
               const wire = new THREE.Mesh(geo, matWire.clone());
-              solid.position.set(x, y, z);
-              wire.position.set(x, y, z);
-              solid.rotation.set(rx, ry, 0);
-              wire.rotation.set(rx, ry, 0);
+              solid.position.set(x, y, z); wire.position.set(x, y, z);
+              solid.rotation.set(rx, ry, 0); wire.rotation.set(rx, ry, 0);
               scene.add(solid); scene.add(wire);
               objects.push({ solid, wire, rotX: (Math.random()-0.5)*0.008, rotY: (Math.random()-0.5)*0.008, floatSpeed: 0.3+Math.random()*0.5, floatAmp: 0.15+Math.random()*0.2, startY: y });
             }
 
-            // DNA double helix
+            // DNA Helix
             const helixPoints1 = [], helixPoints2 = [];
             for (let i = 0; i < 80; i++) {
               const t = (i / 79) * Math.PI * 6 - Math.PI * 3;
-              helixPoints1.push(new THREE.Vector3(Math.cos(t) * 0.3, t * 0.2, Math.sin(t) * 0.3));
-              helixPoints2.push(new THREE.Vector3(Math.cos(t + Math.PI) * 0.3, t * 0.2, Math.sin(t + Math.PI) * 0.3));
+              helixPoints1.push(new THREE.Vector3(Math.cos(t)*0.4, t*0.25, Math.sin(t)*0.4));
+              helixPoints2.push(new THREE.Vector3(Math.cos(t+Math.PI)*0.4, t*0.25, Math.sin(t+Math.PI)*0.4));
             }
             const helix1 = new THREE.Line(new THREE.BufferGeometry().setFromPoints(helixPoints1), matLine.clone());
             const helix2 = new THREE.Line(new THREE.BufferGeometry().setFromPoints(helixPoints2), matLine.clone());
-            helix1.position.set(-5, 0, -3); helix2.position.set(-5, 0, -3);
+            helix1.position.set(-6, 0, -4); helix2.position.set(-6, 0, -4);
             scene.add(helix1); scene.add(helix2);
             objects.push({ solid: helix1, wire: helix2, rotX: 0.003, rotY: 0.006, floatSpeed: 0.4, floatAmp: 0.3, startY: 0 });
 
-            // Torus (stethoscope ring)
-            addObj(new THREE.TorusGeometry(1.2, 0.08, 16, 80), 3.5, 1, -4, 0.3, 0.5);
-
-            // Dodecahedron (cell)
-            addObj(new THREE.DodecahedronGeometry(0.9), -3.5, -1.5, -3, 0.2, 0.3);
-
-            // Icosahedron (molecule)
-            addObj(new THREE.IcosahedronGeometry(0.7), 4, -2, -2, 0.5, 0.2);
-
-            // Octahedron (crystal)
-            addObj(new THREE.OctahedronGeometry(0.8), -2, 2.5, -2, 0.3, 0.6);
-
-            // Torus Knot (complex molecule)
-            addObj(new THREE.TorusKnotGeometry(0.6, 0.15, 64, 8, 2, 3), 0, -2.5, -3, 0.2, 0.4);
-
-            // Cone (pill shape)
-            addObj(new THREE.ConeGeometry(0.4, 1.2, 8), 2, 2, -2, 0.1, 0.3);
-
-            // Ring cross (medical cross)
-            addObj(new THREE.RingGeometry(0.3, 0.5, 4), -4.5, 2, -2, 0, 0);
+            addObj(new THREE.TorusGeometry(1.5, 0.08, 16, 80), 5, 2, -6, 0.3, 0.5); // Torus
+            addObj(new THREE.DodecahedronGeometry(1.2), -4, -2, -5, 0.2, 0.3); // Cell
+            addObj(new THREE.IcosahedronGeometry(1.0), 4.5, -3, -4, 0.5, 0.2); // Molecule
+            addObj(new THREE.OctahedronGeometry(1.1), -2, 3.5, -5, 0.3, 0.6); // Crystal
           }
 
-          createMedicalObjects();
+          createSceneObjects();
 
-          // Resize handler
           function resize() {
             const w = dashView.clientWidth || window.innerWidth;
             const h = dashView.clientHeight || window.innerHeight;
-            renderer.setSize(w, h);
-            camera.aspect = w / h;
-            camera.updateProjectionMatrix();
+            renderer.setSize(w, h); camera.aspect = w / h; camera.updateProjectionMatrix();
           }
-          resize();
-          window.addEventListener('resize', resize);
+          resize(); window.addEventListener('resize', resize);
 
-          // Mouse parallax
           let mouseX = 0, mouseY = 0;
           window.addEventListener('mousemove', e => {
             mouseX = (e.clientX / window.innerWidth - 0.5) * 0.5;
@@ -833,78 +617,42 @@
 
           let t = 0;
           function animate() {
-            if (document.getElementById('dashboard-view').classList.contains('is-visible')) {
-              requestAnimationFrame(animate);
-            } else {
-              setTimeout(() => requestAnimationFrame(animate), 500);
-            }
+            requestAnimationFrame(animate);
+            if (!document.getElementById('dashboard-view').classList.contains('is-visible')) return;
+            
             t += 0.016;
             camera.position.x += (mouseX - camera.position.x) * 0.02;
             camera.position.y += (-mouseY - camera.position.y) * 0.02;
             camera.lookAt(scene.position);
 
-            objects.forEach((o, i) => {
-              if (o.solid) { o.solid.rotation.x += o.rotX; o.solid.rotation.y += o.rotY; }
-              if (o.wire) { o.wire.rotation.x += o.rotX; o.wire.rotation.y += o.rotY; }
-              const floatY = o.startY + Math.sin(t * o.floatSpeed + i) * o.floatAmp;
-              if (o.solid) o.solid.position.y = floatY;
-              if (o.wire) o.wire.position.y = floatY;
-            });
+            // Rotate Particles
+            if(particlesMesh) {
+                particlesMesh.rotation.y = t * 0.05;
+                particlesMesh.rotation.x = t * 0.02;
+            }
 
+            objects.forEach((o, i) => {
+              if(o.solid) { o.solid.rotation.x += o.rotX; o.solid.rotation.y += o.rotY; }
+              if(o.wire) { o.wire.rotation.x += o.rotX; o.wire.rotation.y += o.rotY; }
+              const floatY = o.startY + Math.sin(t * o.floatSpeed + i) * o.floatAmp;
+              if(o.solid) o.solid.position.y = floatY;
+              if(o.wire) o.wire.position.y = floatY;
+            });
             renderer.render(scene, camera);
           }
           animate();
 
-          // Update colors when theme changes
-          window.addEventListener('themeChanged', () => {
-            createMedicalObjects();
-          });
+          // Sync 3D Colors to Theme Changes
+          const origSetProperty = document.documentElement.style.setProperty;
+          document.documentElement.style.setProperty = function(prop, val) {
+            origSetProperty.call(this, prop, val);
+            if (prop === '--accent') createSceneObjects();
+          };
         };
         document.head.appendChild(script);
       }
-
       window.addEventListener('load', init3D);
     })();
-
-    // ===== CBT EXAM TIMER + QUESTION COUNT FIX =====
-    (function() {
-      // Ensure exam-size and exam-minutes are properly connected
-      window.addEventListener('load', function() {
-        const startBtn = document.getElementById('start-exam');
-        const sizeInput = document.getElementById('exam-size');
-        const minutesInput = document.getElementById('exam-minutes');
-
-        // Restore saved values
-        if (sizeInput) sizeInput.value = localStorage.getItem('ad-exam-size') || '25';
-        if (minutesInput) minutesInput.value = localStorage.getItem('ad-exam-minutes') || '35';
-
-        if (sizeInput) sizeInput.addEventListener('change', () => localStorage.setItem('ad-exam-size', sizeInput.value));
-        if (minutesInput) minutesInput.addEventListener('change', () => localStorage.setItem('ad-exam-minutes', minutesInput.value));
-
-        // Track sessions
-        if (startBtn) {
-          startBtn.addEventListener('click', () => {
-            const s = parseInt(localStorage.getItem('ad-sessions') || '0') + 1;
-            localStorage.setItem('ad-sessions', s);
-            const ds = document.getElementById('dash-sessions');
-            if (ds) ds.textContent = s;
-          });
-        }
-      });
-    })();
-
-    // ===== THEME CHANGE NOTIFIER =====
-    // Override setTheme to dispatch event for 3D scene color update
-    (function() {
-      const origSetTheme = window.setTheme;
-      if (origSetTheme) {
-        window.setTheme = function(theme) {
-          origSetTheme(theme);
-          window.dispatchEvent(new Event('themeChanged'));
-        };
-      }
-    })();
     </script>
-
   </body>
 </html>
