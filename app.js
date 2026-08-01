@@ -32,14 +32,19 @@ function escapeHtml(value) {
   return String(value).replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;").replaceAll('"', "&quot;").replaceAll("'", "&#039;");
 }
 
-const rawQuestions = [
-  ...(textbookQuestions.length ? textbookQuestions : starterQuestions),
-  ...supplementalQuestions,
-  ...nmcnSaturationQuestions,
-  ...newTextbookQuestions
-];
+// Primary: new enhanced question bank from uploaded textbook
+// Fallback: original banks if new bank is empty
+const rawQuestions = newTextbookQuestions.length > 100
+  ? newTextbookQuestions
+  : [
+      ...(textbookQuestions.length ? textbookQuestions : starterQuestions),
+      ...supplementalQuestions,
+      ...nmcnSaturationQuestions,
+      ...newTextbookQuestions
+    ];
 const clearQuestions = rawQuestions.filter(isClearQuestion);
 const questionById = new Map(clearQuestions.map((question) => [question.id, question]));
+const savedSession = JSON.parse(localStorage.getItem("ad-session") || "{}");
 
 function savedRandomOrder(items) {
   const ids = items.map((question) => question.id);
@@ -53,10 +58,9 @@ function savedRandomOrder(items) {
 }
 
 const questions = savedRandomOrder(clearQuestions);
-const savedSession = JSON.parse(localStorage.getItem("ad-session") || "{}");
 
 const state = {
-  view: "dashboard", // Default View
+  view: savedSession.view || "practice",
   filtered: [...questions],
   practiceIndex: savedSession.practiceIndex || 0,
   exam: (savedSession.examIds || []).map((id) => questionById.get(id)).filter(Boolean),
@@ -69,6 +73,7 @@ const state = {
 };
 
 const categoryFilter = $("#category-filter");
+const chapterFilter = $("#chapter-filter");
 
 function saveProgress() {
   localStorage.setItem("nclex-progress", JSON.stringify(state.progress));
@@ -107,13 +112,42 @@ function shuffle(items) {
 }
 
 function populateFilters() {
-  const categories = ["All categories", ...new Set(questions.map((q) => q.category))];
-  categoryFilter.innerHTML = categories.map((item) => `<option value="${item}">${item}</option>`).join("");
+  // Use actual categories from question bank
+  const rawCats = [...new Set(questions.map(q => q.category).filter(Boolean))];
+  
+  // Nursing council category ordering
+  const councilOrder = [
+    "Medical-Surgical Nursing",
+    "Maternal & Child Health",
+    "Pediatric Nursing",
+    "Mental Health Nursing",
+    "Gerontological Nursing",
+    "Pharmacology",
+    "Nutrition & Dietetics",
+    "Comprehensive Exam"
+  ];
+  
+  const sortedCats = [
+    ...councilOrder.filter(c => rawCats.includes(c)),
+    ...rawCats.filter(c => !councilOrder.includes(c))
+  ];
+  
+  const allCats = ["All categories", ...sortedCats];
+  categoryFilter.innerHTML = allCats.map(c => `<option value="${c}">${c}</option>`).join("");
+  
+  // Chapters from question bank
+  const chapters = ["All chapters", ...new Set(questions.map(q => q.chapter).filter(Boolean))];
+  chapterFilter.innerHTML = chapters.map(c => `<option value="${c}">${c}</option>`).join("");
 }
 
 function applyFilters() {
   const category = categoryFilter.value;
-  state.filtered = questions.filter((q) => category === "All categories" || q.category === category);
+  const chapter = chapterFilter.value;
+  state.filtered = questions.filter(q => {
+    const catMatch = category === "All categories" || q.category === category;
+    const chapMatch = chapter === "All chapters" || q.chapter === chapter;
+    return catMatch && chapMatch;
+  });
   state.practiceIndex = 0;
   saveSession();
   renderPractice();
@@ -288,6 +322,7 @@ function switchView(view) {
   $$(".view").forEach((panel) => panel.classList.toggle("is-visible", panel.id === `${view}-view`));
   const titles = {
     dashboard: ["Welcome", "Your nursing prep hub"],
+    dashboard: ["Welcome", "Your nursing prep hub"],
     practice: ["Learning mode", "Practice with instant rationales"],
     cbt: ["Simulation", "CBT exam mode"],
     review: ["Performance", "Review weak areas"],
@@ -295,17 +330,6 @@ function switchView(view) {
   };
   $("#view-kicker").textContent = titles[view][0];
   $("#view-title").textContent = titles[view][1];
-  
-  // EXPLICIT TIMER OVERRIDE TO HIDE ON DASHBOARD
-  const timerBlock = document.querySelector(".timer");
-  if(timerBlock) {
-    if (view === "dashboard" || view === "guide" || view === "review") {
-      timerBlock.style.display = "none";
-    } else {
-      timerBlock.style.display = "block";
-    }
-  }
-
   if (view !== "cbt" || !state.timerId) {
     $("#timer-label").textContent = view === "cbt" ? "Ready" : "Untimed";
     $("#timer-value").textContent = "00:00";
@@ -489,6 +513,7 @@ function renderGuide() {
 
 function bindEvents() {
   categoryFilter.addEventListener("change", applyFilters);
+  chapterFilter.addEventListener("change", applyFilters);
   $("#shuffle-button").addEventListener("click", () => {
     state.filtered = shuffle(state.filtered);
     state.practiceIndex = 0;
@@ -521,11 +546,12 @@ function bindEvents() {
 function init() {
   populateFilters();
   categoryFilter.value = "All categories";
+  chapterFilter.value = "All chapters";
   renderPractice();
   renderProgress();
   renderGuide();
   bindEvents();
-  switchView(state.view); // Explicitly trigger the timer override check on load
+  switchView(state.view);
 }
 
 init();
